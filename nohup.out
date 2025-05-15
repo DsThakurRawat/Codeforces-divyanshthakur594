@@ -359,3 +359,8 @@ and the repository exists.
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 ./.git/objects/cf/ CREATE tmp_obj_WZGJiF
+On branch main
+Your branch is ahead of 'origin/main' by 156 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
