@@ -252,3 +252,5 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./.git/objects/7a/ CREATE tmp_obj_dr1dxI
