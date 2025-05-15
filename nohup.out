@@ -694,3 +694,8 @@ Your branch is ahead of 'origin/main' by 108 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
