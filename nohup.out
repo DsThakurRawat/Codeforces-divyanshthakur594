@@ -991,3 +991,5 @@ To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 7599f180cf36e22a6eae8b52cbd4bd7980edcad1 but expected b93748b6206f8d8aeedc628212b98f468fbb9a82)
 error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyanshthakur594.git'
 Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
