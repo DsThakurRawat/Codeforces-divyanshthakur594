@@ -969,3 +969,5 @@ To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 1e5154a935966ee2e828970503e67af4f74997ae but expected f3e7483fdb9b3c7a8f9b54bcbcda9c176d4db825)
 error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyanshthakur594.git'
 Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./.git/objects/62/ MODIFY tmp_obj_aNiEZD
