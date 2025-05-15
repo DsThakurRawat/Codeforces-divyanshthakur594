@@ -921,3 +921,5 @@ To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
  ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 16183ac4ecc5b9ec05ca7ca2c7b760b324792980 but expected 21c461bb8cf93de1bd48356cad3d32722b0913af)
 error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyanshthakur594.git'
 Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./.git/objects/4a/ CREATE tmp_obj_YBm7sW
