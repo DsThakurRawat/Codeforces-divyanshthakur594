@@ -195,3 +195,11 @@ Watches established.
 ./ MODIFY nohup.out
 [main ee0a058] Auto-sync: 2025-05-15 15:00:53
  1 file changed, 8 insertions(+)
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
