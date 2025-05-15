@@ -891,3 +891,8 @@ error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyansh
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 ./ MODIFY nohup.out
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
