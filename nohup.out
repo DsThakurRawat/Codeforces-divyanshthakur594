@@ -823,3 +823,9 @@ error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyansh
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 ./ MODIFY nohup.out
+fatal: cannot lock ref 'HEAD': is at 40380d5f9956d5fff10ecd0d222d8b3882b01da1 but expected e9205df8c7a5c5f764a4b78ceec82b69d3e8d39a
+To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
+   e9205df..40380d5  main -> main
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
