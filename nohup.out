@@ -520,3 +520,27 @@ Your branch is ahead of 'origin/main' by 85 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+fatal: Unable to create '/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main 92d5e04] Auto-sync: 2025-05-15 14:49:31
+ 1 file changed, 12 insertions(+)
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
