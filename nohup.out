@@ -90,3 +90,13 @@ and the repository exists.
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 ./.git/objects/e0/ CREATE tmp_obj_rjtpJP
+[main 1aaaeb3] Auto-sync: 2025-05-15 15:00:27
+ 1 file changed, 22 insertions(+)
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
