@@ -801,3 +801,7 @@ Watches established.
 ./.git/objects/44/ CREATE tmp_obj_KPbKq7
 [main 8fb1a05] Auto-sync: 2025-05-15 15:04:15
  1 file changed, 2 insertions(+)
+To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 615ac3678b34b2939de17d723f4f9f8299194083 but expected 3793a296f7dcfbf65bc0ec03ae9c331f33c2c24c)
+error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyanshthakur594.git'
+Setting up watches.  Beware: since -r was given, this may take a while!
