@@ -1075,3 +1075,15 @@ Watches established.
 ./.git/objects/8e/ CREATE tmp_obj_bBPLdj
 [main 1c539f0] Auto-sync: 2025-05-15 15:06:23
  1 file changed, 2 insertions(+)
+To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
+   4d7cac1..1c539f0  main -> main
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
+fatal: Unable to create '/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
