@@ -1,2 +1,2 @@
 //mwrite a code find reaminder of number 
-#include<std
+#include<bit
