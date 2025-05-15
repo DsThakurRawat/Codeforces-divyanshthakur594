@@ -699,3 +699,23 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+fatal: Unable to create '/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: cannot lock ref 'HEAD': is at 55bf480976b53c7fcb25073976583bc77387fd1c but expected 11bf6ebec0334ad1f92f5820af6805370da24e52
+On branch main
+Your branch is ahead of 'origin/main' by 110 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   nohup.out
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[main 55bf480] Auto-sync: 2025-05-15 14:53:42
+ 1 file changed, 5 insertions(+)
