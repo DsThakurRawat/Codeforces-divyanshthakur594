@@ -22,3 +22,10 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 Everything up-to-date
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+To https://github.com/DsThakurRawat/Codeforces-divyanshthakur594.git
+   648c164..5fc7ae1  main -> main
