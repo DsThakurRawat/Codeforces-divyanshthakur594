@@ -323,3 +323,16 @@ and the repository exists.
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 ./ MODIFY nohup.out
+On branch main
+Your branch is ahead of 'origin/main' by 152 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
