@@ -834,3 +834,9 @@ Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
+To github.com:DsThakurRawat/Codeforces-divyanshthakur594.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at d670396a1f84c5e50e1b823eeaadc09658f5812d but expected 40380d5f9956d5fff10ecd0d222d8b3882b01da1)
+error: failed to push some refs to 'github.com:DsThakurRawat/Codeforces-divyanshthakur594.git'
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
