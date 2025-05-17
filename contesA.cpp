@@ -17,6 +17,7 @@ int main(){
                 cout << "Yes";
 
             }
+            else 
         }
 
     }
