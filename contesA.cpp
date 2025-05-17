@@ -22,7 +22,7 @@ int main(){
             }
            
         }
-        if(found == 0)
+        if(found == 0) cout << "Yes" << endl;
         
       
 
