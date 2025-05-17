@@ -23,7 +23,7 @@ int main(){
            
         }
         if(found == 0) cout << "Yes" << endl;
-        else cout << "No"
+        else cout << "No" << endl;
         
       
 
