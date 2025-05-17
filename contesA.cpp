@@ -15,7 +15,7 @@ int main() {
         }
 
         bool liar = false;
-        // Check if any two adjacent players both say 0
+    
         for (int i = 0; i < n - 1; i++) {
             if (a[i] == 0 && a[i + 1] == 0) {
                 liar = true;
