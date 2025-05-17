@@ -22,7 +22,7 @@ int main() {
             }
         }
 
-        // Special case for n=2 and both 1
+       
         if (!liar && n == 2 && a[0] == 1 && a[1] == 1) {
             liar = true;
         }
