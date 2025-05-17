@@ -21,8 +21,6 @@ int main() {
                 break;
             }
         }
-
-    
         if (!liar && n == 2 && a[0] == 1 && a[1] == 1) {
             liar = true;
         }
