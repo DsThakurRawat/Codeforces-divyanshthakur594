@@ -8,6 +8,6 @@ int main(){
         cin >> n;
         vector<int > v;
         for(int i =0; i<n; i++){
-            cin >> 
+            cin >> v.push_back
         }
        
