@@ -5,4 +5,5 @@ int main(){
     cin >> t;
     while(t--){
         int n;
-        
+        cin >> n;
+       
