@@ -8,7 +8,7 @@ int main(){
         cin >> n;
         vector<int > v;
         for(int i =0; i<n; i++){
-            cin >> v.push_back(v[i]);
-            
+             v.push_back(v[i]);
+
         }
        
