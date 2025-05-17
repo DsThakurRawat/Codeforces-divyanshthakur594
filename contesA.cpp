@@ -14,7 +14,7 @@ int main() {
             cin >> a[i];
             sum += a[i];
         }
-        // More than (n - 1) winners or all zeros is not possible
+        
         if (sum > n - 1 || sum == 0) {
             cout << "YES\n";
         } else {
