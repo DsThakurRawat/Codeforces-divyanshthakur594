@@ -16,7 +16,7 @@ int main(){
         for(int i =0; i < v.size()-1; i++){
             if(v[i] == v[i+1]) {
                 cout << "Yes";
-                found 
+                found = true;
 
             }
             else cout << "No";
