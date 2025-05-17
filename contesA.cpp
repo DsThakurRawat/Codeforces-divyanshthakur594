@@ -12,7 +12,7 @@ int main(){
 
         }
 
-        for(int v)
+        for(int i =0; i < v.size())
 
     }
 }
