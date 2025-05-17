@@ -20,7 +20,7 @@ int main(){
                 break;
 
             }
-            else cout << "No";
+           
         }
 
     }
