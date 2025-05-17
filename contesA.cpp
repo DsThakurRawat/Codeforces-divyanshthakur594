@@ -11,7 +11,7 @@ int main(){
              cin >> v[i];
 
         }
-        bool 
+        bool found 
 
         for(int i =0; i < v.size()-1; i++){
             if(v[i] == v[i+1]) {
