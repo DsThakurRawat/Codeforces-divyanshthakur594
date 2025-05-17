@@ -11,6 +11,7 @@ int main(){
              cin >> v[i];
 
         }
+        bool 
 
         for(int i =0; i < v.size()-1; i++){
             if(v[i] == v[i+1]) {
