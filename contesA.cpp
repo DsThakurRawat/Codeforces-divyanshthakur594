@@ -22,7 +22,7 @@ int main(){
             }
            
         }
-        cout << (found ? "Yes\n")
+        cout << (found ? "Yes\n" : "")
 
 
     }
