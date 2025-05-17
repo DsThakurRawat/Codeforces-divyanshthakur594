@@ -23,7 +23,7 @@ int main() {
             }
         }
 
-        // Special case for n=2 and both say 1
+        
         if (!liar) {
             if (n == 2) {
                 if (a[0] == 1 && a[1] == 1) {
