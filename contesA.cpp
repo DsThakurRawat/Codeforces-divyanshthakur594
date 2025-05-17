@@ -17,6 +17,7 @@ int main(){
             if(v[i] == v[i+1]) {
                 cout << "Yes";
                 found = true;
+                break;
 
             }
             else cout << "No";
