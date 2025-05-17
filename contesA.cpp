@@ -14,7 +14,7 @@ int main() {
 
         bool liar = false;
 
-        // Check adjacent zeros
+       
         for (int i = 0; i < n - 1; i++) {
             if (a[i] == 0 && a[i + 1] == 0) {
                 liar = true;
