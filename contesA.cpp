@@ -1,32 +1,25 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
+
+int main() {
     int t;
     cin >> t;
-    while(t--){
+    while (t--) {
         int n;
         cin >> n;
-        vector<int > v(n);
-        for(int i =0; i<n; i++){
-             cin >> v[i];
-
+        vector<int> a(n);
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            sum += a[i];
         }
-        bool found = 1;
-
-        for(int i =0; i < v.size()-1; i++){
-            if(v[i] == v[i+1]) {
-                
-                found = 0;
-                break;
-
-            }
-           
+        // More than (n - 1) winners or all zeros is not possible
+        if (sum > n - 1 || sum == 0) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
         }
-        if(found == 0) cout << "Yes" << endl;
-        else cout << "No" << endl;
-        
-      
-
     }
     return 0;
 }
