@@ -6,5 +6,6 @@
 # step 2 : add i to modified string 
 for _ in range(int(input())):
     s = input()
-    print(s.replace("us","")+"i")
+    s = s[:-2] 
+    print(s+"i")
     
