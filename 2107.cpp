@@ -2,30 +2,31 @@
 using namespace std;    
 int main(){
 
-    int t; 
-    cin >> t;
+    int t;  cin >> t;
+    
     while(t--){
 
       long long n,k;
       cin >> n >>k;
       vector<long long > a(n);
-      long long max_val=0;
+     for(auto &x : a) cin >> x; // another method to take input in cpp
 
-      for(int i =0; i<n; i++){
-        cin >> a[i];
-        max_val =  max(max_val,a[i]);
-      }
-    long long target_min = max_val-k;
-    long long total_moves =0;
+     long long sum = accumulate(a.begin(), a.end(),0LL);
 
-    for(int i =0; i<n; i++){
-        if(a[i] > target_min) total_moves += (a[i] - target_min);
+     sort(a.begin(),a.end());
+     a[n - 1]--;
+     sort(a.begin(),a.end());
 
-    } 
-    if(total_moves % 2 == 1 ) cout << "Tom\n";
-    else cout<< "Jerry\n";
+     if(a[n - 1] - a[0] > k || sum % 2 ==0) {
+        cout << "Jerry\n";
+        continue;
+     }
+    cout << "Tom\n";
+
+      
 
 
+     
 
     }
     return 0;
