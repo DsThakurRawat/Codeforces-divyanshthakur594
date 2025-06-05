@@ -19,11 +19,11 @@ int main(){
    cin >> n;
    for(int i =1; i<=n; i++){
     if(islucky(i) && n % i == 0){
-        cout << "Yes" << endl;
+        cout << "YES" << endl;
         return 0;
     }
    }
-   cout<< "No" << endl;
+   cout<< "NO" << endl;
    return 0;
 
     
