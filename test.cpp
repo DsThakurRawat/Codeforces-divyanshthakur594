@@ -1,32 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool islucky(int num ){
+    if(num == 0) return false;
+
+    while(num > 0){
+        int digit = num % 10;
+        if(digit != 4 && digit != 7) return false;
+
+        num = num /10;
+    }
+    return true;
+}
 
 
 int main(){
-   
-
-    // lucky numbers are positive numbers integers whose decimal respresentation contain on th lucky digit
-    // 4 and 7;
-    long long n;
-    cin >> n;
-    if( n ==0) {
-         cout << "No"<<endl;
-         return 0;}
-
-    while(n > 0){
-        int digit = n % 10;\
-        if( digit != 4 && digit != 7){ cout << "No" << endl;
+   int n;
+   cin >> n;
+   for(int i =1; i<=n; i++){
+    if(islucky(i) && n % i == 0){
+        cout << "Yes" << endl;
         return 0;
-          }
-        n = n /10;
-
     }
-    
+   }
+   cout<< "No" << endl;
+   return 0;
 
-     
-cout << "Yes" << endl;
-
-return 0;
     
 } 
