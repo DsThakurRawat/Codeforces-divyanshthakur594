@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool islucky(int num ){
-    if(num == 0) return false;
+bool islucky(int n ){
+    if(n == 0) return false;
 
-    while(num > 0){
-        int digit = num % 10;
+    while(n > 0){
+        int digit = n % 10;
         if(digit != 4 && digit != 7) return false;
 
-        num = num /10;
+        n = n /10;
     }
     return true;
 }
