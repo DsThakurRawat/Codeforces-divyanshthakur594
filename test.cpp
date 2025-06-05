@@ -10,16 +10,16 @@ int main(){
     // delete all vowels
     string res ="";
     for(int i =0; i<s.size(); i++){
-        if(s[i] != 'a' || s[i] != 'e' || s[i] != 'i' || s[i] != 'o'|| s[i] != 'u' ){
-        
+        if(s[i] != 'a' && s[i] != 'e' && s[i] != 'i' && s[i] != 'o' && s[i] != 'u' ){
+           res = res + s[i];
 
         }
-            res = res + s[i];
+         
     }
     // just want to add . before every consonant
        string result= "";
         for(auto c : res){
-            if(c != 'a' || c != 'e' || c != 'i' || c != 'o' || c =='u' ) result += '.';
+            result += '.';
       
            result +=c;
 
