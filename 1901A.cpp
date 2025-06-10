@@ -13,21 +13,32 @@ int main(){
     // return (max of case 1 , case 2 , case 3)
     int n , x;
     cin >> n >> x;
-    int st = 0;
-    vector <int> v(n);
-     for(int i = 0; i < n; i++ ) cin >> v[i];
+    vector < int > vect;
+    vect.push_back(0);
 
-     int case1 = 2*(x - v[n-1]);
-     int case2 = v[0] - st;
-     int maxi = v[0];
-     for(int i =0; i < n-1; i++){
-        maxi = max(maxi,v[i] - v[i+1]);
-          
-     }
-     int maxii = max(case1,case2);
+    for(int i = 0; i < n; i++){
+        int input;
+        cin >> input;
+        vect.push_back(input);
+    }
 
-     cout << max(maxii , maxi) << endl;
-     
+    vect.push_back(x);
+
+    n = vect.size();
+
+    int maxDist = INT_MIN;
+
+    for(int i = 1; i < n; i++){
+        if( i == n - 1) maxDist = max(maxDist, 2*(vect[i] - vect[i - 1]));
+        else maxDist = max(maxDist , vect[i] - vect[i - 1]);
+
+
+    }
+
+    cout << maxDist << endl;
+    
+
+
 
     
 
