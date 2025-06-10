@@ -17,7 +17,7 @@ int main(){
     vector <int> v(n);
      for(int i = 0; i < n; i++ ) cin >> v[i];
 
-     int case1 = x - v[n-1];
+     int case1 = 2*(x - v[n-1]);
      int case2 = v[0] - st;
      int maxi = v[0];
      for(int i =0; i < n-1; i++){
@@ -27,7 +27,7 @@ int main(){
      int maxii = max(case1,case2);
 
      cout << max(maxii , maxi) << endl;
-
+     
 
     
 
