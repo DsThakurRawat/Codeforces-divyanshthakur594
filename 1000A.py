@@ -1,0 +1,1 @@
+#hmm so we need to find minimal co 
