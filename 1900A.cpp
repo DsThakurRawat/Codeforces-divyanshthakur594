@@ -19,8 +19,15 @@ int main(){
 
     for(int i = 0; i < n; i++ ){
       if(i + 2 < n && s[i] == '.' && s[i+1] == '.' && s[i+2] == '.'){
+         coninuosempty = true;
+         break;
          
       }
+      if(s[i] == "."){
+         total_count++;
+      }
+      if(coninuosempty) cout << 2 << endl;
+      else cout << total_count << endl;
     }
      
    
