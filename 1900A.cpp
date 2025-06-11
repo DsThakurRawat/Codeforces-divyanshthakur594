@@ -23,7 +23,7 @@ int main(){
          break;
          
       }
-      if(s[i] == "."){
+      if(s[i] == '.'){
          total_count++;
       }
       if(coninuosempty) cout << 2 << endl;
