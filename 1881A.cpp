@@ -15,8 +15,9 @@ int main(){
          cout << i << endl;
          
       }
+       x +=x;
     }
-    x +=x;
+   
 }
    cout << -1 << endl;
    return 0;
