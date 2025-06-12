@@ -14,6 +14,7 @@ int main(){
        for(int i = 0; i < n; i++) cin >> a[i];
 
        cout << (a[0] == 1 ? "YES" : "NO") << endl;
+       
 
       
        
