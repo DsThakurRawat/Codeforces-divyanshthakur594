@@ -31,7 +31,7 @@ int main(){
        mpp[x]++;
 
      }
-     if(mpp.size() >= 3) cout << "YES" << endl;
+     if(mpp.size() >= 3) cout << "NO" << endl;
      else{
       if(abs(mpp.begin()->second - mpp.rbegin() -> second) <= 1){
          cout << "YES"<<endl;
