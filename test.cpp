@@ -16,6 +16,7 @@ int main(){
        cout << (a[0] == 1 ? "YES" : "NO") << endl;
        
 
+
       
        
       
