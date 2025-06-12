@@ -11,7 +11,7 @@ int main(){
     cin >> x >> s;
     
     for(int i = 0; i < 6; i++){
-      if(s.find(x) != string::npos){
+      if(x.find(s) != string::npos){
          cout << i << endl;
          
       }
