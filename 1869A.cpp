@@ -5,17 +5,28 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-      //  operation  -- select an index from 2 to n - 1 such tha ai-1 < ai and ai > ai+1;
-      // swap ai and ai+1
-      int n ;
-      cin >> n;
-      
-      
 
+      // 4 2 3 5 
+      // 4 5 2 3
+       int n ;
+       cin >> n;
+       int a[n];
+       for(int i = 0; i < n; i++) cin >> a[i];
+
+       cout << (a[0] == 1 ? "YES" : "NO") << endl;
+       
+
+
+
+
+
+      
+       
       
 
 
    }
+   return 0;
 
     
 } 
