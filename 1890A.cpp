@@ -25,7 +25,7 @@ int main(){
 
      map<int,int>mpp;// will store frequency here
 
-     for (int i = 1; i < n; i++){
+     for (int i = 1; i <= n; i++){
        int x;
        cin >> x;
        mpp[x]++;
