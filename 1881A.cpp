@@ -12,7 +12,7 @@ int main(){
     for(int i = 0; i < 6; i++){
       if(x.find(s) != string::npos){
          cout << i << endl;
-         return 0;
+         
       }
     }
     x +=x;
