@@ -17,21 +17,7 @@ int main(){
       }
     }
     x +=x;
-
-
-    
-
-      
-
-
-
-
-      
-       
-      
-
-
-   }
+}
    cout << -1 << endl;
    return 0;
 
