@@ -11,7 +11,7 @@ int main(){
     cin >> x >> s;
     
     for(int i = 0; i < 6; i++){
-      if(x.find(s) = string::npos){ // this line check wheather s exist inside the x 
+      if(x.find(s) == string::npos){ // this line check wheather s exist inside the x 
          cout << i << endl;
          
       }
