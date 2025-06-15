@@ -29,20 +29,6 @@ int main(){
 
  cout << ((flag != 0) ? "YES" : "NO") << endl;
 
-
-
-
-
-      
-
-
-
-
-      
-       
-      
-
-
    }
    return 0;
 
