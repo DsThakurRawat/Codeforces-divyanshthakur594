@@ -15,12 +15,14 @@ int main(){
     for(int i = 0; i < 6; i++){
       if(x.find(s) != string::npos){ // this line check wheather s exist inside the x 
         ans = i;
+        break;
+      
          
          
       }
        x +=x;
     }
-    cout<< (ans != -1) ? ans : -1;
+    cout<< ((ans != -1) ? ans : -1)<<endl;;
     cout<< endl;
 }
   return 0;
