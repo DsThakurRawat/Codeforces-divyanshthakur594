@@ -9,19 +9,20 @@ int main(){
     cin >> n >> m;
     string x,s;
     cin >> x >> s;
+    int ans=-1;
     
     for(int i = 0; i < 6; i++){
       if(x.find(s) != string::npos){ // this line check wheather s exist inside the x 
-         cout << i << endl;
-         return 0;
+        ans = i;
+         
          
       }
        x +=x;
     }
    
 }
-   cout << -1 << endl;
-   return 0;
+  
+   return (ans != -1) ? ans : -1;
 
     
 } 
