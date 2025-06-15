@@ -20,10 +20,11 @@ int main(){
       }
        x +=x;
     }
-   
+    cout<< (ans != -1) ? ans : -1;
+    cout<< endl;
 }
-  
-   return (ans != -1) ? ans : -1;
+  return 0;
+
 
     
 } 
