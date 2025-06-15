@@ -23,7 +23,7 @@ int main(){
        x +=x;
     }
     cout<< ((ans != -1) ? ans : -1)<<endl;;
-    cout<< endl;
+    
 }
   return 0;
 
