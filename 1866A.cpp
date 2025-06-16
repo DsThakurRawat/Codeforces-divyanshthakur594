@@ -23,7 +23,7 @@ int main(){
 
 
    */
-  int mini = 0;
+  int mini = INT_MAX;
 
   for(int i =0; i < n; i++){
     int absdiff = abs(v[i] - 0);
