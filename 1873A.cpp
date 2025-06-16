@@ -38,7 +38,7 @@ int main(){
 
 
 
-
+ cout << score << endl;
       
        
       
