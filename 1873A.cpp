@@ -17,23 +17,17 @@ int main(){
         {1, 2, 2, 2, 2, 2, 2, 2, 2, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
-    const int N = 10;
-    char mat[N][N];
-     for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            cin >> mat[i][j];
-        }
-    }
+    int N = 10;
+      char mat[N][N];
     int score=0;
 
-
  for (int i = 0; i < N; ++i) {
-        for (int j = 0; j < N; ++j) {
-            if (mat[i][j] == 'x') {
-                score += num[i][j];
+            string line;
+            cin >> line;
+            for (int j = 0; j < N; ++j) {
+                mat[i][j] = line[j];
             }
         }
-    }
       
 
 
