@@ -18,6 +18,23 @@ int main(){
     array we need output minimum process to make an array unsorted
     nji
     */
+   int mini = INT_MAX;
+
+   for(int i = 0 ; i < n; i++){
+    mini = min(mini , v[i] - v[i+1]);
+   }
+
+   if(mini < 0){
+    cout << 0 << endl;
+   }
+   else if(mini == 0){
+    cout << 1 << endl;
+
+   }
+   else if ( mini > 0){
+    if(mini % 2 == 0 ) cout <<( mini/2 ) + 1<< endl;
+    else cout << (mini / 2) + 1 << endl;
+   }
 
 
 
