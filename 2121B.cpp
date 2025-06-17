@@ -8,7 +8,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-    // ...existing code and comments...
+    
    
    int n;
    cin >> n;
@@ -16,11 +16,11 @@ int main(){
    cin >> s;
    int flag = 0;
 
-   // Optimized solution: Only need to check single characters
+   
    for(int i = 1; i < n-1; i++){
-        char b = s[i];  // middle character
+        char b = s[i]; 
         
-        // Check if b appears in prefix
+        
         for(int j = 0; j < i && !flag; j++){
             if(s[j] == b){
                 flag = 1;
@@ -28,7 +28,6 @@ int main(){
             }
         }
         
-        // Check if b appears in suffix
         for(int j = i+1; j < n && !flag; j++){
             if(s[j] == b){
                 flag = 1;
