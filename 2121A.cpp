@@ -5,7 +5,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-    int n ,s; // here s is starting position its index actually ig
+    int n ,s;
     cin >> n >> s;
     vector < int > vect;
 
