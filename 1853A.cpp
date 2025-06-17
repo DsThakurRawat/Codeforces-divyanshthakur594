@@ -20,7 +20,7 @@ int main(){
     */
    int mini = 0;
 
-   for(int i = 0 ; i < n; i++){
+   for(int i = 0 ; i < n-1; i++){
     mini = min(mini , v[i+1] - v[i]);
    }
 
