@@ -17,18 +17,18 @@ int main(){
    int flag = 0;
 
    
-   for(int i = 1; i < n-1; i++){
+for(int i = 1; i < n-1; i++){
         char b = s[i]; 
         
         
-        for(int j = 0; j < i && !flag; j++){
+for(int j = 0; j < i && !flag; j++){
             if(s[j] == b){
                 flag = 1;
                 break;
             }
         }
         
-        for(int j = i+1; j < n && !flag; j++){
+ for(int j = i+1; j < n && !flag; j++){
             if(s[j] == b){
                 flag = 1;
                 break;
