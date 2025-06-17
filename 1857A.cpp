@@ -20,8 +20,7 @@ int main(){
    }
    // so just got it we know what to do and now probelam is how we will implement this 
    // think like this we have to find 
-   // If the array contains at least one odd and one even →  YES
-  //  If all are odd or all are even →  NO
+   
    // odd + even = odd
    // even + even = even
    // odd + odd = even
