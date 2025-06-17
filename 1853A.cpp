@@ -18,7 +18,7 @@ int main(){
     array we need output minimum process to make an array unsorted
     nji
     */
-   int mini = INT_MAX;
+   int mini = -1;
 
    for(int i = 0 ; i < n; i++){
     mini = min(mini , v[i+1] - v[i]);
