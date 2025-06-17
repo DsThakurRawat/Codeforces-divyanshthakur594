@@ -33,7 +33,7 @@ int main(){
    }
    else if ( mini > 0){
     if(mini % 2 == 0 ) cout <<( mini/2 ) + 1<< endl;
-    else cout << (mini / 2) + 1 << endl;
+    if(mini % 2 !=0) cout << (mini / 2) + 1 << endl;
    }
 
 
