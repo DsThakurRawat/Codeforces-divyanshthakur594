@@ -21,7 +21,7 @@ int main(){
    int mini = INT_MAX;
 
    for(int i = 0 ; i < n; i++){
-    mini = min(mini , v[i] - v[i+1]);
+    mini = min(mini , v[i+1] - v[i]);
    }
 
    if(mini < 0){
