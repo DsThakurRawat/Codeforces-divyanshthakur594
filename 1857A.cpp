@@ -18,17 +18,22 @@ int main(){
    }
    // so just got it we know what to do and now probelam is how we will implement this 
    // think like this we have to find 
-   // if the array contain atleast one even and at least one odd element -- yes
-   // else no
-    bool has_even = false, has_odd = false;
-
-
-   for(auto it : v){
-    (it % 2 == 0) ? has_even = true : has_odd = true;
-
+   // If the array contains at least one odd and one even →  YES
+  //  If all are odd or all are even →  NO
+   int odd = 0,even =0;
+   
+    for(int i = 0; i < n; i++){
+        (v[i] % 2 == 0) ? even++ : odd++;
+    }
     
-   }
- (has_even && has_odd) ? cout << "YES" << endl : cout << "NO" << endl;
+
+    (even > 0 && odd > 0) ? cout << "YES" << endl :  cout << "NO" << endl;
+
+
+
+
+
+
 
 
       
