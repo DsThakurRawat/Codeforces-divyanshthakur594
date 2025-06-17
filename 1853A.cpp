@@ -16,7 +16,13 @@ int main(){
     /*
     we will be given sorted
     array we need output minimum process to make an array unsorted
-    nji
+    approach 
+    if mini < 0 --> print 0 operation array already disorted
+    if mini == --> it will take one operation
+    if mini > 0
+          mini % 2 == 0 print(mini / 2 + 1)
+          mini % 2 != 0 print( mini / 2 + 1)
+          
     */
    int mini =INT_MAX;
 
