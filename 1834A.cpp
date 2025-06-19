@@ -61,7 +61,7 @@ int main(){
         if(vect[i] == -1) l++;
         if(vect[i] == 1) k++;
      }
-    int op;
+    int op=0;
 
      while( k < l || l % 2 ==1 ){
         k++;
