@@ -27,16 +27,16 @@ int main(){
 
       
    }
-
+   
 
 
    cout << (flag == 1 ? "YES" : "NO") << endl;
 
       
-
+   }
 
    
    return 0;
 
     
-} 
+}
