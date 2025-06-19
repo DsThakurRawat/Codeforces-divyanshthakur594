@@ -34,6 +34,17 @@ int main(){
      or 
      -> -1 
 
+      k = 1s
+      l = -1s
+
+      while( k < l || l % 2 == 1) {
+      k++;
+      l--;
+      op++;
+
+      
+      }
+
 
 
 
@@ -41,6 +52,32 @@ int main(){
 
 
      */
+    int l =0;
+    int k =0;
+
+
+
+     for(int i = 0; i < n; i++){
+        if(vect[i] == -1) l++;
+        if(vect[i] == 1) k++;
+     }
+    int op;
+
+     while( k < l || l % 2 ==1 ){
+        k++;
+        l--;
+        op++;
+     }
+
+
+
+
+
+
+
+
+
+
 
 
       
