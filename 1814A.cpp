@@ -11,7 +11,8 @@ int main(){
     */
    long long n ,k;
    cin >> n >> k;
-
+//  2⋅x+k⋅y=n
+/*
 
    long long x ;
    long long y ;
@@ -22,7 +23,25 @@ int main(){
             flag = 1; 
             break;
     }
-   }
+   } */
+ 
+
+   // optimize approach if n % 2 == 0 or (n - k) % 2 == 0
+   // yes 
+   //else no
+ 
+if(n % 2 == 0 || (n-k) % 2 == 0) cout << "YES"<<endl;
+else cout << "NO" << endl;
+
+
+
+
+
+
+
+
+
+
 
 
       
@@ -30,10 +49,9 @@ int main(){
    
 
 
-   cout << (flag == 1 ? "YES" : "NO") << endl;
-
+  
       
-   }
+   
 
    
    return 0;
