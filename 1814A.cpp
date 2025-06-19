@@ -9,12 +9,12 @@ int main(){
     /*
 
     */
-   int n ,k;
+   long long n ,k;
    cin >> n >> k;
 
 
-   int x ;
-   int y ;
+   long long x ;
+   long long y ;
    int flag =0;
    for(x = 0;  x<= n/2; x++){
     for( y = 0; y <= n/k; y++){
