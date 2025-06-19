@@ -25,7 +25,7 @@ int main(){
        
         maxi = max(count,maxi);
     }
-    cout << count << endl;
+    cout << maxi << endl;
     
 
       
