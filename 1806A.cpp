@@ -25,7 +25,7 @@ moves count = dy - sy;
 */
   int sx,sy,dx,dy;
   cin >> sx >> sy >> dx >> dy;
-  if(dy > sy){
+  if(dy < sy){
    cout << -1 << endl;
    continue;
   }
@@ -36,7 +36,7 @@ moves count = dy - sy;
    cout << -1 << endl;
    continue;
   }
-   moves +=(sx-dx);
+   moves += (sx-dx);
    cout << moves << endl;
 
     
