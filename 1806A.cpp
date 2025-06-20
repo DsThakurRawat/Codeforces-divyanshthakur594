@@ -5,11 +5,16 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-      
+
       
        
 
+/*
+observation  
+dy < sy --> then 
 
+
+*/
 
 
     
