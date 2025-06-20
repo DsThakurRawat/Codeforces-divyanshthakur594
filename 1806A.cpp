@@ -36,7 +36,7 @@ moves count = dy - sy;
    cout << -1 << endl;
    continue;
   }
-   moves +=(sx-dy);
+   moves +=(sx-dx);
    cout << moves << endl;
 
     
