@@ -14,9 +14,17 @@ int main(){
         cin >> x;
         a.push_back(x);
     }
+    
 
-    for(int x = 0; x < pow(2,8); x++)
-
+    for(int x = 0; x < pow(2,8); x++){
+      for(int i =0; i < n; i++){
+        if(i^x==0) {cout << i << endl;
+            return 0;
+        
+        }
+      }
+    }
+  cout << -1 << endl;
 
 
 
