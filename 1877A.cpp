@@ -9,7 +9,7 @@ int main(){
     cin >> n;
 
     vector<int>v;
-   
+   // answer is simply -Ve of sum of all efficiency of other teams 
    int sum = 0;
     for(int i =0; i<n-1; i++){
         int x;
