@@ -26,15 +26,16 @@ int main(){
    int count = 0;
 
    int n = s.size();
+    int ans = n ;
 
    for(int i = 0; i < n; i++){
       if(  n > 1 &&  s[i] == s[n-i-1]) break;
-      else if( n > 1 && s[i] != s[n - i - 1]) count++;
+      else if( n > 1 && s[i] != s[n - i - 1]) ans = ans - 2;
 
 
 
    }
-     int ans = n - 2*count;
+    
     cout << ans << endl;
 
 
