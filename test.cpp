@@ -35,6 +35,8 @@ int main(){
 
    }
 
+    cout << n - count << endl;
+
 
    
 
