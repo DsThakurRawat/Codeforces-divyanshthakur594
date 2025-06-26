@@ -26,7 +26,20 @@ int main(){
    int count = 0;
 
    int n = s.size();
+
+   for(int i = 0; i < n; i++){
+      if(  n > 1 &&  s[i] == s[n-i-1]) break;
+      else if( n > 1 && s[i] != s[n - i - 1]) count++;
+
+
+
+   }
+
+
    
+
+
+
 
 
 
