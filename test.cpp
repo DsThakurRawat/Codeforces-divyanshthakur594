@@ -6,9 +6,9 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-      int n;
+      int k;
       string s;
-      cin >> n >> s;
+      cin >> k >> s;
       vector<char> v;
 
       // we need to find smallest string 
