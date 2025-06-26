@@ -35,7 +35,7 @@ int main(){
 
    }
 
-    cout << n - count << endl;
+    cout << n - 2*count << endl;
 
 
    
