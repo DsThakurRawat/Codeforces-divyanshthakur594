@@ -24,7 +24,7 @@ int main(){
       }
    }
 
-   if(flag = 0)
+   if(flag == 0)
     cout << "NO" << endl;
     else cout << "YES" << endl;
 
