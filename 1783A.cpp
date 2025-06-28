@@ -39,7 +39,22 @@ having same number x then ans is no else answer is yes
 
     }
 
+    sort(v.begin(),v.end());
 
+   int max = v[n-1];
+   int min = v[0];
+
+   if(max == min ){
+    cout << "NO" << endl;
+   }
+   else {
+    cout << "YES" << endl;
+    for(int i = 0; i < n - 1; i++){
+        cout << v[i] << " ";
+       
+    }
+     cout << endl;
+   }
     
 
 
