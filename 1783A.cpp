@@ -49,6 +49,7 @@ having same number x then ans is no else answer is yes
    }
    else {
     cout << "YES" << endl;
+    cout << max << " ";
     for(int i = 0; i < n - 1; i++)
         cout << v[i] << " ";
     cout << endl;
