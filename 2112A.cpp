@@ -16,12 +16,12 @@ int main(){
     
     
     */
-     vector<int>v;
-     v.push_back(a);
-     v.push_back(x);
-     v.push_back(y);
+     vector<int>arr;
+     arr.push_back(a);
+     arr.push_back(x);
+     arr.push_back(y);
      
-     cout << (is_sorted(v.begin(),v.end()) ? "YES" : "NO" )<< endl;
+     cout << (is_sorted(arr.begin(), arr.end()) || is_sorted(arr.rbegin(), arr.rend())) ? "YES" : "NO" )<< endl;
      
 
      
