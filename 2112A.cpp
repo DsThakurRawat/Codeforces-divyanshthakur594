@@ -21,7 +21,7 @@ int main(){
      arr.push_back(x);
      arr.push_back(y);
      
-     cout << (is_sorted(arr.begin(), arr.end()) || is_sorted(arr.rbegin(), arr.rend())) ? "YES" : "NO" )<< endl;
+     cout << ((is_sorted(arr.begin(), arr.end()) || is_sorted(arr.rbegin(), arr.rend())) ? "YES" : "NO" )<< endl;
      
 
      
