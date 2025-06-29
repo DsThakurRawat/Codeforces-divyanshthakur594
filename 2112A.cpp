@@ -16,8 +16,15 @@ int main(){
     
     
     */
-      if((a > x && x  > y )||( a < x && x < y)) cout << "YES" << endl;
-      else cout << "NO"<<endl;
+     vector<int>v;
+     v.push_back(a);
+     v.push_back(x);
+     v.push_back(y);
+     
+     cout << (is_sorted(v.begin(),v.end()) ? "YES" : "NO" )<< endl;
+     
+
+     
 
 
 
