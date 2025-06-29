@@ -16,7 +16,7 @@ int main(){
     
     
     */
-      if(a > x > y || a < x < y) cout << "YES" << endl;
+      if((a > x && x  > y )||( a < x && x < y)) cout << "YES" << endl;
       else cout << "NO"<<endl;
 
 
