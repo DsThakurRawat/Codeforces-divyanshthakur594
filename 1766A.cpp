@@ -5,7 +5,7 @@ bool check(long long x){
     long long count_digits = 0;
     long long count_zeroes = 0;
     while(x) {
-        if( x % 2 == 0) count_zeroes++;
+        if( x % 10 == 0) count_zeroes++;
         count_digits++;
         x = x / 10;
     }
