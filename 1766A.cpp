@@ -9,6 +9,7 @@ int main(){
     int n;
     cin >> n;
     int count = 0;
+    int secondcount = 0;
     for(int i = 1; i <= n; i++){
         // extremely round if it had only one non zero digit
 
@@ -19,8 +20,8 @@ int main(){
         x /= 10;
       }
       
-      
-
+    if( count == 1) secondcount++;
+    
 
 
 
