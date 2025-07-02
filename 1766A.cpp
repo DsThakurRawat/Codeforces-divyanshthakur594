@@ -28,8 +28,8 @@ int main(){
     }
       
 
-
-  cout << secondcount << endl;
+   cout << secondcount << endl;
+  
     
    }
    
