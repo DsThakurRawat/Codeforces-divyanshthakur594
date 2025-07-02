@@ -29,7 +29,7 @@ int main(){
       
 
 
-  cout << count << endl;
+  cout << secondcount << endl;
     
    }
    
