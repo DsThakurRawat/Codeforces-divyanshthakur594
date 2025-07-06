@@ -19,31 +19,46 @@ int main(){
 
         }
 
-          int index = -1;
-        
-        for(int i = 1; i < n; i++){
-            if(a[i] != a[0]) 
-            {  index = i;
-                break;
+         if( n == 1) {
+            cout << "NO" << endl;
+            continue;
+
+         }
+
+         vector<int> b = a;
+         sort(b.begin(), b.end());
+
+         bool flag = 1;
+
+         for(int i = 0; i < n; i++){
+            if(b[i] != b[0]) flag = 0;
+         }
+
+         if(flag == 1) {
+            cout << "NO" << endl;
+            continue;
+         }
+
+         vector<int> derange = b;
+
+         rotate(derange.begin(),derange.end()+1,derange.end());
+
+         for(int i = 0; i < n; i++){
+            if(derange[i] == b[i]) {
+                swap(derange[i],derange[(i+1) % n]);
 
             }
-        }
 
-        if(index == -1){
-            cout << "NO" << endl;
-        }
-        else{
-            cout << "YES" << endl;
-            cout << a[0] << " " << a[index] << endl;
-        }
-        
-         
+            
+         }
+         cout << "YES" << endl;
+         for(int i = 0; i < n; i++){
+            cout << derange[i] << " ";
+
+         }
+         cout << endl;
 
         
-
-    
-       
-       
       
     
    }
