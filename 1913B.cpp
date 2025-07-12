@@ -21,6 +21,7 @@ int main(){
 
     for(int i = 0; i < s.size(); i++){
         if(s[i] == '0' and count1 > 0){
+            
 
         }
     }
