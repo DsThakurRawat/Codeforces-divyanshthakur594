@@ -28,8 +28,10 @@ int main(){
             count0--,tsize++;
         }
 
-        els break;
+        else break;
     }
+
+    
 
 
 
