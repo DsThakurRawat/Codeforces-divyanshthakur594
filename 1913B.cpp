@@ -36,7 +36,7 @@ int main(){
         else break;
     }
 
-    cout <<  s.size() - 
+    cout <<  s.size() - ts
 
 
 
