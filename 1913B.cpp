@@ -7,7 +7,7 @@ int main(){
    cin >> t;
    while(t--){ 
 
-    vector
+    vector<
        
       
     
