@@ -17,7 +17,7 @@ int main(){
     
     for(int i = 0; i < s.size(); i++){
         if(s[i] == '0')count0++;
-        if(s[i] == '0')cou
+        if(s[i] == '0')count1
 
     }
 
