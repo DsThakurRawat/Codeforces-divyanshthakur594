@@ -24,6 +24,7 @@ int main(){
             count1--,tsize++;
 
         }
+        else 
     }
 
 
