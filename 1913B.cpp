@@ -7,8 +7,8 @@ int main(){
    cin >> t;
    while(t--){ 
 
-    vector<char>s;
-    
+   
+
 
 
 
