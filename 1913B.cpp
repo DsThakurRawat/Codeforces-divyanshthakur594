@@ -16,7 +16,7 @@ int main(){
     int tsize = 0;
     
     for(int i = 0; i < s.size(); i++){
-        if
+        if(s[i] )
     }
 
     
