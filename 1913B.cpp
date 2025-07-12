@@ -36,7 +36,7 @@ int main(){
         else break;
     }
 
-    cout << 
+    cout <<  
 
 
 
