@@ -13,7 +13,9 @@ int main(){
     // if we got equal number of 1 and 0 then the cost will be zero
 
     int count1 = 0, count0 = 0;
-    int st
+    int tsize = 0;
+
+    for
 
 
 
