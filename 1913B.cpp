@@ -24,7 +24,7 @@ int main(){
             count1--,tsize++;
 
         }
-        else if(s[])
+        else if(s[i])
     }
 
 
