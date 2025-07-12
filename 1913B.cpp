@@ -28,9 +28,9 @@ int main(){
             count0--,tsize++;
         }
 
-        eles break;
+        els break;
     }
-    
+
 
 
 
