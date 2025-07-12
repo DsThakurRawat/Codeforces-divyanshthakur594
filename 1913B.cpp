@@ -36,7 +36,7 @@ int main(){
         else break;
     }
 
-    cout <<  s.size() - ts
+    cout <<  s.size() - tsize << endl;
 
 
 
