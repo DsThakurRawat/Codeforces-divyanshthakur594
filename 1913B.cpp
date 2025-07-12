@@ -9,7 +9,7 @@ int main(){
 
     string s;
     cin >> s;
-    // we can only delete the character we cannot 
+    // we can only delete the character w
 
 
 
