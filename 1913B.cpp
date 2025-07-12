@@ -11,7 +11,7 @@ int main(){
     cin >> s;
     // we can only delete the character 
     // if we got equal number of 1 and 0 then the cost will be zero
-    /
+    
 
 
 
