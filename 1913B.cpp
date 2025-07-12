@@ -15,7 +15,9 @@ int main(){
     int count1 = 0, count0 = 0;
     int tsize = 0;
 
-    for(int i = 0; i < s.size(); i++)
+    for(int i = 0; i < s.size(); i++){
+        
+    }
 
 
 
