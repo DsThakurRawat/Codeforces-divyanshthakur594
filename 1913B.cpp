@@ -14,10 +14,12 @@ int main(){
 
     int count1 = 0, count0 = 0;
     int tsize = 0;
+    
 
+    
     for(int i = 0; i < s.size(); i++){
         if(s[i] == '0' and count1 > 0){
-            
+
         }
     }
 
