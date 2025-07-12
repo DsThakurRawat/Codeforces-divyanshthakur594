@@ -25,7 +25,7 @@ int main(){
 
         }
         else if(s[i] == '1' && count0 > 0) {
-            count
+            count0--,ts
         }
     }
 
