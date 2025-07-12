@@ -24,7 +24,7 @@ int main(){
             count1--,tsize++;
 
         }
-        else 
+        else if(s)
     }
 
 
