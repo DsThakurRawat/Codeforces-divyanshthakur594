@@ -14,7 +14,8 @@ int main(){
        for(int i = 0; i < n; i++) cin >> v[i];
        /*
        arg: divide and check 
-       if k > arrInt then k % smallest(arr)
+       if k > arrInt then k % smallest(arrElement)
+       
        
        */
 
