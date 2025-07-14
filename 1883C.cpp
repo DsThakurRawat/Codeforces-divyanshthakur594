@@ -12,7 +12,7 @@ int main(){
        int n,k;
        cin >> n >> k;
 
-       vector<int>v;
+       vector<int>arr;
        for(int i = 0; i < n; i++) cin >> v[i];
        /*
        arg: divide and check 
