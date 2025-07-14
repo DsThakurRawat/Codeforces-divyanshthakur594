@@ -6,8 +6,9 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-       
     
+       
+
       
     
    }
