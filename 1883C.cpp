@@ -20,6 +20,21 @@ int main(){
        */
 
        // for -1 
+        vector<int> dp(k, INF);
+    dp[1 % k] = 0;                          // product of 0 elems ≡ 1
+
+    for (int val : arr) {
+        vector<int> ndp(k, INF);
+        for (int r = 0; r < k; ++r) {
+            if (dp[r] == INF) continue;
+            for (int inc = 0; inc < k; ++inc) {
+                int newVal = val + inc;
+                int r2 = (r * (newVal % k)) % k;
+                ndp[r2] = min(ndp[r2], dp[r] + inc);
+            }
+        }
+        dp.swap(ndp);
+    }
        
 
            
