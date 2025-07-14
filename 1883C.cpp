@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 // solution by divyansh 
+const int INF = 1e9;
+
 
 int main(){
    int t;
