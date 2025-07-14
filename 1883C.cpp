@@ -36,7 +36,8 @@ int main(){
     }
        
 
-           
+           if (dp[0] == INF) cout << -1 << endl;
+        else cout << dp[0] << endl;
        
 
       
