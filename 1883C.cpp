@@ -14,7 +14,7 @@ int main(){
        for(int i = 0; i < n; i++) cin >> v[i];
        /*
        arg: divide and check 
-       if ev ele > arrInt then arr[i] %  
+       if ev ele > arrInt then arr[i] % k 
        
        */
 
