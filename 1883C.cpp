@@ -13,7 +13,7 @@ int main(){
        vector<int>v;
        for(int i = 0; i < n; i++) cin >> v[i];
        /*
-       arg divide and check 
+       arg: divide and check 
        
        */
 
