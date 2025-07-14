@@ -15,7 +15,7 @@ int main(){
        /*
        arg: divide and check 
        if k > arrInt then k % smallest(arrElement)
-       
+       if 
        
        */
 
