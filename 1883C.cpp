@@ -13,7 +13,7 @@ int main(){
        cin >> n >> k;
 
        vector<int>arr;
-       for(int i = 0; i < n; i++) cin >> v[i];
+       for(int i = 0; i < n; i++) cin >> arr[i];
        /*
        arg: divide and check 
        if k >= arrInt then k % smallest(arrElement)
