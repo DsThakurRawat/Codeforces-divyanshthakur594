@@ -15,10 +15,7 @@ int main(){
        vector<int>arr;
        for(int i = 0; i < n; i++) cin >> arr[i];
        /*
-       arg: divide and check 
-       if k >= arrInt then k % smallest(arrElement)
-       if all array element > k then  smallest of all array element % k
-       
+      
        */
 
        // for -1 
