@@ -27,7 +27,7 @@ int main(){
 
     for(auto [ai, bi] : residents){
         if(people_left == 0) break;
-        int take = min()
+        int take = min(ai,)
     }
 
 
