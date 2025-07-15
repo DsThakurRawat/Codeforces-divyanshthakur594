@@ -18,7 +18,7 @@ int main(){
         residents[i] = {a[i],b[i]};
     }
     
-    sort(residents.begin(),res)
+    sort(residents.begin(),residents.end())
 
 
 
