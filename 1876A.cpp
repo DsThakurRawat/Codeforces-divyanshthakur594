@@ -9,7 +9,7 @@ int main(){
     int n,p;
        cin >> n >> p;
     vector<int>resident(n),cost(n);
-    for(int i = 0; i < n; i++)reside
+    for(int i = 0; i < n; i++)resident
 
 
        
