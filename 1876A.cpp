@@ -32,7 +32,7 @@ int main(){
         total_cost += 1LL*take*cost_per;
         people_left -= take;
     }
-   cout 
+   cout << total_cost << endl;
 
 
        
