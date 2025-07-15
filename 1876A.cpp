@@ -29,6 +29,7 @@ int main(){
         if(people_left == 0) break;
         int take = min(ai,people_left);
         int cost_per = min(bi,p);
+        total_cost += 
     }
 
 
