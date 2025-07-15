@@ -4,3 +4,4 @@ for _ in range(int(input())):
     costperresident = list(map(int, input().split()))
     
 
+
