@@ -9,8 +9,9 @@ int main(){
     int n,p;
        cin >> n >> p;
     vector<int>resident(n),cost(n);
-
     
+
+
        
 
       
