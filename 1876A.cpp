@@ -14,7 +14,9 @@ int main(){
      
     vector<pair<int , int> > residents;
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++){
+        
+    }
 
 
 
