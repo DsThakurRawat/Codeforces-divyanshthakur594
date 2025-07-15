@@ -8,7 +8,7 @@ int main(){
    while(t--){ 
     int n,p;
        cin >> n >> p;
-    vector<int>a(n),cost(n);
+    vector<int>a(n),b(n);
     for(int i = 0; i < n; i++)cin >> resident[i];
     for( int i = 0; i < n; i++) cin >> cost[i];
      
