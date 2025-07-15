@@ -12,7 +12,9 @@ int main(){
     for(int i = 0; i < n; i++)cin >> resident[i];
     for( int i = 0; i < n; i++) cin >> cost[i];
      
-    vector<pair<int , int> > residents
+    vector<pair<int , int> > residents;
+
+    
 
 
 
