@@ -1,2 +1,2 @@
 
-for _ in range(int)
+for _ in range(int(input()))
