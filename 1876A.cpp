@@ -13,7 +13,8 @@ int main(){
     for( int i = 0; i < n; i++) cin >> cost[i];
 
     sort(cost.begin(),cost.end());
-   people_left = n;
+    int  people_left = n;
+    total
 
        
 
