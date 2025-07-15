@@ -25,7 +25,9 @@ int main(){
     long long total_cost = 0;
     int people_left = n;
 
-    for(auto [ai, bi] : residents)
+    for(auto [ai, bi] : residents){
+        
+    }
 
 
 
