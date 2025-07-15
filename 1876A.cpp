@@ -26,7 +26,8 @@ int main(){
     int people_left = n;
 
     for(auto [ai, bi] : residents){
-        if(people_left == 0)
+        if(people_left == 0) break;
+        
     }
 
 
