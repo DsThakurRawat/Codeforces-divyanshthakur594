@@ -22,7 +22,7 @@ int main(){
         return x.second < y.second;
     });
 
-    long 
+    long long total
 
 
 
