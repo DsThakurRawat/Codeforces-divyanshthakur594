@@ -20,7 +20,7 @@ int main(){
     
     sort(residents.begin(),residents.end(),[](auto &x,auto &y){
         return x.second < y.second;
-    }
+    })
 
 
 
