@@ -11,12 +11,10 @@ int main(){
     vector<int>resident(n),cost(n);
     for(int i = 0; i < n; i++)cin >> resident[i];
     for( int i = 0; i < n; i++) cin >> cost[i];
+     
+    vector<pair
 
-    sort(cost.begin(),cost.end());
-    int  people_left = n;
-    int  total_cost = 0;
 
-    
 
 
        
