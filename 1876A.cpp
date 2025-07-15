@@ -15,7 +15,7 @@ int main(){
     vector<pair<int , int> > residents;
 
     for(int i = 0; i < n; i++){
-        residents[i] = {a[i],b[i]}
+        residents[i] = {a[i],b[i]};
     }
 
 
