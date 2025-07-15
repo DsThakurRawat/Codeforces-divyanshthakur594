@@ -23,7 +23,9 @@ int main(){
     });
 
     long long total_cost = 0;
-    int people
+    int people_left = n;
+
+    for(auto [ai])
 
 
 
