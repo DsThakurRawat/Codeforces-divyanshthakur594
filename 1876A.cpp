@@ -22,7 +22,8 @@ int main(){
         return x.second < y.second;
     });
 
-    long long total
+    long long total_cost = 0;
+    
 
 
 
