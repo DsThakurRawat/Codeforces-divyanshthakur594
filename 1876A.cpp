@@ -25,7 +25,7 @@ int main(){
     long long total_cost = 0;
     int people_left = n;
 
-    for(auto [ai, bi])
+    for(auto [ai, bi] )
 
 
 
