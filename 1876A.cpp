@@ -18,6 +18,7 @@ int main(){
         residents[i] = {a[i],b[i]};
     }
     
+    
 
 
 
