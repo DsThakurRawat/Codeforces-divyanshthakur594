@@ -14,7 +14,7 @@ int main(){
 
     sort(cost.begin(),cost.end());
     int  people_left = n;
-    total
+    total_cost = 0
 
        
 
