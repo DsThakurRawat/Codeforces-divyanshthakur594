@@ -30,7 +30,7 @@ int main(){
         int take = min(ai,people_left);
         int cost_per = min(bi,p);
         total_cost += 1LL*take*cost_per;
-        people_left 
+        people_left -= take;
     }
 
 
