@@ -12,7 +12,7 @@ int main(){
     for(int i = 0; i < n; i++)cin >> a[i];
     for( int i = 0; i < n; i++) cin >> b[i];
      
-    vector<pair<int , int> > residents;
+    vector<pair<int , int> > residents(N);
 
     for(int i = 0; i < n; i++){
         residents[i] = {a[i],b[i]};
