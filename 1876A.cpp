@@ -8,7 +8,7 @@ int main(){
    while(t--){ 
     int n,p;
        cin >> n >> p;
-    vector<int>resident
+    vector<int>resident(n),cost
        
 
       
