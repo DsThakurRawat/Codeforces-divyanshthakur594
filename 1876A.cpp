@@ -16,6 +16,8 @@ int main(){
     int  people_left = n;
     int  total_cost = 0;
 
+    
+
 
        
 
