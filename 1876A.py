@@ -1,3 +1,4 @@
 for _ in range(int(input())):
     n,p = map(int, input().split()) #to take multiple inputs n -> number of resident and p -> cost for pak chanek to share announcement directly
-    resident = list(map(int, input))
+    resident = list(map(int, input().split()))
+    
