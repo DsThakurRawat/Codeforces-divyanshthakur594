@@ -17,7 +17,7 @@ int main(){
     for(int i = 0; i < n; i++){
         residents[i] = {a[i],b[i]};
     }
-
+    
 
 
 
