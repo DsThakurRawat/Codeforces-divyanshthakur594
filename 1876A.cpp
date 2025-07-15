@@ -6,7 +6,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-    int n,p
+    int n,p;
        cin >> n >> p;
 
        
