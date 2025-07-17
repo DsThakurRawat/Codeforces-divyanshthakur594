@@ -13,6 +13,7 @@ int main(){
        while(x > 0){
         int i = x % 10;
         
+
        }
 
 
