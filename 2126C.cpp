@@ -31,7 +31,7 @@ a teleport from tower i to tower j takes |h[i] - h[j]|
 
 int start = k - 1;
 
-    int height = h[start]
+    int height = h[start];
     int maxheight = *max_element(h.begin(), h.end());
 
     // Already on max height
