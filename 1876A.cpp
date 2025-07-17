@@ -20,10 +20,10 @@ int main() {
             offers.emplace_back(b[i], a[i]);
         }
 
-        // Sort by cost (b[i]) ascending
+       
         sort(offers.begin(), offers.end());
 
-        long long total_cost = p; // one fixed share from Pak Chanek
+        long long total_cost = p;
         int needed = n - 1;
 
         for (int i = 0; i < n && needed > 0; ++i) {
