@@ -14,7 +14,7 @@ int main() {
         for (int i = 0; i < n; ++i) cin >> a[i];
         for (int i = 0; i < n; ++i) cin >> b[i];
 
-        // Store cost and how many shares resident can offer
+      
         vector<pair<int, int>> offers;
         for (int i = 0; i < n; ++i) {
             offers.emplace_back(b[i], a[i]);
