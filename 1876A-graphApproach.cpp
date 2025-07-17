@@ -73,7 +73,7 @@ int main() {
             if (dsu.unite(e.u, e.v)) {
                 mst_cost += e.w;
                 count++;
-                if (count == n) break; // MST of n+1 nodes has n edges
+                if (count == n) break; 
             }
         }
 
