@@ -63,7 +63,7 @@ int main() {
             }
         }
 
-        // Build MST
+       
         sort(edges.begin(), edges.end());
         DSU dsu(n + 1); // include Pak Chanek as node n
         long long mst_cost = 0;
