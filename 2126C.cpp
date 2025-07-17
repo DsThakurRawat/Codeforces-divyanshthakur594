@@ -41,7 +41,7 @@ int start = k - 1;
             int teleporttime = abs(h[i] - h[start]);
             if (teleporttime < h[start]) {
                 cout << "YES" << endl; 
-                return 0;
+               
             }
         }
     }
