@@ -44,7 +44,7 @@ int main(){
    */
 
    while( i <= n - k){
-    flag 
+    int flag = 1;
    }
 
 
