@@ -25,7 +25,7 @@ int main(){
             
             if(time >= h[curr]) continue;
 
-            // If current tower is of max height
+           
             if(h[curr] == maxH){
                 found = true;
                 break;
