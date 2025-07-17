@@ -17,7 +17,7 @@ int main() {
        
         priority_queue<int, vector<int>, greater<int>> pq;
 
-        // Push all possible resident shares
+       
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < a[i]; ++j) {
                 pq.push(b[i]);
