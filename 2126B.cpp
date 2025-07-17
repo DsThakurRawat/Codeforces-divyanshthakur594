@@ -48,6 +48,7 @@ int main(){
     for(int j = 0; j < k; j++){
         if(a[days + j] == 1){
             flag = 0;
+            break;
 
         }
     }
