@@ -15,5 +15,5 @@ for _ in range(t):
 
     
     shares.sort()
-    total_cost = p + sum(shares[:n - 1])  # First share = p
+    total_cost = p + sum(shares[:n - 1])  
     print(total_cost)
