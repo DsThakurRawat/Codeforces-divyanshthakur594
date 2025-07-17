@@ -22,7 +22,7 @@ int main(){
     for(int i = 0; i < n; i++) cin >> a[i];
 
    // appraoch we need to count total hikes or maximum number of hikes
-   
+   //
 
 
        
