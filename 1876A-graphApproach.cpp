@@ -42,7 +42,7 @@ int main() {
         
         vector<Edge> edges;
 
-        // Connect every resident to Pak Chanek (node n) with cost p
+       
         for (int i = 0; i < n; ++i) {
             edges.push_back({i, n, p});
         }
