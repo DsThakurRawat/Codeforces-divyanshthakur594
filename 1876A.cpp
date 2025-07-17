@@ -22,7 +22,7 @@ int main() {
             }
         }
 
-        // Add extra 'p' cost shares from Pak Chanek (enough to cover all cases)
+        // 
         for (int i = 0; i < n; ++i) {
             shares.push_back(p);
         }
