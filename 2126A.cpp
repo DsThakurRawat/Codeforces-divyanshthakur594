@@ -17,7 +17,7 @@ int main(){
 
        }
 
-       int miny = INT_MAX
+       int miny = INT_MAX;
 
 
       
