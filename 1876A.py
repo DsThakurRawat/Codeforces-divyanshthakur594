@@ -6,11 +6,11 @@ for _ in range(t):
 
     shares = []
 
-    # All shares from residents
+   
     for ai, bi in zip(a, b):
         shares.extend([bi] * ai)
 
-    # Add p-cost shares from Pak Chanek
+   
     shares.extend([p] * n)
 
     # Sort and pick n-1 cheapest shares
