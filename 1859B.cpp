@@ -9,7 +9,8 @@ int main(){
        int n; // the number of arrays in list
       cin >> n;
      vector<vector<int>> arrays(n); // this thing here declare list of n arrays
-     
+     /*
+     */
 
 
     
