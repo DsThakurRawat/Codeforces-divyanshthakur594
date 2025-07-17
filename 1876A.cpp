@@ -27,7 +27,7 @@ int main() {
         int needed = n - 1;
 
         for (int i = 0; i < n && needed > 0; ++i) {
-            int use = min(offers[i].second, needed); // use up to a[i]
+            int use = min(offers[i].second, needed);
             total_cost += 1LL * use * min(offers[i].first, p);
             needed -= use;
         }
