@@ -14,7 +14,7 @@ int main(){
     2. That is, arrays[0], arrays[1], ..., arrays[n-1] are all empty vectors initially.
     3. Think of it like: 
     arrays = [
-  [],  // array 0
+     [],  // array 0
   [],  // array 1
   ...
   []   // array n-1
