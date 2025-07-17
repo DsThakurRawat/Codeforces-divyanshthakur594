@@ -8,7 +8,9 @@ int main(){
    while(t--){ 
        int x;
        cin >> x;
-       vector<int>
+       vector<int>digits;
+
+       
       
     
    }
