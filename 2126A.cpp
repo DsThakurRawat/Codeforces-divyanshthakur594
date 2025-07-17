@@ -12,7 +12,8 @@ int main(){
 
        while(x > 0){
         int i = x % 10;
-        digits.push_back(i)
+        digits.push_back(i);
+        x = x/10;
 
        }
 
