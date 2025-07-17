@@ -8,6 +8,7 @@ int main(){
    while(t--){ 
       string x;
       cin >> x;
+      int res
 
       for(int i = 0; ; i++){
         string y = to_string(i);
