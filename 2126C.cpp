@@ -49,7 +49,8 @@ int start = k - 1;
             }
         }
     }
-
+ if (canSurvive) cout << "YES" << endl;
+        else cout << "NO" << endl;
   
 }
 
