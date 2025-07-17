@@ -33,7 +33,7 @@ int start = k - 1;
 
     // Already on max height
     if (h[start] == maxHeight)
-       cout << "YES"
+       cout << "YES" << endl;
 
     for (int i = 0; i < n; ++i) {
         if (h[i] == maxHeight) {
