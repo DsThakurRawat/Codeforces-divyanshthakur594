@@ -29,7 +29,7 @@ int main() {
 
      
         sort(shares.begin(), shares.end());
-        long long total_cost = p;  // First share must be from Pak Chanek
+        long long total_cost = p;  
         for (int i = 0; i < n - 1; ++i) {
             total_cost += shares[i];
         }
