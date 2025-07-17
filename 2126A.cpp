@@ -27,7 +27,7 @@ int main(){
 
       }
 
-      cout << res
+      cout << result << endl;
     
    }
    
