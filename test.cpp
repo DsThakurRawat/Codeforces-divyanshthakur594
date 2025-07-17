@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-// solution by divyansh thakur
 
 int main(){
     int t;
@@ -11,30 +10,40 @@ int main(){
         vector<int> h(n);
         for(int i = 0; i < n; i++) cin >> h[i];
 
-        int start = k - 1;
-        int maxh = *max_element(h.begin(), h.end());
-        int currentH = h[start];
+        int maxH = *max_element(h.begin(), h.end());
+        queue<pair<int, int>> q;  // (index, current_time)
+        vector<bool> visited(n, false);
 
-        // Already on max height
-        if (currentH == maxh){
-            cout << "YES\n";
-            continue;
-        }
+        q.push({k - 1, 0});
+        visited[k - 1] = true;
 
-        bool canTeleport = false;
-        for(int i = 0; i < n; ++i){
-            if(h[i] == maxh){
-                int teleportTime = abs(currentH - h[i]);
-                int survivalTime = currentH - 1;
+        bool found = false;
 
-                if(teleportTime <= survivalTime){
-                    canTeleport = true;
-                    break;
+        while(!q.empty()){
+            auto [curr, time] = q.front(); q.pop();
+
+            // You die if water reaches height of current tower
+            if(time >= h[curr]) continue;
+
+            // If current tower is of max height
+            if(h[curr] == maxH){
+                found = true;
+                break;
+            }
+
+            for(int i = 0; i < n; i++){
+                if(visited[i]) continue;
+
+                int t_cost = abs(h[curr] - h[i]);
+
+                if(time + t_cost < h[curr]){
+                    visited[i] = true;
+                    q.push({i, time + t_cost});
                 }
             }
         }
 
-        cout << (canTeleport ? "YES\n" : "NO\n");
+        cout << (found ? "YES\n" : "NO\n");
     }
 
     return 0;
