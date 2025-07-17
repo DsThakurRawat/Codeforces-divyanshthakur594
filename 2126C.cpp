@@ -43,7 +43,7 @@ int start = k - 1;
         if (h[i] == maxheight) {
             int teleporttime = abs(h[i] - h[start]);
             if (teleporttime < h[start]) {
-                cout << "YES" << endl; 
+              flag = 1;
                
             }
         }
