@@ -13,7 +13,9 @@ int main(){
         string y = to_string(i);
 
         for(char c : y){
-            if(x.find(c) != string :: npos)
+            if(x.find(c) != string :: npos){
+                
+            }
         }
 
 
