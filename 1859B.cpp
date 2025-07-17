@@ -6,7 +6,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-       int n; // the number of array in list
+       int n; // the number of arrays in list
       
     
    }
