@@ -28,8 +28,8 @@ int main(){
     arrays[i].resize(mi);
     for (int j = 0; j < mi; ++j) {
         cin >> arrays[i][j];
-    }
-     }
+      }
+       }
 
 
 
