@@ -28,6 +28,7 @@ int main(){
    // for hike to make total continus days >= k;
    // and if there is 1 btw zero such like for
    /*
+   tc 5 1
    
    */
 
