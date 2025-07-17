@@ -1,7 +1,15 @@
-for _ in range(int(input())):
-    n,p = map(int, input().split()) #to take multiple inputs n -> number of resident and p -> cost for pak chanek to share announcement directly
-    resident = list(map(int, input().split()))
-    costperresident = list(map(int, input().split()))
-    
+t = int(input())
+for _ in range(t):
+    n, p = map(int, input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
 
+    shares = []
 
+    for ai, bi in zip(a, b):
+        shares.extend([bi] * ai)
+
+    shares.extend([p] * n)
+
+    shares.sort()
+    print(sum(shares[:n - 1]))
