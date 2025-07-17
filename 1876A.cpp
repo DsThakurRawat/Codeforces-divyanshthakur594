@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t; cin >> t;
+    while (t--) {
+        int n, p;
+        cin >> n >> p;
+        vector<int> a(n), b(n);
+
+        for (int i = 0; i < n; ++i) cin >> a[i];
+        for (int i = 0; i < n; ++i) cin >> b[i];
+
+        // Min-heap for share costs
+        priority_queue<int, vector<int>, greater<int>> pq;
+
+        // Push all possible resident shares
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < a[i]; ++j) {
+                pq.push(b[i]);
+            }
+        }
+
+        // Push n Pak Chanek shares (cost p)
+        for (int i = 0; i < n; ++i) {
+            pq.push(p);
+        }
+
+        // Total cost starts with 1 Pak Chanek share
+        long long total_cost = p;
+
+        // Add n - 1 cheapest available shares
+        for (int i = 0; i < n - 1; ++i) {
+            total_cost += pq.top();
+            pq.pop();
+        }
+
+        cout << total_cost << '\n';
+    }
+
+    return 0;
+}
