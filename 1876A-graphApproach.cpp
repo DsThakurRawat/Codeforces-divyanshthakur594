@@ -47,7 +47,8 @@ int main() {
             edges.push_back({i, n, p});
         }
 
-       
+        // Connect neighboring residents if beneficial (greedy)
+        // We only try to connect nearby nodes (could be optimized for real constraints)
         vector<pair<int, int>> idx(n);
         for (int i = 0; i < n; ++i) {
             idx[i] = {b[i], i};
