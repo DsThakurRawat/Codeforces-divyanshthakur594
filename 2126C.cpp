@@ -49,8 +49,7 @@ int start = k - 1;
             }
         }
     }
-
-   cout << "NO" << endl; 
+cout << "NO" << endl; 
 }
 
 
