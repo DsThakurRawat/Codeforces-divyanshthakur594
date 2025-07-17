@@ -59,7 +59,7 @@ int main(){
 
     }
     else{
-        i++;
+      days++;
     }
 
 
