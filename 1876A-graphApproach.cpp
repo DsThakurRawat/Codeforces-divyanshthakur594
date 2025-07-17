@@ -53,7 +53,7 @@ int main() {
             idx[i] = {b[i], i};
         }
         sort(idx.begin(), idx.end()); 
-        // Try all i and j to simulate the possible shar
+        
         for (int i = 0; i < n; ++i) {
             int u = idx[i].second;
             for (int j = i + 1; j < n; ++j) {
