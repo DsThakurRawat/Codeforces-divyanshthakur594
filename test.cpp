@@ -22,7 +22,7 @@ int main(){
         while(!q.empty()){
             auto [curr, time] = q.front(); q.pop();
 
-            // You die if water reaches height of current tower
+            
             if(time >= h[curr]) continue;
 
             // If current tower is of max height
