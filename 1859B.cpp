@@ -10,7 +10,7 @@ int main(){
       cin >> n;
      vector<vector<int>> arrays(n); // this thing here declare list of n arrays
      /*
-     
+     This creates a vector of size n, where each element is itself a vector of integers.
      */
 
 
