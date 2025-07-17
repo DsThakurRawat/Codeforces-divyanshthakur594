@@ -21,7 +21,7 @@ int main(){
    /*
  // hm we only need to find any one tower with max heights where we can reach befor be doonbe
 // we can start on tower k whose ht is h[k-1];
-
+u will die at time t = h[k-1]
 
    */
 
