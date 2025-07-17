@@ -45,7 +45,9 @@ int main(){
 
    while( days <= n - k){
     int flag = 1;
-    for(int j = 0; j < k; j++)
+    for(int j = 0; j < k; j++){
+        if()
+    }
    }
 
 
