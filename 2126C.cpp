@@ -26,6 +26,7 @@ a teleport from tower i to tower j takes |h[i] - h[j]|
 
 
 
+
    */
 
 int start = k - 1;
