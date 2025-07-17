@@ -17,7 +17,7 @@ int main(){
 
        }
 
-       int miny = INT_MAX;
+       int miny;
 
        for(int i =0; i <=x; i++ ){
         if(find(digits.begin(), digits.end(), i) != digits.end()){
