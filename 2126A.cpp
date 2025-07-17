@@ -20,6 +20,7 @@ int main(){
        int miny;
 
        for(int i =0; i <=x; i++ ){
+        
        
        }
 
