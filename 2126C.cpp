@@ -19,8 +19,8 @@ int main(){
 
       for(int i = 0; i < n; i++) cin >> h[i];
    /*
-  hm we only need to find any one tower with max heights where we can reach befor be doonbe
-  
+ // hm we only need to find any one tower with max heights where we can reach befor be doonbe
+
 
    */
 
