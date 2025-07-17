@@ -54,7 +54,8 @@ int main(){
     }
    
     if(flag){
-        hike_count
+        hike_count++;
+        
     }
 
 
