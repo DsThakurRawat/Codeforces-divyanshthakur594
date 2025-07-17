@@ -15,6 +15,8 @@ int main(){
     // after each hike she must take break of one day ok :) that means that day she can't go on hike
     // find the maximum number of hike jean can visit
 
+    int n,k;
+    cin >> n >> k;
     
 
 
