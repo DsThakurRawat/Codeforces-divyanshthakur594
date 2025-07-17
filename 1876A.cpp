@@ -29,7 +29,7 @@ int main() {
             pq.push(p);
         }
 
-        // Total cost starts with 1 Pak Chanek share
+       
         long long total_cost = p;
 
         // Add n - 1 cheapest available shares
