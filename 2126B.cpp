@@ -43,7 +43,7 @@ int main(){
 
    */
 
-   
+   while( i <= n - k)
 
 
 
