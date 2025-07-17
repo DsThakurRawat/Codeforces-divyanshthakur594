@@ -23,9 +23,11 @@ int main(){
         if(find(digits.begin(), digits.end(), i) != digits.end()){
             int cur = i;
             miny = min(miny,cur);
-            
+
         }
        }
+
+       cout << 
 
 
 
