@@ -47,7 +47,7 @@ int main(){
     int flag = 1;
     for(int j = 0; j < k; j++){
         if(a[days + j] == 1){
-            flag 
+            flag = 0;
 
         }
     }
