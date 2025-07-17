@@ -26,6 +26,8 @@ int main(){
     if(flag) break;
 
       }
+
+      cout << res
     
    }
    
