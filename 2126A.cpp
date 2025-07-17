@@ -18,8 +18,9 @@ int main(){
        }
 
        int miny = INT_MAX;
-
        
+
+
 
 
       
