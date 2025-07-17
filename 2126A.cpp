@@ -18,6 +18,8 @@ int main(){
         for(char c : y){
             if(x.find(c) != string :: npos){
                 result = i;
+                flag = 1;
+                
             }
         }
 
