@@ -11,6 +11,7 @@ int main(){
       int n;
       int k;
 
+      cin >> n >> k;
       
     
    }
