@@ -10,7 +10,7 @@ int main(){
        cin >> x;
        vector<int>digits;
 
-       while
+       while(x > 0)
 
 
       
