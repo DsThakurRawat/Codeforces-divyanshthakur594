@@ -53,7 +53,9 @@ int main(){
         }
     }
    
-    if(flag)
+    if(flag){
+        hike_count
+    }
 
 
    }
