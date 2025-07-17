@@ -15,8 +15,8 @@ int main(){
     3. Think of it like: 
     arrays = [
      [],  // array 0
-  [],  // array 1
-  ...
+    [],  // array 1
+    ...
   []   // array n-1
 ];
 
