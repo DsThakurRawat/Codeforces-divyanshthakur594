@@ -15,7 +15,9 @@ int main(){
 
 
 
-      vector<int> h
+      vector<int> h(n);
+
+      f
 
     
    }
