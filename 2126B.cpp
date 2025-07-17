@@ -68,7 +68,7 @@ int main(){
 
 
 
-   cout 
+   cout << hike_count << endl;
 
 
 
