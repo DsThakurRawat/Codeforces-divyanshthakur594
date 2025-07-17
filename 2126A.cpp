@@ -19,7 +19,7 @@ int main(){
 
        int miny = INT_MAX;
 
-       for(int i = )
+       for(int i =0 )
 
 
 
