@@ -55,7 +55,7 @@ int main(){
    
     if(flag){
         hike_count++;
-        days 
+        days += k+1
     }
 
 
