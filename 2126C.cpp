@@ -38,7 +38,7 @@ int start = k - 1;
        continue;
     
     }
-    int flag = 
+    int flag = 0;
     for (int i = 0; i < n; ++i) {
         if (h[i] == maxheight) {
             int teleporttime = abs(h[i] - h[start]);
