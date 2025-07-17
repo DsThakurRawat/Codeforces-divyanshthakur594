@@ -65,7 +65,7 @@ int main() {
 
        
         sort(edges.begin(), edges.end());
-        DSU dsu(n + 1); // include Pak Chanek as node n
+        DSU dsu(n + 1);
         long long mst_cost = 0;
         int count = 0;
 
