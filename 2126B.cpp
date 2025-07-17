@@ -26,7 +26,7 @@ int main(){
    int hike_count = 0;
    int total_continuos_days=0;
    // for hike to make total continus days >= k;
-   
+   // and if there is 
 
 
 
