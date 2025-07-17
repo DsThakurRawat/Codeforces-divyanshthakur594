@@ -12,7 +12,11 @@ int main(){
       int k;
 
       cin >> n >> k;
-      
+
+
+
+      vector<int> 
+
     
    }
    
