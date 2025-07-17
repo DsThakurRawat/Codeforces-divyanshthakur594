@@ -33,7 +33,7 @@ int start = k - 1;
     int maxHeight = *max_element(h.begin(), h.end());
 
     // Already on max height
-    if (h[start] == maxHeight)
+    if (h[start] == maxheight)
        cout << "YES" << endl;
 
     for (int i = 0; i < n; ++i) {
