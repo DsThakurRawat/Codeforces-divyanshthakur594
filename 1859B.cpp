@@ -29,7 +29,7 @@ int main(){
     for (int j = 0; j < mi; ++j) {
         cin >> arrays[i][j];
     }
-}
+     }
 
 
 
