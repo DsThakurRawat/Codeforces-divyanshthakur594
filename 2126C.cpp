@@ -44,7 +44,7 @@ int start = k - 1;
         }
     }
 
-   cout << "NO" << endl; // No valid teleport path
+   cout << "NO" << endl; 
 }
 
 
