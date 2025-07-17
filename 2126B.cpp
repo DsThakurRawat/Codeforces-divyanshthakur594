@@ -6,7 +6,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-    
+    // so we have given array a 
        
       
     
