@@ -12,7 +12,9 @@ int main(){
       for(int i = 0; ; i++){
         string y = to_string(i);
 
-        for(char c : y)
+        for(char c : y){
+            
+        }
 
 
 
