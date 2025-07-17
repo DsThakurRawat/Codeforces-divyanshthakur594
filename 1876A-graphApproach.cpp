@@ -39,7 +39,7 @@ int main() {
         for (int i = 0; i < n; ++i) cin >> a[i];
         for (int i = 0; i < n; ++i) cin >> b[i];
 
-        // Create edges for MST
+        
         vector<Edge> edges;
 
         // Connect every resident to Pak Chanek (node n) with cost p
