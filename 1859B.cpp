@@ -16,8 +16,8 @@ int main(){
     arrays = [
                  [],  // array 0
                  [],  // array 1
-    ...
-        []   // array n-1
+                          ...
+          []   // array n-1
 ];
 
 
