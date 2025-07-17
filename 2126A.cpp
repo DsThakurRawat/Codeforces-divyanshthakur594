@@ -15,7 +15,7 @@ int main(){
         for(char c : y){
             if(x.find(c) != string :: npos){
                 cout << y << endl;
-                
+                goto
             }
         }
 
