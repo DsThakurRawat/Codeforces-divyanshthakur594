@@ -8,9 +8,8 @@ int main(){
    while(t--){ 
        int n; // the number of arrays in list
       cin >> n;
-      int mi;
-      cin >> mi;
-      
+     
+
 
     
    }
