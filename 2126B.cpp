@@ -27,6 +27,7 @@ int main(){
    int total_continuos_days=0;
    // for hike to make total continus days >= k;
    // and if there is 1 btw zero such like for
+   
 
 
 
