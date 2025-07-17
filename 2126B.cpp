@@ -10,7 +10,7 @@ int main(){
     // if it rains on the day , then ai = 1; 
     // if weather is good means not rain then ai = 0;
     // so jean want to visit as many as park possible 
-    // one hike to peak takes exactly k days 
+    // one hike to peak takes exactly k days and during 
        
       
     
