@@ -58,7 +58,9 @@ int main(){
         days += k + 1
 
     }
-    else
+    else{
+        
+    }
 
 
    }
