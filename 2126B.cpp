@@ -6,7 +6,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-    // so we have given array a of n numbers and a number k
+    // so we have given array a of n numbers and a number k the value ai 
        
       
     
