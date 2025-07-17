@@ -16,7 +16,8 @@ int main(){
         x = x/10;
 
        }
-       
+
+       int miny
 
 
       
