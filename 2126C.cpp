@@ -44,12 +44,12 @@ int start = k - 1;
             int teleporttime = abs(h[i] - h[start]);
             if (teleporttime < h[start]) {
               flag = 1;
-              break;
                
             }
         }
     }
-cout << "NO" << endl; 
+
+   cout << "NO" << endl; 
 }
 
 
