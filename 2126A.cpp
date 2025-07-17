@@ -9,14 +9,14 @@ int main(){
       string x;
       cin >> x;
       int result = -1;
-      
+
 
       for(int i = 0; ; i++){
         string y = to_string(i);
 
         for(char c : y){
             if(x.find(c) != string :: npos){
-                result = y;
+                result = i;
             }
         }
 
