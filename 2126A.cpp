@@ -9,7 +9,7 @@ int main(){
       string x;
       cin >> x;
 
-      
+      for(int i = 0; ; )
     
    }
    
