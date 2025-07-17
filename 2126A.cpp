@@ -11,7 +11,8 @@ int main(){
        vector<int>digits;
 
        while(x > 0){
-        int i = x 
+        int i = x % 10;
+        
        }
 
 
