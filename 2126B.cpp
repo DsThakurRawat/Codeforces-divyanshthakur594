@@ -17,7 +17,9 @@ int main(){
 
     int n,k;
     cin >> n >> k;
-    vector<int>v(n);'
+    vector<int>v(n);
+
+    for
 
        
       
