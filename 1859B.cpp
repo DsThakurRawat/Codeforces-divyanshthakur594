@@ -7,8 +7,9 @@ int main(){
    cin >> t;
    while(t--){ 
        int n; // the number of arrays in list
-       vector<int>
-      
+      cin >> n;
+      int mi;
+      .
     
    }
    
