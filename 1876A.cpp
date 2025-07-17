@@ -32,7 +32,7 @@ int main() {
             needed -= use;
         }
 
-        // If still needed shares, get from Pak Chanek
+       
         if (needed > 0) total_cost += 1LL * needed * p;
 
         cout << total_cost << '\n';
