@@ -52,8 +52,7 @@ int main() {
         for (int i = 0; i < n; ++i) {
             idx[i] = {b[i], i};
         }
-        sort(idx.begin(), idx.end()); // sort by b[i]
-
+        sort(idx.begin(), idx.end()); 
         // Try all i and j to simulate the possible sharing from cheaper residents
         for (int i = 0; i < n; ++i) {
             int u = idx[i].second;
