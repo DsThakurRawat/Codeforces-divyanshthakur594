@@ -9,6 +9,8 @@ int main(){
    while(t--){ 
        
       int n;
+      int k;
+
       
     
    }
