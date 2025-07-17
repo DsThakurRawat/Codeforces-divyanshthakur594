@@ -22,7 +22,7 @@ int main(){
 
 
      */
-    for (int i = 0; i < n; ++i) { 
+    for (int i = 0; i < n; ++i) { //For each of the n arrays, you first read how many elements it contains (mi).
     int mi;
     cin >> mi;
     arrays[i].resize(mi);
