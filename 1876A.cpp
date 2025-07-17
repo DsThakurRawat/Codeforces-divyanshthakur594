@@ -24,7 +24,7 @@ int main() {
             }
         }
 
-        // Push n Pak Chanek shares (cost p)
+        
         for (int i = 0; i < n; ++i) {
             pq.push(p);
         }
