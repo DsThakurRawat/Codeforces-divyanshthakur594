@@ -13,7 +13,7 @@ int main(){
 
       for(int i = 0; ; i++){
         string y = to_string(i);
-        int flag = 
+        int flag = 0;
 
         for(char c : y){
             if(x.find(c) != string :: npos){
