@@ -22,7 +22,7 @@ int main(){
        for(int i =0; i <=x; i++ ){
         if(find(digits.begin(), digits.end(), i) != digits.end()){
             int cur = i;
-            miny = min(min)
+            miny = min(miny,curi)
         }
        }
 
