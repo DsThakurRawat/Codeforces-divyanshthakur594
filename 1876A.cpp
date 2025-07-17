@@ -32,7 +32,7 @@ int main() {
        
         long long total_cost = p;
 
-        // Add n - 1 cheapest available shares
+        
         for (int i = 0; i < n - 1; ++i) {
             total_cost += pq.top();
             pq.pop();
