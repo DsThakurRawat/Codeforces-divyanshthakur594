@@ -10,6 +10,7 @@ int main(){
       cin >> n;
      vector<vector<int>> arrays(n); // this thing here declare list of n arrays
      /*
+     
      */
 
 
