@@ -30,6 +30,7 @@ int main(){
         cin >> arrays[i][j];
       }
        }
+       
 
 
 
