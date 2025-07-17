@@ -53,7 +53,7 @@ int main(){
         }
     }
    
-    if(fl)
+    if(flag)
 
 
    }
