@@ -29,7 +29,7 @@ int main(){
    // and if there is 1 btw zero such like for
    /*
    tc 5 1
-   0 1 0 0 
+   0 1 0 0 0
    */
 
 
