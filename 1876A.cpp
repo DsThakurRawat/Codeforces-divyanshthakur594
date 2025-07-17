@@ -27,7 +27,7 @@ int main() {
             shares.push_back(p);
         }
 
-        // Sort and take n-1 cheapest
+     
         sort(shares.begin(), shares.end());
         long long total_cost = p;  // First share must be from Pak Chanek
         for (int i = 0; i < n - 1; ++i) {
