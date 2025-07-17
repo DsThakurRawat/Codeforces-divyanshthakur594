@@ -13,7 +13,7 @@ int main(){
         string y = to_string(i);
 
         for(char c : y){
-            if(x.find(c) != )
+            if(x.find(c) != strin)
         }
 
 
