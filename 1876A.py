@@ -13,7 +13,7 @@ for _ in range(t):
    
     shares.extend([p] * n)
 
-    # Sort and pick n-1 cheapest shares
+    
     shares.sort()
     total_cost = p + sum(shares[:n - 1])  # First share = p
     print(total_cost)
