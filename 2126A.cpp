@@ -19,7 +19,7 @@ int main(){
             if(x.find(c) != string :: npos){
                 result = i;
                 flag = 1;
-                
+                break;
             }
         }
 
