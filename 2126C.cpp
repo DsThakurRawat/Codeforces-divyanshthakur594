@@ -17,7 +17,7 @@ int main(){
 
       vector<int> h(n);
 
-      f
+      for(int i = 0; i < n; i++)
 
     
    }
