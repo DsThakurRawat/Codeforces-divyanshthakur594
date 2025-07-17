@@ -31,7 +31,7 @@ int main(){
    tc 5 1
    0 1 0 0 0 
    ans = 3
-    tc 
+    tc 5 3 
 
 
    */
