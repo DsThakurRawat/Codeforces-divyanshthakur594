@@ -13,7 +13,7 @@ int main(){
     // one hike to peak takes exactly k days and during each of these days weather will be goood ai = 0;
     // that is formallly he can start hike on day i only and only if all aj = 0;
     // after each hike she must take break of one day ok :) that means that day she can't go on hike
-    
+    // 
 
        
       
