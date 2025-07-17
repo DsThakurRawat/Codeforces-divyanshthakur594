@@ -20,7 +20,7 @@ int main(){
        int miny = INT_MAX;
 
        for(int i =0; i <=x; i++ ){
-        
+        for
        }
 
 
