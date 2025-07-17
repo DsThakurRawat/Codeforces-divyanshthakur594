@@ -19,7 +19,7 @@ int main(){
     cin >> n >> k;
     vector<int>v(n);
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++) cin 
 
        
       
