@@ -24,8 +24,9 @@ int main(){
    // appraoch we need to count total hikes or maximum number of hikes
    //
    int hike_count = 0;
-   int total_continuos_days;
-   
+   int total_continuos_days=0;
+   // for hike to make 
+
 
 
 
