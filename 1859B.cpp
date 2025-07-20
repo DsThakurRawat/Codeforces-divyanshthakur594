@@ -103,7 +103,9 @@ s = lowest 2nd minimum
         }
  
          
-
+        sort(second_elements.begin(), second_elements.end());
+        
+ 
 
 
 
