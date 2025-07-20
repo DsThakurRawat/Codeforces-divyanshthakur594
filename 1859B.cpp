@@ -50,6 +50,7 @@ int main(){
     sort  arrays
     5 7 1001 1007
 
+    6 8 11
     
 
 
