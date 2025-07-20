@@ -93,6 +93,7 @@ s = lowest 2nd minimum
 
         vector<long long> second_elements;
         long long lowest_first_minimum = INT_MAX;
+        
        
   
 
