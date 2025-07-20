@@ -39,7 +39,9 @@ int main(){
        // we will do thhis till we find maximum dumped array :)
 
   /*
-  validati
+  validating my idea 
+  
+
   */
 
        
