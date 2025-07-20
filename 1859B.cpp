@@ -47,8 +47,9 @@ int main(){
     8 11 6
     2
     2 9
-    sort 
+    sort  array
     
+
 
 
   */
