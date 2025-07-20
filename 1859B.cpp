@@ -97,9 +97,9 @@ s = lowest 2nd minimum
 
         for (int i = 0; i < n; i++) // n
         {
-       
+                 sort(a.begin(), a.end());
   
-
+         
 
 
 
