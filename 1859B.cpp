@@ -77,6 +77,8 @@ sum of this vector - v[0]
 + lowest first minimum
 
 m + k - s 
+m = lowest first minimum
+
 
 
 
