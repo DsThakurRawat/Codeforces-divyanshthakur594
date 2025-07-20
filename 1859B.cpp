@@ -78,7 +78,8 @@ sum of this vector - v[0]
 
 m + k - s 
 m = lowest first minimum
-k 
+k = sum of all 2nd minimum
+
 
 
 
