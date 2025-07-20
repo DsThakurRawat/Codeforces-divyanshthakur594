@@ -32,7 +32,8 @@ int main(){
        }
 
        // hm now we need to find maximum beuty :)
-       
+       // first we will sort all the array then 
+
        
 
 
