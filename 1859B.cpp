@@ -57,7 +57,8 @@ int main(){
     dump array =  which have lowest second minimum  all of the array
     so dump array = a
     new arrays
-    5 7 1001 1007 
+    5 7 1001 1007 6 2
+    
 
 
 
