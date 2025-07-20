@@ -48,6 +48,7 @@ int main(){
     2
     2 9
     sort  array
+    5 7 1001 1007
     
 
 
