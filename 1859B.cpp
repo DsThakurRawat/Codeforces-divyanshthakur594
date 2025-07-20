@@ -68,10 +68,10 @@ int main(){
      b = b1 b2 b3
      c = c1 c2 c3 
      d = d1 d2 d3
-     
 
 
 
+vector-> store
 
 
 
