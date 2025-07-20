@@ -82,6 +82,8 @@ k = sum of all 2nd minimum
 s = lowest 2nd minimum
 
 
+answer = lowest_first_minimum + sum_of_second_elements - lowest_second_minimum
+
 
 
 
