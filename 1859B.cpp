@@ -71,7 +71,7 @@ int main(){
 
 
 
-vector-> store
+vector-> store all second minu
 
 
 
