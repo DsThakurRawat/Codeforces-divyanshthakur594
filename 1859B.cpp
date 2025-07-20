@@ -71,7 +71,8 @@ int main(){
 
 
 
-vector-> store all second minu
+vector-> store all second minimums
+
 
 
 
