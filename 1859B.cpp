@@ -42,7 +42,7 @@ int main(){
   validating my idea 
     3
     4
-    1001 7 1007 5
+    1001 7 1007 5 a
     3
     8 11 6
     2
