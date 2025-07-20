@@ -55,7 +55,8 @@ int main(){
     2 9
 
     dump array =  which have lowest second minimum  all of the array
-    so dump array = A
+    so dump array = a
+    
 
 
 
