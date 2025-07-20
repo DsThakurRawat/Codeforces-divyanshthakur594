@@ -44,7 +44,7 @@ int main(){
     4
     1001 7 1007 5 a
     3
-    8 11 6
+    8 11 6 b
     2
     2 9
     sort  arrays
