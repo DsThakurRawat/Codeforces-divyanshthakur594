@@ -54,7 +54,7 @@ int main(){
 
     2 9
 
-    dump array = 
+    dump array =  which have lowes second minimum 
 
 
 
