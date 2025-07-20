@@ -98,7 +98,10 @@ s = lowest 2nd minimum
         for (int i = 0; i < n; i++) // n
         {
                  sort(a.begin(), a.end());
-  
+                  second_elements.push_back(a[1]);
+            lowest_first_minimum = min(lowest_first_minimum, a[0]);
+        }
+ 
          
 
 
