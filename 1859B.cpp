@@ -58,7 +58,9 @@ int main(){
     so dump array = a
     new arrays
     5 7 1001 1007 6 2
-    
+    8 11
+    9  
+    so answer = 
 
 
 
