@@ -54,7 +54,8 @@ int main(){
 
     2 9
 
-    dump array =  which have lowest second minimum 
+    dump array =  which have lowest second minimum  all of the array
+    
 
 
 
