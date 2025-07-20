@@ -25,9 +25,9 @@ int main(){
     for (int i = 0; i < n; ++i) { //For each of the n arrays, you first read how many elements it contains (mi).
     int mi;
     cin >> mi;
-    arrays[i].resize(mi);
+    a[i].resize(mi);
     for (int j = 0; j < mi; ++j) {
-        cin >> arrays[i][j];
+        cin >> a[i][j];
       }
        }
 
