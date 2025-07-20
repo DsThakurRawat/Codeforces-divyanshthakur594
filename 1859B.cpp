@@ -60,7 +60,7 @@ int main(){
     5 7 1001 1007 6 2
     8 11
     9  
-    so answer = 
+    so answer = 8 + 9 + 2= 19
 
 
 
