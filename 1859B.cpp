@@ -34,7 +34,8 @@ int main(){
        // hm now we need to find maximum beuty :)
        // first we will sort all the array then 
        // we gonna make dumping array 
-       // in which we will store 
+       // in which we will store first minimum 
+       // now i 
 
        
 
