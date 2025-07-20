@@ -8,7 +8,7 @@ int main(){
    while(t--){ 
        int n; // the number of arrays in list
       cin >> n;
-     vector<vector<int>> arrays(n); // this thing here declare list of n arrays
+     vector<vector<int>> a(n); // this thing here declare list of n arrays
      /*
     1. This creates a vector of size n, where each element is itself a vector of integers.
     2. That is, arrays[0], arrays[1], ..., arrays[n-1] are all empty vectors initially.
