@@ -72,6 +72,7 @@ int main(){
 
 
 vector-> store all second minimums
+sort this vector
 
 
 
