@@ -47,9 +47,9 @@ int main(){
     8 11 6
     2
     2 9
-    sort  array
+    sort  arrays
     5 7 1001 1007
-    
+
 
 
 
