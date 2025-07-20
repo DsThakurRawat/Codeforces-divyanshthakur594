@@ -56,7 +56,9 @@ int main(){
 
     dump array =  which have lowest second minimum  all of the array
     so dump array = a
-    
+    new arrays
+    100
+
 
 
 
