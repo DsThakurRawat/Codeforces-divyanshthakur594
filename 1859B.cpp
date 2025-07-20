@@ -74,7 +74,7 @@ int main(){
 vector-> store all second minimums
 sort this vector
 sum of this vector - v[0]
-
++ lowest first minimum
 
 
 
