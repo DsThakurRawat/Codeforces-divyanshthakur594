@@ -40,7 +40,13 @@ int main(){
 
   /*
   validating my idea 
-  
+    3
+    4
+    1001 7 1007 5
+    3
+    8 11 6
+    2
+    2 9
 
 
   */
