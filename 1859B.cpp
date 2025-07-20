@@ -37,8 +37,10 @@ int main(){
        // in which we will store first minimum 
        // now in this way the 2nd minimum of all array will become first minimum
        // we will do thhis till we find maximum dumped array :)
-       
 
+  /*
+  
+  */
 
        
 
