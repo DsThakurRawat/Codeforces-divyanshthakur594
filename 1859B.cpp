@@ -106,7 +106,8 @@ s = lowest 2nd minimum
         sort(second_elements.begin(), second_elements.end());
          long long sum_of_second_elements = accumulate(second_elements.begin(), second_elements.end(), 0LL);
         long long lowest_second_minimum = second_elements[0];
-        
+        long long answer = lowest_first_minimum + sum_of_second_elements - lowest_second_minimum;
+        cout << answer << endl;
 
  
 
