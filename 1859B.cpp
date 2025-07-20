@@ -35,7 +35,7 @@ int main(){
        // first we will sort all the array then 
        // we gonna make dumping array 
        // in which we will store first minimum 
-       // now i 
+       // now in this way the 
 
        
 
