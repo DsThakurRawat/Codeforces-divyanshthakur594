@@ -92,7 +92,7 @@ s = lowest 2nd minimum
   
 
         vector<int> second_elements;
-        long long lowest_first_minimum = INT_MAX;
+        int  lowest_first_minimum = INT_MAX;
 
 
         for (int i = 0; i < n; i++) // n
