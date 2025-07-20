@@ -63,6 +63,14 @@ int main(){
     so answer = 8 + 9 + 2= 19
 
 
+    short trick
+     a = a1 a2 a3 
+     b = b1 b2 b3
+     c = c1 c2 c3 
+     d = d1 d2 d3
+     
+
+
 
 
 
