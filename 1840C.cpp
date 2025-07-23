@@ -33,8 +33,8 @@ int main(){
    for(int i = 0; i < n; i++){
 
        
-            cin >> a[i];
-            a[i] = (a[i] > q) ? 0 : 1;
+            cin >> v[i];
+            v[i] = (v[i] > q) ? 0 : 1;
      
    }
 
