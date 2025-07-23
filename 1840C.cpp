@@ -12,7 +12,7 @@ int main(){
     // the length of the array a, the minimum number of days at the resort, and the maximum comfortable temperature for Dima.
     vector<int>v(n);
 
-    for(int i = 0; i < n; i++) cin >> v[i];  // this temperature at ski resort
+     // this temperature at ski resort
 
   /// okay so we need to ouput number of ways dima to choose vacation dates at resor
 
