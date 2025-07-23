@@ -31,9 +31,11 @@ int main(){
 
     */
    for(int i = 0; i < n; i++){
-      cin >> v[i];
-      if(v[i] > q) v[i] = 0;
-      else v[i] = 1;
+
+       
+            cin >> a[i];
+            a[i] = (a[i] > q) ? 0 : 1;
+     
    }
 
    long long count_of_1s = 0;
