@@ -20,7 +20,7 @@ int main(){
     */
      int n,k;
      cin >> n >> k; // here k is max damage 
-     vector<int>v;
+     vector<int>a;
 
     
      for(int i = 0; i < n; i++) cin >> a[i];
@@ -32,12 +32,14 @@ int main(){
 
      }
 
-    vector<int> indexorder;
-    iota(indexorder.begin(),indexorder.end(),0) // three parameter neede to pass
-
-    stable_sort(indexorder.begin(),indexorder.end(),[&](int i , int j){
-        return a[i] > a[j];
+    vector<int> ord(n);
+    iota(ord.begin(), ord.end(), 0);
+    stable_sort(ord.begin(), ord.end(), [&](int i, int j) {
+      return a[i] > a[j];
     });
+
+     for (auto &x : ord) cout << x + 1 << ' ';
+    cout << endl;
 
      
 
