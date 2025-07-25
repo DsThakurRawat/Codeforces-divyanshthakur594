@@ -16,19 +16,7 @@ using namespace std;
 #define PI 3.141592653589793238462
 
 // === Type Definitions ===
-#define int int64_t
-#define vi vector<int>
-#define vvi vector<vector<int>>
-#define vpii vector<pair<int, int>>
-#define vb vector<bool>
-#define pii pair<int, int>
-#define mii map<int, int>
-#define un_s unordered_set<int>
-#define un_mp unordered_map<int, int>
-#define pr_q priority_queue<int>
-#define min_pq priority_queue<int, vector<int>, greater<int>>
-#define max_pq priority_queue<int>
-#define set_bits __builtin_popcountll
+
 
 // === Macros ===
 #define pb push_back
