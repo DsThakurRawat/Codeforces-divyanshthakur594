@@ -2,6 +2,7 @@
 using namespace std;
 // code by divyansh thakur
 
+
 int main(){
    int t;
    cin >> t;
