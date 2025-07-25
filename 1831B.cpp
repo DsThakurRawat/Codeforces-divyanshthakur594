@@ -268,7 +268,8 @@ void solve() {
         
         }
         else len = 1;
-    max_len = max(len,max_len);
+        // first all condition check then update the values
+       max_len = max(len,max_len);
 
 
     }
