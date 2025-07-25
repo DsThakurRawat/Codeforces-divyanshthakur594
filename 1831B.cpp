@@ -250,7 +250,7 @@ void solve() {
     int n;
     cin >> n;
    
-    vi a(n),b(n),c(n+n);
+    vi a(n),b(n),c(2*n);
     for(int i = 0; i < n; i++) cin >> c[i];
     for(int i = 0; i < n; i++) cin >> c[i+n];
     // go easy don't overthink
@@ -264,11 +264,11 @@ void solve() {
     for(int i = 0; i < n+n - 1; i++){
         if(c[i] == c[i+1]){
              len++;
-             max_len = max(len,max_len);
+            
         
         }
         else len = 1;
-  
+    max_len = max(len,max_len);
 
 
     }
