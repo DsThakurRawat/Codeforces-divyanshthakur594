@@ -241,8 +241,9 @@ void solve() {
     cin >> n;
     int a,b;
     cin >> a >> b;
-
     
+
+
 
 
 }
