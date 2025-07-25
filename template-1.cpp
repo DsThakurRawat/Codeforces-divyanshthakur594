@@ -2,12 +2,15 @@
 * Author     : Divyansh Thakur Rawat
 * Template   : Ultimate CP Template for CF/AtCoder
 **************************************************/
-#include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
+
 #pragma GCC optimize("O3")
 #pragma GCC target("avx2")
 #pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace std;
+using namespace __gnu_pbds;
 
 
 using namespace std;
