@@ -254,7 +254,7 @@ void solve() {
    
     vi a(n),b(n),c(n+n);
     for(int i = 0; i < n; i++) cin >> c[i];
-    for(int i = 0; i < n; i++) cin >> c[i];
+    for(int i = 0; i < n; i++) cin >> c[i+n];
     // go easy don't overthink
    
     // now just sort arry
@@ -270,11 +270,12 @@ void solve() {
         
         }
         else len = 0;
-
+  
 
 
     }
-
+     
+  cout << max_len << endl;
 
 
 
