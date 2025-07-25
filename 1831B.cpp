@@ -239,13 +239,7 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
 void solve() {
     int n;
     cin >> n;
-    vi a(n);
-    for (auto &x : a) cin >> x;
-    sort(all(a));
-    cout << "Sorted: ";
-    for (auto x : a) cout << x << " ";
-    cout << '\n';
-}
+    
 
 // -------------------- Main Driver --------------------
 signed main() {
