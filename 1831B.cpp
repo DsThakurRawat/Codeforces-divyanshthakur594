@@ -270,7 +270,7 @@ void solve() {
     for (auto &[_, val] : freq)
         max_freq = max(max_freq, val);
 
-
+  cout << max_freq << endl;
 
 
 
