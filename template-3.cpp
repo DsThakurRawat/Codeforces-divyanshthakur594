@@ -1,6 +1,6 @@
 /**************************************************
 * Author    : Divyansh Thakur Rawat
-* Template  : Full Competitive Programming Template
+* Template  :  Template
 **************************************************/
 
 #pragma GCC optimize("O3")
