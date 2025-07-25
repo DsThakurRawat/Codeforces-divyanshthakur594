@@ -241,6 +241,7 @@ void solve() {
     cin >> n;
    
     vi v(n);
+    
 
 
 
