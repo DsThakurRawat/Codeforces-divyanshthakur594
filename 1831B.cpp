@@ -254,24 +254,7 @@ void solve() {
    //You're allowed to interleave elements of a and b in any order, but must preserve the order within a and within b.
   //  In other words, the array c is created by picking from the front of either a or b at each step.
      
-  vi a(n), b(n);
-  map<int, int> freq;
-   for (int i = 0; i < n; i++) {
-        cin >> a[i];
-        freq[a[i]]++;
-    }
-
-
-     for (int i = 0; i < n; i++) {
-        cin >> b[i];
-        freq[b[i]]++;
-    }
-       int max_freq = 0;
-    for (auto &[_, val] : freq)
-        max_freq = max(max_freq, val);
-
-    cout << max_freq << endl;
-
+  
 
 
 
