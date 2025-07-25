@@ -211,7 +211,17 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
 }
 #pragma endregion
 
-
+void solve() {
+    // write your test case here
+    int n;
+    cin >> n;
+    vi a(n);
+    for (auto &x : a) cin >> x;
+    sort(all(a));
+    cout << "Sorted: ";
+    for (auto x : a) cout << x << " ";
+    cout << '\n';
+}
 
 signed main() {
     fastIO();
