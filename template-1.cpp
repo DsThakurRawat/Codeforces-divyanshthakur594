@@ -16,7 +16,7 @@ using namespace std;
 #define PI 3.141592653589793238462
 
 // === Type Definitions ===
-
+#pragma region typedefs_macros
 #define int long long
 #define endl '\n'
 #define all(x) (x).begin(), (x).end()
