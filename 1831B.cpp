@@ -255,7 +255,25 @@ void solve() {
   //  In other words, the array c is created by picking from the front of either a or b at each step.
      
   
+     vector<int> a(n), b(n);
+    for (int &x : a) cin >> x;
+    for (int &x : b) cin >> x;
 
+    // Function to get longest streak in an array
+    auto max_streak = [](const vector<int>& arr) {
+        int max_len = 1, cur = 1;
+        for (int i = 1; i < arr.size(); ++i) {
+            if (arr[i] == arr[i - 1])
+                cur++;
+            else
+                cur = 1;
+            max_len = max(max_len, cur);
+        }
+        return max_len;
+    };
+
+    int ans = max(max_streak(a), max_streak(b));
+    cout << ans << '\n';
 
 
 
