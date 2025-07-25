@@ -42,6 +42,7 @@ using namespace std;
 #define maxpq priority_queue<int>
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 typedef tree<pii, null_type, less<pii>, rb_tree_tag, tree_order_statistics_node_update> ordered_map;
+#pragma endregion
 
 // === Macros ===
 #define pb push_back
