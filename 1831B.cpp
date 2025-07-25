@@ -250,31 +250,29 @@ void solve() {
     int n;
     cin >> n;
    
-    vi a(n),b(n),c(2*n);
-    for(int i = 0; i < n; i++) cin >> c[i];
-    for(int i = 0; i < n; i++) cin >> c[i+n];
-    // go easy don't overthink
-   
-    // now just sort arry
-    sort(c.begin(),c.end());
-    int len = 1;
-    int max_len = len;
-
-  
-    for(int i = 1; i < 2*n; i++){
-        if(c[i] == c[i-1])
-             len++;
-            
-        
-      
-        else len = 1;
-        // first all condition check then update the values
-       max_len = max(len,max_len);
-
-
+   // we are not allowed to rearrange elements or sort
+   //You're allowed to interleave elements of a and b in any order, but must preserve the order within a and within b.
+  //  In other words, the array c is created by picking from the front of either a or b at each step.
+    vi a(n),b(n);
+    vi c(2*n);
+    for(int i = 0; i < n; i++) cin >> a[i];
+    for(int i = 0; i < n; i++) cin >> b[i];
+    for(int i = 0; i < n; i++) c.push_back(a[i]);
+    for(int i = 0; i < n; i++) c.push_back(b[i]);
+    
+    int ans =0;
+    int count = 0;
+     map<int, int> freq;
+    for(int i = 0; i < n; i++){
+    freq[c[i]]++;
     }
-     
-  cout << max_len << endl;
+    int max_freq = 0;
+    for (auto &[_, val] : freq)
+        max_freq = max(max_freq, val);
+
+
+
+
 
 
 
