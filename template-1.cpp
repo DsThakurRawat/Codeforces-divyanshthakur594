@@ -17,7 +17,31 @@ using namespace std;
 
 // === Type Definitions ===
 
-
+#define int long long
+#define endl '\n'
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define pb push_back
+#define ff first
+#define ss second
+#define pii pair<int, int>
+#define vi vector<int>
+#define vii vector<pii>
+#define vvi vector<vector<int>>
+#define mii map<int, int>
+#define umii unordered_map<int, int>
+#define usi unordered_set<int>
+#define si set<int>
+#define msi multiset<int>
+#define msi2 multimap<int, int>
+#define rep(i, a, b) for (int i = a; i < b; i++)
+#define repr(i, a, b) for (int i = a; i >= b; i--)
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
+#define minpq priority_queue<int, vector<int>, greater<int>>
+#define maxpq priority_queue<int>
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+typedef tree<pii, null_type, less<pii>, rb_tree_tag, tree_order_statistics_node_update> ordered_map;
 
 // === Macros ===
 #define pb push_back
