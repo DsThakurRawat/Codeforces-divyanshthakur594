@@ -1,8 +1,4 @@
-// ==================================================
-// Author: Divyansh Thakur
-// Competitive Programming Template
-// Includes: STL, PBDS, Graphs, DSU, Segment Tree, Trie, Matrix, Geometry, etc.
-// ==================================================
+
 
 #pragma GCC optimize("O3")
 #pragma GCC target("avx2")
