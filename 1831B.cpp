@@ -3,9 +3,7 @@
 * Template  :  Template-3-ultimate 
 **************************************************/
 
-#pragma GCC optimize("O3")
-#pragma GCC target("sse4.2")
-#pragma GCC optimize("unroll-loops")
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
