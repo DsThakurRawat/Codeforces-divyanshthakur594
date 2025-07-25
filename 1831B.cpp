@@ -4,7 +4,7 @@
 **************************************************/
 
 #pragma GCC optimize("O3")
-#pragma GCC target("avx2")
+#pragma GCC target("sse4.2")
 #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
