@@ -239,9 +239,7 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
 void solve() {
     int n;
     cin >> n;
-    int a,b;
-    cin >> a >> b;
-    
+   
 
 
 
