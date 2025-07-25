@@ -215,7 +215,7 @@ signed main() {
     fastIO();
     // Your code here
      int t;
-     cin >> tl
+     cin >> t
      while (t--) solve();
     return 0;
 }
