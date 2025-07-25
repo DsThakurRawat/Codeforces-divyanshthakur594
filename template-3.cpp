@@ -214,6 +214,8 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
 signed main() {
     fastIO();
     // Your code here
+     int t;
+     cin >> tl
      while (t--) solve();
     return 0;
 }
