@@ -240,7 +240,7 @@ void solve() {
     int n;
     cin >> n;
    
-    vi v (n);
+    vi v(n);
 
 
 
