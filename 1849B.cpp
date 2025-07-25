@@ -20,7 +20,7 @@ int main(){
     */
      int n,k;
      cin >> n >> k; // here k is max damage 
-     vector<int>a;
+     vector<int>a(n);
 
     
      for(int i = 0; i < n; i++) cin >> a[i];
@@ -32,7 +32,7 @@ int main(){
 
      }
 
-    vector<int> ord(n);
+   vector<int> ord(n);
     iota(ord.begin(), ord.end(), 0);
     stable_sort(ord.begin(), ord.end(), [&](int i, int j) {
       return a[i] > a[j];
@@ -58,4 +58,4 @@ int main(){
    return 0;
 
     
-} 
+}  
