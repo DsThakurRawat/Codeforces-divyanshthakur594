@@ -42,9 +42,10 @@ int main(){
    int n;
    cin >> n;
    vector<int>v(n);
+    cout << (n % 4 ? "Alice" : "Bob") << '\n';
 
-  if( n % 4 == 0) cout << "ALICE" << endl;
-  else cout << "BOB" << endl;
+
+   
 
    
 
