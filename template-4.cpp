@@ -24,7 +24,8 @@ using namespace std;
 #define ss second
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define sz(x) ((int)(x))
+#define sz(x) ((int)(x).size())
+
 #define endl '\n'
 
 // === Constants ===
