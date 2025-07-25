@@ -261,12 +261,12 @@ void solve() {
     int max_len = len;
 
   
-    for(int i = 0; i < n+n - 1; i++){
-        if(c[i] == c[i+1]){
+    for(int i = 1; i < 2*n; i++){
+        if(c[i] == c[i-1])
              len++;
             
         
-        }
+      
         else len = 1;
         // first all condition check then update the values
        max_len = max(len,max_len);
