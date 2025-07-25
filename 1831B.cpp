@@ -257,7 +257,7 @@ void solve() {
    
     // now just sort arry
     sort(c.begin(),c.end());
-    int len = 0;
+    int len = 1;
     int max_len = len;
 
   
@@ -267,7 +267,7 @@ void solve() {
              max_len = max(len,max_len);
         
         }
-        else len = 0;
+        else len = 1;
   
 
 
