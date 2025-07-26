@@ -2,7 +2,7 @@
 * Author    : Divyansh Thakur Rawat
 * Template  :  Template-3-ultimate 
 **************************************************/
-
+// on local software it may conflict with system files
 #pragma GCC optimize("O3")
 #pragma GCC target("avx2")
 #pragma GCC optimize("unroll-loops")
@@ -66,6 +66,38 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #include <unordered_map>
 #include <unordered_set>
 #pragma endregion
+
+// === STL Container Macros ===
+#define st    stack
+#define qu    queue
+#define de      deque
+#define maxpq    priority_queue
+
+#define stk       stack<int>
+#define que       queue<int>
+#define deq       deque<int>
+#define maxpqint    priority_queue<int>
+
+#define si        set<int>
+#define msi       multiset<int>
+#define usi       unordered_set<int>
+#define umsi      unordered_multiset<int>
+
+#define mi        map<int, int>
+#define mmi       multimap<int, int>
+#define umi       unordered_map<int, int>
+#define ummi      unordered_multimap<int, int>
+
+// Priority Queues
+#define maxpqint     priority_queue<int>
+#define minpq     priority_queue<int, vector<int>, greater<int>>
+
+// === Vector/Pair Utils ===
+#define vi        vector<int>
+#define vvi       vector<vector<int>>
+#define pii       pair<int, int>
+#define vpi       vector<pii>
+#define vvpi      vector<vector<pii>>
 
 // -------------------- Disjoint Set Union --------------------
 #pragma region DSU
@@ -224,10 +256,28 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
         dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 }
 #pragma endregion
+
+// -------------------- Leetcode-style Data Structures --------------------
+#pragma region LeetcodeHelpers
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+using Graph = vector<vector<int>>; // Adjacency list graph representation
+#pragma endregion
+
 // -------------------- Problem Rough  --------------------
 /*
  
-
 
 
 
