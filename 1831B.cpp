@@ -275,7 +275,7 @@ void solve() {
     int maxF = -1;
     
     for(int i = 1; i <= 2*n; i++){
-        maxF = max(maxF,long_sub_a[i],long_sub_b[i]);
+        maxF = max(maxF,long_sub_a[i]+long_sub_b[i]);
 
 
     }
