@@ -245,21 +245,42 @@ void solve() {
     for(int i = 0; i < n; i++) cin >> a[i];
     for(int i = 0; i < n; i++) cin >> b[i];
 
-    unordered_map< int , int> freq_a , freq_b;
-    for(auto &x : a) freq_a[x]++;
-    for(auto &x : b) freq_b[x]++;
+    vector<int > long_sub_a(2*n+1,0);
+    vector<int > long_sub_b(2*n+1,0);
 
-    int max_len = 0;
+    int count = 1;
 
-    for(auto& [value , count] : freq_a){
-        max_len = max(max_len,count);
-    }
-    for(auto& [value,count] : freq_b ){
-        if(freq_a.count(value) == 0) max_len = max(max_len, count);
+    for(int i = 1; i < n; i++){
+        if(a[i] == a[i-1]){
+            count++;
+        }
+        else{
+            long_sub_a[a[i-1]] = max(long_sub_a[a[i-1]],count);
+            count = 1;
+        }
     }
     
-    cout << max_len << endl;
+    long_sub_a[a[n-1]] = max(long_sub_a[a[n-1]],count);
+    count = 1;
 
+    for(int i = 1; i < n; i++){
+        if(b[i] == b[i-1]) count++;
+        else {
+            long_sub_b[b[i-1]] = max(long_sub_b[b[i-1]],count);
+            count = 1;
+        }
+    }
+    long_sub_b[b[n-1]] = max(long_sub_b[b[n-1]],count);
+
+    int maxF = -1;
+    
+    for(int i = 1; i <= 2*n; i++){
+        maxF = max(maxF,long_sub_a[i],long_sub_b[i]);
+
+
+    }
+
+    cout << maxF << endl;
 
 
   
