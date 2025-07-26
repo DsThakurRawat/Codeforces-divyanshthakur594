@@ -227,18 +227,6 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
  
 
 
-// so we need to merge these array to form another array of lenght 2n
-// in that array we need to find the length of a subarray consisting of equal values
-across arrays c that could be obtained so okay fine 
-we will make array of length  2n 
-then we will gonna sort it 
-so in sorted array equal elements will be in consecutive order 
-gonna define two variable len and maxlen 
-hm now 
-if(a[i] == a[i+1]) len++;
-maxlen = max(len,maxlen);
-
-
 
 
 
