@@ -239,11 +239,7 @@ void solve() {
     cin >> n;
     vi a(n),b(n);
    
-   // we are not allowed to rearrange elements or sort
-   //You're allowed to interleave elements of a and b in any order, but must preserve the order within a and within b.
-  //  In other words, the array c is created by picking from the front of either a or b at each step.
    
-  
 
 
 
