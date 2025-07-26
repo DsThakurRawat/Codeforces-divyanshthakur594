@@ -237,9 +237,36 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
 void solve() {
     int n;
     cin >> n;
-    vi a(n),b(n);
-   
-  
+   string s;
+   cin >> s;
+   vector<int> pre(n, 0), suf(n, 0);
+   unordered_set<char> seen;
+
+   for(int i = 0; i<n; i++){
+     seen.insert(s[i]);
+     pre[i] = seen.size();
+
+
+   }
+   seen.clear();
+   for(int i = n-1; i>=0; i--){
+    seen.insert(s[i]);
+    suf[i] = seen.size();
+   }
+   int ans = 0;
+   for (int i = 0; i < n - 1; ++i) {
+            ans = max(ans, pre[i] + suf[i + 1]);
+        }
+
+        cout << ans << endl;
+    }
+
+
+
+
+
+
+
 
   
 
