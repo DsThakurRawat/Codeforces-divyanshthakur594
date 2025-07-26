@@ -14,4 +14,4 @@ for _ in range(int(input())):
 
    def solve():
         return recurse(s,1)
-        print(solve())
+   print(solve())
