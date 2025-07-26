@@ -249,31 +249,32 @@ maxlen = max(len,maxlen);
 void solve() {
     int n;
     cin >> n;
+    vi a(n),b(n);
    
    // we are not allowed to rearrange elements or sort
    //You're allowed to interleave elements of a and b in any order, but must preserve the order within a and within b.
   //  In other words, the array c is created by picking from the front of either a or b at each step.
-     
+    for(int i = 0; i < n; i++) cin >> a[i];
+    for(int i = 0; i < n; i++) cin >> b[i];
+
+    unordered_map< int , int> freq_a , freq_b;
+    for(auto &x : a) freq_a[x]++;
+    for(auto &x : b) freq_b[x]++;
+
+    int max_len = 0;
+
+    for(auto& [value , count] : freq_a){
+        max_len = max(max_len,count);
+    }
+    for(auto& [value,count] : freq_b ){
+        if(freq_a.count(value) == 0) max_len = max(max_len, count);
+    }
+    
+    cout << max_len << endl;
+
+
+
   
-     vector<int> a(n), b(n);
-    for (int &x : a) cin >> x;
-    for (int &x : b) cin >> x;
-
-    // Function to get longest streak in an array
-    auto max_streak = [](const vector<int>& arr) {
-        int max_len = 1, cur = 1;
-        for (int i = 1; i < arr.size(); ++i) {
-            if (arr[i] == arr[i - 1])
-                cur++;
-            else
-                cur = 1;
-            max_len = max(max_len, cur);
-        }
-        return max_len;
-    };
-
-    int ans = max(max_streak(a), max_streak(b));
-    cout << ans << '\n';
 
 
 
