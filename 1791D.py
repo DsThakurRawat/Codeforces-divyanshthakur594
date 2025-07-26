@@ -1,19 +1,24 @@
 for _ in range(int(input())):
    n = int(input())
    s = input()
-   def f(x):
-      return len(set(x))
-   dp = [-1] * (n + 1)  
-   def recurse(s,ind):
-      if ind == len(s):
-         return 0
-      a = s[:ind]
-      b = s[ind:]
-      total = f(a) + f(b)
-     
-      dp[ind] = max(total, recurse(s,ind + 1))
-      return dp[ind]
+   #using tabulation dp appraoch here
+   pre = [0]*n
+   suf  = [0]*n
 
-   def solve():
-        return recurse(s,1)
-   print(solve())
+   seen = set()
+   seen = set()
+   for i in range(n):
+        seen.add(s[i])
+        pre[i] = len(seen)
+    
+
+   seen.clear()
+   for i in reversed(range(n)):
+        seen.add(s[i])
+        suf[i] = len(seen)
+
+   ans = 0
+   for i in range(n - 1):
+        ans = max(ans, pre[i] + suf[i + 1])
+    
+   print(ans)
