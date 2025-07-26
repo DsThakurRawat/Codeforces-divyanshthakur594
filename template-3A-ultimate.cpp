@@ -2,7 +2,7 @@
 * Author    : Divyansh Thakur Rawat
 * Template  :  Template-3-ultimate 
 **************************************************/
-// will work seamlessly
+// will work seamlessly 
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -96,10 +96,6 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #define pii       pair<int, int>
 #define vpi       vector<pii>
 #define vvpi      vector<vector<pii>>
-
-
-
-
 
 // -------------------- Disjoint Set Union --------------------
 #pragma region DSU
@@ -258,10 +254,62 @@ void floyd_warshall(vector<vector<int>> &dist, int n) {
         dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 }
 #pragma endregion
+
+// -------------------- Leetcode-style Data Structures --------------------
+#pragma region LeetcodeHelpers
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+using Graph = vector<vector<int>>; // Adjacency list graph representation
+#pragma endregion
+
+// -------------------- Trie --------------------
+/*
+
+🔁 C++ Operator Keyword Equivalents (Normal Format):
+1. || → or
+
+2. && → and
+
+3. ! → not
+
+4. | → bitor
+
+5. & → bitand
+
+6. ^ → xor
+
+7. ~ → compl
+
+8. != → not_eq
+
+9. == → (no keyword, just use ==)
+
+
+
+*/
+
+
+
+
+
+
+
+
+
 // -------------------- Problem Rough  --------------------
 /*
  
-
 
 
 
