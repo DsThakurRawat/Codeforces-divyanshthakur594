@@ -66,15 +66,15 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #pragma endregion
 
 // === STL Container Macros ===
-#define stack    stack
-#define queue    queue
-#define deq      deque
+#define st    stack
+#define qu    queue
+#define de      deque
 #define maxpq    priority_queue
 
-#define stk       stack
-#define que       queue
-#define deq       deque
-#define maxpq    priority_queue
+#define stk       stack<int>
+#define que       queue<int>
+#define deq       deque<int>
+#define maxpqint    priority_queue<int>
 
 #define si        set<int>
 #define msi       multiset<int>
