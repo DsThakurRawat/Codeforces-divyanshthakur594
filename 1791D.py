@@ -11,7 +11,7 @@ for _ in range(int(input())):
       b = s[ind:]
       total = f(a) + f(b)
      
-      dp[ind] = max(total, recurse(ind + 1))
+      dp[ind] = max(total, recurse(s,ind + 1))
       return dp[ind]
 
    def solve():
