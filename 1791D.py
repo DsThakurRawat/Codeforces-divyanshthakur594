@@ -5,7 +5,7 @@ for _ in range(int(input())):
    pre = [0]*n
    suf  = [0]*n
 
-   seen = set()
+   
    seen = set()
    for i in range(n):
         seen.add(s[i])
