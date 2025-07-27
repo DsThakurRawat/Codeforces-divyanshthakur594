@@ -337,7 +337,7 @@ void solve() {
     int p =0;
     int q = 0;
 
-     for(int a = 0; a < n/2; a++){
+     for(int a = 1; a < n/2; a++){
         int b = n-a;
         int lcm = std::lcm(a, b);
         if(lcm < min_lcm){
