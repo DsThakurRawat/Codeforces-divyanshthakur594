@@ -348,12 +348,13 @@ void solve() {
 
 
         }
-        cout << a << " " << b << endl;
+      
 
 
 
 
      }
+       cout << p << " " << q << endl;
 
 
    
