@@ -334,15 +334,21 @@ void solve() {
      // find value of a and b for which lcm is least and retur thatt value of a and b 
      // for valid pairs i mean pair not to be rpeated we gonnna keep i < n/2
      int min_lcm = INT_MAX;
-    
+    int p =0;
+    int q = 0;
 
      for(int a = 0; a < n/2; a++){
         int b = n-a;
         int lcm = std::lcm(a, b);
         if(lcm < min_lcm){
-            min_lcm = min(min_lcm,min)
+            min_lcm = min(min_lcm,lcm);
+            p = a,
+            q = b;
+
+
 
         }
+        cout << a << " " << b << endl;
 
 
 
