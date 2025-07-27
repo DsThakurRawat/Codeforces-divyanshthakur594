@@ -2,7 +2,7 @@
 * Author    : Divyansh Thakur Rawat
 * Template  :  Template-3-ultimate 
 **************************************************/
-// will work seamlessly 
+// will work seamlessly on any os and system
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
