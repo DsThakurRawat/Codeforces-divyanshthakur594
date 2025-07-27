@@ -8,8 +8,9 @@
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 #include <numeric>
-using namespace std;
+
 using namespace __gnu_pbds;
+using namespace std;
 
 // -------------------- Typedefs and Macros --------------------
 #pragma region typedefs_macros
@@ -333,11 +334,16 @@ void solve() {
      // find value of a and b for which lcm is least and retur thatt value of a and b 
      // for valid pairs i mean pair not to be rpeated we gonnna keep i < n/2
      int min_lcm = INT_MAX;
-
+    
 
      for(int a = 0; a < n/2; a++){
         int b = n-a;
-        int lcm = lcm(b,a);
+        int lcm = std::lcm(a, b);
+        if(lcm < min_lcm){
+            min_lcm = min(min_lcm,min)
+
+        }
+
 
 
 
