@@ -333,7 +333,7 @@ void solve() {
      // then calculate lcm of a and b 
      // find value of a and b for which lcm is least and retur thatt value of a and b 
      // for valid pairs i mean pair not to be rpeated we gonnna keep i < n/2
-     int min_lcm = INT_MAX;
+    /* int min_lcm = INT_MAX;
     int p =0;
     int q = 0;
 
@@ -358,6 +358,22 @@ void solve() {
 
 
    
+*/
+
+  int ans_a = 1;
+  int ans_b = n-1;
+  for(int fac = 2; fac*fac <= n; fac++){
+    if(n % fac == 0){
+        ans_a = n / fac;
+        ans_b = n - ans_a;
+        break;
+
+    } 
+
+  }
+
+
+   cout << ans_a << " " << ans_b << endl;
 
 
 }
