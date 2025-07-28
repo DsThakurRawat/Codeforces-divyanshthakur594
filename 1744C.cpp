@@ -360,23 +360,7 @@ void solve() {
     int flag = 1;
     int ans = 0;
 
-    for(int i = 0; i < n; i++){
-        if(i == 0 && s[i]  == 'g'){
-           break;
-
-
-
-        }
-
-        else if( s[i] != 'g' ) timer++;
-        else if((s[i] == 'g' && s[i+1] == 'g')) timer++;
-        if(s[i] == 'g' && s[i+1] != 'g') {
-            timer++;
-            int ans = timer;
-            break;
-        
-        }
-       
+    
      
 
 
