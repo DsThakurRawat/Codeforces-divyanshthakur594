@@ -345,7 +345,9 @@ void solve() {
     char  c;
     cin >> c;// current color of traffic light 
 
-    string s
+    string s;
+    cin >> s;
+    
 
 
 }
