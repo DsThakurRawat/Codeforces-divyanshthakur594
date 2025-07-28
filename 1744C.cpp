@@ -317,7 +317,7 @@ C++ Operator Keyword Equivalents (Normal Format):
  
 
 
-// it is known that traffic light repeat its colors evry n seconds 
+// it is known that traffic light repeat its colors evry n seconds an at th ith seconds 
 
      
 */
