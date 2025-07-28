@@ -368,6 +368,7 @@ void solve() {
 
     if(s[mid] != 'g'){
         
+
     }
 
 
