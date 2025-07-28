@@ -368,7 +368,7 @@ void solve() {
         if(s[i] == c){
             for(int j = i + 1; j < i + n; j++){
                 if(s[j] == 'g'){
-                    ans = max(ans,)
+                    ans = max(ans,j-i)
                 }
             }
         }
