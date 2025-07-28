@@ -359,6 +359,7 @@ void solve() {
     
         if(s[1] == 'g') {
             cout << timer << 0;
+            
   
 
   while()
