@@ -334,7 +334,7 @@ we are guaranteed to cross th road, if the current color is r
 testcase dry run 
 5 r
 rggy
-
+1 2 3
 1st second wieghted r finished
 2 second weighted check if next is g next g then 
 3 second 
