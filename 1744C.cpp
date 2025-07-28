@@ -366,7 +366,7 @@ void solve() {
   while(low <= high){
     int mid = (low + high) / 2;
 
-    if()
+    if(s[mid])
 
 
   }
