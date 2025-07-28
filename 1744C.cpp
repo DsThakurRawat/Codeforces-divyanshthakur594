@@ -346,7 +346,7 @@ void solve() {
     cin >> c;// current color of traffic light 
 
     string s;
-    cin >> s; // it is guaranteed that 
+    cin >> s; // it is guaranteed that symbol g is in the 
 
 
 
