@@ -31,7 +31,12 @@ using namespace std;
 #define no cout << "NO\n"
 #define minpq priority_queue<int, vector<int>, greater<int>>
 #define maxpq priority_queue<int>
+#define int int64_t
+#define vi vector<int>
+#define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
 int main(){
+   fastio;
    int t;
    cin >> t;
    while(t--){ 
