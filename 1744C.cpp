@@ -360,7 +360,7 @@ void solve() {
         if(s[1] == 'g') {
             cout << timer << 0;
         }
-  int 
+  int low = 0, high = nums
 
   while()
 
