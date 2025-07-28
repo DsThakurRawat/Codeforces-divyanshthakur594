@@ -370,7 +370,7 @@ void solve() {
                 if(s[j] == 'g'){
                     ans = max(ans,j-i);
                     break;
-                }
+                 }
              }
          }
      }
