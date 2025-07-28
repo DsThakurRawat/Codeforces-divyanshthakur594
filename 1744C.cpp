@@ -335,7 +335,8 @@ testcase dry run
 5 r
 rggy
 1st second wieghted r finished
-2 second weighted check if before i
+2 second weighted check if next is g next g then 
+
 
 
 
