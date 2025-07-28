@@ -326,7 +326,8 @@ at the nth second the color sn is on at the n+1 second n+1st second color s1 is 
 amd so on
 you need to cross road that can only be done when the green color is on
 uk which color is on the traffic light at the moment , but udk the current moment of time
-u need to find the minimum amount of time in which u are guaranteed to 
+u need to find the minimum amount of time in which u are guaranteed to cross the road
+
 
 
      
