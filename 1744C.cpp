@@ -320,7 +320,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 // it is known that traffic light repeat its colors evry n seconds an at th ith seconds 
 the color si is on
 that way the order of color is described by  a string 
-
+for eg if s 
 
      
 */
