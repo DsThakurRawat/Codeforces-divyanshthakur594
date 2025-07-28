@@ -369,7 +369,7 @@ void solve() {
             for(int j = i + 1; j < i + n; j++){
                 if(s[j] == 'g'){
                     ans = max(ans,j-i);
-                    
+                    break;
                 }
             }
         }
