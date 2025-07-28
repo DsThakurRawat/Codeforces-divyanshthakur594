@@ -361,7 +361,7 @@ void solve() {
 */
 
   int ansA = 1;
-  int ans_b = n-1;
+  int ansB = n-1;
   for(int fac = 2; fac*fac <= n; fac++){
     if(n % fac == 0){
         ans_a = n / fac;
