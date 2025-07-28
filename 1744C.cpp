@@ -317,7 +317,7 @@ C++ Operator Keyword Equivalents (Normal Format):
  
 
 
-// it is known that 
+// it is known that traffic light repeat itself 
 
      
 */
