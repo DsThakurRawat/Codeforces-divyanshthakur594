@@ -329,7 +329,8 @@ uk which color is on the traffic light at the moment , but udk the current momen
 u need to find the minimum amount of time in which u are guaranteed to cross the road
 s = "rggry"
 current color is r there are two options either green color will be on
-after 1 sec or after 3 sec 
+after 1 sec or after 3 sec. that way answere is equal to 3 that is number of seconds that 
+we are guat
 
 
      
