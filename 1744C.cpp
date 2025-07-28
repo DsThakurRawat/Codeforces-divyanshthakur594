@@ -281,7 +281,7 @@ using Graph = vector<vector<int>>; // Adjacency list graph representation
 //<-------------------- Trie -------------------->
 /*
 
-🔁 C++ Operator Keyword Equivalents (Normal Format):
+C++ Operator Keyword Equivalents (Normal Format):
 1. || → or
 
 2. && → and
