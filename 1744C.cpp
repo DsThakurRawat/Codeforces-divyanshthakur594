@@ -362,7 +362,7 @@ void solve() {
 
     s += s;
 
-    int ans = 0;
+   
 
      s += s;
     int ans = 0;
