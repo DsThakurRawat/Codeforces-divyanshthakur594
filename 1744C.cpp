@@ -331,6 +331,8 @@ s = "rggry"
 current color is r there are two options either green color will be on
 after 1 sec or after 3 sec. that way answere is equal to 3 that is number of seconds that 
 we are guaranteed to cross th road, if the current color is r
+testcase dry run 
+
 
 
 
@@ -349,7 +351,7 @@ void solve() {
     cin >> s; // it is guaranteed that symbol g is in the string s and as well string c
      
     for(int i = 0; i < s.size(); i++){
-        
+
 
 
     }
