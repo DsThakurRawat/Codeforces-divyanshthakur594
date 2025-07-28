@@ -10,7 +10,7 @@
 using namespace std;
 using namespace __gnu_pbds;
 
-// -------------------- Typedefs and Macros --------------------
+// -------------------- Typedefs and Macros -------------------->
 #pragma region typedefs_macros
 #define int long long
 #define endl '\n'
