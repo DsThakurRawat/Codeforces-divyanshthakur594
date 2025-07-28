@@ -356,7 +356,7 @@ void solve() {
 
     string s;
     cin >> s; // it is guaranteed that symbol g is in the string s and as well string c
-    int timer = 0;
+    int timer = 1;
     int flag = 1;
     int ans = 0;
 
