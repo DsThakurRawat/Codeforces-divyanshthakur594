@@ -322,7 +322,8 @@ the color si is on
 that way the order of color is described by  a string 
 for eg if s = "rggry"
 u are given string s1 , s2,----sn 
-at the nth second the color sn is on at the n+1 second n+1st second color is on 
+at the nth second the color sn is on at the n+1 second n+1st second color s1 is on
+
 
 
      
