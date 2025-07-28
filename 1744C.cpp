@@ -361,9 +361,9 @@ void solve() {
             cout << timer << 0;
         }
   int low = 0, high = s.size() - 1;
-  
 
-  while()
+
+  while(low <= high)
 
 
 
