@@ -366,7 +366,7 @@ void solve() {
 
         }
 
-        else if( s[i] )
+        else if( s[i] != 0)
 
 
 
