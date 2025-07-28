@@ -334,7 +334,8 @@ we are guaranteed to cross th road, if the current color is r
 testcase dry run 
 5 r
 rggy
-1st second wieghted
+1st second wieghted r finished
+
 
 
 
