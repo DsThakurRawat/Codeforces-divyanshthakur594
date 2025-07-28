@@ -342,7 +342,9 @@ void solve() {
 
     int n;
     cin >> n;
-    char 
+    char  c;
+    cin >> c;
+    
 
 }
 
