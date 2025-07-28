@@ -359,6 +359,7 @@ void solve() {
     for(int i = 0; i < s.size(); i++){
         if(s[i] == 'g') timer = 0;
   }
+  
 
 
 
