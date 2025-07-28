@@ -379,7 +379,7 @@ void solve() {
 
 
 
-    cout << ans 
+    cout << ans << endl;
       
  
 
