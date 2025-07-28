@@ -349,6 +349,7 @@ void solve() {
     cin >> s; // it is guaranteed that symbol g is in the string s and as well string c
      
     for(int i = 0; i < s.size(); i++){
+
         
     }
 
