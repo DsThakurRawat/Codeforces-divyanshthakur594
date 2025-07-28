@@ -321,6 +321,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 the color si is on
 that way the order of color is described by  a string 
 
+
      
 */
 
