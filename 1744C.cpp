@@ -360,8 +360,8 @@ void solve() {
 
     for(int i = 0; i < n; i++){
         if(i == 0 && s[i]  == 'g'){
-            flag = 0
-            
+            flag = 0;
+
         }
     }
 
