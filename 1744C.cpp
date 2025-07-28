@@ -97,6 +97,11 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #define vpi       vector<pii>
 #define vvpi      vector<vector<pii>>
 
+
+
+
+
+
 // -------------------- Disjoint Set Union --------------------
 #pragma region DSU
 struct DSU {
