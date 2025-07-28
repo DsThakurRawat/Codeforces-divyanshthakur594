@@ -360,7 +360,11 @@ void solve() {
     int flag = 1;
     int ans = 0;
 
-    
+    s += s;
+
+    int ans = 0;
+
+    for(int i = 0; i < n; )
     
      
 
