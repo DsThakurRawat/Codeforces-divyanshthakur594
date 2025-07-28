@@ -339,7 +339,7 @@ we are guaranteed to cross th road, if the current color is r
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    
+}
 
 //<-------------------- Main Driver -------------------->
 signed main() {
