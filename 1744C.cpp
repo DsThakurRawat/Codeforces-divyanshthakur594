@@ -363,7 +363,9 @@ void solve() {
   int low = 0, high = s.size() - 1;
 
 
-  while(low <= high)
+  while(low <= high){
+    
+  }
 
 
 
