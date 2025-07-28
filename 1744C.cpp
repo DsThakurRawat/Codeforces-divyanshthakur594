@@ -370,7 +370,7 @@ void solve() {
     for (int i = 2 * n - 1; i >= 0; --i) {
         if (s[i] == 'g') next_g = i;
         if (i < n && s[i] == c && next_g != -1) {
-            ans = max(ans, next_g - i);
+            ans = max(ans, next - i);
         }
     }
     
