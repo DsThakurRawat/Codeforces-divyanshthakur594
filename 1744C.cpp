@@ -364,10 +364,6 @@ void solve() {
      
 
 
-    }
-
-    cout << timer << endl;
-
 
     
       
