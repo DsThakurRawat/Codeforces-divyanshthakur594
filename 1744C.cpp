@@ -346,8 +346,8 @@ void solve() {
     cin >> c;// current color of traffic light 
 
     string s;
-    cin >> s;
-    
+    cin >> s; // it is guaranteed that 
+
 
 
 }
