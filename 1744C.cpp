@@ -367,7 +367,7 @@ void solve() {
         }
 
         else if( s[i] != 'g' || (s[i] == 'g' && s[i+1] == 'g')) timer++;
-        if(s[i] == 'g')
+        if(s[i] == 'g' )
        
      
 
