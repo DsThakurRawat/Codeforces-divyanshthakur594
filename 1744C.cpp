@@ -343,8 +343,8 @@ void solve() {
     int n;
     cin >> n;
     char  c;
-    cin >> c;
-    
+    cin >> c;// cu
+
 
 }
 
