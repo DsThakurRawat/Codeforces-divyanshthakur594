@@ -343,7 +343,8 @@ void solve() {
     int n;
     cin >> n;
     char  c;
-    cin >> c;// cu
+    cin >> c;// current color of traffic light 
+    
 
 
 }
