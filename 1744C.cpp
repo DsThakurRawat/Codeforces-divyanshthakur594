@@ -332,6 +332,7 @@ current color is r there are two options either green color will be on
 after 1 sec or after 3 sec. that way answere is equal to 3 that is number of seconds that 
 we are guaranteed to cross th road, if the current color is r
 testcase dry run 
+5 r
 
 
 
