@@ -160,7 +160,7 @@ struct SegmentTree {
 };
 #pragma endregion
 
-// -------------------- Trie -------------------->
+//<-------------------- Trie -------------------->
 #pragma region Trie
 struct TrieNode {
     TrieNode* children[26];
