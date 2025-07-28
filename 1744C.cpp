@@ -357,9 +357,7 @@ void solve() {
     cin >> s; // it is guaranteed that symbol g is in the string s and as well string c
     int timer = 0;
     
-        if(s[1] == 'g') {
-            cout << timer << 0;
-        }
+      
  
 
 
