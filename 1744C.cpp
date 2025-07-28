@@ -337,7 +337,7 @@ rggy
 1 2 3 -> time spended 
 1st second wieghted r finished
 2 second weighted check if next is g next g then 
-3 second  wi
+3 second  wieghted and che
 
 
 
