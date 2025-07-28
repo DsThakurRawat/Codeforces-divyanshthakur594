@@ -324,7 +324,8 @@ for eg if s = "rggry"
 u are given string s1 , s2,----sn 
 at the nth second the color sn is on at the n+1 second n+1st second color s1 is on
 amd so on
-you need to cross road that can only be done when th 
+you need to cross road that can only be done when the green color is on
+
 
 
      
