@@ -317,7 +317,7 @@ C++ Operator Keyword Equivalents (Normal Format):
  
 
 
-// it is know
+// it is known that 
 
      
 */
