@@ -373,7 +373,7 @@ void solve() {
   }
 
 
-   cout << ans_a << " " << ans_b << endl;
+   cout << ansA << " " << ans_b << endl;
 
 
 }
