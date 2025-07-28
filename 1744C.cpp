@@ -366,7 +366,7 @@ void solve() {
 
         }
 
-        else if( s[i] != 0) timer ++;
+        else if( s[i] != 0 ) timer ++;
      
 
 
