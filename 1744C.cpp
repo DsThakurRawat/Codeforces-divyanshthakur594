@@ -364,7 +364,16 @@ void solve() {
 
     int ans = 0;
 
-    
+     s += s;
+    int ans = 0;
+    int next_g = -1;
+
+    for (int i = 2 * n - 1; i >= 0; --i) {
+        if (s[i] == 'g') next_g = i;
+        if (i < n && s[i] == c && next_g != -1) {
+            ans = max(ans, next_g - i);
+        }
+    }
     
      
 
