@@ -330,7 +330,8 @@ u need to find the minimum amount of time in which u are guaranteed to cross the
 s = "rggry"
 current color is r there are two options either green color will be on
 after 1 sec or after 3 sec. that way answere is equal to 3 that is number of seconds that 
-we are guaranteed to cross th road
+we are guaranteed to cross th road, if the current color is r
+
 
 
      
