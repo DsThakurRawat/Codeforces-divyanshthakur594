@@ -360,7 +360,7 @@ void solve() {
    
 */
 
-  int ans_a = 1;
+  int ansA = 1;
   int ans_b = n-1;
   for(int fac = 2; fac*fac <= n; fac++){
     if(n % fac == 0){
