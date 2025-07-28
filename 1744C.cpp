@@ -371,8 +371,8 @@ void solve() {
                     ans = max(ans,j-i);
                     break;
                 }
-            }
-        }
+             }
+         }
      }
     
      
