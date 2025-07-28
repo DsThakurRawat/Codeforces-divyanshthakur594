@@ -367,6 +367,7 @@ void solve() {
     int mid = (low + high) / 2;
 
     if(s[mid] != 'g'){
+        timer++;
         
 
     }
