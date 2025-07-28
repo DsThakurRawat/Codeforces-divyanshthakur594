@@ -367,7 +367,9 @@ void solve() {
     for(int i = 0; i < n; i++){
         if(s[i] == c){
             for(int j = i + 1; j < i + n; j++){
-                if(s[j] == 'g')
+                if(s[j] == 'g'){
+                    
+                }
             }
         }
     }
