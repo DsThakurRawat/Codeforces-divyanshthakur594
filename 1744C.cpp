@@ -358,7 +358,9 @@ void solve() {
     int timer = 0;
 
     for(int i = 0; i < n; i++){
-        if(i == 0 && s[i]  == 'g')
+        if(i == 0 && s[i]  == 'g'){
+            flag = 1
+        }
     }
 
 
