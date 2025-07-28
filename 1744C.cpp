@@ -312,7 +312,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 
 
-// -------------------- Problem Rough  -------------------->
+//<-------------------- Problem Rough  -------------------->
 /*
  
 
