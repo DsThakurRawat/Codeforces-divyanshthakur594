@@ -315,7 +315,8 @@ C++ Operator Keyword Equivalents (Normal Format):
 //<-------------------- Problem Rough  -------------------->
 /*
  
-// there are n candidates 
+// there are n candidates players in the competition that will be trained 
+by 
 
 
 
