@@ -362,7 +362,7 @@ so yeah
 
 */
 int left = -1;
-int right = P.size() - 1;
+int right = N - 1;
 sort(P.begin(),P.end());
 
 int Teamcount = 0;
