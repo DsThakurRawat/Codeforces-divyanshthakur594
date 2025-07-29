@@ -376,7 +376,7 @@ while(left < right){
     else{
         Teamcount++;
         teamsize = 1;
-        right
+        right--;
     }
 
 
