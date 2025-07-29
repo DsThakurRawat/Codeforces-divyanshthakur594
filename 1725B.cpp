@@ -370,7 +370,7 @@ void solve() {
 //<-------------------- Main Driver -------------------->
 signed main() {
     fastIO();
-    int t;
+   // int t;
     cin >> t;
     //while (t--) 
     solve();
