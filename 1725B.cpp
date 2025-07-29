@@ -331,6 +331,8 @@ he team sent is said to defeat the enemy team if the sum of powers from the form
 he can change the powwer of each player in the team to be equal to the biggest player power
 
 //  Determine the maximum number of wins that can be achieved by Pak Chanek.
+
+
      
 */
 
