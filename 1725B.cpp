@@ -343,7 +343,7 @@ void solve() {
     int N,D;
     cin >> N >> D;
 
-    vll P(N);
+    vll P;
 
     for(long long i = 0; i < N; i++) {
         long long x;
