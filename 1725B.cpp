@@ -339,7 +339,7 @@ void solve() {
     int N,D;
     cin >> N >> D;
 
-    vll P
+    vll P(n)
     
 
     
