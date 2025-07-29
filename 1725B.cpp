@@ -341,7 +341,8 @@ void solve() {
 
     vll P(N);
 
-    for(long long i = 0; i < N; i++) cin >> P
+    for(long long i = 0; i < N; i++) cin >> P(N);
+    
         
 
 
