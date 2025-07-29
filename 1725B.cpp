@@ -349,7 +349,8 @@ void solve() {
 //test case analysis 
 /*
 1 test = 10^8 ops
-N 
+N = 10^5
+
 
 
 */
