@@ -333,6 +333,7 @@ he can change the powwer of each player in the team to be equal to the biggest p
 //  Determine the maximum number of wins that can be achieved by Pak Chanek.
 
 larger power guys are important 
+50 60 70 80 90 100
 
      
 */
