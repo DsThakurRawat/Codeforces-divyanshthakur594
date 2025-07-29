@@ -338,7 +338,9 @@ void solve() {
     int N,D;
     cin >> N >> D;
 
-    
+    for(int)
+
+
 
 
 }
