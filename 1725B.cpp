@@ -365,7 +365,7 @@ int left = -1;
 int right = P.size() - 1;
 
 int Teamcount = 0;
-int tem
+int teamsize = 1
 while(left < right){
     if(a[right]*teamsize)
 }
