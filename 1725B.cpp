@@ -316,7 +316,8 @@ C++ Operator Keyword Equivalents (Normal Format):
 /*
  
 // there are n candidates players in the competition that will be trained 
-by 
+by pak chanekk
+
 
 
 
