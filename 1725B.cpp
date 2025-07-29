@@ -365,7 +365,7 @@ int left = -1;
 int right = P.size() - 1;
 
 int Teamcount = 0;
-
+int #11 Basketball Together | Video Solution | 1000 Rated | TLE CP-31 Sheet | Best Codeforces Problems
 while(left < right){
     if(a[right]*teamsize)
 }
