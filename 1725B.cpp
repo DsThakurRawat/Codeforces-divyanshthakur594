@@ -326,7 +326,7 @@ he team sent is said to defeat the enemy team if the sum of powers from the form
 
 
 
-// one of pak chaneks 
+// one of pak chaneks s
      
 */
 
