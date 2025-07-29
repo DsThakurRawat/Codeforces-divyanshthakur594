@@ -346,8 +346,8 @@ void solve() {
         cin >> x;
         P.push_back(x);
     }
+//
 
-    
 
 
 
