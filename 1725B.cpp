@@ -362,7 +362,11 @@ so yeah
 
 */
 int left = -1;
-int right = P.size()
+int right = P.size() - 1;
+
+
+
+
 
 
 
