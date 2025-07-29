@@ -366,6 +366,10 @@ int right = P.size() - 1;
 
 int Teamcount = 0;
 
+while(left < right){
+    
+}
+
 
 
 
