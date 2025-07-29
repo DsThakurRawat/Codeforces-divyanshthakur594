@@ -327,7 +327,7 @@ he team sent is said to defeat the enemy team if the sum of powers from the form
 
 
 // one of pak chaneks skill is that when a team that has been formed plays in a match 
-he can change the powwer of each 
+he can change the powwer of each player in th
      
 */
 
