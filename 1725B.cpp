@@ -350,7 +350,7 @@ void solve() {
 /*
 1 test = 10^8 ops
 N = 10^5
-
+0(N*N)
 
 
 */
