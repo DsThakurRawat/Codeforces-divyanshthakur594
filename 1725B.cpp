@@ -383,7 +383,7 @@ while(left < right){
 
 }
 
-
+       cout << Teamcount << endl;
 
 
 
