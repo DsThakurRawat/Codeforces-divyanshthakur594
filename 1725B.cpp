@@ -361,6 +361,8 @@ O(nlogn)
 so yeah
 
 */
+int left = -1;
+
 
 
 
