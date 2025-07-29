@@ -344,6 +344,7 @@ signed main() {
     fastIO();
     int t;
     cin >> t;
-    //while (t--) solve();
+    //
+    while (t--) solve();
     return 0;
 }
