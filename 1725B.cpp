@@ -320,6 +320,8 @@ by pak chanekk
 // the ith candidate has Pi power
 // he can form zero or more teams from n candidates
 
+enemy team has power D
+
 
 
 
