@@ -318,7 +318,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 // there are n candidates players in the competition that will be trained 
 by pak chanekk
 // the ith candidate has Pi power
-
+// he can form zero 
 
 
 
