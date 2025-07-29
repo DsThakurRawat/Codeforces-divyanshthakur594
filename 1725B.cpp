@@ -96,7 +96,7 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #define pii       pair<int, int>
 #define vpi       vector<pii>
 #define vvpi      vector<vector<pii>>
-#define 
+#define vll vector
 
 //<---------------Loops--------------------------------------->
 
