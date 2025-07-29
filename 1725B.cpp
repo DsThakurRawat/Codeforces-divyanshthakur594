@@ -337,6 +337,7 @@ he can change the powwer of each player in the team to be equal to the biggest p
 void solve() {
     int N,D;
     cin >> N >> D;
+
     
 
 
