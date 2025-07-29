@@ -364,7 +364,7 @@ so yeah
 int left = -1;
 int right = P.size() - 1;
 
-
+int Teamcount = 0;
 
 
 
