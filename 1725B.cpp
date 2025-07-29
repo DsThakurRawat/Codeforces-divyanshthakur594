@@ -367,13 +367,13 @@ int right = P.size() - 1;
 int Teamcount = 0;
 int teamsize = 1;
 while(left < right){
-    if((P[right]*teamsize) <= d && left < right){
+    if((P[right]*teamsize) <= D && left < right){
         left++;
         teamsize++;
 
 
     }
-    
+
 
 
 }
