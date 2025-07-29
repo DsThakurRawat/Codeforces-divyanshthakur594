@@ -370,9 +370,12 @@ while(left < right){
     if((P[right]*teamsize) <= d && left < right){
         left++;
         teamsize++;
-        
+
 
     }
+    
+
+
 }
 
 
