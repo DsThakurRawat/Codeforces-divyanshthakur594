@@ -321,7 +321,8 @@ by pak chanekk
 // he can form zero or more teams from n candidates
 
 enemy team has power D
-
+he team sent is said to defeat the enemy team if the sum of powers from the formed players is strictly greater than D
+.
 
 
 
