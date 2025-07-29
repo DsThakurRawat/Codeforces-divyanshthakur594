@@ -344,7 +344,7 @@ void solve() {
     for(long long i = 0; i < N; i++) {
         long long x;
         cin >> x;
-        v
+        P.push_back(x);
     }
         
 
