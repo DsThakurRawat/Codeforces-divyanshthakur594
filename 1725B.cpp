@@ -341,7 +341,9 @@ void solve() {
 
     vll P(N);
 
-    for(long long i = 0; i < N; i++) 
+    for(long long i = 0; i < N; i++) {
+        
+    }
         
 
 
