@@ -335,9 +335,17 @@ void solve() {
 
     int n; cin >>n;
     vll nums(n);
-    for_input cin >> n;
-
+    for_input {
+        int x;
+        cin >> x;
+        nums.push_back(x);
+    }
     
+
+
+
+
+
 
 
     
