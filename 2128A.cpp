@@ -345,16 +345,18 @@ void solve() {
 
     // how to choose trash to choose trash
     sort(nums.rbegin(), nums.rend());
+
+    int saved = 0;
+
+    for(long long x : nums){
+        if(x*(1LL << saved) <= c){
+            saved++;
+        }
+    }
+     cout << n-saved << endl;
     
 
     
-       for(int num : nums){
-        if( 2*num > c ){
-              nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
-              coin++;
-        }
-        for (int &x : nums)
-        x *= 2; 
        
 
     }
@@ -363,7 +365,7 @@ void solve() {
 
 
 
-  cout << coin << endl;
+  
 
 
 
@@ -373,7 +375,7 @@ void solve() {
 
     
 
-}
+
 
 //<-------------------- Main Driver -------------------->
 signed main() {
