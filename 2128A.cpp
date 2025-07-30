@@ -336,9 +336,7 @@ void solve() {
     int n,c; cin >>n >> c;
     vll nums(n);
     for_input {
-        int x;
-        cin >> x;
-        nums.push_back(x);
+        cin >> nums[i];
     }
 
      int coin = 0;
