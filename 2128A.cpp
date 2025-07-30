@@ -340,15 +340,22 @@ void solve() {
         cin >> x;
         nums.push_back(x);
     }
+
+      int minCost = INT_MAX;
+
     // how to choose trash to choose trash
     sort(nums.begin(), nums.end());
 
-    for(int i = 0; i < n; i++){
-        if(2*nums[i] > c ){
-            nums.erase(remove(nums.begin(),nums.end(),nums[i]),nums.end());
-            
-        }
+    for(int i = 0; i <= n; i++){
+        int cost = 0;
+        for(int j = 0; j < i; j++){
+            long long weight = 1LL* nums[j] << (n - 1 -j);
+            if(weight > c) cost++;
     }
+    minCost = min(minCost, cost);
+    }
+
+   
 
 
 
