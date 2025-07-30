@@ -332,38 +332,31 @@ in next the weight of each remaining trash bag will get multipy by two
 
 //<-------------------- Solve Function -------------------->
 void solve() {
+     int n, c;
+    cin >> n >> c;
 
-    int n,c; cin >>n >> c;
-    vll nums(n);
-    for_input {
-        
+    vector<long long> nums(n);
+    for (int i = 0; i < n; ++i) {
         cin >> nums[i];
-       
     }
 
-     int coin = 0;
-
-    // how to choose trash to choose trash
+    // Sort in decreasing order
     sort(nums.rbegin(), nums.rend());
-    
 
-    
-       for(int num : nums){
-        if( 2*num > c ){
-              nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
-              coin++;
+    int saved = 0;
+    for (long long x : nums) {
+        if (x * (1LL << saved) <= c) {
+            ++saved;
         }
-        for (int &x : nums)
-        x *= 2; 
-       
-
     }
 
+    cout << n - saved << '\n';
+
+  
 
 
 
 
-  cout << coin << endl;
 
 
 
