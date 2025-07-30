@@ -344,7 +344,7 @@ void solve() {
      int coin = 0;
 
     // how to choose trash to choose trash
-    sort(nums.begin(), nums.end());
+    sort(nums.rbegin(), nums.rend());
     
 
     
