@@ -314,6 +314,8 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Problem Rough  -------------------->
 /*
+
+
  
 
 
@@ -324,7 +326,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    
+
 }
 
 //<-------------------- Main Driver -------------------->
