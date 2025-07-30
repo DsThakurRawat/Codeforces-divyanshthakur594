@@ -324,7 +324,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-   
+}
 
 //<-------------------- Main Driver -------------------->
 signed main() {
