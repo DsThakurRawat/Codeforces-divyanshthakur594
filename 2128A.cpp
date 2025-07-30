@@ -99,7 +99,7 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #define vvpi      vector<vector<pii>>
 
 //<---------------Loops--------------------------------------->
-
+#define for_input for(int i = 0; i < n; i++)
 
 
 
@@ -334,7 +334,10 @@ in next the weight of each remaining trash bag will get multipy by two
 void solve() {
 
     int n; cin >>n;
-    vector<long long > nums;
+    vll nums(n);
+    for_input cin >> n;
+
+    
 
 
     
