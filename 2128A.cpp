@@ -341,20 +341,27 @@ void solve() {
         nums.push_back(x);
     }
 
-      int minCost = INT_MAX;
+     
 
     // how to choose trash to choose trash
     sort(nums.begin(), nums.end());
-     int cost = 0;
-    for(int i = 0; i <= n; i++){
-        
-        for(int j = 0; j < i; j++){
-            long long weight = 1LL* nums[j] << (n - 1 -j);
-            if(weight > c) cost++;
+    int n = nums.size();
+
+    for(int i = 0; i < n; i++){
+       for(int num : nums){
+        if( 2*num > c ){
+              nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
+        }
+       }
+
     }
-    minCost = min(minCost, cost);
-    }
-    cout << minCost << endl;
+
+
+
+
+
+
+    
 
    
 
