@@ -315,7 +315,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 //<-------------------- Problem Rough  -------------------->
 /*
 
-there are 
+there are n trash
  
 
 
