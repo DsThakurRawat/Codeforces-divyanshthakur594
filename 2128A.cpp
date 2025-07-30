@@ -347,12 +347,12 @@ void solve() {
     sort(nums.begin(), nums.end());
     int n = nums.size();
 
-    for(int i = 0; i < n; i++){
+    
        for(int num : nums){
         if( 2*num > c ){
               nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
         }
-       }
+       
 
     }
 
