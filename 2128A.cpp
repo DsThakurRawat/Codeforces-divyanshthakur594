@@ -345,9 +345,9 @@ void solve() {
 
     // how to choose trash to choose trash
     sort(nums.begin(), nums.end());
-
+     int cost = 0;
     for(int i = 0; i <= n; i++){
-        int cost = 0;
+        
         for(int j = 0; j < i; j++){
             long long weight = 1LL* nums[j] << (n - 1 -j);
             if(weight > c) cost++;
