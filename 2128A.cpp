@@ -92,6 +92,7 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 
 // === Vector/Pair Utils ===
 #define vi        vector<int>
+#define vll       vector<long long>
 #define vvi       vector<vector<int>>
 #define pii       pair<int, int>
 #define vpi       vector<pii>
@@ -317,6 +318,10 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 there are n trash bags
 ith 
+1. w > c-> charge 1 coin
+else charge = 0;
+in next the weight of each remaining trash bag will get multipy by two
+
  
 
 
@@ -327,6 +332,12 @@ ith
 
 //<-------------------- Solve Function -------------------->
 void solve() {
+
+    int n; cin >>n;
+    vector<long long > nums;
+
+
+    
 
 }
 
