@@ -333,14 +333,21 @@ in next the weight of each remaining trash bag will get multipy by two
 //<-------------------- Solve Function -------------------->
 void solve() {
 
-    int n; cin >>n;
+    int n,c; cin >>n >> c;
     vll nums(n);
     for_input {
         int x;
         cin >> x;
         nums.push_back(x);
     }
-    
+    // how to choose trash to choose trash
+    sort(nums.begin(), nums.end());
+
+    for(int i = 0; i < n; i++){
+        if(2*nums[i] > )
+    }
+
+
 
 
 
