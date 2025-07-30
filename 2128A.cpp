@@ -341,7 +341,7 @@ void solve() {
     }
 
     // Sort in decreasing order
-    sort(nums.rbegin(), nums.rend());
+ /*  sort(nums.rbegin(), nums.rend());
 
     int saved = 0;
     for (long long x : nums) {
@@ -352,7 +352,26 @@ void solve() {
 
     cout << n - saved << '\n';
 
-  
+  */
+    int coins = 0;
+
+    sort(nums.begin(),nums.end());
+    while(!nums.empty()){
+        long long x = nums.front();
+        nums.erase(nums.begin());
+
+        if (x > c) coins++;
+
+        // Double all remaining
+        for (auto& val : nums) {
+            val *= 2;
+        }
+    }
+
+    cout << coins << '\n';
+
+
+    }
 
 
 
