@@ -345,7 +345,7 @@ void solve() {
 
     // how to choose trash to choose trash
     sort(nums.begin(), nums.end());
-    int n = nums.size();
+    
 
     
        for(int num : nums){
