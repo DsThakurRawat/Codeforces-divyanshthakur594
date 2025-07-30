@@ -341,7 +341,7 @@ void solve() {
         nums.push_back(x);
     }
 
-     
+     int coin = 0;
 
     // how to choose trash to choose trash
     sort(nums.begin(), nums.end());
@@ -351,6 +351,7 @@ void solve() {
        for(int num : nums){
         if( 2*num > c ){
               nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
+              coin++;
         }
        
 
@@ -360,12 +361,7 @@ void solve() {
 
 
 
-
-    
-
-   
-
-
+  cout << coin << endl;
 
 
 
