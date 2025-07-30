@@ -344,7 +344,10 @@ void solve() {
     sort(nums.begin(), nums.end());
 
     for(int i = 0; i < n; i++){
-        if(2*nums[i] > )
+        if(2*nums[i] > c ){
+            nums.erase(remove(nums.begin(),nums.end(),nums[i]),nums.end());
+            
+        }
     }
 
 
