@@ -354,6 +354,7 @@ void solve() {
     }
     minCost = min(minCost, cost);
     }
+    cout << minCost << endl;
 
    
 
