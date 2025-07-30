@@ -353,6 +353,8 @@ void solve() {
               nums.erase(remove(nums.begin(), nums.end(), num), nums.end());
               coin++;
         }
+        for (int &x : nums)
+        x *= 2; 
        
 
     }
