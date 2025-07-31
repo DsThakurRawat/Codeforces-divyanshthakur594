@@ -344,7 +344,7 @@ void solve() {
         flag = 0;
     }
     if(flag == 1) yes;
-    else no
+    else no;
 
 
 
