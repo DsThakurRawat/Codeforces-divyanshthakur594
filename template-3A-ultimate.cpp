@@ -314,7 +314,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Problem Rough  -------------------->
 /*
- 
+ threee cards
 
 
 
@@ -326,7 +326,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 void solve() {
     int n;
     cin >> n;
-    
+
 
    
 
