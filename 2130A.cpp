@@ -328,6 +328,7 @@ select sub set s1 from  s now add sum(s1) to ur score
 score = 0 + sum(s1)
 select a subset s1 add mex(s1) to ur score and then remove 
 s1 from s
+test case check 
 
 
      
