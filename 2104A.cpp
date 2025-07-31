@@ -331,7 +331,7 @@ then also its not possible to make it
 void solve() {
     int a,b,c;
     cin >> a >> b >> c;
-    int   total = a+b+c/3;
+    int   total = (a+b+c)/3;
     int flag = 1;
     int barrier = total/3;
     
