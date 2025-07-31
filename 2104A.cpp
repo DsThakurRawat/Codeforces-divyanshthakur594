@@ -315,13 +315,19 @@ C++ Operator Keyword Equivalents (Normal Format):
 //<-------------------- Problem Rough  -------------------->
 /*
  
-// we can have anyt ype of acrd but we should have _ve card 
-so hame insure karna hai ki jo barrier cross na ha agar barrier cross ho gayt 
-then also its not possible to make it
-
-
-
-
+sum(t) = sum of all elmen in t
+mex(t) is the smallest non -ve element not in t
+for eg if t = , if T={0,1,1,3}
+, then mex(T)=2
+ because 2
+ is the smallest non-negative integer not present in T
+.
+we have given a multiset s of size n consisting of non -ve integer 
+score = 0(initially)
+select sub set s1 from  s now add sum(s1) to ur score 
+score = 0 + sum(s1)
+select a subset s1 add mex(s1) to ur score and then remove 
+s1 from s
 
 
      
@@ -329,24 +335,29 @@ then also its not possible to make it
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    int a,b,c;
-    cin >> a >> b >> c;
-    int   total = (a+b+c)/3;
-  
-    int barrier = total/3;
-    
+   int n; 
+   cin >> n;
+   vi s(n);
+   for_loop{ cin >> s[i];
 
-    if( total % 3 != 0) {
-          cout << "NO\n";
-        return;
-    }
-    if(((barrier - a) + (barrier + b) <= c)){
-      yes;
-    }
-    else{
-       no;
-    }
-   
+   }
+   mii countfreq;
+
+   for( int x : s) countfreq[x]++;
+
+   int mex = 0;
+
+   while(countfreq[mex] > 0){
+    countfreq[mex]--;
+    mex++;
+   }
+   int sumscore = 0;
+
+   for( auto &[num,cnt] : countfreq){
+    sumscore += num*cnt;
+   }
+
+cout << mex + sumscore << endl;
 
 
 
