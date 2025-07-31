@@ -98,7 +98,7 @@ template<class T> void _print(vector<T> v) {cerr << "[ "; for (T i : v) {_print(
 #define vvpi      vector<vector<pii>>
 
 //<---------------Loops--------------------------------------->
-#define for_input 
+#define for_input for(int i = 0; i < n; i++)
 
 
 
