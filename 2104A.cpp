@@ -332,19 +332,21 @@ void solve() {
     int a,b,c;
     cin >> a >> b >> c;
     int   total = (a+b+c)/3;
-    int flag = 1;
+  
     int barrier = total/3;
     
 
-    if( total % 3 != 0) flag = 0;
-    if((barrier - a + barrier + b <= c)){
-        flag = 1;
+    if( total % 3 != 0) {
+          cout << "NO\n";
+        return;
+    }
+    if(((barrier - a) + (barrier + b) <= c)){
+      yes;
     }
     else{
-        flag = 0;
+       no;
     }
-    if(flag == 1) yes;
-    else no;
+   
 
 
 
