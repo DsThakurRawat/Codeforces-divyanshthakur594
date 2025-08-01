@@ -340,8 +340,7 @@ and s will be k*b;
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    int n;
-    cin >> n;
+   
     int n,k,b,s;
     cin >> n >> k >> b >> s;
     // we need to find an array a of n non negative integrs such that beuty is 
