@@ -352,13 +352,7 @@ void solve() {
     countfreq[mex]--;
     mex++;
    }
-   int sumscore = 0;
-
-   for( auto &[num,cnt] : countfreq){
-    sumscore += num*cnt;
-   }
-
-cout << mex + sumscore << endl;
+   
 
 
 
