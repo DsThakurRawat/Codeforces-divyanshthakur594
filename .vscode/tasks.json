@@ -2,12 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "compile and run",
+      "label": "compile and run with input.txt",
       "type": "shell",
       "command": "bash",
       "args": [
         "-c",
-        "g++ -std=c++17 -o '${fileBasenameNoExtension}' '${file}' && ./'${fileBasenameNoExtension}' < input.txt > output.txt"
+        "g++ -std=c++17 -o '${fileBasenameNoExtension}' '${file}' && echo '[Compiled ✅]' && ./'${fileBasenameNoExtension}' < '${workspaceFolder}/input.txt' > '${workspaceFolder}/output.txt' && echo '[Output saved to output.txt]' && cat '${workspaceFolder}/output.txt'"
       ],
       "group": {
         "kind": "build",
