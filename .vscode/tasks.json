@@ -1,18 +1,19 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "compile and run",
-            "type": "shell",
-            "command": "cmd.exe",
-            "args": [
-                "/c",
-                "g++ -std=c++17 -o \"${fileBasenameNoExtension}\" \"${file}\" && .\\${fileBasenameNoExtension} < input.txt > output.txt"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
-    ]
-  }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile and run",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "g++ -std=c++17 -o '${fileBasenameNoExtension}' '${file}' && ./'${fileBasenameNoExtension}' < input.txt > output.txt"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
