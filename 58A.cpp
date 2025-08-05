@@ -334,6 +334,7 @@ in next the weight of each remaining trash bag will get multipy by two
 void solve() {
      int n, c;
     cin >> n >> c;
+    
 
     
 
