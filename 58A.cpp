@@ -332,9 +332,8 @@ in next the weight of each remaining trash bag will get multipy by two
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-     int n, c;
-    cin >> n >> c;
-    
+     
+
 
     
 
@@ -357,7 +356,7 @@ void solve() {
 //<-------------------- Main Driver -------------------->
 signed main() {
     fastIO();
-    int t;
+   // int t;
     //cin >> t;
    // while (t--) 
    solve();
