@@ -357,7 +357,7 @@ void solve() {
 signed main() {
     fastIO();
     int t;
-    cin >> t;
+    //cin >> t;
     while (t--) solve();
     return 0;
 }
