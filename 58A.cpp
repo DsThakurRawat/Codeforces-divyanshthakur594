@@ -336,7 +336,25 @@ void solve() {
 
 
     
+// greedy appraoch
+string s;
+cin >> s;
+string target = "hello";
 
+int j = 0;
+
+for(int i = 0; i < s.size(); i++){
+    if(s[i] == target[j]){
+        j++;//if characte match ho gya than move pointer of j to next charater tp loacte it
+    }
+
+    if(j == target.size()){
+        break;
+    }
+}
+
+if(j == target.size()) yes;
+else no;
   
 
 
