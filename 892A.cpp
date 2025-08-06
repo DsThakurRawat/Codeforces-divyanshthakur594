@@ -323,7 +323,8 @@ from condn
  you must not able to to divide bi evenly by cj
  in other w-> ords cj is not divisor bi
  // v.back() -> return last elemnt of vector
- // v.pop_back() -> remove last elemnt of 
+ // v.pop_back() -> remove last elemnt of v
+ // 
 
 
 
