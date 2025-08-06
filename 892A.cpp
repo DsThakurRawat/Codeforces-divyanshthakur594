@@ -361,7 +361,7 @@ void solve() {
                 if(x == min_val) b.push_back(x);
                 else c.push_back(x);
 
-            }
+            
         }
         cout << b.size() << " " << c.size() << endl;
 
