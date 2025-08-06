@@ -359,7 +359,8 @@ void solve() {
         for(int x : a){
             if(x == min_val){
                 if(x == min_val) b.push_back(x);
-                
+                else c.push_back(x)
+
             }
         }
 
