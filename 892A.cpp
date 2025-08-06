@@ -366,8 +366,10 @@ void solve() {
         cout << b.size() << " " << c.size() << endl;
 
         for(int x : b) cout << x << " ";
+        cout << endl;
         for(int x : c) cout << x << " ";
         
+
 
         
 
