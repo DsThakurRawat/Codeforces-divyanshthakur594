@@ -316,7 +316,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 /*
  
 if numbesr are same then answer is always -1 ;
-
+if a is divisble by b and they are both natu
 
 
 
