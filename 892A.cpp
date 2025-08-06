@@ -369,6 +369,7 @@ void solve() {
         cout << endl;
         for(int x : c) cout << x << " ";
         cout << endl;
+        
 
 
        
