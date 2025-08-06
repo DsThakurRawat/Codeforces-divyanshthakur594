@@ -363,7 +363,9 @@ void solve() {
 
             }
         }
-        cout << b.size() << " " << c.size() << 
+        cout << b.size() << " " << c.size() << endl;
+
+        for(int x : b)
 
         
 
