@@ -354,6 +354,8 @@ void solve() {
            return;
         }
 
+        int min_val = 
+
         
 
 
