@@ -322,7 +322,8 @@ hold b <= a
 from condn 
  you must not able to to divide bi evenly by cj
  in other w-> ords cj is not divisor bi
- // v.back() -> return last elemnt of 
+ // v.back() -> return last elemnt of vector
+ 
 
 
 
