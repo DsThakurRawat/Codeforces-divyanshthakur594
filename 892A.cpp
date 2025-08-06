@@ -329,6 +329,7 @@ from condn
             cout << -1 << "\n";
             continue;
         }// compare all elemnt of vector if same return then -1;
+        hecks if all elements of the array a are equal to the first element a[0].
 
 
 
