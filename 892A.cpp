@@ -319,6 +319,9 @@ if numbesr are same then answer is always -1 ;
 if a is divisble by b and they are both natural numbers then the following inequality
 hold b <= a
 
+from condn 
+
+
 
 
 
