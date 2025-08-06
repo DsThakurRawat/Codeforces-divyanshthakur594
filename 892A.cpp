@@ -363,7 +363,7 @@ void solve() {
 
             }
         }
-        cout << 
+        cout << b.size()
 
         
 
