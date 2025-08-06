@@ -325,6 +325,10 @@ from condn
  // v.back() -> return last elemnt of vector
  // v.pop_back() -> remove last elemnt of v
  // 
+        if (all_of(a.begin(), a.end(), [&](int x){ return x == a[0]; })) {
+            cout << -1 << "\n";
+            continue;
+        }
 
 
 
