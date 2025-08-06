@@ -328,7 +328,7 @@ from condn
         if (all_of(a.begin(), a.end(), [&](int x){ return x == a[0]; })) {
             cout << -1 << "\n";
             continue;
-        }
+        }// compare all elemnt of 
 
 
 
