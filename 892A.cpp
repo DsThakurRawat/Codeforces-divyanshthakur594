@@ -322,7 +322,7 @@ hold b <= a
 from condn 
  you must not able to to divide bi evenly by cj
  in other words cj is not divisor bi
- 
+ // v.back()
 
 
 
