@@ -354,7 +354,8 @@ void solve() {
            return;
         }
 
-        int min_val = *min_element(a.begin(),a.end())
+        int min_val = *min_element(a.begin(),a.end());
+        
 
         
 
