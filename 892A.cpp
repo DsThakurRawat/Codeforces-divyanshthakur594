@@ -358,7 +358,8 @@ void solve() {
         vector<int>b,c;
         for(int x : a){
             if(x == min_val){
-                if(x == min_val) b.push_back()
+                if(x == min_val) b.push_back(x);
+                
             }
         }
 
