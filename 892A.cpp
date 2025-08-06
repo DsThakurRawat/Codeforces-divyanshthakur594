@@ -320,7 +320,7 @@ if a is divisble by b and they are both natural numbers then the following inequ
 hold b <= a
 
 from condn 
- you must not able to 
+ you must not able to to divide bi 
 
 
 
