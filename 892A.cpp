@@ -356,7 +356,9 @@ void solve() {
 
         int min_val = *min_element(a.begin(),a.end());
         vector<int>b,c;
-        for(int x : a)
+        for(int x : a){
+            if(x == min_val)
+        }
 
         
 
