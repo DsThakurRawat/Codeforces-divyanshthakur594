@@ -351,7 +351,7 @@ void solve() {
 
     if (all_of(a.begin(), a.end(), [&](int x){ return x == a[0]; })) {
             cout << -1 << "\n";
-            continue;
+           
         }
 
 
