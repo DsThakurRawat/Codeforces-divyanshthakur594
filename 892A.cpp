@@ -358,7 +358,7 @@ void solve() {
         vector<int>b,c;
         for(int x : a){
             if(x == min_val){
-                if(x == min)
+                if(x == min_val)
             }
         }
 
