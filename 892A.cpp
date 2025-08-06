@@ -320,7 +320,8 @@ if a is divisble by b and they are both natural numbers then the following inequ
 hold b <= a
 
 from condn 
- you must not able to to divide bi evenly by cj'
+ you must not able to to divide bi evenly by cj
+ in other words cj is not divisor 
 
 
 
