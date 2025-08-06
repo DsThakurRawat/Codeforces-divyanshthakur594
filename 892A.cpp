@@ -369,7 +369,7 @@ void solve() {
         cout << endl;
         for(int x : c) cout << x << " ";
         cout << endl;
-        
+         return 0;
 
 
        
@@ -394,5 +394,5 @@ signed main() {
     int t;
     cin >> t;
     while (t--) solve();
-    return 0;
+   
 }
