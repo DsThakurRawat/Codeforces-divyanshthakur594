@@ -355,6 +355,7 @@ void solve() {
         }
 
         int min_val = *min_element(a.begin(),a.end());
+        vector<int>b,c;
         
 
         
