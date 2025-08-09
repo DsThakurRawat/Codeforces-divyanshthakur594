@@ -370,7 +370,7 @@ void solve() {
     int min_v = v[1];
     int max_v = v[1];
 
-    int count = 0;
+    int count = 1;
 
     for(int i =2; i <= n; i++){
         max_v = max(max_v,v[i]);
