@@ -316,6 +316,11 @@ C++ Operator Keyword Equivalents (Normal Format):
 /*
  n piles of food align in straight line in front of him
  ith piles contain ai unit of foood
+ he can only foood if 
+ |v-ai| <= x -> v is lukes food affintiy
+ 
+
+
  
 
 
