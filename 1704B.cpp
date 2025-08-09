@@ -367,12 +367,12 @@ void solve() {
     vector<int>v(n);
     for_loop cin >> v[i];
     //  it is guaranteed that the sum of n over all test case does not excedd n
-    int min_v = v[1];
-    int max_v = v[1];
+    int min_v = v[0];
+    int max_v = v[0];
 
-    int count = 1;
+    int count = 0;
 
-    for(int i =2; i <= n; i++){
+    for(int i =1; i < n; i++){
         max_v = max(max_v,v[i]);
         min_v = min(min_v,v[i]);
         if( max_v - min_v > 2*x){
