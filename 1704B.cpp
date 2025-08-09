@@ -318,7 +318,15 @@ C++ Operator Keyword Equivalents (Normal Format):
  ith piles contain ai unit of foood
  he can only foood if 
  |v-ai| <= x -> v is lukes food affintiy
+ analysing time complextiy 
+ n = 2 * 10^5
+ a compiler allow 10^7 ops in one sec
+ O(n^2) -> not posssible
+ O(nsqrt(n)) -> not possible
  
+
+
+
 
 
 
@@ -335,8 +343,11 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    int n;
-    cin >> n;
+    int n,x;
+    cin >> n >> x;
+    vector<int>v(n);
+    for_loop cin >> v[i];
+    //  it is guaranteed that the sum of n over all test case does not excedd n
 
 
    
