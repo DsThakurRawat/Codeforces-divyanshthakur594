@@ -318,11 +318,30 @@ C++ Operator Keyword Equivalents (Normal Format):
  ith piles contain ai unit of foood
  he can only foood if 
  |v-ai| <= x -> v is lukes food affintiy
- analysing time complextiy 
+---- analysing time complextiy ----
  n = 2 * 10^5
  a compiler allow 10^7 ops in one sec
  O(n^2) -> not posssible
  O(nsqrt(n)) -> not possible
+ for O(nlogn) -> possible and below its is possible :(
+ | v- ai| <= x
+     
+
+                -x <=v - ai <= x 
+                -x + ai <= v <= x + ai; 
+                using greedy
+                set v to
+                 ai - x <= v <= ai + x
+                 lets l = ai - x;
+                 and r = ai + x
+                 more specifically
+                 l = a1 - x;
+                 r = a1 + x;
+
+
+
+
+
  
 
 
@@ -348,7 +367,22 @@ void solve() {
     vector<int>v(n);
     for_loop cin >> v[i];
     //  it is guaranteed that the sum of n over all test case does not excedd n
+    int min_v = v[1];
+    int max_v = v[1];
 
+    int count = 0;
+
+    for(int i = 2; i <= n; i++){
+        max_v = max(max_v,v[i]);
+        min_v = min(min_v,v[i]);
+        if( max_v - min_v > 2*x){
+            count++;
+            min_v = max_v = v[i];
+        }
+
+      
+    }
+    cout << count << endl;
 
    
 
