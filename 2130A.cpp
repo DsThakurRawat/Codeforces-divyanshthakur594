@@ -335,28 +335,40 @@ test case check
 */
 
 //<-------------------- Solve Function -------------------->
+
+int mex_once(mii &freq) {
+    int mex = 0;
+    while (freq[mex] > 0) {
+        freq[mex]--;
+        mex++;
+    }
+    return mex;
+}
+
+
+
+
+
+
+
+
 void solve() {
     int n; 
     cin >> n;
     vi s(n);
     for (int i = 0; i < n; i++) cin >> s[i];
 
-    mii countfreq;
-    for (int x : s) countfreq[x]++;
+    mii freq;
+    for (int x : s) freq[x]++;
 
-    int mex = 0;
-    while (countfreq[mex] > 0) {
-        countfreq[mex]--;
-        mex++;
+    int score = 0;
+    score += mex_once(freq);
+    score += mex_once(freq); 
+    for (auto &[num, cnt] : freq) {
+        score += num * cnt; 
     }
 
-    int sumscore = 0;
-    for (auto &[num, cnt] : countfreq) {
-        sumscore += num * cnt;
-    }
-
-    cout << mex + sumscore << "\n";
-
+    cout << score << "\n";
 
 
 
