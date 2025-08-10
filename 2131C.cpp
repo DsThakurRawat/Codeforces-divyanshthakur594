@@ -9,6 +9,7 @@
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
 using namespace __gnu_pbds;
+using ll = long long;
 
 // <-------------------- Typedefs and Macros -------------------->
 #pragma region typedefs_macros
@@ -329,26 +330,50 @@ void solve() {
     int n,k;
     cin >> n >> k;
     vector<long long > S(n),T(n);
-
+   bool flag = true;
 
 
     for_loop cin >> S[i];
 
     for_loop cin >> T[i];
 
-    sort(S.begin(), S.end());
 
-    sort(T.begin(), T.end());
-        
-        bool flag = true;
-        for (int i = 0; i < n; i++){
-            if (T[i] < S[i] || (T[i] - S[i]) % k != 0){
-               flag = false;
-                break;
+        if (k == 0) {
+          
+            cout << (multiset<ll>(S.begin(), S.end()) == multiset<ll>(T.begin(), T.end()) ? "YES\n" : "NO\n");
+           
+        }
+        else {
+         unordered_map<ll,ll> cs, ct;
+         for (ll x : S) cs[x % k]++;
+        for (ll x : T) ct[x % k]++;
+          unordered_set<ll> seen;
+            for (auto &p : cs) seen.insert(p.first);
+            for (auto &p : ct) seen.insert(p.first);
+
+         unordered_set<ll> done;
+            for (ll r : seen) {
+                if (done.count(r) == 0) {
+                    ll r2 = (k - r) % k;
+                    done.insert(r);
+                    done.insert(r2);
+                     ll sCount = cs[r] + cs[r2];
+                    ll tCount = ct[r] + ct[r2];
+
+                    if (r == 0 || r == r2) { // self-pairing remainders
+                        sCount = cs[r];
+                        tCount = ct[r];
+                    }
+
+                    if (sCount != tCount) {
+                        flag = false;
+                        break;
+                    }
+                }
             }
         }
-        if(flag) yes;
-        else no;
+
+   
 
 
 
