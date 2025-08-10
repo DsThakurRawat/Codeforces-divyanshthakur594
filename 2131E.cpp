@@ -344,7 +344,7 @@ void solve() {
                 curr_xor ^= a[i];
             }
         }
-    if(flag && a[n-1] == b[n-1]) yes;
+    if(flag && ((a[n-1]^curr_xor == b[n-1]))) yes;
     else no;
 
     
