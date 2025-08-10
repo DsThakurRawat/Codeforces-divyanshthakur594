@@ -334,8 +334,8 @@ void solve() {
     bool flag = true;
     long long curr_xor = 0;
     for (int i = n - 1; i >= 0; i--) {
-           long long actual = a[i] ^ curr_xor;
-            if (actual != b[i]) {
+           long long temp = a[i] ^ curr_xor;
+            if (temp != b[i]) {
                 if (i == 0) {
                     flag = false;
                     break;
