@@ -336,9 +336,7 @@ void solve() {
     for_loop cin >> S[i];
 
     for_loop cin >> T[i];
-
-
-        if (k == 0) {
+      if (k == 0) {
           
             cout << (multiset<ll>(S.begin(), S.end()) == multiset<ll>(T.begin(), T.end()) ? "YES\n" : "NO\n");
            
@@ -350,8 +348,7 @@ void solve() {
           unordered_set<ll> seen;
             for (auto &p : cs) seen.insert(p.first);
             for (auto &p : ct) seen.insert(p.first);
-
-         unordered_set<ll> done;
+          unordered_set<ll> done;
             for (ll r : seen) {
                 if (done.count(r) == 0) {
                     ll r2 = (k - r) % k;
