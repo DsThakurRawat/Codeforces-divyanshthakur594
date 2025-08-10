@@ -360,7 +360,7 @@ void solve() {
                      ll sCount = cs[r] + cs[r2];
                     ll tCount = ct[r] + ct[r2];
 
-                    if (r == 0 || r == r2) { // self-pairing remainders
+                    if (r == 0 || r == r2) { 
                         sCount = cs[r];
                         tCount = ct[r];
                     }
@@ -368,10 +368,10 @@ void solve() {
                     if (sCount != tCount) {
                         flag = false;
                         break;
-                    }
-                }
-            }
-        }
+                     }
+                 }
+             }
+         }
 
    
 
