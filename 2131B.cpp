@@ -330,7 +330,13 @@ void solve() {
     cin >> n;
     for (int i = 1; i <= n; ++i) {
         if (i % 2 == 1) cout << -1;
-        else cout << (n == 2 ? 2 : 3);
+        else {
+            if (n == 2) 
+              cout << 2; 
+            else 
+              cout << 3;
+        }
+        
         if (i < n) cout << ' ';
         }
      
