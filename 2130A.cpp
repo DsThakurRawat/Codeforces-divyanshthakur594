@@ -353,25 +353,10 @@ int mex_once(mii &freq) {
 
 
 void solve() {
-    int n; 
+    int n, tmp, ans = 0;
     cin >> n;
-    vi s(n);
-    for (int i = 0; i < n; i++) cin >> s[i];
-
-    mii freq;
-    for (int x : s) freq[x]++;
-
-    int score = 0;
-    score += mex_once(freq);
-    score += mex_once(freq); 
-    for (auto &[num, cnt] : freq) {
-        score += num * cnt; 
-    }
-
-    cout << score << "\n";
-
-
-
+    for(int i=0; i<n; i++){cin >> tmp; ans += tmp + (tmp == 0);}
+    cout << ans << '\n';
 
 
   
