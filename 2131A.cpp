@@ -344,9 +344,9 @@ void solve() {
         if (a[i] > b[i]) step += a[i] - b[i];
     }
 
-     if (step == 0) step = 1;
+  //   if (step == 0) step = 1;
     
-    cout << step << endl;
+    cout << step+1 << endl;
    
 
 
