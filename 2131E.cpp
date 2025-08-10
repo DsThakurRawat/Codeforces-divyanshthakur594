@@ -335,8 +335,9 @@ void solve() {
 
     for(int i = 0; i < n -1; i++){
         if (a[i] != b[i]){
-            a[i] ^=a[i+1];
-            if(a[i] != b[i]){ flag = false;
+            a[i] ^=a [i+1];
+            if(a[i] != b[i]){ 
+                flag = false;
                 break;
             }
         }
