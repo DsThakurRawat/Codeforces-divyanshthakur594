@@ -332,21 +332,22 @@ void solve() {
     for_loop cin >> a[i];
     for_loop cin >>  b[i];
     bool flag = true;
-
-    for(int i = 0; i < n -1; i++){
-        if (a[i] != b[i]){
-            a[i] ^=a [i+1];
-            if(a[i] != b[i]){ 
-                flag = false;
-                break;
+    long long curr_xor = 0;
+    for (int i = n - 1; i >= 0; i--) {
+           long long actual = a[i] ^ curr_xor;
+            if (actual != b[i]) {
+                if (i == 0) {
+                    flag = false;
+                    break;
+                }
+              
+                curr_xor ^= a[i];
             }
         }
-    }
     if(flag && a[n-1] == b[n-1]) yes;
     else no;
 
-
-
+    
 
    
 
