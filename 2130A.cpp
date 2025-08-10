@@ -336,23 +336,26 @@ test case check
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-   int n; 
-   cin >> n;
-   vi s(n);
-   for_loop{ cin >> s[i];
+    int n; 
+    cin >> n;
+    vi s(n);
+    for (int i = 0; i < n; i++) cin >> s[i];
 
-   }
-   mii countfreq;
+    mii countfreq;
+    for (int x : s) countfreq[x]++;
 
-   for( int x : s) countfreq[x]++;
+    int mex = 0;
+    while (countfreq[mex] > 0) {
+        countfreq[mex]--;
+        mex++;
+    }
 
-   int mex = 0;
+    int sumscore = 0;
+    for (auto &[num, cnt] : countfreq) {
+        sumscore += num * cnt;
+    }
 
-   while(countfreq[mex] > 0){
-    countfreq[mex]--;
-    mex++;
-   }
-   
+    cout << mex + sumscore << "\n";
 
 
 
