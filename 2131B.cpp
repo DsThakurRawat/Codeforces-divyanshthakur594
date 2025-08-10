@@ -334,7 +334,7 @@ void solve() {
                 if (n == 2) cout << 2;
                 else cout << 3;
             }
-            if (i < n) cout << ' ';
+            if (i < n) cout << '';
         }
         cout << endl;
 
