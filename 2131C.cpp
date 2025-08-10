@@ -376,7 +376,8 @@ void solve() {
    
 
 
-
+      if(flag) yes;
+      else no;
 
 
 
