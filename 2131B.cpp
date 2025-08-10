@@ -336,11 +336,9 @@ void solve() {
             else 
               cout << 3;
         }
-        
         if (i < n) cout << ' ';
-        }
-     
-        cout << endl;
+    }
+    cout << endl;
 
     
 
