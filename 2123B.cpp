@@ -21,6 +21,7 @@ using namespace __gnu_pbds;
 #define ss second
 #define pii pair<int, int>
 #define vi vector<int>
+#define vll vector<long long>
 #define vii vector<pii>
 #define vvi vector<vector<int>>
 #define mii map<int, int>
@@ -329,6 +330,23 @@ void solve() {
     int n,j,k;
 
     cin >> n >> j >> k;
+    vll a(n);
+    for_loop cin >> a[i];
+    int flag = 0;
+
+
+    if( k > 1) flag = 1;
+    else if (  k ==1){
+       for_loop{
+        if(a[i] >  a[j])
+        flag = 0;
+       }
+    }
+    
+    if(flag == 1) yes;
+    else no;
+
+
     
 
 
