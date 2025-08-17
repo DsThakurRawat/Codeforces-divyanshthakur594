@@ -326,7 +326,7 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-    int n;
+    int n,
     cin >> n;
 
 
