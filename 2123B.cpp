@@ -332,19 +332,15 @@ void solve() {
     cin >> n >> j >> k;
     vll a(n);
     for_loop cin >> a[i];
-    int flag = 0;
-
-
-    if( k > 1) flag = 1;
-    else if (  k ==1){
-       for_loop{
-        if(a[i+1] >  a[j])
-        flag = 0;
-       }
-    }
     
-    if(flag == 1) yes;
-    else no;
+   
+    cout << ( k > 1 || a[j] == *max_element(a.begin(),a.end()) ? "YES" : "NO" ) << endl;
+
+
+
+   
+    
+   
 
 
     
