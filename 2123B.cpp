@@ -338,7 +338,7 @@ void solve() {
     if( k > 1) flag = 1;
     else if (  k ==1){
        for_loop{
-        if(a[i] >  a[j])
+        if(a[i] >  a[j-1])
         flag = 0;
        }
     }
