@@ -334,7 +334,7 @@ void solve() {
     for_loop cin >> a[i];
     
    
-    cout << ( k > 1 || a[j] == *max_element(a.begin(),a.end()) ? "YES" : "NO" ) << endl;
+    cout << ( k > 1 || a[j-1] == *max_element(a.begin(),a.end()) ? "YES" : "NO" ) << endl;
 
 
 
