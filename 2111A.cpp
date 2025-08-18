@@ -348,7 +348,7 @@ void solve() {
 
         }
         else if( b <= a && a <= c) {
-            b = min(a,b) * 2 + 1;
+            b = min(a,c) * 2 + 1;
 
         }
         else {
