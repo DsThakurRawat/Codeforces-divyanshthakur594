@@ -340,7 +340,7 @@ void solve() {
 
     }
     else {
-        cout << ((d  / 2))*min(x,y) + (d/2)*x;
+        cout << ((d  / 2))*min(x,y) + ((d+1)/2)*x;
 
     }
    }
