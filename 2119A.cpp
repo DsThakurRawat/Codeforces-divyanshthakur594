@@ -336,11 +336,11 @@ void solve() {
    else{ // in this situation bitwise operation can only be used when if a is even 
     long long d = b - a;
     if( a % 2 == 0){
-        cout << ((d + 1)/2)*min(x,y) + (d/2)*x;
+        cout << ((d + 1)/2)*min(x,y) + (d/2)*x << endl;
 
     }
     else {
-        cout << ((d  / 2))*min(x,y) + ((d+1)/2)*x;
+        cout << ((d  / 2))*min(x,y) + ((d+1)/2)*x  << endl;;
 
     }
    }
