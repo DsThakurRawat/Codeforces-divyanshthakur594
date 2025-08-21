@@ -326,24 +326,23 @@ C++ Operator Keyword Equivalents (Normal Format):
 
 //<-------------------- Solve Function -------------------->
 void solve() {
-   int a , b , x, y;
-   cin >> a >> b >> x >> y;
+    int a, b;
+        long long x, y;
+        cin >> a >> b >> x >> y;
 
-   if( a > b){
-    if( a ^ 1 == b) cout << y << endl;
-    else cout << -1 << endl;
-   }
-   else{ // in this situation bitwise operation can only be used when if a is even 
-    long long d = b - a;
-    if( a % 2 == 0){
-        cout << ((d + 1)/2)*min(x,y) + (d/2)*x << endl;
-
-    }
-    else {
-        cout << ((d  / 2))*min(x,y) + ((d+1)/2)*x  << endl;;
-
-    }
-   }
+        if (a > b) {
+            if ((a ^ 1) == b) cout << y << "\n";
+            else cout << -1 << "\n";
+        } else {
+            int d = b - a;
+            long long ans;
+            if (a % 2 == 0) {
+                ans = ((d + 1) / 2) * min(x, y) + (d / 2) * x;
+            } else {
+                ans = (d / 2) * min(x, y) + ((d + 1) / 2) * x;
+            }
+            cout << ans << "\n";
+        }
 
 
    
