@@ -9,15 +9,13 @@ void solve() {
     int n; 
     cin >> n;
     vector<int>p(n);
-    for(int i = 0; i < n; i++) cin >> p[i];
-    int x = 100;
-    double per;
+    double sum = 0;
     for(int i = 0; i < n; i++){
-        int per = p[i] / x ;
+     cin >> p[i];
+     sum += p[i];
     }
-    double res = (((per*100))/n);
-    cout << res << endl;
-
+    cout << sum / n << endl;
+   
 
   
 }
