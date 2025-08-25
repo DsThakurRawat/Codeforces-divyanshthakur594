@@ -15,7 +15,7 @@ void solve() {
     for(int i = 0; i < n; i++){
         int per = p[i] / x ;
     }
-    float res = (((per)*(100))/n);
+    float res = (((per*100))/n);
     cout << res << endl;
 
 
