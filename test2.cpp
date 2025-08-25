@@ -1,6 +1,6 @@
 
 // simple template
-// code by divyansh thakur
+// code by divyansh rawat
 
 #include <bits/stdc++.h>
 using namespace std;
