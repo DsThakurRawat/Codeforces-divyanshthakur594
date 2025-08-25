@@ -1,5 +1,7 @@
 
-// simple 
+// simple template
+// code by divyansh thakur
+
 #include <bits/stdc++.h>
 using namespace std;
 
