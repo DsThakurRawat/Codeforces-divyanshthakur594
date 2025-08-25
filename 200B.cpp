@@ -11,11 +11,11 @@ void solve() {
     vector<int>p(n);
     for(int i = 0; i < n; i++) cin >> p[i];
     int x = 100;
-    float per;
+    double per;
     for(int i = 0; i < n; i++){
         int per = p[i] / x ;
     }
-    float res = (((per*100))/n);
+    double res = (((per*100))/n);
     cout << res << endl;
 
 
