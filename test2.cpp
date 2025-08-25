@@ -1,5 +1,5 @@
 
-// simple template
+// simple template-test2
 // code by divyansh rawat
 
 #include <bits/stdc++.h>
