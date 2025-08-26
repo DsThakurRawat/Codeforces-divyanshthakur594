@@ -9,9 +9,9 @@ void solve() {
    // you can either start from 1 or from 2 both combinatio works 
    // 
     int n; cin >> n;
-    for(int i = 1; i <= n; i++) cout << i << ' ';
+    for(int i = 2; i <= n; i++) cout << i << ' ';
 
-    cout << 2 << endl;
+    cout << 1 << endl;
   
 }
 
