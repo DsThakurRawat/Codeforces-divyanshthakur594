@@ -23,7 +23,9 @@ void solve() {
 
         }
     }
-    string ans = v+a+d
+    string ans = v+a+d;
+
+    cout << ans << endl;
 
   
 }
