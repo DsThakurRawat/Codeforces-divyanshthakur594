@@ -23,6 +23,7 @@ void solve() {
 
         }
     }
+    reverse(v.begin(),v.end());
     string ans = v+a+d;
 
     cout << ans << endl;
