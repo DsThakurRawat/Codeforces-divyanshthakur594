@@ -349,8 +349,9 @@ void solve() {
 //<-------------------- Main Driver -------------------->
 signed main() {
     fastIO();
-    int t;
-    cin >> t;
-    while (t--) solve();
+   // int t;
+   // cin >> t;
+    //while (t--) 
+    solve();
     return 0;
 }
