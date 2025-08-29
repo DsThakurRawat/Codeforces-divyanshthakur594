@@ -1,6 +1,6 @@
 /**************************************************
 * Author    : Divyansh Thakur Rawat
-* Template  :  Template-3-ultimate 
+* Template  :  Template-3
 **************************************************/
 // will work seamlessly on any os and system
 
