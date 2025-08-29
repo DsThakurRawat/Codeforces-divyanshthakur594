@@ -337,7 +337,7 @@ void solve() {
    else if( x== 7) cout << "YOU" << endl;
    else if (x == 8) cout << "READ" << endl;
    else if( x == 9) cout << "POORLY" << endl;
-   else if (x == 10) cout << "APRIL" << endl;
+   else if (x == 10) cout << "GET" << endl;
    else if( x == 11) cout << "FOOLED" << endl;
 
 
