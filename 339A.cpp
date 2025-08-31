@@ -16,6 +16,21 @@ void solve() {
      v.push_back(num);
   }
 
+  sort(v.begin(),v.end());
+  string s(v.begin(), v.end());
+   string result = "";
+
+    for (int i = 0; i < s.size(); i++) {
+        result += s[i];            
+        if (i != s.size() - 1);
+            result += "+";      
+    }
+
+    cout << result << endl; 
+
+
+
+
 }
 }
 
