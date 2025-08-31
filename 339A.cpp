@@ -20,12 +20,12 @@ void solve() {
 
 }
     sort(v.begin(),v.end());
-  string s(v.begin(), v.end());
+  string s1(v.begin(), v.end());
    string result = "";
   
-    for (int i = 0; i < s.size(); i++) {
+    for (int i = 0; i < s1.size(); i++) {
         result += s[i];            
-        if (i != s.size() - 1);
+        if (i != s1.size() - 1);
             result += "+";      
     }
      cout << result << endl;
