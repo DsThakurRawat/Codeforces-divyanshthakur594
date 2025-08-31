@@ -6,10 +6,24 @@
 using namespace std;
 
 void solve() {
+    int n; cin >> n;
 
     vector<int>v(5);
     v = {1,5,10,20,100};
-    cout << v[1] << endl;
+  //  cout << v[1] << endl;
+
+  for(int i = 0; i < n; i++){
+
+     n = n - v[i];
+     if( n <= v[i])i = i;
+     if( n == 0) break;
+    
+  }
+  
+   
+
+
+
 
   
 }
