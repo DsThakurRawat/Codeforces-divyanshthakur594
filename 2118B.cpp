@@ -12,7 +12,7 @@ int main(){
          cout << i << " " << 1 << " " << i << endl;
          cout << i << " " << i + 1 << n << endl;
       }
-      cout << n << "1" << n << endl;
+      cout << n << " 1 " << n << endl;
     
 
 
