@@ -11,20 +11,42 @@ void solve() {
     for(int i = 0; i < n; i++) cin >> v[i];
 
     // we gonna make parity of element same 
-    int a = gcd(gcd(v[0],v[1]),v[2]);
-    
-    
+    // let gcd be g = K + 1;
+    int g = k + 1;
+    vector<int>ans(n);
 
-    while( a <= 1){
-     
+    for(int i = 0; i < v.size(); i++){
+        if( v[i] % g == 0) ans.push_back(v[i]);
+        else if( v[i] % g != 0){
+            if( v[i] < g){
 
-        v[0] = v[0] + k;
-        v[1] = v[1] + k;
-        v[2] = v[2] + k;
+               
+                ans.push_back(g);
 
-        a = gcd(gcd(v[0],v[1]),v[2]);
+
+            }
+            else if( v[i] > g){
+                int r = v[i] % g;
+                v[i] = v[i] + g;
+                ans.push_back(v[i]);
+            }
+
+
+
+
+        }
     }
 
+    for(int i = 0; i < n; i++){
+        cout << ans[i] << " ";
+    }
+
+    
+
+
+
+
+    
 
   
 }
