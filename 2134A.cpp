@@ -6,23 +6,13 @@ using namespace std;
 
 void solve() {
   int n , a , b; cin >> n >> a >> b;
-  int count = 0;
-  vector<int>v(3);
-  v.push_back(a);
-  v.push_back(b);
-  v.push_back(n);
-  for(int i = 0; i < 3; i++){
-    if(v[i] % 2 != 0) count++;
-  }
-
-  if(count == 2) cout << "NO" << endl;
-  else cout << "YES" << endl;
+   if(a <= b) {
+      cout << ((n % 2) == (b % 2) ? "YES\n" : "NO\n");
+    } else {
+      cout << ((n % 2) == (b % 2) && (n % 2) == (a % 2) ? "YES\n" : "NO\n");
+      
   
-
-
-
-  
-  
+    }  
   
 
 }
