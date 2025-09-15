@@ -16,27 +16,14 @@ void solve() {
     int g = k + 1;
     vector<int>ans;
 
-    for(int i = 0; i < v.size(); i++){
-        if( v[i] % g == 0) ans.push_back(v[i]);
-        else if( v[i] % g != 0){
-            if( v[i] < g){
 
-               
-                ans.push_back(g);
-
-
-            }
-            else if( v[i] > g){
-                int r = v[i] % g;
-                v[i] = v[i] + r;
-                ans.push_back(v[i]);
-            }
-
-
-
-
-        }
+    for (int i = 0; i < n; i++) {
+        long long r = v[i] % g;
+        ans.push_back(v[i] + k * r);  
     }
+
+
+
 
     for(int i = 0; i < n; i++){
         cout << ans[i] << " ";
