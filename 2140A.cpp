@@ -17,7 +17,7 @@ void solve() {
     int count = 0;
 
     sort(s1.begin(),s1.end());
-    for(int i = 0; i < n; i++) if(s1[i] != s1[i]) count++;
+    for(int i = 0; i < n; i++) if(s1[i] != s[i]) count++;
 
     cout << count / 2 << endl;
 
