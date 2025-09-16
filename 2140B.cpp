@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-    int t ; cin >> t;
+   
     int x ; cin >> x;
     /*
             Let's assume that the number y
