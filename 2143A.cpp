@@ -14,7 +14,10 @@ void solve() {
     sort(v.rbegin(),v.rend());
     for(int i = 0; i < n; i++)
     {
-        if(v[i] > i+1) cout << "NO" << endl; return;
+        if(v[i] > i+1){
+         cout << "NO" << endl; 
+         return;
+        }
     }
     cout << "YES" << endl;
 
