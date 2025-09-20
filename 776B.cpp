@@ -1,8 +1,13 @@
+
+// simple template-test2
+// code by divyansh rawat
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n; 
+void solve() {
+    //i-th jwellary price equals to i+1
+    // Step 1: Sieve up to n+1
+   int n; 
     cin >> n;
     vector<int> prime(n + 2, 1);
     prime[0] = prime[1] = 0;
@@ -18,10 +23,30 @@ int main() {
         else           colors[i - 2] = (n == 1 ? 1 : 2);
     }
     int k = (n == 1 ? 1 : 2);
-    cout << k << "\n";
+    cout << k << endl;;
     for (int i = 0; i < n; i++) 
         cout << colors[i] << " ";
-    cout << "\n";
+    cout << endl;;
+    
 
+
+    
+  
+
+
+
+
+
+
+
+  
+}
+
+int main() {
+    //int t ;
+    //cin >> t;
+   // while (t--) {
+        solve();
+  //  }
     return 0;
 }
