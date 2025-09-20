@@ -6,17 +6,15 @@ using namespace std;
 
 void solve() {
     //i-th jwellary price equals to i+1
-    // Step 1: Sieve up to n+1
+    // Step 1: Sieve up to n+2
    int n; 
     cin >> n;
 
     if( n == 2){
         cout << 1 << endl;
-        cout << 1 << 1 << endl;
+        cout << 1 << " "  << 1  << endl;;
 
-
-
-
+    
 
     }
     vector<int> prime(n + 2, 1);
