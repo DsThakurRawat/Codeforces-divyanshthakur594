@@ -1,15 +1,11 @@
-
-// simple template-test2
-// code by divyansh rawat
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve() {
-    //i-th jwellary price equals to i+1
-    // Step 1: Sieve up to n+1
-    int n; cin >> n;
+int main() {
+    int n; 
+    cin >> n;
 
-
+    // sieve up to n+1
     vector<int> prime(n + 2, 1);
     prime[0] = prime[1] = 0;
     for (int i = 2; i * i <= n + 1; i++) {
@@ -19,46 +15,19 @@ void solve() {
         }
     }
 
-    // Step 2: Assign colors
+    // colors
     vector<int> colors(n);
-    int color_id = 1;
+
     for (int i = 2; i <= n + 1; i++) {
-        if (prime[i]) { // i is prime
-            for (int j = i; j <= n + 1; j += i) {
-                if (colors[j - 2] == 0)
-                    colors[j - 2] = color_id;
-            }
-            color_id++;
-        }
+        if (prime[i]) colors[i - 2] = 1;   // primes → color 1
+        else           colors[i - 2] = (n == 1 ? 1 : 2); // composites → color 2
     }
 
-    // Step 3: Output result
-    cout << color_id - 1 << "\n";
+    int k = (n == 1 ? 1 : 2);
+    cout << k << "\n";
     for (int i = 0; i < n; i++) 
         cout << colors[i] << " ";
     cout << "\n";
 
-    
-    
-
-
-    
-  
-
-
-
-
-
-
-
-  
-}
-
-int main() {
-    //int t ;
-    //cin >> t;
-   // while (t--) {
-        solve();
-  //  }
     return 0;
 }
