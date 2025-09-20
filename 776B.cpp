@@ -12,7 +12,8 @@ void solve() {
 
     if( n == 2){
         cout << 1 << endl;
-        cout << 1 << " "  << 1  << endl;;
+        cout << 1 << " "  << 1  << endl;
+        exit(1);
 
     
 
