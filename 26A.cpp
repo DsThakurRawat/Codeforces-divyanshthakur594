@@ -17,15 +17,23 @@ void solve() {
             }
         }
     }
-    int cnt = 0;
-    //A number is called almost prime if it has exactly two distinct prime divisors.
+    
+    //A number is called almost prime if it has exactly two distinct prime divisors. and we have to find almost prime number
+    vector<int>primefactorcount(n+1,0);
     for(int i = 2; i <= n; i++){
-        if( n % i == 0 && prime[i] == 1)cnt++;
+        if(prime[i] == 1){
+            for(int j = i; j <= n; j+=i){
+                primefactorcount[j]++;
+
+        }
+        }
     }
 
-    cout << cnt << endl;
-
-    
+    int almostprimes = 0;
+    for(int i = 2; i <= n; i++){
+        if(primefactorcount[i] == 2)almostprimes++;
+    }
+    cout << almostprimes << endl;
 
 
 
