@@ -9,6 +9,16 @@ void solve() {
     // Step 1: Sieve up to n+1
    int n; 
     cin >> n;
+
+    if( n == 2){
+        cout << 1 << endl;
+        cout << 1 << 1 << endl;
+
+
+
+
+
+    }
     vector<int> prime(n + 2, 1);
     prime[0] = prime[1] = 0;
     for (int i = 2; i * i <= n + 1; i++) {
