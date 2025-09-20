@@ -17,8 +17,13 @@ void solve() {
             }
         }
     }
+    int cnt = 0;
     //A number is called almost prime if it has exactly two distinct prime divisors.
-    
+    for(int i = 1; i <= n; i++){
+        if( n % i == 0 && prime[i] == 1)cnt++;
+    }
+
+    cout << cnt << endl;
 
     
 
