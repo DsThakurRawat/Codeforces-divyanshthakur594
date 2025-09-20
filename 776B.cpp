@@ -6,38 +6,39 @@ using namespace std;
 
 void solve() {
     //i-th jwellary price equals to i+1
-
+    // Step 1: Sieve up to n+1
     int n; cin >> n;
 
-    vector<int>prime(n+1,1);
-    for(long long i = 2; i <= n; i++){
-        if(prime[i] == 1 && i*i <= n){
-            for(int j = i*i; j <= n; j+=i){
-            prime[j] = 0;
-            }
+
+    vector<int> prime(n + 2, 1);
+    prime[0] = prime[1] = 0;
+    for (int i = 2; i * i <= n + 1; i++) {
+        if (prime[i]) {
+            for (int j = i * i; j <= n + 1; j += i)
+                prime[j] = 0;
         }
     }
-    map<int,int>primecolor;
-    int color_id = 1;
-    
-    for(int i = 2; i <= n + 1; i++){
-        if(prime[i] == 1) primecolor[i] = color_id++;
-    }
 
+    // Step 2: Assign colors
     vector<int> colors(n);
-    for(int i = 0; i < n; i++) {
-        for(auto &[p, c] : primecolor) {
-            if((i+2) % p == 0) {
-                colors[i] = c;
-                break;
+    int color_id = 1;
+    for (int i = 2; i <= n + 1; i++) {
+        if (prime[i]) { // i is prime
+            for (int j = i; j <= n + 1; j += i) {
+                if (colors[j - 2] == 0)
+                    colors[j - 2] = color_id;
             }
+            color_id++;
         }
     }
 
-    cout << color_id - 1 << endl;
-    for(int i = 0; i < n; i++) cout << colors[i] << " ";
-    cout << endl;
+    // Step 3: Output result
+    cout << color_id - 1 << "\n";
+    for (int i = 0; i < n; i++) 
+        cout << colors[i] << " ";
+    cout << "\n";
 
+    
     
 
 
