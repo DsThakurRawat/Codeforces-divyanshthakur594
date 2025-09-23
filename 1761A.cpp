@@ -6,7 +6,7 @@ int main(){
    int t;
    cin >> t;
    while(t--){ 
-      int a ,
+      int a , b, c,
       
     
    }
