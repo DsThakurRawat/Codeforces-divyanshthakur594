@@ -11,16 +11,9 @@ void solve() {
     for(int i = 0; i < n; i++) cin >> v[i];
     // ham bas maximum ek minus kar sakte hai
 
-    sort(v.rbegin(),v.rend());
-    for(int i = 0; i < n; i++)
-    {
-        if(v[i] > i+1){
-         cout << "NO" << endl; 
-         return;
-        }
-    }
-    cout << "YES" << endl;
 
+
+   
 
 
 
