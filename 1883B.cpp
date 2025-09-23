@@ -8,7 +8,7 @@ void solve() {
     int n , k; cin >> n >> k;
     string s; cin >> s;
 
-    vector<int>frequency_count;
+    vector<int>frequency_count(26,0);
 
     for(int i = 0; i < n; i++)
         frequency_count[s[i] - 'a']++;
