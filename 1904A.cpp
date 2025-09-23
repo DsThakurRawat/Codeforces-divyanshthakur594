@@ -22,11 +22,11 @@ void solve() {
         queen_attack_sources.insert({Xq + move.first, Yq + move.second});
     }
 
-    // Step 3: Count how many positions are common to both sets.
+    
     int fork_count = 0;
-    // We can iterate through one set and check for existence in the other.
+    
     for (const auto& pos : king_attack_sources) {
-        // .count() is a fast way to check if an element exists in a set.
+      
         if (queen_attack_sources.count(pos)) {
             fork_count++;
         }
