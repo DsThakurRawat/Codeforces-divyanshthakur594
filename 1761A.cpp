@@ -8,7 +8,7 @@ int main(){
    while(t--){ 
       int a , b, c; cin >> a >> b >> c;
       if(a + b + 2 <= n || (a == b && a == n )) cout << "YES" << endl;
-      else cout << "NO"
+      else cout << "NO" << endl;
 
       
       
