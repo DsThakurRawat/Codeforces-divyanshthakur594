@@ -16,7 +16,7 @@ void solve() {
     for(int i = 0; i < m; i++)cin >> v[i];
     
      int el = (n*(n+1))/2;
-     vector<int>b(el);
+     vector<int>b;
 
 
     for (int i = 1; i <= n; i++) {      
