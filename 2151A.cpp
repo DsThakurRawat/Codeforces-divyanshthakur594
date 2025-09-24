@@ -10,16 +10,30 @@ void solve() {
 
     int n , m;
     cin >> n >> m;
-    int el = (n*(n+1))/2;
+   
 
     vector<int>v(m);
     for(int i = 0; i < m; i++)cin >> v[i];
-    vector<int>b(el);
-     for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= i; j++) {
-            cin >> b[j];
+    
+     int el = (n*(n+1))/2;
+     vector<int>b(el);
+
+
+    for (int i = 1; i <= n; i++) {      
+        for (int j = 1; j <= i; j++) {  
+            b.push_back(j);            
         }
     }
+    
+    
+
+
+
+
+
+
+
+
     if (b.size() < v.size()) {
         cout << 0 << endl;
         return;
