@@ -17,6 +17,7 @@ void solve() {
     
      int el = (n*(n+1))/2;
      vector<int>b;
+      b.reserve(el);
 
 
     for (int i = 1; i <= n; i++) {      
