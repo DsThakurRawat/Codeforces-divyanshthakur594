@@ -19,6 +19,10 @@ void solve() {
             b.push_back(j);
         }
     }
+    if (b.size() < v.size()) {
+        cout << 0 << endl;
+        return;
+    }
     
     for(int i = 0; i <= b.size() - v.size(); i++) {
         bool match = true;
