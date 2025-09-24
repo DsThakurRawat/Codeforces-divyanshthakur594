@@ -20,7 +20,7 @@ void solve() {
         }
     }
     
-    for(int i = 0; i <= n - m; i++) {
+    for(int i = 0; i <= b.size() - v.size(); i++) {
         bool match = true;
         for(int j = 0; j < m; j++) {
             if(b[i + j] != v[j]) {
