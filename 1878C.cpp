@@ -9,9 +9,9 @@ void solve() {
 
 //f he can choose k distinct integers between 1and n such that their sum is equal to x.
 
-int n,k,x;
+long long  n,k,x;
 cin >> n >> k >> x;
-int sum = x;
+long long  sum = x;
 int total_eletochoose = k;
 // for nums first;
 // the simple appraoch for this problem is find min solution and maximumum solution 
