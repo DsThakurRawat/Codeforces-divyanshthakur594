@@ -10,13 +10,14 @@ void solve() {
 
     int n , m;
     cin >> n >> m;
+    int el = (n*(n+1))/2;
 
     vector<int>v(m);
     for(int i = 0; i < m; i++)cin >> v[i];
-    vector<int>b;
+    vector<int>b(el);
      for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= i; j++) {
-            b.push_back(j);
+            cin >> b[j];
         }
     }
     if (b.size() < v.size()) {
