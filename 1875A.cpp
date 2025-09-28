@@ -27,7 +27,7 @@ void solve() {
     // b intitial value of bombs timer
     // n number of tools
     // for each test case output maxi
-    int sum = ;
+    int sum = 0;
     for(int i = 0; i <= n; i++){
         sum = sum + min(a-1,v[i]) + b;
     }
