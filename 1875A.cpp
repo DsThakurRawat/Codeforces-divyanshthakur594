@@ -20,7 +20,7 @@ void solve() {
 
     int a , b , n;
     cin >> a >> b >> n;
-    vector<int>v(n+1);
+    vector<int>v(n);
 
     for(int i = 0; i < n; i++) cin >> v[i];
     // a the maximum value of bombs timer
