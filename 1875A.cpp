@@ -18,17 +18,17 @@ void solve() {
 
     */
 
-    int a , b , n;
+    long long  a , b , n;
     cin >> a >> b >> n;
     vector<int>v(n);
 
-    for(int i = 0; i < n; i++) cin >> v[i];
+    for(long long  i = 0; i < n; i++) cin >> v[i];
     // a the maximum value of bombs timer
     // b intitial value of bombs timer
     // n number of tools
     // for each test case output maxi
-    int sum = b;
-    for(int i = 0; i < n; i++){
+    long long sum = b;
+    for(long long i = 0; i < n; i++){
         sum = sum + min(a-1,v[i]);
     }
     cout << sum << endl;
