@@ -27,6 +27,11 @@ void solve() {
     // b intitial value of bombs timer
     // n number of tools
     // for each test case output maxi
+    int sum = 0;
+    for(int i = 1; i <= n; i++){
+        sum = sum + min(a-1,v[i]);
+    }
+    cout << sum << endl;
 
   
 }
