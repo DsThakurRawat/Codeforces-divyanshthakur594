@@ -45,8 +45,8 @@ void solve() {
         presum +=temp[i];
         int target = -total_sum + presum;
         if(freq.count(target)) ans = min(ans, i-freq[target]+1);
-
-        freq[presum] = i + 1;
+        if(!freq.count(presum))  freq[presum] = i + 1;
+         
     }
 
         
