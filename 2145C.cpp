@@ -43,7 +43,7 @@ void solve() {
 
     for(int i = 0; i < n; i++){
         presum +=temp[i];
-        int target = total_sum - presum;
+        int target = -total_sum + presum;
         if(freq.count(target)) ans = min(ans, i-freq[target]+1);
 
         freq[presum] = i + 1;
