@@ -6,16 +6,10 @@
 using namespace std;
 
 void solve() {
-    // minimum number of consecutive letters that monocarp needs to remove from his string
+   
     int n; cin >> n;
     string s; cin >> s;
-   // map<char,int>mpp;
-  //  for(int i = 0; i < s.size(); i++){
-   //     mpp[s[i]]++;
-   // }
-  //  if(mpp['a'] == mpp['b']) cout << 0 << endl;
-   // if(mpp['a'] == 0 || mpp['b'] == 0 ) cout << -1 << endl;
-    // we have to effectively find the shortest substring having equal number of a and b
+   
 
 
         vector<int>v(n);
@@ -23,7 +17,7 @@ void solve() {
             if(s[i] == 'a') v[i] = 1;
             else v[i] = -1;
         }
-        // calculationg using prefix sum
+      
 
         
         int total_sum = accumulate(v.begin(),v.end(),0);
