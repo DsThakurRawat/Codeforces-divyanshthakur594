@@ -20,8 +20,8 @@ void solve() {
 
         vector<int>v(n);
         for(int i = 0; i < n; i++){
-            if(s[i] == 'a') v[i] = -1;
-            else v[i] = 1;
+            if(s[i] == 'a') v[i] = 1;
+            else v[i] = -1;
         }
         // calculationg using prefix sum
 
