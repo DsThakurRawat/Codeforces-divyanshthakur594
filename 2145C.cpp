@@ -35,7 +35,10 @@ void solve() {
             prefixsum += v[r];
             int target = prefixsum - total_sum;
             if(pos.contains(target)) ans = min(ans,r-pos[target] + 1);
+            pos[prefixsum] = r + 1;
         }
+        if( ans == INT_MAX) cout << -1 << endl;
+        else cout << ans << endl;
 
 
 
