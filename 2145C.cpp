@@ -34,7 +34,7 @@ void solve() {
         for(int r = 0; r < n; r++){
             prefixsum += v[r];
             int target = prefixsum - total_sum;
-            if(pos.contains(target)) ans = min(ans,r-pos[target] + 1);
+            if(pos.count(target)) ans = min(ans,r-pos[target] + 1);
             pos[prefixsum] = r + 1;
         }
         if( ans == INT_MAX) cout << -1 << endl;
