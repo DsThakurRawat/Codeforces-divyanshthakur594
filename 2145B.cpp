@@ -14,7 +14,7 @@ void solve() {
 
     int top(0),bottom(0), uncretain(0);
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < k; i++){
         if(s[i] == '0') top++;
         else if(s[i] == '1') bottom++;
         else uncretain++;
