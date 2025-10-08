@@ -15,6 +15,7 @@ void solve() {
   for(int i = 0; i < n; i++){
     if(v[i] == -1)count2++;
     if(v[i] == 0) count1++;
+  }
 
     if( count2 % 2 == 0){
         ans = count1;
@@ -26,7 +27,7 @@ void solve() {
 
     cout << ans << endl;
 
-  }
+
 }
 
 int main() {
