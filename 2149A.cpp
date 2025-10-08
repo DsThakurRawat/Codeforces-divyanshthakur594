@@ -24,6 +24,8 @@ void solve() {
         ans = 2 + count1;
     }
 
+    cout << ans << endl;
+
   }
 }
 
