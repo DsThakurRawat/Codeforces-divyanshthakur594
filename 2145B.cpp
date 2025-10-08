@@ -25,7 +25,7 @@ void solve() {
     if(k == n){
         for(int i = 0; i < n; i++) ans[i] = '-';
         cout << ans << endl;
-        exit(0);
+        return;
     }
     for(int i = top; i < top+uncretain; i++) ans[i] = '?';
     for(int i = n - bottom - uncretain; i < n-bottom; i++) ans[i] = '?';
