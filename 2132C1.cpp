@@ -18,8 +18,9 @@ void solve() {
 
  long long int res1 = 3*direc;
  long long int res2 = direc/3;
+ long long res3 = x*res2;
 
- long long int complete = res1 + res2*x;
+ long long int complete = res1 + res3;
  
  cout << complete << endl;
 
