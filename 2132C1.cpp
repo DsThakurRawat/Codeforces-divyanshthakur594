@@ -13,7 +13,7 @@ void solve() {
   cin >> n;
 
   // making eqn
- long long int x = log(n)/log(3);
+  int x = log(n)/log(3);
  long long int direc = n;
 
  long long int res1 = 3*direc;
