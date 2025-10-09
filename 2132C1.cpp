@@ -2,7 +2,6 @@
 // simple template-test2
 // code by divyansh rawat
 
-
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -10,21 +9,17 @@ using namespace std;
 void solve() {
   // requires determining the minimum cost with the least number of deals
 
-   long long  n;
+  long long n;
   cin >> n;
-  long double x = log(n)/log(3);
 
   // making eqn
+ long long int x = log(n)/log(3);
+ long long direc = n;
 
-  long long x_int = (long long)x;
- 
-  
+ long long res1 = 3*direc;
+ long long res2 = direc/3;
 
-  long long   res1 = 3*n;
-
-  long long res3 = (long long)((x_int * (long double)n) / 3.0);
-
-  long long  complete = res1 + res3;
+ long long complete = res1 + res2*x;
  
  cout << complete << endl;
 
