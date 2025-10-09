@@ -9,7 +9,7 @@ using namespace std;
 void solve() {
   // requires determining the minimum cost with the least number of deals
 
-  int n;
+  long long  n;
   cin >> n;
 
   // making eqn
