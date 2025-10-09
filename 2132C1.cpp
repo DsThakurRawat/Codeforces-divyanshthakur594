@@ -17,8 +17,8 @@ void solve() {
   int x = log(n)/log(3);
   int direc = n;
 
-  int res1 = 3*direc;
-  int res2 = direc/3;
+  int  res1 = 3*direc;
+  long res2 = int(direc/3);
  int res3 = x*res2;
 
   int complete = res1 + res3;
