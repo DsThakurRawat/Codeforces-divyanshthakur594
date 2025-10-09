@@ -9,25 +9,22 @@ using namespace std;
 
 void solve() {
   // requires determining the minimum cost with the least number of deals
+        long long n;
+        cin >> n;
 
-   long long  n;
-  cin >> n;
-  long double x = log(n)/log(3);
+        long long x = 0;
+        long long val = 1;
+        while (val * 3 <= n) {
+            val *= 3;
+            x++;
+        }
+        long long res1 = 3 * n;
+        long long res3 = (x * n) / 3;  // integer arithmetic only
+        long long complete = res1 + res3;
+        cout << complete << endl;
 
-  // making eqn
 
-  long long x_int = (long long)x;
- 
   
-
-  long long   res1 = 3*n;
-
-  long long res3 = (long long)((x_int * (long double)n) / 3.0);
-
-  long long  complete = res1 + res3;
- 
- cout << complete << endl;
-
 
 }
 
