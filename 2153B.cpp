@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
   long long x, y, z;
     cin >> x >> y >> z;
-    bool flag  = 1;
+    long long  flag  = 1;
     bitset<30>res1(x),res2(y),res3(z);
     for(int i = 0; i < 30; i++) {
         long long   r1 = res1[i];       
