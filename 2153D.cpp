@@ -6,12 +6,13 @@ using namespace std;
 using ll = long long;
 const ll INF = 4e18;
 
+// Function to compute minimal cost to make a segment equal-valued
 ll median_cost(const vector<ll>& seg) {
     vector<ll> temp = seg;
     sort(temp.begin(), temp.end());
-    ll m = temp[temp.size() / 2];
+    ll m = temp[temp.size() / 2]; // median
     ll cost = 0;
-    for (ll x : temp) cost += abs(x - m);
+    for (ll x : temp) cost += llabs(x - m);
     return cost;
 }
 
@@ -25,15 +26,11 @@ void dp() {
     for (int i = 0; i < n; ++i) cin >> a[i];
 
     if (n == 1) {
-        cout << 0 << '\n';
+        cout << 0 << endl;
         return;
     }
 
-    vector<ll> ad(2 * n);
-    for (int i = 0; i < 2 * n; ++i)
-        ad[i] = a[i % n];
-
-   
+    // Precompute cost for each segment [l..r] (length >= 2)
     vector<vector<ll>> cost(n, vector<ll>(n, INF));
     for (int l = 0; l < n; ++l) {
         vector<ll> seg;
@@ -44,7 +41,7 @@ void dp() {
         }
     }
 
-    
+    // DP: dp[i] = min cost to make prefix [0..i] nice
     vector<ll> dp(n, INF);
     for (int i = 1; i < n; ++i) {
         for (int j = -1; j < i - 1; ++j) {
@@ -53,7 +50,7 @@ void dp() {
         }
     }
 
-    cout << dp[n - 1] << '\n';
+    cout << dp[n - 1] << endl;
 }
 
 int main() {
@@ -62,6 +59,8 @@ int main() {
 
     int t;
     cin >> t;
-    while (t--) dp();
+    while (t--) {
+        dp();
+    }
     return 0;
 }
