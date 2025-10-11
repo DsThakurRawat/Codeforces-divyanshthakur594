@@ -7,7 +7,7 @@ using namespace std;
 using ll = long long;
 const ll INF = 4e18;
 
-// Compute cost to make arr[l..r] all equal (median minimizes total absolute deviation)
+
 ll block_cost(const vector<ll>& arr, int l, int r) {
     vector<ll> seg(arr.begin() + l, arr.begin() + r + 1);
     sort(seg.begin(), seg.end());
@@ -31,12 +31,12 @@ void dp() {
         return;
     }
 
-    // duplicate array for circular handling
+  
     vector<ll> ad(2 * n);
     for (int i = 0; i < 2 * n; ++i)
         ad[i] = a[i % n];
 
-    // precompute cost of making any subarray all equal
+    
     vector<vector<ll>> cost(2 * n, vector<ll>(2 * n, INF));
     for (int i = 0; i < 2 * n; ++i) {
         for (int j = i + 1; j < min(2 * n, i + n); ++j)
