@@ -45,13 +45,13 @@ void dp() {
 
     ll ans = INF;
 
-    // try every rotation
+   
     for (int s = 0; s < n; ++s) {
         vector<ll> dp(n, INF);
         for (int i = 0; i < n; ++i) {
             for (int j = -1; j < i; ++j) {
                 int len = i - j;
-                if (len < 2) continue; // block must have ≥2 elements
+                if (len < 2) continue; 
                 ll prev = (j == -1 ? 0 : dp[j]);
                 dp[i] = min(dp[i], prev + cost[s + j + 1][s + i]);
             }
