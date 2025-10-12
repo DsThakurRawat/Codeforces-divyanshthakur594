@@ -6,7 +6,8 @@
 using namespace std;
 
 void solve() {
-  int n,x; cin >> n >> x;
+  int n,x;
+   cin >> n >> x;
 
    if( n % 2 == 0) cout << 0 << endl;
    else cout << x << endl;
