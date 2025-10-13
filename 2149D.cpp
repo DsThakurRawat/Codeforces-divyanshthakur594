@@ -95,6 +95,8 @@ using namespace std;
 
 int helper(const string &s,char ch){
     vector<int>pos;
+    //The const means we won’t modify s inside the function.
+    //char ch → the character ('a' or 'b') we want to make contiguous.
 
     for(int i = 0 ; i < (int)s.size(); i++){
         if(s[i] == ch) pos.push_back(i);
@@ -132,15 +134,7 @@ void solve(){
     //  How many swaps are needed to bring all 'a's together in one (and similarly for 'b's), then take the minimum of the two.
 
 
-  
-    
-    
 
-
-
-
-
-  
 }
 
 int main() {
