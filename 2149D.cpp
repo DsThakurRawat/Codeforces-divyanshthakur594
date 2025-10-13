@@ -92,10 +92,47 @@ In the fifth input test case, the string consists of a single character 'b'. The
 #include <bits/stdc++.h>
 using namespace std;
 
+
+int helper(const string &s,char ch){
+    vector<int>pos;
+
+    for(int i = 0 ; i < (int)s.size(); i++){
+        if(s[i] == ch) pos.push_back(i);
+    }
+    int k = pos.size();
+    if(k <=1 ) return 0;
+
+    int median = pos[k/2];
+    int total = 0;
+
+    for(int i = 0; i < k; i++){
+        int target = median - (k / 2) + i;
+        total += abs(pos[i] - target);
+       
+        
+    }
+    return total;
+
+
+}
+
+
+
+
+
 void solve(){
     int n;
     cin >> n;
     string s; cin >> s;
+
+    cout << min(helper(s,'a'),helper(s,'b'))<<endl;
+
+    
+
+    //  How many swaps are needed to bring all 'a's together in one (and similarly for 'b's), then take the minimum of the two.
+
+
+  
     
     
 
