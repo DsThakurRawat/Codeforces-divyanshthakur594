@@ -93,7 +93,7 @@ In the fifth input test case, the string consists of a single character 'b'. The
 using namespace std;
 
 
-int helper(const string &s,char ch){
+long long  helper(const string &s,char ch){
     vector<int>pos;
     //The const means we won’t modify s inside the function.
     //char ch → the character ('a' or 'b') we want to make contiguous.
@@ -101,14 +101,14 @@ int helper(const string &s,char ch){
     for(int i = 0 ; i < (int)s.size(); i++){
         if(s[i] == ch) pos.push_back(i);
     }
-    int k = pos.size();
+    long long  k = pos.size();
     if(k <=1 ) return 0;
 
-    int median = pos[k/2];
-    int total = 0;
+    long long median = pos[k/2];
+    long long total = 0;
 
-    for(int i = 0; i < k; i++){
-        int target = median - (k / 2) + i;
+    for(long long  i = 0; i < k; i++){
+        long long target = median - (k / 2) + i;
         total += abs(pos[i] - target);
        
         
@@ -123,7 +123,7 @@ int helper(const string &s,char ch){
 
 
 void solve(){
-    int n;
+    long long  n;
     cin >> n;
     string s; cin >> s;
 
