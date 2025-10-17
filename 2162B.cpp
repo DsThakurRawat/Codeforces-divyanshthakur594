@@ -22,8 +22,13 @@ void solve() {
 
     int x = indexarray.size();
 
-    if(x == 0) cout << ""<< endl;
+    if(x == 0){ 
+    cout << 0 << endl;    
+    cout <<" "<< endl;
+
+    }
     else{
+
         for(int i = 0; i < n; i++){
             cout << indexarray[i] << " ";
         }
