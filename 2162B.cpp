@@ -21,20 +21,17 @@ void solve() {
     }
 
     int x = indexarray.size();
+    
+    cout << x << endl;
 
-    if(x == 0){ 
-    cout << 0 << endl;    
-    cout <<" "<< endl;
+    if( x == 0) cout << " " << endl;
 
-    }
-    else{
-
-        for(int i = 0; i < n; i++){
-            cout << indexarray[i] << " ";
-        }
-       
+    if( x != 0){
+        for(auto &p: indexarray) cout << p << " ";
     }
 
+
+    
 
 
 
