@@ -15,10 +15,40 @@ void solve() {
 
     // each character is not greater than next on
     //  and x must be pallindrome
-    string p;
-    string x;
-    vector<int>save;
+
+    for(int i = 0; i < n; i++){
+        if(s[i] = '1') indexarray.push_back(i);
+    }
+
+    cout << indexarray.size() << endl;
+
+    for(int a : indexarray){
+        cout << a << " ";
+    }
+    cout << endl;
+
+
+
+
     
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
 
 
 
