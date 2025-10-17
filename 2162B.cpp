@@ -26,7 +26,7 @@ void solve() {
     else{
         for(auto &p : indexarray) cout << p << endl;
     }
-    cout << endl;
+    
 
 
 
