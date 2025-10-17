@@ -9,11 +9,12 @@ void solve() {
 
      long long  a, b;
     cin >> a >> b;
+      // so like overall we need to change a to b by taking xor 
 
     if (a == b){
         cout << 0 << endl;
 
-        
+
     } 
     else if ((a ^ b) <= a){
         cout << 1 << endl;
