@@ -10,15 +10,21 @@ void solve() {
      long long  a, b;
     cin >> a >> b;
 
-    if (a == b) {
+    if (a == b){
         cout << 0 << endl;
+
+        
     } 
-    else if ((a ^ b) <= a) {
+    else if ((a ^ b) <= a){
         cout << 1 << endl;
         cout << (a ^ b) << endl;
+
+
     } 
-    else if (b < a) {
+    else if (b < a){
         cout << 2 << endl;
+      
+      
         cout << a << " " << b << endl;
     } 
     else {
