@@ -10,30 +10,52 @@ void solve() {
     int n;
     string s;
     cin >> n >> s;
+    int len = 0;
+    vector<int>indexarray;
 
-    int l = 0, r = n - 1;
-    while(l < r && s[l] == s[r]) l++, r--;
+    // each character is not greater than next on
+    //  and x must be pallindrome
+    string p;
+    string x;
+    vector<int>save;
 
-    if(l >= r) {
-        cout << 0 << endl;
-        return;
+    for(int i = 0; i < s.size(); i++){
+       for(int j = 0; j < s.size(); j++){
+        if(s[i] == '0') 
+       }
     }
 
-    vector<int> p;
-    for(int i = 0; i < n; i++) {
-        if(s[i] == '0' && i <= r) p.push_back(i + 1);
-    }
-    for(int i = n - 1; i >= 0; i--) {
-        if(s[i] == '1' && i >= l) p.push_back(i + 1);
-    }
 
-    sort(p.begin(), p.end());
-    cout << p.size() << endl;
-    for(int idx : p) cout << idx << " ";
-    cout << endl;
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  
+   
 
     
-}
+
+       
+
+        
+        
+    }
+   
+
+  
+    
+
+    
+
 
 int main() {
     int t ;
