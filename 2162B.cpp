@@ -6,30 +6,31 @@
 using namespace std;
 
 void solve() {
-     string s;
-    cin >> s;
-    string p1, x1, p2, x2;
-    
-    for(char c : s){
-        if(c == '0') p1 += c;
-        else x1 += c;
-        if(c == '1') p2 += c;
-        else x2 += c;
-    }
-    
-    string rev_x1 = x1; reverse(rev_x1.begin(), rev_x1.end());
-    if(x1 == rev_x1) {
-        cout << p1 << "\n";
+  
+    int n;
+    string s;
+    cin >> n >> s;
+
+    int l = 0, r = n - 1;
+    while(l < r && s[l] == s[r]) l++, r--;
+
+    if(l >= r) {
+        cout << 0 << "\n";
         return;
     }
-    
-    string rev_x2 = x2; reverse(rev_x2.begin(), rev_x2.end());
-    if(x2 == rev_x2) {
-        cout << p2 << "\n";
-        return;
+
+    vector<int> p;
+    for(int i = 0; i < n; i++) {
+        if(s[i] == '0' && i <= r) p.push_back(i + 1);
     }
-    
-    cout << -1 << "\n";
+    for(int i = n - 1; i >= 0; i--) {
+        if(s[i] == '1' && i >= l) p.push_back(i + 1);
+    }
+
+    sort(p.begin(), p.end());
+    cout << p.size() << "\n";
+    for(int idx : p) cout << idx << " ";
+    cout << "\n";
 
     
 }
