@@ -13,6 +13,7 @@ void solve() {
         cout << "-1" << endl;
         return;
     }
+    // so like overall we need to change a to b by taking xor 
     
     bitset<32> bits_of_a(a);
 
