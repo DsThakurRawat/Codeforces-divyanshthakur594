@@ -7,28 +7,23 @@ using namespace std;
 
 void solve() {
 
-     long long  a, b;
+      long long a, b;
     cin >> a >> b;
-      // so like overall we need to change a to b by taking xor 
 
-    if (a == b){
+    if (a == b) {
         cout << 0 << endl;
-
-
     } 
     else if ((a ^ b) <= a){
         cout << 1 << endl;
         cout << (a ^ b) << endl;
-
-
     } 
     else if (b < a){
-        cout << 2 << endl;
-      
-      
-        cout << a << " " << b << endl;
+       
+        cout << 3 << endl;
+        long long x = (a ^ b);
+        cout << x << " " << x << " " << b << endl;
     } 
-    else {
+    else{
         cout << -1 << endl;
     }
   
