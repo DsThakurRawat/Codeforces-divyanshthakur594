@@ -28,9 +28,9 @@ void solve() {
     }
 
     sort(p.begin(), p.end());
-    cout << p.size() << "\n";
+    cout << p.size() << endl;
     for(int idx : p) cout << idx << " ";
-    cout << "\n";
+    cout << endl;
 
     
 }
