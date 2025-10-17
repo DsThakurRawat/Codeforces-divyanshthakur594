@@ -11,7 +11,7 @@ void solve() {
   
     vector<int>v(n);
     for(int i = 0; i < n; i++) cin >> v[i];
-    int best_avg = 0;
+    int best_avg = -1e9;
     int avg = 0;
     // best avg = max sum of element in subaaryy/no of element in subaary
     
@@ -21,7 +21,7 @@ void solve() {
         for(int j = i; j < n; j++){
 
             sum += v[j];
-            avg = (sum)/(i - j + 1);
+            avg = (double)sum/( j-i + 1);
             best_avg = max(avg,best_avg);
 
 
