@@ -17,7 +17,7 @@ void solve() {
     //  and x must be pallindrome
 
     for(int i = 0; i < n; i++){
-        if(s[i] = '1') indexarray.push_back(i);
+        if(s[i] == '1') indexarray.push_back(i);
     }
 
     int x = indexarray.size();
