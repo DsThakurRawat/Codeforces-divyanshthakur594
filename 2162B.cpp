@@ -6,45 +6,39 @@
 using namespace std;
 
 void solve() {
-    int n;
-    string s;
-    cin >> n >> s;
+     string s;
+    cin >> s;
+    string p1, x1, p2, x2;
     
-    vector<int> p;
-    int l = 0, r = n-1;
-    
-    while(l < r && s[l] == '1' && s[r] == '0') l++, r--; 
-    
-    int first_zero = -1, last_one = -1;
-    for(int i = 0; i < n; i++) {
-        if(s[i] == '0') { first_zero = i; break; }
-    }
-    for(int i = n-1; i >= 0; i--) {
-        if(s[i] == '1') { last_one = i; break; }
+    for(char c : s){
+        if(c == '0') p1 += c;
+        else x1 += c;
+        if(c == '1') p2 += c;
+        else x2 += c;
     }
     
-    if(first_zero == -1 || last_one == -1 || first_zero > last_one) {
-        cout << 0 << "\n";
+    string rev_x1 = x1; reverse(rev_x1.begin(), rev_x1.end());
+    if(x1 == rev_x1) {
+        cout << p1 << "\n";
         return;
     }
     
-    for(int i = 0; i <= last_one; i++) {
-        if(s[i] == '0') p.push_back(i+1);
-    }
-    for(int i = first_zero; i < n; i++) {
-        if(s[i] == '1') p.push_back(i+1);
+    string rev_x2 = x2; reverse(rev_x2.begin(), rev_x2.end());
+    if(x2 == rev_x2) {
+        cout << p2 << "\n";
+        return;
     }
     
-    sort(p.begin(), p.end());
-    cout << p.size() << "\n";
-    for(int idx : p) cout << idx << " ";
-    cout << "\n";
+    cout << -1 << "\n";
+
+    
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t; cin >> t;
-    while(t--) solve();
+    int t ;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
     return 0;
 }
