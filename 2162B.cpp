@@ -13,14 +13,14 @@ void solve() {
 
     for(int i = 0; i < n; i++) {
         vector<bool> used(n, false);
-        string x;
-        char save = '0';
+        string p;
+        char last = '0';
         
         for(int j = i; j < n; j++) {
-            if(s[j] >= save) {
+            if(s[j] >= last) {
                 used[j] = true;
-                x += s[j];
-                save = s[j];
+                p += s[j];
+                last = s[j];
             }
         }
 
@@ -40,7 +40,7 @@ void solve() {
         }
 
         if(isPalindrome) {
-            cout << x << endl;
+            cout << p << endl;
             return;
         }
     }
