@@ -20,14 +20,18 @@ void solve() {
         if(s[i] = '1') indexarray.push_back(i);
     }
 
-    cout << indexarray.size() << endl;
+    int x = indexarray.size();
 
-    if(indexarray.size() == 0){
-         cout << " " << endl;
-         return;
+    if(x == 0) cout << ""<< endl;
+    else{
+        for(int i = 0; i < n; i++){
+            cout << indexarray[i] << " ";
+        }
+        cout << endl;
     }
 
-        for(auto &p : indexarray) cout << p << endl;
+
+
 
     
 
