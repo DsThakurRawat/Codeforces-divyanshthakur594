@@ -7,28 +7,23 @@ using namespace std;
 
 void solve() {
 
-    long long a, b;
-        cin >> a >> b;
+     long long  a, b;
+    cin >> a >> b;
 
-        if (a == b) {
-            cout << 0 << endl;
-            continue;
-        }
-
-      
-        if ((a ^ b) <= a) {
-            cout << 1 << endl;
-            cout << (a ^ b) << endl;
-        }
-       
-        else if (b < a) {
-            cout << 2 << endl;
-            cout << a << " " << b << endl;
-        }
-       
-        else {
-            cout << -1 << endl;
-        }
+    if (a == b) {
+        cout << 0 << endl;
+    } 
+    else if ((a ^ b) <= a) {
+        cout << 1 << endl;
+        cout << (a ^ b) << endl;
+    } 
+    else if (b < a) {
+        cout << 2 << endl;
+        cout << a << " " << b << endl;
+    } 
+    else {
+        cout << -1 << endl;
+    }
   
 
   
