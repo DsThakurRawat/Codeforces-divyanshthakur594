@@ -15,7 +15,7 @@ void solve() {
     while(l < r && s[l] == s[r]) l++, r--;
 
     if(l >= r) {
-        cout << 0 << "\n";
+        cout << 0 << endl;
         return;
     }
 
