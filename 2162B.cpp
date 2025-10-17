@@ -18,12 +18,8 @@ void solve() {
     string p;
     string x;
     vector<int>save;
+    
 
-    for(int i = 0; i < s.size(); i++){
-       for(int j = 0; j < s.size(); j++){
-        if(s[i] == '0') 
-       }
-    }
 
 
 
