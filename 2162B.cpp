@@ -22,8 +22,9 @@ void solve() {
 
     cout << indexarray.size() << endl;
 
-    for(int a : indexarray){
-        cout << a << " ";
+    if(indexarray.size() == 0) cout << " " << endl;
+    else{
+        for(auto &p : indexarray) cout << p << endl;
     }
     cout << endl;
 
