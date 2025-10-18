@@ -32,7 +32,11 @@ void solve() {
         }
     }
 
-    cout << ans << endl;
+    if(flag == 1){
+       cout << 0 << endl;
+    }
+    else 
+      cout << ans << endl;
 
 
 
