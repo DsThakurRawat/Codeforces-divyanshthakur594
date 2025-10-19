@@ -19,8 +19,10 @@ void solve() {
     int m = nums.size();
     int i = 0;
 
-    while (st.count(i)) i++;
-    return i;
+    while (st.count(i)) i++; 
+    
+    cout << i << endl;
+    
 
 
 
