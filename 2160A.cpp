@@ -23,8 +23,11 @@ void solve() {
         if(find(nums.begin(),nums.end(),nums[i]) != nums.end()){
             continue;
         }
-        else cout << nums[i] + 1 << endl;      
+        else { 
+            cout << nums[i] + 1 << endl;    
+            break;  
     }
+}
 
     
 
