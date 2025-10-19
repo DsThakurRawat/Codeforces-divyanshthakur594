@@ -20,11 +20,11 @@ void solve() {
 
     for(int i = 0; i < m; i++){
 
-        if(find(nums.begin(),nums.end(),nums[i]) == nums.end()){
+        if(find(nums.begin(),nums.end(),nums[i]) != nums.end()){
             cout << nums[i]+1 << endl;
             return;
         }
-        
+
 
 
        
