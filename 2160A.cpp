@@ -14,29 +14,26 @@ void solve() {
 
     for(int i = 0; i < n; i++) cin >> v[i];
 
-    int i = 0;
-    int flag = 0;
+    set<int>st(v.begin(),v.end());
+    vector<int>nums(st.begin(),st.end());
+    int m = nums.size();
 
-    for(int i = 0; i < v.size(); i++){
-        if(v[i] != 0) flag = 1;
+    for(int i = 0; i < m; i++){
 
-
-    }
-     set<int> s(v.begin(), v.end());  
-    int ans = 0;
-
-    for(int i = 0; i < n; i++) {
-        if (s.find(v[i] + 1) == s.end()) { 
-            ans = v[i] + 1;
-            break;
+        if(find(nums.begin(),nums.end(),nums[i]) == nums.end()){
+            cout << nums[i]+1 << endl;
+            return;
         }
+        
+
+
+       
+          
     }
 
-    if(flag == 1){
-       cout << 0 << endl;
-    }
-    else 
-      cout << ans << endl;
+    
+
+    
 
 
 
