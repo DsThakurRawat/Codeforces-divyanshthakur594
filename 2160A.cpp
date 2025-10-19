@@ -17,17 +17,13 @@ void solve() {
     set<int>st(v.begin(),v.end());
     vector<int>nums(st.begin(),st.end());
     int m = nums.size();
+    int i = 0;
 
-    for(int i = 0; i < m; i++){
+    while (st.count(i)) i++;
+    return i;
 
-        if(find(nums.begin(),nums.end(),nums[i]) != nums.end()){
-            continue;
-        }
-        else { 
-            cout << nums[i] + 1 << endl;    
-            break;  
-    }
-}
+
+
 
     
 
