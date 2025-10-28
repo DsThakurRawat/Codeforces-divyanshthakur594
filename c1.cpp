@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-  
+  vector<int>v
 }
 
 int main() {
