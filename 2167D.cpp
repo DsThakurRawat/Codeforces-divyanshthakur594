@@ -16,7 +16,7 @@ void solve() {
         long long ans = (long long)1e19;
         for(int i=0;i<n;i++){
             long long a; cin >> a;
-            for(long long p: primes){
+            for(long long p: prime){
                 if(a % p != 0){
                     ans = min(ans, p);
                     break;
