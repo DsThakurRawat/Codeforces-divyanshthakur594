@@ -28,9 +28,11 @@ void solve() {
    
 
         for (auto x : v ) {
-        if (x % 2 == 0) cout << evn[i++] << " ";
+        if (x % 2 == 0) cout << evn[i] << " ";
         else {
             cout << odd[j] << " ";
+            j++;
+        }
     }
     cout << "\n";
 
