@@ -13,7 +13,7 @@ void solve() {
 
         bool even_flag = 0, odd_flag = 0;
         for (auto x : v) {
-            if (x % 2 == 0) even = true;
+            if (x % 2 == 0) even_flag = true;
             else odd_flag = 1;
         }
 
