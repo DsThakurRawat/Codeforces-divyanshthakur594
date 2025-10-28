@@ -18,7 +18,7 @@ void solve() {
                     is_prime[j] = 0;
                 }
              }
-    vector<long long> primes;
+     vector<long long> primes;
     for (int i = 2; i <= maxi; i++) 
         if (is_prime[i] == 1) primes.push_back(i);
 
@@ -32,7 +32,6 @@ void solve() {
             }
         }
     }
-
     if (ans <= (long long)1e18) cout << ans << endl;
     else cout << -1 << endl;
 }
