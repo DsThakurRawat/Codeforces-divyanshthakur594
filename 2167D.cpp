@@ -24,7 +24,7 @@ vector<long long> sieve_primes(int limit = 1000000) {
     return primes;
 }
 
-// ---------- solve per test case ----------
+
 void solve(const vector<long long> &primes) {
     long long n;
     cin >> n;
@@ -36,7 +36,7 @@ void solve(const vector<long long> &primes) {
 
     for (auto a : v) {
         for (auto p : primes) {
-            if (a % p != 0) { // first prime not dividing a
+            if (a % p != 0) { /
                 ans = min(ans, p);
                 break;
             }
