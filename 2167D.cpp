@@ -62,7 +62,7 @@ void solve() {
     cin >> n;
     vector<int> a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
-    cout << minX(a) << '\n';
+    cout << min_x(a) << '\n';
 }
 
 
