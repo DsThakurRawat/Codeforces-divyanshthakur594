@@ -12,7 +12,7 @@ void solve() {
     string s,t;;
     cin >> s >> t;
 
-    if(s.size()!= t.size()) cout << "NO"
+    if(s.size()!= t.size()) cout << "NO" << endl;
 
 
 
