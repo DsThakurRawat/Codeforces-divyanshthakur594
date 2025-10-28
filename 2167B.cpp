@@ -25,6 +25,7 @@ void solve() {
            return;
         }
     }
+    cout << "YES << endl;
 
 
 
