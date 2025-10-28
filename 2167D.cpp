@@ -37,8 +37,31 @@ void solve() {
     else cout << -1 << endl;
     */
 
+       int n;
+    cin >> n;
+    vector<long long> v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
 
-    
+    long long g = v[0];
+    for (int i = 1; i < n; i++) g = gcd(g, v[i]);
+
+    if (g > 1) {
+        cout << -1 << "\n";
+        return;
+    }
+
+    // check small x values
+    for (long long x = 2; x <= 100; x++) {
+        for (auto a : v) {
+            if (__gcd(a, x) == 1) {
+                cout << x << "\n";
+                return;
+            }
+        }
+    }
+
+
+
 
 
 
