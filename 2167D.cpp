@@ -9,7 +9,7 @@ void solve() {
     cin >> n;
     vector<long long> v(n);
     for (long long i = 0; i < n; i++) cin >> v[i];
-    /**/
+    /*
     int maxi = 1000000;
     vector<int> is_prime(maxi + 1, 1);
     is_prime[0] = is_prime[1] = 0;
