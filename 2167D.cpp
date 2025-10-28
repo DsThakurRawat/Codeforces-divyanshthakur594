@@ -12,9 +12,9 @@ void solve() {
     int maxi = 1000000;
     vector<int> is_prime(maxi + 1, 1);
     is_prime[0] = is_prime[1] = 0;
-    for (int i = 2; i * i <= maxi; i++){
+    for (int i = 2; i*i <= maxi; i++){
         if (is_prime[i] == 1){
-            for (int j = i *i; j <= maxi; j += i)
+            for (int j = i*i; j <= maxi; j += i)
                     is_prime[j] = 0;
                 }
              }
