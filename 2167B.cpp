@@ -17,6 +17,7 @@ void solve() {
         return;
     }
     sort(s.begin(),s.end());
+    sort(t.begin())
 
 
 
