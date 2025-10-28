@@ -9,7 +9,8 @@ void solve() {
  int a,b,c,d;
  cin >> a >> b>> c >> d;
 
- if(c == a && a == b && b == d )
+ if(c == a && a == b && b == d ) cout << yes << endl;
+ else 
 }
 
 int main() {
