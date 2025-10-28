@@ -39,28 +39,6 @@ void solve() {
 
      
 
-    long long g = v[0];
-    for (int i = 1; i < n; i++) g = gcd(g, v[i]);
-
-    if (g > 1) {
-        cout << -1 << "\n";
-        return;
-    }
-
-  
-    for (long long x = 2; x <= 100; x++) {
-        for (auto a : v) {
-            if (__gcd(a, x) == 1) {
-                cout << x << "\n";
-                return;
-            }
-        }
-    }
-
-
-
-
-
 
 
 
