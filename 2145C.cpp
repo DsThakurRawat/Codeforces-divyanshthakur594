@@ -9,7 +9,8 @@ void solve() {
    
     int n; cin >> n;
     string s; cin >> s;
-    int curr = count(s.begin(),s.end(),'a') - count(s.begin(), s.end(),'b');
+    int curr = count(s.begin(),s.end(),'a') - count(s.begin(), s.end(),'b'); // its like curr = count_a - count_b;
+    
     map<int,int>mpp;
     int pr = 0;
     mpp[pr] = -1;

@@ -13,16 +13,7 @@ void solve() {
   cin >> n;
 
   // making eqn
- long long int x = log(n)/log(3);
- long long direc = n;
-
- long long res1 = 3*direc;
- long long res2 = direc/3;
-
- long long complete = res1 + res2*x;
  
- cout << complete << endl;
-
 
 }
 
