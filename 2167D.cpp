@@ -9,8 +9,8 @@ void solve() {
     cin >> n;
     vector<long long> v(n);
     for (long long i = 0; i < n; i++) cin >> v[i];
-    int max_limit = 1000000;
-    vector<int> is_prime(max_limit + 1, 1);
+    int maxi = 1000000;
+    vector<int> is_prime(maxi + 1, 1);
     is_prime[0] = is_prime[1] = 0;
 
     for (int i = 2; i * i <= maxi; i++){
