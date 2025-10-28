@@ -36,7 +36,7 @@ void solve(const vector<long long> &primes) {
 
     for (auto a : v) {
         for (auto p : primes) {
-            if (a % p != 0) { /
+            if (a % p != 0) { 
                 ans = min(ans, p);
                 break;
             }
