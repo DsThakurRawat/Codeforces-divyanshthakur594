@@ -16,7 +16,7 @@ void solve() {
         cout << "NO" << endl;
         return;
     }
-    sort(s.begin(),s.end())
+    sort(s.begin(),s.end());
 
 
 
