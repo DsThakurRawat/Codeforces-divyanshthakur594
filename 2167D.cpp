@@ -12,7 +12,7 @@ void solve() {
     };
     vector<long long >v(n);
         for(long long i = 0; i < n; i++) cin >> v[i];
-        int n; cin >> n;
+      
             long long ans = (long long)1e19;
             for(int i=0;i<n;i++){
                 long long a; cin >> a;
