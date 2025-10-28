@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// ---------- generate primes using sieve ----------
+
 vector<long long> sieve_primes(int limit = 1000000) {
     vector<bool> is_prime(limit + 1, true);
     is_prime[0] = is_prime[1] = false;
