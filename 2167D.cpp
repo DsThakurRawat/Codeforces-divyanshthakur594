@@ -25,7 +25,6 @@ vector<long long> f(int limit = 1000000) {
 void solve(const vector<long long> &primes) {
     long long n;
     cin >> n;
-
     vector<long long> v(n);
     for (long long i = 0; i < n; i++) cin >> v[i];
 
