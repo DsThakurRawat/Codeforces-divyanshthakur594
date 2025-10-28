@@ -45,8 +45,7 @@ void solve(const vector<long long> &primes) {
 
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    
 
 
     vector<long long> primes = f();
