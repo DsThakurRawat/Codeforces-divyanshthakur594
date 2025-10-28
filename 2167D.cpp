@@ -43,7 +43,7 @@ void solve() {
     int g = a[0];
     for (int i = 1; i < n; i++) g = gcd(g, a[i]);
 
-    unordered_map<int, int> freq;
+    map<int, int> freq;
     for (int x : a) {
         x /= g;
         int tmp = x;
