@@ -21,14 +21,12 @@ void solve() {
         sort(evn.begin(),evn.end());
 
         int i = 0, j = 0;
-      
-   
-
+    
        
    
 
         for (auto x : v ) {
-        if (x % 2 == 0) { 
+        if (x % 2 == 0){ 
             cout << evn[i] << " ";
             i++;
         }
