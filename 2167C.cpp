@@ -14,7 +14,7 @@ void solve() {
         bool has_even = false, odd_flag = 0;
         for (auto x : v) {
             if (x % 2 == 0) has_even = true;
-            else odd_flag0 = true;
+            else odd_flag = q;
         }
 
         if (is_sorted(v.begin(), v.end())) {
