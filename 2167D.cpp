@@ -15,12 +15,12 @@ void solve() {
      int n; cin >> n;
         long long ans = (long long)1e19;
         for(int i=0;i<n;i++){
-            long long a; cin >> a;
-            for(long long p: prime){
-                if(a % p != 0){
-                    ans = min(ans, p);
-                    break;
-                }
+                long long a; cin >> a;
+                for(long long p: prime){
+                    if(a % p != 0){
+                        ans = min(ans, p);
+                        break;
+                    }
             }
         }
         if(ans <= (long long)1e18) cout << ans<< endl;
