@@ -20,7 +20,7 @@ void solve() {
         }
     }
     vector<long long> primes;
-    for (int i = 2; i <= limit; i++) 
+    for (int i = 2; i <= maxi; i++) 
         if (is_prime[i] == 1) primes.push_back(i);
 
     long long ans = (long long)1e19;
