@@ -47,7 +47,7 @@ void solve() {
         return;
     }
 
-    // check small x values
+  
     for (long long x = 2; x <= 100; x++) {
         for (auto a : v) {
             if (__gcd(a, x) == 1) {
