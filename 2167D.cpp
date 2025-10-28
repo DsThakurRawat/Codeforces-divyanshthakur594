@@ -4,11 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve() {
-    long long n;
-    cin >> n;
-    vector<long long> v(n);
-    for (long long i = 0; i < n; i++) cin >> v[i];
+
     /*
     int maxi = 1000000;
     vector<int> is_prime(maxi + 1, 1);
