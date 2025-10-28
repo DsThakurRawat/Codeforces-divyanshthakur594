@@ -18,7 +18,7 @@ void solve() {
         }
 
         if (is_sorted(v.begin(), v.end())) {
-            cout << "YES\n";
+            cout << "YES" << endl;;
             return;
         }
 
