@@ -40,7 +40,7 @@ using namespace std;
     for (int i = 1; i < n; i++) g = gcd(g, a[i]);
 
     map<int, int> freq;
-    for (int x : a) {
+    for (int x : a){
         x /= g;
         int tmp = x;
         for (int p = 2; p * p <= tmp; p++){
