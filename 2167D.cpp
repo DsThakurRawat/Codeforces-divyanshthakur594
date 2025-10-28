@@ -13,7 +13,7 @@ void solve() {
     vector<int> is_prime(max_limit + 1, 1);
     is_prime[0] = is_prime[1] = 0;
 
-    for (int i = 2; i * i <= limit; i++){
+    for (int i = 2; i * i <= max_; i++){
         if (is_prime[i] == 1){
             for (int j = i * i; j <= limit; j += i)
                 is_prime[j] = 0;
