@@ -7,7 +7,7 @@ using namespace std;
 
 void solve() {
     int n; cin >> n;
-    vector
+    vector<long long > 
 
 
   
