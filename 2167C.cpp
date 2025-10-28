@@ -17,7 +17,7 @@ void solve() {
             if(v[i] % 2 == 0)evn.push_back(v[i]);
             else odd.push_back(v[i]);
         }
-        sort()
+        sort(odd.begin().odd.end()
 
       
 
