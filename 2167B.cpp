@@ -22,6 +22,7 @@ void solve() {
     for(int i = 0; i < s.size(); i++){
         if(s[i] != t[i]){
             cout << "NO" << endl;
+            break;
         }
     }
 
