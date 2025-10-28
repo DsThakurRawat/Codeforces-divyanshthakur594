@@ -35,7 +35,7 @@ void solve() {
     }
 
     if (ans <= (long long)1e18) cout << ans << "\n";
-    else cout << -1 << "\n";
+    else cout << -1 << endl;
 }
 
 int main() {
