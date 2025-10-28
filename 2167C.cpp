@@ -27,7 +27,7 @@ void solve() {
        
    
 
-        for (auto x : ) {
+        for (auto x : v ) {
         if (x % 2 == 0) cout << evn[i++] << " ";
         else cout << o[j++] << " ";
     }
