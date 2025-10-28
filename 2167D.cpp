@@ -15,7 +15,7 @@ void solve() {
     for (int i = 2; i * i <= maxi; i++){
         if (is_prime[i] == 1){
             for (int j = i * i; j <= maxi; j += i)
-                is_prime[j] = 0;
+                    is_prime[j] = 0;
         }
     }
     vector<long long> primes;
