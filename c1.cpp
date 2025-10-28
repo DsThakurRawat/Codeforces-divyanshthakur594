@@ -9,7 +9,7 @@ void solve() {
  int a,b,c,d;
  cin >> a >> b>> c >> d;
 
- if(c == a && )
+ if(c == a &&  )
 }
 
 int main() {
