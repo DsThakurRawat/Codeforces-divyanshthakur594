@@ -19,7 +19,13 @@ void solve() {
         }
         sort(odd.begin(),odd.end());
         sort(evn.begin(),evn.end());
-        
+
+        for (auto x : a) {
+        if (x % 2 == 0) cout << e[i++] << " ";
+        else cout << o[j++] << " ";
+    }
+    cout << "\n";
+
 
 
       
