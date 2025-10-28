@@ -10,7 +10,9 @@ void solve() {
     cin >> n;
 
     string s,t;;
-    cin >> s >>t;
+    cin >> s >> t;
+
+    
 
 
 
