@@ -9,8 +9,6 @@ void solve() {
     cin >> n;
     vector<long long> v(n);
     for (long long i = 0; i < n; i++) cin >> v[i];
-
-    // Generate prime numbers up to 1e6 (inside solve)
     int limit = 1000000;
     vector<int> is_prime(limit + 1, 1);
     is_prime[0] = is_prime[1] = 0;
@@ -21,7 +19,6 @@ void solve() {
                 is_prime[j] = 0;
         }
     }
-
     vector<long long> primes;
     for (int i = 2; i <= limit; i++) 
         if (is_prime[i] == 1) primes.push_back(i);
