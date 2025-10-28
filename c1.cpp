@@ -10,7 +10,7 @@ void solve() {
  cin >> a >> b>> c >> d;
 
  
-    if (a > 0 && a == b && b == c && c == d)
+if (a > 0 && a == b && b == c && c == d)
         cout << "YES" << endl;
  else cout << "NO" << endl;
 }
