@@ -34,7 +34,7 @@ using namespace std;
     */
 
 
-    int min_x(vector<int>& a) {
+    int min_x(vector<int>& a){
     int n = a.size();
     int g = a[0];
     for (int i = 1; i < n; i++) g = gcd(g, a[i]);
