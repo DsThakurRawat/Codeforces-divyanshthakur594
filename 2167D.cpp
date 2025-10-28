@@ -43,8 +43,8 @@ using namespace std;
     for (int x : a) {
         x /= g;
         int tmp = x;
-        for (int p = 2; p * p <= tmp; p++) {
-            if (x % p == 0) {
+        for (int p = 2; p * p <= tmp; p++){
+            if (x % p == 0){
                 freq[p]++;
                 while (x % p == 0) x /= p;
             }
