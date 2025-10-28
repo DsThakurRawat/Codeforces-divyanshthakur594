@@ -52,7 +52,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // precompute primes once
+
     vector<long long> primes = sieve_primes();
 
     int t;
