@@ -53,7 +53,7 @@ int main() {
     cin.tie(nullptr);
 
 
-    vector<long long> primes = sieve_primes();
+    vector<long long> primes = f();
 
     int t;
     cin >> t;
