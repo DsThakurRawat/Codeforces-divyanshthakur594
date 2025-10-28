@@ -17,7 +17,7 @@ void solve() {
             for (int j = i * i; j <= maxi; j += i)
                     is_prime[j] = 0;
                 }
-    }
+             }
     vector<long long> primes;
     for (int i = 2; i <= maxi; i++) 
         if (is_prime[i] == 1) primes.push_back(i);
