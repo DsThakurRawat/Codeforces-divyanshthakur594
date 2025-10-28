@@ -14,7 +14,7 @@ void solve() {
 
     if(s.size()!= t.size()) {
         cout << "NO" << endl;
-        
+    }
 
 
 
