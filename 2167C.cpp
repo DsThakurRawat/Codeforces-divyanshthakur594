@@ -14,7 +14,7 @@ void solve() {
         vector<int> odd,evn;
 
         for(int i = 0; i < n; i++){
-            if()
+            if(v[i] % 2 == 0)
         }
 
       
