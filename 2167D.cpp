@@ -15,7 +15,7 @@ void solve() {
 
     for (int i = 2; i * i <= max_limit; i++){
         if (is_prime[i] == 1){
-            for (int j = i * i; j <= limit; j += i)
+            for (int j = i * i; j <= _limit; j += i)
                 is_prime[j] = 0;
         }
     }
