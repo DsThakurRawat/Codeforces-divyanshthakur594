@@ -6,7 +6,7 @@
 using namespace std;
 
 
-vector<long long> sieve_primes(int limit = 1000000) {
+vector<long long> f(int limit = 1000000) {
     vector<bool> is_prime(limit + 1, true);
     is_prime[0] = is_prime[1] = false;
 
