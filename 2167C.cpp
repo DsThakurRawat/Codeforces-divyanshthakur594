@@ -6,31 +6,20 @@
 using namespace std;
 
 void solve() {
-            int n; 
-        cin >> n;
-        vector<long long> v(n);
-        for (int i = 0; i < n; i++) cin >> v[i];
+       int n; 
+cin >> n;
+vector<long long> v(n);
+for (auto &x : v) cin >> x;
 
-        vector<int> odd,evn;
+bool has_even = false, has_odd = false;
+for (auto x : v) {
+    if (x % 2 == 0) has_even = true;
+    else has_odd = true;
+}
 
-        for(int i = 0; i < n; i++){
-            if(v[i] % 2 == 0)evn.push_back(v[i]);
-            else odd.push_back(v[i]);
-        }
-        sort(odd.begin(),odd.end());
-        sort(evn.begin(),evn.end());
-        int i = 0, j = 0;
-    for (auto x : v ) {
-        if (x % 2 == 0){ 
-            cout << evn[i] << " ";
-            i++;
-        }
-        else {
-            cout << odd[j] << " ";
-            j++;
-        }
-    }
-    cout << endl;
+if (has_even && has_odd) sort(v.begin(), v.end());
+for (auto x : v) cout << x << " ";
+cout << endl;
 
 
 
