@@ -18,7 +18,7 @@ void solve() {
             else odd.push_back(v[i]);
         }
         sort(odd.begin().odd.end());
-        sort(evn.begin(),eng.end());
+        sort(evn.begin(),evn.end());
 
       
 
