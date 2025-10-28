@@ -19,7 +19,7 @@ void solve() {
     sort(s.begin(),s.end());
     sort(t.begin(),t.end());
 
-    for(int i = 0; i < )
+    for(int i = 0; i < s.size(); i++)
 
 
 
