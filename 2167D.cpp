@@ -38,6 +38,38 @@ void solve() {
     */
 
 
+    int minX(vector<int>& a) {
+    int n = a.size();
+    int g = a[0];
+    for (int i = 1; i < n; i++) g = gcd(g, a[i]);
+
+    unordered_map<int, int> freq;
+    for (int x : a) {
+        x /= g;
+        int tmp = x;
+        for (int p = 2; p * p <= tmp; p++) {
+            if (x % p == 0) {
+                freq[p]++;
+                while (x % p == 0) x /= p;
+            }
+        }
+        if (x > 1) freq[x]++;
+    }
+
+    int best = 0;
+    for (auto &[p, c] : freq) best = max(best, c);
+    return best ? n - best : 0;
+}
+
+void solve() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+    cout << minX(a) << '\n';
+}
+
+
 
 
 
