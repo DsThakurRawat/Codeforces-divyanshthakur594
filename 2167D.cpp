@@ -7,7 +7,7 @@ using namespace std;
 
 
 vector<long long> f(int limit = 1000000) {
-    
+
     vector<bool> is_prime(limit + 1, true);
     is_prime[0] = is_prime[1] = false;
     for (int i = 2; i * i <= limit; i++) {
@@ -19,10 +19,8 @@ vector<long long> f(int limit = 1000000) {
     vector<long long> primes;
     for (int i = 2; i <= limit; i++)
         if (is_prime[i]) primes.push_back(i);
-
     return primes;
 }
-
 
 void solve(const vector<long long> &primes) {
     long long n;
