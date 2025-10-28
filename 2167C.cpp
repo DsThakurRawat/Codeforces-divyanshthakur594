@@ -30,7 +30,7 @@ void solve() {
             j++;
         }
     }
-    cout << endl;;
+    cout << endl;
 
 
 
