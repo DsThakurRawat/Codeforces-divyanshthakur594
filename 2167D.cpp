@@ -25,9 +25,9 @@ void solve() {
     long long ans = (long long)1e19;
 
     for (auto a : v){
-        for (auto p : primes){
-            if (a % p != 0) { 
-                ans = min(ans, p);
+       for (auto p : primes){
+        if (a % p != 0) { 
+            ans = min(ans, p);
                        break;
             }
         }
