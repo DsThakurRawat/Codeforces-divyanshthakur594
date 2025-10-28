@@ -23,9 +23,9 @@ void solve() {
                 }
             }
         }
-        if(ans <= (long long)1e18) cout << ans<< endl;;
+        if(ans <= (long long)1e18) cout << ans<< endl;
         else cout << -1 << endl;
-        ;
+        
 
 
 
