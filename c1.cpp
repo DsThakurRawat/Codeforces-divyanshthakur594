@@ -6,8 +6,10 @@
 using namespace std;
 
 void solve() {
-  vector<int>v(4);
-  
+ int a,b,c,d;
+ cin >> a >> b>> c >> d;
+
+ if(c == a && )
 }
 
 int main() {
