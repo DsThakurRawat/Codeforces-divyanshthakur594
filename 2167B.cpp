@@ -9,9 +9,9 @@ void solve() {
     int n;
     cin >> n;
 
-    string s;
+    string s,t;;
     cin >> s;
-    
+
 
 
   
