@@ -17,10 +17,7 @@ void solve() {
             else odd_flag = 1;
         }
 
-        if (is_sorted(v.begin(), v.end())) {
-            cout << "YES" << endl;;
-            return;
-        }
+        
 
   
 
