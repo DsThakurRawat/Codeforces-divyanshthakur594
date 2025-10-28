@@ -11,7 +11,9 @@ void solve() {
         vector<long long> v(n);
         for (int i = 0; i < n; i++) cin >> v[i];
 
-        vector<int> odd,evn
+        vector<int> odd,evn;
+
+        for(int i )
 
       
 
