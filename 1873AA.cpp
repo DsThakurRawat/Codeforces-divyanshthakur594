@@ -16,7 +16,7 @@ void solve() {
         return;
     }
 
-    if(s[i])
+   
 }
 
     
