@@ -17,7 +17,7 @@ void solve() {
 			res++; i += k - 1;
 		}
 	}
-	cout << res << endl;;
+	cout << res << endl;
 
   
 }
