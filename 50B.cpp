@@ -10,7 +10,7 @@ void solve() {
 
    int n = s.size();
 
-   
+   for(int i = )
 
 
 
