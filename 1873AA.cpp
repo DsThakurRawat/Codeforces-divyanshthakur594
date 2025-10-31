@@ -19,7 +19,7 @@ void solve() {
         cout << "YES" <<endl;
         break;
     }
-    else if(s[i] == 'c' )
+    else if(s[i] == 'c' && i == 2)
 
    
 }
