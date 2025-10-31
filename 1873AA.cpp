@@ -24,6 +24,8 @@ void solve() {
         return ;
     }
 
+    cout << "NO" << endl;
+
    
 }
 
