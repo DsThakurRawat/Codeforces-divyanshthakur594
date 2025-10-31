@@ -11,9 +11,11 @@ void solve() {
 
     for(int i = 0; i < s.size(); i++){
         if(s[i] == 'a' && i == 0) {
-            
+
         cout << "YES"<<endl; 
+        return;
     }
+}
 
     
   
