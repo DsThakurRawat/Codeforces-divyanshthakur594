@@ -15,7 +15,9 @@ void solve() {
         cout << "YES"<<endl; 
         return;
     }
-    else if(s[i] == 'b' && i == 1)
+    else if(s[i] == 'b' && i == 1){
+        cout << "YES" <<
+    }
 
    
 }
