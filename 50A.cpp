@@ -6,6 +6,9 @@
 using namespace std;
 
 void solve() {
+    int n,m; cin >> n >> m;
+
+    cout << (n*m)/2 << endl;
   
 }
 
