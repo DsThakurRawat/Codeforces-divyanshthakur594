@@ -21,6 +21,7 @@ void solve() {
     }
     else if(s[i] == 'c' && i == 2){
         cout << "YES" << endl;
+        return 
     }
 
    
