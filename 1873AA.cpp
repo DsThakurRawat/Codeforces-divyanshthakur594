@@ -10,7 +10,8 @@ void solve() {
     string s; cin >> s;
 
     for(int i = 0; i < s.size(); i++){
-        if(s[i] == 'a' && i == 0) 
+        if(s[i] == 'a' && i == 0) {
+            
         cout << "YES"<<endl; 
     }
 
