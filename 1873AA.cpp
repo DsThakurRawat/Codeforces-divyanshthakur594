@@ -16,8 +16,10 @@ void solve() {
         return;
     }
     else if(s[i] == 'b' && i == 1){
-        cout << "YES" <<
+        cout << "YES" <<endl;
+        beak;
     }
+    else if
 
    
 }
