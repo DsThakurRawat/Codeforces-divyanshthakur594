@@ -17,11 +17,11 @@ void solve() {
     }
     else if(s[i] == 'b' && i == 1){
         cout << "YES" <<endl;
-        break;
+        return;
     }
     else if(s[i] == 'c' && i == 2){
         cout << "YES" << endl;
-        return 
+        return ;
     }
 
    
