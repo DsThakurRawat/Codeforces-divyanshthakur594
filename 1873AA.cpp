@@ -15,6 +15,8 @@ void solve() {
         cout << "YES"<<endl; 
         return;
     }
+
+    if(s[i])
 }
 
     
