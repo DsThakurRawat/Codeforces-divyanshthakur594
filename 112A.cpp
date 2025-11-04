@@ -15,7 +15,7 @@ void solve() {
             cout << 1 << endl;
 
         }
-        if(s)
+        if(s2[i])
     }
 
 }
