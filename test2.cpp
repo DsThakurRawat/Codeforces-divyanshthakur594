@@ -26,7 +26,7 @@ void solve() {
  
         cout << *max_element(dp.begin() + 1, dp.end()) << endl;
 
-  
+    }
 
 
 int main() {
