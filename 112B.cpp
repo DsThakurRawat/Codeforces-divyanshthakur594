@@ -7,7 +7,7 @@ using namespace std;
 
 void solve() {
 
-    int n
+    int n,x
 
   
 }
