@@ -19,7 +19,7 @@ void solve() {
             long long v;
             cin >> x >> y >> v;
 
-            // both travelers collect v
+          
             temp[height[x]] += v;
             temp[height[y]] += v;
 
