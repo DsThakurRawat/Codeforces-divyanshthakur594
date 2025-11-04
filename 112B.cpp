@@ -7,7 +7,8 @@ using namespace std;
 
 void solve() {
 
-    int n,x
+    int n,x,y; cin >> n >> x >> y;
+    
 
   
 }
