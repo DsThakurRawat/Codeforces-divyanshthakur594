@@ -12,6 +12,23 @@ void solve() {
 
         vector<long long> dp(n + 1, 0);
 
+
+        for (int i = 0; i < m; ++i) {
+            int x, y;
+            long long v;
+            cin >> x >> y >> v;
+
+            long long tmp_x = dp[x];
+            long long tmp_y = dp[y];
+
+            dp[x] = max(dp[x], tmp_y + v);
+            dp[y] = max(dp[y], tmp_x + v);
+        }
+
+        cout << *max_element(dp.begin() + 1, dp.end()) << "\n";
+    }
+
+
        
   
 }
