@@ -18,7 +18,6 @@ void solve() {
             cin >> x >> y >> v;
             temp[height[x]] += v;
             temp[height[y]] += v;
-           
             swap(height[x], height[y]);
         }
 
