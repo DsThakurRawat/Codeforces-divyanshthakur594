@@ -24,7 +24,7 @@ void solve() {
             dp[y] = max(pv, pu + v);
         }
 
-        cout << *max_element(dp.begin() + 1, dp.end()) << "\n";
+        cout << *max_element(dp.begin() + 1, dp.end()) << endl;
   
 }
 
