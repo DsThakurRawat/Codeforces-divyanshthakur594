@@ -6,7 +6,8 @@
 using namespace std;
 
 void solve() {
-    string s1,s2;
+    string s1; cin >> s;
+    string s2; cin >>s2
   
 }
 
