@@ -18,7 +18,7 @@ void solve() {
             long long v;
             cin >> x >> y >> v;
 
-            long long tmp_x = dp[x];
+            long long tempx = dp[x];
             long long tmp_y = dp[y];
 
             dp[x] = max(dp[x], tmp_y + v);
