@@ -11,7 +11,7 @@ void solve() {
     // if first string is grater than 2nd print 1 and if 2nd is greater than 1st print -1 if both equal print 0;
 
      transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
-
+     
     for(int i = 0; i < s1.size(); i++){
         if(s1[i] > s2[i]){
             cout << 1 << endl;
