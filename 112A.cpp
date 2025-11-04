@@ -17,7 +17,7 @@ void solve() {
             return;
 
         }
-        if(tos2[i] > s2[i]){
+        if(tolower([i] > s2[i]){
             cout << -1 << endl;
             return;
 
