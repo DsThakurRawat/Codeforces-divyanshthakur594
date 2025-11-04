@@ -10,8 +10,8 @@ void solve() {
     int n,x,y; cin >> n >> x >> y;
     n = n/2;
 
-    if( (x == n || x == n+1)&&(y == n || y = n+1)) cout << "NO"<<endl;
-    
+    if( (x == n || x == n+1)&&( y == n || y = n+1)) cout << "NO"<<endl;
+
 
   
 }
