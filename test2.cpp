@@ -11,7 +11,7 @@ void solve() {
         cin >> n >> m;
 
         vector<int> height(n + 1);
-        iota(height.begin(), height.end(), 0); // height[i] = i initially
+        iota(height.begin(), height.end(), 0); 
         vector<long long> temp(n + 1, 0);      // total treasure per starting shaft
 
         for (int i = 0; i < m; ++i) {
