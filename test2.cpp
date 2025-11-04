@@ -16,7 +16,6 @@ void solve() {
             int x, y;
             long long v;
             cin >> x >> y >> v;
-          
             temp[height[x]] += v;
             temp[height[y]] += v;
 
