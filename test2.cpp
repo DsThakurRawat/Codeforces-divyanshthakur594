@@ -19,7 +19,7 @@ void solve() {
             dp[x] = max(dp[x], tempy + v);
             dp[y] = max(dp[y], tempx + v);
         }
-        cout << *max_element(dp.begin() + 1, dp.end()) << endl;
+        cout << *max_element(dp.begin(), dp.end()) << endl;
     }
 
 
