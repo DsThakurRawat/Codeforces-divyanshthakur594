@@ -22,7 +22,7 @@ void solve() {
             long long tempy = dp[y];
 
             dp[x] = max(dp[x], tempy + v);
-            dp[y] = max(dp[y], tmp_x + v);
+            dp[y] = max(dp[y], temp_x + v);
         }
 
         cout << *max_element(dp.begin() + 1, dp.end()) << endl;
