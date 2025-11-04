@@ -20,7 +20,7 @@ void solve() {
             temp[height[y]] += v;
             swap(height[x], height[y]);
         }
-        cout << *max_element(temp.begin() + 1, temp.end()) << endl;;
+        cout << *max_element(temp.begin() + 1, temp.end()) << endl;
     }
 
 
