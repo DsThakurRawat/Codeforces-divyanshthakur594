@@ -25,13 +25,13 @@ void solve() {
             dp[y] = max(dp[y], tmp_x + v);
         }
 
-        cout << *max_element(dp.begin() + 1, dp.end()) << "\n";
+        cout << *max_element(dp.begin() + 1, dp.end()) << endl;;
     }
 
 
        
   
-}
+
 
 int main() {
     int t ;
