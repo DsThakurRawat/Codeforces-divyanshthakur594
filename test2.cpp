@@ -7,22 +7,24 @@ using namespace std;
 
 void solve() {
 
-      int n, m;
+     int n, m;
         cin >> n >> m;
-        vector<int> height(n + 1);
-        iota(height.begin(), height.end(), 0); 
-        vector<long long> temp(n + 1, 0);    
-        for (int i = 0; i < m; ++i){
+ 
+        vector<long long> dp(n + 1, 0);
+ 
+        for(int i = 0; i < m; i++) {
             int x, y;
             long long v;
             cin >> x >> y >> v;
-            temp[height[x]] += v;
-            temp[height[y]] += v;
-            swap(height[x], height[y]);
+ 
+            long long pu = dp[x];
+            long long pv = dp[y];
+ 
+            dp[x] = max(pu, pv + v);
+            dp[y] = max(pv, pu + v);
         }
-        cout << *max_element(temp.begin()+1, temp.end()) << endl;
-    }
-
+ 
+        cout << *max_element(dp.begin() + 1, dp.end()) << endl;
 
   
 
