@@ -13,6 +13,7 @@ void solve() {
     for(int i = 0; i < s1.size(); i++){
         if(s1[i] > s2[i]){
             cout << 1 << endl;
+            return ;
 
         }
         if(s2[i] > s2[i]){
