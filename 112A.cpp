@@ -15,7 +15,9 @@ void solve() {
             cout << 1 << endl;
 
         }
-        if(s2[i] > s2[i])
+        if(s2[i] > s2[i]){
+            cout << -1 << endl;
+        }
     }
 
 }
