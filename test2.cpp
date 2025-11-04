@@ -11,8 +11,6 @@ void solve() {
         cin >> n >> m;
 
         vector<long long> dp(n + 1, 0);
-
-
         for (int i = 0; i < m; ++i) {
             int x, y;
             long long v;
