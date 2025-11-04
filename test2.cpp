@@ -23,14 +23,14 @@ void solve() {
             temp[height[x]] += v;
             temp[height[y]] += v;
 
-            // swap their current shafts
+           
             swap(height[x], height[y]);
         }
 
         cout << *max_element(temp.begin() + 1, temp.end()) << "\n";
     }
 
-}
+
   
 
 
