@@ -22,6 +22,7 @@ void solve() {
 
         }
     }
+    cout << 0 << endl;
 
 }
 
