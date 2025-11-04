@@ -21,7 +21,7 @@ void solve() {
             long long tempx = dp[x];
             long long tempy = dp[y];
 
-            dp[x] = max(dp[x], tmp_y + v);
+            dp[x] = max(dp[x], tempy + v);
             dp[y] = max(dp[y], tmp_x + v);
         }
 
