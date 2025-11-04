@@ -12,7 +12,7 @@ void solve() {
         vector<int> height(n + 1);
         iota(height.begin(), height.end(), 0); 
         vector<long long> temp(n + 1, 0);    
-        for (int i = 0; i < m; ++i) {
+        for (int i = 0; i < m; ++i){
             int x, y;
             long long v;
             cin >> x >> y >> v;
