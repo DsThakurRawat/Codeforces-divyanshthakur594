@@ -12,7 +12,7 @@ void solve() {
 
    
     for(int i = 0; i < s1.size(); i++){
-        if(tos1[i] > s2[i]){
+        if(tolower([i] > s2[i]){
             cout << 1 << endl;
             return;
 
