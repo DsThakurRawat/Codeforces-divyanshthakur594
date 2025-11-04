@@ -10,7 +10,7 @@ void solve() {
      int n, m;
         cin >> n >> m;
         vector<long long> dp(n + 1, 0);
-        for (int i = 0; i < m; ++i) {
+        for (int i = 0; i < m; ++i){
             int x, y;
             long long v;
             cin >> x >> y >> v;
