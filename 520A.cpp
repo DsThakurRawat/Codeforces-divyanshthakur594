@@ -12,7 +12,9 @@ void solve() {
 
     for(char c = 'a'; c <= 'z'; c++){
 
-        if(!s.contains(c))
+        if(!s.contains(c)){
+            cout << 
+        }
         
 
       
