@@ -9,8 +9,8 @@ void solve() {
 
     vector<int>words(26,0);
 
-    for(int i = 0; i < n; i++){
-        
+    for(int i = 0; i < 26; i++){
+
     }
   
 
