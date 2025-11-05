@@ -16,7 +16,7 @@ void solve() {
         if(s.find(c) == string::npos){
            flag = 1;
            
-            return;
+          break;
         }
 
 
