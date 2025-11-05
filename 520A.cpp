@@ -12,7 +12,7 @@ void solve() {
 
     for(char c = 'a'; c <= 'z'; c++){
 
-        if(s.contains)
+        if(s.find)
         
 
       
