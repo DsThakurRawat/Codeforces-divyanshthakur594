@@ -6,7 +6,17 @@
 using namespace std;
 
 void solve() {
-   
+   string s;
+    getline(cin, s);
+    set<char> letters;
+
+    for (char c : s) {
+        if (isalpha(c)) {
+            letters.insert(tolower(c));
+        }
+    }
+
+    cout << (letters.size() == 26 ? "YES" : "NO") << endl;
 
         
 
