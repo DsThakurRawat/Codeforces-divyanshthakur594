@@ -10,6 +10,7 @@ void solve() {
     string s; cin >> s;
 
     vector<int>words;
+    int flag = 0;
 
     for(char c = 'a'; c <= 'z'; c++){
 
