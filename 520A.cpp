@@ -24,7 +24,7 @@ void solve() {
 
     }
 
-    
+    cout << "YES" << endl;
 
 
 
