@@ -27,7 +27,7 @@ void solve() {
 
     }
 
-   cout 
+   
 
 
 
