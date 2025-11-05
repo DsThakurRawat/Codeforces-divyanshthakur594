@@ -26,7 +26,9 @@ void solve() {
       
 
     }
-    
+
+     cout << (flag ? "NO" : "YES") << endl;
+
 
    
 
