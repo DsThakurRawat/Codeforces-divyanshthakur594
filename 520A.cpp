@@ -9,7 +9,7 @@ void solve() {
 
     vector<int>words(26,0);
 
-    for(int i = 0; i < 26; i++){
+    for(char i = 0; i < 26; i++){
 
     }
   
