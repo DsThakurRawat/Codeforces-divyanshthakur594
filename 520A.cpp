@@ -13,8 +13,10 @@ void solve() {
     for(char c = 'a'; c <= 'z'; c++){
 
         if(!s.contains(c)){
-            cout << 
+            cout << "NO" << endl;
         }
+
+        
         
 
       
