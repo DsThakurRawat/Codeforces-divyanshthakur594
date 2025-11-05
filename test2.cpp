@@ -6,10 +6,7 @@
 using namespace std;
 
 void solve() {
-
-      
-        cin >> n >> m;
-        
+  
 
 }
   
