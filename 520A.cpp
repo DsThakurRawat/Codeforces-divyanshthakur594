@@ -15,7 +15,7 @@ void solve() {
 
         if(s.find(c) == string::npos){
             cout << "NO" << endl;
-            break;
+           
             return;
         }
 
