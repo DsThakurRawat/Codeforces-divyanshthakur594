@@ -10,6 +10,7 @@ void solve() {
     vector<int>words;
 
     for(char c = 'a'; c <= 'z'; c++){
+        words.push_back(c)''
       
 
     }
