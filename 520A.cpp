@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-    
+    string s; cin >> s;
 
     vector<int>words;
 
