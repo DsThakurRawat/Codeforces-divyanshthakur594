@@ -7,7 +7,7 @@ using namespace std;
 
 void solve() {
 
-    vector<int>
+    vector<int>list
   
 
 }
