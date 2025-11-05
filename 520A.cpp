@@ -6,6 +6,8 @@
 using namespace std;
 
 void solve() {
+
+    vector<int>
   
 
 }
