@@ -12,7 +12,7 @@ void solve() {
 
     for(char c = 'a'; c <= 'z'; c++){
 
-        if(s.find(c) == string::){
+        if(s.find(c) == string::npos){
             cout << "NO" << endl;
             return ;
         }
