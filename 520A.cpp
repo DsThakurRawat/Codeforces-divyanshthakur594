@@ -7,7 +7,7 @@ using namespace std;
 
 void solve() {
 
-    vector<int>words(26,)
+    vector<int>words(26,0)
   
 
 }
