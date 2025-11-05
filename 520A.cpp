@@ -11,10 +11,12 @@ void solve() {
 
     for(char c = 'a'; c <= 'z'; c++){
         words.push_back(c);
-        
+
       
 
     }
+
+    
   
 
 }
