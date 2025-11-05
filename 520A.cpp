@@ -7,7 +7,7 @@ using namespace std;
 
 void solve() {
 
-    vector<int>words(26,0);
+    vector<int>words;
 
     for(char c = 'a'; c <= 'z'; c++){
       
