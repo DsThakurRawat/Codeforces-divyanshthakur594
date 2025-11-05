@@ -14,6 +14,7 @@ void solve() {
 
         if(!s.contains(c)){
             cout << "NO" << endl;
+            return ;
         }
 
 
@@ -23,7 +24,7 @@ void solve() {
 
     }
 
-    
+
 
 
   
