@@ -16,7 +16,7 @@ void solve() {
 
     }
 
-    for(int i = 0; i < s.size())
+    for(int i = 0; i < s.size(); i++)
 
 
   
