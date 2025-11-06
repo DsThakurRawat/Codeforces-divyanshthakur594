@@ -8,6 +8,9 @@ using namespace std;
 void solve() {
     int n; cin >> n;
     string s; cin >> s;
+     for (char &c : s) {
+        c = tolower(c);
+    }
  
     vector<int>words;
     int flag = 0;
