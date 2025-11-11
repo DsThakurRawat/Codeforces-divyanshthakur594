@@ -17,14 +17,11 @@ void solve() {
     int x = 0; 
 
     int y = 0;
-
-    for(int y = 1; y < 1e7; y++){
-        for(int x = 1; x < 1e7; x++){
-            if(y*k == x + r){
-                cout << y << endl;
-                return;
-
-            }
+for (int y = 1; y <= 10; y++) {
+        int cost = k * y;
+        if (cost % 10 == 0 || cost % 10 == r) {
+            cout << y << endl;
+            return ;
         }
     }
 
