@@ -13,7 +13,7 @@ void solve() {
         int last = (k * n) % 10;
         if (last == 0 || last == r) {
             cout << n << '\n';
-            return 0;
+            return ;
         }
     }
 
