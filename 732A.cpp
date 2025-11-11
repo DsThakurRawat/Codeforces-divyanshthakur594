@@ -7,23 +7,15 @@ using namespace std;
 
 void solve() {
 
-    // polycarp chooses shovel->k burles
-    // 
-    int k,r;cin>>k>>r;
-
-    //  k price of one shovel
-    // r extra coin
-
-   
-for (int y = 1; y <= 10; y++) {
-        int cost = k * y;
-        if (cost % 10 == 0 || cost % 10 == r) {
-            cout << y << endl;
-            return ;
+    int k, r;
+    if (!(cin >> k >> r)) return 0;
+    for (int n = 1; n <= 10; ++n) {
+        int last = (k * n) % 10;
+        if (last == 0 || last == r) {
+            cout << n << '\n';
+            return 0;
         }
     }
-
-   
 
    
 
