@@ -14,9 +14,7 @@ void solve() {
     //  k price of one shovel
     // r extra coin
 
-    int x = 0; 
-
-    int y = 0;
+   
 for (int y = 1; y <= 10; y++) {
         int cost = k * y;
         if (cost % 10 == 0 || cost % 10 == r) {
