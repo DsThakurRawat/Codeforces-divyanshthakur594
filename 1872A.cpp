@@ -22,7 +22,7 @@ void solve() {
     int p = 2*c;
     double x =  k/p;
 
-    cout << (int)ceil(x)<<endl;;
+    cout << (int)ceil(x)<<endl;
     
    
     
