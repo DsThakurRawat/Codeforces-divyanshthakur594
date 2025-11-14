@@ -19,7 +19,7 @@ void solve() {
     }
 
     int k = abs(a-b);
-    double x = k/2*c;
+    double x = (k)/(2*c);
 
     cout << round(x)<< endl;
 
