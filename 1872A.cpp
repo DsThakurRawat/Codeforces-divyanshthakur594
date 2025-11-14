@@ -21,10 +21,10 @@ void solve() {
     int k = abs(a-b);
     int p = 2*c;
     double x =  k/p;
+
+    cout << (int)ceil(x)<<endl;;
     
-    cout << (x == (int)x ? (int)x : (int)x + 1);
-
-
+   
     
 
  
