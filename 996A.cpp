@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-    int n; cin >> n;
+    
 
     // denominations are sum of 1,5,10,20,100
 
