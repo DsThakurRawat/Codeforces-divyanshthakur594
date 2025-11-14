@@ -10,18 +10,18 @@ void solve() {
 
     // denominations are sum of 1,5,10,20,100
 
-    int n;cin>>n;
-    vector<int>coins={1,5,10,20,100};
-    vector<int>dp(n+1,INT_MAX);
-    dp[0] = 0;
-    for(int i = 0; i <= n; i++){
-      for(int take : coins){
-         if(take <= i){
-            dp[i] = min(dp[i],dp[i-take]+1);
-         }
-      }
+     long long n;
+    cin >> n;
+
+    vector<int> coins = {100, 20, 10, 5, 1};
+
+    long long ans = 0;
+    for (int c : coins) {
+        ans += n / c;
+        n %= c;
     }
-    cout << dp[n]<<endl;
+
+    cout << ans << endl;
 
 
 
