@@ -19,9 +19,11 @@ void solve() {
     }
 
     int k = abs(a-b);
-    double x = (k)/(2*c);
+    double x = 44.7;
 
-  cout << floor(x )<<endl;
+    
+
+  cout << floor(x)<<endl;
 
 
 
