@@ -22,8 +22,8 @@ void solve() {
     int p = 2*c;
     double x =  k/p;
 
-    if(x == (int)(x)) cout << x << endl;
-    else cout << ceil(x+0.5) << endl;
+     cout << fixed << setprecision(0);
+      cout << ceil(x)<<endl;     
     
    
     
