@@ -21,16 +21,14 @@ void solve() {
     int k = abs(a-b);
     int p = 2*c;
     double x =  k/p;
+    
+    cout << (x == (int)x ? (int)x : (int)x + 1);
+
 
     
 
  
-    if (x == floor(x)) {
-        cout << x<<endl;;        
-    } else {
-        cout << ceil(x+0.5)<<endl;;  
-    }
-
+    
 
 
 
