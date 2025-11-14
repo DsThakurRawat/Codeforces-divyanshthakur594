@@ -28,7 +28,7 @@ void solve() {
     if (x == floor(x)) {
         cout << (int)x<<endl;;        
     } else {
-        cout << (int)ceil(x+0.5)<<endl;;  
+        cout << ceil(x+0.5)<<endl;;  
     }
 
 
