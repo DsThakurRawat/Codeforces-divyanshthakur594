@@ -12,9 +12,8 @@ void solve() {
 
     int n;cin>>n;
     vector<int>coins={1,5,10,20,100};
-    vector<int>dp(n+1,1e9);
+    vector<int>dp(n+1);
     dp[0] = 0;
-
     for(int i = 0; i <= n; i++){
       for(int take : coins){
          if(take <= i){
