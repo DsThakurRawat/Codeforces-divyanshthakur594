@@ -21,7 +21,7 @@ void solve() {
     int k = abs(a-b);
     double x = (k)/(2*c);
 
-  cout << ceil(x )<<endl;
+  cout << floor(x )<<endl;
 
 
 
