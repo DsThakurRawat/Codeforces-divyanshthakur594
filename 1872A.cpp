@@ -19,7 +19,8 @@ void solve() {
     }
 
     int k = abs(a-b);
-    double x = 44.7;
+    int p = 2*c;
+    double x =  k/p;
 
     
 
