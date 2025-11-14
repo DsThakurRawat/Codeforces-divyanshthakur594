@@ -8,30 +8,28 @@ using namespace std;
 void solve() {
     int n; cin >> n;
 
-    vector<int>v(5);
-    v = {1,5,10,20,100};
-  //  cout << v[1] << endl;
-   int count = 0;
+    // denominations are sum of 1,5,10,20,100
 
-  for(int i = 0; i < n; i++){
+    int n;cin>>n;
+    vector<int>coins={1,5,10,20,100};
+    vector<int>dp(n+1,1e9);
+    dp[0] = 0;
 
-     n = n - v[i];
-     count++;
-     if( n <= v[i]){
-     i = i;
-     }
-     if( n == 0) break;
-    
-  }
+    for(int i = 0; i <= n; i++){
+      for(int take : coins){
+         if(take <= i){
+            dp[i] = min(dp[i],dp[i-take]+1);
+         }
+      }
+    }
+    cout << dp[n]<<endl;
 
-   cout << count << endl;
+
+
+
+
 
    
-
-   
-
-
-
 
   
 }
