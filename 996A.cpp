@@ -12,7 +12,7 @@ void solve() {
 
     int n;cin>>n;
     vector<int>coins={1,5,10,20,100};
-    vector<int>dp(n+1);
+    vector<int>dp(n+1,0);
     dp[0] = 0;
     for(int i = 0; i <= n; i++){
       for(int take : coins){
