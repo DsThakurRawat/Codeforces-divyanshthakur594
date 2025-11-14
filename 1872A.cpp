@@ -23,7 +23,7 @@ void solve() {
     double x =  k/p;
 
     if(x == (int)(x)) cout << x << endl;
-    else cout << ceil(x) << endl;
+    else cout << ceil(x+0.5) << endl;
     
    
     
