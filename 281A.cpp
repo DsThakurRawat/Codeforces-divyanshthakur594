@@ -6,8 +6,16 @@
 using namespace std;
 
 void solve() {
+    string s;cin>>s;
+    string ans;
+    for(int i=0;i<s.size();i++){
+        if(i == 0) ans +=toupper(s[i]);
+        else ans +=s[i];
+
+    }
+    cout << ans << endl;
   
-    
+
 
 }
   
