@@ -26,9 +26,9 @@ void solve() {
 
  
     if (x == floor(x)) {
-        cout << (int)x;        
+        cout << (int)x<<endl;;        
     } else {
-        cout << (int)ceil(x);  
+        cout << (int)ceil(x)<<endl;;  
     }
 
 
