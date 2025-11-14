@@ -24,7 +24,10 @@ void solve() {
 
     
 
+ if( x == (int)x ) cout << x << end;
+ else
   cout << ceil(x+0.5)<<endl;
+
 
 
 
