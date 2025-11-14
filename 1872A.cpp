@@ -20,7 +20,7 @@ void solve() {
 
     int k = abs(a-b);
     int p = 2*c;
-    double x =  (double)x/p;
+    double x =  (double)k/p;
 
      cout << fixed << setprecision(0);
       cout << ceil(x)<<endl;     
