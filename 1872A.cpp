@@ -24,7 +24,7 @@ void solve() {
 
     
 
-  cout << floor(x+1)<<endl;
+  cout << ceil(x+1)<<endl;
 
 
 
