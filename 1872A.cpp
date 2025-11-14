@@ -24,7 +24,7 @@ void solve() {
 
     
 
-  cout << ceil(x)<<endl;
+  cout << ceil(x+0.5)<<endl;
 
 
 
