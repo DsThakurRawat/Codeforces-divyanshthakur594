@@ -24,11 +24,12 @@ void solve() {
 
     
 
- //if( x == (int)x ) cout << x << endl;
- //else
-  cout << ceil(x + 0.5)<<endl;
-
-
+ 
+    if (x == floor(x)) {
+        cout << (int)x;        
+    } else {
+        cout << (int)ceil(x);  
+    }
 
 
 
