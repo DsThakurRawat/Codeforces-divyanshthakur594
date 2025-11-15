@@ -13,7 +13,7 @@ void solve() {
       if(i % 3 != 0 || i % 2 == 1) nums.push_back(i);
     }
 
-    cout << nums[k] << endl;
+    cout << nums[k-1] << endl;
 
 
 
