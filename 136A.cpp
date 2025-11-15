@@ -13,7 +13,7 @@ void solve() {
 
     for(int i = 0; i < n; i++){
         int take = nums[i];
-        ans[take-1] = take + 1; 
+        ans[take-1] = i + 1; 
     }
     for(int x: ans) cout << x << " ";
 
