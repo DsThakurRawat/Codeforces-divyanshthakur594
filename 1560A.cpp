@@ -10,7 +10,7 @@ void solve() {
     vector<int>nums;
 
     for(int i = 1; i < 1e4; i++){
-     if(i % 2 == 1){
+     if(i % 2 == 0){
      if( i % 3 != 0) 
        nums.push_back(i);
       }
