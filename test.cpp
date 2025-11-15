@@ -14,6 +14,7 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define pb push_back
 #define ff first
+#define nums_input for(int i = 0; i < n; i++) cin >> nums[i];
 #define ss second
 #define pii pair<int, int>
 #define vi vector<int>
