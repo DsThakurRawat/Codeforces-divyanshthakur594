@@ -9,7 +9,7 @@ void solve() {
     int k;cin>>k;
     vector<int>nums;
 
-    for(int i = 0; i < 1e4; i++){
+    for(int i = 1; i < 1e4; i++){
       if(i % 3 != 0 || i % 2 == 1) nums.push_back(i);
     }
 
