@@ -9,7 +9,7 @@ void solve() {
     long long a,b,c;cin>>a>>b>>c;
     long long  sum = 0;
 
-    for(long long i = 1; i<=4; i++){
+    for(long long i = 1; i<=c; i++){
         sum += a*i;
     }
     if(b >= sum) cout << 0<<endl;
