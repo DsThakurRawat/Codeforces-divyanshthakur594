@@ -12,7 +12,7 @@ void solve() {
     for(long long i = 1; i<=4; i++){
         sum += a*i;
     }
-    if(sum >= b) cout << 0<<endl;
+    if(b >= sum) cout << 0<<endl;
     else cout << sum -b << endl;
 
 
