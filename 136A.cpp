@@ -8,10 +8,16 @@ using namespace std;
 
 void solve() {
     int n;cin>>n;
-    vector<int>nums(n);
+    vector<int>nums(n),ans(n);
     for(int i =0; i < n; i++) cin >> nums[i];
 
-    for(int i = 0; i< n; i++) cout << nums[i] << " ";
+    for(int i = 0; i < n; i++){
+        int take = nums[i];
+        ans[take-1] = take + 1; 
+    }
+    for(int x: ans) cout << x << " ";
+
+    
 
 
     
