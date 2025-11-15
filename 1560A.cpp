@@ -7,19 +7,15 @@ using namespace std;
 
 void solve() {
     int k;cin>>k;
-    vector<int>nums;
+    //vector<int>nums;
 
-    for(int i = 1; i < 1e4; i++){
-     if(i % 2 == 0){
-     if( i % 3 != 0) 
-       nums.push_back(i);
-      }
-      else if( i % 3 != 0){
-        if(i % 2 ==1) nums.push_back(i);
-      }
-    
+    for(int i = 1; ;i++){
+        if(i%3 == 0 || i % 10 == 3) continue;
+        if(--k == 0){//--k decrements k by 1 BEFORE using its value.
+            cout << i << endl;
+            break;
+        }
     }
-    for(int i = 0; i < 10; i++) cout << nums[i]<<endl;
 
     
 
