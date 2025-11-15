@@ -10,8 +10,8 @@ void solve() {
     vector<int>nums(n);for(int i = 0; i< n; i++) cin >> nums[i];
     long long sum =0;
     for(int i = 0; i < n; i++) sum+=nums[i];
-    if(sum % 2 == 0) cout <<"YES"<<endl;
-    else cout <<"NO"<<endl;
+    if(sum % 2 == 0) cout <<"NO"<<endl;
+    else cout <<"YES"<<endl;
 
 
   
