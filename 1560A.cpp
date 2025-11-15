@@ -11,9 +11,12 @@ void solve() {
 
     for(int i = 1; i < 1e4; i++){
       if(i % 3 != 0 || i % 2 == 1) nums.push_back(i);
+      cout << nums[i] << endl;
     }
 
-    cout << nums[k-1] << endl;
+    
+
+  
 
 
 
