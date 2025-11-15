@@ -9,7 +9,7 @@ void solve() {
     int a,b,c;cin>>a>>b>>c;
     int n = 2*abs(a-b);
 
-    if(!( 1<= a <=n && 1 <= b <= n &&  1 <= c <= n)) {
+    if(!( 1<= a <=n || 1 <= b <= n ||  1 <= c <= n)) {
         cout << -1 << endl;
         return;
 
