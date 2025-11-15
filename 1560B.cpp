@@ -14,7 +14,12 @@ void solve() {
         return;
 
     }
-    cout << c + n/2<<endl;;
+    int d1 = c + n/2;
+    int d2 = c - n/2;
+
+    if(d1 <=n ) cout << d1 <<endl;
+    else cout << d2 << endl;
+
     
 
 
