@@ -1,7 +1,31 @@
-n = int(input())
-arr = list(map(int, input().split()))
-sum1 = 0
-arr.sort()
-for i in range(n):
-   sum1 = (arr[n-1] - arr[i]) + sum1
-print(sum1)
+
+// simple template-test2
+// code by divyansh rawat
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void solve() {
+    int n;cin>>n;
+    vector<int>nums;
+    for(int i =0; i < n; i++) cin >> nums[i];
+
+    for(int i = 0; i< n; i++) cout << nums[i] << " ";
+
+
+    
+  
+
+}
+  
+
+
+int main() {
+    int t ;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
