@@ -10,7 +10,7 @@ void solve() {
     vector<int>nums;
 
     for(int i = 0; i < 1e4; i++){
-      if(i % 3 != 0 && i % 2 != 1) nums.push_back(i);
+      if(i % 3 != 0 && i % 2 == 1) nums.push_back(i);
     }
 
     cout << nums[k] << endl;
