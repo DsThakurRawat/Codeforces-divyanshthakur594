@@ -6,10 +6,10 @@
 using namespace std;
 
 void solve() {
-    int a,b,c;cin>>a>>b>>c;
-    int sum = 0;
+    long long a,b,c;cin>>a>>b>>c;
+    long long  sum = 0;
 
-    for(int i = 1; i<=4; i++){
+    for(long long i = 1; i<=4; i++){
         sum += a*i;
     }
     cout << sum-b <<endl;
