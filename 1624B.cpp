@@ -7,17 +7,21 @@ using namespace std;
 
 void solve() {
     long long  a,b,c;cin>>a>>b>>c;
-
-    long long d = b-a;
-    int flag = 1;
-
-    if( (a + 2*d) % c != 0 || (a + d ) % b != 0 || a % a != 0 ){
-        cout << "NO"<<endl;
-        
+     if (2*b > c && (2*b - c) % a == 0) {
+        cout << "YES\n";
+        return;
     }
-    else cout <<"YES"<<endl;
+     if ((a + c) % (2*b) == 0) {
+        cout << "YES\n";
+        return;
+    } 
+    if (2*b > a && (2*b - a) % c == 0) {
+        cout << "YES\n";
+        return;
+    }
 
 
+    
 
 
     
