@@ -36,7 +36,8 @@ void solve() {
 
         if (ok) ans = max(ans, 2 * m);
     }
-
+  
+    cout << ans <<endl;
 
 
 
