@@ -12,7 +12,7 @@ void solve() {
  map<int,int>mp;
 
  for(int i = 0; i < s.size(); i++){
-    if(s[i]>='a') mp[s[i]]++;
+    if(s[i]>='a' && s[i] <= 'z') mp[s[i]]++;
  }
 
  cout << mp.size()<<endl;
