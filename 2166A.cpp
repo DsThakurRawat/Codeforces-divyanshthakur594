@@ -7,11 +7,8 @@ using namespace std;
 
 void solve() {
     int n;cin>>n;
-    string s;
-    cin >> s;
-  
-
-  int count = 0;
+    string s;cin >> s;
+    int count = 0;
  
 
   for(int i=0;  i<s.size(); i++){
