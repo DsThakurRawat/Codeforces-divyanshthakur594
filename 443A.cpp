@@ -7,7 +7,13 @@ using namespace std;
 
 void solve() {
   string s;getline(cin,s);
- cout << s <<endl;
+ //cout << s <<endl;
+
+ map<int,int>mp;
+
+ for(int i = 0; i < s.size(); i++)mp[s[i]]++;
+ 
+ cout << mp.size()<<endl;
 
 
 }
