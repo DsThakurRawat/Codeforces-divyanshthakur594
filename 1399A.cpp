@@ -9,6 +9,7 @@ void solve() {
   int n;cin>>n;
   vector<int>v(n);for(int i = 0; i < n; i++)cin>>v[i];
   //abs(a-b)<=1 and choose c = min(a,b);
+  sort(v.begin(),v.end());
 
   if(v.size() == 1){
    cout << "YES"<<endl;
@@ -16,8 +17,8 @@ void solve() {
 }
 
   for(int i=0;i<n-1;i++){
-    if(abs(v[i]-v[i+1]) >1){ 
-    cout <<"NO"<<endl;
+    if(abs(v[i]-v[i+1]) <= 1){ 
+    
     return;
     }
   }
