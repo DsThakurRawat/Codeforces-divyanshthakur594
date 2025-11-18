@@ -6,6 +6,13 @@
 using namespace std;
 
 void solve() {
+
+    int n;cin>>n;
+    vector<long long >a(n);for(long long  i=0; i<n; i++)cin>>a[i];
+    vector<long long >b(n);for(long long  i=0; i<n; i++)cin>>b[i];
+
+
+
   
 
 }
