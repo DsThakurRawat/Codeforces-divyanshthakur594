@@ -1,0 +1,1 @@
+{"name":"Local: 1399A","url":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/1399A.cpp","tests":[{"id":1763484723915,"input":"5\n3\n1 2 2\n4\n5 5 5 5\n3\n1 2 4\n4\n1 3 4 4\n1\n100\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/1399A.cpp","group":"local","local":true}
