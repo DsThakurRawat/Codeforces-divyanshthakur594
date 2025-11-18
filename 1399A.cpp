@@ -13,7 +13,7 @@ void solve() {
   if(v.size() == 1) cout << "YES"<<endl;
 
   for(int i=0;i<n-1;i++){
-    if(abs(v[i]-v[i+1]) >=1){ 
+    if(abs(v[i]-v[i+1]) >1){ 
     cout <<"NO"<<endl;
     return;
     }
