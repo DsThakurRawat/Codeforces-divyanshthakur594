@@ -11,7 +11,7 @@ void solve() {
   sort(v.begin(),v.end());
   int count = 0;
 
-  for(long long  i=0;i< n;i++){
+  for(long long  i=0;i<v.size();i++){
         if(abs(v[i]-v[i+1]) <= k) count++;
 
   }
