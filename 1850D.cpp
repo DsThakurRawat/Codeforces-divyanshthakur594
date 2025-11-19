@@ -11,11 +11,11 @@ void solve() {
   sort(v.begin(),v.end());
   int count = 0;
 
-  for(long long  i=0;i<v.size()-1;i++){
-        if(abs(v[i]-v[i+1]) > k) count++;
+  for(long long  i=1;i<v.size()-1;i++){
+        if(abs(v[i]-v[i-1]) 0=< k) count++;
 
   }
-  cout << count << endl;
+  cout << n- count << endl;
 
 
 
