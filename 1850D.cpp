@@ -12,9 +12,7 @@ void solve() {
   int count = 0;
 
   for(long long  i=0;i< n-1;i++){
-   
         if(abs(v[i]-v[i+1]) <= k) count++;
-    
 
   }
   cout << count << endl;
