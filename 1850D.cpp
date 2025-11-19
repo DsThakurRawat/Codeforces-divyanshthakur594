@@ -6,8 +6,19 @@
 using namespace std;
 
 void solve() {
-  int n,k;cin>>n>>k;
-  vector<int>v(n);for(int i= 0;i<n; i++)cin>>v[i];
+  long long  n,k;cin>>n>>k;//less or equal than k
+  vector<long long >v(n);for(long long  i= 0;i<n; i++)cin>>v[i];
+  sort(v.begin(),v.end());
+  int count = 0;
+
+  for(long long  i=0;i< n;i++){
+    for(long long j = i; j < n; j++){
+        if(abs(v[i]-v[j]) <= k) count++;
+    }
+
+  }
+  cout << count << endl;
+
 
 
 }
