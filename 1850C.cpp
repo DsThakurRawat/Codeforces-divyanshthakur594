@@ -16,7 +16,7 @@ void solve() {
     for(int i = 0; i < 8; i++){
         string t = grid[i];
         for(int j = 0; j < t.size(); j++){
-            if(t[i] != '.') s+=t[i];
+            if(t[j] != '.') s+=t[j];
 
         }
     }
