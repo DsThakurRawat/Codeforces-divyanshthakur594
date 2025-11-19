@@ -15,7 +15,7 @@ void solve() {
         if(abs(v[i]-v[i+1]) <= k) count++;
 
   }
-  cout <<  count << endl;
+  cout << n - count << endl;
 
 
 
