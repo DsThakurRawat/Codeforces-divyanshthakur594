@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
   //  int n;cin>>n;
     vector<string>grid(8);
-    string s;
+    string s = "";
 
     for(int i = 0; i < 8; i++){
         cin >> grid[i];
