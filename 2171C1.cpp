@@ -10,12 +10,9 @@ void solve() {
     int n; 
     cin >> n;
     vector<int> a(n), b(n);
-
     for(int &x : a) cin >> x;
     for(int &x : b) cin >> x;
-
     int odd_diff = 0, even_diff = 0;
-
     for(int i = 0; i < n; i++) {
         if(a[i] != b[i]) {
             if((i + 1) & 1) odd_diff++;
