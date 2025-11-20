@@ -14,7 +14,7 @@ void solve() {
   for(int i = 1; i < n; i++){
     if(v[i]-v[i-1] > k) count = 1;
     else count++;
-    max(maxii,count);
+   maxii =  max(maxii,count);
 
   }
   cout << n - maxii << endl;
