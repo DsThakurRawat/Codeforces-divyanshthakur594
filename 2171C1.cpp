@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-    void solve() {
+   
     int n; cin >> n;
     vector<int>a(n), b(n);
     for(int &x : a) cin >> x;
