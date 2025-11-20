@@ -23,9 +23,9 @@ void solve() {
         }
     }
 
-    if(odd_diff > even_diff) cout << "Ajisai\n";
-    else if(even_diff > odd_diff) cout << "Mai\n";
-    else cout << "Tie\n";
+    if(odd_diff > even_diff) cout << "Ajisai"<<endl;
+    else if(even_diff > odd_diff) cout << "Mai"<<endl;
+    else cout << "Tie"<<endl;
 }
 
 
