@@ -28,11 +28,11 @@ void solve() {
    
     
       
-    int xor_a = a[0];
-    int xor_b = b[0];
-    for(int i = 1; i < n; i++){
-        xor_a=xor_a^a[i];
-        xor_b=xor_b^b[i];
+    int xor_a = 0;
+    int xor_b = 0;
+    for(int i = 0; i < n; i++){
+        xor_a ^= a[i];
+        xor_b ^= b[i];
     }
     if(xor_a > xor_b)cout << "Ajisai"<<endl;
     else if(xor_b > xor_a )cout << "Mai"<<endl;
