@@ -41,7 +41,7 @@ template<typename T1, typename T2> void _print(const map<T1,T2> &v){ cerr<<"{"; 
 template<typename T> void print(const vector<T> &v){ for(const auto &x : v) cout << x << ' '; cout << endl; }
 void print(const string &s){ cout << s << endl; }
 mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
-void run() {
+void solve() {
     int n; cin>>n;
     vi v(n); for(int &it: v) cin>>it;
     vi ans(n);
@@ -62,7 +62,7 @@ int32_t main() {
 
     int t = 1;
     cin >> t;
-    while (t--) run();
+    while (t--) solve();
 
     auto end = chrono::high_resolution_clock::now();
     auto elapsed = chrono::duration_cast<chrono::nanoseconds>(end - begin);
