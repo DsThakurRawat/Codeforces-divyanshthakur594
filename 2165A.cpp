@@ -6,7 +6,7 @@ using namespace std;
 #define NINF64 -9223372036854775807LL
 #define MOD 1000000007
 #define MOD1 998244353
-#define PI 3.141592653589793238462
+#define Pi 3.141592653589793238462
 #define int int64_t
 #define vi vector<int>
 #define vvi vector<vector<int>>
