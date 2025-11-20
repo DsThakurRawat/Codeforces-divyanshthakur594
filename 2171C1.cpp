@@ -10,27 +10,33 @@ void solve() {
     vector<int>a(n);for(int i = 0; i < n; i++)cin>>a[i];
     vector<int>b(n);for(int i = 0; i < n; i++)cin>>b[i];
 
-        int cntA = 0, cntM = 0;
-        for(int i = 0; i < n; i++){
-            if(a[i] != b[i]){
-                if(i % 2 == 0) cntA++;  // Ajisai controls
-                else cntM++;           // Mai controls
-            }
-        }
+    for(int i = 0; i < n; i++) {
+    int turn = i + 1; 
+    if(turn % 2 == 1){
+      
+        if(b[i] > a[i]) swap(a[i], b[i]);
+    } else {
+      
+        if(a[i] > b[i]) swap(a[i], b[i]);
+    }
+}
+   
+    
+      
+    int xor_a = a[0];
+    int xor_b = b[0];
+    for(int i = 1; i < n; i++){
+        xor_a=xor_a^a[i];
+        xor_b=xor_b^b[i];
+    }
+    if(xor_a > xor_b)cout << "Ajisai"<<endl;
+    else if(xor_b > xor_a )cout << "Mai"<<endl;
+    else cout << "Tie"<<endl;
 
-        int xorA = cntA % 2;
-        int xorM = cntM % 2;
-
-        if(xorA > xorM) cout << "Ajisai\n";
-        else if(xorM > xorA) cout << "Mai\n";
-        else cout << "Tie\n";
-            
-            
-          
 
 
 
-            
+    
 
   
 
