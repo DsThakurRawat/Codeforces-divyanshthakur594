@@ -9,17 +9,22 @@ void solve() {
     int n;cin>>n;
     vector<int>a(n);for(int i = 0; i < n; i++)cin>>a[i];
     vector<int>b(n);for(int i = 0; i < n; i++)cin>>b[i];
-
     for(int i = 0; i < n; i++) {
     int turn = i + 1; 
-    if(turn % 2 == 1){
-      
-        if(b[i] > a[i]) swap(a[i], b[i]);
+
+    if(turn % 2 == 1){  
+       
+        if(a[i] != b[i] && b[i] == 1){
+            swap(a[i], b[i]);
+        }
     } else {
       
-        if(a[i] > b[i]) swap(a[i], b[i]);
+        if(a[i] != b[i] && a[i] == 1){
+            swap(a[i], b[i]);
+        }
     }
 }
+
    
     
       
