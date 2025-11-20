@@ -9,7 +9,7 @@ void solve() {
   long long  n,k;cin>>n>>k;//less or equal than k
   vector<long long >v(n);for(long long  i= 0;i<n; i++)cin>>v[i];
   sort(v.begin(),v.end());
-  int count = 1;
+  int count = 0;
 
   for(long long  i=1;i<v.size()-1;i++){
         if(abs(v[i]-v[i-1]) <= k) count++;
