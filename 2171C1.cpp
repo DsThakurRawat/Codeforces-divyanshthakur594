@@ -22,7 +22,7 @@ void solve() {
     }
     if(xor_a > xor_b)cout << "Ajisai"<<endl;
     else if(xor_b > xor_a )cout << "Mai"<<endl;
-    else cout << Tie<<endl;
+    else cout << "Tie"<<endl;
 
 
 
