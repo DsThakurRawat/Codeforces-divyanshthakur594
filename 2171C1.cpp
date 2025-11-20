@@ -7,28 +7,26 @@ using namespace std;
 
 void solve() {
    
-    int n; cin >> n;
-    vector<int>a(n), b(n);
+    int n; 
+    cin >> n;
+    vector<int> a(n), b(n);
+
     for(int &x : a) cin >> x;
     for(int &x : b) cin >> x;
 
-    int cntA = 0, cntM = 0;
+    int odd_diff = 0, even_diff = 0;
 
     for(int i = 0; i < n; i++) {
         if(a[i] != b[i]) {
-            if((i+1) % 2 == 1) cntA++; 
-            else cntM++;              
+            if((i + 1) & 1) odd_diff++;
+            else even_diff++;
         }
     }
 
-    int xorA = cntA % 2;
-    int xorB = cntM % 2;
-
-    if(xorA > xorB) cout << "Ajisai\n";
-    else if(xorB > xorA) cout << "Mai\n";
+    if(odd_diff > even_diff) cout << "Ajisai\n";
+    else if(even_diff > odd_diff) cout << "Mai\n";
     else cout << "Tie\n";
 }
-
 
 
 
