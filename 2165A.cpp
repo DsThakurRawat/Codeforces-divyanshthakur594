@@ -51,8 +51,7 @@ void solve() {
     }
     int sum = accumulate(all(ans),0LL);
     int maxm = *max_element(all(ans));
-    cout<<sum-maxm<<endl;
-}
+   cout << sum - maxm<<endl;
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
