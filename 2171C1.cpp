@@ -6,37 +6,29 @@
 using namespace std;
 
 void solve() {
-    int n;cin>>n;
-    vector<int>a(n);for(int i = 0; i < n; i++)cin>>a[i];
-    vector<int>b(n);for(int i = 0; i < n; i++)cin>>b[i];
-    for(int i = 0; i < n; i++) {
-    int turn = i + 1; 
+    void solve() {
+    int n; cin >> n;
+    vector<int>a(n), b(n);
+    for(int &x : a) cin >> x;
+    for(int &x : b) cin >> x;
 
-    if(turn % 2 == 1){  
-       
-        if(a[i] != b[i] && b[i] == 1){
-            swap(a[i], b[i]);
-        }
-    } else {
-      
-        if(a[i] != b[i] && a[i] == 1){
-            swap(a[i], b[i]);
+    int cntA = 0, cntM = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(a[i] != b[i]) {
+            if((i+1) % 2 == 1) cntA++; 
+            else cntM++;              
         }
     }
+
+    int xorA = cntA % 2;
+    int xorB = cntM % 2;
+
+    if(xorA > xorB) cout << "Ajisai\n";
+    else if(xorB > xorA) cout << "Mai\n";
+    else cout << "Tie\n";
 }
 
-   
-    
-      
-    int xor_a = 0;
-    int xor_b = 0;
-    for(int i = 0; i < n; i++){
-        xor_a ^= a[i];
-        xor_b ^= b[i];
-    }
-    if(xor_a > xor_b)cout << "Ajisai"<<endl;
-    else if(xor_b > xor_a )cout << "Mai"<<endl;
-    else cout << "Tie"<<endl;
 
 
 
