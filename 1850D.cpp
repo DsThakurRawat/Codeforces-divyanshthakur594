@@ -9,13 +9,15 @@ void solve() {
   long long  n,k;cin>>n>>k;//less or equal than k
   vector<long long >v(n);for(long long  i= 0;i<n; i++)cin>>v[i];
   sort(v.begin(),v.end());
-  int count = 0;
+ long long l =0,ans = 0;
 
-  for(long long  i=1;i<v.size()-1;i++){
-        if(abs(v[i]-v[i-1]) <= k) count++;
-
+ for(long long r = 1; r < n; r++){
+  if(v[r] - v[r-1] > k){
+    l = r;
   }
-  cout <<  count << endl;
+  ans = max(ans,r-l+1);
+ }
+ cout << ans << endl;
 
 
 
