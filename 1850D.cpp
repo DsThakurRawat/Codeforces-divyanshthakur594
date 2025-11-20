@@ -12,10 +12,10 @@ void solve() {
   int count = 1;
 
   for(long long  i=1;i<v.size()-1;i++){
-        if(abs(v[i]-v[i-1]) > k) count++;
+        if(abs(v[i]-v[i-1]) <= k) count++;
 
   }
-  cout << n- count << endl;
+  cout <<  count << endl;
 
 
 
