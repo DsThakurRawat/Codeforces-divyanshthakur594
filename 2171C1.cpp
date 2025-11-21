@@ -12,7 +12,7 @@ void solve() {
     //If number of 1s is even → result = 0
     //If number of 1s is odd → result = 1
     int count_ones = 0;
-    int k =0;
+    int k =-1;
     for(int i = 0; i < n; i++){
         if(a[i] == 1){
             count_ones++;
@@ -24,41 +24,23 @@ void solve() {
 
 
     }
-     for(int i = 0; i < n; i++){
-      if(a[(n-1)-i] != b[(n-1)-i] ){ 
+     for(int i = n-1; i >=0; i--){
+      if(a[i] != b[i] ){ 
             k = i;
             break;
         }
     }
 
-
-
-
-
     if(count_ones % 2==0){
-        cout << "Tie"<<endl; 
+        cout << "Tie"<<endl;
+ 
     }
-   else  if( k % 2 == 0) cout << "Ajisai"<<endl;
-   else cout << "Mai"<<endl;
-
-    
-
-
-
-
+    if( k == -1){
+        cout << "Tie"<<endl;
+    }
+    if( k % 2 == 0) cout <<"Ajisai"<<endl;
+    else cout << "Mai"<<endl;
 }
-   
-
-
-
-
-    
-
-  
-
-
-  
-
 
 int main() {
     ios::sync_with_stdio(false);
