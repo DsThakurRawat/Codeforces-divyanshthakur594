@@ -1,29 +1,53 @@
 
 // simple template-test2
 // code by divyansh rawat
-
 #include <bits/stdc++.h>
 using namespace std;
-
 void solve() {
-   
     int n; 
     cin >> n;
     vector<int> a(n), b(n);
     for(int &x : a) cin >> x;
     for(int &x : b) cin >> x;
-    int odd_diff = 0, even_diff = 0;
-    for(int i = 0; i < n; i++) {
-        if(a[i] != b[i]) {
-            if((i + 1) & 1) odd_diff++;
-            else even_diff++;
+    //If number of 1s is even → result = 0
+    //If number of 1s is odd → result = 1
+    int count_ones = 0;
+    int k =0;
+    for(int i = 0; i < n; i++){
+        if(a[i] == 1){
+            count_ones++;
+        }
+        if(b[i] == 1){
+         count_ones++;
+        }
+      
+
+
+    }
+     for(int i = 0; i < n; i++){
+      if(a[(n-1)-i] != b[(n-1)-i] ){ 
+            k = i;
+            break;
         }
     }
 
-    if(odd_diff > even_diff) cout << "Ajisai"<<endl;
-    else if(even_diff > odd_diff) cout << "Mai"<<endl;
-    else cout << "Tie"<<endl;
+
+
+
+
+    if(count_ones % 2==0){
+        cout << "Tie"<<endl; 
+    }
+   else  if( k % 2 == 0) cout << "Ajisai"<<endl;
+   else cout << "Mai"<<endl;
+
+    
+
+
+
+
 }
+   
 
 
 
