@@ -33,10 +33,12 @@ void solve() {
 
     if(count_ones % 2==0){
         cout << "Tie"<<endl;
+        return;
  
     }
     if( k == -1){
         cout << "Tie"<<endl;
+        return;
     }
     if( k % 2 == 0) cout <<"Ajisai"<<endl;
     else cout << "Mai"<<endl;
