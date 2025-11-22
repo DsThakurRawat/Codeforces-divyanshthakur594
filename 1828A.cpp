@@ -35,7 +35,7 @@ Time complexity: O(n)
  */  
 
  for(int i = 1; i<=n; i++){
-  cout << i<<" ";
+  cout << 2*i<<" ";
  }
  cout <<endl;
 
