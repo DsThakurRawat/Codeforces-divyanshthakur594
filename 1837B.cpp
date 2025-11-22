@@ -12,10 +12,10 @@ void solve() {
     // score is len+1;
 
     int max_len = 0;
-    int len = 2;
+    int len = 0;
 
     for(int i=0; i < s.size()-1;i++){
-        if(s[i] == s[i+1]){
+        if(s[i] == '<'&&s[i] == s[i+1]){
             len++;
         }
         max_len = max(len,max_len);
