@@ -15,16 +15,16 @@ void solve() {
     int len = 0;
 
     for(int i=0; i < s.size()-1;i++){
-        if(s[i] == '<'&&s[i] == s[i+1]){
+        if(s[i] == s[i+1]){
             len++;
         }
-         if(s[i] == '>'&&s[i] == s[i+1]){
-            len++;
-        }
-        max_len = max(len,max_len);
+      else{
+        len = 0;
+      }
+      max_len = max(len,max_len);
 
     }
-    cout << max_len<<endl;
+    cout<<max_len<<endl;
 
 
 
