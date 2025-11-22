@@ -8,30 +8,44 @@ using namespace std;
 void solve() {
   long long  n;cin>>n;
   vector<long long >ans(n);
+/**
+ Remember the sum of the first n
+ positive integers?
 
-  ans.push_back(1);
-  int sum = ans[0];
+ Every positive integer is divisible by 1
 
-  while(true){
-     ans.push_back(ans[0]+1);
+ Consider the array a=[1,2,…,n]
+ that satisfies the second condition. It has the sum of 1+2+⋯+n=n(n+1)2
+.
 
-    sum =  accumulate(ans.begin(),ans.end(),0);
-    if(sum % n == 0 ){
-        break;
-    }
+One solution is to notice that if we double every element (a=[2,4,6,…,2n])
+, the sum becomes n(n+1)2×2=n(n+1)
+, which is divisible by n
+.
 
-      
+Another solution is to increase the value of a1
+ until the sum becomes divisible by n
+. This works because every integer is divisible by 1
+, and we only need to increase a1
+ by at most n
+.
+\
+Time complexity: O(n)
+
+ */  
+
+ for(int i = 1; i<=n; i++){
+  cout << i<<" ";
+ }
+ cout <<endl;
+
+
+   
 
 
 
-  }
-  for(auto &out:ans) {
-    cout << out << " ";
-    
-  }
-  cout <<endl;
 
- 
+
 
  
 
