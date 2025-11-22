@@ -18,6 +18,9 @@ void solve() {
         if(s[i] == '<'&&s[i] == s[i+1]){
             len++;
         }
+         if(s[i] == '>'&&s[i] == s[i+1]){
+            len++;
+        }
         max_len = max(len,max_len);
 
     }
