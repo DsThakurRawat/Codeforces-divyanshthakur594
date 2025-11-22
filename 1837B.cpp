@@ -24,7 +24,7 @@ void solve() {
       max_len = max(len,max_len);
 
     }
-    cout<<max_len<<endl;
+    cout<<max_len+1<<endl;
 
 
 
