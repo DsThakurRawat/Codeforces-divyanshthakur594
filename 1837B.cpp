@@ -11,7 +11,7 @@ void solve() {
 
     // score is len+1;
 
-    int max_len = 0;
+    int max_len = 1;
     int len = 1;
 
     for(int i=0; i < s.size()-1;i++){
