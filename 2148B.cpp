@@ -10,7 +10,9 @@ void solve() {
 
   vector<long long>a(n);for(auto &in:a)cin>>in;
   vector<long long>b(m);for(auto &in:b)cin>>in;
-  
+  cout << n + m <<endl;
+
+
 
 
 
