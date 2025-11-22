@@ -1,0 +1,1 @@
+{"name":"Local: 2148B","url":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2148B.cpp","tests":[{"id":1763786084974,"input":"2\n1 1 2 2\n1\n1\n2 1 100000 100000\n42 58\n32\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2148B.cpp","group":"local","local":true}
