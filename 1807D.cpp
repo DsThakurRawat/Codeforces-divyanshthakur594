@@ -13,7 +13,7 @@ void solve() {
     cin>>l>>r>>k;
 
     for(int i = l; i<=r-1;i++){
-        v[i] = k;
+        v[i+1] = k;
 
     }
 
