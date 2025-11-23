@@ -19,9 +19,9 @@ void solve() {
     now i want to reach at (x,y) any give coordinate how is this possible think
     */
    int i = 0;int j =0;
-  for(int i = 0; i < s.size();i++){
-    if(s[i] =='8')i++;
-    else if(s[i] =='4')j++;
+  for(int k = 0; k < s.size();k++){
+    if(s[k] =='8')i++;
+    else if(s[k] =='4')j++;
   }
   int use = min({dx, dy, i});
     dx -= use;
