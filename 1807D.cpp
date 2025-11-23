@@ -12,7 +12,7 @@ void solve() {
     long long l,r,k;
     cin>>l>>r>>k;
 
-    for(int i = l; i<=r;i++){
+    for(int i = l; i<r;i++){
         v[i] = k;
 
     }
