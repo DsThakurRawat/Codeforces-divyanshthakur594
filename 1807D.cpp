@@ -7,30 +7,30 @@ using namespace std;
 
 void solve() {
   long long  n,q;cin>>n>>q;
-  vector<long long >v(n);for(auto &in:v)cin>>in;
+  vector<long long >v(n+1);for(auto &in:v)cin>>in;
+
+  vector<long long>prefsum(n+1,0);
+  for(int i = 1; i<=n;i++){
+    prefsum[i] = prefsum[i-1]+v[i];
+  }
+  long long sum = prefsum[n];
+
   while(q--){
-    long long sum = 0;
+    long long l,r,k;cin>>l>>r>>k;
 
-      vector<long long >v2 =v; 
-
-
-    long long l,r,k;
-    cin>>l>>r>>k;
-
-    for(int i= l-1; i<r;i++){
-        v2[i] = k;
-
-    }
-
-    sum =  accumulate(v2.begin(),v2.end(),0LL);
-
-   if(sum % 2 == 1)cout << "YES"<<endl;
-   else cout <<"NO"<<endl;
+    long long old_sum = prefsum[r]-prefsum[l-1];
+    long long newsum = (r-l+1)*k;
+    long long fin_sum = sum - old_sum+newsum;
+    if(fin_sum%2 != 0)cout << "YES"<<endl;
+    else cout << "NO"<<endl;
 
   }
 
 
 
+
+
+  
 
 
 }
