@@ -12,8 +12,8 @@ void solve() {
     long long l,r,k;
     cin>>l>>r>>k;
 
-    for(int i = l; i<=r;i++){
-        v[i+1] = k;
+    for(int i = l-1; i<=r;i++){
+        v[i] = k;
 
     }
 
