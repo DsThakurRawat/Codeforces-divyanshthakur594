@@ -7,9 +7,9 @@ using namespace std;
 
 void solve() {
 
-    int n,x,y;cin>>n>>x>>y;
+    long long  n,x,y;cin>>n>>x>>y;
     string s;cin>>s;
-    int d1 = abs(x), d2 = abs(y);
+    long long  d1 = abs(x), d2 = abs(y);
     /*
     if input is '8' it will move in 
     where means it will move 1 unit overall on grid of x-y
@@ -18,17 +18,17 @@ void solve() {
 
     now i want to reach at (x,y) any give coordinate how is this possible think
     */
-   int i = 0;int j =0;
+   long long  i = 0;long long  j =0;
   for(int k = 0; k < s.size();k++){
     if(s[k] =='8')i++;
     else if(s[k] =='4')j++;
   }
-  int use = min({d1, d2, i});
+  long long  use = min({d1, d2, i});
     d1 -= use;
     d2 -= use;
     i -= use;
 
-    int remain = d1 + d2;
+    long long  remain = d1 + d2;
     if( remain <= i+j) cout << "yes"<<endl;
     else cout<< "NO"<<endl;
 
