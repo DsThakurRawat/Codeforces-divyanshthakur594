@@ -19,8 +19,8 @@ void solve() {
 
    long long sum =  accumulate(v.begin(),v.end(),0LL);
 
-   if(sum % 2 != 0)cout << "NO"<<endl;
-   else cout <<"YES"<<endl;
+   if(sum % 2 != 0)cout << "YES"<<endl;
+   else cout <<"NO"<<endl;
 
   }
 
