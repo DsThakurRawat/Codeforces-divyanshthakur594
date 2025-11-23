@@ -7,11 +7,13 @@ using namespace std;
 
 void solve() {
   long long  n,q;cin>>n>>q;
-  vector<long long >v(n+1);for(auto &in:v)cin>>in;
+   vector<long long> a(n+1);
+    for(int i = 1; i <= n; i++) cin >> a[i];
+  
 
   vector<long long>prefsum(n+1,0);
   for(int i = 1; i<=n;i++){
-    prefsum[i] = prefsum[i-1]+v[i];
+    prefsum[i] = prefsum[i-1]+a[i];
   }
   long long sum = prefsum[n];
 
