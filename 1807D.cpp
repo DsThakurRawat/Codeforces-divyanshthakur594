@@ -11,11 +11,14 @@ void solve() {
   while(q--){
     long long sum = 0;
 
+      vector<long long >v2 =v; 
+
+
     long long l,r,k;
     cin>>l>>r>>k;
 
     for(int i= l-1; i<r;i++){
-        v[i] = k;
+        v2[i] = k;
 
     }
 
