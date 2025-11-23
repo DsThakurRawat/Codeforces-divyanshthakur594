@@ -9,7 +9,7 @@ void solve() {
 
     int n,x,y;cin>>n>>x>>y;
     string s;cin>>s;
-    int dx = abs(x), dy = abs(y);
+    int d1 = abs(x), d2 = abs(y);
     /*
     if input is '8' it will move in 
     where means it will move 1 unit overall on grid of x-y
@@ -23,12 +23,12 @@ void solve() {
     if(s[k] =='8')i++;
     else if(s[k] =='4')j++;
   }
-  int use = min({dx, dy, i});
-    dx -= use;
-    dy -= use;
+  int use = min({d1, d2, i});
+    d1 -= use;
+    d2 -= use;
     i -= use;
 
-    int remain = dx + dy;
+    int remain = d1 + d2;
     if( remain <= i+j) cout << "yes"<<endl;
     else cout<< "NO"<<endl;
 
