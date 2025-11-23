@@ -22,7 +22,7 @@ void solve() {
 
     }
 
-    sum =  accumulate(v.begin(),v.end(),0LL);
+    sum =  accumulate(v2.begin(),v2.end(),0LL);
 
    if(sum % 2 == 1)cout << "YES"<<endl;
    else cout <<"NO"<<endl;
