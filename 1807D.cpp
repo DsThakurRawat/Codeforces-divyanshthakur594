@@ -12,12 +12,12 @@ void solve() {
     long long l,r,k;
     cin>>l>>r>>k;
 
-    for(int i = l; i<=r;i++){
+    for(int i = l; i<=r-1;i++){
         v[i] = k;
 
     }
 
-   long long sum =  accumulate(v.begin(),v.end(),0);
+   long long sum =  accumulate(v.begin(),v.end(),0LL);
 
    if(sum % 2 != 0)cout << "NO"<<endl;
    else cout <<"YES"<<endl;
