@@ -9,6 +9,8 @@ void solve() {
   long long  n,q;cin>>n>>q;
   vector<long long >v(n);for(auto &in:v)cin>>in;
   while(q--){
+    long long sum = 0;
+
     long long l,r,k;
     cin>>l>>r>>k;
 
@@ -17,7 +19,7 @@ void solve() {
 
     }
 
-   long long sum =  accumulate(v.begin(),v.end(),0LL);
+    sum =  accumulate(v.begin(),v.end(),0LL);
 
    if(sum % 2 != 0)cout << "YES"<<endl;
    else cout <<"NO"<<endl;
