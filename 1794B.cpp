@@ -18,7 +18,7 @@ void solve() {
             v[i] = v[i]+1;
         }
     }
-    for(auto &ot:v) cout << ot ;
+    for(auto &ot:v) cout << ot << " ";
     cout <<endl;
 
 
