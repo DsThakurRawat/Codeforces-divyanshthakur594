@@ -11,12 +11,17 @@ void solve() {
     vector<int>v(n);for(auto &in:v)cin>>in;
     vector<int>res;
     for(int i = 1;i<n;i++){
+
+        if(v[i-1] == 1 && v[i]%2==0) v[i-1] = v[i-1]+1;
         if(v[i-1]%2 == 0 && v[i]%2 == 0){
             v[i] = v[i]+1;
         }
         else if(v[i-1]%2==1 && v[i]%2==1){
             v[i] = v[i]+1;
         }
+
+
+
     }
     for(auto &ot:v) cout << ot << " ";
     cout <<endl;
