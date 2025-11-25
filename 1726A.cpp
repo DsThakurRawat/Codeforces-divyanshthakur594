@@ -7,20 +7,21 @@ using namespace std;
 
 void solve() {
     int n;cin>>n;
-    vector<int>v(n);for(int i = 0;i<n;i++)cin>>v[i];
-     sort(v.begin(),v.end());
-    if(v.size()==1) {
-        cout << 0 << endl;
-        return;
-    }
-    if(v.size()==2){
-      
-       cout << v[1]-v[0]<<endl;
-       return;
-    }
+    vector<long long >v(n);for(int i = 0;i<n;i++)cin>>v[i];
+    long long ans = v[n-1]-v[0];
 
-    cout << v[n-1]-v[0]<<endl;
+    for(long long  i = 0;i<n;i++){
+        ans = max(ans,v[i]-v[0]);// check with all
+    }
+    for(long long i = 0;i<n-1;i++){
+        ans = max(ans,v[n-1]-v[i]);
+    }
+    for(long long i = 0;i<n-1;i++){
+        ans = max(ans,v[i]-v[i+1]);
 
+    }
+    cout << ans<<endl;
+   
     
 
     
