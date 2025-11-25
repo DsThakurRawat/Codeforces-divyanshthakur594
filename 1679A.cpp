@@ -17,7 +17,7 @@ void solve() {
     cout << -1<<endl;
     return;
  }
- cout << (n+5/6) << " "<< n/4<<endl;
+ cout << (n+5)/6 << " "<< n/4<<endl;
 
   
 
