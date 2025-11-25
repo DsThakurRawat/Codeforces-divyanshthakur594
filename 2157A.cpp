@@ -6,33 +6,28 @@
 using namespace std;
 
 void solve() {
-    int n;cin>>n;
-    vector<int>v(n);for(auto &in:v)cin>>in;
-    /*
-   x  in array count of elelemnt should be equal to x
-    */
+   int n;cin>>n;
+   vector<int>v(n);for(int i=0;i<n;i++)cin>>v[i];
    map<int,int>mp;
 
-    for(int i = 0; i < n; i++){
-   mp[v[i]]++;
+   for(int i = 0;i<n;i++){
+    mp[v[i]]++;
 
+   }
+   //
+   int element = 0;
+
+   for(auto &p:mp){
+    if(p.first>p.second){
+        element +=p.second;
     }
-    int count = 0;
-
-  
-    for (auto &p : mp) {
-    int x = p.first;
-    int y = p.second;
-    if(y < x) {
-        count+=y;
+    if(p.second>p.first){
+        element+=(p.second-p.first);
     }
-    else{
-        count +=min(y,y-x);
-    }
-}
+   
 
-cout << count<<endl;
-
+   }
+   cout << element<<endl;
 
 
 
