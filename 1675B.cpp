@@ -13,7 +13,7 @@ void solve() {
     int count = 0;
    
 
-    for(int i = 0;i<n-1;i++){
+    for(int i = 0;i<n;i++){
         while(v[i+1]>v[i]){
             v[i+1] = v[i+1]/2;
             count++;
