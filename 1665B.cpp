@@ -24,7 +24,7 @@ void solve() {
         op++;
         if(2*max_freq<=n){
             op+=max_freq;
-            max_freq *=max_freq;
+            max_freq *=2;
         }
         else{
             op+=(n-max_freq);
