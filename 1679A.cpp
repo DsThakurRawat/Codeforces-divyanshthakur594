@@ -17,7 +17,7 @@ void solve() {
     cout << -1<<endl;
     return;
  }
- cout << int(ceil(n/6)) << " "<< floor(n/4)<<endl;
+ cout << (ceil((int)n/6)) << " "<< floor(n/4)<<endl;
 
   
 
