@@ -8,17 +8,12 @@ using namespace std;
 void solve() {
         int n;cin>>n;
         int a,b,c,d;
-      if( n% 4 == 0){
-       cout << n/4 << " "<< n/4 << " "<<n/4<<" "<<n/4<<endl;
-        return;
-      }
+    
+       cout << n-3 << " "<< 1 << " "<<1<<" "<<1<<endl;
+      
 
-      for(int i = 0; i*i<n;i++){
-        if(a+b+c+d==n && gcd(a,b) == lcm(c,d)){
-            cout << a << " "<< b << " "<<c <<" "<<d<<endl;
-            return;
-        }
-      }
+
+      
       
       
       
