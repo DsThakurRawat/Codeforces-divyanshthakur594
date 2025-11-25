@@ -7,7 +7,11 @@ using namespace std;
 
 void solve() {
         int n;cin>>n;
-        vector<long long >v(n);for(auto &in:v)cin>>in;
+        int a,b,c,d;
+      if( n% 4 == 0){
+       cout << n/4 << " "<< n/4 << " "<<n/4<<" "<<n/4<<endl;
+        
+      }
       
   
    
