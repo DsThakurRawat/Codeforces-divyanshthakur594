@@ -13,11 +13,11 @@ void solve() {
   we have take that pair min = min(a+b);and max = max(a+b);
   
   */
- if(n%2 == 1){
+ if(n%2 == 1 || n < 4){
     cout << -1<<endl;
     return;
  }
- cout << ceil(n/6) << " "<< ceil(n/4)<<endl;
+ cout << floor(n/6) << " "<< floor(n/4)<<endl;
 
   
 
