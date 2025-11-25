@@ -11,7 +11,7 @@ void solve() {
 
     vector<int>v(n);for(auto &in:v)cin>>in;
     int count = 0;
-    reverse(v.begin(),v.end());
+   
 
     for(int i = 0;i<n-1;i++){
         while(v[i+1]>v[i]){
