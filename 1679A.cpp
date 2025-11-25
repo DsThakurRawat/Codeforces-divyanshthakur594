@@ -13,20 +13,13 @@ void solve() {
   we have take that pair min = min(a+b);and max = max(a+b);
   
   */
- int mini = INT_MAX;
- int maxi= INT_MIN;
+ if(n%2 == 1){
+    cout << -1<<endl;
+    return;
+ }
+ cout << ceil(n/4) << " "<< ceil(n/6)<<endl;
 
-  for(int x = 1;x++){
-    for(int y = 1;y++){
-        if(4*x+6*y==n){
-        mini = (y+x,mini);
-        maxi = (y+x,maxi);
-        }
-    }
-  }
-
-  cout << mini << " "<<maxi<<endl;
-
+  
 
 
   
