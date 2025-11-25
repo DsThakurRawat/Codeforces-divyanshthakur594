@@ -16,8 +16,8 @@ void solve() {
  int mini = INT_MAX;
  int maxi= INT_MIN;
 
-  for(int x = 1; x<=1e18;x++){
-    for(int y = 1; y<=1e18;y++){
+  for(int x = 1;x++){
+    for(int y = 1;y++){
         if(4*x+6*y==n){
         mini = (y+x,mini);
         maxi = (y+x,maxi);
