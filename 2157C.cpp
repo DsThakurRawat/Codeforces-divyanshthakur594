@@ -7,64 +7,38 @@ using namespace std;
 
 void solve() {
     int n,k,q;cin>>n>>k>>q;
-    vector<long long >ans(n,k+5);
-    vector<array<int,3>>type2;
-    vector<array<int,3>>type1;
-
+    vector<long long>v(n+1,0);
+    vector<long long>mini(n+1,0),mexi(n+1,0);
 
     while(q--){
+        long long c,l,r;cin>>c>>l>>r;
+        for(long long i = l;i<=r;i++){
+            if(c==1){
+                mini[i]=1;
 
-        int c,l,r;cin>>c>>l>>r;
-        l--;r--;
-        if(c==1){
-            type1.push_back({c,l,r});
-        }
-        else{
-            type2.push_back({c,l,r});
             }
-
-        }
-
-        for(auto &t :type1){
-            int l = t[1];
-            ans[l] = k;
-        }
-
-        for(auto &t: type2){
-            int l = t[1];
-            int r = t[2];
-
-            for(int x =0;x<k;x++){
-                if(l+x<=r)ans[l+x]=x;
+            else{
+                mexi[i]=1;
             }
-            for(int i =l;i<=r;i++){
-                if(ans[i]==k)ans[i]==k+5;
-            }
-
-
         }
-        for(auto &ot:ans){
-            cout << ot <<" ";
-        }
-        cout << endl;
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
     }
-  
+    for(long long i = 1;i<=n;i++){
+        if(mini[i]==1 && mexi[i]==1){
+            v[i] = i %k;
+        }
+        else v[i] = k;
+    }
 
-    
+    for(long long i =1;i<=n;i++){
+        cout << v[i]<<" ";
+      
+    }
+cout << endl;
+
+
+   
+}
+
 
   
 
