@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int n;cin>>n;
     string s;cin>>s;
-    string s = "";
+    int n =s.size();
     if(s[0]!=s[n-1]){
         if(s[0]!='a')s[0]='b';
         else s[0]='a';
