@@ -24,9 +24,10 @@ void solve() {
     }
     for(long long i = 1;i<=n;i++){
         if(mini[i]==1 && mexi[i]==1){
-            v[i] = i %k;
+            v[i] = k+1;
         }
-        else v[i] = k;
+        else if (mexi[i]==1) v[i] = i % k;
+        else v[i]=k;
     }
 
     for(long long i =1;i<=n;i++){
