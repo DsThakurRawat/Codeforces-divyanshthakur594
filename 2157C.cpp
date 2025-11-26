@@ -13,27 +13,27 @@ void solve() {
     while(q--){
         long long c,l,r;cin>>c>>l>>r;
         for(long long i = l;i<=r;i++){
-            if(c==1){
-                mini[i]=1;
+            if(c==1) mini[i]=1;
+                
 
-            }
-            else{
-                mexi[i]=1;
-            }
+            
+            else mexi[i]=1;
+               
+           
         }
     }
     for(long long i = 1;i<=n;i++){
-        if(mini[i]==1 && mexi[i]==1){
-            v[i] = k+1;
-        }
+        if(mini[i]==1 && mexi[i]==1)   v[i] = k+1;
+          
+        
         else if (mexi[i]==1) v[i] = i % k;
         else v[i]=k;
     }
 
-    for(long long i =1;i<=n;i++){
-        cout << v[i]<<" ";
+    for(long long i =1;i<=n;i++)   cout << v[i]<<" ";
       
-    }
+      
+   
 cout << endl;
 
 
