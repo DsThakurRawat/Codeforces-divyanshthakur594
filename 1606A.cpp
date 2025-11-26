@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-    int n;cin>>n;
+  //  int n;cin>>n;
     string s;cin>>s;
     int n =s.size();
     if(s[0]!=s[n-1]){
