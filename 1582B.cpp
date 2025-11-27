@@ -10,12 +10,13 @@ void solve() {
  vector<int>v(n);for(auto & in : v)cin>>in;
  
  long long cnt = 0;
+ long long cntt=0;
  for(int i = 0;i<n;i++){
-  
+    if(v[i]==0)cntt++;
     if(v[i]==1)cnt++;
 
  }
- cout << cnt<<endl;
+ cout << cnt*cntt<<endl;
 
  
 
