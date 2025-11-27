@@ -17,7 +17,7 @@ void solve() {
          no += s[j];
         if(stoll(no)%25 == 0){
            ans=no;
-           break;
+         
         }
 
          
