@@ -13,17 +13,11 @@ void solve() {
        
     }
     else{
-        for(long long i = 3;i*i<n;i=i+2){
-          if( n % i==0){
-            cout << "YES"<<endl;
-            return;
-          }
-
-        }
-        cout << "NO"<<endl;
-
+        while(n%2==0) n/=2;
+        if( n > 1) cout << "YES"<<endl;
+        else cout << "NO"<<endl;
     }
-
+    
 
      
 
