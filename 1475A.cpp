@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     long long n;cin>>n;
 
-    if(n%2 !=1 ){
+    if(n%2 ==1 ){
         cout << "YES"<<endl;
        
     }
