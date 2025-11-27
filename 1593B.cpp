@@ -12,7 +12,7 @@ void solve() {
    string ans ="";
 
    for(long long  i = 0;i<s.size();i++){
-    for(long long j = 0; j<i;j++){
+    for(long long j = i+1; j<s.size();j++){
         no += s[j];
         if(stoll(no)%25 == 0){
            ans=no;
