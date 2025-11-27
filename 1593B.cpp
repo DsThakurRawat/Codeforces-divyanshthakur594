@@ -18,9 +18,10 @@ void solve() {
 
 
           for(long long i = s.size()-1;i>=0;i--){
-            if(s[i]==it[ind]) ind--;
+            if(s[i]==it[ind]) {ind--;
             if(ind < 0)break;
-            else cnt++;
+             }
+              else cnt++;
           }
           if(ind >= 0)cnt = LLONG_MAX;
           ans = min(ans,cnt);
