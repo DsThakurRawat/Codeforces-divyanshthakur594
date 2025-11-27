@@ -11,21 +11,26 @@ void solve() {
    
    string ans ="";
 
-   for(long long  i = 0;i<s.size();i++){
+   for(int mask = 0; mask<(1LL << s.size());mask++){
     string no ="";
+
     for(long long j = 0; j<s.size();j++){
-         no += s[j];
-        if(stoll(no)%25 == 0){
-           ans=no;
-         
+        if(mask & (1LL<<j)){
+            no +=s[j];
         }
-
-         
-       
-
     }
-   }
-   cout << ans <<endl;
+    if(no.empty())continue;
+
+    if(stoll(no)%25==0){
+        if(no.size()>ans.size()) ans = no;
+    }
+
+
+}
+cout << s.size()-ans.size()<<endl;
+
+
+
 
    
 
