@@ -12,8 +12,9 @@ void solve() {
    string ans ="";
 
    for(long long  i = 0;i<s.size();i++){
+     no += s[i];
     for(long long j = i; j<s.size();j++){
-        no += s[j];
+       
         if(stoll(no)%25 == 0){
            ans=no;
         }
