@@ -14,7 +14,7 @@ void solve() {
    for(long long  i = 0;i<s.size();i++){
     
     for(long long j = i; j<s.size();j++){
-         no += s[i];
+         no += s[j];
         if(stoll(no)%25 == 0){
            ans=no;
         }
