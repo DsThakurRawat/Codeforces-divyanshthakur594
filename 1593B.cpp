@@ -8,11 +8,11 @@ using namespace std;
 void solve() {
    string s;cin>>s;
    // a number is divisble by 25 if last two digits are one of 00,25,50,75
-   string no ="";
+   
    string ans ="";
 
    for(long long  i = 0;i<s.size();i++){
-    
+    string no ="";
     for(long long j = 0; j<s.size();j++){
          no += s[j];
         if(stoll(no)%25 == 0){
