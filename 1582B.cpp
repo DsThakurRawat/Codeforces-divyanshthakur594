@@ -13,7 +13,7 @@ void solve() {
  long long cntt=0;
  for(int i = 0;i<n;i++){
     if(v[i]==0)cntt++;
-    if(v[i]==1)cnt++;
+    else if (v[i]==1)cnt++;
 
  }
  cout << pow(2,cntt)*cnt<<endl;
