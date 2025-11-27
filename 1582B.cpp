@@ -8,11 +8,11 @@ using namespace std;
 void solve() {
  int n;cin>>n;                                        // a number is divisble by 25 if last two digits are one of 00,25,50,75
  vector<int>v(n);for(auto & in : v)cin>>in;
- long long x;
+ 
  long long cnt = 0;
  for(int i = 0;i<n;i++){
-    cin>>x;
-    if(x==1)cnt++;
+  
+    if(v[i]==1)cnt++;
 
  }
  cout << cnt<<endl;
