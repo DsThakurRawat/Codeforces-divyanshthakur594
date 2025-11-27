@@ -16,7 +16,7 @@ void solve() {
     if(v[i]==1)cnt++;
 
  }
- cout << 2**cnt*cntt<<endl;
+ cout << pow(2,cnt*cntt)<<endl;
 
  
 
