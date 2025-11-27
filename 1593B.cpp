@@ -9,26 +9,24 @@ void solve() {
    string s;cin>>s;
    // a number is divisble by 25 if last two digits are one of 00,25,50,75
    
-   string ans ="";
+    vector<string>v = {"00","25","50","75"};
+    long long ans = LLONG_MAX;
 
-   for(int mask = 0; mask<(1LL << s.size());mask++){
-    string no ="";
+    for(auto  it : v ){
+          long long cnt = 0;
+          int ind = it.size()-1;
 
-    for(long long j = 0; j<s.size();j++){
-        if(mask & (1LL<<j)){
-            no +=s[j];
-        }
+
+          for(long long i = s.size()-1;i>=0;i--){
+            if(s[i]==it[ind]) ind--;
+            if(ind < 0)break;
+            else cnt++;
+          }
+          if(ind >= 0)cnt = LLONG_MAX;
+          ans = min(ans,cnt);
+
     }
-    if(no.empty())continue;
-
-    if(stoll(no)%25==0){
-        if(no.size()>ans.size()) ans = no;
-    }
-
-
-}
-cout << s.size()-ans.size()<<endl;
-
+    cout << ans <<endl;
 
 
 
