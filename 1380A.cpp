@@ -59,7 +59,7 @@ for (int i = 1; i <= n; i++) {
 
     if(v[j]<v[i] && v[k]<v[i]){
         cout << "YES"<<endl;
-        cout<<i<<" "<<j<<" "<<k<<endl;
+        cout<<j<<" "<<i <<" "<<k<<endl;
         return;
     
     }
