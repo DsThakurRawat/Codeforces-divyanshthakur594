@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
 
     int n;cin>>n;
-    vector<vector<int>> v(n, vector<int>(n));
+    vector<vector<int>> v(n+1, vector<int>(n+1));
 
     int el=1;
     int maxi =0;
