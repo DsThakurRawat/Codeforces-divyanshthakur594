@@ -10,15 +10,25 @@ void solve() {
    string s;cin>>s;
    // we have to make sur allice win
    // two differant adjacent character
-   string a="01";
-   string b = "10";
-   int count = 0;
+   int i = 0;
+  int count =0;
+
+    while (i < (int)s.size() - 1) {
+        if ( (s[i] == '0' && s[i+1] == '1') ||
+             (s[i] == '1' && s[i+1] == '0') ) 
+        {
+            count++;
+            i += 2; 
+        } else {
+            i++;
+        }
+    }
+    if(count % 2==0){
+        cout << "NET"<<endl;
+    }
+    else cout << "NO"<<endl;
    
-    if(s.find(a)!=string::npos)count++;
-    if(s.find(b)!=string::npos)count++;
-   
-   if(count % 2 !=1 )cout << "DA"<<endl;
-   else cout << "NET"<<endl;
+    
 
 
 
