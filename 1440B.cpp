@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
  
     int n,k;cin>>n>>k;
-    vector<int>v(n*k+1);for(int i = 1;i<=n;i++)cin>>v[i];
+    vector<int>v(n*k);for(int j = 0;j<=k*n;j++)cin>>v[j];
 
     long long i=0;
     long long sum =0;
