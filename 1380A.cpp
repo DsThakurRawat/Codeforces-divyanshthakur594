@@ -54,8 +54,8 @@ for (int i = 1; i <= n; i++) {
    }
 
    for(int i = 2;i<=n-1;i++){
-    int j = prefixmin[j-1];
-    int k = suffixmin[j+1];
+    int j = prefixmin[i-1];
+    int k = suffixmin[i+1];
 
     if(v[j]<v[i] && v[k]<v[i]){
         cout << "YES"<<endl;
