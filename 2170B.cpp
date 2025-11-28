@@ -13,7 +13,7 @@ void solve() {
     int count_element = 0;
     set<int>st(v.begin(),v.end());
     
-      if(st.size()==1){
+      if(st.size()==1){// all elemnts are same
         cout << 1 << endl;
         return;
       }
@@ -27,9 +27,12 @@ void solve() {
        
         }
     }
-    if(count0 ==0){
+    if(count0 ==0){// count of zro is 0
         cout << n<<endl;
         return;
+    }
+    else{
+        cout << count_element <<endl;
     }
 
 
