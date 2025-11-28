@@ -25,7 +25,7 @@ void solve() {
         }
     }
     if(count0 ==0){
-        cout << v.size()<<endl;
+        cout << n<<endl;
         return;
     }
 
