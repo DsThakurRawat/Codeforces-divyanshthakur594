@@ -21,7 +21,10 @@ void solve() {
                     ans.push_back(i);
                     ans.push_back(j);
                     ans.push_back(k);
-                    break;
+                    cout << "YES"<<endl;
+                   cout << ans[0]<< " "<<ans[1]<<" "<<ans[2]<<endl;
+                
+                    return;
                 } 
             }
             if(flag==1)break;
@@ -30,6 +33,9 @@ void solve() {
 
 
     }
+    cout << "NO"<<endl;
+    
+
    
      
 
