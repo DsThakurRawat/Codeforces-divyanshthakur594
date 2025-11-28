@@ -18,7 +18,7 @@ void solve() {
     if(s.find(b)!=string::npos)count++;
    }
    if(count % 2 ==1 )cout << "DA"<<endl;
-   else cout << "NO"<<endl;
+   else cout << "NET"<<endl;
 
 
 
