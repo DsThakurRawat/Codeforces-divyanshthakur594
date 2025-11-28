@@ -26,7 +26,7 @@ void solve() {
     if(count % 2==0){
         cout << "NET"<<endl;
     }
-    else cout << "NO"<<endl;
+    else cout << "DA"<<endl;
    
     
 
