@@ -12,6 +12,9 @@ void solve() {
     int count0=0;
     int count_element = 0;
     set<int>st(v.begin(),v.end());
+    int flag = 1;
+    
+    
     
       if(st.size()==1){// all elemnts are same
         cout << 1 << endl;
@@ -33,6 +36,7 @@ void solve() {
     }
     else{
         cout << count_element <<endl;
+        return;
     }
 
 
