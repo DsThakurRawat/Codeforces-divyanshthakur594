@@ -10,7 +10,7 @@ void solve() {
     int n,k;cin>>n>>k;
     vector<int>v(n*k);for(int j = 0;j<k*n;j++)cin>>v[j];
 
-    long long i=0;
+    long long i=n*k;
     long long sum =0;
     while(k--){
         i -=(n/2+1);
