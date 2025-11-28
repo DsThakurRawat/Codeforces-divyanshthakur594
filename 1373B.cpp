@@ -13,11 +13,11 @@ void solve() {
    string a="01";
    string b = "10";
    int count = 0;
-   for(int i =0;i<s.size();i++){
+   
     if(s.find(a)!=string::npos)count++;
     if(s.find(b)!=string::npos)count++;
-   }
-   if(count % 2 ==1 )cout << "DA"<<endl;
+   
+   if(count % 2 !=1 )cout << "DA"<<endl;
    else cout << "NET"<<endl;
 
 
