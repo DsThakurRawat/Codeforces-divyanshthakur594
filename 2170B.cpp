@@ -13,7 +13,10 @@ void solve() {
     int count_element = 0;
     set<int>st(v.begin(),v.end());
     
-
+      if(st.size()==1){
+        cout << 1 << endl;
+        return;
+      }
     
     for(int i =0;i<n;i++){
         if(v[i]==0){
