@@ -7,7 +7,12 @@ using namespace std;
 
 void solve() {
     int n;cin>>n;
-    vector<int>v(n+1);for(auto &in:v)cin>>in;
+    vector<int> v(n + 1);  // size = n+1, indices = 0..n
+
+for (int i = 1; i <= n; i++) {
+    cin >> v[i];
+}
+
     vector<int>ans;
     int flag = 0;
 
