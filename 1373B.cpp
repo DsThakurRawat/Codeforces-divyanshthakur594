@@ -7,29 +7,21 @@ using namespace std;
 
 void solve() {
   
-   string s;cin>>s;
-   // we have to make sur allice win
-   // two differant adjacent character
-   int i = 0;
-  int count =0;
+    string s;
+        cin >> s;
 
-    while (i < (int)s.size() - 1) {
-        if ( (s[i] == '0' && s[i+1] == '1') ||
-             (s[i] == '1' && s[i+1] == '0') ) 
-        {
-            count++;
-            i += 2; 
-        } else {
-            i++;
+        int cnt0 = 0, cnt1 = 0;
+        for (char c : s) {
+            if (c == '0') cnt0++;
+            else cnt1++;
         }
-    }
-    if(count % 2==0){
-        cout << "NET"<<endl;
-    }
-    else cout << "DA"<<endl;
-   
-    
 
+        int moves = min(cnt0, cnt1);
+
+        if (moves % 2 == 1)
+            cout << "DA"<<endl;
+        else
+            cout << "NET"<<endl;
 
 
 
