@@ -17,10 +17,10 @@ for (int i = 1; i <= n; i++) {
     int flag = 0;
 
    
-    for(int i =1;i<n;i++){
-        for(int j = i+1;j<n;j++){
+    for(int i =1;i<=n;i++){
+        for(int j = i+1;j<=n;j++){
             
-            for(int k = j+1;k<n;k++){
+            for(int k = j+1;k<=n;k++){
                 if(v[i]<v[j]&&v[j]>v[k]){
                     flag = 1;
                     ans.push_back(i);
