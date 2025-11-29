@@ -6,18 +6,15 @@ using namespace std;
 
 void solve() {
 
-    long long n;cin>>n;
-    long long y,r;cin>>y>>r;
+  long long n;cin>>n;
+  vector<int>v(2*n);for(auto &in : v)cin>>in;
 
-    // 
-    long long rs = min(r,n);
-    long long rem = n - rs;
-    long long ys = min(y/2,rem);
-    cout << rs+ys<<endl;
+  map<int,int>mp;for(auto &m : v)mp[m]++;
+  
 
 
 
-    
+
 
 
 
