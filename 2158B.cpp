@@ -1,4 +1,3 @@
-
 // simple template-test2
 // code by divyansh rawat
 
@@ -6,43 +5,42 @@
 using namespace std;
 
 void solve() {
+    int n;
+    cin >> n;
 
-    long long  x,n;cin>>x>>n;
-   
-    if( n % 4 == 0){
-        cout << x << endl;
-    }
-   else if(n%4 == 1){
-        if(x % 2==0)cout << x-n<<endl;
-        else cout << x+n<<endl;
-    }
-   else if(n%4==2){
-        if(x%2==0)cout << x+1<<endl;
-        else cout << x-1<<endl;
-    }
-    else if ( n%4==3){
-        if(x%2==0) cout << x+(n+1)<<endl;
-            
-        else cout << x -(n+1)<<endl;
+    vector<int> a(2*n);
+    for(int &x : a) cin >> x;
+
+    unordered_map<int,int> freq;
+    freq.reserve(2*n);
+
+    for(int x : a) freq[x]++;
+
+    int odd = 0, even = 0;
+
+    for(auto &p : freq) {
+        if(p.second % 2 == 1) odd++;
+        else even++;
     }
 
+    int ans = 0;
 
+    if(odd > 0) {
+        // can fix parity easily
+        ans = odd + 2 * min(even, n);
+    } else {
+        // all frequencies even -> parity constraint forces us to lose 1 slot
+        ans = 2 * min(even - 1, n);
+    }
 
-
-
-    
+    cout << ans << "\n";
 }
-  
-
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
+
+    int t;
     cin >> t;
-    while (t--) {
-        solve();
-    }
-    return 0;
+    while(t--) solve();
 }
