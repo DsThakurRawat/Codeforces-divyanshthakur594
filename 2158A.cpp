@@ -1,4 +1,3 @@
-
 // simple template-test2
 // code by divyansh rawat
 
@@ -11,17 +10,11 @@ void solve() {
     long long y,r;cin>>y>>r;
 
     // 
-    int total = 0;
-   
-  
-    if( r >= n){
-        cout << n << endl;
+    long long rs = min(r,n);
+    long long rem = n - rs;
+    long long ys = min(y/2,rem);
+    cout << rs+ys<<endl;
 
-    }
-    else{
-        y = y/2;
-        cout << y + r << endl;
-    }
 
 
     
