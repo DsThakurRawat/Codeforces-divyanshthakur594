@@ -22,6 +22,7 @@ void solve() {
         for(int i = 0;i<26;i++){
             if(fs[i]-ft[i]<0){
                 cout << "NO"<<endl;
+                return;
             }
         }
 
