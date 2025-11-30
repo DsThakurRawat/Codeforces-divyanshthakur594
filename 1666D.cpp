@@ -20,7 +20,7 @@ void solve() {
         vector<int>ft= count_AZ(t);
 
         for(int i = 0;i<26;i++){
-            if(fs[i]-ft[i]<0){
+            if(fs[i]<ft[i]){
                 cout << "NO"<<endl;
                 return;
             }
