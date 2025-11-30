@@ -25,7 +25,21 @@ void solve() {
                 return;
             }
         }
-        cout << "YES\n";
+        string after ;
+        vector<int>drop(26);
+        for(int i = 0;i<26;i++){
+          
+            drop[i] = fs[i]-ft[i];
+        }
+        for(char c : s){
+            int idx = c-'A';
+            if(drop[idx]>0) drop[idx]--;
+            else after.push_back(c);
+        }
+
+        if(after==t)cout <<"YES"<<endl;
+        else cout << "NO"<<endl;
+      
 
 
 
