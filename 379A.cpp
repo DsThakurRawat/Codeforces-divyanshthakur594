@@ -14,7 +14,7 @@ void solve() {
             a = a/b;
 
         }
-        cout << sum <<endl;
+        cout << sum +1<<endl;
 
 
 
