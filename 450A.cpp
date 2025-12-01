@@ -16,7 +16,12 @@ void solve() {
 for (int i = 1; i <=n; i++) {
     if (a[i] >= a[idx]) idx = i;   // >= gives the LAST max index
 }
-cout << idx << endl;
+if(m >= a[idx]){
+    cout << n<<endl;
+}
+else{
+    cout << idx << endl;
+}
 
  
 
