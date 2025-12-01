@@ -11,7 +11,7 @@ void solve() {
    for(int i = 0;i<n;i++){
     int y = a[i+1]%a[i];
    }
-   cout << 1117%117
+   cout << 1117%117;
     
 }
   
