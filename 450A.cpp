@@ -9,12 +9,16 @@ void solve() {
   int n,m;cin>>n>>m;
   vector<int>a(n+1);for(int i = 1;i<=n;i++)cin>>a[i];
 
-  int max_ceil = ceil(a[1]/m);
-  int idx = 0;
+  auto ciel_division = [&](int x){
+    return (x + m-1)/m;// ceil divison
+  };
+  int idx = 1;
+  int max_ceil = ((a[1]+m-1)/m);
+
   for(int i = 2;i<=n;i++){
         if(ceil(a[i]/m) >= max_ceil){
             idx = i;
-            max_ceil = ceil(a[i]/m);
+            max_ceil = ceil(a[i]-m+1/m);
         }
   } 
   cout << idx << endl;
