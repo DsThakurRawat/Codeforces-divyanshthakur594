@@ -15,7 +15,7 @@ void solve() {
         cur_a = cur_b/b;
         cur_b = cur_b % b;
         }
-        cout << cur_b <<endl;
+        cout << cur_a <<endl;
 
 
      
