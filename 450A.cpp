@@ -8,20 +8,16 @@ using namespace std;
 void solve() {
   int n,m;cin>>n>>m;
   vector<int>a(n+1);for(int i = 1;i<=n;i++)cin>>a[i];
-  int max_elementindex = 0;
 
-  int maxi = INT_MIN;
- 
+  int max_ceil = ceil(a[1]/m);
   int idx = 0;
-for (int i = 1; i <=n; i++) {
-    if (a[i] >= a[idx]) idx = i;   // >= gives the LAST max index
-}
-if(m >= a[idx]){
-    cout << n<<endl;
-}
-else{
-    cout << idx << endl;
-}
+  for(int i = 2;i<=n;i++){
+        if(ceil(a[i]/m) >= max_ceil){
+            idx = i;
+            max_ceil = ceil(a[i]/m);
+        }
+  } 
+  cout << idx << endl;
 
  
 
