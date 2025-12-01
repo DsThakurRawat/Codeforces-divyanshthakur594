@@ -10,7 +10,7 @@ void solve() {
    vector<int>a(n);for(int &in:a)cin>>in;
 
    for(int i =0;i<n;i++){
-    for(int j = 0;j<n;j++){
+    for(int j = 0;j<i;j++){
        
         if( (a[i]%a[j]) % 2 == 0) {
             cout << a[j] << " " << a[i]<<endl;
