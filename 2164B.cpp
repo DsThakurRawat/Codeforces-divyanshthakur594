@@ -11,8 +11,8 @@ void solve() {
 
    for(int i =0;i<n;i++){
     for(int j = 0;j<n;j++){
-        long long x = a[i]%a[j];
-        if(x % 2 == 0) {
+       
+        if( (a[i]%a[j]) % 2 == 0) {
             cout << a[j] << " " << a[i]<<endl;
             return;
         }
