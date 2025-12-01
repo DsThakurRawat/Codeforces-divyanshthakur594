@@ -10,12 +10,15 @@ void solve() {
         // so like he can make new candles from b available candles
        
         int cur_a = a,cur_b = 0;
+        int total_hours = 0;
         while(cur_a>=1){
+
+        total_hours += cur_a;
         cur_b +=cur_a;
         cur_a = cur_b/b;
         cur_b = cur_b % b;
         }
-        cout << cur_a <<endl;
+        cout << total_hours <<endl;
 
 
      
