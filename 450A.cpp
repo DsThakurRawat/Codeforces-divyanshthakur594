@@ -11,12 +11,14 @@ void solve() {
   int max_elementindex = 0;
 
   int maxi = INT_MIN;
+ 
+  int idx = 0;
+for (int i = 1; i < n; i++) {
+    if (a[i] >= a[idx]) idx = i;   // >= gives the LAST max index
+}
+cout << idx << endl;
 
-  for(int i = 1;i<=n;i++){
-  if(a[i]==max(maxi,a[i])) max_elementindex = i;
-  }
-  cout << max_elementindex <<endl;
-
+ 
 
 
     
