@@ -13,7 +13,7 @@ void solve() {
   int maxi = INT_MIN;
  
   int idx = 0;
-for (int i = 1; i < n; i++) {
+for (int i = 1; i <=n; i++) {
     if (a[i] >= a[idx]) idx = i;   // >= gives the LAST max index
 }
 cout << idx << endl;
