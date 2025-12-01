@@ -17,7 +17,7 @@ void solve() {
           rem = a % b;
           a +=rem;
        }
-       cout << a + sum <<endl;
+       cout <<  sum <<endl;
 
 
 
