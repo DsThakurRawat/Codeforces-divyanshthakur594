@@ -9,16 +9,13 @@ void solve() {
         int a,b;cin>>a>>b;
         // so like he can make new candles from b available candles
        
-        int sum =0;
-        int rem =0;
-       while(a>=b){
-          sum +=a;
-          a = a/b;
-          rem = a % b;
-          a +=rem;
-       }
-       cout <<  sum <<endl;
-
+        int cur_a = a,cur_b = 0;
+        while(cur_a>=1){
+        cur_b +=cur_a;
+        cur_a = cur_b/b;
+        cur_b = cur_b % b;
+        }
+        cout << cur_b <<endl;
 
 
      
