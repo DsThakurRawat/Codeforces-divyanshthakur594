@@ -16,9 +16,9 @@ void solve() {
   int max_ceil = ((a[1]+m-1)/m);
 
   for(int i = 2;i<=n;i++){
-        if(ceil((a[i]+m-1)/m) >= max_ceil){
+        if(((a[i]+m-1)/m) >= max_ceil){
             idx = i;
-            max_ceil = ceil((a[i]+m-1)/m);
+            max_ceil = ((a[i]+m-1)/m);
         }
   } 
   cout << idx << endl;
