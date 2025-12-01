@@ -13,7 +13,7 @@ void solve() {
     for(int j = 0;j<n;j++){
         long long x = a[i]%a[j];
         if(x % 2 == 0) {
-            cout << a[i] << " " << a[j]<<endl;
+            cout << a[j] << " " << a[i]<<endl;
             return;
         }
     }
