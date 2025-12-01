@@ -12,7 +12,7 @@ void solve() {
 
   int maxi = INT_MIN;
 
-  for(int i = 1;i<n=;i++){
+  for(int i = 1;i<=n;i++){
   if(a[i]==max(maxi,a[i])) max_elementindex = i;
   }
   cout << max_elementindex <<endl;
