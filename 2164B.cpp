@@ -8,11 +8,20 @@ using namespace std;
 void solve() {
    int n;cin>>n;
    vector<int>a(n);for(int &in:a)cin>>in;
-   for(int i = 0;i<n;i++){
-    int y = a[i+1]%a[i];
+
+   for(int i =0;i<n;i++){
+    for(int j = 0;j<n;j++){
+        long long x = a[i]%a[j];
+        if(x % 2 == 0) {
+            cout << a[i] << " " << a[j]<<endl;
+            return;
+        }
+    }
    }
-   cout << 1117%117;
-    
+   cout << -1 << endl;
+
+
+
 }
   
 
