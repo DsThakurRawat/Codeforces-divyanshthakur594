@@ -33,7 +33,7 @@ void solve() {
    
 
   }
-  for(int i = 0;i<2*n;i++){
+  for(int i = 1;i<=2*n;i++){
     if(result[i]==0){
       result[i] = 1;
     }
