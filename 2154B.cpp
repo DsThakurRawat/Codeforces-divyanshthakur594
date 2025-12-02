@@ -18,24 +18,39 @@ void solve() {
         }
     }
     int cost = 0;
-    int i = 0;
-   
-   
-        if( i == 0){
-            if(a[1]>=a[0]){
-                cost = a[1]-a[0]+1;
-            }
-        
-            if( i == n-1 && (n-1) % 2 == 0){
-                if(a[n-2] >= a[n-1]){
-                    cost = a[n-2]-a[n-1]+1;
-                }
-            }
+    
 
+    for(int i = 0;i<n;i++){
+        if(i%2 == 0){
+            if(i==0 && a[1]>=a[0]){
+                cost = a[1]-a[0]+1;
+                continue;
+            }
+            if(i == n-1 && a[n-2]>a[n-1] && n-2 >=0 ){
+                       cost = a[n-2]-a[n-1]+1;
+                       continue;
+            }
+            if(a[i-1]>=a[i] && i-1>=0 ){
+                cost = a[i-1] - a[i]+1;
+
+            }
+            if(a[i+1]>=a[i] && i+1<n){
+                cost = a[i+1]-a[i]+1;
+            }
+        }
+    }
+    cout << cost << endl;
+
+   
+   
+        
+          
+          
+          
 
         
     }
-    cout << cost << endl;
+    
 
 
 
@@ -44,7 +59,7 @@ void solve() {
 
 
     
-}
+
   
 
 
