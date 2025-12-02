@@ -9,11 +9,11 @@ void solve() {
   int n;cin>>n;
   // in this case there is simple construction where each number is place at x and 2x
   vector<int>v;
-  for(int i = 1;i<n;i++){
+  for(int i = 1;i<=n;i++){
     v.push_back(i);
 
   }
-  for(int i = 1;i<n;i++){
+  for(int i = 1;i<=n;i++){
     v.push_back(i);
 
   }
