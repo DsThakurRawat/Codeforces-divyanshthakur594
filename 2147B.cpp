@@ -13,10 +13,7 @@ void solve() {
     v.push_back(i);
 
   }
-  for(int i = 1;i<=n;i++){
-    v.push_back(i);
-
-  }
+  
 
 
   vector<int>result(2*n,0);
