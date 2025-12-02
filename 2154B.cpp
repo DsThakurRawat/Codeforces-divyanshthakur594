@@ -24,7 +24,7 @@ void solve() {
             cost = a[i-1] - a[i] + 1;
 
         if(i+1 < n && a[i+1] >= a[i])
-            cost = a[i+1] - a[i] 
+            cost = a[i+1] - a[i] ;
            
         }
     }
