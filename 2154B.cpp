@@ -18,7 +18,7 @@ void solve() {
         }
     }
     int cost = 0;
-    for(int i = 1;i<n-1;i++){
+    for(int i = 0;i<n;i++){
         if( i % 2 == 0 ){
             if( a[i-1] >= a[i]  ) cost = a[i-1]-a[i]+1;
              if(a[i+1] >= a[i]) cost = a[i+1]-a[i]+1;
