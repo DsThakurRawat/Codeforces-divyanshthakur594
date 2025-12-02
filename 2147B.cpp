@@ -22,6 +22,11 @@ void solve() {
       result[i] = i+1;
       result[n+1] = i+1;
     }
+    else{
+      result[i] = i+1;
+      result[2*i] = i+1;
+    }
+
   }
   for(int &i :result)cout << i <<" ";
   cout << endl;
