@@ -12,7 +12,7 @@ void solve() {
   vector<int>prefmin(n),sufmax(n);
   prefmin[0] = a[0];
   for(int i = 1;i<n;i++){
-    prefmin[i] = min(a[i],prefmin[i]);
+    prefmin[i] = min(a[i],prefmin[i-1]);
   }
   sufmax[n-1] = a[n-1];
   for(int i = n-2;i>=0;i--){
