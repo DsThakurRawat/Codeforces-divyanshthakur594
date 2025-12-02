@@ -21,7 +21,7 @@ void solve() {
     for(int i = 1;i<n-1;i++){
         if( i % 2 == 0 ){
             if( a[i-1] >= a[i]  ) cost = a[i-1]-a[i]+1;
-            else if(a[i+1] >= a[i]) cost = a[i+1]-a[i]+1;
+             if(a[i+1] >= a[i]) cost = a[i+1]-a[i]+1;
         }
     }
     cout << cost << endl;
