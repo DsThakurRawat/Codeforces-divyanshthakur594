@@ -18,8 +18,10 @@ void solve() {
 
 
   for(int i =0;i<2*n;i++){
-    result[i] = i;
-    result[2*i] = i;
+    if(i == 0){
+      result[i] = i+1;
+      result[n+1] = i+1;
+    }
   }
   for(int &i :result)cout << i <<" ";
   cout << endl;
