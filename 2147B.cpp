@@ -12,22 +12,37 @@ void solve() {
   
 
 
-  vector<int>result(2*n,0);
+  vector<int>result(2*+1,0);
+  for(int i = 1;i<=2*n;i++){
 
+    if(i==1){
+     continue;
 
-  for(int i =0;i<2*n;i++){
-    if(i == 0){
-      result[i] = i+1;
-      result[n+1] = i+1;
     }
-    else{
-      result[i] = i+1;
-      result[2*i-1] = i+1;
+    else if(i != 1 && i != n){
+      result[i] = i;
+      result[2*i] = i;
     }
+    if(i == n){
+         result[i] = n;
+         result[2*i] = n;
+         break;
+    }
+    
+
+   
 
   }
-  for(int &i :result)cout << i <<" ";
+  for(int i = 0;i<2*n;i++){
+    if(result[i]==0){
+      result[i] = 1;
+    }
+  }
+  for(auto & ot : result)cout << ot << " ";
   cout << endl;
+
+
+  
 
 
 
