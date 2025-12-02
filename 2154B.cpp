@@ -24,6 +24,7 @@ void solve() {
             if(a[1]>=a[0]){
                 cost = a[1]-a[0]+1;
             }
+        }
             if( i == n-1 && (n-1) % 2 == 0){
                 if(a[n-2] >= a[n-1]){
                     cost = a[n-2]-a[n-1]+1;
@@ -31,7 +32,7 @@ void solve() {
             }
 
 
-        }
+        
     }
     cout << cost << endl;
 
