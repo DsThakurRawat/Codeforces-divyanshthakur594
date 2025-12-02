@@ -14,7 +14,7 @@ void solve() {
 
   vector<int>result(2*n +1,0);
   for(int i = n;i>=1;i--) cout << i << " ";
-  for(int i = 1; i <=n; i++) cout << << i << " ";
+  for(int i = 1; i <=n; i++) cout << i << " ";
   cout << endl;
 
 
