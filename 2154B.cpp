@@ -18,13 +18,14 @@ void solve() {
         }
     }
     int cost = 0;
+    int i = 0;
    
-    for(int i = 0;i<n;i++){
+   
         if( i == 0){
             if(a[1]>=a[0]){
                 cost = a[1]-a[0]+1;
             }
-        }
+        
             if( i == n-1 && (n-1) % 2 == 0){
                 if(a[n-2] >= a[n-1]){
                     cost = a[n-2]-a[n-1]+1;
