@@ -20,8 +20,8 @@ void solve() {
     int cost = 0;
     for(int i = 0;i<n;i++){
         if( i % 2 == 0 ){
-            if( a[i-1] >= a[i]  ) cost = a[i-1]-a[i];
-            else if(a[i+1] >= a[i]) cost = a[i+1]-a[i];
+            if( a[i-1] >= a[i]  ) cost = a[i-1]-a[i]+1;
+            else if(a[i+1] >= a[i]) cost = a[i+1]-a[i]+1;
         }
     }
     cout << cost << endl;
