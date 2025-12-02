@@ -17,29 +17,23 @@ void solve() {
             a[i] =  maxi;
         }
     }
-    int cost = 0;
+   
     
+    long long cost = 0;
 
-    for(int i = 0;i<n;i++){
-        if(i%2 == 0){
-            if(i==0 && a[1]>=a[0]){
-                cost = a[1]-a[0]+1;
-                continue;
-            }
-            if(i == n-1 && a[n-2]>a[n-1] && n-2 >=0 ){
-                       cost = a[n-2]-a[n-1]+1;
-                       continue;
-            }
-            if(a[i-1]>=a[i] && i-1>=0 ){
-                cost = a[i-1] - a[i]+1;
+    for(int i = 0; i < n; i++){
+        if(i % 2 == 0){   // make even index a peak
+            long long left = (i-1 >= 0 ? a[i-1] : LLONG_MIN);
+            long long right = (i+1 < n ? a[i+1] : LLONG_MIN);
 
-            }
-            if(a[i+1]>=a[i] && i+1<n){
-                cost = a[i+1]-a[i]+1;
-            }
+            long long need = max(left, right) - a[i] + 1;
+
+            if(need > 0) cost += need;
         }
     }
+
     cout << cost << endl;
+
 
    
    
