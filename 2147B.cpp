@@ -38,7 +38,7 @@ void solve() {
       result[i] = 1;
     }
   }
-  for(int i = 1;i<=2*n; i++)cout << result[i] << endl;
+  for(int i = 1;i<=2*n; i++)cout << result[i] << " ";
   cout << endl;
 
 
