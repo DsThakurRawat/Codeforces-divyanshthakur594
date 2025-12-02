@@ -22,7 +22,7 @@ void solve() {
     long long cost = 0;
 
     for(int i = 0; i < n; i++){
-        if(i % 2 == 0){   // make even index a peak
+        if(i % 2 == 0){   
             long long left = (i-1 >= 0 ? a[i-1] : LLONG_MIN);
             long long right = (i+1 < n ? a[i+1] : LLONG_MIN);
 
