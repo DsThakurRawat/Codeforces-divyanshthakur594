@@ -13,32 +13,8 @@ void solve() {
 
 
   vector<int>result(2*n +1,0);
-  for(int i = 1;i<=2*n;i++){
-
-    if(i==1){
-     continue;
-
-    }
-    else if(i != 1 && i != n){
-      result[i] = i;
-      result[2*i] = i;
-    }
-    if(i == n){
-         result[i] = n;
-         result[2*i] = n;
-         break;
-    }
-    
-
-   
-
-  }
-  for(int i = 1;i<=2*n;i++){
-    if(result[i]==0){
-      result[i] = 1;
-    }
-  }
-  for(int i = 1;i<=2*n; i++)cout << result[i] << " ";
+  for(int i = n;i>=1;i--) cout << i << " ";
+  for(int i = 1; i <=n; i++) cout << << i << " ";
   cout << endl;
 
 
