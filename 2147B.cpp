@@ -12,7 +12,7 @@ void solve() {
   
 
 
-  vector<int>result(2*+1,0);
+  vector<int>result(2*n +1,0);
   for(int i = 1;i<=2*n;i++){
 
     if(i==1){
