@@ -10,11 +10,7 @@ using ll = long long;
 void solve() {
   int n,k;cin>>n>>k;
 
-  if(n == 1){
-    cout << "NO"<<endl;
-    return;
-  }
-
+  
   string s = to_string(n);
   for(int i = 0;i<k-1;i++){
     s += to_string(n);
