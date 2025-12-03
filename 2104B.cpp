@@ -12,6 +12,11 @@ void solve() {
     vector<long long>ans(n);
     vector<long long>suffixsum(n+1),prefixmax(n);
 
+    //Suffix sum = sum of elements FROM index i TO END
+    //suffixsum[i] = v[i] + v[i+1] + ... + v[n-1]
+
+//value = (sum of elements AFTER index i) + (maximum prefix value up to index i)
+
     // calculate prefixmax
     prefixmax[0] = v[0];
     for(int i = 1;i<n;i++){
