@@ -26,6 +26,7 @@ void solve() {
     for(int i = 0;i<n;i++){
         ans[i] = suffixsum[i+1]+prefixmax[i];
     }
+    reverse(ans.begin(),ans.end());
 
     for(ll & ot : ans) cout << ot << " ";
     cout << endl;
