@@ -8,30 +8,30 @@ using ll = long long;
 
 
 void solve() {
-  int x,k;cin>>x>>k;
-  if(x<=1)
-{
-  cout << "NO"<<endl;
-  return;
-}
-if(k>1 && x >1){
-  cout << "NO"<<endl;
-  return;
-}
-else if(k==1){
+        int x,k;cin>>x>>k;
+        if(x<=1)
+      {
+        cout << "NO"<<endl;
+        return;
+      }
+      if(k>1 && x >1){
+        cout << "NO"<<endl;
+        return;
+      }
+      else if(k==1){
 
-   for (int i = 2; i * i <= x; i++) {
-        if (x % i == 0) {
-          cout << "NO"<<endl;
-          return;
+        for (int i = 2; i * i <= x; i++) {
+              if (x % i == 0) {
+                cout << "NO"<<endl;
+                return;
+              }
         }
-   }
-   cout << "YES"<<endl;
+        cout << "YES"<<endl;
 
-}
-else{
-  cout << ((k==2)?"YES":"NO");
-}
+      }
+      else{
+        cout << ((k==2)?"YES":"NO");
+      }
 
 
 
