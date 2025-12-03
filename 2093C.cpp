@@ -16,8 +16,12 @@ void solve() {
   }
   long long x = stoll(s);
 
-  if(x <= 2){
-    cout << "NO"<< endl;
+  if(x = 2){
+    cout << "YES"<< endl;
+    return;
+  }
+  if(x<n) {
+    cout << "NO"<<endl;
     return;
   }
   if(x%2==0){
