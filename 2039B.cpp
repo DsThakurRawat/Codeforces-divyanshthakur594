@@ -11,10 +11,7 @@ void solve() {
     cout << -1 << endl;
     return;
   }
-  if(s.size()==2){
-    cout << -1 << endl;
-    return;
-  }
+  
   string s1 ="";
   for(int i = 0;i<s.size();i++){
      
