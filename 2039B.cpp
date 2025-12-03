@@ -7,7 +7,36 @@ using namespace std;
 
 void solve() {
   string s;cin>>s;
+  if(s.size()==1){
+    cout << -1 << endl;
+    return;
+  }
+  if(s.size()==2){
+    cout << -1 << endl;
+    return;
+  }
+  string s1 ="";
+  for(int i = 0;i<s.size();i++){
+     
+         s1 = s1 + s[i];
+         int x = s1.size();
+         int t = (x*(x+1))/2;
+
+         if(t%2==0){
+            cout << s1 << endl;
+            return;
+         }
+         
+         
+
+  } 
+  cout << -1 << endl;
   
+
+
+
+  
+
 
 
     
