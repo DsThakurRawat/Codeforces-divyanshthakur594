@@ -27,7 +27,7 @@ void solve() {
   long long r = floor(sqrt((long double)x));
   for(ll i = 3;i<=r;i+=2){
     if( x % i == 0){
-        cout << "N0"<< endl;
+        cout << "NO"<< endl;
         return;
     }
   }
