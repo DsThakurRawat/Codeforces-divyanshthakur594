@@ -16,7 +16,7 @@ void solve() {
   }
   long long x = stoll(s);
 
-  if(x < 2){
+  if(x <= 2){
     cout << "NO"<< endl;
     return;
   }
