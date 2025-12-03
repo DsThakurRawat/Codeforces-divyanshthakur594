@@ -6,42 +6,29 @@
 using namespace std;
 using ll = long long;
 
-
-void solve() {
-        int x,k;cin>>x>>k;
-        if(x<=1)
-      {
-        cout << "NO"<<endl;
-        return;
-      }
-      if(k>1 && x >1){
-        cout << "NO"<<endl;
-        return;
-      }
-      else if(k==1){
-
-        for (int i = 2; i * i <= x; i++) {
-              if (x % i == 0) {
-                cout << "NO"<<endl;
-                return;
-              }
+bool is_prime(int x) {
+    if (x <= 1) {
+        return false;
+    }
+    for (int i = 2; i * i <= x; i++) {
+        if (x % i == 0) {
+            return false;
         }
-        cout << "YES"<<endl;
-
-      }
-      else{
-        cout << ((k==2)?"YES":"NO");
-      }
-
-
-
-
-
-
-
-    
+    }
+    return true;
 }
-  
+ 
+void solve() {
+    int x, k;
+    cin >> x >> k;
+    if (k > 1 && x > 1) {
+        cout << "NO";
+    } else if (k == 1) {
+        cout << (is_prime(x) ? "YES" : "NO");
+    } else {
+        cout << ((k == 2) ? "YES" : "NO");
+    }
+}
 
 
 int main() {
