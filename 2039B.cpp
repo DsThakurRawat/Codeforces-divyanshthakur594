@@ -7,34 +7,21 @@ using namespace std;
 
 void solve() {
   string s;cin>>s;
-  if(s.size()==1){
-    cout << -1 << endl;
-    return;
+  int n = s.size();
+  for(int i = 0;i<n-1;i++){
+    if(s[i]==s[i+1]){
+        cout << s.substr(i,2)<<endl;
+        return;
+    }
   }
-  set<int>st;
-  for(auto &c:s) st.insert(c);
-  if(st.size()==1){
-    cout << s <<endl;
-    return;
+  for(int i = 0;i<n-2;i++){
+    if(s[i]!=s[i+1] and s[i] != s[i+2] and s[i+1] != s[i+2]){
+        cout << s.substr(i,3)<<endl;
+        return;
+    }
   }
-  
-  string s1 ="";
-  for(int i = 0;i<s.size();i++){
-     
-         s1 = s1 + s[i];
-         int x = s1.size();
-         int t = (x*(x+1))/2;
 
-         if(t%2==0){
-            cout << s1 << endl;
-            return;
-         }
-         
-         
-
-  } 
   cout << -1 << endl;
-  
 
 
 
