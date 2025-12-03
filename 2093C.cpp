@@ -9,6 +9,9 @@ using ll = long long;
 
 void solve() {
   int n,k;cin>>n>>k;
+  if(n == 1 && k == 1){
+    cout << "NO"<<endl;
+  }
 
   
   string s = to_string(n);
