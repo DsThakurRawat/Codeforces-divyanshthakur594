@@ -8,7 +8,37 @@ using ll = long long;
 
 
 void solve() {
+  int n,k;cin>>n>>k;
+
+  string s = to_string(n);
+  for(int i = 0;i<k-1;i++){
+    s += to_string(n);
+  }
+  long long x = stoll(s);
+
+  if(x < 2){
+    cout << "NO"<< endl;
+    return;
+  }
+  if(x%2==0){
+    cout<<"NO"<< endl;
+  }
+  long long r = floor(sqrt((long double)n));
+  for(ll i = 3;i<=r;i+=2){
+    if( x % i == 0){
+        cout << "N0"<< endl;
+        return;
+    }
+  }
+  cout << "YES"<<endl;
   
+
+
+
+
+
+
+
 
     
 }
