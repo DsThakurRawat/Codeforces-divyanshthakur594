@@ -23,7 +23,7 @@ void solve() {
     for(int i = n-2;i>=0;i--){
         suffixsum[i] = suffixsum[i+1]+v[i];
     }
-    for(int i = 0;i<n-1;i++){
+    for(int i = 0;i<n;i++){
         ans[i] = suffixsum[i+1]+prefixmax[i];
     }
 
