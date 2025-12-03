@@ -9,7 +9,7 @@ using ll = long long;
 void solve() {
     int n;cin>>n;
     vector<long long>v(n);for(auto &in : v)cin>>in;
-    vector<long long>ans;
+    vector<long long>ans(n);
     vector<long long>suffixsum(n),prefixmax(n);
 
     // calculate prefixmax
