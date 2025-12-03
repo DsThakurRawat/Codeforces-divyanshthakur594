@@ -22,6 +22,7 @@ void solve() {
   }
   if(x%2==0){
     cout<<"NO"<< endl;
+    return;
   }
   long long r = floor(sqrt((long double)n));
   for(ll i = 3;i<=r;i+=2){
