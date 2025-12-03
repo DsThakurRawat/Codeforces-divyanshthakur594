@@ -8,43 +8,30 @@ using ll = long long;
 
 
 void solve() {
-  long long  n,k;cin>>n>>k;
-  if(n == 1 && k == 1){
-    cout << "NO"<<endl;
-    return;
-  }
+  int x,k;cin>>x>>k;
+  if(x<=1)
+{
+  cout << "NO"<<endl;
+  return;
+}
+if(k>1 && x >1){
+  cout << "NO"<<endl;
+  return;
+}
+else if(k==1){
 
-  
-  string s = to_string(n);
-  for(long long i = 0;i<k-1;i++){
-    s += to_string(n);
-  }
-  long long x = stoll(s);
+   for (int i = 2; i * i <= x; i++) {
+        if (x % i == 0) {
+          cout << "NO"<<endl;
+          return;
+        }
+   }
+   cout << "YES"<<endl;
 
-  if(x<n) {
-    cout << "NO"<<endl;
-    return;
-  }
-
-  if(x == 2){
-    cout << "YES"<< endl;
-    return;
-  }
-  
-  if(x%2==0){
-    cout<<"NO"<< endl;
-    return;
-  }
-  long long r = floor(sqrt((long double)x));
-  for(ll i = 3;i<=r;i+=2){
-    if( x % i == 0){
-        cout << "NO"<< endl;
-        return;
-    }
-  }
-  cout << "YES"<<endl;
-  
-
+}
+else{
+  cout << ((k==2)?"YES":"NO");
+}
 
 
 
