@@ -24,8 +24,8 @@ void solve() {
     cout<<"NO"<< endl;
     return;
   }
-  long long r = floor(sqrt((long double)n));
-  for(ll i = 3;i<=r+1;i+=2){
+  long long r = floor(sqrt((long double)x));
+  for(ll i = 3;i<=r;i+=2){
     if( x % i == 0){
         cout << "N0"<< endl;
         return;
