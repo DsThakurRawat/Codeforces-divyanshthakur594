@@ -15,6 +15,7 @@ void solve() {
   for(auto &c:s) st.insert(c);
   if(st.size()==1){
     cout << s <<endl;
+    return;
   }
   
   string s1 ="";
