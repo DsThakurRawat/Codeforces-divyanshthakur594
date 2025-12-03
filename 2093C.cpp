@@ -8,7 +8,7 @@ using ll = long long;
 
 
 void solve() {
-  int n,k;cin>>n>>k;
+  long long  n,k;cin>>n>>k;
   if(n == 1 && k == 1){
     cout << "NO"<<endl;
     return;
@@ -16,7 +16,7 @@ void solve() {
 
   
   string s = to_string(n);
-  for(int i = 0;i<k-1;i++){
+  for(long long i = 0;i<k-1;i++){
     s += to_string(n);
   }
   long long x = stoll(s);
