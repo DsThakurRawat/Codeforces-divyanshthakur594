@@ -11,6 +11,11 @@ void solve() {
     cout << -1 << endl;
     return;
   }
+  set<int>st;
+  for(auto &c:s) st.insert(c);
+  if(st.size()==1){
+    cout << s <<endl;
+  }
   
   string s1 ="";
   for(int i = 0;i<s.size();i++){
