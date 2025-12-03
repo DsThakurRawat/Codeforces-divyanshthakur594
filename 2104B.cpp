@@ -4,12 +4,13 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 void solve() {
     int n;cin>>n;
-    vector<int>v(n);for(auto &in : v)cin>>in;
-    vector<int>ans;
-    vector<int>suffixsum(n),prefixmax(n);
+    vector<long long>v(n);for(auto &in : v)cin>>in;
+    vector<long long>ans;
+    vector<long long>suffixsum(n),prefixmax(n);
 
     // calculate prefixmax
     prefixmax[0] = v[0];
@@ -26,7 +27,7 @@ void solve() {
         ans[i] = suffixsum[i+1]+prefixmax[i];
     }
 
-    for(int & ot : ans) cout << ot << " ";
+    for(ll & ot : ans) cout << ot << " ";
     cout << endl;
 
 
