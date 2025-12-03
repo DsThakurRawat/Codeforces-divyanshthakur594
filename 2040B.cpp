@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int n;cin>>n;
     vector<int>v(n,0);
-    cout << ans = ceil(log2(n)) << endl;
+    cout <<  ceil(log2(n)) << endl;
 
 
 
