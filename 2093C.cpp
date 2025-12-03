@@ -3,9 +3,9 @@
 // code by divyansh rawat
 
 #include <bits/stdc++.h>
+ 
 using namespace std;
-using ll = long long;
-
+ 
 bool is_prime(int x) {
     if (x <= 1) {
         return false;
@@ -29,16 +29,12 @@ void solve() {
         cout << ((k == 2) ? "YES" : "NO");
     }
 }
-
-
+ 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+    int tests;
+    cin >> tests;
+    while (tests--) {
         solve();
+        cout << '\n';
     }
-    return 0;
 }
