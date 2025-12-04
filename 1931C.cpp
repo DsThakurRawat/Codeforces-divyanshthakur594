@@ -13,7 +13,7 @@ void solve() {
   while(i2<n && a[n-i2-1]==a[n-1])i2++;
   int res = n;
   if(a[0]==a[n-1]){
-    res -i1;
+    res -=i1;
     res -= i2;
   }
   else{
