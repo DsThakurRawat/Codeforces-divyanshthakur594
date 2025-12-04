@@ -10,11 +10,11 @@ void solve() {
 
      if(a==1|| b ==1 ){
         if(a==1){
-            cout << b*2<<endl;
+            cout << b*b<<endl;
             return;
         }
         if(b==1){
-            cout <<a*2 << endl;
+            cout <<a*a << endl;
             return;
         }
      }
