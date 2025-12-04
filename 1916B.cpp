@@ -6,7 +6,7 @@
 using namespace std;
 
 void solve() {
-     int a,b;cin>>a>>b;
+     long long  a,b;cin>>a>>b;
 
      if(a==1|| b ==1 ){
         if(a==1){
