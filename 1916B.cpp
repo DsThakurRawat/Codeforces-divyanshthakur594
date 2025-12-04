@@ -29,7 +29,7 @@ void solve() {
         }
      }
      else{
-        cout << lcm(a,b)<<endl;
+        cout << a*b<<endl;
         return;
      }
      
