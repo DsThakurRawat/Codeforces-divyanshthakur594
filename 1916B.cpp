@@ -8,30 +8,19 @@ using namespace std;
 void solve() {
      long long  a,b;cin>>a>>b;
 
-     if(a==1|| b ==1 ){
-        if(a==1){
-            cout << b*b<<endl;
-            return;
+    
+        long long x;
+        if (b % a == 0) {
+          
+            x = (b * b) / a;
+        } else {
+           
+            long long g = __gcd(a, b);
+            x = (a * b) / g;
         }
-        if(b==1){
-            cout <<a*a << endl;
-            return;
-        }
-     }
-     if(a % b== 0 or b % a == 0){
-        if(a % b == 0){
-            cout << (long long)(a*2) <<endl;
-            return;
-        }
-        else{
-            cout << (long long )b*2 << endl;
-            return;
-        }
-     }
-     else{
-        cout << a*b<<endl;
-        return;
-     }
+
+        cout << x << endl;;
+
      
 
 
