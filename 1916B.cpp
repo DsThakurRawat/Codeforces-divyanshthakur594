@@ -20,11 +20,11 @@ void solve() {
      }
      if(a % b== 0 or b % a == 0){
         if(a % b == 0){
-            cout << b*2 <<endl;
+            cout << a*2 <<endl;
             return;
         }
         else{
-            cout << 2*a << endl;
+            cout << b*a << endl;
             return;
         }
      }
