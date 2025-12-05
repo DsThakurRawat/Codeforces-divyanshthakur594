@@ -10,7 +10,7 @@ void solve() {
    string s;
    int count  = 0;
    for(int i = 0;i<s.size();i++){
-    if(s[i]=="1"){
+    if(s[i]=='1'){
         i = i+k+1;
         if(i>=n) break;
     }
@@ -19,7 +19,7 @@ void solve() {
     }
 
    }
-   cout << count<<endl;
+   cout<< count<<endl;
 
     
 }
