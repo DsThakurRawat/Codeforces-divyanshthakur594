@@ -21,6 +21,11 @@ void solve() {
   int n;cin>>n;
   vector<int>p(n);for(int &in:p)cin>>in;
   vector<int>v;
+  if (*max_element(v.begin(), v.end()) == 0) {
+    cout << n << endl;
+    return;
+}
+
   for(int i = 1;i<n;i++){
     v.push_back(i);
   }
