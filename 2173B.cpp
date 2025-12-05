@@ -9,30 +9,19 @@ void solve() {
   int n;cin>>n;
   vector<int>a(n);for(int &in:a)cin>>in;
   vector<int>b(n);for(int &in:b)cin>>in;
-  int score = 0;
-
+  
     int mini = 0;
     int maxi = 0;
     
     for (int i = 0; i < n; ++i) {
 
             int score1 = max(maxi - a[i], b[i] - mini);
-            int score2 = min(mini - a[i], b[i] - maxi);
-            
-        maxi = score1;
-        mini = score2;
+            int score2 = min(mini - a[i], b[i] - maxi);   
+            maxi = score1;
+            mini = score2;
     }
     
     cout << maxi << endl;
-
-
-
-
-
-
-
-
-
 
 
 }
