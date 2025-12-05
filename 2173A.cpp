@@ -19,6 +19,7 @@ void solve() {
     }
 
    }
+   cout << count<<endl;
 
     
 }
