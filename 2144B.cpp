@@ -17,37 +17,26 @@ void solve() {
  length of its contiguous subsegment (possibly empty) 
  that needs to be sorted so that the entire permutation
   becomes sorted in ascending order.*/
+ int n;
+    cin >> n;
+    vector<int> p(n);
+    for (int &x : p) cin >> x;
 
-  int n;cin>>n;
-  vector<int>p(n);for(int &in:p)cin>>in;
-  vector<int>v;
-  if (*max_element(p.begin(), p.end()) == 0) {
-    cout << n << endl;
-    return;
-}
+    vector<int> sorted(n);
+    for(int i = 0; i < n; i++)
+        sorted[i] = i + 1;
 
-  
-  for(int i = 0;i<n;i++){
-    v.push_back(i+1);
-  }
-  for(int i =0;i<n;i++){
-    if(p[i]==0){
-        p[i] = v[i];
-    }
-  }
- 
-  int l = 0,r = n-1;
+    int l = 0, r = n - 1;
 
-  while (l < n && p[l] == v[l]) l++;
-    while (r >= 0 && p[r] == v[r]) r--;
+    while (l < n && p[l] == sorted[l]) l++;
+    while (r >= 0 && p[r] == sorted[r]) r--;
 
-    if (l >= r){
-        cout << 0 <<endl;
+    if (l >= r) {
+        cout << 0 << endl;
         return;
     }
 
-    cout << (r - l + 1)<<endl;
-
+    cout << r - l + 1 << endl;
   
 
 
