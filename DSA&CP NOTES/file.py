@@ -16,7 +16,7 @@ collage = Image.new("RGB", (collage_width, collage_height), (0, 0, 0))
 
 # Paste images
 collage.paste(img2, (0, 0))
-collage.paste(img1, (img1.width, 0))
+collage.paste(img1, (img2.width, 0))
 
 # Save result
 collage.save("collage2.png")
