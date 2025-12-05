@@ -10,15 +10,30 @@ void solve() {
   vector<int>a(n);for(int &in:a)cin>>in;
   vector<int>b(n);for(int &in:b)cin>>in;
   int score = 0;
-  for(int i = 0;i<n;i++){
-    int take1 = score-a[i];
-    int take2 = b[i]-score;
-    score=max(take1,take2);
-  }
-  cout << score<<endl;
 
-
+    long long current_min = 0;
+    long long current_max = 0;
     
+    for (int i = 0; i < n; ++i) {
+        long long next_max = max(current_max - a[i], b[i] - current_min);
+        long long next_min = min(current_min - a[i], b[i] - current_max);
+        
+        current_max = next_max;
+        current_min = next_min;
+    }
+    
+    cout << current_max << "\n";
+
+
+
+
+
+
+
+
+
+
+
 }
   
 
