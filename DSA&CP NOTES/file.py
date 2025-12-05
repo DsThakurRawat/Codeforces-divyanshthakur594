@@ -15,9 +15,9 @@ collage_height = h
 collage = Image.new("RGB", (collage_width, collage_height), (0, 0, 0))
 
 # Paste images
-collage.paste(img1, (0, 0))
-collage.paste(img2, (img1.width, 0))
+collage.paste(img2, (0, 0))
+collage.paste(img1, (img1.width, 0))
 
 # Save result
-collage.save("collage.png")
+collage.save("collage2.png")
 print("Saved as collage.png")
