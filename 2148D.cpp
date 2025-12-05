@@ -10,7 +10,7 @@ using ll =  long long;
 void solve() {
     ll n;cin>>n;
     vector<ll>a(n);for(ll &in:a)cin>>in;
-    vector<int>evenarr,oddarr;
+    vector<ll>evenarr,oddarr;
     int odd_count = 0;
     ll sum = 0;
     for(ll &in:a){
@@ -26,7 +26,7 @@ void solve() {
         cout <<0 <<endl;
         return;
     }
-   ll  evensum = accumulate(evenarr.begin(),evenarr.end(),0);
+   ll  evensum = accumulate(evenarr.begin(),evenarr.end(),0LL);
 
  
    int sizee = oddarr.size();
