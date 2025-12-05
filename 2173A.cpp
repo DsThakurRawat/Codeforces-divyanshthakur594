@@ -9,7 +9,7 @@ void solve() {
    int n,k;cin>>n>>k;
    string s;
    int count  = 0;
-   for(int i = 0;i<n;i++){
+   for(int i = 0;i<s.size();i++){
     if(s[i]==1){
         i = i+k+1;
         if(i>=n) break;
