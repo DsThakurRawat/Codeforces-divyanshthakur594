@@ -12,11 +12,11 @@ void solve() {
    for(int i = 0;i<s.size();i++){
     if(s[i]=='1'){
         i = i+k+1;
-        if(i>=n) break;
     }
     else{
      count++;
     }
+     if(i>=n) break;
 
    }
    cout<< count<<endl;
