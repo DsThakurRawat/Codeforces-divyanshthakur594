@@ -16,11 +16,11 @@ void solve() {
     
     for (int i = 0; i < n; ++i) {
 
-            int next_maxi = max(maxi - a[i], b[i] - mini);
-            int next_mini = min(mini - a[i], b[i] - maxi);
+            int score1 = max(maxi - a[i], b[i] - mini);
+            int score2 = min(mini - a[i], b[i] - maxi);
             
-        maxi = next_maxi;
-        mini = next_mini;
+        maxi = score1;
+        mini = score2;
     }
     
     cout << maxi << endl;
