@@ -52,6 +52,7 @@ void solve() {
         }
         else{
             cout << oddsum+evensum<<endl;
+            return;
         }
 
 
