@@ -9,15 +9,15 @@ void solve() {
    int n,k;cin>>n>>k;
    string s;cin>>s;
    int count  = 0;
-   for(int i = 0;i<s.size();i++){
+   int flag = -1;
+
+   for(int i = 0;i<n;i++){
     if(s[i]=='1'){
-        i = i+k+1;
+        flag = i+k;
     }
     else{
-     count++;
+        if(i>flag) count++;
     }
-     if(i>=n) break;
-
    }
    cout<< count<<endl;
 
