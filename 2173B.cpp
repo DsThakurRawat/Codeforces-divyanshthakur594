@@ -11,18 +11,19 @@ void solve() {
   vector<int>b(n);for(int &in:b)cin>>in;
   int score = 0;
 
-    long long current_min = 0;
-    long long current_max = 0;
+    int mini = 0;
+    int maxi = 0;
     
     for (int i = 0; i < n; ++i) {
-        long long next_max = max(current_max - a[i], b[i] - current_min);
-        long long next_min = min(current_min - a[i], b[i] - current_max);
-        
-        current_max = next_max;
-        current_min = next_min;
+
+            int next_maxi = max(maxi - a[i], b[i] - mini);
+            int next_mini = min(mini - a[i], b[i] - maxi);
+            
+        maxi = next_maxi;
+        mini = next_mini;
     }
     
-    cout << current_max << "\n";
+    cout << maxi << endl;
 
 
 
