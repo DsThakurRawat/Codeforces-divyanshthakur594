@@ -6,39 +6,43 @@
 using namespace std;
 
 void solve() {
-
-  /*
- Recall that a permutation of length n
- is a sequence of length n
- such that each integer from 1
- to n
- appears in it exactly once.
- Let's define the cost of a permutation as the minimum 
- length of its contiguous subsegment (possibly empty) 
- that needs to be sorted so that the entire permutation
-  becomes sorted in ascending order.*/
- int n;
+       int n;
     cin >> n;
     vector<int> p(n);
-    for (int &x : p) cin >> x;
+    vector<int> pos0;
+    vector<int> used(n, 0);
 
-    vector<int> sorted(n);
-    for(int i = 0; i < n; i++)
-        sorted[i] = i + 1;
+    for(int i = 0; i < n; i++) {
+        cin >> p[i];
+        --p[i];
+        if(p[i] == -1)
+            pos0.push_back(i);
+        else
+            used[p[i]] = 1;
+    }
+
+    if(pos0.size() == 1) {
+        int missing = -1;
+        for(int x = 0; x < n; x++) {
+            if(used[x] == 0) {
+                missing = x;
+                break;
+            }
+        }
+        p[pos0[0]] = missing;
+    }
 
     int l = 0, r = n - 1;
+    while(l < n && p[l] == l) l++;
+    while(r >= 0 && p[r] == r) r--;
 
-    while (l < n && p[l] == sorted[l]) l++;
-    while (r >= 0 && p[r] == sorted[r]) r--;
-
-    if (l >= r) {
+    if(l >= r) {
         cout << 0 << endl;
         return;
     }
 
-    cout << r - l + 1 << endl;
-  
-
+    cout << (r - l + 1) << endl;
+}
 
 
 
