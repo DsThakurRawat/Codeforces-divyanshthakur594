@@ -29,7 +29,7 @@ void solve() {
         p[i] = v[i];
     }
   }
-  int n = p.size();
+ 
   int l = 0,r = n-1;
 
   while (l < n && p[l] == v[l]) l++;
