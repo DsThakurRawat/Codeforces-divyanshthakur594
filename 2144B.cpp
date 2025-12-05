@@ -1,12 +1,8 @@
-
-// simple template-test2
-// code by divyansh rawat
-
 #include <bits/stdc++.h>
 using namespace std;
 
 void solve() {
-       int n;
+    int n;
     cin >> n;
     vector<int> p(n);
     vector<int> pos0;
@@ -24,7 +20,7 @@ void solve() {
     if(pos0.size() == 1) {
         int missing = -1;
         for(int x = 0; x < n; x++) {
-            if(used[x] == 0) {
+            if(!used[x]) {
                 missing = x;
                 break;
             }
@@ -44,35 +40,11 @@ void solve() {
     cout << (r - l + 1) << endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-}
-  
-
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
+
+    int t;
     cin >> t;
-    while (t--) {
-        solve();
-    }
-    return 0;
+    while(t--) solve();
 }
