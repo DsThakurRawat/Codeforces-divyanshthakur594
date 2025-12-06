@@ -33,8 +33,9 @@ void solve() {
     if(zigzag_1[i]=='0') z1++;
     if(zigzag_2[i]=='0')z2++;
    }
-   int requirement = (n+1)/2;
-   if(z1>=requirement && z2>=requirement){
+   int need1 = (n + 1) / 2;   
+int need2 = n / 2;       
+   if(z1>=need1 && z2>=need2){
     cout << "YES"<<endl;
    }
    else{
