@@ -9,7 +9,8 @@ using ll = long long
 void solve() {
     ll n;cin>>n;
     vector<ll>a(n);for(ll &in:a)cin>>in;
-    ll dif = 1e18-(n+1);
+    ll dif = 1000000000000000000LL - (n + 1);
+
     cout << dif<<endl;
 
 
