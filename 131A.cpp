@@ -8,22 +8,30 @@ using ll = long long
 ;
 void solve() {
     string s;cin>>s;
-   string ans="";
-    for(int i = 0;i<s.size();i++){
-        if(i==0){
-     char c =  toupper(s[0]);
-     ans += c;
+    string ans="";
+    int n =s.size();
+      if (n == 1) {
+        if (islower(s[0])) s[0] = toupper(s[0]);
+        else s[0] = tolower(s[0]);
+        cout << s;
+return;
+    }
+
+      bool ok = true;
+    for (int i = 1; i < n; i++) {
+        if (!isupper(s[i])) {
+            ok = false;
+            break;
+        }
+    }
+
+    if (ok) {
         
+        for (char &c : s) {
+            if (islower(c)) c = toupper(c);
+            else c = tolower(c);
+        }
     }
-    else{
-        char c = tolower(s[i]);
-        ans += c;
-    }
-
-    }
-    cout << ans<<endl;
-
-  
 
     
 }
