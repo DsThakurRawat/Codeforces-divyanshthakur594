@@ -18,6 +18,18 @@ void solve() {
         cout << "NO"<<endl;
         return;
     }
+    string z1 , z2;
+    for(int i = 0;i<n-1;i++){
+        z1 = s1[i]+z1;
+        z1 = z1+s2[i+1];
+
+    }
+    for(int i = 0;i<n-1;i++){
+        z2 = s2[i]+z2;
+        z2 = z2+s1[i+1];
+
+    }
+
 
 
     
