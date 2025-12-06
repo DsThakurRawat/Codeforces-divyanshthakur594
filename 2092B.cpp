@@ -29,6 +29,22 @@ void solve() {
         z2 = z2+s1[i+1];
 
     }
+    ll z_1 = 0,z_2 = 0;
+    for(int i =0;i<n;i++){
+        if(z1[i]='0')z_1++;
+    }
+    for(int i = 0;i<n;i++){
+        if(z2[i]='0')z_2++;
+
+    }
+    ll need1 = ceil(n/2);
+    ll need2 = ceil(n/2);
+    if(z_1>=need1 && z_2>=need2){
+        cout<<"YES"<<endl;
+    }
+    else {
+        cout << "NO"<<endl;
+    }
 
 
 
