@@ -11,7 +11,7 @@ void solve() {
     vector<ll>a(n);for(ll &in:a)cin>>in;
     ll dif = 1000000000000000000LL - (n + 1);
 
-    cout << dif<<endl;
+    cout << (dif)%n<<endl;
 
 
   
