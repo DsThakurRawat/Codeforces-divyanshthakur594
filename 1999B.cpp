@@ -19,8 +19,8 @@ void solve() {
   bool res2 = (a11>b21 && a12>b22);// game2
   bool res3 = (a21>b11&&a22>b12);//// game3
   bool res4 = (a21>b21&&a22>b22);//game 4;
-  if(res1&&res2)count+=2;
-  if(res3&&res4)count+=2;
+  if(res1||res2)count+=2;
+  if(res3||res4)count+=2;
   cout << count<<endl;
    
 
