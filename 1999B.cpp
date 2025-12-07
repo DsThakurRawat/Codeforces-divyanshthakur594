@@ -21,6 +21,16 @@ void solve() {
   bool res4 = (a21>b21&&a22>b22);//game 4;
   if(res1&&res2)count+=1;
   if(res3&&res4)count+=1;
+  if(res1&&res3)count+=1;
+  if(res1&&res4)count+=1;
+
+ 
+  if(res2&&res3)count+=1;
+  if(res2&&res4)count+=1;
+
+  if(res3&&res4)count+=1;
+  
+  
   cout << count<<endl;
    
 
