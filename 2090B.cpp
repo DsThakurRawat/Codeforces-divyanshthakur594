@@ -32,9 +32,9 @@ void solve() {
 
   for(int i = 0;i<n;i++){
     for(int j =0;j<m;j++){
-      if(grid[i][j]==1){
+      if(grid[i][j]=='1'){
 
-                if(checkcol[i]&&checkcol[j]){
+                if(checkrow[i]&&checkcol[j]){
                   cout << "NO"<<endl;
                   return;
                 }
