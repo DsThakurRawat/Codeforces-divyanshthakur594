@@ -17,10 +17,11 @@ for(ll i = 0;i<n;i++){
             for(int j = i;j<min(i+k,n);j++){
                 s[j]='1';
             }
+              cur = 0;
+             ans++;
 
         }
-        cur = 0;
-        ans++;
+      
     }
     else{
         cur= 0;
