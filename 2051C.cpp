@@ -12,9 +12,9 @@ void solve() {
     // o/p 1 if passes the exam o/p 0 if he failed
     string s = "";
 
-    for(int i = 0;i<a.size();i++){
+    for(int i = 0;i+(n-1)<a.size();i++){
         vector<int>arr;
-        for(int j =i;j<a.size();j++){
+        for(int j =i;j<i+(n-1);j++){
             arr.push_back(a[j]);
         }
         sort(q.begin(), q.end());
