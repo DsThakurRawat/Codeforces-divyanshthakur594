@@ -28,7 +28,7 @@ void solve() {
   if(res2&&res3)count+=1;
   if(res2&&res4)count+=1;
 
-  if(res3&&res4)count+=1;
+ 
   
   
   cout << count<<endl;
