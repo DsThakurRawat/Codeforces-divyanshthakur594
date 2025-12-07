@@ -6,45 +6,27 @@
 using namespace std;
 using ll = long long;
 void solve() {
-  
-   ll n,m,k;cin>>n>>m>>k;
-   string s;cin>>s;
-   ll i = 0;
-   ll ops = 0;
-    vector<int>a(n);
-    for(int i = 0;i<n;i++){
-        a[i]=(s[i]=='1');
-    }
-    while(i<=n-m){
-        bool allzero = true;
-        for(int j = i;j<i+m;j++){
-            if(a[j]==1){
-                allzero = false;
-                break;
+ll n,m,k;cin>>n>>m>>k;
+string s;cin>>s;
+ll ans = 0;
+ll cur = 0;
+for(ll i = 0;i<n;i++){
+    if(s[i]=='0'){
+        cur++;
+        if(cur==m){
+            for(int j = i;j<min(i+k,n);j++){
+                s[j]='1';
             }
+
         }
-        if(allzero){
-            ops++;
-            ll lastindex = i+m-1;
-            ll l = max(0LL,lastindex-k+1);
-            int rem = lastindex;
-            for(int x = l ;x<=rem;x++){
-                a[x]=1;
-                i = rem+1;
-            }
-        }
-        else{
-            i++;
-        }
+        cur = 0;
+        ans++;
     }
-    cout << ops << endl;
-  
-
-
-
-
-
-
+    else{
+        cur= 0;
+    }
+}
+cout << ans<<endl;
 
    
 
