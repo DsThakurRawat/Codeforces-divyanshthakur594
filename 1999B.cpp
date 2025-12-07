@@ -7,7 +7,10 @@ using namespace std;
 using ll = long long;
 void solve() {
   int a1,a2,b1,b2;cin>>a1>>a2>>b1>>b2;
+  // a1.a2->card sunnet had
+  // b1,b2 ->card slavic has
   
+
 
     
 }
