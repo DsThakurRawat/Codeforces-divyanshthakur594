@@ -15,10 +15,10 @@ void solve() {
   ll b21 = b2,b22 = b1;
 
   ll count = 0;
-  if(a11>b11||a12>b12)count++;
-  if(a11>b21||a12>b22)count++;
-  if(a21>b11||a22>b12)count++;
-  if(a21>b21||a22>b22)count++;
+  if(a11>b11&&(a12>b12))count++;
+  if(a11>b21&&a12>b22)count++;
+  if(a21>b11&&a22>b12)count++;
+  if(a21>b21&&a22>b22)count++;
 
 cout << count <<endl;
 
