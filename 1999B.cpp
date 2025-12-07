@@ -15,12 +15,16 @@ void solve() {
   ll b21 = b2,b22 = b1;
 
   ll count = 0;
-  bool  res1 = (a11>b11&&(a12>b12));
-  bool res2 = (a11>b21 && a12>b22);
-  bool res3 = (a21>b11&&a22>b12);
-  bool res4 = (a21>b21&&a22>b22);
+  bool  res1 = (a11>b11&&(a12>b12));// game1
+  bool res2 = (a11>b21 && a12>b22);// game2
+  bool res3 = (a21>b11&&a22>b12);//// game3
+  bool res4 = (a21>b21&&a22>b22);//game 4;
+  if(res1&&res2)count+=2;
+  if(res3&&res4)count+=2;
+  cout << count<<endl;
+   
 
-cout << count <<endl;
+
 
     
 }
