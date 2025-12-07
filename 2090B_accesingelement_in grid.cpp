@@ -26,30 +26,21 @@ void solve() {
       if(grid[i][col]=='0'){
         left = 1;
         break;
-      }
+       }
      }
+     // checking from top for i = 0 to i = i-1(including) no zeroes should be there
      for(int row = 0;row<i;row++){
       if(grid[row][j]=='0'){
       right = 1;
       break;
-     }
+       }
     }
     if(left==1&&right==1){
       cout << "NO"<<endl;
       return;
-    }
-
-
-
-
-
-
-
-
-
-                
-      }
-    }
+          }                
+       }
+     }
   }
   cout << "YES"<<endl;
 
