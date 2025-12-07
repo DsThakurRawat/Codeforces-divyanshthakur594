@@ -23,7 +23,7 @@ void solve() {
     }
     vector<int>known(n+1,false);
     for(int &x:q){
-        cin>>x;
+        
         known[x]=true;
     }
  // if k = n-1 -> exactly 1 missing qsn
