@@ -11,7 +11,7 @@ void solve() {
     vector<int>q(k);for(int &in:q)cin>>in;
     // o/p 1 if passes the exam o/p 0 if he failed
    
-    if(a==q){
+    if(n==k){
         string s(m,'1');
         cout << s << endl;
         return;
