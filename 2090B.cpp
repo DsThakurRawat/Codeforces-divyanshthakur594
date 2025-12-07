@@ -14,30 +14,40 @@ void solve() {
   }
   // he can push any number of balls
 
-  vector<bool>checkrow(n,false),checkcol(m,false);
-
-  for(int i = 0;i<n;i++){
-    for(int j = 0;j<m;j++){
-      if(grid[i][j]=='0')checkrow[i]=true;
-    }
-  }
-  for(int j = 0;j<m;j++)
-     for(int i = 0;i<n;i++){
-      if(grid[i][j]=='0') checkcol[j] = true;
-     }
-
-
-
-
 
   for(int i = 0;i<n;i++){
     for(int j =0;j<m;j++){
       if(grid[i][j]=='1'){
+     int left = 0;
+     int right = 0;
 
-                if(checkrow[i]&&checkcol[j]){
-                  cout << "NO"<<endl;
-                  return;
-                }
+      /// from zero to j-1(including) no zero should be there
+     for(int col =0;col<j;col++){
+      if(grid[i][j]=='0'){
+        left = 1;
+        break;
+      }
+     }
+     for(int row = 0;row<i;row++){
+      if(grid[i][j]=='0'){
+      right = 1;
+      break;
+     }
+    }
+    if(left==1&&right==1){
+      cout << "NO"<<endl;
+      return;
+    }
+
+
+
+
+
+
+
+
+
+                
       }
     }
   }
