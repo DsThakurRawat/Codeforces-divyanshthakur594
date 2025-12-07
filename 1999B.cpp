@@ -6,6 +6,7 @@
 using namespace std;
 using ll = long long;
 void solve() {
+  int a1,a2,b1,b2;cin>>a1>>a2>>b1>>b2;
   
 
     
