@@ -14,12 +14,32 @@ void solve() {
     if(a==q){
         string s(m,'1');
         cout << s << endl;
+        return;
     }
     if(k<n-1){
         string s(m,'0');
         cout<<s<<endl;
+        return;
     }
-
+    vector<int>known(n+1,false);
+    for(int &x:q){
+        cin>>x;
+        known[x]=true;
+    }
+ // if k = n-1 -> exactly 1 missing qsn
+ int missed = -1;
+ for(int i = 1;i<=n;i++)
+{
+    if(!known[i]){
+        missed = i;
+        break;
+    }
+}
+for(int i =0;i<m;i++){
+    if(a[i]==missed)cout << '1';
+    else cout << '0';
+}
+cout << endl;
 
  
 
