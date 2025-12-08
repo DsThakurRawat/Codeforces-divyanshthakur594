@@ -15,10 +15,12 @@ void solve() {
         sum += x;
     }
 
+
+    
    
     long long ans = min(cnt, sum - (n - 1));
 
-    cout << ans << endl;;
+    cout << ans << endl;
 
   
 

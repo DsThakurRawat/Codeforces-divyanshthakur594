@@ -6,13 +6,15 @@
 using namespace std;
 
 void solve() {
+
+  
   int n;cin>>n;
   vector<int>a(n);for(int &in:a)cin>>in;
   int i1 = 0,i2 = 0;
-  while(i1<n&&a[i1]==a[0])i1++;
-  while(i2<n && a[n-i2-1]==a[n-1])i2++;
+  while(i1<n&&a[i1]==a[0])i1++;// elements equal from initial side
+  while(i2<n && a[n-i2-1]==a[n-1])i2++;// elements equal from right side
   int res = n;
-  if(a[0]==a[n-1]){
+  if(a[0]==a[n-1]){//8 8 8 1 2 8 8 8 for this case
     res -=i1;
     res -= i2;
   }
