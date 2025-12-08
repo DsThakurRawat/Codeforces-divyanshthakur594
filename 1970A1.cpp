@@ -16,12 +16,15 @@ void solve() {
     map<char,int>mp;
 
     for(int i =1;i<n;i++){
-        if(s[i]=='('){
-            prefixbalance[i] = prefixbalance[i-1]+1;
+        ll cnt1=0;
+        ll cnt2 = 0;
+
+        for(int j = 0;j<i;j++){
+            if(s[j]=='(') cnt1++;
+            if(s[j]==')')cnt2++;
         }
-        else{
-            prefixbalance[i]=prefixbalance[i-1]+1;
-        }
+        prefixbalance[i] = cnt1-cnt2;
+       
 
 
     }
