@@ -12,34 +12,39 @@ void solve() {
 
     // if when s[i]=='b' ->  : it deletes the last (rightmost) lowercase letter in the typed string
     // when he presses the 'B' key, it deletes the last (rightmost) uppercase letter in the typed string. If there are no uppercase letters in the typed string,
-    string ans ="";
+   ll delupper = 0;
+   ll dellower = 0;
+   string ans ="";
 
-
-    for(ll i =0;i<s.size();i++){
-            if(s[i]=='b'){
-                for(int j =i;j>=0;j--){
-                    if('a'<=s[j]&&s[j]<='z'){
-                       
-                    }
-                }
-            }
-        
-          else if(s[i]=='B'){
-                for(int j =i;j>=0;j--){
-                    if('A'<=s[j]&&s[j]<='Z'){
-                      
-                    }
-                }
-            }
-
-        
-         else{
-                ans = ans+s[i];
-               
-            }
-
+   for(ll i=(ll)s.size()-1;i>=0;i--){
+    if(s[i]=='b'){
+        dellower++;
+        continue;
     }
-    cout << ans << endl;
+
+    if(s[i]=='B'){
+        delupper++;
+        continue;
+    }
+
+    if(delupper>0&&s[i]>'A'&&s[i]<='Z'){
+        delupper--;
+        continue;
+    }
+    if(dellower>0&& s[i]>='a'&&s[i]<='z'){
+        dellower--;
+        continue;
+    }
+    ans +=s[i];
+
+
+   }
+
+     reverse(ans.begin(),ans.end());
+     cout << ans <<endl;
+
+
+    
 
 
 
