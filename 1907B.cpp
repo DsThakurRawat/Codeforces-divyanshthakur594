@@ -18,7 +18,7 @@ void solve() {
     for(ll i =0;i<s.size();i++){
             if(s[i]=='b'){
                 for(int j =i-1;j>=1;j--){
-                    if(islower(s[j])){
+                    if('a'<=s[j]&&s[j]<='z'){
                        
                     }
                 }
@@ -26,7 +26,7 @@ void solve() {
         
           else if(s[i]=='B'){
                 for(int j =i-1;j>=1;j--){
-                    if(isupper(s[j])){
+                    if('A'<=s[j]&&s[j]<='Z'){
                       
                     }
                 }
