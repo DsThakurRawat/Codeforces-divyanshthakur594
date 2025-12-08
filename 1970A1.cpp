@@ -23,7 +23,15 @@ void solve() {
    
     
 
+/*
 
+        
+a[i][0] = bal;   // prefix balance before position i
+a[i][1] = -i;    // negative index (for sorting in descending order by i)
+a[i][2] = s[i];  // character '(' or ')' stored as int (ASCII)
+
+
+*/
   
 
   
