@@ -24,12 +24,19 @@ void solve() {
             if(s[j]==')')cnt2++;
         }
         prefixbalance[i] = cnt1-cnt2;
-       
-
-
     }
-    for(ll &ot:prefixbalance)cout << ot <<" ";
+    map<int,char>mp;
 
+    for(int i = 0;i<n;i++){
+        mp[prefixbalance[i]]=s[i];
+    }
+    string ans;
+
+    for(int i =0;i<)
+
+
+
+  
 
   
    
