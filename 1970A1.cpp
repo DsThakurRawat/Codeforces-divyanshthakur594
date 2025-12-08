@@ -13,7 +13,7 @@ void solve() {
     vector<array<int,3>>a(n);
     int bal = 0;
     for(int i =0;i<n;i++){
-        a[i]={bal,-1,s[i]};
+        a[i]={bal,-i,s[i]};
         bal+=(s[i]=='(' ? 1:-1);
     }
     sort(a.begin(),a.end());
