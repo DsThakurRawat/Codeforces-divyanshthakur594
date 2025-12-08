@@ -10,32 +10,17 @@ void solve() {
 
     string s;cin>>s;
     ll n = s.size();
-    vector<ll>prefixbalance(n);
-    vector<int>pos(n);
-    
-    prefixbalance[0] = 0;
-    map<char,int>mp;
-    pos[0] = prefixbalance[0];
-
-    for(int i =1;i<n;i++){
-        ll cnt1=0;
-        ll cnt2 = 0;
-
-        for(int j = 0;j<i;j++){
-            if(s[j]=='(') cnt1++;
-            if(s[j]==')')cnt2++;
-        }
-        prefixbalance[i] = cnt1-cnt2;
-        pos[i]=prefixbalance[i];
-    }
-    sort(pos.begin(),pos.end());
-    string ans="";
-
+    vector<array<int,3>>a(n);
+    int bal = 0;
     for(int i =0;i<n;i++){
-        ans = ans+s[pos[i]];
+        a[i]={bal,-1,s[i]};
+        bal+=(s[i]=='(' ? 1:-1);
     }
-    cout << ans << endl;
+    sort(a.begin(),a.end());
+    for(auto &x:a)cout << (char)x[2];
+    cout << endl;
 
+   
     
 
 
