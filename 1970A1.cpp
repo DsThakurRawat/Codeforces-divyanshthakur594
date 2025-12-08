@@ -32,8 +32,9 @@ void solve() {
     string ans="";
 
     for(int i =0;i<n;i++){
-        ans[i] = ans[i]+s[pos[i]];
+        ans = ans+s[pos[i]];
     }
+    cout << ans << endl;
 
     
 
