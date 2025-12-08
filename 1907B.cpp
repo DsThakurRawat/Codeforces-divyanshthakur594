@@ -12,27 +12,27 @@ void solve() {
 
     // if when s[i]=='b' ->  : it deletes the last (rightmost) lowercase letter in the typed string
     // when he presses the 'B' key, it deletes the last (rightmost) uppercase letter in the typed string. If there are no uppercase letters in the typed string,
-   ll delupper = 0;
-   ll dellower = 0;
+   ll uppercnt = 0;
+   ll lowercnt = 0;
    string ans ="";
 
    for(ll i=(ll)s.size()-1;i>=0;i--){
     if(s[i]=='b'){
-        dellower++;
+        lowercnt++;
         continue;
     }
 
     if(s[i]=='B'){
-        delupper++;
+        uppercnt++;
         continue;
     }
 
-    if(delupper>0&&s[i]>='A'&&s[i]<='Z'){
-        delupper--;
+    if(uppercnt>0&&s[i]>='A'&&s[i]<='Z'){
+        uppercnt--;
         continue;
     }
-    if(dellower>0&& s[i]>='a'&&s[i]<='z'){
-        dellower--;
+    if(lowercnt>0&& s[i]>='a'&&s[i]<='z'){
+        lowercnt--;
         continue;
     }
     ans +=s[i];
