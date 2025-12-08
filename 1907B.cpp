@@ -17,7 +17,7 @@ void solve() {
 
     for(ll i =0;i<s.size();i++){
 
-        if(s[i]=='b'||s[i]=='B'){
+        
             if(s[i]=='b'){
                 for(int j =i-1;j>=1;j--){
                     if(islower(s[j])){
@@ -25,7 +25,8 @@ void solve() {
                     }
                 }
             }
-            if(s[i]=='B'){
+        
+          else if(s[i]=='B'){
                 for(int j =i-1;j>=1;j--){
                     if(isupper(s[j])){
                        break;
@@ -33,7 +34,7 @@ void solve() {
                 }
             }
 
-        }
+        
          else{
                 ans = ans+s[i];
                
