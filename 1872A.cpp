@@ -23,7 +23,7 @@ void solve() {
     double x =  (double)k/p;
 
      cout << fixed << setprecision(0);
-      cout << ceil(x)<<endl;     
+     cout << ceil(x)<<endl;     
     
    
     
