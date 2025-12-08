@@ -1,3 +1,8 @@
+
+
+
+
+
 //divyansh Res-Set template
 #include <bits/stdc++.h>
 using namespace std;
@@ -41,6 +46,32 @@ template<typename T1, typename T2> void _print(const map<T1,T2> &v){ cerr<<"{"; 
 template<typename T> void print(const vector<T> &v){ for(const auto &x : v) cout << x << ' '; cout << endl; }
 void print(const string &s){ cout << s << endl; }
 mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void solve() {
     int n; cin>>n;
     vi v(n); for(int &it: v) cin>>it;

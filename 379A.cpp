@@ -1,4 +1,5 @@
 
+
 // simple template-test2
 // code by divyansh rawat
 
@@ -14,8 +15,8 @@ void solve() {
         while(cur_a>=1){
 
         total_hours += cur_a;
-        cur_b +=cur_a;
-        cur_a = cur_b/b;
+        cur_b +=cur_a;// 
+        cur_a = cur_b/b;// making new candles from 
         cur_b = cur_b % b;
         }
         cout << total_hours <<endl;
