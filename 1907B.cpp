@@ -27,7 +27,7 @@ void solve() {
         continue;
     }
 
-    if(delupper>0&&s[i]>'A'&&s[i]<='Z'){
+    if(delupper>0&&s[i]>='A'&&s[i]<='Z'){
         delupper--;
         continue;
     }
