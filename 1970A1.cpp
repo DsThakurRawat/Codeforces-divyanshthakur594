@@ -20,7 +20,7 @@ void solve() {
             prefixbalance[i] = prefixbalance[i-1]+1;
         }
         else{
-            prefixbalance[i]=prefixbalance[i-1]-1;
+            prefixbalance[i]=prefixbalance[i-1]+1;
         }
 
 
