@@ -11,9 +11,11 @@ void solve() {
     string s;cin>>s;
     ll n = s.size();
     vector<ll>prefixbalance(n);
+    vector<int>pos(n);
     
     prefixbalance[0] = 0;
     map<char,int>mp;
+    pos[0] = prefixbalance[0];
 
     for(int i =1;i<n;i++){
         ll cnt1=0;
@@ -24,16 +26,16 @@ void solve() {
             if(s[j]==')')cnt2++;
         }
         prefixbalance[i] = cnt1-cnt2;
+        pos[i]=prefixbalance[i];
     }
-    map<int,char>mp;
+    sort(pos.begin(),pos.end());
+    string ans="";
 
-    for(int i = 0;i<n;i++){
-        mp[prefixbalance[i]]=s[i];
+    for(int i =0;i<n;i++){
+        ans[i] = ans[i]+s[pos[i]];
     }
-    string ans;
 
-    for(int i =0;i<)
-
+    
 
 
   
