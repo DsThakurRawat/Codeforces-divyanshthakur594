@@ -8,6 +8,8 @@ using namespace std;
 void solve() {
     int n,m,i,j;cin>>n>>m>>i>>j;
     cout << 1 << " "<< 1 << " "<< n << " "<<m<<endl;;
+    // practice cf like hell if u really want make smtng out of you
+    // practice dsa/cp backend+AI to get edge on evryone
 
 
 
