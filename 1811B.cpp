@@ -18,16 +18,16 @@ void solve() {
     
    // umm max up time vaccin can have 
    ll  pack = 0;
-   for(int i =0;i<n;){
+   for(int i =0;i<n;i++){
     ll max_uptime = t[i]+w+d;
     ll cnt = 0;
      ll  j = i;
 
-    while(j<i+k&&t[j]<=max_uptime){
-     if(t[j]<=max_uptime)cnt++;
+    while(t[j]<=max_uptime&&cnt<=k){
+        cnt++;
         j++;
     }
-    pack = (cnt-k +1 )/(k)+pack;
+    pack = (j+k-1)/(k)+pack;
     i = j+1;
     
     
