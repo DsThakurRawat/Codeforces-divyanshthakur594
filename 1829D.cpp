@@ -13,26 +13,7 @@ bool check(ll n,ll m){
 }
 void solve() {
     ll n,m;cin>>n>>m;
-    if(n==m){
-        cout<<"YES" <<endl;
-        return;
-       }
-
-    if(m>n){
-        cout << "NO"<<endl;
-        return;
-    }
-    if(n%3!=0){
-        cout << "NO"<<endl;
-        return;
-    }
-    if(n%3==0){
-        ll b = n/3;
-        if(b<m){
-            cout << "NO"<<endl;
-            return;
-        }
-    }
+   
     cout <<(check(n,m) ? "YES" : "NO")<<endl;
 
 
