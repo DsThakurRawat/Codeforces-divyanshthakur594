@@ -18,14 +18,20 @@ void solve(){
    //like i have given list of array if it contains 1 then over all gcd of array is one
    
    */
+  ll max_i = 1;
     for(ll i =1;i<=n;i++){
         for(ll j = i;j<=n;j++){
-            if(gcd(a[i],a[j])==1){
+            if(gcd(a[i],a[j])==1){//if array contain coprime and 1 
                 cout<<0<<endl;
                 return;
             }
+   
         }
+        if(gcd(i,a[i])==1) max_i = 1;
+
+
     }
+    cout << n - max_i+1 << endl
    
 
 
