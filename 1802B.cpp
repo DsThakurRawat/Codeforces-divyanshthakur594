@@ -27,7 +27,7 @@ void solve(){
             }
    
         }
-        if(gcd(i,a[i])==1) max_i = 1;
+        if(gcd(i,a[i])==1) max_i = max(max_i,i);
 
 
     }
