@@ -26,14 +26,9 @@ void solve() {
             cout << "NO"<<endl;
             return;
         }
-        while(b>m){
-
-        }
-
-
-
-
     }
+    cout <<check(n,m) ? "YES" : "NO"<<endl;
+
 
 
   
