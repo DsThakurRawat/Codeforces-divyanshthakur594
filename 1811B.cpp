@@ -27,7 +27,7 @@ void solve() {
         cnt++;
         j++;
     }
-    pack = (j-i+k)/(k)+pack;
+    pack = (cnt+k-1)/(k)+pack;
     i = j+1;
     
     
