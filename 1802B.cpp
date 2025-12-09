@@ -19,9 +19,9 @@ void solve(){
    
    */
     for(ll i =1;i<=n;i++){
-        for(ll j = i;j<=i;j++){
+        for(ll j = i;j<=n;j++){
             if(gcd(a[i],a[j])==1){
-                cout << 0 << endl;
+                cout<<0<<endl;
                 return;
             }
         }
