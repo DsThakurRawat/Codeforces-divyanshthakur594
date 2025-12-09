@@ -9,7 +9,7 @@ using ll = long long;
 bool check(ll n,ll m){
     if(n==m)return true;
    else if(n%3!=0) {return false;}
- else  {return check(n/3,m)||((2*n)/3,m);}
+ else  {return (check(n/3,m)||((2*n)/3,m));}
 }
 void solve() {
     ll n,m;cin>>n>>m;
