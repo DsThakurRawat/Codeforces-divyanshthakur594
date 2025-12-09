@@ -27,7 +27,7 @@ void solve() {
      if(t[j]<=max_uptime)cnt++;
         j++;
     }
-    pack = (cnt )/(k)+pack;
+    pack = (cnt-k +1 )/(k)+pack;
     i = j+1;
     
     
