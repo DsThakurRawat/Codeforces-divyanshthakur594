@@ -11,7 +11,8 @@ void solve() {
   vector<ll>x(q);for(ll &in:x)cin>>in;
   ll first = x[0];
   int last = x[0];
-
+//A beautiful array is NOT required to be sorted.
+//It only needs to become sorted after some rotation.
   string s;
   s.push_back('1');
   bool broken = false;
@@ -24,7 +25,7 @@ void solve() {
       }
       else if(x[i]<=first){
         broken = true;
-           s.push_back('1'); 
+        s.push_back('1'); 
         last = x[i];
       }
       else{
