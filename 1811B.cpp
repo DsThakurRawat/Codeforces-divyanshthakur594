@@ -18,29 +18,22 @@ void solve() {
     
    // umm max up time vaccin can have 
    ll  pack = 0;
-   for(int i =0;i<n;i++){
-    ll max_uptime = t[i]+w+d;
-    ll cnt = 0;
-     ll  j = i;
-
-    while(t[j]<=max_uptime&&cnt<=k){
-        cnt++;
-        j++;
-    }
-    pack = (j+k-1)/(k)+pack;
-    i = j+1;
-    
-    
-    
-    }
-
-
-   
-   cout << pack << endl;
-   
-   
+   ll i =0;
   
+   while(i<n){
+         pack++;
 
+         ll expiry = t[i]+w+d;
+         ll cnt = 1;
+         ll j = i+1;
+         while(j<n&&t[j]<=expiry&&cnt <k){
+            cnt++;
+            j++;
+         }
+         i = j;
+
+   }
+   cout << pack << endl;
 
   
 
