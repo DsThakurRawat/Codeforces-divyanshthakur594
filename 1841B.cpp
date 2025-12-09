@@ -16,7 +16,6 @@ void solve() {
   string s;
   s.push_back('1');
   bool broken = false;
-
   for(int i = 1;i<x.size();i++){
     if(broken==false){// !broken =->false
       if(x[i]>=last){
