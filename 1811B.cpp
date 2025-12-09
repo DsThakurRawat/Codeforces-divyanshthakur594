@@ -21,19 +21,21 @@ void solve() {
    for(int i =0;i<n;i++){
     ll max_uptime = t[i]+w+d;
     ll cnt = 0;
-    
-    for(int j = i;j<n;j++){
-         cnt++;
-            if(t[j]<=max_uptime && cnt <=k){
-                pack = ((j-i+k)/k)+pack;
+     ll  j = i;
 
-                
-            i = j+1;
-            }
+    while(t[j]<=max_uptime&&cnt<=k){
+        cnt++;
+        j++;
+    }
+    pack = (j-i+k)/(k)+pack;
+    i = j+1;
+    
+    
+    
     }
 
 
-   }
+   
    cout << pack << endl;
    
    
