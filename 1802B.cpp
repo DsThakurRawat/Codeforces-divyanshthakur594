@@ -21,6 +21,7 @@ void solve(){
         for(ll j = i;j<=i;j++){
             if(gcd(a[i],a[j])==1){
                 cout << 0 << endl;
+                return;
             }
         }
     }
