@@ -18,20 +18,27 @@ void solve(){
    //like i have given list of array if it contains 1 then over all gcd of array is one
    
    */
+  // gcd(n-1,n)==1
+  //This is ALWAYS true, because consecutive numbers are always coprime.
   ll max_i = 1;
+  ll g = 0;
     for(ll i =1;i<=n;i++){
-        for(ll j = i;j<=n;j++){
-            if(gcd(a[i],a[j])==1){//if array contain coprime and 1 
-                cout<<0<<endl;
-                return;
-            }
-   
-        }
-        if(gcd(i,a[i])==1) max_i = max(max_i,i);
-
+      g = gcd(g,a[i]);
 
     }
-    cout << n - max_i+1 << endl;
+    if(g==1){
+        cout << 0 << endl;
+    }
+    else if (gcd(g,n)==1){
+        cout << 1 << endl;
+    }
+    else if(gcd(g,n-1)==1){
+        cout << 2 << endl;
+    }
+    else{
+        cout << 3 << endl;
+    }
+   
    
 
 
