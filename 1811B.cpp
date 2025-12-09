@@ -23,8 +23,8 @@ void solve() {
     ll cnt = 0;
      ll  j = i;
 
-    while(j<=i+k+1){
-        cnt++;
+    while(j<=i+k){
+     if(t[j]<=max_uptime)
         j++;
     }
     pack = (cnt+k-1)/(k)+pack;
