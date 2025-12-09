@@ -31,7 +31,7 @@ void solve(){
 
 
     }
-    cout << n - max_i+1 << endl
+    cout << n - max_i+1 << endl;
    
 
 
