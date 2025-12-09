@@ -23,7 +23,7 @@ void solve() {
     ll cnt = 0;
      ll  j = i;
 
-    while(j<=i+k){
+    while(j<=i+k+1){
         cnt++;
         j++;
     }
