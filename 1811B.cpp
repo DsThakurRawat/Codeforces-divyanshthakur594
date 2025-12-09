@@ -23,7 +23,7 @@ void solve() {
     ll cnt = 0;
      ll  j = i;
 
-    while(j<=i+k){
+    while(j<i+k){
      if(t[j]<=max_uptime)cnt++;
         j++;
     }
