@@ -24,7 +24,7 @@ void solve() {
      ll  j = i;
 
     while(j<=i+k){
-     if(t[j]<=max_uptime)
+     if(t[j]<=max_uptime)cnt++;
         j++;
     }
     pack = (cnt+k-1)/(k)+pack;
