@@ -24,6 +24,7 @@ void solve() {
       }
       else if(x[i]<=first){
         broken = true;
+           s.push_back('1'); 
         last = x[i];
       }
       else{
