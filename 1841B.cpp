@@ -18,7 +18,7 @@ void solve() {
   bool broken = false;
 
   for(int i = 1;i<x.size();i++){
-    if(broken==true){
+    if(broken==false){
       if(x[i]>=last){
        s.push_back('1');
        last = x[i];
