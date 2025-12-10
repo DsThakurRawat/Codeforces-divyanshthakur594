@@ -15,9 +15,9 @@ void solve(){
 
     for(int i =0;i<n-1;i++){
         string p = s.substr(i,2);
-        if(st.count(p)){
+        if(st.count(p)==1){
             ok=true;
-            break;
+            
         }
         st.insert(p);
 
