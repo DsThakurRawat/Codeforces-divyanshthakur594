@@ -32,7 +32,16 @@ void solve() {
         }
     }
     int num_valley =0;
+/*One possible solution is to represent a range of equal element as a single element with that value. Construct this array b
+ and loop through it and check how many element bi
+ satisfy the conditions i=0
+ or bi−1<bi
+ and i=n−1
+ or bi>bi+1
+. If exactly one index satisfies these conditions, print "YES" and othewise "NO".
 
+
+*/
     for(ll i=0;i<b.size();i++){
         if((i==0 || b[i-1]>b[i])&&(i==b.size()-1||b[i]<b[i+1]))num_valley++;
     }
