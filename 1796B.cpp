@@ -13,13 +13,14 @@ void solve(){
     int m = b.size();
     if(a[0]==b[0]){
         cout <<"YES"<<endl;
-        cout << a[0] + '*'<<endl;
+        string z = a[0] + "*";
+        cout << z<<endl;
         return;
         
     }
     if(a[n-1]==b[m-1]){
         cout << "YES"<<endl;
-        cout << '*'+b[m-1]<<endl;
+        cout << "*"+b[m-1]<<endl;
         return;
 
     }
