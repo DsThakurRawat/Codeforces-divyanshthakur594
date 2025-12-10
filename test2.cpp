@@ -8,7 +8,7 @@ using namespace std;
 using ll = long long;
 using  ld = long double;
 using  int128 = __int128_t;
-using cpint = boost::multiprecision::cpp_int;
+
 
 
 
@@ -17,7 +17,13 @@ using cpint = boost::multiprecision::cpp_int;
 
 
 void solve() {
-  
+  int n,m,sx,sy,d;cin>>n>>m>>sx>>sy>>d;
+  // n , m points should be away from laser
+  if((abs(n-sx)+abs(m-sy))<=d){
+    cout << -1 << endl;
+    return;
+  }
+
 
     
 }
