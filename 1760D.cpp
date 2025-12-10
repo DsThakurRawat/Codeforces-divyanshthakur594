@@ -27,14 +27,14 @@ void solve() {
     vector<ll>a(n);for(ll &in:a)cin>>in;
     vector<ll>b;
     for(int i =0;i<n;i++){
-        if(i==0||a[i]!=a.back()){
+        if(i==0 || a[i]!=a.back()){
             b.push_back(a[i]);
         }
     }
     int num_valley =0;
 
     for(ll i=0;i<b.size();i++){
-        if((i==0 || a[i-1]>a[i])&&(i==a.size()-1||a[i]<a[i+1]))num_valley++;
+        if((i==0 || b[i-1]>b[i])&&(i==b.size()-1||b[i]<b[i+1]))num_valley++;
     }
   if(num_valley==1)cout << "YES"<<nl;
   else cout << "NO"<<nl;
