@@ -26,7 +26,7 @@ using  int128 = __int128_t;
 void solve() {
   int n,m,sx,sy,d;cin>>n>>m>>sx>>sy>>d;
   // n , m points should be away from laser
-  if(((sx-d<=1) && (sx+d>=n) ) || ((sy-d<=1) && (sy+d>=m))){
+  if(((sx-d<=1) && (sx+d>=n)) || ((sx-d<=1) && (sy+d>=m))){
     cout << -1 << nl;
     return;
   }
