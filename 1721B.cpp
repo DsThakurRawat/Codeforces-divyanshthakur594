@@ -27,13 +27,13 @@ void solve() {
   int n,m,sx,sy,d;cin>>n>>m>>sx>>sy>>d;
   // n , m points should be away from laser
   if(((sx-d<=1) && (sx+d>n) ) || ((sy-d<=1) && (sy+d>=m))){
-    cout << -1 << endl;
+    cout << -1 << nl;
     return;
   }
  
 
 
-  cout << n+m-2 << endl;
+  cout << n+m-2 << nl;
 
 
 
