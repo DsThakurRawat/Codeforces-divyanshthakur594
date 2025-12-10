@@ -21,7 +21,7 @@ void solve(){
         }
         st.insert(p);
     }
-    
+    cout<<(ok?"YES":"NO")<<endl;
 
   
 
