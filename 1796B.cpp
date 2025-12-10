@@ -20,7 +20,7 @@ void solve(){
     }
     if(a[n-1]==b[m-1]){
         cout << "YES"<<endl;
-        cout << string(1,b[m-1])+"*"<<endl;
+        cout << "*"+string(1,b[m-1])<<endl;
         return;
 
     }
