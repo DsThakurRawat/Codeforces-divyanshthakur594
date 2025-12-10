@@ -1,43 +1,40 @@
-
-// simple template-test2
-// code by divyansh rawat
-
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-void solve(){
 
-    int n;cin>>n;
-    string s;cin>>s;
-    // let say x is subtring of s and x is repeating in s if length of x >=2 then possiblity ->yes else no
-    set<string>st;
-    bool ok = false;
-
-    for(int i =0;i<n-2;i=i+2){
-        string p = s.substr(i,2);
-        if(st.count(p)){
-            cout << "YES"<<endl;
-            return;
-        }
-        st.insert(p);
+vector<int> prefix_function(const string &s) {
+    int n = s.size();
+    vector<int> pi(n);
+    for (int i = 1; i < n; i++) {
+        int j = pi[i-1];
+        while (j > 0 && s[i] != s[j]) j = pi[j-1];
+        if (s[i] == s[j]) j++;
+        pi[i] = j;
     }
-    cout<<(ok?"YES":"NO")<<endl;
-
-  
-
-    
+    return pi;
 }
-  
-
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t ;
-    t=1;
+    cin.tie(NULL);
+
+    int t; 
     cin >> t;
     while (t--) {
-        solve();
+        int n;
+        cin >> n;
+        string s;
+        cin >> s;
+
+        auto pi = prefix_function(s);
+
+        bool ok = false;
+        for (int i = 1; i < n; i++) {
+            if (pi[i] >= 2) {
+                ok = true;
+                break;
+            }
+        }
+
+        cout << (ok ? "YES" : "NO") << "\n";
     }
-    return 0;
 }
