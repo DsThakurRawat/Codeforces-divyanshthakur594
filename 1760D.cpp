@@ -27,7 +27,7 @@ void solve() {
     vector<ll>a(n);for(ll &in:a)cin>>in;
     vector<ll>b;
     for(int i =0;i<n;i++){
-        if(i==0 || a[i]!=a.back()){
+        if(i==0 || a[i]!=b.back()){
             b.push_back(a[i]);
         }
     }
