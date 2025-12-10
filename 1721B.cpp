@@ -44,10 +44,11 @@ void solve() {
     cout << -1 << endl;
     return;
   }
-  if(grid[2][2]==-1){
+  if(grid[2][1]==-1 && grid[1][2]== -1){
     cout << -1 << endl;
     return;
   }
+ 
 
 
   cout << n+m-2 << endl;
