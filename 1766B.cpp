@@ -19,7 +19,8 @@ void solve(){
             ok=true;
             
         }
-      
+        // string p = s.substr(i,L);->this second parameter is length of substring generating
+      // starting index = i end index (0 indexed) end index end index x= i+L-1(inclusive)
 
         if(i>=1){// this is to make sure string don't overalp
             st.insert(s.substr(i-1,2));
