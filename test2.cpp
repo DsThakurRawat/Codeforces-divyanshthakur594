@@ -4,8 +4,18 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long 
-;
+
+using ll = long long;
+using  ld = long double;
+using  int128 = __int128_t;
+using cpint = boost::multiprecision::cpp_int;
+
+
+
+
+#define nl '\n';
+
+
 void solve() {
   
 
