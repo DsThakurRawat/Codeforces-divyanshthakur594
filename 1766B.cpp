@@ -13,7 +13,7 @@ void solve(){
     set<string>st;
     bool ok = false;
 
-    for(int i =0;i<n-1;i++){
+    for(int i =0;i<n-2;i=i+2){
         string p = s.substr(i,2);
         if(st.count(p)){
             cout << "YES"<<endl;
