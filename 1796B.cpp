@@ -13,8 +13,8 @@ void solve(){
     int m = b.size();
     if(a[0]==b[0]){
         cout <<"YES"<<endl;
-        string z = a[0] + "*";
-        cout << z<<endl;
+        
+        cout << string(1,a[0])+"*"<<endl;
         return;
         
     }
