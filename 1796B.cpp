@@ -19,10 +19,36 @@ void solve(){
     }
     if(a[n-1]==b[m-1]){
         cout << "YES"<<endl;
-        cout << '*'+b[0]<<endl;
+        cout << '*'+b[m-1]<<endl;
         return;
 
     }
+    string s1 = a.size() <= b.size() ? a : b;
+    string s2 = a.size()>b.size()?a:b;
+    n = s1.size();
+    string best = "";
+    for(int i =0;i<n;i++){
+        for(int j = i;j<n;j++){
+            string sub = s1.substr(i,j-i+1);
+            if(s2.find(sub)!=string::npos){
+                if(sub.size()>best.size()){
+                    best = sub;
+
+                }
+            }
+        }
+    }
+    if(best.size()>=2){
+        cout << "YES"<<endl;
+        cout<< '*'+best+'*'<<endl;
+    }
+    else{
+        cout << "NO"<<endl;
+    }
+   
+
+
+
 
      
     
