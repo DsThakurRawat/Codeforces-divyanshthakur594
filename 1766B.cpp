@@ -21,7 +21,7 @@ void solve(){
         }
       
 
-        if(i>=1){
+        if(i>=1){// this is to make sure string don't overalp
             st.insert(s.substr(i-1,2));
         }
 
