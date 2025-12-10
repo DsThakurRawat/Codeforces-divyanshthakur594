@@ -19,11 +19,11 @@ using  int128 = __int128_t;
 
 
 
-#define nl '\n';
+#define nl '\n'
 
 
 void solve() {
-    
+
 }
   
 
