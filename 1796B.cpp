@@ -27,6 +27,7 @@ void solve(){
     string s1 = a.size() <= b.size() ? a : b;
     string s2 = a.size()>b.size()?a:b;
     n = s1.size();
+    //generating max"m common length string found in both a and b
     string best = "";
     for(int i =0;i<n;i++){
         for(int j = i;j<n;j++){
