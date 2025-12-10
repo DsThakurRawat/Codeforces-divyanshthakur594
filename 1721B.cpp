@@ -46,6 +46,7 @@ void solve() {
   }
   if(grid[2][2]==-1){
     cout << -1 << endl;
+    return;
   }
 
 
