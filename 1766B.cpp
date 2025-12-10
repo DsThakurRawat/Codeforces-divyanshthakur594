@@ -19,7 +19,7 @@ void solve(){
             ok=true;
             
         }
-        st.insert(p);
+      
 
         if(i>=1){
             st.insert(s.substr(i-1,2));
