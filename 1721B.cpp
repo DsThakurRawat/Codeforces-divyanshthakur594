@@ -10,6 +10,7 @@ using  ld = long double;
 using  int128 = __int128_t;
 
 
+
 //vector<vector<ll>> grid(n, vector<int>(m));
 //vector<vector<ll>> arr(n, vector<int>(m,1));
 //indexes to run from 1…n and 1…m, not from 0.
@@ -41,8 +42,11 @@ void solve() {
   }
   if(grid[n][m-1]==-1 && grid[n-1][m]==-1){
     cout << -1 << endl;
+    return;
   }
-  
+  cout << n+m-2 << endl;
+
+
 
 
 
