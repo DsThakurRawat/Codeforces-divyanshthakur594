@@ -33,7 +33,7 @@ void solve() {
     }
     int num_valley =0;
 
-    for(ll i=0;i<a.size();i++){
+    for(ll i=0;i<b.size();i++){
         if((i==0 || a[i-1]>a[i])&&(i==a.size()-1||a[i]<a[i+1]))num_valley++;
     }
   if(num_valley==1)cout << "YES"<<nl;
