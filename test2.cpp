@@ -10,6 +10,12 @@ using  ld = long double;
 using  int128 = __int128_t;
 
 
+//vector<vector<ll>> grid(n, vector<int>(m));
+//vector<vector<ll>> arr(n, vector<int>(m,1));
+//indexes to run from 1…n and 1…m, not from 0.
+//vector<vector<ll>> grid(n + 1, vector<ll>(m + 1, 1));
+
+
 
 
 
@@ -17,15 +23,6 @@ using  int128 = __int128_t;
 
 
 void solve() {
-  int n,m,sx,sy,d;cin>>n>>m>>sx>>sy>>d;
-  // n , m points should be away from laser
-  if((abs(n-sx)+abs(m-sy))<=d){
-    cout << -1 << endl;
-    return;
-  }
-  
-
-
     
 }
   
