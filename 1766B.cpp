@@ -13,11 +13,11 @@ void solve(){
     set<string>st;
     bool ok = false;
 
-    for(int i =0;i<n-1;i=i+1){
+    for(int i =0;i<n-1;i++){
         string p = s.substr(i,2);
         if(st.count(p)){
-            cout << "YES"<<endl;
-            return;
+            ok=true;
+            break;
         }
         st.insert(p);
 
