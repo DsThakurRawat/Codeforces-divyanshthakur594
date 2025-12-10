@@ -30,7 +30,7 @@ void solve() {
     if(st.size()==2){
         cout << n/2 + 1 << nl;
     }
-    else cout << "No"<<nl;
+    else cout << n<<nl;
 }
   
 
