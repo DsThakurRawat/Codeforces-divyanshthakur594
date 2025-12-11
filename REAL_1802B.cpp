@@ -34,7 +34,7 @@ void solve() {
                 if(b[i]==1)cnt_1++;
             }
             if(b[n-1]==2){
-                ll min_same_gender = (n+1)/2;
+                ll min_same_gender = (cnt_1+1)/2;
                 ll b=cnt_1-min_same_gender;
                 cout<< b + (min_same_gender+1)/2<<endl;
                 return;
