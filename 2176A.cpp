@@ -30,7 +30,7 @@ void solve() {
      ll min=v[0];
 
      for(ll i=1;i<v.size();i++){
-        if(v[i]>min)cnt++;
+        if(v[i]<min)cnt++;
         else min = v[i];
      }
      cout <<cnt << endl;
