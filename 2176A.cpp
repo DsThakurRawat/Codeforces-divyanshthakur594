@@ -29,7 +29,7 @@ void solve() {
     ll cnt=0;
   for(ll i=0;i<n;i++){
     for(ll j=i+1;j<n;j++){
-        if(v[i]>v[j])cnt++;
+        if(v[i]>v[j] && i <j)cnt++;
     }
   }
 cout << cnt << nl;
