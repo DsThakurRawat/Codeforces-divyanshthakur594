@@ -26,7 +26,7 @@ void solve() {
         ll n,k;cin>>n>>k;
         string s;cin>>s;
        
-        vector<ll>presum(n);
+    /*  vector<ll>presum(n);
         presum[0]=int(s[0]=='W');
         for(ll i=1;i<n;i++){
             presum[i]=presum[i-1]+(int(s[i]=='W'));
@@ -40,8 +40,22 @@ void solve() {
 cout << res << nl;
         
 
+*/
+// take block of length k for 
+     
+       ll cnt_min_white =0;
 
+        for(int i = 0;i<n;i++){
+              ll cntwhite=0;
+           for(int j = i; j<i+k;j++){
+                 if(s[j]=='W')cntwhite++;
+           }
+           cnt_min_white = min(cntwhite,cnt_min_white);
 
+        }
+        
+
+        cout << cnt_min_white<<nl;
        
        
 
