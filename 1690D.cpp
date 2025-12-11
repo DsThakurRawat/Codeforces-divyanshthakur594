@@ -25,27 +25,7 @@ using  int128 = __int128_t;
 void solve() {
         ll n,k;cin>>n>>k;
         string s;cin>>s;
-        ll cnt_white=0;
-        ll cnt_black=0;
-        for(ll i=0;i<n;i++){
-            if(s[i]='W')cnt_white++;
-            else cnt_black++;
-        }
-        ll cnti_cnt_black=0;
-        ll curr=0;
-        for(ll i =0;i<n;i++){
-            if(s[i]=='B')curr++;
-            else curr=0;
-            cnti_cnt_black = max(curr,cnti_cnt_black);
-        }
-        if(n==k){
-            cout<< cnt_white<< nl;
-            return;
-        }
-        if(cnti_cnt_black<=k){
-            cout << 0 << nl;
-            return;
-        }
+       
         vector<ll>presum(n);
         presum[0]=int(s[0]=='W');
         for(ll i=1;i<n;i++){
