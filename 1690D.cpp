@@ -42,7 +42,7 @@ cout << res << nl;
 
 */
 // take block of length k for 
-     ll cnt_min_white = LLONG_MAX;
+ /*    ll cnt_min_white = LLONG_MAX;
      ll cntwhite =0;
 
      for(ll i=0;i<k;i++){
@@ -56,6 +56,38 @@ cout << res << nl;
         cnt_min_white= min(cnt_min_white,cntwhite);
      }
        cout << cnt_min_white << nl;
+ */
+
+   ll left =0;
+   ll cntwhite=0;
+   ll recolor =LLONG_MAX;
+
+   for(ll right =0;right<s.size();right++){
+    if(s[right]=='W')cntwhite++;
+
+    if(right - left +1==k){
+        recolor = min(recolor,cntwhite);
+        if(s[left]=='W')cntwhite--;
+        left++;
+    }
+
+   }
+  
+
+
+
+
+
+       cout << recolor << nl;
+
+
+
+
+
+
+
+
+
 
 
 
