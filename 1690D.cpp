@@ -32,7 +32,7 @@ void solve() {
             presum[i]=presum[i-1]+int(s[i-1]=='W');
         }
         ll res = LLONG_MAX;
-        for(ll i=k;i<=n;i++){
+        for(ll i=k;i<n;i++){
             res = min(res,presum[i]-presum[i-k]);
         }
 cout << res << nl;
