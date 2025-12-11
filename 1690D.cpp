@@ -46,8 +46,8 @@ cout << res << nl;
        ll cnt_min_white =1e18;
             ll cntwhite;
         for(int i = 0;i<n;i++){
-            cntwhite=1e18;
-           for(int j = i; j<i+k;j++){
+            cntwhite=0;
+           for(int j = i; j<=i+k;j++){
                  if(s[j]=='W')cntwhite++;
            }
            cnt_min_white = min(cntwhite,cnt_min_white);
