@@ -29,7 +29,7 @@ void solve() {
         vector<ll>presum(n);
         presum[0]=int(s[0]=='W');
         for(ll i=1;i<n;i++){
-            presum[i]=presum[i-1]+int(s[i-1]=='W');
+            presum[i]=presum[i-1]+int(s[i]=='W');
         }
         ll res = LLONG_MAX;
         for(ll i=k;i<n;i++){
