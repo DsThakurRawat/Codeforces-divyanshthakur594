@@ -32,7 +32,7 @@ void solve() {
 
 
     for(int j =i; j>=0;j--){
-        if(v[i]>v[j])cnt++;
+        if(v[i]<v[j])cnt++;
     }
 
     
