@@ -27,23 +27,14 @@ void solve() {
     int n;cin>>n;
     vector<int>v(n);for(auto &in:v)cin>>in;
     ll cnt=0;
-  for(ll i=n-1;i>=0;i--){
+     ll min=v[0];
 
-
-
-    for(int j =i; j>=0;j--){
-        if(v[i]<v[j])cnt++;
-    }
-
+     for(ll i=1;i<v.size();i++){
+        if(v[i]>min)cnt++;
+        else min = v[i];
+     }
+     cout <<cnt << endl;
     
-
-     
-    
-    
-    }
-  
-cout << (cnt+1)/2 << nl;
-
 }
   
 
