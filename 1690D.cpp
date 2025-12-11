@@ -31,9 +31,21 @@ void solve() {
             if(s[i]='W')cnt_white++;
             else cnt_black++;
         }
+        ll cnti_cnt_black=0;
+        ll curr=0;
+        for(ll i =0;i<n;i++){
+            if(s[i]=='B')curr++;
+            else curr=0;
+            cnti_cnt_black = max(curr,cnti_cnt_black);
+
+        }
+
+
         if(n==k){
             cout<< cnt_white<< endl;
+            return;
         }
+
 }
   
 
