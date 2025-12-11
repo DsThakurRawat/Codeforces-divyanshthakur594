@@ -37,14 +37,35 @@ void solve() {
             if(s[i]=='B')curr++;
             else curr=0;
             cnti_cnt_black = max(curr,cnti_cnt_black);
-
         }
-
-
         if(n==k){
-            cout<< cnt_white<< endl;
+            cout<< cnt_white<< nl;
             return;
         }
+        if(cnti_cnt_black<=k){
+            cout << 0 << nl;
+            return;
+        }
+        vector<ll>presum(n);
+        presum[0]=int(s[0]=='W');
+        for(ll i=1;i<n;i++){
+            presum[i]=presum[i-1]+int(s[i-1]=='W');
+        }
+        ll res = INT_MAX;
+        for(ll i=k;i<=n;i++){
+            res = min(res,presum[i]-presum[i-k]);
+        }
+cout << res << nl;
+        
+
+
+
+       
+       
+
+
+
+
 
 }
   
