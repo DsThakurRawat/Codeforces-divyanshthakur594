@@ -28,7 +28,7 @@ void solve() {
     vector<int>v(n);for(auto &in:v)cin>>in;
     ll cnt=0;
   for(ll i=0;i<n;i++){
-    for(ll j=i+1;j<n;j++){
+    for(ll j=n-1;j>=0;j--){
         if(v[i]>v[j] && i <j)cnt++;
     }
   }
