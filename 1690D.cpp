@@ -42,22 +42,20 @@ cout << res << nl;
 
 */
 // take block of length k for 
-     
-       ll cnt_min_white =1e18;
-            ll cntwhite;
-        for(int i = 0;i<n;i++){
-            cntwhite=0;
-           for(int j = i; j<=i+k;j++){
-                 if(s[j]=='W')cntwhite++;
-           }
-           cnt_min_white = min(cntwhite,cnt_min_white);
+     ll cnt_min_white = LLONG_MAX;
+     ll cntwhite =0;
 
-        }
-        
+     for(ll i=0;i<k;i++){
+        if(s[i]=='W')cntwhite++;
+     }
+     cnt_min_white = min(cnt_min_white,cntwhite);
 
-        cout << cnt_min_white<<nl;
-       
-       
+     for (ll i=k;i<n;i++){
+        if(s[i]=='W')cntwhite++;
+        if(s[i-k]=='W')cntwhite--;
+        cnt_min_white= min(cnt_min_white,cntwhite);
+     }
+       cout << cnt_min_white << nl;
 
 
 
