@@ -43,7 +43,7 @@ cout << res << nl;
 */
 // take block of length k for 
      
-       ll cnt_min_white =0;
+       ll cnt_min_white =1e18;
             ll cntwhite;
         for(int i = 0;i<n;i++){
             cntwhite=0;
