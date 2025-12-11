@@ -29,48 +29,21 @@ void solve() {
             // bi = 2 doctor will come to determine sex of guineer pig
             // if you have n pig then mini number of pig having same gender is (n+1)/2;
 
-            ll cnt_1 = 0;
-            ll save_cnt =0;
-            for(ll i=0;i<n;i++){
-                if(b[i]==1)cnt_1++;
-            }
-            if(b[n-1]==2){
-                ll min_same_gender = (cnt_1+1)/2;
-                ll k=cnt_1-min_same_gender;
-                cout<< k + (min_same_gender+1)/2<<endl;
-                return;
+          ll cnt =0,ans =0,avi=0;
+
+          for(ll i=0;i<n;i++){
+            if(b[i]==1){
+                cnt+=1;
+                avi+=1;
+                ans = max(ans,avi);
             }
             else{
-                ll ind2 = -1;
-                for(ll i=0;i<n;i++){
-                    if(b[i]==2){
-                        ind2 = max(ind2,i);
-                    }
+                if(cnt > 0){
+                    avi = cnt/2+1;
                 }
-                for(ll i=0;i<ind2;i++){
-                    if(b[i]==1)save_cnt++;
-
-                }
-                ll minsamegender=(save_cnt+1)/2;
-                ll k = save_cnt-minsamegender;
-                ll iv = k+(minsamegender+1)/2;
-                ll rem1=0;
-
-                for(ll j=ind2;j<n;j++){
-                    if(b[j] ==1 ){
-                        rem1++;
-
-                    }
-                }
-                cout << (rem1+1)/2+iv<<endl;
-                
-
-
-
-
             }
-
-
+          }
+          cout << ans << endl;
 }
   
 
