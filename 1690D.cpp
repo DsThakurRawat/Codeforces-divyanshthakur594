@@ -44,9 +44,9 @@ cout << res << nl;
 // take block of length k for 
      
        ll cnt_min_white =0;
-
+            ll cntwhite;
         for(int i = 0;i<n;i++){
-              ll cntwhite=0;
+            cntwhite=0;
            for(int j = i; j<i+k;j++){
                  if(s[j]=='W')cntwhite++;
            }
