@@ -31,7 +31,7 @@ void solve() {
         for(ll i=1;i<n;i++){
             presum[i]=presum[i-1]+int(s[i-1]=='W');
         }
-        ll res = INT_MAX;
+        ll res = LLONG_MAX;
         for(ll i=k;i<=n;i++){
             res = min(res,presum[i]-presum[i-k]);
         }
