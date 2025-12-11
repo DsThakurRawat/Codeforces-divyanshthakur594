@@ -39,6 +39,8 @@ void solve() {
                 cout<< b + (min_same_gender+1)/2<<endl;
                 return;
             }
+            
+
 }
   
 
