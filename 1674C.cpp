@@ -36,11 +36,11 @@ void solve() {
     if(st1.size()==1 && st2.size()==1){
         int val = *st1.begin();
         int val2 = *st2.begin();
-        if(val==val2){
-            cout << 1 <<nl;
+        if(val!=val2){
+            cout << 2 <<nl;
         }
         else{
-            cout << 2 << nl;
+            cout << 1 << nl;
         }
 
 
