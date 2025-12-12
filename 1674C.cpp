@@ -36,7 +36,7 @@ void solve() {
     if(st1.size()==1 && st2.size()==1){
         char val = *st1.begin();
         char val2 = *st2.begin();
-        if(s[0]==t[0]){
+        if(s[0]==t[0]&&t.size()==1){
             cout << 1 <<nl;
         }
         else{
