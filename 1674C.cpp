@@ -25,32 +25,18 @@ using  int128 = __int128_t;
 void solve() {
     string s;cin>>s;
     string t;cin>>t;
-    int flag =0;
-    set<char>st1(s.begin(),s.end());
-    set<char>st2(t.begin(),t.end());
-   
-    for(int i=0;i<s.size();i++){
 
-        for(int j =0;j<t.size();j++){
-            if(s[i]==t[j])flag=1;
-        }
+    if(t=="a"){
+        cout << 1 <<nl;
 
     }
-    if(flag ==0){
-    cout << (1<<s.size()) <<nl;
-    return;
-    }
-    if(st1.size()==st2.size()){
-        cout << 1 << nl;
-        return;
-    }
-    if(flag==1){
+    else if(count(t.begin(),t.end(),'a')>0){
         cout << -1 << nl;
         return;
     }
-    
-   
-   
+    else{
+        cout << (1LL<<s.size())<<nl;
+    }
 
 }
   
