@@ -33,10 +33,10 @@ void solve() {
     for(ll j=0;j<t.size();j++){
         st2.insert(s[j]);
     }
-    if(st1.size()==1 && st2.size()==1){
+    if(st1.size()==1 && st2.size()==1&&t.size()==1&&s.size()==1){
         char val = *st1.begin();
         char val2 = *st2.begin();
-        if(s[0]==t[0]&&t.size()==1){
+        if(s[0]==t[0]){
             cout << 1 <<nl;
         }
         else{
