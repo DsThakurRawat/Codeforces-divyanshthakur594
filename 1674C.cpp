@@ -40,7 +40,7 @@ void solve() {
             cout << val <<nl;
         }
         else{
-            cout << 2 << nl;
+            cout << val2 << nl;
         }
 
 
