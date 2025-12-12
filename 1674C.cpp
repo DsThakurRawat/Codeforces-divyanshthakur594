@@ -25,29 +25,31 @@ using  int128 = __int128_t;
 void solve() {
     string s;cin>>s;
     string t;cin>>t;
-    set<ll>st1,st2;
+    int flag =0;
+    set<char>st1(s.begin(),s.end());
+    set<char>st2(t.begin(),t.end());
+   
+    for(int i=0;i<s.size();i++){
 
-    for(ll i=0;i<s.size();i++){
-             st1.insert(s[i]);
-    }
-    for(ll j=0;j<t.size();j++){
-        st2.insert(s[j]);
-    }
-    if(st1.size()==1 && st2.size()==1&&(t.size()==1||s.size()==1)){
-        char val = *st1.begin();
-        char val2 = *st2.begin();
-        if(s[0]==t[0]){
-            cout << 1 <<nl;
-        }
-        else{
-            cout << 2 << nl;
+        for(int j =0;j<t.size();j++){
+            if(s[i]==t[j])flag=1;
         }
 
-
-
     }
-    else cout << -1 <<nl;
-
+    if(flag ==0){
+    cout << 1<<s.size() <<nl;
+    return;
+    }
+    if(st1.size()==st2.size()){
+        cout << 1 << nl;
+        return;
+    }
+    if(flag==1){
+        cout << -1 << nl;
+        return;
+    }
+    
+   
    
 
 }
