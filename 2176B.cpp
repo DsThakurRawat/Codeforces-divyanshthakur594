@@ -27,8 +27,9 @@ void solve() {
     string s;cin>>s;
     ll curr = 0;
     ll maxi=curr;
+    s+=s;
 
-    for(ll i=0;i<n;i++){
+    for(ll i=0;i<n*2;i++){
         if(s[i]=='0')curr++;
         else curr=0;
         maxi=max(curr,maxi);
