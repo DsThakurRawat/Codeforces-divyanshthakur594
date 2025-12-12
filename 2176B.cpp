@@ -27,7 +27,7 @@ void solve() {
     string s;cin>>s;
     ll curr = 0;
     ll maxi=curr;
-    s+=s;
+    s+=s;// s+s = 2s is equivalent to cyclic string of s
 
     for(ll i=0;i<n*2;i++){
         if(s[i]=='0')curr++;
