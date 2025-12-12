@@ -37,7 +37,7 @@ void solve() {
         cout << a << " "<< b << nl;
         ll x = (a+b+1)/2;
         v[v.size()-2]=x;
-        v.pop_back();
+        v.pop_back();// removing  n-1 element 
     }
 
 
