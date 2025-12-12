@@ -37,7 +37,7 @@ void solve() {
         char val = *st1.begin();
         char val2 = *st2.begin();
         if(val==val2){
-            cout << 1 <<nl;
+            cout << val <<nl;
         }
         else{
             cout << 2 << nl;
