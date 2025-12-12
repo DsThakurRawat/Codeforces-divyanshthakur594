@@ -34,13 +34,13 @@ void solve() {
         st2.insert(s[j]);
     }
     if(st1.size()==1 && st2.size()==1){
-        int val = *st1.begin();
-        int val2 = *st2.begin();
-        if(val!=val2){
-            cout << 2 <<nl;
+        char val = *st1.begin();
+        char val2 = *st2.begin();
+        if(val==val2){
+            cout << 1 <<nl;
         }
         else{
-            cout << 0 << nl;
+            cout << 2 << nl;
         }
 
 
