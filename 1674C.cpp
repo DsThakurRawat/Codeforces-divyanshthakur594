@@ -37,7 +37,7 @@ void solve() {
 
     }
     if(flag ==0){
-    cout << 1<<s.size() <<nl;
+    cout << (1<<s.size()) <<nl;
     return;
     }
     if(st1.size()==st2.size()){
