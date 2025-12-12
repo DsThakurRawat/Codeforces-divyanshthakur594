@@ -24,14 +24,30 @@ using  int128 = __int128_t;
 
 void solve() {
     int n;cin>>n;
-    vector<ll>v;
+
+    vector<ll>v(1);
+    for(ll i=1;i<=n;i++){
+        v.push_back(i);
+    }
+    cout << 2 << nl;
+
+    while(v.size()>2){
+        ll a = v[v.size()-2];
+        ll b = v[v.size()-1];
+        cout << a << " "<< b << nl;
+        ll x = (a+b+1)/2;
+        v[v.size()-2]=x;
+        v.pop_back();
+    }
+
+
+
+    
+
     
     
 
 
-
-    ll ans = (n+1)/2;
-   
 
    
 
