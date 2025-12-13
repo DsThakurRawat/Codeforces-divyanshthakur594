@@ -33,9 +33,6 @@ for (int i = 0; i < n; i++) {
 void solve() {
             ll n;cin>>n;
             vector<vector<ll>> grid(n, vector<ll>(n));
-
-
-
             for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 cin >> grid[i][j];
