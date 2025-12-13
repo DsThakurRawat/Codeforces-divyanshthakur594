@@ -14,6 +14,14 @@ using  int128 = __int128_t;
 //vector<vector<ll>> arr(n, vector<int>(m,1));
 //indexes to run from 1…n and 1…m, not from 0.
 //vector<vector<ll>> grid(n + 1, vector<ll>(m + 1, 1));
+  /*========grid input in cp=========
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    cin >> grid[i][j];
+                }
+            }
+*/
+
 
 /*
 ====PRIME NUMBER CHECKING ALGORITHM================
