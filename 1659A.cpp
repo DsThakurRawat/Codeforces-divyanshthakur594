@@ -35,12 +35,12 @@ void solve() {
       
        
         for(ll i=0;i<min_to&&r>0;i++){
-           
+        
             s +='R';
             r--;
 
-           }
-         
+           
+           
         }
         if(b>0){
             s+='B';
