@@ -14,6 +14,9 @@ using  int128 = __int128_t;
 //vector<vector<ll>> arr(n, vector<int>(m,1));
 //indexes to run from 1…n and 1…m, not from 0.
 //vector<vector<ll>> grid(n + 1, vector<ll>(m + 1, 1));
+
+
+/*
 auto checkprime=[&](ll a){
                 if (a <= 1) return false;
                 if (a <= 3) return true;
@@ -26,8 +29,7 @@ auto checkprime=[&](ll a){
                 return true;
 
            };
-
-
+*/
 
 
 #define nl '\n'
