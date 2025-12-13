@@ -60,6 +60,7 @@ void solve() {
                 if(checkprime(number)==false){
                     cout << t.size()<<nl;
                     cout << t << nl;
+                    break;
                 }
            }
 
