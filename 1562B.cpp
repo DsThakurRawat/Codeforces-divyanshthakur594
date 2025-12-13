@@ -52,9 +52,15 @@ void solve() {
                 return true;
 
            };
+           string t= "";
 
            for(ll i=0;i<num.size();i++){
-                 bool checkprime(num[i]);
+                t = t+num[i];
+                ll number = stoll(t);
+                if(checkprime(number)==true){
+                    cout << t.size()<<nl;
+                    cout << t << nl;
+                }
            }
 
 }
