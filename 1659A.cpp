@@ -51,7 +51,9 @@ void solve() {
         
 
         
+        
     }
+    cout << s << nl;
 
 
 }
