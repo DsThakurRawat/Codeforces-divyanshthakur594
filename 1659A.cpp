@@ -30,7 +30,7 @@ void solve() {
     string s="";
       ll min_to = floor(n/(b+1));
 
-   while(s.size()<=n){
+   while(s.size()<n){
 
       
        
