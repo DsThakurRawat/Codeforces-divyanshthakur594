@@ -15,7 +15,14 @@ using  int128 = __int128_t;
 //indexes to run from 1…n and 1…m, not from 0.
 //vector<vector<ll>> grid(n + 1, vector<ll>(m + 1, 1));
 
-//1 is neither a prime nor a composite number.
+/*
+====PRIME NUMBER CHECKING ALGORITHM================
+ --------------------------------------------------
+   6k ± 1 Optimization (CP Favorite)
+  All primes > 3 are of form 6k ± 1
+--------------------------------------------------
+
+1 is neither a prime nor a composite number.
 auto checkprime=[&](ll a){
                 if (a <= 1) return false;
                 if (a <= 3) return true;
@@ -28,9 +35,11 @@ auto checkprime=[&](ll a){
                 return true;
 
            };
+      
+           
+NOTE-1 : 1, 4, 6, 8 and 9 are not prime numbers.
 
-
-
+*/
 
 
 
