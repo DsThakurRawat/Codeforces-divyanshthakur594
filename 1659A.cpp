@@ -28,7 +28,7 @@ void solve() {
     // minimum together floor((n/(b+1));
     // total partition->b+1;
     string s="";
-      ll p = (r/(b+1));
+      ll p = (r/(b+1));//minimum number of Rs that EVERY partition must have
       ll q = r % (b+1);
 
 
