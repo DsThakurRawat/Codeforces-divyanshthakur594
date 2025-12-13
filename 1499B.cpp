@@ -24,7 +24,9 @@ using  int128 = __int128_t;
 
 void solve() {
     string s;cin>>s;
-    
+    int i = s.find("11");
+    int j = s.rfind("00");
+    cout << (i != -1 && j != -1 && i < j ? "NO" : "YES") << endl;
 
 }
   
