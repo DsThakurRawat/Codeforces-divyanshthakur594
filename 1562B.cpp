@@ -90,22 +90,22 @@ void solve() {
             }
            }
 
-           for(int i =0;i<s.size();i++){
-            if(s[i]=='1'||s[i]=='4'|| s[i]=='6'|| s[i]=='8'||s[i]=='9'){
+           for(int i =0;i<n.size();i++){
+            if(n[i]=='1'||n[i]=='4'|| n[i]=='6'|| n[i]=='8'||n[i]=='9'){
                 cout << 1 << nl;
-                cout << s[i]<<nl;
+                cout << n[i]<<nl;
                 return;
             }
            }
 
-           for (int i = 0; i < s.size(); i++) {
-              for (int j = i + 1; j < s.size(); j++) {
+           for (int i = 0; i < n.size(); i++) {
+              for (int j = i + 1; j < n.size(); j++) {
 
-                int val = (s[i] - '0') * 10 + (s[j] - '0');
+                int val = (n[i] - '0') * 10 + (n[j] - '0');
 
                 if (!prime[val]) {
                     cout << 2 << nl;
-                    cout << s[i] << s[j] << nl;
+                    cout << n[i] << n[j] << nl;
                 return;
             }
         }
