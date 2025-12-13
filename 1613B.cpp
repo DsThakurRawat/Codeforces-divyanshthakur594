@@ -25,20 +25,20 @@ using  int128 = __int128_t;
 
 
 void solve() {
-    string s;
-        cin>>s;
-        int ans = 0;
-        if(s[0]!='0') ans+=s[0]-'1';
-        else ans += 9;
- 
-        for(int i=1;i<4;i++){
-            if(s[i]!='0' && s[i-1]!='0') ans+=abs(s[i]-s[i-1]);
-            else if(s[i]=='0' && s[i-1]=='0') ans=ans;
-            else ans += 10-abs(s[i] - s[i-1]);
- 
+     ll n;cin>>n;
+     vector<ll>a(n);for(auto & in :a)cin>>in;
+     /*
+     imp things to noted 
+     x mod y < y
+     so we can obtain n-1 pair by choosing y as the minimum number 
+     */
+    ll mini = *min_element(a.begin(),a.end());
+    for(ll i =0,k=0;k< n/2;i++){
+        if(a[i]!=mini){
+            cout << a[i]<< " "<<mini << nl;
+            k++;
         }
- 
-        cout<<ans+4<<endl;
+    }
 
 
 
