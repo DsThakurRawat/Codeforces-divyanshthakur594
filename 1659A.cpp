@@ -28,10 +28,15 @@ void solve() {
     // minimum together floor((n/(b+1));
     // total partition->b+1;
     string s="";
-      ll min_to = floor(n/(b+1));
+      ll p = (r/(b+1));
+      ll q = r % (b+1);
+
+
+
 
    while(s.size()<n){
-
+     
+    ll min_to = (q>0 ? p+1 :p);
       
        
         for(ll i=0;i<min_to&&r>0;i++){
@@ -42,7 +47,8 @@ void solve() {
            
            
         }
-        if(b>0){
+        if(q>0)q--;
+        if(b>0&&s.size()<n){
             s+='B';
             b--;
         }
