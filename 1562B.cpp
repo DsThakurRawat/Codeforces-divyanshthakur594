@@ -58,7 +58,7 @@ void solve() {
                 t = t+num[i];
                 ll number = stoll(t);
                 if(checkprime(number)==false && number != 1){
-                    cout << k-t.size()<<nl;
+                    cout << t.size()<<nl;
                     cout << t << nl;
                     break;
                 }
