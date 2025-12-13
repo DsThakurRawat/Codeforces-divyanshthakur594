@@ -49,6 +49,20 @@ NOTE-3 :
 
         Any number ending in 5 (and larger than 5) → not prime
 
+================Correct Sieve of Eratosthenes (proper way) ✅===============
+
+                int N = 100;
+                vector<bool> prime(N, true);
+
+                prime[0] = prime[1] = false;
+
+                for(int i = 2; i * i < N; i++){
+                    if(prime[i]){                  // i is prime
+                        for(int j = i * i; j < N; j += i){
+                            prime[j] = false;      // mark multiples
+                        }
+                    }
+                }
 
 
 
