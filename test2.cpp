@@ -15,6 +15,22 @@ using  int128 = __int128_t;
 //indexes to run from 1…n and 1…m, not from 0.
 //vector<vector<ll>> grid(n + 1, vector<ll>(m + 1, 1));
 
+//1 is neither a prime nor a composite number.
+auto checkprime=[&](ll a){
+                if (a <= 1) return false;
+                if (a <= 3) return true;
+                if (a % 2 == 0 || a % 3 == 0) return false;
+
+                for (ll i = 5; i * i <= a; i += 6) {
+                    if (a % i == 0 || a % (i + 2) == 0)
+                        return false;
+                }
+                return true;
+
+           };
+
+
+
 
 
 
@@ -23,6 +39,21 @@ using  int128 = __int128_t;
 
 
 void solve() {
+
+
+
+
+
+
+
+
+           ll k;cin>>k;
+           ll n;cin>>n;
+           string num = to_string(n);
+
+           for(ll i=0;i<num.size();i++){
+                 bool checkprime(num[i]);
+           }
 
 }
   
