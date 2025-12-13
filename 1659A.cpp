@@ -28,19 +28,19 @@ void solve() {
     // minimum together floor((n/(b+1));
     // total partition->b+1;
     string s="";
-      ll min_to = floor(r/(b+1));
+      ll min_to = floor(n/(b+1));
 
    while(s.size()<n){
 
       
        
-        for(ll i=0;i<min_to;i++){
-           if(r>0){
+        for(ll i=0;i<min_to&&r>0;i++){
+           
             s +='R';
             r--;
 
            }
-           else break;
+         
         }
         if(b>0){
             s+='B';
