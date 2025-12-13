@@ -62,17 +62,19 @@ NOTE-3 :
 
 void solve() {
 
-            int n;
+                    
+            int k;
+            string n;
+
+            cin >> k;
             cin >> n;
-            string s;
-            cin >> s;
 
 
 
             
 
 
-           string s = to_string(n);
+          
            vector<bool>prime(100);
            prime[0] = prime[1] = false;
 
