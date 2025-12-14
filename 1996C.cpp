@@ -177,7 +177,7 @@ void solve() {
         sort(sub_b.begin(),sub_b.end());
         int cnt =0;
         for(int i =0;i<sub_a.size();i++){
-        if(sub_a[i]!=sub_b[i])cnt++;
+        if(sub_a[i]==sub_b[i])cnt++;
         }
         cout << cnt << nl;
 
