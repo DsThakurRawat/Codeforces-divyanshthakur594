@@ -131,7 +131,9 @@ NOTE-3 :
 ==========================================================================================
 
 
-                  
+||||||||||||||||||||||||||||||||||   Key CP fact ||||||||||||||||||||||||||||||||||
+
+Longer binary length ⇒ potentially larger number   
 
 
 
@@ -160,6 +162,46 @@ NOTE-3 :
 
 void solve() {
 
+   string s;cin>>s;
+   int n=s.size();
+
+   bool allone = true;
+
+   for(char c : s){
+    if(c=='0'){
+        allone = false;
+        break;
+    }   }
+
+    if(allone == true){
+        cout << ((1LL<<(n-1))-1)<<nl;
+        return;
+    }
+
+    int p = -1;
+    for(int i =0;i<n;i++){
+        if(s[i]=='0'){
+            p =i;
+            break;
+        }
+    }
+    int len = n-p;
+    long long ans = 0;
+
+    for(ll start =0;start<p;start++){
+        long long x = 0;
+        for(ll i =0;i<n;i++){
+            ll bit1 = s[p+i]-'0';
+            int bit2 = s[start+i]-'0';
+            x = (x<<1)|(bit1^bit2);
+        }
+        ans = max(ans,x);
+    }
+    cout << ans << nl;
+
+
+
+  
 
          
 
