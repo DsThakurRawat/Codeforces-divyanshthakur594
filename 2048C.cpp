@@ -175,9 +175,10 @@ void solve() {
     }
     if(allone){
         cout << 1 << " "<< n <<" "<< 1 << " "<< 1 << nl;
+        return;
     }
     int p =0;
-    while(s[p]=='1')p++;
+    while(p<n && s[p]=='1')p++;
 
     int q =0;
     int i =p;
