@@ -168,11 +168,11 @@ void solve() {
 
     while(q--){
         ll l ,r;cin>>l>>r;
-        string sub_a = a.substr(l, r - l + 1);
+        string sub_a = "";
 
-        string sub_b = b.substr(l, r - l + 1);
-      //  for(int i =l;i<r;i++) sub_a +=a[i];
-       // for(int i = l;i<r;i++)sub_b +=b[i];
+        string sub_b = "";
+        for(int i =l;i<=r;i++) sub_a +=a[i];
+        for(int i = l;i<=r;i++)sub_b +=b[i];
         sort(sub_a.begin(),sub_a.end());
         sort(sub_b.begin(),sub_b.end());
         int cnt =0;
