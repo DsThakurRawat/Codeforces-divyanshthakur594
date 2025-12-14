@@ -130,8 +130,10 @@ NOTE-3 :
 
 ==========================================================================================
 
+||||||||||||||||||||||||||||||||||   Key CP fact ||||||||||||||||||||||||||||||||||
 
-                  
+Longer binary length ⇒ potentially larger number   
+
 
 
 
@@ -164,7 +166,26 @@ void solve() {
          
 
 
-
+ll n; cin>>n;
+    vector<ll> a(n+5,0),pos(2*n+5,0);
+    for(ll i=1;i<=n;i++){
+        cin>>a[i];   
+        pos[a[i]]=i;
+    }
+    ll ans=0;   
+    for(ll i=1;i<=n;i++){
+        for(ll j=a[i];j<=2*n;j+=a[i]){
+            ll y=j/a[i];
+            if(pos[y]==0)
+                continue;
+            if((i+pos[y])!=j)  
+                continue;
+            if(pos[y]<i)
+                ans++;
+        }
+    }
+    cout<<ans<<nl;
+    return;   
         
         
           
