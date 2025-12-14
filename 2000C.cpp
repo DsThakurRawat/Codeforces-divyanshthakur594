@@ -77,6 +77,68 @@ NOTE-3 :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================checking if array-strings are isomorphic or not===========================
+                
+
+
+
+
+
+
+
+
+   // Checking how to check if string is isomorphic or not[for array string ]
+
+
+
+
+
+
+        
+            auto isIsomorphic = [&](const vector<int>& a, const string& s) -> bool {
+                map<int, char> mp1;   // number -> character
+                map<char, int> mp2;   // character -> number
+
+                for (int i = 0; i < (int)a.size(); i++) {
+                    // same number must map to same character
+                    if (mp1.count(a[i]) && mp1[a[i]] != s[i])
+                        return false;
+
+                    // same character must map to same number
+                    if (mp2.count(s[i]) && mp2[s[i]] != a[i])
+                        return false;
+
+                    mp1[a[i]] = s[i];
+                    mp2[s[i]] = a[i];
+                }
+                return true;
+            };
+
+▶️ Usage
+      if (isIsomorphic(a, s))
+      cout << "YES\n";
+      else
+    cout << "NO\n";
+
+
+
+==========================================================================================
+
+
+
 */
 
 
