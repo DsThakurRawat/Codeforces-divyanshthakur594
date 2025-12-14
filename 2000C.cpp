@@ -88,11 +88,11 @@ NOTE-3 :
 void solve() {
 
 
-         int n;cin>>n;
+         ll n;cin>>n;
          vector<int>v(n);for(auto &in:v)cin>>in;
-         int m;cin>>m;
+         ll m;cin>>m;
         
-        auto checkisomorphic = [&](const vector<int>&a,const string& s)->bool{
+        auto checkisomorphic = [&](const vector<int>& a,const string& s)->bool{
             map<int,char>mp1;
             map<char,int>mp2;
             
@@ -125,19 +125,10 @@ void solve() {
             string s;
             cin>>s;
             
-            if(s.size()==n && checkisomorphic(a,s)==true)
-
-
-
-
-
-
-
-
-
-
-
-
+            if(s.size()==n && checkisomorphic(v,s)==true){
+                cout << "YES"<<nl;
+            }
+            else cout << "NO"<<nl;
 
 
          }
