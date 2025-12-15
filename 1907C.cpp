@@ -303,6 +303,7 @@ void solve() {
      }
      if(max_freq<=totalele){
           cout << 0 << nl;
+          return;
      }
 
 
