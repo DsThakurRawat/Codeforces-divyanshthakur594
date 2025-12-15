@@ -168,18 +168,20 @@ void solve() {
 
     while(q--){
         ll l ,r;cin>>l>>r;
-        string sub_a = "";
 
-        string sub_b = "";
-        for(int i =l;i<=r;i++) sub_a +=a[i];
-        for(int i = l;i<=r;i++)sub_b +=b[i];
-        sort(sub_a.begin(),sub_a.end());
+        string sub_a = a.substr(l,r-l+1);
+        string sub_b = b.substr(l,r-l+1);
         sort(sub_b.begin(),sub_b.end());
-        int cnt =0;
-        for(int i =0;i<sub_a.size();i++){
-        if(sub_a[i]!=sub_b[i])cnt++;
+        sort(sub_a.begin(),sub_a.end());
+        int cnt = 0;
+        for(int i =0;i<r-l+1;i++){
+            if(sub_a[i]!=sub_b[i])cnt++;
+
         }
-        cout << cnt << nl;
+        cout<< cnt << nl;
+
+
+      
 
 
 
