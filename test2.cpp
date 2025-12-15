@@ -127,6 +127,57 @@ NOTE-3 :
     cout << "NO\n";
 
 
+=================================================================================
+------------------LONGEST SUBARRAY HAVING BITWISE AND 0--------------------------
+
+
+
+
+
+        class Solution {
+        public:
+            int longestNiceSubarray(vector<int>& nums) {
+                int mask = 0, l = 0, ans = 0;
+
+                for (int r = 0; r < nums.size(); r++) {
+                    while (mask & nums[r]) {
+                        mask ^= nums[l];
+                        l++;
+                    }
+                    mask |= nums[r];
+                    ans = max(ans, r - l + 1);
+                }
+                return ans;
+            }
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ==========================================================================================
 
@@ -135,8 +186,21 @@ NOTE-3 :
 Longer binary length ⇒ potentially larger number   
 
 
+Important CP Notes 🧠
+->Base of log does not matter in Big-O
+->log₂ n = log₁₀ n = log n
+
+->Binary search requires sorted data
+
+->Used everywhere:
+    lower_bound / upper_bound
+
+    parametric search
+
+    answer-space binary search
 
 
+NOTE: Binary search runs in O(log n) time in the worst case because it halves the search space every step.
 
 
 
@@ -167,25 +231,7 @@ void solve() {
 
 
 ll n; cin>>n;
-    vector<ll> a(n+5,0),pos(2*n+5,0);
-    for(ll i=1;i<=n;i++){
-        cin>>a[i];   
-        pos[a[i]]=i;
-    }
-    ll ans=0;   
-    for(ll i=1;i<=n;i++){
-        for(ll j=a[i];j<=2*n;j+=a[i]){
-            ll y=j/a[i];
-            if(pos[y]==0)
-                continue;
-            if((i+pos[y])!=j)  
-                continue;
-            if(pos[y]<i)
-                ans++;
-        }
-    }
-    cout<<ans<<nl;
-    return;   
+  
         
         
           
