@@ -59,7 +59,7 @@ NOTE-3 :
 
 
 
-================Correct Sieve of Eratosthenes (proper way) ✅===============
+================Correct Sieve of Eratosthenes (proper way) ===============
 
                 int N = 100;
                 vector<bool> prime(N, true);
@@ -120,7 +120,7 @@ NOTE-3 :
                 return true;
             };
 
-    ▶️ Usage
+    ▶Usage
       if (isIsomorphic(a, s))
       cout << "YES\n";
       else
@@ -237,7 +237,7 @@ ac
 Longer binary length ⇒ potentially larger number   
 
 
-Important CP Notes 🧠
+Important CP Notes 
 ->Base of log does not matter in Big-O
 ->log₂ n = log₁₀ n = log n
 
