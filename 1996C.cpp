@@ -176,7 +176,17 @@ void solve() {
         }
         for(int i =l;i<=r;i++){
             freq_b[b[i-'a']]++;
+        } 
+        ll cnt =0;
+
+        for(int i =0;i<26;i++){
+            if(freq_a[i]!=freq_b[i])cnt++;
         }
+
+        cout << cnt << nl;
+
+
+
 
 
         
