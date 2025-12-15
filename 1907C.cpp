@@ -284,7 +284,7 @@ void solve() {
         if(s[i-1]==s[i])continue;
         if(s[i-1]!=s[i]){
 
-            s.erase(i,2);
+            s.erase(i,1);
 
 
         }
