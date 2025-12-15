@@ -169,7 +169,7 @@ void solve() {
     while(q--){
         ll l ,r;cin>>l>>r;
 
-        map<int,int>mp1,mp2;
+        map<char,int>mp1,mp2;
         for(int i =l;i<=r;i++){
             mp1[a[i]]++;
             mp2[b[i]]++;
