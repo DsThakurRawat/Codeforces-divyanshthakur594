@@ -277,34 +277,23 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 void solve() {
 
-    int n;cin>>n;
+    ll n;cin>>n;
     string s;cin>>s;
-    
-    
-    int totalfreq=0;
-    map<char,int>mp;
 
-    for(ll i=0;i<n;i++){
-        mp[s[i]]++;
+    vector<ll>v(26,0);
+
+    for(char c : s){
+        v[c-'a']++;
     }
-    int max_freq=0;
-    for(auto it :mp){
-        max_freq=max(max_freq,it.second);
+    ll maxi = v[0];
+
+    for(int i =1;i<26;i++){
+        maxi = max(maxi,v[i]);
+
     }
-     int totalele = n - max_freq;
+    cout << max(n%2,2*maxi-n)<<nl;
 
-     if(max_freq>totalele){
-        cout << max_freq-totalele << nl;
-        return;
-
-     }
-     if(max_freq<=totalele){
-          cout << 0 << nl;
-          return;
-     }
-
-
-
+   
     
    
 
