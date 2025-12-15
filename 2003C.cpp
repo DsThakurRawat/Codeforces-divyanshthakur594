@@ -252,6 +252,7 @@ void solve() {
     for(int i =0;i<b.size();i++){
     if(a.find(b[i])==string::npos)cnt++;
   }
+  cout << a.size()+cnt << nl;
 
  }
 
