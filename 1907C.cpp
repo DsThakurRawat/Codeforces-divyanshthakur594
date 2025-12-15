@@ -289,7 +289,7 @@ void solve() {
 
         }
         n= s.size();
-        if(s.size()==1||s.size()==0)break;
+        
     }
     cout << s.size()<<nl;
 
