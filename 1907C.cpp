@@ -277,11 +277,26 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 void solve() {
 
+    int n;cin>>n;
+    string s;cin>>s;
+
+    for(int i =0;i<n-1;i++){
+        if(s[i]==s[i+1])continue;
+        if(s[i]!=s[i+1]){
+
+            s.erase(i,2);
+
+
+        }
+    }
+    cout << s.size()<<nl;
+
 
          
 
 
-ll n; cin>>n;
+
+
 
   
         
