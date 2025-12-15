@@ -283,7 +283,31 @@ void solve() {
         cout << 1 << nl;
         return;
     }
+    
+    int totalfreq=0;
+    map<char,int>mp;
 
+    for(ll i=0;i<n;i++){
+        mp[s[i]]++;
+    }
+    int max_freq=0;
+    for(auto it :mp){
+        max_freq=max(max_freq,it.second);
+    }
+     int totalele = n - max_freq;
+
+     if(max_freq>totalele){
+        cout << 2 << nl;
+        return;
+
+     }
+     if(max_freq<=totalele){
+          cout << 0 << nl;
+     }
+
+
+
+    
    
 
          
