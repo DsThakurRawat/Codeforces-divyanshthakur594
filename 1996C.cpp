@@ -169,16 +169,19 @@ void solve() {
     while(q--){
         ll l ,r;cin>>l>>r;
 
-        string sub_a = a.substr(l,r-l+1);
-        string sub_b = b.substr(l,r-l+1);
-        sort(sub_b.begin(),sub_b.end());
-        sort(sub_a.begin(),sub_a.end());
-        int cnt = 0;
-        for(int i =0;i<r-l+1;i++){
-            if(sub_a[i]!=sub_b[i])cnt++;
-
+        map<int,int>mp1,mp2;
+        for(int i =l;i<=r;i++){
+            mp1[a[i]]++;
+            mp2[b[i]]++;
         }
-        cout<< cnt << nl;
+        ll ans =0;
+
+        for(int i =0;i<mp1.size();i++){
+            if(mp1[i] != mp2[i] ) ans +=abs(mp1[i]-mp2[i]);
+        }
+        cout << ans << nl;
+
+        
 
 
       
