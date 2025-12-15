@@ -297,7 +297,7 @@ void solve() {
      int totalele = n - max_freq;
 
      if(max_freq>totalele){
-        cout << 2 << nl;
+        cout << max_freq-totalele << nl;
         return;
 
      }
