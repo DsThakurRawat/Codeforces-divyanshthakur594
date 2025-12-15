@@ -169,17 +169,19 @@ void solve() {
     while(q--){
         ll l ,r;cin>>l>>r;
 
-        map<char,int>mp1,mp2;
-        for(int i =l;i<=r;i++){
-            mp1[a[i]]++;
-            mp2[b[i]]++;
-        }
-        ll ans =0;
+        vector<int>freq_a(26,0),freq_b(26,0);
 
-        for(int i =0;i<mp1.size();i++){
-            if(mp1[i] != mp2[i] ) ans +=abs(mp1[i]-mp2[i]);
+        for(int i =l;i<=r;i++){
+            freq_a[a[i-'a']]++;
         }
-        cout << ans << nl;
+        for(int i =l;i<=r;i++){
+            freq_b[b[i-'a']]++;
+        }
+
+
+        
+
+       
 
         
 
