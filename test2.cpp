@@ -126,15 +126,10 @@ NOTE-3 :
       else
     cout << "NO\n";
 =================================================================================
-::::::::::::::::::::::: BIT MANIPULATION BITMAS AND BITSET:::::::::::::::::::::::
+::::::::::::::::::::::: BIT MANIPULATION BITMASK AND BITSET:::::::::::::::::::::::
 =================================================================================
 ------------------LONGEST SUBARRAY HAVING BITWISE AND 0--------------------------
-
-
-
-
-
-        class Solution {
+   class Solution {
         public:
             int longestNiceSubarray(vector<int>& nums) {
                 int mask = 0, l = 0, ans = 0;
@@ -150,9 +145,26 @@ NOTE-3 :
                 return ans;
             }
         };
+-------------------------LC:201 BITWISE AND OF NUMBERS RANGE----------------------------------------------------------------------------
+Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.
+NOTE: bitiwse and on any two numbers will always prodcue a number less than or equal to the smaller number
+        							12 ---- 1100
+									11 ---- 1011
+									10 ---- 1010
+									9  ---- 1001
+									8  ---- 1000
+									7  ---- 0111
+									6  ---- 0110
+									5  ---- 0101
+    while(right > left){
+            right = (right) & (right-1);
 
 
+        }
+        return right;
 
+
+									
 
 
 
