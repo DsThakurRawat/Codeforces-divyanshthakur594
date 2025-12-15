@@ -279,10 +279,7 @@ void solve() {
 
     int n;cin>>n;
     string s;cin>>s;
-    if(n%2!=0){
-        cout << 1 << nl;
-        return;
-    }
+    
     
     int totalfreq=0;
     map<char,int>mp;
