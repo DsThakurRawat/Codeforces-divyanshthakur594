@@ -24,7 +24,7 @@ using  int128 = __int128_t;
 
 
 /*
-====PRIME NUMBER CHECKING ALGORITHM================
+====PRIME NUMBER CHECKING ALGORITHM===============================================================================================================================================
  --------------------------------------------------
    6k ± 1 Optimization (CP Favorite)
   All primes > 3 are of form 6k ± 1
@@ -83,7 +83,7 @@ NOTE-3 :
 
 
 
-===================checking if array-strings are isomorphic or not===========================
+===================checking if array-strings are isomorphic or not==============================================================================================================================
                 
 
 
@@ -191,7 +191,7 @@ NOTE: bitiwse and on any two numbers will always prodcue a number less than or e
 
 
 
-==========================================================================================
+===============================================================================================================================================================
 
 ||||||||||||||||||||||||||||||||||   Key CP fact ||||||||||||||||||||||||||||||||||
 
@@ -237,12 +237,18 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 void solve() {
+  string a,b;cin>>a>>b;
+   int cnt =0;
+  for(int i =0;i<a.size();i++){
+    if(b.find(a[i])==string::npos)cnt++;
+  }
+
+  cout << b.size()+cnt<<nl;
+  
 
 
-         
+  
 
-
-ll n; cin>>n;
   
         
         
