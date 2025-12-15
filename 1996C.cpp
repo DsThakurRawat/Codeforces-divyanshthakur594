@@ -164,26 +164,40 @@ void solve() {
     ll n,q;cin>>n>>q;
     string a;cin>>a;
     string b;cin>>b;
+    vector<vector<int>>p1(26,vector<int>(n+1,0));
+    vector<vector<int>>p2(26,vector<int>(n+1,0));
+
+    for(int i =0;i<n;i++){
+        for(int c=0;c<26;c++){
+            p1[c][i+1]=p1[c][i];
+            p2[c][i+1]=p2[c][i];
+        }
+        p1[a[i]-'a'][i+1]++;
+        p2[b[i]-'a'][i+1]++;
+
+
+    }
+    while(q--){
+        int l ,r ;
+        cin>> l >>r ;
+
+        int ans =0;
+
+        for(int c = 0;c<26;c++){
+            int cntA=p1[c][r]-p1[c][l-1];
+            int cntB=p2[c][r]-p2[c][l-1];
+
+            if(cntA>cntB){
+                ans += cntA-cntB;
+            }
+
+
+        }
+        cout << ans << nl;
+    }
     
 
-    while(q--){
-        ll l ,r;cin>>l>>r;
-
-        vector<int>freq_a(26,0),freq_b(26,0);
-
-        for(int i =l;i<=r;i++){
-            freq_a[a[i-'a']]++;
-        }
-        for(int i =l;i<=r;i++){
-            freq_b[b[i-'a']]++;
-        } 
-        ll cnt =0;
-
-        for(int i =0;i<26;i++){
-            if(freq_a[i]!=freq_b[i])cnt++;
-        }
-
-        cout << cnt << nl;
+    
 
 
 
