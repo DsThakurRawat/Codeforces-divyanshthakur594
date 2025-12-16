@@ -282,18 +282,20 @@ void solve() {
        string s;cin>>s;
        set<string>st;
        ll k=2;
+       string t = s;
 
-       for(int i =0;i<s.size();i++){
+       for(int i =0;i<n;i++){
+         t = s;
          string p = "";
           if (i + 2 <= s.size()) {
-    // safe
+            t.erase(i, 2);
 
            
-            p =s.substr(0,i)+s.substr(i+k);
+          //  p =s.substr(0,i)+s.substr(i+k);
           }
 
-            if(st.count(p)==false){
-                st.insert(p);
+            if(st.count(t)==false){
+                st.insert(t);
             }
 
            
