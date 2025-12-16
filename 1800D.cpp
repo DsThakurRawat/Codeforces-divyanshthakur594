@@ -329,8 +329,8 @@ void solve() {
     string s;cin>>s;
     int res = n-1;
 
-    for(int i =1;i<n;i++){
-        if(s[i]==s[i-1])res--;
+    for(int i =1;1+i<n;i++){
+        if(s[i+1]==s[i-1])res--;
     }
     cout << res << nl;
      
