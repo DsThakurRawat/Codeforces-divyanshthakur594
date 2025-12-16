@@ -288,7 +288,7 @@ void solve() {
 
     for(ll i=0;i<=m;i++){
         int ptr = i;
-        for(ll j=i;j<n&&ptr<m;j++){
+        for(ll j=0;j<n&&ptr<m;j++){
             if(a[j]==b[ptr]) ptr++;
         }
 
