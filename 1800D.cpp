@@ -177,6 +177,34 @@ if (i + k <= s.size()) {
 }
 
 
+NOTE: One-line summary (remember this)
+n - 1 = number of candidate strings, NOT number of distinct strings
+
+
+
+ Generalized Table — Total Strings (Before Removing Duplicates)
+Let:
+
+string length = n
+
+remove k consecutive elements
+-------------------------------------------------------------------------
+What you remove	k	Total strings (candidates)	Formula
+-------------------------------------------------------------------------
+1 element	    1  n	n - 1 + 1
+2 consecutive	2	n - 1	n - 2 + 1
+3 consecutive	3	n - 2	n - 3 + 1
+k consecutive	k	n - k + 1	n - k + 1
+whole string	n	1	n - n + 1
+
+
+
+
+
+
+
+
+
 
 
 
