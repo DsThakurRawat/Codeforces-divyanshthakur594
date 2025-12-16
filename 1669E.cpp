@@ -324,21 +324,37 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 void solve() {
     ll n;cin>>n;
-    ll ans = 0;
-    vector<string>v;
-    /*
-     for (int i = 0; i < n; i++) {
-                cin >> v[i];   // reads "ab", "cc", etc.
-            }
-    */
-    while(n--){
-             string s;
-             cin>>s;
-             v.push_back(s);         
+                                                /*   ll ans = 0;
+                                                    vector<string>v;
+                                                    /*
+                                                    for (int i = 0; i < n; i++) {
+                                                                cin >> v[i];   // reads "ab", "cc", etc.
+                                                            }
+                                                    
+                                                    while(n--){
+                                                            string s;
+                                                            cin>>s;
+                                                            v.push_back(s);         
+                                                    }
+
+                                                    
+                                                */
+
+    map<string,int>cnt;
+
+    for(int i =0;i<n;i++){
+        string s;cin>>s;
+        cnt[s]++;
     }
-
-
-
+    ll ans=0;
+    for(auto[x,i]:cnt){
+        for(auto [y,j]:cnt){
+            if(x[0]==y[0]^x[1]==y[1]){
+                ans +=1LL*i*j;
+            }
+        }
+    }
+    cout << ans /2 << nl;
 
 
         
