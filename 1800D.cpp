@@ -160,6 +160,23 @@ NOTE-3 :
                       cout << ans << endl;
 
 
+-------------------------------------------------REMOVING ADJACENT K CHARACTER FROM STRING----------------------------------------------------------
+General formula (MEMORIZE)
+
+1.For removing k characters starting at i:
+
+remaining = s.substr(0, i) + s.substr(i + k);
+
+-> Alternative (modifies original string)
+string s = "aaabcc";
+s.erase(i, 2);
+
+NOTE: Safety note (important in loops)
+if (i + k <= s.size()) {
+    // safe
+}
+
+
 
 
 
@@ -285,7 +302,7 @@ void solve() {
        string t = s;
 
        for(int i =0;i<n;i++){
-         t = s;
+            t = s;
          string p = "";
           if (i + 2 <= s.size()) {
             t.erase(i, 2);
