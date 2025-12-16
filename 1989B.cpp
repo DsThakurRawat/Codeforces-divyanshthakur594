@@ -129,7 +129,7 @@ NOTE-3 :
     cout << "NO\n";
 
 ------------------------finding minimum length of s which contains string a as substring ans string b as subsequence----------------------
-
+              {
                         string a, b;
                         cin >> a >> b;
 
@@ -156,6 +156,8 @@ NOTE-3 :
 
                             ans = min(ans, len_x + n + len_y);
 
+                          }
+                      cout << ans << endl;
 
 
 
@@ -277,11 +279,29 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 void solve() {
 
+    string a;cin>>a;
+    string b;cin>>b;
+    ll n = a.size();
+    ll m = b.size();
+
+    ll ans = LLONG_MAX;
+
+    for(ll i=0;i<=m;i++){
+        int ptr = i;
+        for(ll j=i;j<n&&ptr<m;j++){
+            if(a[j]==b[ptr]) ptr++;
+        }
+
+        int len_x = i;
+        int len_y = m-ptr;
+        ans = min(ans,len_x+n+len_y);
+    }
+    cout << ans << nl;
+
 
          
 
 
-ll n; cin>>n;
   
         
         
