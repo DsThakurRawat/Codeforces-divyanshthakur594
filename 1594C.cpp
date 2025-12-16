@@ -324,8 +324,9 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 void solve() {
-    int n;cin>>n;
-    char c;cin>>c;
+    int n;
+    char c;
+    cin>>n>>c;
     string s;cin>>s;
     ll flag = 1;
 
@@ -337,6 +338,30 @@ void solve() {
     if(flag ==1 ){
         cout << 0 << nl;
         return;
+    }
+
+    int good_x = -1;
+
+    for(int x=1;x<=n;x++){
+        bool ok = true;
+        for(int i = x-1;i<n;i+=x){
+            if(s[i]!=c){
+                ok = false;
+                break;
+            }
+        }
+        if(ok){
+            good_x = x;
+            break;
+        }
+    }
+    if(good_x != -1){
+        cout << 1 << nl;
+        cout << good_x << nl;
+    }
+    else{
+        cout << 2 << nl;
+        cout << n << " "<< n-1 << nl;
     }
     
 
