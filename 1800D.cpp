@@ -323,33 +323,17 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 void solve() {
-       int n;cin>>n;
-       string s;cin>>s;
-       unordered_set<string>st;
-       ll k=2;
-       string t = s;
 
-       for(int i =0;i<n;i++){
-            t = s;
-         string p = "";
-          if (i + 2 <= s.size()) {
-            t.erase(i, 2);
+    // total strings possible on removing two consecutive char n-1;
+    int n;cin>>n;
+    string s;cin>>s;
+    int res = n-1;
 
-           
-          //  p =s.substr(0,i)+s.substr(i+k);
-          }
-
-            if(st.count(t)==false){
-                st.insert(t);
-            }
-
-           
-
-
-
-       }
-       cout << st.size()-1<< nl;
-  
+    for(int i =1;i<n;i++){
+        if(s[i]==s[i-1])res--;
+    }
+    cout << res << nl;
+     
         
         
           
