@@ -4,3 +4,4 @@ echo "nohup.out" >> .gitignore
 git rm --cached nohup.out
 git add .gitignore
 git commit -m "Ignore nohup.out log file"
+.cph
