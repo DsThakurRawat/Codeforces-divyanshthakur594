@@ -75,7 +75,9 @@ NOTE-3 :
                 }
 
 
-
+===============================================================================================
+-----------------------------STRING AND STRING OPERATION---------------------------------------
+===============================================================================================
 
 
 
@@ -125,6 +127,45 @@ NOTE-3 :
       cout << "YES\n";
       else
     cout << "NO\n";
+
+------------------------finding minimum length of s which contains string a as substring ans string b as subsequence----------------------
+              {
+                        string a, b;
+                        cin >> a >> b;
+
+                        int n = a.size();
+                        int m = b.size();
+
+                        int ans = INT_MAX;
+
+                        // i = length of x (prefix taken from b)
+                        for (int i = 0; i <= m; i++) {
+
+                            int ptr = i;  // pointer in b (start of c)
+
+                            // try to match b[ptr...] as subsequence of a
+                            for (int j = 0; j < n && ptr < m; j++) {
+                                if (a[j] == b[ptr]) {
+                                    ptr++;
+                                }
+                            }
+
+                            // ptr now points to start of y
+                            int len_x = i;
+                            int len_y = m - ptr;
+
+                            ans = min(ans, len_x + n + len_y);
+
+                          }
+                      cout << ans << endl;
+
+
+
+
+
+
+
+
 =================================================================================
 ::::::::::::::::::::::: BIT MANIPULATION BITMASK AND BITSET:::::::::::::::::::::::
 =================================================================================
