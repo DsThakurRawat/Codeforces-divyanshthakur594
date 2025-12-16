@@ -301,7 +301,7 @@ void solve() {
 
 
        }
-       cout << st.size()<< nl;
+       cout << st.size()-1<< nl;
   
         
         
