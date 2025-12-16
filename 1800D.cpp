@@ -284,9 +284,13 @@ void solve() {
        ll k=2;
 
        for(int i =0;i<s.size();i++){
+         string p = "";
+          if (i + 2 <= s.size()) {
+    // safe
 
-            string p = "";
+           
             p =s.substr(0,i)+s.substr(i+k);
+          }
 
             if(st.count(p)==false){
                 st.insert(p);
