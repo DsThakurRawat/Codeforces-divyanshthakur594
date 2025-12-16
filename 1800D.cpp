@@ -297,6 +297,7 @@ void solve() {
 
 
        }
+       cout << st.size()<< nl;
   
         
         
