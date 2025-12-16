@@ -1,1 +1,0 @@
-{"name":"Local: 2167D","url":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2167D.cpp","tests":[{"id":1761663117386,"input":"4\n1\n1\n4\n6 6 12 12\n3\n24 120 210\n4\n2 4 6 10\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2167D.cpp","group":"local","local":true}

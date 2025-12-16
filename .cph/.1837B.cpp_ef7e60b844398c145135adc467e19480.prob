@@ -1,1 +1,0 @@
-{"name":"Local: 1837B","url":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/1837B.cpp","tests":[{"id":1763800500089,"input":"4\n4\n<<>>\n4\n>><<\n5\n>>>>>\n7\n<><><><\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/1837B.cpp","group":"local","local":true}

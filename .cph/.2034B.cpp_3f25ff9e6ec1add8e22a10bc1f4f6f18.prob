@@ -1,1 +1,0 @@
-{"name":"Local: 2034B","url":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2034B.cpp","tests":[{"id":1765122764648,"input":"3\n5 1 1\n10101\n5 2 1\n10101\n6 3 2\n000000\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/divyansh-rawat/DATA STRUCTURES AND ALGORITHM/codeforces/2034B.cpp","group":"local","local":true}
