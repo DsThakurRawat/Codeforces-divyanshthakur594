@@ -297,7 +297,7 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 void solve() {
        int n;cin>>n;
        string s;cin>>s;
-       set<string>st;
+       unordered_set<string>st;
        ll k=2;
        string t = s;
 
