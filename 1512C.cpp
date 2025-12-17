@@ -358,7 +358,7 @@ void solve() {
     
             if(s[mid]=='?'){
                 if(a%2==1){
-                    s[mid] =='0';
+                    s[mid] ='0';
                     a--;
                 }
                 else if(b%2==1){
@@ -396,7 +396,7 @@ void solve() {
        else {
         cout << -1 << nl;
        }
-       
+
 
 
 
