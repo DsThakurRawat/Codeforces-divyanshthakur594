@@ -326,12 +326,27 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 void solve() {
 
     int n;cin>>n;
-    string s(200,'a');
-    cout << s << nl;
+  
+    vector<int>a(n);for(auto &in:a)cin>>in;
+    vector<string>s(n+1,string(200,'a'));
+
     for(int i =0;i<n;i++){
-        int u;cin>>u;
-        s[u]=s[u]='a'?'b':'a';
-        cout << s << nl;
+        s[i+1]=s[i];
+
+
+        if(s[i+1][a[i]]=='a'){
+            s[i+1][a[i]]='b';
+
+        }
+        else{
+            s[i+1][a[i]]='a';
+        }
+
+
+
+    }
+     for (int i = 0; i <= n; i++) {
+        cout << s[i] << '\n';
     }
    
 
