@@ -323,9 +323,12 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 void solve() {
-    int n;cin>>n;
-    char c;cin>>c;
-    string s;cin>>s;
+       int a,b;cin>>a>>b;
+       string s;cin>>s;
+       if(s[0]==s[a+b-1]){
+        cout << -1 << nl;
+        return;
+       }
 
 
 
