@@ -333,10 +333,10 @@ void solve() {
 
         int j = n-i-1;
         if(s[i]=='?'&&s[j]!='?'){
-            s[i]==s[j];
+            s[i]=s[j];
         }
         else if(s[i]!='?' && s[j]=='?'){
-            s[j]==s[i];
+            s[j]=s[i];
         }
         else if(s[i] != '?' && s[j] != '?' && s[i] != s[j]){
             cout << -1 << nl;
