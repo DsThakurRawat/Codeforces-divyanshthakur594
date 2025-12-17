@@ -301,7 +301,7 @@ Important CP Notes
 NOTE: Binary search runs in O(log n) time in the worst case because it halves the search space every step.
 
 
-
+NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 
@@ -325,15 +325,83 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 void solve() {
        int a,b;cin>>a>>b;
        string s;cin>>s;
+       int n = s.size();
 
-       if(a % 2!=0 && b % 2 !=0){
+
+       
+       for(int i =0;i<n/2;i++){
+
+        int j = n-i-1;
+        if(s[i]=='?'&&s[j]!='?'){
+            s[i]==s[j];
+        }
+        else if(s[i]!='?' && s[j]=='?'){
+            s[j]==s[i];
+        }
+        else if(s[i] != '?' && s[j] != '?' && s[i] != s[j]){
+            cout << -1 << nl;
+            return;
+        }
+       }
+
+       for(char c : s){
+        if(c=='0')a--;
+        else if(c=='1')b--;
+       }
+       if(a<0 || b < 0){
         cout << -1 << nl;
         return;
        }
-       if(s[0]!=s[a+b-1] &&( s[0]!='?' && s[a+b-1]!='?')){
-        cout << -1 << nl;
-        return;
+
+       if( n% 2 ==1){
+        int mid = n/2;
+    
+            if(s[mid]=='?'){
+                if(a%2==1){
+                    s[mid] =='0';
+                    a--;
+                }
+                else if(b%2==1){
+                    s[mid]='1';
+                    b--;
+                }
+                else{
+                    cout << -1 << nl;
+                    return;
+                }
+            }
+        
        }
+
+       for(int i =0;i<n/2;i++){
+        int j = n-i-1;
+        if(s[i]=='?'&&s[j]=='?'){
+            if(a>=2){
+                s[i]=s[j]='0';
+                a-=2;
+            }
+            else if(b>=2){
+                s[i]=s[j]='1';
+                b-=2;
+            }
+            else {
+                cout << -1 << nl;
+                return;
+            }
+        }
+       }
+       if(a==0&&b==0){
+        cout << s << nl;
+       }
+       else {
+        cout << -1 << nl;
+       }
+       
+
+
+
+
+
        
 
 
