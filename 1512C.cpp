@@ -316,6 +316,25 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 */
 
+#define pb emplace_back
+#define fst first
+#define scd second
+#define mkp make_pair
+#define mems(a, x) memset((a), (x), sizeof(a))
+
+using namespace std;
+typedef long long ll;
+typedef double db;
+typedef unsigned long long ull;
+typedef long double ldb;
+typedef pair<int, int> pii;
+
+const int maxn = 1000100;
+
+int n;
+pii a[99];
+char s[maxn];
+
 
 
 
@@ -323,87 +342,33 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-       int a,b;cin>>a>>b;
-       string s;cin>>s;
-       int n = s.size();
-
-
-       
-       for(int i =0;i<n/2;i++){
-
-        int j = n-i-1;
-        if(s[i]=='?'&&s[j]!='?'){
-            s[i]=s[j];
-        }
-        else if(s[i]!='?' && s[j]=='?'){
-            s[j]=s[i];
-        }
-        else if(s[i] != '?' && s[j] != '?' && s[i] != s[j]){
-            cout << -1 << nl;
-            return;
-        }
-       }
-
-       for(char c : s){
-        if(c=='0')a--;
-        else if(c=='1')b--;
-       }
-       if(a<0 || b < 0){
-        cout << -1 << nl;
-        return;
-       }
-
-       if( n% 2 ==1){
-        int mid = n/2;
-    
-            if(s[mid]=='?'){
-                if(a%2==1){
-                    s[mid] ='0';
-                    a--;
-                }
-                else if(b%2==1){
-                    s[mid]='1';
-                    b--;
-                }
-                else{
-                    cout << -1 << nl;
-                    return;
-                }
-            }
-        
-       }
-
-       for(int i =0;i<n/2;i++){
-        int j = n-i-1;
-        if(s[i]=='?'&&s[j]=='?'){
-            if(a>=2){
-                s[i]=s[j]='0';
-                a-=2;
-            }
-            else if(b>=2){
-                s[i]=s[j]='1';
-                b-=2;
-            }
-            else {
-                cout << -1 << nl;
-                return;
-            }
-        }
-       }
-       if(a==0&&b==0){
-        cout << s << nl;
-       }
-       else {
-        cout << -1 << nl;
-       }
-
-
-
-
-
-
-       
-
+      scanf("%d%s", &n, s + 1);
+	for (int i = 0; i < 26; ++i) {
+		a[i] = mkp(0, i);
+	}
+	for (int i = 1; i <= n; ++i) {
+		++a[s[i] - 'a'].fst;
+	}
+	sort(a, a + 26, greater<pii>());
+	queue<pii> q;
+	while (a[0].fst > a[1].fst) {
+		putchar('a' + a[0].scd);
+		--a[0].fst;
+	}
+	for (int i = 0; i < 26; ++i) {
+		q.push(a[i]);
+	}
+	while (q.size()) {
+		pii p = q.front();
+		q.pop();
+		if (!p.fst) {
+			continue;
+		}
+		putchar('a' + p.scd);
+		--p.fst;
+		q.push(p);
+	}
+	putchar('\n');
 
 
 
