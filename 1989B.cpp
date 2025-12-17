@@ -287,13 +287,13 @@ void solve() {
     ll ans = LLONG_MAX;
 
     for(ll i=0;i<=m;i++){
-        int ptr = i;
+        ll ptr = i;
         for(ll j=0;j<n&&ptr<m;j++){
             if(a[j]==b[ptr]) ptr++;
         }
 
-        int len_x = i;
-        int len_y = m-ptr;
+        ll len_x = i;
+        ll len_y = m-ptr;
         ans = min(ans,len_x+n+len_y);
     }
     cout << ans << nl;
