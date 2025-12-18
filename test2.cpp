@@ -328,9 +328,12 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-    int n;cin>>n;
-    char c;cin>>c;
-    string s;cin>>s;
+    int x, y;
+	cin >> x >> y;
+	
+	if (x > 3) puts("YES");
+	else if (x == 1) puts(y == 1 ? "YES" : "NO");
+	else puts(y <= 3 ? "YES" : "NO");
 
 
 
