@@ -337,7 +337,7 @@ void solve() {
         if(last.count(v[i])){
             ans = min(ans,i-last[v[i]]+1);
         }
-        last[a[i]]=i;
+        last[v[i]]=i;
       }
       cout<< (ans ==INT_MAX ? -1 : ans )<<nl;
 
