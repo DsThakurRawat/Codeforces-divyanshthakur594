@@ -331,13 +331,25 @@ void solve() {
 
          int n;cin>>n;
          vector<string>grid(n);
-         for(int i =0;i<n;i++){
+         for(int i = 0;i<n;i++){
           cin>>grid[i];
          }
-         
+         // in other way we have to find maximum number of row that are all the same
    
+         map<string ,int>mp;
+
+         for(int i =0;i<n;i++){
+            mp[grid[i]]++;
+         }
+         int max_freq = 0;
+
+         for(auto [key,val]:mp){
+            max_freq = max(val,max_freq);
+         }
+         cout << max_freq<<nl;
 
 
+         
 
 
 
