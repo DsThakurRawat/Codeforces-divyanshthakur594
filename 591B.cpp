@@ -340,7 +340,7 @@ void solve() {
         if(s[i]==c1){
             swap(s[i],c2);
         }
-        else if(s[i]==c2){
+         if(s[i]==c2){
             swap(s[i],c1);
         }
     }
