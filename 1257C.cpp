@@ -341,6 +341,11 @@ void solve() {
       }
       cout<< (ans ==INT_MAX ? -1 : ans )<<nl;
 
+      // in then end problem becomes find minimum length of substring for which
+      /*
+       [element at last index == element at first index]
+      */
+
       
 
 
