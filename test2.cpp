@@ -301,6 +301,11 @@ Important CP Notes
 NOTE: Binary search runs in O(log n) time in the worst case because it halves the search space every step.
 
 
+NOTE:For a palindrome, positions i and n - i - 1 must be equal.
+
+
+
+
 
 
 
