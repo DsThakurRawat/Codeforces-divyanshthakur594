@@ -338,10 +338,10 @@ void solve() {
 
     for(int i =0;i<n;i++){
         if(s[i]==c1){
-            swap(s[i],c1);
+            swap(s[i],c2);
         }
         else if(s[i]==c2){
-            swap(s[i],c2);
+            swap(s[i],c1);
         }
     }
     
