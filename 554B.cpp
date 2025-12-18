@@ -8,7 +8,7 @@ using namespace std;
 using ll = long long;
 using  ld = long double;
 using  int128 = __int128_t;
-
+/*
 
 //vector<vector<ll>> grid(n, vector<int>(m));
 //vector<vector<ll>> arr(n, vector<int>(m,1));
@@ -158,7 +158,7 @@ NOTE-3 :
 
                           }
                       cout << ans << endl;
-
+              }
 
 -------------------------------------------------REMOVING ADJACENT K CHARACTER FROM STRING----------------------------------------------------------
 General formula (MEMORIZE)
@@ -328,9 +328,13 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-    int n;cin>>n;
-    char c;cin>>c;
-    string s;cin>>s;
+
+         int n;cin>>n;
+         vector<string>grid(n);
+         for(int i =0;i<n;i++){
+          cin>>grid[i];
+         }
+   
 
 
 
@@ -352,11 +356,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+    //int t ;
+   // t=1;
+   // cin >> t;
+   // while (t--) {
         solve();
-    }
+    //}
     return 0;
 }
