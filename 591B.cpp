@@ -329,26 +329,27 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-   ll n,m;cin>>n>>m;
-   string s;cin>>s;
    
-   while(m--){
-    
-    char c1,c2;cin>>c1>>c2;
+    int n, m;
+    cin >> n >> m;
 
-    for(int i =0;i<n;i++){
-        if(s[i]==c1){
-            swap(s[i],c2);
-        }
-         if(s[i]==c2){
-            swap(s[i],c1);
-        }
+    string s;
+    cin >> s;
+
+    vector<char> p(26);
+    for (int i = 0; i < 26; i++)
+        p[i] = char('a' + i);
+
+    while (m--) {
+        char x, y;
+        cin >> x >> y;
+        swap(p[x - 'a'], p[y - 'a']);
     }
-    
 
-   }
-   cout << s <<  nl;
+    for (char &c : s)
+        c = p[c - 'a'];
 
+    cout << s << nl;
 
 
 
