@@ -330,14 +330,14 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
       ll n;cin>>n;
       vector<ll>v(n);for(auto &in:v)cin>>in;
-      map<int,int>last;
+      map<int,int>last_map;
       int ans = INT_MAX;
 
       for(int i =0;i<v.size();i++){
-        if(last.count(v[i])){
-            ans = min(ans,i-last[v[i]]+1);
+        if(last_map.count(v[i])){
+            ans = min(ans,i-last_map[v[i]]+1);
         }
-        last[v[i]]=i;
+        last_map[v[i]]=i;
       }
       cout<< (ans ==INT_MAX ? -1 : ans )<<nl;
 
