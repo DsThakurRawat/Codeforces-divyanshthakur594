@@ -336,21 +336,23 @@ void solve() {
     string s;
     cin >> s;
 
-    vector<char> p(26);
-    for (int i = 0; i < 26; i++)
-        p[i] = char('a' + i);
-
-    while (m--) {
-        char x, y;
-        cin >> x >> y;
-        swap(p[x - 'a'], p[y - 'a']);
+    vector<char>ch(26);
+    for(int i =0;i<26;i++){
+        ch[i] = char('a'+i);
+    }
+   
+    while(m--){
+        char x ,y;cin>>x>>y;
+        for(int i =0;i<26;i++){
+            if(ch[i]==x)ch[i] = y;
+            else if(ch[i]==y)ch[i]=x;
+        }
     }
 
-    for (char &c : s)
-        c = p[c - 'a'];
-
-    cout << s << nl;
-
+    for(char &c : s){
+        c = ch[c-'a'];
+        }
+        cout << s << nl;
 
 
 
