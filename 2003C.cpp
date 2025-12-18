@@ -237,25 +237,10 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 void solve() {
-  string a,b;cin>>a>>b;
-   int cnt =0;
+ ll n;cin>>n;
+ string s;cin>>s;
 
- if(b.size()>=a.size()){
-  for(int i =0;i<a.size();i++){
-    if(b.find(a[i])==string::npos)cnt++;
-  }
-
-  cout << b.size()+cnt<<nl;
-  
- }
- else{
-    for(int i =0;i<b.size();i++){
-    if(a.find(b[i])==string::npos)cnt++;
-  }
-  cout << a.size()+cnt << nl;
-
- }
-
+   
   
 
   
