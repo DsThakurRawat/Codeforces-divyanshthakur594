@@ -328,9 +328,19 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
+     
     int n;cin>>n;
-    char c;cin>>c;
     string s;cin>>s;
+
+    string t = s;
+    sort(t.begin(),t.end());
+    if(s==t){
+        cout << s << nl;
+    }
+
+    
+    
+
 
 
 
