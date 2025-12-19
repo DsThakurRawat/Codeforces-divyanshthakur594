@@ -343,7 +343,7 @@ void solve() {
 
       // in then end problem becomes find minimum length of substring for which
       /*
-       [element at last index == element at first index]
+       [element at last index == element at first index]-> find leghth of that subarray
       */
 
       
