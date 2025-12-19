@@ -328,8 +328,25 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-    int x, y;
-	cin >> x >> y;
+    int n;cin>>n;
+    vector<string>v(n);
+    for(int i =0;i<n;i++){
+        cin>>v[i];
+    }
+ 
+
+      sort(v.begin(),v.end());
+      string ans ="";
+
+      for(int i =0;i<n;i++){
+        ans += v[i];
+
+      }
+      cout << ans << nl;
+
+
+
+
 	
 
 
