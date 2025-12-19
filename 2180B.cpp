@@ -335,13 +335,18 @@ void solve() {
     for(int i =0;i<n;i++){
         cin>>v[i];
     }
+        string s ="";
 
-        sort(v.begin(), v.end(), check);
+        for(int i=0;i<n;i++){
+            string part1 = v[i]+s;
+            string part2 = s + v[i];
 
-        string ans;
-        for(auto &s : v) ans += s;
-        cout << ans << '\n';
-
+                if (part1 < part2)
+                    s = part1;
+                else
+                    s = part2;
+        }
+        cout << s<< nl;
 
 
 
