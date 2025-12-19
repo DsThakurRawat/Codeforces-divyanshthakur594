@@ -330,7 +330,13 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
      int n;cin>>n;
      string s;cin>>s;
-     
+     string t = s;
+     reverse(t.begin(),t.end());
+     if(s==t){
+        cout << 0 << nl;
+     }
+
+
      
 
 
