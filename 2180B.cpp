@@ -336,13 +336,11 @@ void solve() {
  
 
       sort(v.begin(),v.end());
-      string ans ="";
+     
 
-      for(int i =0;i<n;i++){
-        ans += v[i];
-
-      }
-      cout << ans << nl;
+       string ans;
+    for(auto &s : v) ans += s;
+     cout << ans << nl;
 
 
 
