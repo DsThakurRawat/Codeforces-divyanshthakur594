@@ -325,7 +325,9 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 #define nl '\n'
-
+bool check(const string &a, const string &b) {
+    return a + b < b + a;
+}
 
 void solve() {
     int n;cin>>n;
@@ -333,14 +335,12 @@ void solve() {
     for(int i =0;i<n;i++){
         cin>>v[i];
     }
- 
 
-      sort(v.begin(),v.end());
-     
+        sort(v.begin(), v.end(), check);
 
-       string ans;
-    for(auto &s : v) ans += s;
-     cout << ans << nl;
+        string ans;
+        for(auto &s : v) ans += s;
+        cout << ans << '\n';
 
 
 
