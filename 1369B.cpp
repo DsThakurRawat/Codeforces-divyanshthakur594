@@ -336,8 +336,19 @@ void solve() {
     sort(t.begin(),t.end());
     if(s==t){
         cout << s << nl;
+        return;
     }
-
+  string ans ="";
+  for(int i =0;i<n;i++){
+    if(s[i]=='1') break;
+    ans.push_back('0');
+  }
+  ans.push_back('0');
+  for(int i =s.size()-1;i>=0;i--){
+    if(s[i]=='0')break;
+    ans.push_back('1');
+  }
+  cout << ans << nl;
     
     
 
