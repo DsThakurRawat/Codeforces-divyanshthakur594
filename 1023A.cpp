@@ -385,15 +385,22 @@ void solve() {
        for(int i =0;i<part1.size();i++){
             if(part1[i] != t[i] && i < part1.size()){
                 flag1 = false;
+                break;
             }
        }
        
      
        for(int i =0;i<part2.size();i++){
-        if(part2[n-i-i] != t[n-1-i] && i < part2.size()){
+        if(part2[part2.size()-i-i] != t[m-1-i] && i < part2.size()){
             flag2 = false;
+            break;
         }
        }
+
+
+
+
+
        if(flag1 == true && flag2 == true){
         cout << "YES"<< nl;
            }
