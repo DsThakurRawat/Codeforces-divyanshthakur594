@@ -329,7 +329,7 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
 
-    ll h, w, n;
+       ll h, w, n;
        cin >> h >> w >> n;
 
             vector<vector<ll>> grid(h, vector<ll>(w));
@@ -347,7 +347,7 @@ void solve() {
             for (int i = 0; i < h; i++) {
                 int cnt = 0;
                 for (int j = 0; j < w; j++) {
-                  for(int k =0;k<n;i++){
+                  for(int k =0;k<n;k++){
                     if(b[k] == grid[i][j]){
                         cnt++;
 
