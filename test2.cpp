@@ -335,7 +335,7 @@ void solve() {
 
      */
         int n;cin>>n;
-       vector<vector<ll>> grid(n, vector<int>(2));
+       vector<vector<int>> grid(n, vector<int>(2));
     
           
 
