@@ -328,14 +328,20 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-    int x, y;
-	cin >> x >> y;
-    cout << 12*x + y << nl;
-	
 
+    ll h, w, n;
+       cin >> h >> w >> n;
 
+            vector<vector<ll>> grid(h, vector<ll>(w));
 
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
+                    cin >> grid[i][j];
+                }
+            }
+            vector<ll>b(n);for(auto &in:b)cin>>in;
 
+            
         
         
           
