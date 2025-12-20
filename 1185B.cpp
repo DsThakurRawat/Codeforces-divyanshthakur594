@@ -326,6 +326,7 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 #define nl '\n'
 
+const int N = 300009;
 
 void solve() {
     
