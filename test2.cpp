@@ -341,6 +341,27 @@ void solve() {
             }
             vector<ll>b(n);for(auto &in:b)cin>>in;
 
+            // we want to get whihc row has maxi number of element called
+           int maxm = INT_MIN;
+           
+            for (int i = 0; i < h; i++) {
+                int cnt = 0;
+                for (int j = 0; j < w; j++) {
+                  for(int k =0;k<n;i++){
+                    if(b[k] == grid[i][j]){
+                        cnt++;
+
+                    }
+                  }
+                }
+                maxm = max(maxm,cnt);
+
+            }
+            cout << maxm<< nl;
+          
+
+
+
             
         
         
