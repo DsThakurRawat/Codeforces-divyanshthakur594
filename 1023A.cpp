@@ -355,6 +355,11 @@ void solve() {
     }
 
 */
+         if (s.find('*') == string::npos) {
+        cout << (s == t ? "YES" : "NO") << nl;
+        return;
+          }
+
         string part1 ="";
         string part2 = "";
         int sav = -1;
