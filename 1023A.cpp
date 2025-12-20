@@ -391,7 +391,7 @@ void solve() {
        
      
        for(int i =0;i<part2.size();i++){
-        if(part2[part2.size()-i-i] != t[m-1-i] && i < part2.size()){
+        if(part2[part2.size()-i-1] != t[m-1-i] && i < part2.size()){
             flag2 = false;
             break;
         }
