@@ -382,6 +382,7 @@ void solve() {
                 flag1 = false;
             }
        }
+       reverse(part2.begin(),part2.end());
      
        for(int i =0;i<part2.size();i++){
         if(part2[i] != t[n-1-i] && i < part2.size()){
