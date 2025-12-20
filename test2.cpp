@@ -344,6 +344,12 @@ void solve() {
                     cin >> grid[i][j];
                 }
             }
+            int maxm = INT_MIN;
+             for (int i = 0; i < n; i++) {
+                for (int j = 0; j < 2; j++) {
+                    maxm = max(maxm,grid[i][1]);
+                }
+            }
    
 
 
