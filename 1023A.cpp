@@ -372,6 +372,10 @@ void solve() {
         for(int i = sav+1;i<n;i++){
             part2 +=s[i];
         }
+        if(part1.size() + part2.size() > m){
+            cout << "NO"<< nl;
+            return;
+        }
         if(t.find(part1) != string::npos && t.find(part2) != string::npos){
             cout << "YES"<< nl;
         }
