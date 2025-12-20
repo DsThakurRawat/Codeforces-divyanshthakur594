@@ -376,10 +376,22 @@ void solve() {
             cout << "NO"<< nl;
             return;
         }
-        if(t.find(part1) != string::npos && t.find(part2) != string::npos){
-            cout << "YES"<< nl;
+        bool flag1 = true,flag2 = true;
+       for(int i =0;i<part1.size();i++){
+            if(part1[i] != t[i] && i < part1.size()){
+                flag1 = false;
+            }
+       }
+       reverse(t.begin(),t.end());
+       for(int i =0;i<part2.size();i++){
+        if(part2[i] != t[i] && i < part2.size()){
+            flag2 = false;
         }
-     else cout << "NO"<<nl;
+       }
+       if(flag1 == true && flag2 == true){
+        cout << "YES"<< nl;
+           }
+           else cout << "NO"<< nl;
 
 
 
