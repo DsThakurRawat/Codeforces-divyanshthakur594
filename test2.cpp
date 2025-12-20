@@ -330,6 +330,7 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
     int x, y;
 	cin >> x >> y;
+    cout << 12*x + y << nl;
 	
 
 
@@ -351,11 +352,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+   // int t ;
+   // t=1;
+    //cin >> t;
+    //while (t--) {
         solve();
-    }
+    //}
     return 0;
 }
