@@ -332,8 +332,8 @@ void solve() {
     int n,m;cin>>n>>m;
     string s;cin>>s;
     string t;cin>>t;
-    string p ="";
-
+    
+/*
     for(int i =0;i<n;i++){
         if(s[i]=='*'){
             continue;
@@ -353,6 +353,32 @@ void solve() {
     else {
         cout << "NO"<< nl;
     }
+
+*/
+        string part1 ="";
+        string part2 = "";
+        int sav = -1;
+        for(int i =0;i<s.size();i++){
+
+            if(s[i] =='*'){
+                sav = i;
+                break;
+            }
+            else{
+                part1 +=s[i];
+            }
+
+        }
+        for(int i = sav+1;i<n;i++){
+            part2 +=s[i];
+        }
+        if(t.find(part1) != string::npos && t.find(part2) != string::npos){
+            cout << "YES"<< nl;
+        }
+     else cout << "NO"<<nl;
+
+
+
 
 
 
