@@ -329,35 +329,11 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
 
-       ll h, w, n;
-       cin >> h >> w >> n;
+     /*
+     ith has wieght w 
+     ans strength pi
 
-            vector<vector<ll>> grid(h, vector<ll>(w));
-
-            for (int i = 0; i < h; i++) {
-                for (int j = 0; j < w; j++) {
-                    cin >> grid[i][j];
-                }
-            }
-            vector<ll>b(n);for(auto &in:b)cin>>in;
-
-            // we want to get whihc row has maxi number of element called
-           int maxm = INT_MIN;
-           
-            for (int i = 0; i < h; i++) {
-                int cnt = 0;
-                for (int j = 0; j < w; j++) {
-                  for(int k =0;k<n;k++){
-                    if(b[k] == grid[i][j]){
-                        cnt++;
-
-                    }
-                  }
-                }
-                maxm = max(maxm,cnt);
-
-            }
-            cout << maxm<< nl;
+     */
           
 
 
@@ -379,11 +355,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-   // int t ;
-   // t=1;
-    //cin >> t;
-    //while (t--) {
+    int t ;
+    t=1;
+    cin >> t;
+    while (t--) {
         solve();
-    //}
+    }
     return 0;
 }
