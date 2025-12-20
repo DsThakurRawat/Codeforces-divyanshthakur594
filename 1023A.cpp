@@ -381,7 +381,7 @@ void solve() {
             cout << "NO"<< nl;
             return;
         }
-        bool flag1 = true,flag2 = true;
+       bool flag1 = true,flag2 = true;
        for(int i =0;i<part1.size();i++){
             if(part1[i] != t[i] && i < part1.size()){
                 flag1 = false;
