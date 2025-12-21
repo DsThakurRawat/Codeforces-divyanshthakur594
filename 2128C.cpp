@@ -345,11 +345,11 @@ void solve() {
       }
        here k is initial number of coins
        */
-      int maxm = k;
+      ll maxm = k;
 
       while(n--){
         ll l,r,real;cin>>l>>r>>real;
-        if(l<=maxm&&maxm<=r && maxm >= real){
+        if(l<=maxm&&maxm<=r && maxm == max(real,maxm)){
             maxm = real;
             
         }
