@@ -334,7 +334,7 @@ void solve() {
    vector<int>v(n);for(auto &in : v)cin>>in;
    sort(v.begin(),v.end());
    ll bonus_pt = 0;
-   int s = 0;
+   ll s = 0;
 
    ll l = s/x;
 
