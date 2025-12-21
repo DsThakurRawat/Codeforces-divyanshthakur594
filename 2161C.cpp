@@ -331,7 +331,7 @@ void solve() {
 
     
    ll n,x;cin>>n>>x;
-   vector<int>v(n);for(auto &in : v)cin>>in;
+   vector<ll>v(n);for(auto &in : v)cin>>in;
    sort(v.begin(),v.end());
    ll bonus_pt = 0;
    ll s = 0;
