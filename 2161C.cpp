@@ -339,14 +339,15 @@ void solve() {
    ll l = s/x;
 
    for(int i =0;i<n;i++){
-     if((s+v[n-i-1])/x >  l ){
-        l = (s + v[n-i-1])/x;
-        s += v[n-i-1];
-        bonus_pt+=v[n-i-1];
+     if((s+v[i])/x >  l ){
+        l = (s + v[i])/x;
+        s += v[i];
+        bonus_pt+=v[i];
 
      }
      else {
         s +=v[i];
+         l = (s + v[i])/x
      }
 
         
@@ -356,7 +357,7 @@ void solve() {
    cout << bonus_pt << nl;
    for(auto &ot:v)cout << ot << " ";
    cout << nl;
-  
+
 
 
 
