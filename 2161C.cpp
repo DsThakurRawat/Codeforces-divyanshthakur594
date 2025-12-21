@@ -340,6 +340,7 @@ void solve() {
    ll lvl = 0;
 
    int i =0,j =n-1;
+   vector<ll>order(n);
 
    while(i<=j){
     ll new_lvl = (s+v[j])/x;
@@ -348,10 +349,12 @@ void solve() {
         s += v[j];
         lvl = new_lvl;
         bonus_pt +=v[j]; 
+        order.push_back(v[j]);
         j--;
     }
     else {
         s +=v[i];
+        order.push_back(v[j]);
         i++;
     }
 
