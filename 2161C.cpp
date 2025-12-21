@@ -329,36 +329,35 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
 
-     /*
-     ith has wieght w 
-     ans strength pi
-
-     */
-        int n;cin>>n;
-       vector<vector<int>> grid(n, vector<int>(2));
     
-          
+   ll n,x;cin>>n>>x;
+   vector<int>v(n);for(auto &in : v)cin>>in;
+   sort(v.begin(),v.end());
+   ll bonus_pt = 0;
+   int s = 0;
 
-      for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    cin >> grid[i][j];
-                }
-            }
-            int maxm = INT_MIN;
-             for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    maxm = max(maxm,grid[i][1]);
-                }
-            }
+   ll l = s/x;
 
-            int cnt = 0;
+   for(int i =0;i<n;i++){
+     if((s+v[i])/x >  l ){
+        l = (s + v[i])/x;
+        s += v[i];
 
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    
-                    
-                }
-            }
+     }
+     else {
+        s +=v[i];
+     }
+
+        
+   
+
+   }
+   cout << bonus_pt << nl;
+   for(auto &ot:v)cout << ot << " ";
+   cout << nl;
+
+
+
 
           
 
