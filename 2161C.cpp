@@ -356,7 +356,7 @@ void solve() {
     }
 
    }
-   cout << bonus << nl;
+   cout << bonus_pt << nl;
 
           
 
