@@ -337,30 +337,26 @@ void solve() {
    ll bonus_pt = 0;
    ll s = 0;
 
-   ll l = s/x;
+   ll lvl = 0;
 
-   for(int i =0;i<n;i++){
-     if((s+v[i])/(x) >  l  ){
-        l = (s + v[i])/x;
-        s += v[i];
-        bonus_pt+=v[i];
+   int i =0,j =n-1;
 
-     }
-     else {
-     l = (s + v[i])/x;
+   while(i<=j){
+    ll new_lvl = (s+v[j])/x;
+
+    if(new_lvl > lvl){
+        s += v[j];
+        lvl = new_lvl;
+        bonus_pt +=v[j]; 
+        j--;
+    }
+    else {
         s +=v[i];
-     }
-
-        
-   
+        i++;
+    }
 
    }
-   cout << bonus_pt << nl;
-   for(auto &ot:v)cout << ot << " ";
-   cout << nl;
-
-
-
+   cout << bonus << nl;
 
           
 
