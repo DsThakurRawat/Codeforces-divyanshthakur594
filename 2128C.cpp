@@ -342,13 +342,19 @@ void solve() {
     ll f =1;
 
     for(ll i =0;i<n;i++){
-        if(!(b[i]-prefmin[i] < prefmin[i])){
-           cout << "No" << nl;
-           return;
+        if(b[i]-prefmin[i] < prefmin[i]){
+          
+          continue;
+        }
+        else{
+            f = 0;
+            break;
         }
     }
-    cout << "YES"<< nl;
-
+   if(f == 0){
+    cout << "YES" << nl;
+   }
+   else cout << "NO"<<nl;
     
 
 
