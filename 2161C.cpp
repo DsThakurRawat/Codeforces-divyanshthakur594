@@ -347,7 +347,6 @@ void solve() {
      }
      else {
         s +=v[i];
-         l = (s + v[i])/x;
      }
 
         
