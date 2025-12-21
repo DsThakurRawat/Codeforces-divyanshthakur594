@@ -335,6 +335,7 @@ void solve() {
 
      */
       ll n,k;cin>>n>>k;
+      /*
       vector<vector<ll>>grid(n,vector<ll>(3));
 
       for(int i =0;i<n;i++){
@@ -342,7 +343,24 @@ void solve() {
             cin>>grid[i][j];
         }
       }
+       here k is initial number of coins
+       */
+      int maxm = k;
+
+      while(n--){
+        ll l,r,real;cin>>l>>r>>real;
+        if(l<=maxm&&maxm<=r && maxm >= real){
+            maxm = real;
+            
+        }
+
+      }
+      cout << maxm <<nl;
+
+
+
       
+
 
       
           
