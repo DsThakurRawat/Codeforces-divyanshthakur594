@@ -342,6 +342,7 @@ void solve() {
      if((s+v[i])/x >  l ){
         l = (s + v[i])/x;
         s += v[i];
+        bonus_pt+=v[i];
 
      }
      else {
