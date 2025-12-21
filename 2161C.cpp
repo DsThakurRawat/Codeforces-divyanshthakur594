@@ -340,7 +340,7 @@ void solve() {
 
    for(int i =0;i<n;i++){
      if((s+v[n-i-1])/x >  l ){
-        l = (s + v[i])/x;
+        l = (s + v[n-i-1])/x;
         s += v[n-i-1];
         bonus_pt+=v[n-i-1];
 
