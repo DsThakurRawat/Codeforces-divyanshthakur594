@@ -333,7 +333,7 @@ void solve() {
     vector<ll>b(n);for(auto &in:b)cin>>in;
 
 
-    vector<ll>prefmin;
+    vector<ll>prefmin(n);
     prefmin[0] = b[0];
 
     for(int i =1;i<n;i++){
