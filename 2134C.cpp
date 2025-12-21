@@ -334,31 +334,34 @@ void solve() {
      ans strength pi
 
      */
-        int n;cin>>n;
-       vector<vector<int>> grid(n, vector<int>(2));
+    ll n;cin>>n;
+    vector<ll>a(n);
+
+    for(auto &x : a) cin>>x;
+    vector<ll>b(n+1,0);
+    ll ans = 0;
+    for(int i =0;i<n;i+=2){
+        ll minm = a[i];
+        
+
+        if(i >=2){
+            minm = min(minm,a[i-1]-b[i-2]);
+        }
+        if(i + 1 < n){
+            minm = min(minm,a[i+1]);
+        }
+        if(minm<0)minm = 0;
+        b[i] = minm;
+        ans += (a[i]-b[i]);
+
+    }
+
+    cout << ans << nl;
     
-          
 
-      for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    cin >> grid[i][j];
-                }
-            }
-            int maxm = INT_MIN;
-             for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    maxm = max(maxm,grid[i][1]);
-                }
-            }
 
-            int cnt = 0;
 
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < 2; j++) {
-                    
-                    
-                }
-            }
+      
 
           
 
