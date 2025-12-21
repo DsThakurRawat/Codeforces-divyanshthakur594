@@ -331,7 +331,29 @@ void solve() {
 
     ll n;cin>>n;
     vector<ll>b(n);for(auto &in:b)cin>>in;
+
+
+    vector<ll>prefmin;
+    prefmin[0] = b[0];
+
+    for(int i =1;i<n;i++){
+        prefmin[i] = min(prefmin[i-1],b[i]);
+    }
+    ll f =1;
+
+    for(ll i =0;i<n;i++){
+        if(!(b[i]-prefmin[i] < prefmin[i])){
+           cout << "No" << nl;
+           return;
+        }
+    }
+    cout << "YES"<< nl;
+
     
+
+
+
+
 
       
           
