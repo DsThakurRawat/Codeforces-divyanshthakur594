@@ -325,6 +325,7 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 #define nl '\n'
+#define all(x) (x).begin(), (x).end()
 
 
 void solve() {
@@ -339,7 +340,7 @@ void solve() {
    ll l = s/x;
 
    for(int i =0;i<n;i++){
-     if((s+v[i])/x >  l ){
+     if((s+v[i])/(x) >  l  ){
         l = (s + v[i])/x;
         s += v[i];
         bonus_pt+=v[i];
