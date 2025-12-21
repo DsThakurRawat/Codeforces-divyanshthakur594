@@ -339,10 +339,10 @@ void solve() {
    ll l = s/x;
 
    for(int i =0;i<n;i++){
-     if((s+v[i])/x >  l ){
+     if((s+v[n-i-1])/x >  l ){
         l = (s + v[i])/x;
-        s += v[i];
-        bonus_pt+=v[i];
+        s += v[n-i-1];
+        bonus_pt+=v[n-i-1];
 
      }
      else {
