@@ -334,7 +334,7 @@ void solve() {
      ans strength pi
          
      */
-      int n,k;cin>>n>>K;
+      int n,k;cin>>n>>k;
       vector<array<ll,3>>v(n);
 
       for(int i =0;i<n;i++)cin>>v[i][0] >> v[i][1] >> v[i][2];
