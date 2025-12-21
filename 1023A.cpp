@@ -332,29 +332,7 @@ void solve() {
     int n,m;cin>>n>>m;
     string s;cin>>s;
     string t;cin>>t;
-    
-/*
-    for(int i =0;i<n;i++){
-        if(s[i]=='*'){
-            continue;
-        }
-        else{
-            p +=s[i];
-        }
-    }
-    // if p is subsequence of t then possible
-    int i =0;
-    for(char c : t){
-        if(i  < p.size() && p[i]==c)i++;
-    }
-    if( i == p.size()){
-        cout << "YES"<< nl;
-    }
-    else {
-        cout << "NO"<< nl;
-    }
 
-*/
          if (s.find('*') == string::npos) {
         cout << (s == t ? "YES" : "NO") << nl;
         return;
@@ -396,10 +374,6 @@ void solve() {
             break;
         }
        }
-
-
-
-
 
        if(flag1 == true && flag2 == true){
         cout << "YES"<< nl;
