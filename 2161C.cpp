@@ -356,7 +356,7 @@ void solve() {
    cout << bonus_pt << nl;
    for(auto &ot:v)cout << ot << " ";
    cout << nl;
-
+  
 
 
 
