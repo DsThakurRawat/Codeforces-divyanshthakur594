@@ -350,6 +350,18 @@ void solve() {
                     maxm = max(maxm,grid[i][1]);
                 }
             }
+
+            int cnt = 0;
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < 2; j++) {
+                    
+                    
+                }
+            }
+
+          
+
    
 
 
