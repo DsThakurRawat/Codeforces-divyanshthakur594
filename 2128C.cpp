@@ -332,30 +332,21 @@ void solve() {
      /*
      ith has wieght w 
      ans strength pi
-
+         
      */
-      ll n,k;cin>>n>>k;
-      /*
-      vector<vector<ll>>grid(n,vector<ll>(3));
+      int n,k;cin>>n>>K;
+      vector<array<ll,3>>v(n);
 
-      for(int i =0;i<n;i++){
-        for(int j=0;j<3;j++){
-            cin>>grid[i][j];
-        }
-      }
-       here k is initial number of coins
-       */
+      for(int i =0;i<n;i++)cin>>v[i][0] >> v[i][1] >> v[i][2];
+      sort(v.begin(),v.end());
+
+
       ll maxm = k;
 
-      while(n--){
-        ll l,r,real;cin>>l>>r>>real;
-        if(l<=maxm&&maxm<=r && maxm == max(real,maxm)){
-            maxm = real;
-            
-        }
-
+      for(auto &[l,r,real] : v ){
+        if(l <=maxm && maxm <= r && real > maxm) maxm = real;
       }
-      cout << maxm <<nl;
+      cout << maxm << nl;
 
 
 
