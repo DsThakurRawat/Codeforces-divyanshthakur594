@@ -351,7 +351,7 @@ void solve() {
             break;
         }
     }
-   if(f == 0){
+   if(f == 1){
     cout << "YES" << nl;
    }
    else cout << "NO"<<nl;
