@@ -351,10 +351,10 @@ void solve() {
    }
    int total_max = 0;
    for(int i =0;i<n;i++){
-    for(int j =0;j<n;j++){
+    for(int j =0;j<m;j++){
         if(grid[i][j]==maxm){
             rowcnt[i]++;
-            colcnt[i]++;
+            colcnt[j]++;
             total_max++;
         }
     }
