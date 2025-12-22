@@ -305,7 +305,10 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 
+//hypdot->function in cpp
 
+-> To find euclidean distance between two points
+double d = hypot(px-qx,py-qy);
 
 
 
