@@ -353,8 +353,10 @@ void solve() {
 
 
         }
-         cout << "YES"<<nl;
-            return;
+         if(av >= d){
+            cout << "YES"<<nl;
+         }
+         else cout << "NO"<< nl;
 
 
 
