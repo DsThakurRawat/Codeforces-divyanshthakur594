@@ -360,6 +360,19 @@ void solve() {
     }
    }
 
+   for(int r =0;r<n;r++){
+    for(int c = 0;c<m;c++){
+        int covered = rowcnt[r]+colcnt[c];
+        if(grid[r][c] == maxm)covered--;
+        if(covered==total_max){
+            cout << maxm-1 << nl;
+            return;
+        }
+    }
+   }
+
+    cout << maxm << nl;
+
 
     
 
