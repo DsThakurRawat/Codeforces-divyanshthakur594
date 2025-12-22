@@ -333,7 +333,7 @@ void solve() {
           ll px,py,qx,qy;cin>>px>>py>>qx>>qy;
           double d = hypot(px-qx,py-qy);
           vector<double>v(n);for(auto &in:v)cin>>in;
-          
+
           double maxm = d;
           double sum = d;
 
@@ -341,7 +341,7 @@ void solve() {
             maxm = max(maxm,double(x));
             sum +=x;
           }
-          if(sum >= 2*maxm){
+          if(sum -maxm>= maxm){
             cout << "YES"<<nl;
           }
           else{
