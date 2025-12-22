@@ -331,32 +331,23 @@ void solve() {
 
           ll n;cin>>n;
           ll px,py,qx,qy;cin>>px>>py>>qx>>qy;
-          ll av = 0;
-          vector<ll>v(n);for(auto &in:v){
-            cin>>in;
-            av +=in;
+          double d = hypot(px-qx,py-qy);
+          vector<double>v(n);for(auto &in:v)cin>>in;
+
+          double maxm = d;
+          double sum = d;
+
+          for(auto &x : v){
+            maxm = max(maxm,double(x));
+            sum +=x;
           }
-        ld p = abs(px-qx);
-        ld q = abs(py-qy);
-        ld d = sqrt(p*p + q*q);
-        if(px == qx && py==qy){
-            vector<ll> a=v;
-            sort(a.begin(),a.end());
-            for(int i =0;i<n-1;i++){
-                if(a[i]!=a[i+1]){
-                    cout<< "NO"<< nl;
-                    return;
-                }
-            }
-           
-            
-
-
-        }
-         if(av >= d){
+          if(sum >= 2*maxm){
             cout << "YES"<<nl;
-         }
-         else cout << "NO"<< nl;
+          }
+          else{
+            cout << "NO"<<nl;
+          }
+
 
 
 
