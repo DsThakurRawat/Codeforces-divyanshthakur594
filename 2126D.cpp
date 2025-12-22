@@ -339,6 +339,20 @@ void solve() {
 
    
 
+int n,k;cin>>n>>k;
+      vector<array<ll,3>>v(n);// imp to note
+      
+
+      for(int i =0;i<n;i++)cin>>v[i][0] >> v[i][1] >> v[i][2];
+      sort(v.begin(),v.end());
+
+
+      ll maxm = k;
+
+      for(auto &[l,r,real] : v ){
+        if(l <=maxm && maxm <= r && real > maxm) maxm = real;
+      }
+      cout << maxm << nl;
 
 
             
