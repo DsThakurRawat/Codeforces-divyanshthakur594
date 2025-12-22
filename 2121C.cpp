@@ -329,14 +329,43 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
 
-    ll n,m;cin>>n>>m;
-    vector<vector<ll>>grid(n,vector<ll>(m));
+    int n,m;cin>>n>>m;
+    vector<vector<int>>grid(n,vector<int>(m));
+    vector<int>all_values;
 
     for(int i =0;i<n;i++){
         for(int j =0;j<m;j++){
             cin>>grid[i][j];
+            
         }
     }
+
+   vector<int>rowcnt(n,0),colcnt(m,0);
+
+   int maxm = INT_MIN;
+
+   for(int i =0;i<n;i++){
+    for(int j =0;j<m;j++){
+        maxm = max(maxm,grid[i][j]);
+    }
+   }
+   int total_max = 0;
+   for(int i =0;i<n;i++){
+    for(int j =0;j<n;j++){
+        if(grid[i][j]==maxm){
+            rowcnt[i]++;
+            colcnt[i]++;
+            total_max++;
+        }
+    }
+   }
+
+
+    
+
+     
+
+
 
 
       
