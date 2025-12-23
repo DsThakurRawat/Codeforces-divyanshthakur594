@@ -328,54 +328,51 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
+     
+
+        int n;
+    if (!(cin >> n)) return;
+    vector<int> a(n);
+    vector<int> last_pos(n + 1, -1);
+
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        last_pos[a[i]] = i;
+    }
+
+    int segments = 1; // Start with at least one segment
+    int min_last_occurrence = n + 1;
+    set<int> seen;
+
+    for (int i = 0; i < n - 1; i++) {
+        // Track the earliest "final appearance" of any element seen so far
+        if (seen.find(a[i]) == seen.end()) {
+            seen.insert(a[i]);
+            min_last_occurrence = min(min_last_occurrence, last_pos[a[i]]);
+        }
+
+        // If the earliest last-occurrence of any element in our current 
+        // prefix is still ahead of us, we can successfully transition 
+        // all current elements into a new segment starting at i+1.
+        if (min_last_occurrence > i) {
+            segments++;
+            // Note: We do NOT reset seen or min_last_occurrence because 
+            // b_{j+1} must contain everything from b_j. 
+            // The constraint is cumulative.
+        } else {
+            // If min_last_occurrence == i, we can NEVER split again 
+            // because an element has "died" at this index.
+            break; 
+        }
+    }
+
+    cout << segments << endl;
                                 
 
 
 
 
-          int n;
-    cin >> n;
-    vector<int> a(n);
-    map<int, int> last_occ;
-
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-        last_occ[a[i]] = i; // Store the last index where each number appears
-    }
-
-    int segments = 0;
-    int current_segment_must_reach = -1;
-
-    for (int i = 0; i < n; i++) {
-        // If the current element's last occurrence is at this index 'i',
-        // then no segment starting at or before 'i' can be followed by another segment.
-        // Therefore, this MUST be part of the final segment.
-        current_segment_must_reach = max(current_segment_must_reach, last_occ[a[i]]);
-
-        // If we have reached a point where all elements encountered so far 
-        // will appear again later (i.e., their last occurrence is > i), 
-        // we can finish a segment here.
-        // The only exception is the last segment which doesn't have a b_{j+1}.
-        
-        // Correct logic: A split is possible at index i if EVERY element 
-        // seen in the current segment appears at least once after index i.
-        // This is equivalent to saying: min(last_occurrence of all elements in current segment) > i.
-    }
-
-    // Revised simple approach:
-    // A split is possible after index i if for all k <= i, last_occ[a[k]] > i.
-    int count = 0;
-    int min_last_pos = n + 1;
-    
-    for (int i = 0; i < n - 1; i++) {
-        min_last_pos = min(min_last_pos, last_occ[a[i]]);
-        if (min_last_pos > i) {
-            count++;
-        }
-    }
-    
-    // The answer is the number of valid split points + 1
-    cout << count + 1 << "\n";
+          
 
    
 
