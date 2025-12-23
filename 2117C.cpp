@@ -329,36 +329,31 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
         
-    int n; cin >> n;
+  int n; cin >> n;
 vector<int>a(n);
 for (auto &x : a) cin >> x;
 
-set<int> cur, nxt;
+unordered_map<int,int> freq;
+for (int x : a) freq[x]++;
+
+unordered_set<int> st;
+int alive = freq.size();
 int ans = 0;
 
 for (int i = 0; i < n; i++) {
-    if (!cur.count(a[i])) {
-        cur.insert(a[i]);
-    } else {
-        nxt.insert(a[i]);
-    }
+    st.insert(a[i]);
 
-    if (cur.size() == nxt.size()) {
+    freq[a[i]]--;
+    if (freq[a[i]] == 0) alive--;
+
+    if ((int)st.size() == alive) {
         ans++;
-        cur.clear();
-        nxt.clear();
+        st.clear();
     }
 }
 
-if (!cur.empty()) ans++;
-
+if (!st.empty()) ans++;
 cout << ans << '\n';
-
-     
-
-
-    
-
 
 
 
