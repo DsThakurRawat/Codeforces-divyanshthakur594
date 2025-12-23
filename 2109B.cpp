@@ -330,7 +330,7 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
       
        int n,m,a,b; cin>>n>>m>>a>>b;
-    int ans = 0;
+    int ans = INT_MAX;
     vector<pair<int,int>> vp = {{a,m},{n-a+1,m},{n,b},{n,m-b+1}};
     for(auto &it: vp){
         int n1 = it.first;
