@@ -328,45 +328,46 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-     
 
-        int n;
-    if (!(cin >> n)) return;
+    int n;
+    cin >> n;
     vector<int> a(n);
-    vector<int> last_pos(n + 1, -1);
-
     for (int i = 0; i < n; i++) {
         cin >> a[i];
-        last_pos[a[i]] = i;
     }
 
-    int segments = 1; // Start with at least one segment
-    int min_last_occurrence = n + 1;
-    set<int> seen;
+    // Last occurrence of each value
+    vector<int> last(n + 1, -1);
+    for (int i = 0; i < n; i++) {
+        last[a[i]] = i;
+    }
 
-    for (int i = 0; i < n - 1; i++) {
-        // Track the earliest "final appearance" of any element seen so far
-        if (seen.find(a[i]) == seen.end()) {
-            seen.insert(a[i]);
-            min_last_occurrence = min(min_last_occurrence, last_pos[a[i]]);
-        }
+    int segments = 0;
+    int i = 0;
+    int cur_min_last = n + 1;
+    int seg_start = 0;
 
-        // If the earliest last-occurrence of any element in our current 
-        // prefix is still ahead of us, we can successfully transition 
-        // all current elements into a new segment starting at i+1.
-        if (min_last_occurrence > i) {
+    while (i < n) {
+        cur_min_last = min(cur_min_last, last[a[i]]);
+        if (cur_min_last == i) {
+            // We must cut after i
             segments++;
-            // Note: We do NOT reset seen or min_last_occurrence because 
-            // b_{j+1} must contain everything from b_j. 
-            // The constraint is cumulative.
-        } else {
-            // If min_last_occurrence == i, we can NEVER split again 
-            // because an element has "died" at this index.
-            break; 
+            // Start new segment
+            cur_min_last = n + 1;
+            seg_start = i + 1;
         }
+        i++;
     }
 
-    cout << segments << endl;
+    // If there's leftover from last segment, it's automatically valid
+    if (seg_start < n) {
+        segments++;
+    }
+
+    cout << segments << "\n";
+     
+
+        
                                 
 
 
