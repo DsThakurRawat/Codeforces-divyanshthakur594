@@ -328,27 +328,25 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-        int n, k;
-        cin >> n >> k;
-        int a[k]{}, p = 0;
-        if(k&1)
-            for(int i = 0; i < k; i++)
-                a[i] = n;
-        else {
-            for(int i = 30; i >= 0; i--) {
-                if(n >> i & 1) {
-                    for(int j = 0; j < k; j++)
-                        if(j != min(p, k-1))
-                            a[j] += (1 << i);
-                    if(p < k)
-                        p++;
-                } else
-                    for(int j = 0; j < p/2*2; j++)
-                        a[j] += (1 << i);
-            }
+      
+       int n,m,a,b; cin>>n>>m>>a>>b;
+    int ans = 0;
+    vector<pair<int,int>> vp = {{a,m},{n-a+1,m},{n,b},{n,m-b+1}};
+    for(auto &it: vp){
+        int n1 = it.first;
+        int m1 = it.second;
+        int res = 0;
+        while(n1 > 1){
+           res++;
+           n1 = (n1+1)/2;
         }
-        for(int i = 0; i < k; i++)
-            cout << a[i] << (i+1 == k? '\n':' ');
+        while(m1 > 1){
+            res++;
+            m1 = (m1+1)/2;
+        }
+        ans = min(ans,res);
+    }
+    cout<<1+ans<<endl;
 
 
 
