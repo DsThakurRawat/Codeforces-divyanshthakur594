@@ -330,41 +330,42 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
 
     int n;
-    cin >> n;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
+cin >> n;
+
+vector<int> a(n);
+for (int &x : a) cin >> x;
+
+unordered_map<int,int> freq;
+for (int x : a) freq[x]++;
+
+unordered_set<int> st;
+int bad = 0;
+int ans = 0;
+
+for (int i = 0; i < n; i++) {
+    int x = a[i];
+
+    if (!st.count(x)) {
+        st.insert(x);
+        // freq[x] is still >0 here
     }
 
-    // Last occurrence of each value
-    vector<int> last(n + 1, -1);
-    for (int i = 0; i < n; i++) {
-        last[a[i]] = i;
+    freq[x]--;
+    if (freq[x] == 0 && st.count(x)) {
+        bad++;
     }
 
-    int segments = 0;
-    int i = 0;
-    int cur_min_last = n + 1;
-    int seg_start = 0;
-
-    while (i < n) {
-        cur_min_last = min(cur_min_last, last[a[i]]);
-        if (cur_min_last == i) {
-            // We must cut after i
-            segments++;
-            // Start new segment
-            cur_min_last = n + 1;
-            seg_start = i + 1;
-        }
-        i++;
+    if (bad == 0) {
+        ans++;
+        st.clear();
     }
+}
 
-    // If there's leftover from last segment, it's automatically valid
-    if (seg_start < n) {
-        segments++;
-    }
+// If no valid cut was possible, whole array is one segment
+if (ans == 0) ans = 1;
 
-    cout << segments << "\n";
+cout << ans << '\n';
+
      
 
         
