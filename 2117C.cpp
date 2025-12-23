@@ -328,26 +328,33 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-               
-    int n;
+                                int n; 
 cin >> n;
 
 vector<int> a(n);
 for (int &x : a) cin >> x;
 
-unordered_map<int,int> last;
-for (int i = 0; i < n; i++) {
-    last[a[i]] = i;
-}
+unordered_map<int,int> freq;
+for (int x : a) freq[x]++;
 
+unordered_map<int,int> seen;
+int need = 0;
 int ans = 0;
-int need = n - 1;
 
 for (int i = 0; i < n; i++) {
-    need = min(need, last[a[i]]);
-    if (i == need) {
+    if (seen[a[i]] == 0) {
+        need++;              // new element in current segment
+    }
+    seen[a[i]]++;
+
+    freq[a[i]]--;
+    if (freq[a[i]] > 0 && seen[a[i]] == 1) {
+        need--;              // this element will appear in next segment
+    }
+
+    if (need == 0) {
         ans++;
-        need = n - 1;
+        seen.clear();
     }
 }
 
