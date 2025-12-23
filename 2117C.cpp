@@ -329,6 +329,22 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 void solve() {
 
+    int n;cin>>n;
+    ll ans = 0;
+    vector<ll>v(n);
+    for(int i =0;i<n;i++)cin>>v[i];
+    set<int>cur,seen;
+
+    for(int i =0;i<n;i++){
+        cur.insert(v[i]);
+        seen.insert(v[i]);
+        if(cur.size()==seen.size()){
+            ans++;
+            seen.clear();
+        }
+    }
+    cout << ans << nl;
+
     
      
 
