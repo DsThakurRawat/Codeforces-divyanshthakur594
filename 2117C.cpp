@@ -353,6 +353,7 @@ void solve() {
             st.clear();
         }
      }
+     if (!st.empty()) ans++; 
      cout << ans << nl;
      
 
