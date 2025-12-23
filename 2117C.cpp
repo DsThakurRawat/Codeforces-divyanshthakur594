@@ -330,19 +330,34 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 void solve() {
         
      int n;cin>>n;
-     vector<ll>v(n);for(auto &in:v)cin>>in;
-     vector<int>last(n+1,-1);
-     for(int i =0;i<n;i++){
-       last[v[i]] = i;
+     vector<ll>v(n);for(auto &in:v){
+        cin>>in;
      }
-
-     int ans = 0, need = -1;
-
+     vector<int>freq(n+1,0);
      for(int i =0;i<n;i++){
-        need = max(need,last[v[i]]);
-        if(i==need)ans++;
+        freq[v[i]]++;
+     }
+     int alive = 0;
+     for(int i =1;i<=n;i++){
+        if(freq[i]>0)alive++;
+     }
+     set<int>st;
+     ll ans = 0;
+
+     for(ll i =0;i<n;i++){
+        st.insert(v[i]);
+        freq[v[i]]--;
+        if(freq[v[i]]==0)alive--;
+        if((int)st.size()==alive){
+            ans++;
+            st.clear();
+        }
      }
      cout << ans << nl;
+     
+
+
+    
 
 
 
