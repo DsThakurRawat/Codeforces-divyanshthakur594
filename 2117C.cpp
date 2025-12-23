@@ -328,43 +328,54 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-                                int n; 
-cin >> n;
+                                
 
-vector<int> a(n);
-for (int &x : a) cin >> x;
 
-unordered_map<int,int> freq;
-for (int x : a) freq[x]++;
 
-unordered_map<int,int> seen;
-int need = 0;
-int ans = 0;
 
-for (int i = 0; i < n; i++) {
-    if (seen[a[i]] == 0) {
-        need++;              // new element in current segment
-    }
-    seen[a[i]]++;
+          int n;
+    cin >> n;
+    vector<int> a(n);
+    map<int, int> last_occ;
 
-    freq[a[i]]--;
-    if (freq[a[i]] > 0 && seen[a[i]] == 1) {
-        need--;              // this element will appear in next segment
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        last_occ[a[i]] = i; // Store the last index where each number appears
     }
 
-    if (need == 0) {
-        ans++;
-        seen.clear();
+    int segments = 0;
+    int current_segment_must_reach = -1;
+
+    for (int i = 0; i < n; i++) {
+        // If the current element's last occurrence is at this index 'i',
+        // then no segment starting at or before 'i' can be followed by another segment.
+        // Therefore, this MUST be part of the final segment.
+        current_segment_must_reach = max(current_segment_must_reach, last_occ[a[i]]);
+
+        // If we have reached a point where all elements encountered so far 
+        // will appear again later (i.e., their last occurrence is > i), 
+        // we can finish a segment here.
+        // The only exception is the last segment which doesn't have a b_{j+1}.
+        
+        // Correct logic: A split is possible at index i if EVERY element 
+        // seen in the current segment appears at least once after index i.
+        // This is equivalent to saying: min(last_occurrence of all elements in current segment) > i.
     }
-}
 
-cout << ans << '\n';
-
-
-
-
-
-          
+    // Revised simple approach:
+    // A split is possible after index i if for all k <= i, last_occ[a[k]] > i.
+    int count = 0;
+    int min_last_pos = n + 1;
+    
+    for (int i = 0; i < n - 1; i++) {
+        min_last_pos = min(min_last_pos, last_occ[a[i]]);
+        if (min_last_pos > i) {
+            count++;
+        }
+    }
+    
+    // The answer is the number of valid split points + 1
+    cout << count + 1 << "\n";
 
    
 
