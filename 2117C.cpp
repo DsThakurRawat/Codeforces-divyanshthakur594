@@ -302,7 +302,7 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 NOTE:For a palindrome, positions i and n - i - 1 must be equal.
-
+//fill() in C++ sets a range to the same value.
 
 
 
@@ -328,13 +328,47 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
+        
+     int n;cin>>n;
+     vector<ll>v(n);for(auto &in:v)cin>>in;
+     vector<ll>distinct(n),freq(n+1);
 
-     /*
-     ith has wieght w 
-     ans strength pi
+     int total = 0;
 
-     */
-      
+     for(int i =0;i<n;i++){
+        freq[v[i]]++;
+        if(freq[v[i]]==1){
+            distinct[i] = 1;
+        }
+        distinct[i] +=(i ? distinct[i-1]:0);
+        /*
+        if (i > 0)
+      distinct[i] += distinct[i-1];
+     else
+    distinct[i] += 0;
+        */
+     }
+     fill(freq.begin(),freq.end(),0);
+
+     int ans =0,end = n-1;
+     total = 0;
+
+     for(int i = n-1;i>=0;i--){
+        freq[v[i]]++;
+        if(freq[v[i]]==1)total++;
+        if(total == distinct[end]){
+            ans++;
+            for(int j = i;j<=end;j++)freq[v[j]] = 0;
+            end = i-1;
+            total = 0;
+        }
+     }
+     cout << ans << nl;
+
+
+
+
+
           
 
    
