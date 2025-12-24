@@ -356,7 +356,23 @@ void solve() {
         cout << "YES"<< nl;
         return;
     }
-    
+    vector<int>bag1,bag2;
+    bag1 = v;
+    sort(bag1.begin(),bag1.end());
+
+    for(int i =0;i<n;i++){
+
+        for(int j = i;j<n;j++){
+
+        }
+    }
+
+
+
+
+
+   
+
 
 
 
