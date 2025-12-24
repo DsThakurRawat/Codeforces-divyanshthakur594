@@ -342,7 +342,7 @@ void solve() {
 
     for(int i =0;i<k;i++){
        for(int j = i;j<k;j++){
-        if(((j - i)% x == 0) && v[i] != v[j]){
+        if(((j - i)% x == 0)){
             cnt++;
         }
        }
