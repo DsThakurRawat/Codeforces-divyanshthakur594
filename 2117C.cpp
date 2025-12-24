@@ -336,7 +336,13 @@ void solve() {
     set<int>cur,seen;
 
     for(int i =0;i<n;i++){
-        cur.insert(v[i]);
+        cur.insert(v[i]);//Union of all elements from b1 to current position
+     /*
+          global prefix distinct elements
+
+          It is NOT “current segment”.
+     */
+     
         seen.insert(v[i]);
         if(cur.size()==seen.size()){
             ans++;
