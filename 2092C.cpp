@@ -356,9 +356,19 @@ void solve() {
         }
     }
    // only odd present
+
+    ll sum = 0;
+   ll k =0;
+   for(int i =0;i<n;i++){
+    sum +=v[i];
+    if(v[i]%2 != 0)k++;
+   }
    if((f1 == 1  && f2 == 0) || (f2==1 && f1 == 0)){
     cout << *max_element(v.begin(),v.end())<< nl;
    }
+   else cout << sum - k +1<< nl;
+  
+
       
           
 
