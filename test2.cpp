@@ -302,7 +302,9 @@ NOTE: Binary search runs in O(log n) time in the worst case because it halves th
 
 
 NOTE:For a palindrome, positions i and n - i - 1 must be equal.
-
+-----------------------------------------------------------------------------------------------------------------------------------
+eucldean distance between two ppints in cpp
+double dist = hypot(x2 - x1, y2 - y1);
 
 
 
