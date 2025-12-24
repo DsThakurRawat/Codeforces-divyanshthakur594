@@ -338,7 +338,27 @@ void solve() {
      */
     int n;cin>>n;// n is even number
     vector<int>v(n);for(auto &in :v)cin>>in;
+    // if frequency of all elemnts are even then yes
+
+    map<int,int>mp;
+
+    for(int i =0;i<n;i++){
+        mp[v[i]]++;
+    }
+    int flag = 1;
+
+    for(auto &[key,val] : mp){
+        if(val % 2 != 0){
+            flag = 0;
+        }
+    }  
+    if(flag == 1)     {
+        cout << "YES"<< nl;
+        return;
+    }
     
+
+
 
       
           
