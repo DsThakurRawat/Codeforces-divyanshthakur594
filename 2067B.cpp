@@ -342,7 +342,7 @@ void solve() {
 
     vector<int>bag1,bag2;
     bag1 = v;
-    sort(bag1.begin(),bag1.end());
+    sort(v.begin(),v.end());
 
    int i =0;
    while(i<n){
