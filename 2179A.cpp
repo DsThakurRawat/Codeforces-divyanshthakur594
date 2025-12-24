@@ -337,7 +337,7 @@ void solve() {
 
      */
     int k,x;cin>>k>>x;
-    cout << kx + 1<< nl;
+    cout << k*x + 1<< nl;
    
 
 
