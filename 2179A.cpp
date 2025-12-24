@@ -340,8 +340,8 @@ void solve() {
     vector<char>v(26,0);
     int cnt = 0;
 
-    for(int i =0;i<k;i++){
-       for(int j = i;j<k;j++){
+    for(int i =0;i<=k;i++){
+       for(int j = i;j<=k;j++){
         if(((j - i)% x == 0)){
             cnt++;
         }
