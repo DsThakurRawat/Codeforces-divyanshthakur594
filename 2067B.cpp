@@ -345,7 +345,7 @@ void solve() {
         cnt[x]++;
     }
 
-      for (int i = 0; i <= n; i++) {
+      for (int i = 0; i < n; i++) {
 
         
         if (cnt[i] > 2) {
@@ -355,7 +355,7 @@ void solve() {
         }
     }
 
-     for (int i = 0; i <= n + 1; i++) {
+     for (int i = 0; i < n + 1; i++) {
         if (cnt[i] % 2 != 0) {
             cout << "No"<<nl;
             return ;
