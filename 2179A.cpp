@@ -337,19 +337,7 @@ void solve() {
 
      */
     int k,x;cin>>k>>x;
-    vector<char>v(26,0);
-    int cnt = 0;
-
-    for(int i =0;i<=k;i++){
-       for(int j = 0;j<=k;j++){
-        if(((j - i)% x == 0 && v[j] == v[i])){
-            cnt++;
-        }
-       }
-    }
-      cout << cnt << nl;
-          
-
+    cout << kx + 1<< nl;
    
 
 
