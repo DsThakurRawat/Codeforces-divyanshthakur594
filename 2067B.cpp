@@ -336,6 +336,10 @@ void solve() {
      ans strength pi
 
      */
+    int n;cin>>n;// n is even number
+    vector<int>v(n);for(auto &in :v)cin>>in;
+    
+
       
           
 
