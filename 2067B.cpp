@@ -340,12 +340,12 @@ void solve() {
     vector<int>v(n);for(auto &in :v)cin>>in;
     // if frequency of all elemnts are even then yes
 
-    vector<int>cnt(n+2,0);
+    vector<int>cnt(n,0);
      for (int x : v) {
         cnt[x]++;
     }
 
-      for (int i = 1; i <= n; i++) {
+      for (int i = 0; i <= n; i++) {
 
         
         if (cnt[i] > 2) {
@@ -355,7 +355,7 @@ void solve() {
         }
     }
 
-     for (int i = 1; i <= n + 1; i++) {
+     for (int i = 0; i <= n + 1; i++) {
         if (cnt[i] % 2 != 0) {
             cout << "No"<<nl;
             return ;
