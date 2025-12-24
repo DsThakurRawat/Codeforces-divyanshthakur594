@@ -336,27 +336,12 @@ void solve() {
      ans strength pi
 
      */
-    int n;cin>>n;
+    int n;cin>>n;// n is even number
     vector<int>v(n);for(auto &in :v)cin>>in;
-   
+    // if frequency of all elemnts are even then yes
 
-    vector<int>bag1,bag2;
-    bag1 = v;
-    sort(v.begin(),v.end());
+    
 
-   int i =0;
-   while(i<n){
-    int j = i;
-    while(j < n && v[j] == v[i]) j++;
-
-    int cnt = j-i;
-    if(cnt % 2 !=0){
-        cout << "NO"<< nl;
-        return;
-    }
-    i = j;
-   }
-   cout << "YES"<< nl;
 
 
 
