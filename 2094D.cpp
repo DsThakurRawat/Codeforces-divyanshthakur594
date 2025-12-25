@@ -384,7 +384,45 @@ void solve() {
      */
      string p;cin>>p;
      string s;cin>>s;
-     
+
+     for(int i =0;i<p.size();i++){
+
+        for(int j = i;j<s.size();){
+
+        /* 
+          //if p[i] != p[j]-> then no;
+            // if(p[i] == s[j] && p[i] == s[j+1]){
+            j = j+2;
+            }
+
+
+         
+            */
+
+            if(p[i] != s[j]){
+                cout << "NO"<< nl;
+                return;
+            }
+            else if(p[i] == s[j]){
+                j = j+1;
+            }
+            else if(p[i] == s[j] && p[i] == s[j+1]){
+                j = j+2;
+            }
+
+
+
+
+
+        }
+
+
+
+     }
+
+
+
+
 
 
 
