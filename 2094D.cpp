@@ -400,10 +400,10 @@ void solve() {
             */
 
             if(p[i] == s[j] && p[i] == s[j+1]){
-               j = i+2;
+               j = j+2;
             }
              else if(p[i] == s[j]){
-                j = i+1;
+                j = j+1;
             }
             else {
                 cout << "NO"<< nl;
