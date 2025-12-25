@@ -384,7 +384,10 @@ void solve() {
      */
      string p;cin>>p;
      string s;cin>>s;
+     
 
+
+     
    
 
       
