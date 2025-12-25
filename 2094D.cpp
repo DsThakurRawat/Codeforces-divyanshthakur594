@@ -387,7 +387,7 @@ void solve() {
 
      for(int i =0;i<p.size();i++){
 
-        for(int j = i;j<s.size();){
+        for(int j = 0;j<s.size();){
 
         /* 
           //if p[i] != p[j]-> then no;
