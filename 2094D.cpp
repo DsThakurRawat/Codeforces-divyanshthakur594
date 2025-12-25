@@ -384,7 +384,7 @@ void solve() {
      */
      string p;cin>>p;
      string s;cin>>s;
-    ll k = 0;
+     ll k = 0;
      for(int i =0;i<p.size();i++){
 
         for(int j = k;j<s.size();){
