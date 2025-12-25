@@ -409,7 +409,7 @@ void solve() {
      if(i == n && j ==m){
         cout << "YES"<< nl;
      }
-else cout << "NO"<< nl;
+ else cout << "NO"<< nl;
 
 
 
