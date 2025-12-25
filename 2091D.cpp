@@ -352,7 +352,7 @@ void solve() {
                 }
 
             }
-            cout << ans << nl;
+            cout << j << nl;
 
    
 
