@@ -338,12 +338,12 @@ void solve() {
      */
       
            ll n,m,k;cin>>n>>m>>k;
-            ll i = 1;
+            ll i = 0;
             ll j = m;
             ll ans = m;
-            while(i<=j){
+            while(1+i<=j){
                 ll mid = (j+i)/2;
-                if(n*(m/(mid+1) + m % (mid+1)) >= k){
+                if(n*(  m/(mid+1) + m % (mid+1)) >= k){
                     ans = mid;
                     j = mid;
                 }
