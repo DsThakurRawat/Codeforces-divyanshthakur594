@@ -337,7 +337,7 @@ void solve() {
 
      */
       
-           ll n,m,k;cin>>n>>m>>k;
+            ll n,m,k;cin>>n>>m>>k;
             ll i = 0;
             ll j = m;
             ll ans = m;
