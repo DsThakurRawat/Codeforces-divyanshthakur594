@@ -374,6 +374,10 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 #define nl '\n'
 
+#define all(s) s.begin(), s.end()
+const int _N = 1e5 + 5;
+
+
 
 void solve() {
 
@@ -382,36 +386,19 @@ void solve() {
      ans strength pi
 
      */
-     string p;cin>>p;
-     string s;cin>>s;
-     
-     ll i =0,j=0;
-     ll n = p.size(), m = s.size();
 
-     while(i < n && j < m){
-        if(p[i] != s[j]){
-            cout << "NO"<< nl;
-            return;
-        }
-     
-     ll i0 = i,j0 = j;
-
-     while( i < n && p[i] == p[i0])i++;
-     while(j<m && s[j] == s[j0]) j++;
-     int cnt1 = i - i0;
-     int cnt2 = j - j0;
-
-     if(cnt2 < cnt1 || cnt2 > 2*cnt1){
-        cout << "NO"<< nl;
-        return;
-     }
-    }
-     if(i == n && j ==m){
-        cout << "YES"<< nl;
-     }
-    
- else cout << "NO"<< nl;
-
+    int n; cin >> n;
+	string s, t; cin >> s >> t;
+	int cnt0 = count(all(s), '0'), cnt1 = n - cnt0;
+	for (int i = 0; i < n - 1; i++) {
+		if (cnt0 == 0 || cnt1 == 0) {
+			cout << "NO" << '\n';
+			return;
+		}
+		if (t[i] == '1') cnt0--;
+		else cnt1--;
+	}
+	cout << "YES" << '\n';
 
 
 
