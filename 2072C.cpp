@@ -385,6 +385,11 @@ void solve() {
      
      ll n,x;cin>>n>>x;
      
+
+     
+
+
+
    
 
       
