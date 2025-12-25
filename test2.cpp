@@ -382,25 +382,7 @@ void solve() {
      ans strength pi
 
      */
-    ll n,m,k;cin>>n>>m>>k;
-
-    ll i = 0;
-    ll j = m;
-    ll ans = m;
-    while(i<=j){
-        ll mid = (j+i)/2;
-        if(n*(m/mid + m % mid) >= k){
-            ans = mid;
-            j = mid-1;
-        }
-        else {
-            i = mid+1;
-        }
-
-    }
-    cout << ans << nl;
-
-
+   
 
       
           
