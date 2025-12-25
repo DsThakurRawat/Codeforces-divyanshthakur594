@@ -407,6 +407,7 @@ void solve() {
             }
             else {
                 cout << "NO"<< nl;
+                return;
             }
 
 
