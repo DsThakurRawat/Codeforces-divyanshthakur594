@@ -400,7 +400,7 @@ void solve() {
             */
 
             if(p[i] == s[j] && p[i] == s[j+1]){
-               j = j+2;
+               j = i+2;
             }
              else if(p[i] == s[j]){
                 j = j+1;
