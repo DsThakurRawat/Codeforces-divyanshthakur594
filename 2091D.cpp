@@ -341,7 +341,7 @@ void solve() {
             ll i = 1;
             ll j = m;
             ll ans = m;
-            while(i<j){
+            while(i<=j){
                 ll mid = (j+i)/2;
                 if(n*(m/mid + m % mid) >= k){
                     ans = mid;
