@@ -403,11 +403,11 @@ void solve() {
                 cout << "NO"<< nl;
                 return;
             }
-            else if(p[i] == s[j]){
-                j = j+1;
-            }
             else if(p[i] == s[j] && p[i] == s[j+1]){
                 j = j+2;
+            }
+             else if(p[i] == s[j]){
+                j = j+1;
             }
 
 
