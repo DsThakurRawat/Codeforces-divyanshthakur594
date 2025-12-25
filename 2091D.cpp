@@ -345,10 +345,10 @@ void solve() {
                 ll mid = (j+i)/2;
                 if(n*(m/(mid+1) + m % (mid+1)) >= k){
                     ans = mid;
-                    j = mid-1;
+                    j = mid;
                 }
                 else {
-                    i = mid+1;
+                    i = mid;
                 }
 
             }
