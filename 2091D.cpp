@@ -338,7 +338,7 @@ void solve() {
      */
       
            ll n,m,k;cin>>n>>m>>k;
-            ll i = 0;
+            ll i = 1;
             ll j = m;
             ll ans = m;
             while(i<j){
