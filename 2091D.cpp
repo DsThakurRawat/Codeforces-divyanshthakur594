@@ -343,7 +343,7 @@ void solve() {
             ll ans = m;
             while(i+1 <j){
                 ll mid = (j+i) / 2;
-                if(n*(  m/(mid+1) + m % (mid+1) ) >= k){
+                if(n*(  m/ (mid+1)*mid + m % (mid+1) ) >= k){
                     ans = mid;
                     j = mid;
                 }
