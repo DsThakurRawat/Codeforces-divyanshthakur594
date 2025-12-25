@@ -393,7 +393,7 @@ void solve() {
             cout << "NO"<< nl;
             return;
         }
-     }
+     
      ll i0 = i,j0 = j;
 
      while( i < n && p[i] == p[i0])i++;
@@ -405,10 +405,11 @@ void solve() {
         cout << "NO"<< nl;
         return;
      }
- 
+    }
      if(i == n && j ==m){
         cout << "YES"<< nl;
      }
+    
  else cout << "NO"<< nl;
 
 
