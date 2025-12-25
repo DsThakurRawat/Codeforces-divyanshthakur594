@@ -386,7 +386,7 @@ void solve() {
      string s;cin>>s;
      
      ll i =0,j=0;
-     ll n = p.size(), m=s.size();
+     ll n = p.size(), m = s.size();
 
      while(i < n && j < m){
         if(p[i] != s[j]){
