@@ -384,10 +384,10 @@ void solve() {
      */
      string p;cin>>p;
      string s;cin>>s;
-
+    ll k = 0;
      for(int i =0;i<p.size();i++){
 
-        for(int j = 0;j<s.size();){
+        for(int j = k;j<s.size();){
 
         /* 
           //if p[i] != p[j]-> then no;
@@ -400,10 +400,12 @@ void solve() {
             */
 
             if(p[i] == s[j] && p[i] == s[j+1]){
-               j = j+2;
+               k = j+2;
+               break;
             }
              else if(p[i] == s[j]){
-                j = j+1;
+                k = j+1;
+                break;
             }
             else {
                 cout << "NO"<< nl;
