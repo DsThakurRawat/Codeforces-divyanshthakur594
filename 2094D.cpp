@@ -384,48 +384,32 @@ void solve() {
      */
      string p;cin>>p;
      string s;cin>>s;
-     ll k = 0;
-     for(int i =0;i<p.size();i++){
+     
+     ll i =0,j=0;
+     ll n = p.size(), m=s.size();
 
-        for(int j = k;j<s.size();){
-
-        /* 
-          //if p[i] != p[j]-> then no;
-            // if(p[i] == s[j] && p[i] == s[j+1]){
-            j = j+2;
-            }
-
-
-         
-            */
-
-            if(p[i] == s[j] && p[i] == s[j+1]){
-               k = j+2;
-               break;
-            }
-             else if(p[i] == s[j]){
-                k = j+1;
-                break;
-            }
-            else {
-                cout << "NO"<< nl;
-                return;
-            }
-
-
-
-
-
+     while(i < n && j < m){
+        if(p[i] != s[j]){
+            cout << "NO"<< nl;
+            return;
         }
-
-
-
      }
-     cout << "YES"<< nl;
+     ll i0 = i,j0 = j;
 
+     while( i < n && p[i] == p[i0])i++;
+     while(j<m && s[j] == s[j0]) j++;
+     int cnt1 = i - i0;
+     int cnt2 = j - j0;
 
-
-
+     if(cnt2 < cnt1 || cnt2 > 2*cnt1){
+        cout << "NO"<< nl;
+        return;
+     }
+ 
+     if(i == n && j ==m){
+        cout << "YES"<< nl;
+     }
+else cout << "NO"<< nl;
 
 
 
