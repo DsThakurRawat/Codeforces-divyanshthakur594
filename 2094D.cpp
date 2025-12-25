@@ -407,7 +407,7 @@ void solve() {
                 k = j+1;
                 break;
             }
-            else {
+            if(p[i] != s[j])
                 cout << "NO"<< nl;
                 return;
             }
