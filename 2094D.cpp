@@ -399,15 +399,14 @@ void solve() {
          
             */
 
-            if(p[i] != s[j]){
-                cout << "NO"<< nl;
-                return;
-            }
-            else if(p[i] == s[j] && p[i] == s[j+1]){
-                j = j+2;
+            if(p[i] == s[j] && p[i] == s[j+1]){
+               j = j+2;
             }
              else if(p[i] == s[j]){
                 j = j+1;
+            }
+            else {
+                cout << "NO"<< nl;
             }
 
 
