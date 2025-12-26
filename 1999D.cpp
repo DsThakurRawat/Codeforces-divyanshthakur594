@@ -392,7 +392,7 @@ void solve() {
             j++;
         }
         else if(s[i] =='?'){
-            s[i] == 'a';
+            s[i] = 'a';
         }
     }
 
