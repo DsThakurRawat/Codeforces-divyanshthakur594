@@ -393,7 +393,7 @@ void solve() {
     }
     ll sz =  j + cnt1;
 
-   if(sz < t.size()){
+   if(sz <= t.size()){
     cout << "NO"<< nl;
     return;
    }
