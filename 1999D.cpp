@@ -380,8 +380,17 @@ void solve() {
     string t;cin>>t;
     // cnt of missing letter;
     // should be equal to cnt of ?;
+    ll cnt1 = 0;
+
+    for(auto &c : s){
+        if(c == '?'){
+            cnt1++;
+        }
+    }
+
+
      
-    
+
 
 
 
