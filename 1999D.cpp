@@ -402,9 +402,7 @@ void solve() {
         else if(s[i] == '?' && i > t.size()){
             s[i] = 'a';
         }
-        else if(s[i] != '?' && i > t.size()){
-            s[i] = 'a';
-        }
+       
       
     }
 
