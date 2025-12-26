@@ -417,7 +417,7 @@ void solve() {
     }
 
     cout<<"YES"<<nl;
-    cout << ans << nl;
+    cout << s << nl;
     
     
 
