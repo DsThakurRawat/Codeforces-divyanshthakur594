@@ -388,13 +388,15 @@ void solve() {
     for(char c : s){
         if(j < t.size() && (c == t[j] || c == '?')){
             j++;
-            if(c == '?'){
+
+        }
+
+          if(c == '?'){
              ans += t[j];
             }
             else{
                 ans +=c;
             }
-        }
     }
     if(j  < t.size()){
         cout << "NO"<<nl;
