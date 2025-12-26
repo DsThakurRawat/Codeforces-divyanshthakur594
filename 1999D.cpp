@@ -385,26 +385,18 @@ void solve() {
 
     
     ll j = 0;
-    for(char &c : s){
-        if(j < t.size() && (c == t[j] || c == '?')){
-            j++;
-
-        }
-       
-        
-    }
-
-
+    
     for(int i =0;i<s.size();i++){
-        if(s[i]=='?' && i <= t.size()){
-            s[i] =  t[i];
+        if(j < t.size() && (s[i] == t[j] || s[i] =='?')){
+            if(s[i] =='?') s[i] = t[j];
+            j++;
         }
-        else if(s[i] == '?' && i > t.size()){
-            s[i] = 'a';
+        else if(s[i] =='?'){
+            s[i] == 'a';
         }
-       
-      
     }
+
+  
 
 
 
