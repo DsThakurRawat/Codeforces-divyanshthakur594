@@ -382,22 +382,26 @@ void solve() {
     // should be equal to cnt of ?;
     ll cnt1 = 0;
 
-    for(auto &c : s){
-        if(c == '?'){
-            cnt1++;
-        }
-    }
+    
     ll j = 0;
     for(char c : s){
-        if(j < t.size() && c == t[j])j++;
+        if(j < t.size() && (c == t[j] || c == '?')){
+            j++;
+            if(c == '?'){
+                c = t[j];
+            }
+        }
     }
-    ll sz =  j + cnt1;
+    if(j  < t.size()){
+        cout << "NO"<<nl;
+        return;
+    }
 
-   if(sz <= t.size()){
-    cout << "NO"<< nl;
-    return;
-   }
-   else cout << "YES" << nl;
+    cout<<"YES"<<nl;
+    cout << s << nl;
+    
+    
+
 
 
 
