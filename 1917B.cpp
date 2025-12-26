@@ -395,7 +395,7 @@ void solve() {
     long long ans = 0;
     for(int c = 0;c<26;c++){
         if(first[c] != -1){
-            ans += ( n- first[c] - 1);
+            ans += ( n- first[c] );
         }
     }
     cout << ans << nl;
