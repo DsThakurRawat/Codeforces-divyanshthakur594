@@ -391,12 +391,8 @@ void solve() {
 
         }
 
-          if(c == '?'){
-             ans += t[j];
-            }
-            else{
-                ans +=c;
-            }
+        ans += t[j];
+            
     }
     if(j  < t.size()){
         cout << "NO"<<nl;
