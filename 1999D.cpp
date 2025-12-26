@@ -390,7 +390,8 @@ void solve() {
             j++;
 
         }
-        ans += c;
+        if(c != '?') ans +=c;
+        else ans += t[j];
 
      
             
