@@ -387,6 +387,19 @@ void solve() {
             cnt1++;
         }
     }
+    ll j = 0;
+    for(char c : s){
+        if(j < t.size() && c == t[j])j++;
+    }
+    ll sz =  j + cnt1;
+
+   if(sz < t.size()){
+    cout << "NO"<< nl;
+    return;
+   }
+
+    
+
 
 
      
