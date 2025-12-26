@@ -388,10 +388,8 @@ void solve() {
     cin >> n >> k >> s;
     vector<int> a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
- 
     vector<int> b(k);
     for (int i = 0; i < k; i++) cin >> b[i];
- 
     int ans = 0;
     for (int i = 0; i < s && i <= 2 * n; i++) {
         int cur = 0;
