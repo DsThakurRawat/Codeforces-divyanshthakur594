@@ -390,10 +390,16 @@ void solve() {
             j++;
 
         }
+        ans += c;
 
-        ans += t[j];
+     
             
     }
+
+
+
+
+
     if(j  < t.size()){
         cout << "NO"<<nl;
         return;
