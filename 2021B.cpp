@@ -404,7 +404,7 @@ void solve() {
             a[j]++;
         }
     }
-    cout << ans << endl;
+    cout << ans << nl;
       
           
 
