@@ -402,7 +402,7 @@ void solve() {
     }
 
     cout<<"YES"<<nl;
-    cout << s << nl;
+    cout << ans << nl;
     
     
 
