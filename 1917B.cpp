@@ -385,7 +385,7 @@ void solve() {
     int n;cin>>n;
     string s;cin>>s;
 
-    vector<ll>first(26,-1);
+    vector<int>first(26,-1);
 
     for(ll i =0;i<n;i++){
         if(first[s[i] - 'a'] == -1){
