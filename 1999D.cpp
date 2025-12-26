@@ -387,21 +387,18 @@ void solve() {
     ll j = 0;
     for(char &c : s){
         if(j < t.size() && (c == t[j] || c == '?')){
-
-
             j++;
 
-       if(c =='?'){
-           c = t[j];
         }
-
+        if(c =='?' && j <= t.size()){
+            c = t[j];
         }
-     
-     
-       
+        else{
+            c = 'x';
 
-     
-            
+        } 
+        
+        
     }
 
 
