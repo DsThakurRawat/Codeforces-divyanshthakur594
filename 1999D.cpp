@@ -397,6 +397,10 @@ void solve() {
     cout << "NO"<< nl;
     return;
    }
+   else cout << "YES" << nl;
+
+
+
 
     
 
