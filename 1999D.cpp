@@ -381,6 +381,7 @@ void solve() {
     // cnt of missing letter;
     // should be equal to cnt of ?;
     ll cnt1 = 0;
+    string ans="";
 
     
     ll j = 0;
@@ -388,7 +389,10 @@ void solve() {
         if(j < t.size() && (c == t[j] || c == '?')){
             j++;
             if(c == '?'){
-                c = t[j];
+             ans += t[j];
+            }
+            else{
+                ans +=c;
             }
         }
     }
