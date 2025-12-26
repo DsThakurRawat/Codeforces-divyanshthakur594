@@ -376,6 +376,19 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
+    string s;cin>>s;
+    string t;cin>>t;
+    // cnt of missing letter;
+    // should be equal to cnt of ?;
+     
+    
+
+
+
+
+
+
+   
 
     
       
