@@ -390,14 +390,7 @@ void solve() {
             j++;
 
         }
-        if(c =='?' && j <= t.size()){
-            c = t[j];
-        }
-        else{
-            c = 'x';
-
-        } 
-        
+       
         
     }
 
@@ -414,7 +407,7 @@ void solve() {
     }
 
     cout<<"YES"<<nl;
-    cout << s << nl;
+    cout << t << nl;
     
     
 
