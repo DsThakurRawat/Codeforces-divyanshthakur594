@@ -399,9 +399,15 @@ void solve() {
     sort(v.begin(),v.end());
 
 
-   ll i =v[0];
-   ll limit = v[n-1];
-   
+  
+    for(int i = v[0]; i <= v[n-1];i++){
+        if(i != v[i]){
+            while(i< v[i]){
+                v[i] = v[i]+x;
+            }
+
+        }
+    }
 
 
    
