@@ -402,6 +402,11 @@ void solve() {
         }
      }
 
+     if(flag == 1){
+        cout << "NO" << nl;
+     }
+     else cout << "YES"<< nl;
+
 
 
     
