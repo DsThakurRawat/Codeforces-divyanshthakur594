@@ -385,8 +385,24 @@ void solve() {
 
 
      ll n;cin>>n;
-     vector<ll>v(n);for(auto &in:v)cin>>in;
-     
+     vector<ll>v(n+1);
+     for (int i = 1; i <= n; i++){
+       cin >> v[i];
+   }
+
+     ll flag = 0;
+
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
