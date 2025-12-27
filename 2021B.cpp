@@ -402,9 +402,21 @@ void solve() {
   
     for(int i = v[0]; i <= v[n-1];i++){
         if(i != v[i]){
-            while(i< v[i]){
-                v[i] = v[i]+x;
-            }
+           while( i< v[i]){
+                  v[i] = v[i]+x;
+           }
+
+           if(i != v[i]){
+
+            cout << i << nl;
+            return;
+
+           }
+
+
+
+
+
 
         }
     }
