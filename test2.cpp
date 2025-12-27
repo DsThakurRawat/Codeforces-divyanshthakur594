@@ -384,11 +384,11 @@ void solve() {
      */
     int d,f;cin>>d>>f;
 
-  ll r = d%f;
-
-  cout << f - r << nl;
-   
-
+    ll p = f;
+   while(d<p){
+      p +=7;
+   }
+   cout << p-d<<nl;
       
           
 
