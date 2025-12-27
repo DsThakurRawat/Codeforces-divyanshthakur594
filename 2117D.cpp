@@ -393,7 +393,7 @@ void solve() {
      ll flag = 0;
 
      for(ll i =1;i<=n;i++){
-        if(v[i] % i != 0 && v[i] % (n-i+1) != 0  ){
+        if(v[i] % (i) != 0 && v[i] % (n-i+1) != 0  ){
             cout << "NO" << nl;
             return;
         }
