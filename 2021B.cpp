@@ -392,7 +392,7 @@ void solve() {
             f1 = 1;
         }
     }
-    if(f1 == 0){
+    if(f1 == 1){
         cout << 0<<nl;
         return;
     }
