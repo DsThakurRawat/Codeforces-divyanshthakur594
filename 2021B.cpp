@@ -385,17 +385,6 @@ void solve() {
     ll n,x;cin>>n>>x;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
-    int f1 = 0;
-
-    for(int i = 0;i<n;i++){
-        if(v[i] == 0){
-            f1 = 1;
-        }
-    }
-    if(f1 == 1){
-        cout << 0<<nl;
-        return;
-    }
 
     map<int,int>mp;
 
