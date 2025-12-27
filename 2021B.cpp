@@ -389,6 +389,7 @@ void solve() {
     map<int,int>mp;
 
     for(int i = 0;i<n;i++){
+        mp[v[i]]++;
         if(mp[i] == 0){
             cout << i << nl;
             return;
