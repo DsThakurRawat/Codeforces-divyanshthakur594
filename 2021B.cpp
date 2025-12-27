@@ -380,8 +380,11 @@ void solve() {
      /*
      ith has wieght w 
      ans strength pi
-
+      
      */
+    ll n,x;cin>>n>>x;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+    
    
 
 
