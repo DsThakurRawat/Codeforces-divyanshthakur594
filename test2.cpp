@@ -387,7 +387,7 @@ void solve() {
     ll p = f;
   
 
-    while(d<=p){
+    while(p<=d){
         p+=7;
     }
     cout << d-p << nl;
