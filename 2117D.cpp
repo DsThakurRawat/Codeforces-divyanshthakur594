@@ -390,19 +390,53 @@ void solve() {
        cin >> v[i];
    }
 
-     ll flag = 0;
-
-     for(ll i =1;i<=n;i++){
-        if(v[i] % (i) != 0 && v[i] % (n-i+1) != 0  ){
-            cout << "NO" << nl;
-            return;
+     if (n == 1)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        int diff = v[1] - v[0];
+        bool check = true;
+        for (int i = 1; i < n; i++)
+        {
+            if (v[i] - v[i - 1] != diff)
+            {
+                check = false;
+                break;
+            }
+        }
+        if (check)
+        {
+            int i = v[0] - diff;
+            int j = n + 1;
+            if (i < 0)
+            {
+                cout << "NO" << endl;
+                return;
+            }
+            if (i % j != 0)
+            {
+                cout << "NO" << endl;
+                return;
+            }
+            int y = i / j;
+            int x = diff + y;
+            if (x < 0)
+            {
+                cout << "NO" << endl;
+                return;
+            }
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
         }
     }
-        
-     
 
-    cout << "YES"<< nl;
 
+   
 
 
     
