@@ -387,6 +387,9 @@ void solve() {
 
 
     map<int,int>mp;
+     for(int i = 0;i<n;i++){
+        mp[v[i]]++;
+     }
 
     for(int i = 0;i<n;i++){
         mp[v[i]]++;
