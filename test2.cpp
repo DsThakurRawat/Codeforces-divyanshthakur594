@@ -382,17 +382,7 @@ void solve() {
      ans strength pi
 
      */
-    int d,f;cin>>d>>f;
-
-    ll p = f;
-  
-
-    while(p<=d){
-        p+=7;
-    }
-    cout << p-d << nl;
    
-      
           
 
    
