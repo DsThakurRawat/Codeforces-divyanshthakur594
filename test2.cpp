@@ -383,7 +383,9 @@ void solve() {
 
      */
    
-          
+          int n,m;cin>>n>>m;
+          string s;cin>>s;
+          string t;cin>>t;
 
    
 
