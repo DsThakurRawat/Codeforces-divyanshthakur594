@@ -384,62 +384,6 @@ void solve() {
      */
 
 
-     ll n;cin>>n;
-     vector<ll>v(n+1);
-     for (int i = 1; i <= n; i++){
-       cin >> v[i];
-   }
-
-     if (n == 1)
-    {
-        cout << "YES" << endl;
-    }
-    else
-    {
-        int diff = v[1] - v[0];
-        bool check = true;
-        for (int i = 1; i < n; i++)
-        {
-            if (v[i] - v[i - 1] != diff)
-            {
-                check = false;
-                break;
-            }
-        }
-        if (check)
-        {
-            int i = v[0] - diff;
-            int j = n + 1;
-            if (i < 0)
-            {
-                cout << "NO" << endl;
-                return;
-            }
-            if (i % j != 0)
-            {
-                cout << "NO" << endl;
-                return;
-            }
-            int y = i / j;
-            int x = diff + y;
-            if (x < 0)
-            {
-                cout << "NO" << endl;
-                return;
-            }
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-    }
-
-
-   
-
-
-    
 
 
 
