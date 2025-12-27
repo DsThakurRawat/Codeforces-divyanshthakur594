@@ -397,7 +397,11 @@ void solve() {
         return;
     }
     sort(v.begin(),v.end());
-    
+
+
+   ll i =v[0];
+   ll limit = v[n-1];
+   
 
 
    
