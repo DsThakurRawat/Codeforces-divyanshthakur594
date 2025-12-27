@@ -382,6 +382,9 @@ void solve() {
      ans strength pi
 
      */
+    int d,f;cin>>d>>f;
+
+    cout << abs(7-f)<< nl;
    
 
       
@@ -408,11 +411,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+   // int t ;
+   // t=1;
+   // cin >> t;
+  //  while (t--) {
         solve();
-    }
+   // }
     return 0;
 }
