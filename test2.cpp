@@ -390,7 +390,7 @@ void solve() {
     while(d<=p){
         p+=7;
     }
-    cout << p - d << nl;
+    cout << d-p << nl;
    
       
           
