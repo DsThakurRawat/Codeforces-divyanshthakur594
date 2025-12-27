@@ -387,6 +387,24 @@ void solve() {
           string s;cin>>s;
           string t;cin>>t;
 
+          // we have to find minim no of operation to make t to substring of s
+          // u can perfom ops on 
+          
+
+        int ans = INT_MAX;
+
+        for(int i =0;i+m<=n;i++){
+            int cost = 0;
+            for(int j = 0;j<m;j++){
+                int x1 = t[j] -'0';
+                int x2 = s[i+j] - '0';
+                cost += (x2-x1+10)%10;
+                cost += (x2-x1+10)%10;
+            }
+            ans = min(ans,cost);
+        }
+        cout << ans << nl;
+
    
 
 
