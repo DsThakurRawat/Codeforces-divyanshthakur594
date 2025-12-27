@@ -388,7 +388,7 @@ void solve() {
    while(d>p){
       p +=7;
    }
-   cout << d-p<<nl;
+   cout << abs(d-p)<<nl;
       
           
 
