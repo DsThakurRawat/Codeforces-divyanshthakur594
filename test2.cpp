@@ -399,7 +399,7 @@ void solve() {
                 int x1 = t[j] -'0';
                 int x2 = s[i+j] - '0';
                 cost += (x2-x1+10)%10;
-                cost += (x2-x1+10)%10;
+               
             }
             ans = min(ans,cost);
         }
