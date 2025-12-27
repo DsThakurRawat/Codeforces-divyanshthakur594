@@ -408,7 +408,7 @@ void solve() {
 
            if(i != v[i]){
 
-            cout << i << nl;
+            cout << v[i] << nl;
             return;
 
            }
