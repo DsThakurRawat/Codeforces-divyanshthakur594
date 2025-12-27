@@ -393,19 +393,15 @@ void solve() {
      ll flag = 0;
 
      for(ll i =1;i<=n;i++){
-        if(v[i] % i == 0 || v[i] % (n-i+1) == 0  ){
-            continue;
+        if(v[i] % i != 0 && v[i] % (n-i+1) != 0  ){
+            cout << "NO" << nl;
+            return;
         }
-        else{
-            flag = 1;
-            break;
-        }
-     }
+    }
+        
+     
 
-     if(flag == 1){
-        cout << "NO" << nl;
-     }
-     else cout << "YES"<< nl;
+    cout << "YES"<< nl;
 
 
 
