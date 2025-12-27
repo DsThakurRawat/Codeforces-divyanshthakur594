@@ -394,7 +394,11 @@ void solve() {
     }
     if(f1 == 0){
         cout << 0<<nl;
+        return;
     }
+    sort(v.begin(),v.end());
+    
+
 
    
 
