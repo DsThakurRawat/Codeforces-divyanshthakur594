@@ -384,11 +384,9 @@ void solve() {
      */
     int d,f;cin>>d>>f;
 
-    ll p = f;
-   while(d>p){
-      p +=7;
-   }
-   cout << abs(d-p)<<nl;
+    cout << ((f + d - 1) % 7) + 1 << nl;
+
+   
       
           
 
