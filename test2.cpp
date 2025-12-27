@@ -384,7 +384,7 @@ void solve() {
      */
     int d,f;cin>>d>>f;
 
-    cout << (( d ) % 7)  << nl;
+    cout << f - (( d ) % 7)  << nl;
 
    
       
