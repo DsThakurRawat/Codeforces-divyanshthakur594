@@ -391,7 +391,7 @@ void solve() {
         mp[v[i]]++;
      }
 
-    for(int i = 0;i<n;i++){
+    for(int i = 0;i<n+2;i++){
         mp[v[i]]++;
         if(mp[i] == 0){
             cout << i << nl;
