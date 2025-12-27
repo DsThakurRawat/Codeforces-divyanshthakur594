@@ -384,8 +384,13 @@ void solve() {
      */
     int d,f;cin>>d>>f;
 
-    cout << f - (( d ) % 7)  << nl;
+    ll p = f;
+  
 
+    while(d<=p){
+        p+=7;
+    }
+    cout << p - d << nl;
    
       
           
