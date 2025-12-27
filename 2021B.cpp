@@ -396,31 +396,20 @@ void solve() {
         cout << 0<<nl;
         return;
     }
-    sort(v.begin(),v.end());
 
+    map<int,int>mp;
 
-  
-    for(int i = v[0]; i <= v[n-1];i++){
-        if(i != v[i]){
-           while( i<= v[i]){
-                  v[i] = v[i]+x;
-           }
-
-           if(i != v[i]){
-
-            cout << v[i] << nl;
+    for(int i = 0;i<n;i++){
+        if(mp[i] == 0){
+            cout << i << nl;
             return;
-
-           }
-
-
-
-
-
-
         }
+        mp[i]--;
+        mp[i+x] += mp[i];
     }
+   
 
+   
 
    
 
