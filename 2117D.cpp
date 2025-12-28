@@ -389,6 +389,7 @@ void solve() {
      }
      if(f){
         cout << "NO" << nl;
+        return;
      }
 
      for(ll i = 0;i<n;i++){
