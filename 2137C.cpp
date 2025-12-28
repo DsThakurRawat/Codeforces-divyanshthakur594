@@ -384,21 +384,18 @@ void solve() {
      */
  
      ll a,b;cin>>a>>b;
-     if( a % 2 != 0 || b % 2 != 0){
-      cout << - 1<< nl;
-      return;
+     ll ans = -1;
+
+     if((a+b) % 2 == 0){
+      ans = a+b;
      }
-   if( a % 2 !=0 && b % 2 != 0){
-    cout << a + b << nl;
-    return;
-   }
-   if( a % 2==0 and (a % 4 == 0 or b % 2 == 0)){
-    cout << (a*b)/2 + 2 << nl;
-    return;
-   }
-
-
-
+     if( a % 2 != 0 and b % 2 != 0){
+      ans =  max(ans,a*b+1);
+     }
+    if(a % 2 == 0 && ( a % 4 == 0 || b % 2 ==0)){
+      ans = max(ans,(a*b)/2 + 2);
+    }
+    cout << ans << nl;
             
         
         
