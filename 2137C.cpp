@@ -382,20 +382,27 @@ void solve() {
      ans strength pi
 
      */
- 
-     ll a,b;cin>>a>>b;
-     ll ans = -1;
 
-     if((a+b) % 2 == 0){
-      ans = a+b;
-     }
-     if( a % 2 != 0 and b % 2 != 0){
-      ans =  max(ans,a*b+1);
-     }
-    if(a % 2 == 0 && ( a % 4 == 0 || b % 2 ==0)){
-      ans = max(ans,(a*b)/2 + 2);
-    }
-    cout << ans << nl;
+            ll b, a;
+        cin >> b >> a;
+
+        ll ans = -1;
+
+        if ((a + b) % 2 == 0) {
+            ans = a + b;
+        }
+
+        if (a % 2 != 0 && b % 2 != 0) {
+            ans = max(ans, a * b + 1);
+        }
+
+        if (a % 2 == 0 && (a % 4 == 0 || b % 2 == 0)) {
+            ans = max(ans, (a * b) / 2 + 2);
+        }
+
+        cout << ans << nl;
+
+ 
             
         
         
