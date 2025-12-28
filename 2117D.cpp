@@ -393,7 +393,7 @@ void solve() {
      }
 
      for(ll i = 0;i<n;i++){
-        v[i] = v[i]+(diff < 0 ? diff*(n-i) : diff*(i+1));
+        v[i] = v[i]+(diff < 0 ? diff*(n-i) : -diff*(i+1));
         cout << (v[0] >= 0 && v[0] % (n+1) == 0 ? "YES":"NO") << nl;
      }
 
