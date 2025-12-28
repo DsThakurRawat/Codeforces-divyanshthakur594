@@ -377,11 +377,33 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
+     ll n;cin>>n;
+     vector<ll>v(n);
+     for(auto &it:v)cin>>it;
+     long long diff = v[1] - v[0];
 
+     bool f = 0;
 
+     for(int i = 2;i<n;i++){
+        if(diff !=v[i]-v[i-1]) f = 1;
+     }
+     if(f){
+        cout << "NO" << nl;
+     }
+
+     for(ll i = 0;i<n;i++){
+        v[i] = v[i]+(diff < 0 ? diff*(n-i) : diff*(i+1));
+        cout << (v[0] >= 0 && v[0] % (n+1) == 0 ? "YES":"NO") << nl;
+     }
 
 
      
+
+
+
+
+
+        
 
 
 
