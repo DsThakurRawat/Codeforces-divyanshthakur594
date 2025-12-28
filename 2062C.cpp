@@ -383,10 +383,30 @@ void solve() {
 
      */
     ll n;cin>>n;
-    
+
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+
+    ll f = 0;
+
+    for(int i = 0;i<n;i++){
+        if(0 < v[i]){
+      f = 1;
+        }
+    }
+ if(f == 0){
+    cout << accumulate(v.begin(),v.end(),0)<< nl;
+ }
 
 
-     ll cursum = accumulate()
+
+
+
+
+
+
+
+
+
 
 
    
@@ -410,11 +430,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-   // int t ;
-   // t=1;
-   // cin >> t;
-  //  while (t--) {
+    int t ;
+    t=1;
+    cin >> t;
+   while (t--) {
         solve();
-   // }
+    }
     return 0;
 }
