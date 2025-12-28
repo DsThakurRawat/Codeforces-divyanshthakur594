@@ -377,11 +377,9 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-     /*
-     ith has wieght w 
-     ans strength pi
 
-     */
+
+
 
 
 
