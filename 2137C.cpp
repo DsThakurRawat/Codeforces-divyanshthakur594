@@ -394,6 +394,7 @@ void solve() {
    }
    if( a % 2==0 and (a % 4 == 0 or b % 2 == 0)){
     cout << (a*b)/2 + 2 << nl;
+    return;
    }
 
 
