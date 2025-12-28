@@ -388,7 +388,9 @@ void solve() {
       cout << - 1<< nl;
       return;
      }
-   
+   if( a % 2 !=0 && b % 2 == 0){
+    cout << a + b << nl;
+   }
 
 
 
