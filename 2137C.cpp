@@ -382,10 +382,12 @@ void solve() {
      ans strength pi
 
      */
-
-    ll n;cin>>n;
-
-    vector<ll>v(n);for(auto &in:v)cin>>in;
+ 
+     ll a,b;cin>>a>>b;
+     if( a % 2 != 0 || b % 2 != 0){
+      cout << - 1<< nl;
+      return;
+     }
    
 
 
