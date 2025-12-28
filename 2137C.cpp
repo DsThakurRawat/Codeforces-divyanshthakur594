@@ -391,7 +391,6 @@ void solve() {
         if ((a + b) % 2 == 0) {
             ans = a + b;
         }
-
         if (a % 2 != 0 && b % 2 != 0) {
             ans = max(ans, a * b + 1);
         }
