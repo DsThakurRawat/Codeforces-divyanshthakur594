@@ -382,7 +382,13 @@ void solve() {
      ans strength pi
 
      */
+    ll n;cin>>n;
     
+
+
+     ll cursum = accumulate()
+
+
    
 
 
