@@ -378,7 +378,8 @@ double dist = hypot(x2 - x1, y2 - y1);
 void solve() {
 
    ll n;cin>>n;
-   vector<ll>b(n);for(auto &in:b)cin>>in;
+    vector<int>b(n+1);
+    for(int i = 1;i<=n;i++)cin>>b[i];
 
    ll limit=n;
 
