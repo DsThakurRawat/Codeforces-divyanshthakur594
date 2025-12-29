@@ -389,7 +389,7 @@ void solve() {
 
   int peice = 0;
   ll cnt = 0;
-   ll f1 = 1,f2 = 0;//f1->maean a ko kata
+   ll f1 = 1,f2 = 1;//f1->maean a ko kata
    for(int i = 1;i<=1000000; ){
         
     if( i<=a && f2 == 1){
