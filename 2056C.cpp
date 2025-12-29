@@ -385,8 +385,8 @@ void solve() {
 
     ll n;cin>>n;
 
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-    
+   
+
 
    
 
