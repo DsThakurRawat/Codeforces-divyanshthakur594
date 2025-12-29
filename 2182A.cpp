@@ -397,8 +397,9 @@ void solve() {
         cout << 0 << nl;
         return;
      }
-     
 
+
+     cout << 1 << nl;
 
    
    
