@@ -377,25 +377,8 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-     /*
-     ith has wieght w 
-     ans strength pi
-
-     */
-    ll n;cin>>n;
-
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-
-    ll f = 0;
-
-    for(int i = 0;i<n;i++){
-        if(0 < v[i]){
-      f = 1;
-        }
-    }
- if(f == 0){
-    cout << accumulate(v.begin(),v.end(),0)<< nl;
- }
+   ll n;cin>>n;
+   vector<ll>b(n);for(auto &in:b)cin>>in;
 
 
 
