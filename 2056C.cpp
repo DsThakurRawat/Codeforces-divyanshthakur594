@@ -382,10 +382,22 @@ void solve() {
      ans strength pi
 
      */
-
-            
-        
-        
+     int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+      cin >> a[i];
+    }
+    bool fail = false;
+    for (int i = 0; i < n; i++) {
+      int d = 2 * max(i, n - 1 - i);
+      if (a[i] <= d) {
+        fail = true;
+        break;
+      }
+    }
+    cout << (fail ? "NO" : "YES") << '\n';
+     
           
          
 
