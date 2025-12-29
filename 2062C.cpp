@@ -380,6 +380,23 @@ void solve() {
    ll n;cin>>n;
    vector<ll>b(n);for(auto &in:b)cin>>in;
 
+   ll limit=n;
+
+   ll ans = -1e18;
+   for(ll i =1;i<=n;i++){
+    ll sum = 0;
+    for(ll i =1;i<=limit;i++)sum = sum +b[i];
+
+    if( i ==1)ans = max(ans,sum);
+    else ans = max(ans,max(sum,(-sum)));
+    for(ll i =1;i<limit;i++){
+        b[i] = b[i+1] - b[i];
+        limit--;
+        }
+   }
+   cout << ans << nl;
+
+
 
 
 
