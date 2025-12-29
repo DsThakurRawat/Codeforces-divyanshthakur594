@@ -377,27 +377,21 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-   ll n;cin>>n;
-    vector<int>b(n+1);
-    for(int i = 1;i<=n;i++)cin>>b[i];
-
-   ll limit=n;
-
-   ll ans = -1e18;
-   for(ll i =1;i<=n;i++){
-    ll sum = 0;
-    for(ll i =1;i<=limit;i++)sum = sum +b[i];
-
-    if( i ==1)ans = max(ans,sum);
-    else ans = max(ans,max((-sum),(sum)));
-    for(ll i =1;i<limit;i++){
-        b[i] = b[i+1] - b[i];
-      
-        }
-          limit--;
-   }
-   cout << ans << nl;
-
+  
+    int n;
+		cin >> n;
+		for (int i = 1; i <= n; i++) cin >> a[i];
+		int now = n;
+		long long ans = -1e18;
+		for (int i = 1; i <= n; i++){
+			long long sum = 0;
+			for (int i = 1; i <= now; i++) sum = (sum + a[i]) ;
+			if (i == 1) ans = max(ans, sum);
+			else ans = max(ans, max(sum, ( - sum) ));
+			for (int i = 1; i < now; i++) a[i] = (a[i + 1] - a[i]) ;
+			now--;
+		}
+		cout << ans << endl; 
 
 
 
