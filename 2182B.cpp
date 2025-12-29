@@ -382,42 +382,36 @@ void solve() {
      ans strength pi
 
      */
-   
-
 
 
     ll a, b;
     cin >> a >> b;
-    
-   
-    ll cnt1 = 0;
-    ll a1 = a, b1 = b;
+ll cnt1 = 0;
+ll a1 = a, b1 = b;
     ll f1 = 1, f2 = 0;
-    
-    for (ll i = 1; i <= 1000000; ) {   
+    for (ll i = 1; i <= 1000000;){   
         if (f1 == 1 && i <= a1) {
-            a1 = a1 - i;
-            cnt1++;
-            i = 2 * i;
-            f1 = 0; 
-            f2 = 1; 
+                    a1 = a1 - i;
+                    cnt1++;
+                    i = 2 * i;
+                    f1 = 0; 
+                    f2 = 1; 
             continue; 
         }
-        if (f2 == 1 && i <= b1) {
-            b1 = b1 - i;
-            cnt1++;
-            i = 2 * i;
-            f2 = 0; 
-            f1 = 1; 
-            continue; 
+        if (f2 == 1 && i <= b1){
+                b1 = b1 - i;
+                cnt1++;
+                i = 2 * i;
+                f2 = 0; 
+                f1 = 1; 
+                continue; 
         }
         break;
     }
-    ll cnt2 = 0;
-    ll a2 = a, b2 = b;
+  ll cnt2 = 0;
+ll a2 = a, b2 = b;
     f1 = 0, f2 = 1;
-    
-    for (ll i = 1; i <= 1000000; ) {   
+    for (ll i = 1; i <= 1000000; ){   
         if (f1 == 1 && i <= a2) {
             a2 = a2 - i;
             cnt2++;
@@ -426,7 +420,7 @@ void solve() {
             f2 = 1; 
             continue; 
         }
-        if (f2 == 1 && i <= b2) {
+        if (f2 == 1 && i <= b2){
             b2 = b2 - i;
             cnt2++;
             i = 2 * i;
