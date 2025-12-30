@@ -3,40 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll the Dice - Justified</title>
+    <title>Roll the Dice - Poster Style</title>
     <style>
+        /* Removes scrollbars and sets the dark background */
         body {
             background-color: #000;
             color: #fff;
-            /* Using a clean, modern font for better legibility when justified */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica', 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            overflow: hidden; /* Keeps the screenshot clean */
         }
+
         .container {
-            max-width: 600px; /* Narrower width helps the "block" look more intentional */
+            width: 85%; /* Adjusts how much of the screen the text fills */
+            max-width: 700px;
             padding: 20px;
         }
-        p {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            font-weight: 500;
-            text-align: justify; /* This makes all lines equal length */
-            text-justify: inter-word; /* Improves the spacing between words */
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.8;      /* Adds vertical space between lines */
+            text-align: justify;    /* Makes all lines equal length */
+            text-justify: inter-word;
+            letter-spacing: 0.05rem; /* Adds slight horizontal space between letters */
             margin: 0;
-            text-transform: uppercase; /* Optional: makes it look more like a bold poster */
-            letter-spacing: 1px;
+            text-transform: uppercase; /* Makes the block look more uniform */
+        }
+
+        /* This ensures the last line doesn't look awkward if it's short */
+        h2::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p>
+        <h2>
             If you’re going to try, go all the way. Otherwise, don’t even start. If you’re going to try, go all the way. This could mean losing girlfriends, wives, relatives, jobs and maybe your mind. Go all the way. It could mean not eating for 3 or 4 days. It could mean freezing on a park bench. It could mean jail, it could mean derision, mockery, isolation. Isolation is the gift, all the others are a test of your endurance, of how much you really want to do it. And you’ll do it despite rejection and the worst odds and it will be better than anything else you can imagine. If you’re going to try, go all the way. There is no other feeling like that. You will be alone with the gods and the nights will flame with fire. Do it, do it, do it. Do it. All the way. All the way. You will ride life straight to perfect laughter, it's the only good fight there is.
-        </p>
+        </h2>
     </div>
 </body>
 </html>
