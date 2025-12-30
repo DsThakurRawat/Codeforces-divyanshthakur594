@@ -3,51 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll the Dice</title>
+    <title>Roll the Dice - Justified</title>
     <style>
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Georgia', serif; /* Classic, literary font */
+            /* Using a clean, modern font for better legibility when justified */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            line-height: 1.6;
-            text-align: center;
         }
         .container {
-            max-width: 800px;
-            padding: 40px;
+            max-width: 600px; /* Narrower width helps the "block" look more intentional */
+            padding: 20px;
         }
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            white-space: pre-line; /* Keeps the spacing/line breaks */
+        p {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            font-weight: 500;
+            text-align: justify; /* This makes all lines equal length */
+            text-justify: inter-word; /* Improves the spacing between words */
+            margin: 0;
+            text-transform: uppercase; /* Optional: makes it look more like a bold poster */
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>If you’re going to try, go all the way.
-        Otherwise, don’t even start.
-        If you’re going to try, go all the way.
-        This could mean losing girlfriends, wives, relatives, jobs and maybe your mind.
-        Go all the way.
-        It could mean not eating for 3 or 4 days.
-        It could mean freezing on a park bench.
-        It could mean jail, it could mean derision, mockery, isolation.
-        Isolation is the gift, all the others are a test of your endurance, of how much you really want to do it.
-        And you’ll do it despite rejection and the worst odds and it will be better than anything else you can imagine.
-        If you’re going to try, go all the way.
-        There is no other feeling like that.
-        You will be alone with the gods and the nights will flame with fire.
-        Do it, do it, do it. Do it.
-        All the way.
-        All the way.
-        You will ride life straight to perfect laughter, 
-        it's the only good fight there is.</h1>
+        <p>
+            If you’re going to try, go all the way. Otherwise, don’t even start. If you’re going to try, go all the way. This could mean losing girlfriends, wives, relatives, jobs and maybe your mind. Go all the way. It could mean not eating for 3 or 4 days. It could mean freezing on a park bench. It could mean jail, it could mean derision, mockery, isolation. Isolation is the gift, all the others are a test of your endurance, of how much you really want to do it. And you’ll do it despite rejection and the worst odds and it will be better than anything else you can imagine. If you’re going to try, go all the way. There is no other feeling like that. You will be alone with the gods and the nights will flame with fire. Do it, do it, do it. Do it. All the way. All the way. You will ride life straight to perfect laughter, it's the only good fight there is.
+        </p>
     </div>
 </body>
 </html>
