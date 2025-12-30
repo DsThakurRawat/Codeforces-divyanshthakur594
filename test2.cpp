@@ -411,6 +411,17 @@ void solve() {
          cout << -1 << nl;
          return;
     }
+for(ll i = 0;i<n;i++){
+    for(ll j = 0;j<m;j++){
+        for(ll k = 0;k<v.size();k++){
+            if(a[i][j] != v[k]){
+                b[i][j] = v[k];
+                break;
+            }
+        }
+    }
+}
+
 
 
 
