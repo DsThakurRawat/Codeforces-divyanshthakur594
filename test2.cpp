@@ -383,12 +383,17 @@ void solve() {
 
      */
 
-    ll n;cin>>n;
-
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-   
-
-
+    int n;
+    cin >> n;
+    string s, t;
+    cin >> s >> t;
+    for (int i = 0; i < s.size() && s[i] == '0'; ++i) {
+        if (t[i] != '0') {
+            cout << "NO\n";
+            return;
+        }
+    }
+    cout << "YES\n";
 
             
         
