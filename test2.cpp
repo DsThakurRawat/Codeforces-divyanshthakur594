@@ -382,42 +382,25 @@ void solve() {
      ans strength pi
 
      */
-     int n, m; cin >> n >> m;
-       
-        vector<vector<int>> a(n, vector<int>(m));
-        for (auto &i: a) {
-            for (auto &j: i) cin >> j;
-        }
-        if (n * m == 1) cout << "-1"<<nl;
-        else {
-            for (int i = 0; i < n; ++i) {
-                for (int j = 0; j < m; ++j) {
-                    cout << a[(i + 1) % n][(j + 1) % m] << ' ';//Shift the matrix diagonally by 1 using modulo → no cell keeps its value
-                }
-                cout << nl;
-            }
-        }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    string s;
+    cin >> s;
+    int n = s.size();
+    vector<int>v(n, -1);
+    int p = -1;
+ 
+    for (int i = n - 4; i >= 0; --i) {
+        if (s[i]=='b' && s[i+1]=='e' && s[i+2]=='a' && s[i+3]=='r') p = i;
+        v[i] = p;
+    }
+ 
+    int ans = 0;
+    for (int i=0;i<n;i++) {
+        int x = v[i];
+        if (x != -1) ans += n - (x + 3);
+    }
+ 
+    cout <<ans<<endl;
 
 
             
@@ -437,11 +420,11 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+   // int t ;
+   // t=1;
+   // cin >> t;
+  //  while (t--) {
         solve();
-    }
+   // }
     return 0;
 }
