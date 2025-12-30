@@ -385,7 +385,13 @@ void solve() {
 
      ll n,m;cin>>n>>m;
 
-     vector<vector<ll>>a(n,vector<ll>(m));
+     vector<vector<ll>>a(n,vector<ll>(m)),b(n,vector<ll>(m));
+
+    for(ll i =0;i<n;i++){
+        for( ll j = 0;j<m;j++){
+            cin>>a[i][j];
+        }
+    }
    
     ll cnt_diff = 0;
 
@@ -405,6 +411,11 @@ void solve() {
          cout << -1 << nl;
          return;
     }
+
+
+
+
+
 
 
 
