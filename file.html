@@ -3,55 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll The Dice - Final</title>
+    <title>Roll The Dice - Clean Block</title>
     <style>
-        /* 1. Eliminate all default spacing */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* 2. Set the canvas */
         body {
             background-color: #000;
             color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            /* Using a tighter font specifically for justification */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            margin: 0;
+            padding: 40px;
         }
 
-        /* 3. The Text Block */
         .poster-text {
             width: 100%;
-            max-width: 550px; /* Optimal width for justification */
+            max-width: 500px;
+            
+            /* The "Proper" Justification Settings */
             text-align: justify;
             text-justify: inter-word;
-            text-align-last: justify; /* Ensures the last line stretches edge-to-edge */
+            hyphens: auto; /* Breaks words to prevent huge gaps */
+            -webkit-hyphens: auto;
             
             /* Typography */
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            line-height: 1.7; /* Balanced spacing between lines */
+            line-height: 1.5;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* 4. Fine-tuning for different screens */
-        @media (max-width: 480px) {
-            .poster-text {
-                font-size: 1.1rem;
-                line-height: 1.6;
-            }
+            letter-spacing: -0.02em; /* Tighter letters look better in blocks */
         }
     </style>
 </head>
 <body>
 
-    <div class="poster-text">
+    <div class="poster-text" lang="en">
         If you’re going to try, go all the way. Otherwise, don’t even start. If you’re going to try, go all the way. This could mean losing girlfriends, wives, relatives, jobs and maybe your mind. Go all the way. It could mean not eating for 3 or 4 days. It could mean freezing on a park bench. It could mean jail, it could mean derision, mockery, isolation. Isolation is the gift, all the others are a test of your endurance, of how much you really want to do it. And you’ll do it despite rejection and the worst odds and it will be better than anything else you can imagine. If you’re going to try, go all the way. There is no other feeling like that. You will be alone with the gods and the nights will flame with fire. Do it, do it, do it. Do it. All the way. All the way. You will ride life straight to perfect laughter, it's the only good fight there is.
     </div>
 
