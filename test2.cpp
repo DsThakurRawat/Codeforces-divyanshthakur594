@@ -382,8 +382,43 @@ void solve() {
      ans strength pi
 
      */
-    
-    
+
+     ll n,m;cin>>n>>m;
+
+     vector<vector<ll>>a(n,vector<ll>(m));
+   
+    ll cnt_diff = 0;
+
+    set<ll>st;
+    vector<ll>v;
+
+    for(ll i =0;i<n;i++){
+        for( ll j = 0;j<m;j++){
+            st.insert(a[i][j]);
+            v.push_back(a[i][j]);
+        }
+    }
+    cnt_diff = st.size();
+    ll total_el = v.size()/2;
+
+    if(cnt_diff < total_el/2 ){
+         cout << -1 << nl;
+         return;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             
         
