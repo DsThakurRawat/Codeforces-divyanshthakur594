@@ -400,7 +400,7 @@ void solve() {
         if (x != -1) ans += n - (x + 3);
     }
  
-    cout <<ans<<endl;
+    cout <<ans<<nl;
 
 
             
