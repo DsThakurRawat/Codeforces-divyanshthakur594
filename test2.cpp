@@ -382,51 +382,22 @@ void solve() {
      ans strength pi
 
      */
-
-     ll n,m;cin>>n>>m;
-
-     vector<vector<ll>>a(n,vector<ll>(m)),b(n,vector<ll>(m));
-
-    for(ll i =0;i<n;i++){
-        for( ll j = 0;j<m;j++){
-            cin>>a[i][j];
+     int n, m; cin >> n >> m;
+       
+        vector<vector<int>> a(n, vector<int>(m));
+        for (auto &i: a) {
+            for (auto &j: i) cin >> j;
         }
-    }
-   
-    ll cnt_diff = 0;
-
-    set<ll>st;
-    vector<ll>v;
-
-    for(ll i =0;i<n;i++){
-        for( ll j = 0;j<m;j++){
-            st.insert(a[i][j]);
-            v.push_back(a[i][j]);
-        }
-    }
-    cnt_diff = st.size();
-    ll total_el = v.size()/2;
-
-    if(cnt_diff < total_el/2 ){
-         cout << -1 << nl;
-         return;
-    }
-for(ll i = 0;i<n;i++){
-    for(ll j = 0;j<m;j++){
-        for(ll k = 0;k<v.size();k++){
-            if(a[i][j] != v[k]){
-                b[i][j] = v[k];
-                break;
+        if (n * m == 1) cout << "-1\n";
+        else {
+            for (int i = 0; i < n; ++i) {
+                for (int j = 0; j < m; ++j) {
+                    cout << a[(i + 1) % n][(j + 1) % m] << ' ';
+                }
+                cout << nl;
             }
         }
-    }
-}
-    for(ll i =0;i<n;i++){
-        for( ll j = 0;j<m;j++){
-            cout << b[i][j] << " ";
-        }
-        cout << nl;
-    }
+    
 
 
 
