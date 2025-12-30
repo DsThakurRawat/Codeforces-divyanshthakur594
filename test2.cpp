@@ -421,6 +421,12 @@ for(ll i = 0;i<n;i++){
         }
     }
 }
+    for(ll i =0;i<n;i++){
+        for( ll j = 0;j<m;j++){
+            cout << b[i][j] << " ";
+        }
+        cout << nl;
+    }
 
 
 
