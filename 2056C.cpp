@@ -382,8 +382,9 @@ void solve() {
      ans strength pi
 
      */
+  int n;cin>>n;
+  
 
-     
 
 
 

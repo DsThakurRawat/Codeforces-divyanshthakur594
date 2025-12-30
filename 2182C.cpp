@@ -384,6 +384,11 @@ void solve() {
      */
 
    
+   ll n;cin>>n;
+   vector<ll>a(n);for(auto &in:a)cin>>in;
+   vector<ll>b(n);for(auto &in:b)cin>>in;
+   vector<ll>c(n);for(auto &in:c)cin>>in;
+
    
 
    
