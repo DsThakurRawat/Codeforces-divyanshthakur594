@@ -392,11 +392,12 @@ void solve() {
         else {
             for (int i = 0; i < n; ++i) {
                 for (int j = 0; j < m; ++j) {
-                    cout << a[(i + 1) % n][(j + 1) % m] << ' ';
+                    cout << a[(i + 1) % n][(j + 1) % m] << ' ';//Shift the matrix diagonally by 1 using modulo → no cell keeps its value
                 }
                 cout << nl;
             }
         }
+
     
 
 
