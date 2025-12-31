@@ -387,8 +387,7 @@ void solve() {
 
             int n;cin>>n;
             string sn = to_string(n);
-            cout << 7323 % 9 << nl;
-            return;
+          
             int r = n % 9;
 
             if( r == 0){
