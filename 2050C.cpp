@@ -403,6 +403,7 @@ void solve() {
     }
     if(check == 0 && r != 0){
         cout << "NO" << nl;
+        return;
     }
     
 
