@@ -385,54 +385,74 @@ void solve() {
  // number lets say 
 //a number is divisble  by 9 if sum of its digits is divisible by 9.
 
-        int n;cin>>n;
-        string sn = to_string(n);
-        cout << 7323 % 9 << nl;
-        return;
-        int r = n % 9;
+            int n;cin>>n;
+            string sn = to_string(n);
+            cout << 7323 % 9 << nl;
+            return;
+            int r = n % 9;
 
-        if( r == 0){
-            cout << "YES" << nl;
+            if( r == 0){
+                cout << "YES" << nl;
+                return;
+            }
+        int check =0;
+
+        for(int i=0;i<sn.size();i++){
+            if(sn[i] == '2' || sn[i] == '3'){
+                check = 1;
+            }
+        }
+        if(check == 0 && r != 0){
+            cout << "NO" << nl;
             return;
         }
-       int check =0;
+        ll cnt2 = 0,cnt3 = 0;
+        for(int i=0;i<sn.size();i++){
+            if(sn[i] == '2' ){
+                cnt2++;
+            }
+            if(sn[i] == '3'){
+                cnt3++;
+            }
+        }
+        ll copy = n;
+        while(cnt2 > 0){
+            copy = copy+2;
+            cnt2--;
+            if(copy % 9 == 0){
+                cout << "YES"<<nl;
+                return;
+            }
+        }
+        ll copy1 = n;
 
-       for(int i=0;i<sn.size();i++){
-        if(sn[i] == '2' || sn[i] == '3'){
-            check = 1;
-        }
-    }
-    if(check == 0 && r != 0){
-        cout << "NO" << nl;
-        return;
-    }
-    ll cnt2 = 0,cnt3 = 0;
-    for(int i=0;i<sn.size();i++){
-        if(sn[i] == '2' ){
-            cnt2++;
-        }
-        if(sn[i] == '3'){
-            cnt3++;
-        }
-    }
-    ll copy = n;
-    while(cnt2 > 0){
-          copy = copy+2;
-          cnt2--;
-          if(copy % 9 == 0){
-            cout << "YES"<<nl;
-            return;
-          }
-    }
-    ll copy1 = n;
+        while(cnt3 > 0){
+            copy1 = copy1 + 6;
+            if(copy % 9 ==0){
+                cout << "YES" << nl;
+                return;
+            }
+        } 
+       ll copy2 = n;
+        for(int i =0;i<cnt2;i++){
+            copy2 = copy2+2;
 
-    while(cnt3 > 0){
-          copy1 = copy1 + 6;
-          if(copy % 9 ==0){
-            cout << "YES" << nl;
-            return;
-          }
-    }
+            for(int j = 0;j<cnt3;j++){
+                 copy2 = copy2 +6;
+
+                 if(copy2 % 9 == 0){
+                    cout << "YES" <<nl;
+                    return;
+                 }
+            }
+        }
+
+
+
+        
+
+
+        
     
 
 
