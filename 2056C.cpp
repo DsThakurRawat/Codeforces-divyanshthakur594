@@ -421,8 +421,9 @@ void solve() {
             v[i] = 1;
             fa1--;
             }
-            else v[i] = i;
+           
         }
+         else v[i] = i;
     }
 
 
