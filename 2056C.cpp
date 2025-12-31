@@ -397,8 +397,9 @@ void solve() {
    vector<ll>v(n+1);
    int flag = 1;
    for(int i =1;i<=n;i++){
-    if(i % 2 == 0){
+    if(i % 2 == 0 && fa > 0){
         v[i] = 1;
+        fa--;
     }
     else {
         v[i] = i;
