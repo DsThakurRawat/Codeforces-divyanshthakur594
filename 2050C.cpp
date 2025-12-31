@@ -424,10 +424,10 @@ void solve() {
         }
         cnt2 = min(cnt2, 8LL);
        cnt3 = min(cnt3, 8LL);
-   
+       
 
-        for(int i = 0; i <= p; i++){
-            for(int j = 0; j <= q; j++){
+        for(int i = 0; i <= cnt2; i++){
+            for(int j = 0; j <= cnt3; j++){
                 if( (digitsum + 2*i + 6*j) % 9 == 0 ){
                     cout << "YES\n";
                     return;
