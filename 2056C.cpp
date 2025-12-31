@@ -394,7 +394,7 @@ void solve() {
   
   */  
    int fix_element = 3;
-   vector<ll>v(n);
+   vector<ll>v(n+1);
    int flag = 1;
    for(int i =1;i<=n;i++){
     flag = 0;
