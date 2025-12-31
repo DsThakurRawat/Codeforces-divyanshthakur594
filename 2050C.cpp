@@ -430,6 +430,7 @@ void solve() {
           copy1 = copy1 + 6;
           if(copy % 9 ==0){
             cout << "YES" << nl;
+            return;
           }
     }
     
