@@ -385,8 +385,7 @@ void solve() {
  // number lets say 
 //a number is divisble  by 9 if sum of its digits is divisible by 9.
 
-            int n;cin>>n;
-            string sn = to_string(n);
+          string sn;cin>>sn;
           
           
 
