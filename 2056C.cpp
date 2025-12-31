@@ -402,6 +402,10 @@ void solve() {
         v[i] = 1;
         fa1--;
     }
+    else if( i % 2 != 0 && fa2 > 0){
+        v[i] = 2;
+        fa2--;
+    }
     
 
 
