@@ -408,18 +408,26 @@ void solve() {
 
 
  
-   for(int i =1;i<=n;i++){
-      if( i % 2 == 0 && fa1 > 0){
-        v[i] == 1;
-        fa1--;
-      }
-     }
+   
     for(int i = n;i>0;i--){
         if( i % 2 == 1 && fa2 > 0  ){
             v[i] = 2;
             fa2--;
         }
     }
+    for(int i = 1;i<=n;i++){
+        if(v[i] == -1){
+            if( i % 2 == 0 && fa1 > 0){
+            v[i] = 1;
+            }
+            else v[i] = i;
+        }
+    }
+
+
+
+
+
    
 
         
