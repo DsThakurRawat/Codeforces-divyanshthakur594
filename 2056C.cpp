@@ -410,7 +410,7 @@ void solve() {
 
 
     else {
-        v[i] = 2;
+        v[i] = i;
     }
      }
 
