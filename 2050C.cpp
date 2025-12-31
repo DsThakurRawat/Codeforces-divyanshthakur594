@@ -447,6 +447,8 @@ void solve() {
             }
         }
 
+        cout << "NO"<<nl;
+
 
 
         
