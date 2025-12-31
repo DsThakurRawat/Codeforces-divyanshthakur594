@@ -395,6 +395,7 @@ void solve() {
 
         */
        vector<int> v = {b,b,3*a-2*b};
+       cout << 3 << nl;
        for(auto &ot : v)cout << ot << " ";
        cout << nl;
 
