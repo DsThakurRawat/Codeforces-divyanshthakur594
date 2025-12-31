@@ -394,7 +394,13 @@ void solve() {
                 cout << "YES" << nl;
                 return;
             }
-        int check =0;
+       int check =0;
+       int digitsum = 0; 
+            for(char c : sn){
+            int d = c - '0';
+            digitsum += d;
+            }
+
 
         for(int i=0;i<sn.size();i++){
             if(sn[i] == '2' || sn[i] == '3'){
@@ -414,7 +420,7 @@ void solve() {
                 cnt3++;
             }
         }
-        ll copy = n;
+        ll copy = digitsum;
         ll p = cnt2;
         ll q = cnt3;
         while(cnt2 > 0){
@@ -425,7 +431,7 @@ void solve() {
                 return;
             }
         }
-        ll copy1 = n;
+        ll copy1 = digitsum;
 
         while(cnt3 > 0){
             copy1 = copy1 + 6;
@@ -437,7 +443,7 @@ void solve() {
         } 
 
 
-       ll copy2 = n;
+       ll copy2 = digitsum;
         for(int i =p;i>0;i--){
             copy2 = copy2+2;
 
