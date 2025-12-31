@@ -383,9 +383,48 @@ void solve() {
 
      */
   int n;cin>>n;
+  ll fa = (n+1)/2;
+  /*
+  // your lack of commitment is insult to those who believes in you
+
+    sequence of length > fa and for which 
+    
+
+
   
+  */  
+   int fix_element = 3;
+   vector<ll>v;
+
+            for(int i =1;i<(fa+1)/2;i++){
+                if(1 <= i && i <= n){
+                    v.push_back(i);
+                }
+                
+            }
+            for(int i = (fa+1)/2;i<fa;i++){
+                v.push_back(fix_element);
+            }
+            for(int i = fa;i<n;i++){
+            if(i<= 1 && i<=n){
+                v.push_back(i);
+            }
+            }
+            for(auto &ot : v)cout << ot << " ";
 
 
+
+
+
+
+   
+    
+
+
+
+
+
+  
 
 
      
