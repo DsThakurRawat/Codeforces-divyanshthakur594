@@ -383,7 +383,7 @@ void solve() {
 
      */
   int n;cin>>n;
-  ll fa1 = (n)/2;
+  ll fa1 = (n)/2-1;
   /*
   // your lack of commitment is insult to those who believes in you
 
@@ -404,7 +404,7 @@ void solve() {
     }
    
     else if( fa2 > 0 ){
-       v[i] = i;
+       v[i] = 2;
         fa2--;
     }
 
