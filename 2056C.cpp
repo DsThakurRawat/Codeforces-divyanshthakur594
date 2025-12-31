@@ -416,8 +416,8 @@ void solve() {
         }
     }
     for(int i = 1;i<=n;i++){
-        if(v[i] == -1){
-            if( i % 2 == 0 && fa1 > 0){
+        if(v[i] == -1 && i % 2 == 0 ){
+            if( fa1 > 0){
             v[i] = 1;
             fa1--;
             }
