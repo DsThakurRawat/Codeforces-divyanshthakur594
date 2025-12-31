@@ -383,7 +383,7 @@ void solve() {
 
      */
   int n;cin>>n;
-  ll fa = (n)/2 - 1;
+  ll fa1 = (n)/2 - 1;
   /*
   // your lack of commitment is insult to those who believes in you
 
@@ -392,15 +392,19 @@ void solve() {
 
 
   
-  */  
+  */
+ ll fa2 = fa1;  
    int fix_element = 3;
    vector<ll>v(n+1);
    int flag = 1;
    for(int i =1;i<=n;i++){
-    if(i % 2 == 0 && fa > 0){
+    if(i % 2 == 0 && fa1 > 0){
         v[i] = 1;
-        fa--;
+        fa1--;
     }
+    else if( )
+
+
     else {
         v[i] = i;
     }
