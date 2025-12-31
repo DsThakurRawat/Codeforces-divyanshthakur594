@@ -429,7 +429,7 @@ void solve() {
         for(int i = 0; i <= cnt2; i++){
             for(int j = 0; j <= cnt3; j++){
                 if( (digitsum + 2*i + 6*j) % 9 == 0 ){
-                    cout << "YES\n";
+                    cout << "YES"<<nl;
                     return;
                 }
             }
