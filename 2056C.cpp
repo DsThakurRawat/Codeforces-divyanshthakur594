@@ -383,7 +383,7 @@ void solve() {
 
      */
   int n;cin>>n;
-  ll fa1 = (n)/2 ;
+  ll fa1 = (n)/2 -1;
   /*
   // your lack of commitment is insult to those who believes in you
 
@@ -393,7 +393,7 @@ void solve() {
 
   
   */
- ll fa2 = fa1-1;  
+ ll fa2 = fa1;  
    int fix_element = 3;
    vector<ll>v(n+1);
    int flag = 1;
