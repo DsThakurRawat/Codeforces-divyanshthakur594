@@ -423,7 +423,7 @@ void solve() {
             }
            
         }
-         else v[i] = i;
+         else  if(v[i] != -1) v[i] = i;
     }
 
 
