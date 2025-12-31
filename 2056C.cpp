@@ -394,18 +394,18 @@ void solve() {
   
   */  
    int fix_element = 3;
-   vector<ll>v;
+   vector<ll>v(n);
    int flag = 1;
    for(int i =1;i<=n;i++){
     flag = 0;
         
      if(flag = 1 && fa > 0){
-        v.push_back(1);
+        v[i] = 1;
       
         fa--;
      }
      else{
-          v.push_back(i);
+          v[i] = i;
           flag = 1;
      }
 
