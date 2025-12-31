@@ -415,6 +415,8 @@ void solve() {
             }
         }
         ll copy = n;
+        ll l = cnt2;
+        ll r = cnt3;
         while(cnt2 > 0){
             copy = copy+2;
             cnt2--;
@@ -432,11 +434,13 @@ void solve() {
                 return;
             }
         } 
+
+
        ll copy2 = n;
-        for(int i =cnt2;i>0;i--){
+        for(int i =l;i>0;i--){
             copy2 = copy2+2;
 
-            for(int j = cnt3;j>0;j--){
+            for(int j = r;j>0;j--){
                  copy2 = copy2 +6;
 
                  if(copy2 % 9 == 0){
