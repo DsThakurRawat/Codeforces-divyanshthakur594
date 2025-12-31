@@ -394,7 +394,7 @@ void solve() {
   
   */
 
-   int fa1 = n/2;
+   int fa1 = n/2-1;
    int fa2 ;
   if(n % 2 == 0){
      fa2 = n/2 - 1;
@@ -415,18 +415,16 @@ void solve() {
             fa2--;
         }
     }
-    for(int i = 1;i<=n;i++){
-        if(v[i] == -1 && i % 2 == 0 ){
-            if( fa1 > 0){
-            v[i] = 1;
-            fa1--;
-            }
-           
+
+    for(int i =1;i<=n;i++){
+        if(i % 2 == 0 && v[i] == -1){
+            v[i] = 2;
         }
-        
+        else v[i] = i;
+
+
     }
-
-
+    
 
 
 
