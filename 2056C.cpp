@@ -419,6 +419,7 @@ void solve() {
         if(v[i] == -1){
             if( i % 2 == 0 && fa1 > 0){
             v[i] = 1;
+            fa1--;
             }
             else v[i] = i;
         }
