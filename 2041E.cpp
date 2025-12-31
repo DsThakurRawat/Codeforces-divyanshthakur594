@@ -394,8 +394,9 @@ void solve() {
         The simplest solution is to make the array [b, b, 3a − 2b].
 
         */
-       cout << b << " " << b << " " << 3*a - 2*b <<nl;
-       
+       vector<int> v = {b,b,3*a-2*b};
+       for(auto &ot : v)cout << ot << " ";
+       cout << nl;
 
 
 
