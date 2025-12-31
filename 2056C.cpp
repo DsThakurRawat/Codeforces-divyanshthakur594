@@ -394,8 +394,7 @@ void solve() {
   
   */
 
-   int n;
-    cin >> n;
+   
     if (n == 6) {
         cout << "1 1 2 3 1 2\n";
     }
