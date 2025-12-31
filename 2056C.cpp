@@ -393,7 +393,7 @@ void solve() {
 
   
   */
- ll fa2 = fa1;  
+ ll fa2 = fa1-1;  
    int fix_element = 3;
    vector<ll>v(n+1);
    int flag = 1;
