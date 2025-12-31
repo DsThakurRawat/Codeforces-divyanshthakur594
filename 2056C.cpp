@@ -395,23 +395,28 @@ void solve() {
   */  
    int fix_element = 3;
    vector<ll>v;
+   int flag = 1;
+   for(int i =1;i<=n;i++){
+        
+     if(flag = 1 && fa > 0){
+        v.push_back(1);
+        flag = 0;
+        fa--;
+     }
+     else{
+          v.push_back(i);
+          flag = 1;
+     }
 
-            for(int i =1;i<(fa+1)/2;i++){
-                if(1 <= i && i <= n){
-                    v.push_back(i);
-                }
-                
-            }
-            for(int i = (fa+1)/2;i<fa;i++){
-                v.push_back(fix_element);
-            }
-            for(int i = fa;i<n;i++){
-            if(i<= 1 && i<=n){
-                v.push_back(i);
-            }
-            }
-            for(auto &ot : v)cout << ot << " ";
-            cout << nl;
+
+   
+
+
+   }
+   for(auto &ot : v) cout << ot << " ";
+   cout << nl;
+
+           
 
 
 
