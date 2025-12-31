@@ -429,6 +429,7 @@ void solve() {
 
         while(cnt3 > 0){
             copy1 = copy1 + 6;
+            cnt3--;
             if(copy % 9 ==0){
                 cout << "YES" << nl;
                 return;
