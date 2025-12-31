@@ -424,9 +424,39 @@ void solve() {
         }
         cnt2 = min(cnt2, 8LL);
        cnt3 = min(cnt3, 8LL);
-        
+        ll copy = digitsum;
+        ll p = cnt2;
+        ll q = cnt3;
+        while(cnt2 > 0){
+            copy = copy+2;
+            cnt2--;
+            if(copy % 9 == 0){
+                cout << "YES"<<nl;
+                return;
+            }
+        }
+        ll copy1 = digitsum;
 
-       
+        while(cnt3 > 0){
+            copy1 = copy1 + 6;
+            cnt3--;
+            if(copy1 % 9 ==0){
+                cout << "YES" << nl;
+                return;
+            }
+        } 
+
+
+        for(int i = 0; i <= p; i++){
+            for(int j = 0; j <= q; j++){
+                if( (digitsum + 2*i + 6*j) % 9 == 0 ){
+                    cout << "YES\n";
+                    return;
+                }
+            }
+        }
+
+
 
 
         cout << "NO"<<nl;
