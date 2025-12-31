@@ -404,13 +404,13 @@ void solve() {
     }
    
     else if(i >= n/2 && fa2 > 0 ){
-        v[i] = 2;
+        v[i] = i;
         fa2--;
     }
 
 
     else {
-        v[i] = i;
+        v[i] = 2;
     }
      }
 
