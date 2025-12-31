@@ -398,7 +398,7 @@ void solve() {
    int flag = 1;
    for(int i =1;i<=n;i++){
     if(i % 2 == 0){
-        v[i] = 3;
+        v[i] = 1;
     }
     else {
         v[i] = i;
