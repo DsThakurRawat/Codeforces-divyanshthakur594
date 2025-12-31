@@ -397,15 +397,16 @@ void solve() {
    vector<ll>v;
    int flag = 1;
    for(int i =1;i<=n;i++){
+    flag = 0;
         
      if(flag = 1 && fa > 0){
         v.push_back(1);
-        flag = 0;
+      
         fa--;
      }
      else{
           v.push_back(i);
-        
+          flag = 1;
      }
 
 
