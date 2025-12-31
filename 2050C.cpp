@@ -397,7 +397,7 @@ void solve() {
        int check =0;
 
        for(int i=0;i<sn.size();i++){
-        if(sn[i] == '2' || sn[i] == '3' || sn[i] == '1'){
+        if(sn[i] == '2' || sn[i] == '3'){
             check = 1;
         }
     }
@@ -405,6 +405,7 @@ void solve() {
         cout << "NO" << nl;
         return;
     }
+    cout << 7323 % 9 << nl;
     
 
 
