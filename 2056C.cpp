@@ -403,7 +403,7 @@ void solve() {
         fa1--;
     }
    
-    else if( fa2 > 0 ){
+    else if(  i % 2 != 0 && fa2 > 0 ){
        v[i] = 2;
         fa2--;
     }
