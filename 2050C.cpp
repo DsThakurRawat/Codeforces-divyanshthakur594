@@ -446,15 +446,23 @@ void solve() {
             }
         } 
 
+                ll copy2 = digitsum;
+        for(int i = p; i > 0; i--){
+            copy2 = copy2 + 2;
+            ll copy3 = copy2;
 
-                for(int i = 0; i <= p; i++){
-            for(int j = 0; j <= q; j++){
-                if( (digitsum + 2*i + 6*j) % 9 == 0 ){
+            for(int j = q; j > 0; j--){
+                copy3 = copy3 + 6;
+                if(copy3 % 9 == 0){
                     cout << "YES\n";
                     return;
                 }
             }
         }
+
+
+
+           
 
 
 
