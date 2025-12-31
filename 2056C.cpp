@@ -411,6 +411,7 @@ void solve() {
             }
             }
             for(auto &ot : v)cout << ot << " ";
+            cout << nl;
 
 
 
