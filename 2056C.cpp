@@ -397,28 +397,23 @@ void solve() {
    vector<ll>v(n+1);
    int flag = 1;
    for(int i =1;i<=n;i++){
-    flag = 0;
-        
-     if(flag = 0 && fa > 0){
+    if(i % 2 == 0){
         v[i] = 1;
-        flag = 1;
-        fa--;
-     }
-     else{
-          v[i] = i;
-          flag = 1;
+    }
+    else {
+        v[i] = i;
+    }
      }
 
 
-   
+        
 
 
-   }
-   for(auto &ot : v) cout << ot << " ";
-   cout << nl;
-
-           
-
+        for(int i = 1;i<=n;i++){
+            cout << v[i] << " ";
+        }
+        cout << nl;
+        
 
 
 
