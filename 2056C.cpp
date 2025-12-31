@@ -399,9 +399,9 @@ void solve() {
    for(int i =1;i<=n;i++){
     flag = 0;
         
-     if(flag = 1 && fa > 0){
+     if(flag = 0 && fa > 0){
         v[i] = 1;
-      
+        flag = 1;
         fa--;
      }
      else{
