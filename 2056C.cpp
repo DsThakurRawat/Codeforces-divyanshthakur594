@@ -405,7 +405,7 @@ void solve() {
      }
      else{
           v.push_back(i);
-          flag = 1;
+        
      }
 
 
