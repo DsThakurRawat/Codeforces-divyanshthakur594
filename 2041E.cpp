@@ -381,7 +381,8 @@ void solve() {
             ith has wieght w 
             ans strength pi
             */
-            int a,b;cin>>a>>b;
+            int a,b;
+            cin>>a>>b;
 
 
             
