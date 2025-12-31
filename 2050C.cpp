@@ -449,9 +449,10 @@ void solve() {
        ll copy2 = digitsum;
         for(int i =p;i>0;i--){
             copy2 = copy2+2;
+            ll copy3 = copy2;
 
             for(int j = q;j>0;j--){
-                 copy2 = copy2 +6;
+                 copy3 = copy3 +6;
 
                  if(copy2 % 9 == 0){
                     cout << "YES" <<nl;
