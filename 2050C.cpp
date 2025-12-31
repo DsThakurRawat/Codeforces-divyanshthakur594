@@ -433,10 +433,10 @@ void solve() {
             }
         } 
        ll copy2 = n;
-        for(int i =0;i<cnt2;i++){
+        for(int i =cnt2;i>0;i--){
             copy2 = copy2+2;
 
-            for(int j = 0;j<cnt3;j++){
+            for(int j = cnt3;j>0;j--){
                  copy2 = copy2 +6;
 
                  if(copy2 % 9 == 0){
