@@ -382,8 +382,22 @@ void solve() {
      ans strength pi
 
      */
-    int k;cin>>k;
-    
+    ll k;cin>>k;
+    ll low = 0;
+    ll high = 2e18;
+    ll ans = 0;
+
+    while(low <= high){
+        ll mid = (low + high)/2;
+        if(pred(mid,k)){
+            ans = mid;
+            high = mid-1;
+        }
+        else low = mid + 1;
+    }
+    cout << ans << nl;
+
+
 
    
 
