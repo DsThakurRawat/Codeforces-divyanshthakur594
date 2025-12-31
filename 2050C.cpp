@@ -382,7 +382,25 @@ void solve() {
      ans strength pi
 
   */
-    
+ // number lets say 
+//a number is divisble  by 9 if sum of its digits is divisible by 9.
+
+int n;cin>>n;
+string sn = to_string(n);
+
+int r = n % 9;
+
+if( r == 0){
+    cout << "YES" << nl;
+}
+
+
+
+
+
+
+
+
 
 
 
