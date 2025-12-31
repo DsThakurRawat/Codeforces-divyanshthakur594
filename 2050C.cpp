@@ -454,7 +454,7 @@ void solve() {
             for(int j = q;j>0;j--){
                  copy3 = copy3 +6;
 
-                 if(copy2 % 9 == 0){
+                 if(copy3 % 9 == 0){
                     cout << "YES" <<nl;
                     return;
                  }
