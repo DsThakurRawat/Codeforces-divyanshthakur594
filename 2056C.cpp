@@ -419,7 +419,7 @@ void solve() {
 
     for(int i=1;i<=n;i++){
         if(i % 2 == 0 && fa2 > 0){
-            v[i] = 2;
+            v[i] = 1;
             fa2--;
         }
     }
