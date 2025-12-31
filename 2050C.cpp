@@ -423,6 +423,8 @@ void solve() {
                 cnt3++;
             }
         }
+        cnt2 = min(cnt2, 8LL);
+       cnt3 = min(cnt3, 8LL);
         ll copy = digitsum;
         ll p = cnt2;
         ll q = cnt3;
