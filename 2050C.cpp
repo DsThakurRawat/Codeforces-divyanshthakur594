@@ -388,17 +388,20 @@ void solve() {
             int n;cin>>n;
             string sn = to_string(n);
           
-            int r = n % 9;
+          
 
-            if( r == 0){
-                cout << "YES" << nl;
-                return;
-            }
+           
        int check =0;
        int digitsum = 0; 
             for(char c : sn){
             int d = c - '0';
             digitsum += d;
+            }
+              int r = digitsum % 9;
+
+             if( r == 0){
+                cout << "YES" << nl;
+                return;
             }
 
 
@@ -436,7 +439,7 @@ void solve() {
         while(cnt3 > 0){
             copy1 = copy1 + 6;
             cnt3--;
-            if(copy % 9 ==0){
+            if(copy1 % 9 ==0){
                 cout << "YES" << nl;
                 return;
             }
