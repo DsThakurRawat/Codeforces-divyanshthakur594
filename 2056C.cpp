@@ -383,7 +383,7 @@ void solve() {
 
      */
   int n;cin>>n;
-  ll fa1 = (n)/2 -1;
+  ll fa1 = (n)/2;
   /*
   // your lack of commitment is insult to those who believes in you
 
