@@ -402,7 +402,7 @@ void solve() {
         v[i] = 1;
         fa1--;
     }
-    else if( )
+    
 
 
     else {
