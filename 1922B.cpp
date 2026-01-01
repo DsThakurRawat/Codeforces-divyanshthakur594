@@ -396,6 +396,7 @@ void solve() {
     ll ans = 0;
     for(auto &p : mp){
         ll f = p.second;
+        if(f >=3)
         ans += ((f)*(f-1)*(f-2))/6;
 
     }
