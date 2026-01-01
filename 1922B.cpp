@@ -388,6 +388,19 @@ void solve() {
     ll n;cin>>n;
     vector<ll>a(n);for(auto &in:a)cin>>in;
     sort(all(a));
+    
+    map<ll ,ll>mp;
+    for(auto &it:a){
+        mp[it]++;
+    }
+    ll ans = 0;
+    for(auto &p : mp){
+        ll f = p.second;
+        ans += ((f)*(f-1)*(f-2))/6;
+
+    }
+    cout << ans << nl;
+
    
    
           
