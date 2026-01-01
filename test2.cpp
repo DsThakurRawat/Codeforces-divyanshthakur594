@@ -374,6 +374,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
+#define sort(x) sort(v.begin(),v.end());
 
 
 void solve() {
