@@ -383,6 +383,29 @@ void solve() {
 
      */
 
+     ll n;cin>>n;
+     vector<ll>v(n);for(auto &in:v)cin>>in;
+     ll f1 = 0;// even
+     ll f2 = 0;//odd
+
+
+     for(ll i = 0;i<n;i++){
+        if(v[i] % 2 ==0){
+            f1 = 1;
+        }
+        else{
+          f2 = 1;
+        }
+     }
+
+     if(f1 == 1 && f2 ==1){
+        cout << 2 << nl;
+        return;
+     }
+     set<ll>set;
+     
+     
+
     
 
             
