@@ -389,32 +389,32 @@ void solve() {
      ll f2 = 0;//odd
 
 
-     for(ll i = 0;i<n;i++){
-        if(v[i] % 2 ==0){
-            f1 = 1;
+        for(ll i = 0;i<n;i++){
+            if(v[i] % 2 ==0){
+                f1 = 1;
+            }
+            else{
+            f2 = 1;
+            }
         }
-        else{
-          f2 = 1;
-        }
-     }
 
-     if(f1 == 1 && f2 ==1){
-        cout << 2 << nl;
-        return;
-     }
-      ll k = 2;
-        while (true) {
-        vector<ll> b(n);
-        for (int i = 0; i < n; i++) {
-            b[i] = v[i] % k;
+        if(f1 == 1 && f2 ==1){
+            cout << 2 << nl;
+            return;
         }
-        sort(b.begin(), b.end());
-        if (b[0] != b[n - 1]) {
-            cout << k << nl;
-            break;
-        }
-        k = k*2;
-        }
+        ll k = 2;
+            while (true) {
+            vector<ll> b(n);
+            for (int i = 0; i < n; i++) {
+                b[i] = v[i] % k;
+            }
+            sort(b.begin(), b.end());
+            if (b[0] != b[n - 1]) {
+                cout << k << nl;
+                break;
+            }
+            k = k*2;
+            }
 
     
         
