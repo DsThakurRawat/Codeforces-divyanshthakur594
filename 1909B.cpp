@@ -402,10 +402,11 @@ void solve() {
         cout << 2 << nl;
         return;
      }
-     set<ll>set;
-     
-     
 
+     ll min = 2;
+     ll maxi = *max_element(v.begin(),v.end());
+     
+   
     
 
             
