@@ -404,8 +404,8 @@ void solve() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    cout.tie(0);
-    auto begin = chrono::high_resolution_clock::now();
+ 
+   
     int t ;
     t=1;
     cin >> t;
@@ -413,8 +413,6 @@ int main() {
      solve();
     }
 
-    auto end = chrono::high_resolution_clock::now();
-    auto elapsed = chrono::duration_cast<chrono::nanoseconds>(end - begin);
-    cerr << "Time measured: " << elapsed.count() * 1e-9 << " seconds.\n";
+  
     return 0;
 }
