@@ -400,7 +400,7 @@ void solve() {
         if(f >=3){
         ans += ((f)*(f-1)*(f-2))/6;
         if(f>=2){
-            ans += (f*(f-1))/2*sum;
+            ans += f*(f-1)/2*sum;
 
         }
         sum +=f;
