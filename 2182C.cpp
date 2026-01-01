@@ -384,10 +384,26 @@ void solve() {
      */
 
    
-   ll n;cin>>n;
-   vector<ll>a(n);for(auto &in:a)cin>>in;
-   vector<ll>b(n);for(auto &in:b)cin>>in;
-   vector<ll>c(n);for(auto &in:c)cin>>in;
+        ll n;cin>>n;
+        vector<ll>a(2*n);  
+        vector<ll>b(2*n);
+        vector<ll>c(2*n);
+
+        for(int i =0;i<n;i++){
+            cin>>a[i];
+            a[i+n] = a[i];
+        }
+        for(int i = 0;i<n;i++){
+            cin>>b[i];
+            b[i+n] = b[i];
+        }
+        for(int i = 0;i<n;i++){
+            cin>>c[i];
+            c[i+n] = c[i];
+        }
+        
+
+
 
    
 
