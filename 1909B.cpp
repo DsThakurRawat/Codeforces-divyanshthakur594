@@ -402,14 +402,21 @@ void solve() {
         cout << 2 << nl;
         return;
      }
+      long long k = 2;
+    while (true) {
+      vector<long long> b(n);
+      for (int i = 0; i < n; i++) {
+        b[i] = v[i] % k;
+      }
+      sort(b.begin(), b.end());
+      if (b[0] != b[n - 1]) {
+        cout << k << nl;
+        break;
+      }
+      k *= 2;
+    }
 
-     ll min = 2;
-     ll maxi = *max_element(v.begin(),v.end());
-     
-   
     
-
-            
         
         
           
