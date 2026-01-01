@@ -411,5 +411,9 @@ int main() {
     while (t--) {
      solve();
     }
+
+    auto end = chrono::high_resolution_clock::now();
+    auto elapsed = chrono::duration_cast<chrono::nanoseconds>(end - begin);
+    cerr << "Time measured: " << elapsed.count() * 1e-9 << " seconds.\n";
     return 0;
 }
