@@ -402,9 +402,9 @@ void solve() {
         cout << 2 << nl;
         return;
      }
-      long long k = 2;
+      ll k = 2;
     while (true) {
-      vector<long long> b(n);
+      vector<ll> b(n);
       for (int i = 0; i < n; i++) {
         b[i] = v[i] % k;
       }
