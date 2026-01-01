@@ -413,7 +413,7 @@ void solve() {
             cout << k << nl;
             break;
         }
-        k = k+1;
+        k = k*2;
         }
 
     
