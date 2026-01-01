@@ -387,7 +387,7 @@ void solve() {
      */
     ll n;cin>>n;
     vector<ll>a(n);for(auto &in:a)cin>>in;
-    sort(all(a));
+   // sort(all(a));
     
     map<ll ,ll>mp;
     for(auto &it:a){
