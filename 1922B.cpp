@@ -385,6 +385,11 @@ void solve() {
     ll n;cin>>n;
     vector<ll>a(n);for(auto &in:a)cin>>in;
 
+    for(ll i =0;i<n;i++){
+       a[i] = pow(2,a[i]);
+    }
+    
+
     
 
             
