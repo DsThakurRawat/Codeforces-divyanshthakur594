@@ -374,6 +374,9 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 #define nl '\n'
 
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+
 
 void solve() {
 
@@ -384,30 +387,9 @@ void solve() {
      */
     ll n;cin>>n;
     vector<ll>a(n);for(auto &in:a)cin>>in;
-
-    for(ll i =0;i<n;i++){
-       a[i] = pow(2,a[i]);
-    }
-    ll cnt = 0;
-
-    for(ll i =0;i<n;i++){
-       for(ll j=i;j<n;j++){
-        for(ll k = j;k<n;k++){
-            if(a[i] >= a[j] + a[k]){
-                cnt++;
-            }
-        }
-       }
-    }
-    cout << cnt << nl;
-
-
-
-    
-
-            
-        
-        
+    sort(all(a));
+   
+   
           
          
 
