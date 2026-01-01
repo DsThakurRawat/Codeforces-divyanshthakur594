@@ -388,7 +388,18 @@ void solve() {
     for(ll i =0;i<n;i++){
        a[i] = pow(2,a[i]);
     }
-    
+    ll cnt = 0;
+
+    for(ll i =0;i<n;i++){
+       for(ll j=i;j<n;j++){
+        for(ll k = j;k<n;k++){
+            if(a[i] >= a[j] + a[k]){
+                cnt++;
+            }
+        }
+       }
+    }
+    cout << cnt << nl;
 
 
 
