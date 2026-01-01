@@ -408,7 +408,7 @@ void solve() {
         for(ll i =0;i<n;i++){
             ll left = 0;
             bool flag = 1;
-            for(ll j = i;left<n;left++){
+            for(ll j = i;left<n;j++,left++){
                 if(b[j] <= a[left]){
                     flag = 0;
                     break;
@@ -421,7 +421,7 @@ void solve() {
         for(ll i =0;i<n;i++){
             int left = 0;
             bool flag = 1;
-            for(ll j =i;left<n;left++){
+            for(ll j =i;left<n;j++,left++){
                 if(c[j] <=b[left]){
                     flag = 0;
                     break;
