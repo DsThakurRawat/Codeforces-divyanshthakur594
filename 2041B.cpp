@@ -386,7 +386,7 @@ void solve() {
      */
     ll w,b;cin>>w>>b;
 
-    ll demand = 1;
+ /*   ll demand = 1;
     ll cnt = 0;
 
     while(w >= demand || b >= demand){
@@ -423,7 +423,11 @@ void solve() {
     
     
 
-    
+    */         
+           
+             
+
+
 
             
         
