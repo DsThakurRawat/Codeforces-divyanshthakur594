@@ -423,9 +423,21 @@ void solve() {
     
     
 
-    */         
-           
-             
+    */        
+    ll i = 1; 
+    ll total = w+b;
+    ll cnt = 0;
+   while(true){
+       if(total < i){
+       break;
+       }
+       else{
+        total = total -i;
+          i++;
+          cnt++;
+       }
+   }
+   cout << cnt << nl;
 
 
 
