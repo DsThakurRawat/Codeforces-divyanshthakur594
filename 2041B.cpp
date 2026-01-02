@@ -387,16 +387,19 @@ void solve() {
     ll w,b;cin>>w>>b;
 
     ll demand = 1;
+    ll cnt = 0;
 
     while(demand >= w || demand >= b){
            
             if(w >= demand){
                 w = w-demand;
                 demand++;
+                cnt++;
             }
             if(b>=demand){
                 b = b- demand;
                 demand++;
+                cnt++:
             }
 
 
