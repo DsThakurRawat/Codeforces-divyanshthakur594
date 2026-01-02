@@ -399,7 +399,7 @@ void solve() {
             if(b>=demand){
                 b = b- demand;
                 demand++;
-                cnt++:
+                cnt++;
             }
 
 
