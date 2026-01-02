@@ -389,7 +389,7 @@ void solve() {
     ll demand = 1;
     ll cnt = 0;
 
-    while(demand >= w || demand >= b){
+    while(w >= demand || b >= demand){
            
             if(w >= demand){
                 w = w-demand;
