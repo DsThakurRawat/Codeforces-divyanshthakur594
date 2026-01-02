@@ -384,7 +384,18 @@ void solve() {
      ans strength pi
 
      */
-    
+    ll x,m;cin>>x>>m;
+    ll cnt = 0;
+
+    for(ll i = 1;i<2*x;i++){
+        ll d = x^i;
+        if(d != 0 && (x % d ==0 || i % d==0)){
+            cnt++;
+        }
+    }
+    cout << cnt << nl;
+
+
 
     
 
