@@ -403,7 +403,8 @@ void solve() {
             }
 
          }
-         
+         cout << cnt << nl;
+
 
 
     
