@@ -404,7 +404,16 @@ void solve() {
                 }
              }
            
-          
+           else  if(w >= demand){
+                w = w-demand;
+                demand++;
+                cnt++;
+            }
+           else  if(b>=demand){
+                b = b- demand;
+                demand++;
+                cnt++;
+            }
 
          }
          cout << cnt << nl;
