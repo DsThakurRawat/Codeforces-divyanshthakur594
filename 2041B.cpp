@@ -390,13 +390,30 @@ void solve() {
     ll cnt = 0;
 
     while(w >= demand || b >= demand){
+
+             if(w >=demand && b >= demand){
+                if(w < b){
+                    w = w-demand;
+                    demand++;
+                    cnt++;
+                }
+                else{
+                    b = b - demand;
+                    demand++;
+                    cnt++;
+                }
+             }
            
-            if(w >= demand || b >=demand){
+            if(w >= demand){
                 w = w-demand;
                 demand++;
                 cnt++;
             }
-           
+            if(b>=demand){
+                b = b- demand;
+                demand++;
+                cnt++;
+            }
 
          }
          cout << cnt << nl;
