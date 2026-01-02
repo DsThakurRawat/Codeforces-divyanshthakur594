@@ -387,7 +387,7 @@ void solve() {
     ll x,m;cin>>x>>m;
     ll cnt = 0;
 
-    for(ll y = 1;y<min(2*x,m);y++){
+    for(ll y = 1;y<=min(2*x,m);y++){
         ll d = x^y;
 
           if (x != y and ((x % (x ^ y)) == 0 or (y % (x ^ y) == 0))) {
