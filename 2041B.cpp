@@ -401,12 +401,8 @@ void solve() {
                 demand++;
                 cnt++;
             }
-
-
-         
-
-
-    }
+            
+         }
 
 
     
