@@ -476,13 +476,13 @@ void solve() {
                 cout<<"YES" << nl;
                 return;
              }
-           else if(1 < sum <= 9){
+            if(1 < sum <= 9){
                 cout << "NO" << nl;
                 return;
              }
-             else{
+            
                 s.empty();
-             }
+            
              s = to_string(sum);
              
 
