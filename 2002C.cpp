@@ -387,7 +387,7 @@ void solve() {
 
      ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
-     vector<double>distance(n);
+     vector<ll>distance(n);
     
      
 
@@ -398,7 +398,7 @@ void solve() {
 
      }
        ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
-       double dist = hypot(xt - xs, yt - ys);
+       ll dist = hypot(xt - xs, yt - ys);
 
      
 
