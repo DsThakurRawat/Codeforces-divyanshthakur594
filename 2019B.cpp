@@ -410,7 +410,7 @@ void solve() {
         for (int i = 0; i < q; i++) {
             ll k;
             cin >> k;
-            cout << cnt[k] << (i + 1 < q ? ' ' : '\n');
+            cout << cnt[k] << (i + 1 < q ? ' ' : nl);
         }
 
             /*
