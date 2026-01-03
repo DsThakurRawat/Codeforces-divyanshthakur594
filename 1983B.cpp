@@ -470,9 +470,9 @@ void solve() {
             }
         }
 
-        for(ll i =0;i<n;i++){
+        for(ll i =0;i<m;i++){
             int s1 = 0,s2 = 0;
-            for(ll j = 0;j<m;j++){
+            for(ll j = 0;j<n;j++){
                 s1 +=(a[j][i] - '0');
                 s2 +=(b[j][i]-'0');
 
