@@ -467,7 +467,7 @@ void solve() {
 
          while(true){
              ll sum = 0;
-             for(ll i = 0;i<s.size();i++){
+             for(ll i = 0;i<ll(s.size());i++){
                  
                 sum += sq(s[i]-'0');
 
