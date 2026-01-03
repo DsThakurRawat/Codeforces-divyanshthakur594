@@ -379,17 +379,36 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-     /*
-     ith has wieght w 
-     ans strength pi
+        int n, q;
+        cin >> n >> q;
 
-     */
-    ll n,q;cin>>n>>q;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
+        vector<ll> x(n);
+        for (int i = 0; i < n; i++) cin >> x[i];
 
-    vector<ll>qu(q);for(auto &k:qu)cin>>k;
-    
+        unordered_map<ll, ll> cnt;
+        cnt.reserve(2 * n);
 
+        // Points exactly at xi
+        for (int i = 0; i < n; i++) {
+            ll k = (ll)i * (n - i - 1);
+            cnt[k]++;
+        }
+
+        // Points between xi and x(i+1)
+        for (int i = 0; i + 1 < n; i++) {
+            ll len = x[i + 1] - x[i] - 1;
+            if (len > 0) {
+                ll k = (ll)(i + 1) * (n - i - 1);
+                cnt[k] += len;
+            }
+        }
+
+        // Answer queries
+        while (q--) {
+            ll k;
+            cin >> k;
+            cout << cnt[k] << "\n";
+        }
     
 
             
