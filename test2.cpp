@@ -461,6 +461,42 @@ void solve() {
 
          ll n;cin>>n;
 
+         string s = to_string(n);
+
+         auto sq = [&] (ll x){return x*x;};
+
+         while(true){
+             ll sum = 0;
+             for(ll i = 0;i<s.size();i++){
+                 
+                sum += sq(s[i]-'0');
+
+             }
+             if(sum == 1){
+                cout<<"YES" << nl;
+                return;
+             }
+           else if(1 < sum <= 9){
+                cout << "NO" << nl;
+                return;
+             }
+             else{
+                s = to_string(sum);
+             }
+             
+
+
+
+
+
+
+
+
+
+
+
+         }
+
          
 
 
