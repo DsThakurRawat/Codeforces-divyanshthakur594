@@ -474,6 +474,9 @@ auto sq = [&] (ll x){return x*x;};
              }
 
          }
+         cout << cnt << nl;
+         for(auto &ot :ans) cout << ot <<" ";
+         cout << nl;
 
 
 
