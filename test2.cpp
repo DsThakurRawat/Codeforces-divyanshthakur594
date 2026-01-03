@@ -481,7 +481,7 @@ void solve() {
                 return;
              }
             
-                s.empty();
+                
             
              s = to_string(sum);
              
