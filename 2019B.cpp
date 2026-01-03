@@ -386,8 +386,8 @@ void solve() {
      */
     ll n,q;cin>>n>>q;
     vector<ll>v(n);for(auto &in:v)cin>>in;
-    
 
+    vector<ll>qu(q);for(auto &k:qu)cin>>k;
     
 
     
