@@ -385,27 +385,23 @@ void solve() {
 
      */
 
-     ll n;cin>>n;
+   ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
-     vector<ll>distance(n);
+     vector<double>distance(n);
     
-     
+      
+     auto sq = [&] (ll x){return x*x;};
 
-
-     for(int i =0;i<n;i++){
-        cin>>circles[i].first>>circles[i].second;
-       
-
-     }
-       ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
-       ll dist = hypot(xt - xs, yt - ys);
-
-     
+    
 
      for(ll i = 0;i<n;i++){
-         distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
-
-        if(distance[i] <=dist){
+        cin>>circles[i].first>>circles[i].second;
+     }
+       ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
+      ll dist = sq(xt-xs) + sq(yt-ys);
+     for(ll i =0;i<n;i++){
+        ll d = sq(xt-circles[i].first) + sq(yt-circles[i].second);
+        if(d <= dist){
             cout << "NO" << nl;
             return;
         }
