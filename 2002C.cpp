@@ -401,7 +401,7 @@ void solve() {
      
 
      for(ll i = 0;i<n;i++){
-        if(distance[i] >dist){
+        if(distance[i] >=dist){
             cout << "NO" << nl;
             return;
         }
