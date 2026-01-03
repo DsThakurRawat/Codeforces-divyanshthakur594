@@ -450,6 +450,7 @@ void solve() {
       ll x ,n;cin>>x>>n;
       if(n==x){
         cout << 1 << nl;
+        return;
       }
      /*
 
