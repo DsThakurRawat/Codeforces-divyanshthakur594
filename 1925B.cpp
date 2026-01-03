@@ -451,7 +451,23 @@ void solve() {
       if(n==x){
         cout << 1 << nl;
       }
+     /*
+
+     hint 1 :  GCD(a1,a2,a3,…,an)=GCD(a1,a1+a2,a1+a2+a3,…,a1+a2+a3+
+     hint 2 : The maximum GCD that can be achieved is always a divisor of x.
+
      
+     */
+    ll res = 1;
+
+    for(ll i = 1;i*i<=x;i++){
+        if(x % i ==0){
+            if(n <= x /i) res = max(res,i);
+            if(n<=i) res = max(res,x/i);
+        }
+    }
+
+    cout << res << nl;
     
 
     
