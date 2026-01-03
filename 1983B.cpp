@@ -479,6 +479,7 @@ void solve() {
             }
             if(s1 % 3 != s2 % 3 ){
                 cout << "NO" << nl;
+                return;
             }
         }
         cout << "YES" << nl;
