@@ -388,7 +388,6 @@ void solve() {
         unordered_map<ll, ll> cnt;
         cnt.reserve(2 * n);
 
-        // Points exactly at xi
         for (int i = 0; i < n; i++) {
             ll L = i + 1;
             ll R = n - i;
@@ -396,7 +395,7 @@ void solve() {
             cnt[k]++;
         }
 
-        // Points strictly between xi and x(i+1)
+      
         for (int i = 0; i + 1 < n; i++) {
             ll len = x[i + 1] - x[i] - 1;
             if (len > 0) {
@@ -407,14 +406,52 @@ void solve() {
             }
         }
 
-        // Output answers in ONE LINE
+       
         for (int i = 0; i < q; i++) {
             ll k;
             cin >> k;
             cout << cnt[k] << (i + 1 < q ? ' ' : '\n');
         }
 
+            /*
+        int n, q;
+        cin >> n >> q;
+
+        vector<ll> x(n);
+        for (int i = 0; i < n; i++) cin >> x[i];
+
+        unordered_map<ll, ll> cnt;
+        cnt.reserve(2 * n);
+
+        // Case 2: points exactly at xi
+        // cnt[i*(n-i+1)-1] += 1
+        for (int i = 1; i <= n; i++) {
+            ll k = (ll)i * (n - i + 1) - 1;
+            cnt[k]++;
+        }
+
+        // Case 1: points strictly between xi and x(i+1)
+        // cnt[i*(n-i)] += (x[i] - x[i-1] - 1)
+        for (int i = 1; i < n; i++) {
+            ll gap = x[i] - x[i - 1] - 1;
+            if (gap > 0) {
+                ll k = (ll)i * (n - i);
+                cnt[k] += gap;
+            }
+        }
+
+        // Output in ONE line per test case
+        for (int i = 0; i < q; i++) {
+            ll k;
+            cin >> k;
+            cout << cnt[k] << (i + 1 < q ? ' ' : '\n');
+        }
             
+            
+            
+            
+            
+            */
         
         
           
