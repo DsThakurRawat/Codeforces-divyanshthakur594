@@ -472,6 +472,18 @@ void solve() {
             cout << "YES" << nl;
             return;
            }
+           if(seen.count(n)){
+            cout << "NO" << nl;
+           }
+           seen.insert(n);
+           ll sum = 0;
+           while(n>0){
+            ll d = n % 10;
+            sum += sq(d);
+            n /=10;
+           }
+           n = sum;
+
 
 
 
