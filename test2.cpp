@@ -458,25 +458,30 @@ auto sq = [&] (ll x){return x*x;};
 
         
           */
-         ll n;cin>>n;
-         vector<ll>ans;
-         ll cnt = 0;
+         int N;
+        cin >> N;
 
-         for(ll i = 1;i*i<=n;i++){
+        vector<int> cnt(N + 1, 0);
 
-             for(ll j = i+1;j*j+i*i<=n;j++){
-                  
-                    cnt++;
-                   ans.push_back(sq(i) + sq(j));
-                 
-             }
+        int LIM = sqrt(N);
 
-         }
-         cout << cnt << nl;
-         sort(ans.begin(),ans.end());
-         for(auto &ot :ans) cout << ot <<" ";
-         cout << nl;
+        for (int x = 1; x <= LIM; x++) {
+            int xx = x * x;
+            for (int y = x + 1; ; y++) {
+                int s = xx + y * y;
+                if (s > N) break;
+                cnt[s]++;
+            }
+        }
 
+        vector<int> ans;
+        for (int i = 1; i <= N; i++) {
+            if (cnt[i] == 1) ans.push_back(i);
+        }
+
+        cout << ans.size() << '\n';
+        for (int x : ans) cout << x << ' ';
+        cout << '\n';
 
 
 
