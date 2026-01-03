@@ -474,6 +474,7 @@ void solve() {
            }
            if(seen.count(n)){
             cout << "NO" << nl;
+            return;
            }
            seen.insert(n);
            ll sum = 0;
