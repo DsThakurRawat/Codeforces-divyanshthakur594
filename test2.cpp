@@ -476,7 +476,7 @@ void solve() {
                 cout<<"YES" << nl;
                 return;
              }
-            if(1 < sum <= 9){
+            if(1 < sum &&  sum <= 9){
                 cout << "NO" << nl;
                 return;
              }
