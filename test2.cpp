@@ -358,6 +358,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 ////////////////stable square root of number////////////////////
   auto sq = [&] (ll x){return x*x;};
 
+  NOTE:1____ GCD(a1,a2,a3,…,an)=GCD(a1,a1+a2,a1+a2+a3,…,a1+a2+a3+)
 
 
 
@@ -416,7 +417,8 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 
-  
+
+
 */
 
 
@@ -451,7 +453,9 @@ void solve() {
     
 
             
-        
+        ll n;cin>>n;
+        cout << pow(2,n) - 2*n<< nl;
+
         
           
          
@@ -469,12 +473,12 @@ int main() {
     cin.tie(nullptr);
  
    
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+ //   int t ;
+   // t=1;
+    //cin >> t;
+    //while (t--) {
      solve();
-    }
+   // }
 
   
     return 0;
