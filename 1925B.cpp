@@ -446,6 +446,12 @@ void solve() {
      ans strength pi
 
      */
+
+      ll x ,n;cin>>x>>n;
+      if(n==x){
+        cout << 1 << nl;
+      }
+     
     
 
     
