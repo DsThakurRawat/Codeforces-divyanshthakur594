@@ -453,11 +453,14 @@ void solve() {
     
 
             
-        ll n;cin>>n;
+     /*   ll n;cin>>n;
         cout << pow(2,n) - 2*n<< nl;
 
         
-          
+          */
+
+         ll n;cin>>n;
+
          
 
 
