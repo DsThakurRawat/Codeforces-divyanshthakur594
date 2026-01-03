@@ -464,32 +464,14 @@ void solve() {
          string s = to_string(n);
 
          auto sq = [&] (ll x){return x*x;};
+         set<ll>seen;
 
          while(true){
-             ll sum = 0;
-             for(ll i = 0;i<ll(s.size());i++){
-                 
-                sum += sq(s[i]-'0');
-
-             }
-             if(sum == 1){
-                cout<<"YES" << nl;
-                return;
-             }
-            if(1 < sum &&  sum <= 9){
-                cout << "NO" << nl;
-                return;
-             }
-            
-                
-            
-             s = to_string(sum);
-             
-
-
-
-
-
+          
+           if(n==1){
+            cout << "YES" << nl;
+            return;
+           }
 
 
 
