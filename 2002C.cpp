@@ -388,16 +388,17 @@ void solve() {
      ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
      vector<double>distance(n);
-      ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
+    
       
      auto sq = [&] (ll x){return x*x;};
 
-     ll dist = sq(xt-xs) + sq(yt-ys);
+    
 
      for(ll i = 0;i<n;i++){
         cin>>circles[i].first>>circles[i].second;
      }
-     
+       ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
+      ll dist = sq(xt-xs) + sq(yt-ys);
      for(ll i =0;i<n;i++){
         ll d = sq(xt-circles[i].first) + sq(yt-circles[i].second);
         if(d <= dist){
