@@ -387,12 +387,23 @@ void solve() {
 
      ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
+     vector<double>distance(n);
+      ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
+     double dist = hypot(xt - xs, yt - ys);
+
+
 
      for(int i =0;i<n;i++){
         cin>>circles[i].first>>circles[i].second;
+        distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
+
      }
      ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
      double dist = hypot(xt - xs, yt - ys);
+
+
+
+
     
 
     
