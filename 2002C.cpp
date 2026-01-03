@@ -387,7 +387,7 @@ void solve() {
 
      ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
-     vector<double>distance(n);
+     vector<double>distanceT(n),distanceS;
       ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
      double dist = hypot(xt - xs, yt - ys);
 
@@ -395,13 +395,16 @@ void solve() {
 
      for(int i =0;i<n;i++){
         cin>>circles[i].first>>circles[i].second;
-        distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
+        distanceT[i] = hypot(xt-circles[i].first,yt-circles[i].second);
+
+       distanceS[i] = hypot(xs - circles[i].first,  ys - circles[i].second);
 
      }
      
 
      for(ll i = 0;i<n;i++){
-        if(distance[i] >=dist){
+
+        if(min(distanceS[i],distanceT[i]) <=dist){
             cout << "NO" << nl;
             return;
         }
