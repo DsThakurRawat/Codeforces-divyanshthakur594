@@ -402,6 +402,7 @@ void solve() {
         ll d = sq(xt-circles[i].first) + sq(yt-circles[i].second);
         if(d <= dist){
             cout << "NO" << nl;
+            return;
         }
      }
      cout << "YES" << nl;
