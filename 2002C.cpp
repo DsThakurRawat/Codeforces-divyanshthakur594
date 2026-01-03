@@ -398,8 +398,7 @@ void solve() {
         distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
 
      }
-     ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
-     double dist = hypot(xt - xs, yt - ys);
+     
 
      for(ll i = 0;i<n;i++){
         if(distance[i] <=dist){
