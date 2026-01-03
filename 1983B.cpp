@@ -449,7 +449,7 @@ void solve() {
 
      */
         ll n,m;cin>>n>>m;
-        vector<string>a(n),b(m);
+        vector<string>a(n),b(n);
         for(ll i = 0;i<n;i++){
             cin>>a[i];
         }
