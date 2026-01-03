@@ -394,7 +394,7 @@ void solve() {
 
      for(int i =0;i<n;i++){
         cin>>circles[i].first>>circles[i].second;
-        distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
+       
 
      }
        ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
@@ -403,6 +403,7 @@ void solve() {
      
 
      for(ll i = 0;i<n;i++){
+         distance[i] = hypot(xt-circles[i].first,yt-circles[i].second);
 
         if(distance[i] <=dist){
             cout << "NO" << nl;
