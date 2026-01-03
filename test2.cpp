@@ -459,39 +459,26 @@ void solve() {
         
           */
 
-         ll n;cin>>n;
+            ll n;
+            cin >> n;
 
-         string s = to_string(n);
+            auto sq = [](ll x) { return x * x; };
+            set<ll> seen;
 
-         auto sq = [&] (ll x){return x*x;};
-         set<ll>seen;
+            while (n != 1 && !seen.count(n)) {
+                seen.insert(n);
+                ll sum = 0;
+                while (n > 0) {
+                    ll d = n % 10;
+                    sum += sq(d);
+                    n /= 10;
+                }
+                n = sum;
+            }
 
-         while(true){
-          
-           if(n==1){
-            cout << "YES" << nl;
-            return;
-           }
-           if(seen.count(n)){
-            cout << "NO" << nl;
-            return;
-           }
-           seen.insert(n);
-           ll sum = 0;
-           while(n>0){
-            ll d = n % 10;
-            sum += sq(d);
-            n /=10;
-           }
-           n = sum;
+            if (n == 1) cout << "YES"<<nl;
+            else cout << "NO"<<nl;
 
-
-
-
-
-
-
-         }
 
          
 
