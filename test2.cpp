@@ -465,7 +465,7 @@ void solve() {
             auto sq = [](ll x) { return x * x; };
             set<ll> seen;
 
-            while (n != 1 && !seen.count(n)) {
+            while (n != 1 && !seen.count(n)){
                 seen.insert(n);
                 ll sum = 0;
                 while (n > 0) {
@@ -476,8 +476,8 @@ void solve() {
                 n = sum;
             }
 
-            if (n == 1) cout << "YES"<<nl;
-            else cout << "NO"<<nl;
+            if (n == 1) cout << "Yes"<<nl;
+            else cout << "No"<<nl;
 
 
          
