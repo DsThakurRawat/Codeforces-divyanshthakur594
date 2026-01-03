@@ -379,7 +379,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-        int n, q;
+         int n, q;
         cin >> n >> q;
 
         vector<ll> x(n);
@@ -390,26 +390,29 @@ void solve() {
 
         // Points exactly at xi
         for (int i = 0; i < n; i++) {
-            ll k = (ll)i * (n - i - 1);
+            ll L = i + 1;
+            ll R = n - i;
+            ll k = L * R - 1;
             cnt[k]++;
         }
 
-        // Points between xi and x(i+1)
+        // Points strictly between xi and x(i+1)
         for (int i = 0; i + 1 < n; i++) {
             ll len = x[i + 1] - x[i] - 1;
             if (len > 0) {
-                ll k = (ll)(i + 1) * (n - i - 1);
+                ll L = i + 1;
+                ll R = n - i - 1;
+                ll k = L * R;
                 cnt[k] += len;
             }
         }
 
-        // Answer queries
-        while (q--) {
+        // Output answers in ONE LINE
+        for (int i = 0; i < q; i++) {
             ll k;
             cin >> k;
-            cout << cnt[k] << "\n";
+            cout << cnt[k] << (i + 1 < q ? ' ' : '\n');
         }
-    
 
             
         
