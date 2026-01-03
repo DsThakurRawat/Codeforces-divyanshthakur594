@@ -473,6 +473,7 @@ auto sq = [&] (ll x){return x*x;};
 
          }
          cout << cnt << nl;
+         sort(ans.begin(),ans.end());
          for(auto &ot :ans) cout << ot <<" ";
          cout << nl;
 
