@@ -392,6 +392,7 @@ void solve() {
         cin>>circles[i].first>>circles[i].second;
      }
      ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
+     double dist = hypot(xt - xs, yt - ys);
     
 
     
