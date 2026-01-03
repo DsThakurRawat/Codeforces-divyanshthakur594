@@ -401,7 +401,7 @@ void solve() {
 
      */
 
-   ll n;cin>>n;
+     ll n;cin>>n;
      vector<pair<ll ,ll>>circles(n);
      vector<double>distance(n);
     
