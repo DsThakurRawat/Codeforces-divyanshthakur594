@@ -401,6 +401,15 @@ void solve() {
      ll xs,ys,xt,yt;cin>>xs>>ys>>xt>>yt;
      double dist = hypot(xt - xs, yt - ys);
 
+     for(ll i = 0;i<n;i++){
+        if(distance[i] <=dist){
+            cout << "NO" << nl;
+            return;
+        }
+     }
+     cout << "YES" << nl;
+
+
 
 
 
