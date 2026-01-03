@@ -444,17 +444,38 @@ void solve() {
      /*
      ith has wieght w 
      ans strength pi
+     
+
 
      */
-    ll n,m;cin>>n>>m;
-    vector<string>a(n),b(m);
-    for(ll i = 0;i<n;i++){
-        cin>>a[i];
-    }
-    for(ll i = 0;i<m;i++){
-        cin>>b[i];
-    }
-    
+        ll n,m;cin>>n>>m;
+        vector<string>a(n),b(m);
+        for(ll i = 0;i<n;i++){
+            cin>>a[i];
+        }
+        for(ll i = 0;i<m;i++){
+            cin>>b[i];
+            
+        }
+
+        for(ll i =0;i<n;i++){
+            int s1 = 0,s2 = 0;
+            for(int j = 0;j<m;j++){
+                s1 +=(a[i][j] -'0');
+                s2 +=(b[i][j] - '0');
+            }
+            if(s1 % 3 != s2 % 3 ){
+                cout << "NO" << nl;
+                return;
+            }
+        }
+
+
+
+
+
+
+
 
 
     
