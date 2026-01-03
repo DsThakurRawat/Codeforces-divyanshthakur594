@@ -442,7 +442,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
-
+auto sq = [&] (ll x){return x*x;};
      /*
      ith has wieght w 
      ans strength pi
@@ -463,7 +463,7 @@ void solve() {
 
          string s = to_string(n);
 
-         auto sq = [&] (ll x){return x*x;};
+
          set<ll>seen;
 
          while(true){
