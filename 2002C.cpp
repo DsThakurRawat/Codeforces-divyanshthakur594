@@ -355,6 +355,22 @@ double dist = hypot(x2 - x1, y2 - y1);
                 Condition: Always
 
 ==============================================================
+////////////////stable square root of number////////////////////
+  auto sq = [&] (ll x){return x*x;};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
 
 
