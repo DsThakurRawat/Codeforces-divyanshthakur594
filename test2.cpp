@@ -459,7 +459,22 @@ auto sq = [&] (ll x){return x*x;};
         
           */
          ll n;cin>>n;
-         
+         vector<ll>ans;
+         ll cnt = 0;
+
+         for(ll i = 1;i*i<n;i++){
+
+             for(ll j = i+1;j*j<=n;j++){
+                   if(sq(i) + sq(j) <= n){
+                    cnt++;
+                    ans.push_back(i);
+                    ans.push_back(j);
+
+                   }
+             }
+
+         }
+
 
 
 
