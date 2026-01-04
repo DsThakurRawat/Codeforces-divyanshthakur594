@@ -458,13 +458,14 @@ auto sq = [&] (ll x){return x*x;};
 
         
           */
+        
 
           ll x,y,k;cin>>x>>y>>k;
 
 
           while(k>0){
               x = x+1;
-           
+             int f1 = 0;
              ll rem = x % y;
              ll req = y-rem;
             if(req + k < y){
@@ -472,6 +473,8 @@ auto sq = [&] (ll x){return x*x;};
                 return;
             }
             if(req +k>= y && k > 0){
+                
+
                 x = x + req;
                 k = k - req;
                   while(x % y == 0){
