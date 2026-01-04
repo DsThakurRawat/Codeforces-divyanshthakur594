@@ -473,6 +473,7 @@ auto sq = [&] (ll x){return x*x;};
                 return;
             }
             if(req +k>= y && k > 0){
+                f1 = 1;
                 
 
                 x = x + req;
@@ -489,8 +490,11 @@ auto sq = [&] (ll x){return x*x;};
                 
             } 
 
+            
           
+           if(f1 == 0){
                k--;
+           }
            
             
 
