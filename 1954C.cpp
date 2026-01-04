@@ -442,8 +442,20 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
+     
+       string x,y;cin>>x>>y;
+       ll n = x.size();
 
-    
+       bool flag = 0;
+
+       for(ll i =0;i<n;i++){
+        if((x[i] > y[i]) == flag){
+            swap(x[i],y[i]);
+            flag |= (x[i] != y[i]);
+
+        }
+       }
+       cout << x << nl << y << nl;
 
 
 
