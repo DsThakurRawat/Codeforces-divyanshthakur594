@@ -451,9 +451,10 @@ void solve() {
        for(ll i =0;i<n;i++){
         if((x[i] > y[i]) == flag){
             swap(x[i],y[i]);
-            flag |= (x[i] != y[i]);
+          
 
         }
+          flag |= (x[i] != y[i]);
        }
        cout << x << nl << y << nl;
 
