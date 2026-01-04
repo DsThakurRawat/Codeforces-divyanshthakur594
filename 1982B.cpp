@@ -464,7 +464,7 @@ auto sq = [&] (ll x){return x*x;};
            cout << x + k << nl;
              return;
                 }
-          while(k > 0 && x >= y){
+          while(k > 0){
 
             ll rem = x % y ;
             ll req = (rem == 0 ?0:y-rem);
