@@ -478,6 +478,7 @@ auto sq = [&] (ll x){return x*x;};
             while(x % y == 0){
                 x = x/y;
             }
+            x = x+1;
             k--;
 
 
