@@ -454,7 +454,7 @@ auto sq = [&] (ll x){return x*x;};
                
             
              
-                vector<int> dp(x + 1, LLONG_MAX);
+                vector<ll> dp(x + 1, LLONG_MAX);
                 dp[0] = 0; 
             
                 for (int i = 0; i < v.size(); i++) {
