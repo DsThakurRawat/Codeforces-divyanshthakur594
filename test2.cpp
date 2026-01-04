@@ -458,7 +458,7 @@ auto sq = [&] (ll x){return x*x;};
                 dp[0] = 0; 
             
                 for (int i = 0; i < v.size(); i++) {
-                    for (int j = v[i]; j <= x; j++) {
+                    for (ll j = v[i]; j <= x; j++) {
                         dp[j] = min(dp[j], 1 + dp[j - v[i]]);
                     }
                 }
