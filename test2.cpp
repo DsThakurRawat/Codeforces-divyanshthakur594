@@ -444,30 +444,26 @@ double dist = hypot(x2 - x1, y2 - y1);
 void solve() {
 auto sq = [&] (ll x){return x*x;};
 
-                 ll x;
+                ll x;
                 cin >> x;
-                ll n = 5;
-                vector<ll> v(n);
-                v[0] = 1;
-                v[1] = 3;
-                v[2] = 6;
-                v[3] = 10;
-                v[4] = 15;
+               
+                vector<ll> v = {1,3,6,10,15};
+               
 
                 
                
             
-                const ll INF = 1e9;
-                vector<int> dp(x + 1, INF);
+             
+                vector<int> dp(x + 1, LLONG_MAX);
                 dp[0] = 0; 
             
-                for (int i = 0; i < n; i++) {
+                for (int i = 0; i < v.size(); i++) {
                     for (int j = v[i]; j <= x; j++) {
                         dp[j] = min(dp[j], 1 + dp[j - v[i]]);
                     }
                 }
             
-                if (dp[x] >= INF) cout << -1 << endl;
+                if (dp[x] >= LLONG_MAX) cout << -1 << endl;
                 else cout << dp[x] << endl;
 
             
