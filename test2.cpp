@@ -443,24 +443,29 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 auto sq = [&] (ll x){return x*x;};
-     /*
-     ith has wieght w 
-     ans strength pi
 
-     */
-    
+              
+            int n;cin>>n;
+            vector<ll>v = {1,3,6,10,15};
 
-    
+            vector<ll>dp(n+1,LLONG_MAX);
+            dp[0] = 0;
 
+            for(ll i = 0;i<v.size();i++){
+                for(int  j = v[i];j<=n;j++){
+                    dp[j] = min(dp[j],1+dp[j-v[i]]);
+                }
+            }
+            if(dp[n] >= LLONG_MAX){
+                cout<< -1 << nl;
+            }
+            else cout << dp[n] << nl;
             
-     /*   ll n;cin>>n;
-        cout << pow(2,n) - 2*n<< nl;
-
-        
-          */
-         
+            
 
 
+
+    
 
 
          
