@@ -459,7 +459,7 @@ auto sq = [&] (ll x){return x*x;};
         
           */
 
-          ll x,y,k;
+          ll x,y,k;cin>>x>>y>>k;
 
           while(k > 0){
             x = x+1;
