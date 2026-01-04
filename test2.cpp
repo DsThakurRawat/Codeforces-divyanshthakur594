@@ -442,7 +442,6 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
-auto sq = [&] (ll x){return x*x;};
 
                 int x;
                 cin >> x;
@@ -464,8 +463,8 @@ auto sq = [&] (ll x){return x*x;};
                     }
                 }
             
-                if (dp[x] >= INT_MAX) cout << -1 << endl;
-                else cout << dp[x] << endl;
+               
+                 cout << dp[x] << endl;
 
             
             
