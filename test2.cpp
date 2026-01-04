@@ -443,7 +443,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-               vector<int> best = {0,1,2,1,2,3,1,2,3,2,1,2,2,2,3};
+        vector<int> best = {0,1,2,1,2,3,1,2,3,2,1,2,2,2,3};
         ll n;
         cin >> n;
         cout << n / 15 + best[n % 15] << nl;        
