@@ -459,6 +459,7 @@ auto sq = [&] (ll x){return x*x;};
             
                 for (int i = 0; i < v.size(); i++) {
                     for (int j = v[i]; j <= x; j++) {
+                         if (dp[j - v[i]] != INT_MAX)
                         dp[j] = min(dp[j], 1 + dp[j - v[i]]);
                     }
                 }
