@@ -458,6 +458,21 @@ auto sq = [&] (ll x){return x*x;};
 
         
           */
+
+          ll x,y,k;
+
+          while(k > 0){
+            x = x+1;
+
+            while(x % 3 == 0){
+                x = x/y;
+            }
+            k--;
+
+
+          }
+          cout << x << nl;
+
      
 
 
