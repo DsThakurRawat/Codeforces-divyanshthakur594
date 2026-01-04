@@ -461,15 +461,15 @@ auto sq = [&] (ll x){return x*x;};
 
          ll x,y,k;cin>>x>>y>>k;
          while( k > 0 && x !=1){
-            ll ost = (x / y+1)*y - x;
-            ost = max(1LL,ost);
-            ost = min(ost,k);
-            x += ost;
+            ll req = (x / y+1)*y - x;
+            req = max(1LL,req);
+            req = min(req,k);
+            x += req;
 
             while( x % y == 0){
                 x /= y;
             } 
-            k -= ost;
+            k -= req;
          }
          cout << x + k % ( y -1) << nl;
 
