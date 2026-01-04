@@ -446,7 +446,7 @@ void solve() {
        string x,y;cin>>x>>y;
        ll n = x.size();
 
-       bool flag = 0;
+       bool flag = false;
 
        for(ll i =0;i<n;i++){
         if((x[i] > y[i]) == flag){
