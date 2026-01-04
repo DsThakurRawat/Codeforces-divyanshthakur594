@@ -447,25 +447,27 @@ void solve() {
                 cin >> x;
                
                 vector<int> v = {1,3,6,10,15};
-               
+                const int INF = 1e9;
+
+                vector<int> dp(15, INF);
+                dp[0] = 0;
+
+                for (int coin : v) {
+                    for (int j = coin; j < 15; j++) {
+                        if (dp[j - coin] != INF) {
+                            dp[j] = min(dp[j], 1 + dp[j - coin]);
+                        }
+                    }
+                }
+
+                int ans = x / 15 + dp[x % 15];
+                cout << ans << endl;
+                            
 
                 
                
             
              
-                vector<int> dp(x + 1, INT_MAX);
-                dp[0] = 0; 
-            
-                for (int i = 0; i < v.size(); i++) {
-                    for (int j = v[i]; j <= x; j++) {
-                         if (dp[j - v[i]] != INT_MAX)
-                        dp[j] = min(dp[j], 1 + dp[j - v[i]]);
-                    }
-                }
-            
-               
-                 cout << dp[x] << endl;
-
             
             
 
