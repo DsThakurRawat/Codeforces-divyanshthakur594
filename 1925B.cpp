@@ -454,7 +454,7 @@ void solve() {
       }
      /*
 
-     hint 1 :  GCD(a1,a2,a3,…,an)=GCD(a1,a1+a2,a1+a2+a3,…,a1+a2+a3+
+     hint 1 :  
      hint 2 : The maximum GCD that can be achieved is always a divisor of x.
 
      
