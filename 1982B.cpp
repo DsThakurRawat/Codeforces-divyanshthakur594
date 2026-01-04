@@ -491,12 +491,12 @@ int main() {
     cin.tie(nullptr);
  
    
- //   int t ;
-   // t=1;
-    //cin >> t;
-    //while (t--) {
+    int t ;
+    t=1;
+    cin >> t;
+    while (t--) {
      solve();
-   // }
+    }
 
   
     return 0;
