@@ -448,7 +448,7 @@ auto sq = [&] (ll x){return x*x;};
             int n;cin>>n;
             vector<ll>v = {1,3,6,10,15};
 
-            vector<ll>dp(n+1,LLONG_MAX);
+            vector<ll>dp(v.size()+1,LLONG_MAX);
             dp[0] = 0;
 
             for(ll i = 0;i<v.size();i++){
