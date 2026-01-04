@@ -458,24 +458,7 @@ auto sq = [&] (ll x){return x*x;};
 
         
           */
-         ll n;cin>>n;
-         vector<ll>ans;
-         ll cnt = 0;
-
-         for(ll i = 1;i*i<=n;i++){
-
-             for(ll j = i+1;j*j+i*i<=n;j++){
-                  
-                    cnt++;
-                   ans.push_back(sq(i) + sq(j));
-                 
-             }
-
-         }
-         cout << cnt << nl;
-         sort(ans.begin(),ans.end());
-         for(auto &ot :ans) cout << ot <<" ";
-         cout << nl;
+         
 
 
 
