@@ -451,7 +451,7 @@ void solve() {
                 for(ll d = 0;d<3;d++){
                     ll res = n - a-3*b-6*c-10*d;
                     if(res >= 0 && res % 15 == 0){
-                        ans = min(res , res / 15 + a + b + c + d);
+                        ans = min(res , res / (15 + a + b + c + d));
                     }
                 }
             }
