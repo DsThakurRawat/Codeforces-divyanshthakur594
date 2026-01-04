@@ -462,48 +462,36 @@ auto sq = [&] (ll x){return x*x;};
 
           ll x,y,k;cin>>x>>y>>k;
 
-
           while(k>0){
-              x = x+1;
-             int f1 = 0;
-             ll rem = x % y;
-             ll req = y-rem;
-            if(req + k < y){
-                cout << x << nl;
+
+            ll rem = x % y ;
+            ll req = y - rem;
+            if(req + k >= y){
+                k = k-req;
+                x = x+req;
+                while( x % y ==0){
+                    x = x/y;
+                }
+
+
+            }
+            if(k + x < y){
+                cout << x+k << nl;
                 return;
             }
-            if(req +k>= y && k > 0){
-                f1 = 1;
-                
+            x = x+1;
+            k--;
 
-                x = x + req;
-                k = k - req;
-                  while(x % y == 0){
-                  x = x/y;
 
-            }
+               
 
-                if(x < y){
-                    cout << x << nl;
-                    return;
-                }
-                
-            } 
 
-            
-          
-           if(f1 == 0){
-               k--;
-           }
-           
-            
 
+
+         
 
           }
-          cout << x << nl;
 
-
-     
 
 
          
