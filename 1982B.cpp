@@ -460,7 +460,10 @@ auto sq = [&] (ll x){return x*x;};
           */
 
           ll x,y,k;cin>>x>>y>>k;
-
+          if (y == 1) {
+           cout << x + k << nl;
+             return;
+                }
           while(k > 0 && x >= y){
 
             ll rem = x % y ;
