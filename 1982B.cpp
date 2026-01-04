@@ -464,7 +464,7 @@ auto sq = [&] (ll x){return x*x;};
           while(k > 0){
             x = x+1;
 
-            while(x % 3 != 0){
+            while(x % y == 0){
                 x = x/y;
             }
             k--;
