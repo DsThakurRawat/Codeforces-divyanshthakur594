@@ -443,13 +443,23 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-        vector<int> best = {0,1,2,1,2,3,1,2,3,2,1,2,2,2,3};
-        ll n;
-        cin >> n;
-        cout << n / 15 + best[n % 15] << nl;        
+    ll n;cin>>n;
+    ll ans = n;
+    for(ll a = 0;a<3;a++){
+        for(ll b = 0;b<2;b++){
+            for(ll c = 0;c<5;c++){
+                for(ll d = 0;d<3;d++){
+                    ll res = n - a-3*b-6*c-10*d;
+                    if(res >= 0 && res % 15 == 0){
+                        ans = min(res , res / 15 + a + b + c + d);
+                    }
+                }
+            }
+        }
+    }
+    cout << ans << nl;
 
-                
-               
+     
             
              
             
