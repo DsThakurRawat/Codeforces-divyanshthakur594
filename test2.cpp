@@ -460,7 +460,7 @@ void solve() {
                     }
                 }
 
-                int ans = x / 15 + dp[x % 15];
+                int ans = dp[x % 15];
                 cout << ans << endl;
                             
 
