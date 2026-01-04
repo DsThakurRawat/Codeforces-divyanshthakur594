@@ -469,9 +469,9 @@ auto sq = [&] (ll x){return x*x;};
                 cout << x << nl;
                 return;
             }
-            if(req +k>= y){
+            if(req +k>= y && k > 0){
                 x = x + req;
-                k = k- req;
+                k = k - req;
                 
             } 
 
