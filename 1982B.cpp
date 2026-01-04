@@ -463,6 +463,8 @@ auto sq = [&] (ll x){return x*x;};
 
 
           while(true){
+              x = x+1;
+              k--;
              ll rem = x % y;
              ll req = y-rem;
             if(req + k < y){
@@ -478,8 +480,8 @@ auto sq = [&] (ll x){return x*x;};
             while(x % y == 0){
                 x = x/y;
             }
-            x = x+1;
-            k--;
+           
+            
 
 
           }
