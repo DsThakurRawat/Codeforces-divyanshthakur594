@@ -443,26 +443,10 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-                int x;
-                cin >> x;
-               
-                vector<int> v = {1,3,6,10,15};
-                const int INF = 1e9;
-
-                vector<int> dp(15, INF);
-                dp[0] = 0;
-
-                for (int coin : v) {
-                    for (int j = coin; j < 15; j++) {
-                        if (dp[j - coin] != INF) {
-                            dp[j] = min(dp[j], 1 + dp[j - coin]);
-                        }
-                    }
-                }
-
-                int ans = dp[x % 15];
-                cout << ans << endl;
-                            
+               vector<int> best = {0,1,2,1,2,3,1,2,3,2,1,2,2,2,3};
+        ll n;
+        cin >> n;
+        cout << n / 15 + best[n % 15] << nl;        
 
                 
                
