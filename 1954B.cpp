@@ -452,15 +452,24 @@ void solve() {
         cout << - 1 << nl;
         return;
     }
-    ll cnt = 1;
+    ll cnt1 = 1;
 
     for( ll i = 0;i+1<n;i++){
         if(v[i] != v[i+1]){
             break;
         }
-        else cnt++;
+        else cnt1++;
     }
-    cout << cnt << nl;
+    reverse(all(v));
+    ll cnt2 = 1;
+     for( ll i = 0;i+1<n;i++){
+        if(v[i] != v[i+1]){
+            break;
+        }
+        else cnt2++;
+    }
+
+    cout << min(cnt1,cnt2) << nl;
 
 
 
