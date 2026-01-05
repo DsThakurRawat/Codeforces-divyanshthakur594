@@ -460,6 +460,7 @@ void solve() {
         }
         else cnt++;
     }
+    cout << cnt << nl;
 
 
 
