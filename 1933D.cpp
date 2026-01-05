@@ -466,8 +466,10 @@ void solve() {
     for(int i =1;i<n;i++){
         if(v[i] % tool != 0){
               cout << "YES" << nl;
+              return;
         }
     }
+    cout << "NO" <<nl;
      
 
 
