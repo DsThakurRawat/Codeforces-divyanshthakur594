@@ -448,7 +448,11 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     set<ll>st(v.begin(),v.end());
-    
+    if(st.size() == 1){
+        cout << - 1 << nl;
+        return;
+    }
+
 
 
 
