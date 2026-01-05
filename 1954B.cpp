@@ -447,27 +447,39 @@ void solve() {
 
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
-    set<ll>st(v.begin(),v.end());
-    if(st.size() == 1){
-        cout << - 1 << nl;
-        return;
-    }
 
-    map<ll,ll>mp;
-    for(auto &x : v)mp[x]++;
+    set<ll> st(v.begin(), v.end());
+    if (st.size() == 1) {
+            cout << -1 << nl;
+            return;
+        }
+        ll ans = n;
 
-    ll mx = 0;
-    for(auto &[k,f] : mp) mx = max(mx,f);
+        ll cnt = 0;
 
-    if(mx == n){
-        cout << -1 << nl;
-    }
-    else{
-        cout << n-mx << nl;
-    }
-    
+        for(ll i = 0;i<n&&v[i] == v[0];i++){
+            cnt++;
+        }
+        ans = min(ans,cnt);
 
-    
+        cnt = 0;
+        for(ll i =n-1;i>=0&&v[i] == v[0];i--){
+            cnt++;
+
+        }
+        ans = min(ans,cnt);
+        ll last = -1;
+        for (ll i = 0; i < n; i++) {
+            if (v[i] != v[0]) {
+                if (last != -1) {
+                    ans = min(ans, i - last - 1);
+                }
+                last = i;
+            }
+        }
+        cout << ans <<nl;
+
+            
 
 
 
