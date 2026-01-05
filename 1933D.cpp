@@ -447,6 +447,14 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(all(v),greater<ll>());
+     
+     ll mod = v[0] % v[1];
+
+    for( ll i = 3;i<n;i++){
+         mod = mod % v[2]
+       
+    }
+
     
 
 
