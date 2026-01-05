@@ -460,8 +460,15 @@ void solve() {
     else if(cnt_1 >1){
         cout << "NO" <<nl;
         return;
+    }  
+    ll tool = v[0];
 
+    for(int i =1;i<n;i++){
+        if(v[i] % tool != 0){
+              cout << "YES" << nl;
+        }
     }
+     
 
 
 
