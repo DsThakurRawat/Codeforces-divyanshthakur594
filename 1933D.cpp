@@ -446,7 +446,7 @@ void solve() {
 
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
-    sort(all(v),greater<ll>());
+    sort(all(v));
      
      ll mod = v[0] % v[1];
 
