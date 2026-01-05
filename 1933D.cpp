@@ -450,6 +450,7 @@ void solve() {
 
    if(v[0] != v[1]){
     cout <<"YES" << nl;
+    return;
    }
    if(v[0] == v[1]){
  
