@@ -453,7 +453,7 @@ void solve() {
             cout << -1 << nl;
             return;
         }
-        ll ans = n;
+      /*  ll ans = n;
 
         ll cnt = 0;
 
@@ -478,8 +478,33 @@ void solve() {
             }
         }
         cout << ans <<nl;
+        */
+       ll cnt1 = 1;
+       for(ll i = 0;i+1<n;i++){
+        if(v[i] !=v[i+1])break;
+        cnt1++;
+       }
 
-            
+       ll cnt2 = 1;
+
+       for(ll i =n-1;i>=0;i--){
+        if(v[i] != v[i+1])break;
+        cnt2++;
+       }
+       ll ans = min(cnt1,cnt2);
+
+       ll last = -1;
+
+       for(ll i = 0;i<n;i++){
+        if(v[i] != v[0]){
+            if(last != -1){
+                ans = min(ans,i-last-1);
+            }
+        }
+        last = i;
+       }
+       cout << ans << nl;
+      
 
 
 
