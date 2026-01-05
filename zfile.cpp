@@ -328,10 +328,11 @@ NOTE:For a palindrome, positions i and n - i - 1 must be equal.
 
 
 void solve() {
-    int x, y;
-	cin >> x >> y;
-	
 
+
+
+
+     
 
 
 
