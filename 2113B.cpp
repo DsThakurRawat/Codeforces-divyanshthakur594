@@ -468,6 +468,7 @@ void solve() {
     }
     if( abs(x1-x2) % a == 0 or (y1-y2) % b == 0){
         cout << "YES"<<nl;
+        return;
     }
     cout << "NO" << nl;
 
