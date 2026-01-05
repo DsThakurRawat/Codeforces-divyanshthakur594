@@ -448,31 +448,34 @@ void solve() {
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(all(v));
 
-    ll cnt_1 =0;
-
-    for(auto &t : v){
-        if(t == 1) cnt_1++;
+   if(v[0] != v[1]){
+    cout <<"YES" << nl;
+   }
+   if(v[0] == v[1]){
+ 
+    for(ll i = 0;i<n;i++){
+        if(v[i] % v[0] !=0){
+           cout << "YES"<< nl;
+           return;
+     }
     }
-    if(cnt_1 == 1){
-        cout << "YES" <<nl;
-        return;
-    }
-    else if(cnt_1 >1){
-        cout << "NO" <<nl;
-        return;
-    }  
-    ll tool = v[0];
-
-    for(int i =1;i<n;i++){
-        if(v[i] % tool != 0){
-              cout << "YES" << nl;
-              return;
-        }
-    }
-    cout << "NO" <<nl;
-     
+   }
+   cout << "NO"<< nl;
 
 
+
+
+
+
+
+   
+
+
+
+
+
+
+    
 
     
 
