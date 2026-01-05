@@ -447,13 +447,19 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(all(v));
-    ll mod;
 
-    for(ll i = 0;i+1<n;i++){
-            mod = v[i] % v[i+1];
+    ll cnt_1 =0;
+
+    for(auto &t : v){
+        if(t == 1) cnt_1++;
     }
-     
-     
+    if(cnt_1 == 1){
+        cout << "YES" <<nl;
+    }
+    else if(cnt_1 >1){
+        cout << "NO" <<nl;
+
+    }
 
 
 
