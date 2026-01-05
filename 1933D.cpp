@@ -455,9 +455,11 @@ void solve() {
     }
     if(cnt_1 == 1){
         cout << "YES" <<nl;
+        return;
     }
     else if(cnt_1 >1){
         cout << "NO" <<nl;
+        return;
 
     }
 
