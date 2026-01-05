@@ -453,7 +453,7 @@ void solve() {
    }
    if(v[0] == v[1]){
  
-    for(ll i = 0;i<n;i++){
+    for(ll i = 1;i<n;i++){
         if(v[i] % v[0] !=0){
            cout << "YES"<< nl;
            return;
