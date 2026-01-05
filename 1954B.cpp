@@ -487,8 +487,8 @@ void solve() {
 
        ll cnt2 = 1;
 
-       for(ll i =n-1;i>=0;i--){
-        if(v[i] != v[i+1])break;
+       for(ll i =n-1;i-1>=0;i--){
+        if(v[i] != v[i-1])break;
         cnt2++;
        }
        ll ans = min(cnt1,cnt2);
@@ -500,8 +500,9 @@ void solve() {
             if(last != -1){
                 ans = min(ans,i-last-1);
             }
+             last = i;
         }
-        last = i;
+       
        }
        cout << ans << nl;
       
