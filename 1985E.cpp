@@ -384,30 +384,21 @@ void solve() {
      ans strength pi
 
      */
+    ll x, y, z, k;
+    cin >> x >> y >> z >> k;
+    ll count = 0;
+    for (ll i = 1; i <= x; i++)
+    {
+        for (ll j = 1; j <= y; j++)
+        {
+            if (k % (i * j) == 0 && (k / (i * j) <= z))
+            {
+                count = max(count, (x - i + 1) * (y - j + 1) * (z - (k / (i * j)) + 1));
+            }
+        }
+    }
+    cout << count << endl;
    
-    ll h, n; cin >> h >> n;
-
-		vector<ll> a(n), c(n);
-
-		for(auto& i: a) cin >> i;
-		for(auto& i: c) cin >> i;
-		set<pair<ll, ll>> S;
-		for(ll i = 0; i < n; i++){
-			S.insert({1, i});
-		}
-		ll last_turn = 1;
-		while(h > 0){
-			auto [turn, i] = *S.begin();
-			S.erase(S.begin());
-			last_turn = turn;
-			h -= a[i];
-			S.insert({turn + c[i], i});
-		}
-		cout << last_turn << nl;
-    
-
-    
-
     
 
     
