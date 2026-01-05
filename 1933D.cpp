@@ -451,9 +451,13 @@ void solve() {
      ll mod = v[0] % v[1];
 
     for( ll i = 3;i<n;i++){
-         mod = mod % v[2]
+         mod = mod % v[i];
        
     }
+    if(mod == 0){
+        cout << "NO" << nl;
+    }
+    else cout << "YES" << nl;
 
     
 
