@@ -452,6 +452,14 @@ void solve() {
         cout << - 1 << nl;
         return;
     }
+    ll cnt = 0;
+
+    for( ll i = 0;i+1<n;i++){
+        if(v[i] != v[i+1]){
+            break;
+        }
+        else cnt++;
+    }
 
 
 
