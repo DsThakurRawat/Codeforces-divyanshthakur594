@@ -452,29 +452,20 @@ void solve() {
         cout << - 1 << nl;
         return;
     }
-    ll cnt1 = 1;
 
-    for( ll i = 0;i+1<n;i++){
-        if(v[i] != v[i+1]){
-            break;
-        }
-        else cnt1++;
+    map<ll,ll>mp;
+    for(auto &x : v)mp[x]++;
+
+    ll mx = 0;
+    for(auto &[k,f] : mp) mx = max(mx,f);
+
+    if(mx == n){
+        cout << -1 << nl;
     }
-    reverse(all(v));
-    ll cnt2 = 1;
-     for( ll i = 0;i+1<n;i++){
-        if(v[i] != v[i+1]){
-            break;
-        }
-        else cnt2++;
+    else{
+        cout << n-mx << nl;
     }
-
-    cout << min(cnt1,cnt2) << nl;
-
-
-
-
-
+    
 
     
 
