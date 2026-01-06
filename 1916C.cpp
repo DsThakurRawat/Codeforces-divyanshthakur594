@@ -461,7 +461,7 @@ void solve() {
         }
        }
 
-       for(auto &ot : v)cout << ot << " ";
+       for(auto &ot : prefsum)cout << ot << " ";
         cout << nl;
        
       
