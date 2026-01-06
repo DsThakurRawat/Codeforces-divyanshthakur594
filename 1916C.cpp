@@ -451,15 +451,14 @@ void solve() {
 
        for(int i = 1;i<n;i++){
         prefsum[i] = prefsum[i-1] + v[i];
+        if(prefsum[i] % 2 != 0){
+            ll check = (prefsum[i]/2);
+            prefsum[i] = 2*check;
+        }
        
 
        }
 
-       for(int i = 1;i<n;i++){
-        if(prefsum[i] % 2 !=0){
-            prefsum[i] = prefsum[i] - 1;
-        }
-       }
 
        for(auto &ot : prefsum)cout << ot << " ";
         cout << nl;
