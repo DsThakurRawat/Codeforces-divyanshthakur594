@@ -448,19 +448,21 @@ void solve() {
 
        vector<ll>prefsum(n);
        prefsum[0] = v[0];
+       vector<ll>ans;
 
        for(int i = 1;i<n;i++){
         prefsum[i] = prefsum[i-1] + v[i];
         if(prefsum[i] % 2 != 0){
             ll check = (prefsum[i]/2);
-            prefsum[i] = 2*check;
+          ans.push_back(check);
         }
+        else ans.push_back(prefsum[i]);
        
 
        }
 
 
-       for(auto &ot : prefsum)cout << ot << " ";
+       for(auto &ot : ans)cout << ot << " ";
         cout << nl;
        
       
