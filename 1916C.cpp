@@ -448,9 +448,7 @@ void solve() {
 
      
        
-    vector<ll> v(n);
-    for (auto &x : v) cin >> x;
-
+  
     ll sum = 0;
     for (int i = 0; i < n; i++) {
         sum += v[i];
