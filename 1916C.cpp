@@ -452,7 +452,7 @@ void solve() {
        for(ll i = 0;i<n;i++){
 
         sum +=v[i];
-        if(v[i] % 2 != 0)odd++;
+        if(v[i] % 2 == 0)odd++;
         if(i==0){
             ans.push_back(v[0]);
             continue;
