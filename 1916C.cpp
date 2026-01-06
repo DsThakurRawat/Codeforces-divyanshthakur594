@@ -454,6 +454,7 @@ void solve() {
         prefsum[i] = prefsum[i-1] + v[i];
         if(prefsum[i] % 2 != 0){
             ll check = (prefsum[i]/2);
+            check = 2*check;
           ans.push_back(check);
         }
         else ans.push_back(prefsum[i]);
