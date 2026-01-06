@@ -450,7 +450,11 @@ void solve() {
        // q ->number of queries
        vector<ll>b(m);for(auto &in:b)cin>>in;// the cell number of teachers
        vector<ll>a(q);for(auto &in:a)cin>>in;// david's cell number for every query
+       //Upper bound = count of elements ≤ x
+       sort(all(b));
        
+
+
 
 
 
