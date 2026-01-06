@@ -442,7 +442,16 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
-    
+
+
+       ll n,m,q;cin>>n>>m>>q;
+       // n -> number of cells 
+       // m-> number of teachers
+       // q ->number of queries
+       vector<ll>b(m);for(auto &in:b)cin>>in;
+       vector<ll>a(q);for(auto &in:a)cin>>in;
+
+
 
     
 
