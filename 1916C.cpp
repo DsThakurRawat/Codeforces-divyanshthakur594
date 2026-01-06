@@ -451,10 +451,7 @@ void solve() {
 
        for(int i = 1;i<n;i++){
         prefsum[i] = prefsum[i-1] + v[i];
-        if(prefsum[i] % 2 == 0){
-            continue;
-        }
-        else prefsum[i] = prefsum[i] - 1;
+       
 
        }
        for(auto &ot : prefsum)cout << ot << " ";
