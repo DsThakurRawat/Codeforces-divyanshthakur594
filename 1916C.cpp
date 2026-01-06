@@ -443,9 +443,22 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
-    
+       ll n;cin>>n;
+       vector<ll>v(n);for(auto& in:v)cin>>in;
 
+       vector<ll>prefsum(n);
 
+       for(int i = 1;i<n;i++){
+        prefsum[i] = prefsum[i-1] + v[i];
+        if(prefsum[i] % 2 == 0){
+            continue;
+        }
+        else prefsum[i] = prefsum[i] - 1;
+
+       }
+       for(auto &ot : prefsum)cout << ot << " ";
+       cout << nl;
+       
 
     
 
