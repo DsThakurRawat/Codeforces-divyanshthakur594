@@ -454,8 +454,8 @@ void solve() {
        sort(all(b));
 
        for(ll i =0;i<q;i++){
-        ll a;cin>>a;
-        auto it = lower_bound(b.begin(),b.end(),a);
+        
+        auto it = lower_bound(b.begin(),b.end(),a[i]);
         ll ans ;
 
         if(it == b.begin()){
