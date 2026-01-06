@@ -451,21 +451,26 @@ void solve() {
        vector<ll>ans;
        ans.push_back(v[0]);
 
-       for(int i = 1;i<n;i++){
-        prefsum[i] = prefsum[i-1] + v[i];
-        if(prefsum[i] % 2 != 0){
-            ll check = (prefsum[i]/2);
-            check = 2*check;
-          ans.push_back(check);
-        }
-        else ans.push_back(prefsum[i]);
-       
 
-       }
+         ll odd = (v[0] % 2);   // optional but harmless
+
+        for (int i = 1; i < n; i++) {
+            prefsum[i] = prefsum[i - 1] + v[i];
+            if (v[i] % 2) odd++;
+
+            if (odd % 2 != 0) {
+                ans.push_back((prefsum[i] / 2) * 2);
+            } else {
+                ans.push_back(prefsum[i]);
+            }
+        }
+
+      
 
 
        for(auto &ot : ans)cout << ot << " ";
         cout << nl;
+
        
       
     
