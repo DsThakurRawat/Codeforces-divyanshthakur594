@@ -446,30 +446,28 @@ void solve() {
        ll n;cin>>n;
        vector<ll>v(n);for(auto& in:v)cin>>in;
 
-       vector<ll>prefsum(n);
-       prefsum[0] = v[0];
-       vector<ll>ans;
-       ans.push_back(v[0]);
+     
+       
+    vector<ll> v(n);
+    for (auto &x : v) cin >> x;
 
+    ll sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += v[i];
 
-         ll odd = (v[0] % 2);   // optional but harmless
-
-        for (int i = 1; i < n; i++) {
-            prefsum[i] = prefsum[i - 1] + v[i];
-            if (v[i] % 2) odd++;
-
-            if (odd % 2 != 0) {
-                ans.push_back((prefsum[i] / 2) * 2);
-            } else {
-                ans.push_back(prefsum[i]);
-            }
+        if (i == 0) {
+         
+            cout << v[0] << " ";
+        } else {
+            if (sum % 2 == 0)
+                cout << sum << " ";
+            else
+                cout << sum - 1 << " ";
         }
+    }
+    cout << nl;
 
-      
-
-
-       for(auto &ot : ans)cout << ot << " ";
-        cout << nl;
+         
 
        
       
