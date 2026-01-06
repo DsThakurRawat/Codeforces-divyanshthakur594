@@ -445,28 +445,33 @@ void solve() {
 
        ll n;cin>>n;
        vector<ll>v(n);for(auto& in:v)cin>>in;
+       ll sum = 0;
+       ll odd = 0;
+       vector<ll>ans;
 
-     
-       
-  
-    ll sum = 0;
-    for (int i = 0; i < n; i++) {
-        sum += v[i];
+       for(ll i = 0;i<n;i++){
 
-        if (i == 0) {
-         
-            cout << v[0] << " ";
-        } else {
-            if (sum % 2 == 0)
-                cout << sum << " ";
-            else
-                cout << sum - 1 << " ";
+        sum +=v[i];
+        if(v[i] % 2 != 0)odd++;
+        if(i==0){
+            ans.push_back(v[0]);
+            continue;
         }
-    }
-    cout << nl;
 
-         
+        ll loss = odd/3;
+        if(odd % 3 ==1 ){
+            ans.push_back(sum-loss-1);
+        }
+        else ans.push_back(sum-loss);
 
+
+       }
+
+       for(auto& ot : v)cout << ot << " ";
+       cout << nl;
+
+
+        
        
       
     
