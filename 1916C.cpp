@@ -447,6 +447,7 @@ void solve() {
        vector<ll>v(n);for(auto& in:v)cin>>in;
 
        vector<ll>prefsum(n);
+       prefsum[0] = v[0];
 
        for(int i = 1;i<n;i++){
         prefsum[i] = prefsum[i-1] + v[i];
