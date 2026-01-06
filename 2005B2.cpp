@@ -460,6 +460,13 @@ void solve() {
 
         if(it == b.begin()){
             ans = b[0]-1;
+            /*  if david is at left of all teacheres means
+                means 
+            
+            
+            
+            
+            */
             
         }
         else if(it == b.end()){
