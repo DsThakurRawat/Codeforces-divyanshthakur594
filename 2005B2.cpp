@@ -452,7 +452,27 @@ void solve() {
        vector<ll>a(q);for(auto &in:a)cin>>in;// david's cell number for every query
        //Upper bound = count of elements ≤ x
        sort(all(b));
-       
+
+       for(ll i =0;i<q;i++){
+        ll a;cin>>a;
+        auto it = lower_bound(b.begin(),b.end(),a);
+        ll ans ;
+
+        if(it == b.begin()){
+            ans = b[0]-1;
+            
+        }
+        else if(it == b.end()){
+            ans = n-b[m-1];
+
+        }
+        else{
+            ans = ((*it)-*(it-1))/2;
+        }
+        cout << ans << nl;
+       }
+
+
 
 
 
