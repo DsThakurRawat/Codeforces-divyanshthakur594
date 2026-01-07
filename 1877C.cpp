@@ -462,7 +462,7 @@ void solve() {
      */
          if(k > 3){
             cout << 0 << nl;
-            return;
+           
 
          }
          else if(k == 3 && m > n ){
