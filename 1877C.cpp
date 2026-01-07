@@ -470,7 +470,7 @@ void solve() {
          else if(k==2 && m>n){
 
             ll k = m-n;
-            cout << n + k/3 << nl;
+            cout << n + m/n-1 << nl;
          }
          else if(k==3 && m <= n){
             cout << 0 << nl;
