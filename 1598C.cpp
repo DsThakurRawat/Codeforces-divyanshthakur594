@@ -451,7 +451,7 @@ void solve() {
         sum +=v[i];
     }
    double mean = sum/n;
-    map<ll,ll>mp;
+    map<double,double>mp;
     ll cnt = 0;
 
     for(ll x : v){
