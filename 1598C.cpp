@@ -574,7 +574,7 @@ void solve() {
 
         
         if ((2 * sum) % n != 0) {
-            cout << 0 << '\n';
+            cout << 0 << nl;
           return;
         }
 
@@ -587,7 +587,7 @@ void solve() {
             if (x == y) ans--; 
         }
 
-        cout << ans / 2 << '\n'; 
+        cout << ans / 2 << nl; 
 
 
 
