@@ -455,7 +455,7 @@ void solve() {
     ll cnt = 0;
 
     for(ll x : v){
-        cnt +=mp[(sum - (n-2)*sum) - x];
+        cnt +=mp[(sum - (n-2)*mean) - x];
         mp[x]++;
     }
     cout << cnt << nl;
