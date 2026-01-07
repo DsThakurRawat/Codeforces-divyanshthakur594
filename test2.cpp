@@ -540,7 +540,7 @@ void solve() {
     
     std::vector<int> a(n);
     for (int i = 0; i < n; i++) {
-        std::cin >> a[i];
+        cin >> a[i];
     }
     if (n - x <= x - 1) {
         int l = n - x, r = x;
