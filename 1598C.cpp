@@ -450,12 +450,12 @@ void solve() {
         cin>>v[i];
         sum +=v[i];
     }
-   ll mean = sum/n;
+   double mean = sum/n;
     map<ll,ll>mp;
     ll cnt = 0;
 
     for(ll x : v){
-        cnt +=mp[(sum - (n-2)*mean) - x];
+        cnt +=mp[((double)(sum - (n-2)*mean)) - x];
         mp[x]++;
     }
     cout << cnt << nl;
