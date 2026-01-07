@@ -443,6 +443,29 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 void solve() {
 
+    ll n;cin>>n;
+    ll sum = 0;
+    vector<ll>v(n);
+    for(int i = 0;i<n;i++){
+        cin>>v[i];
+        sum +=v[i];
+    }
+    ll cnt = 0;
+    map<ll,ll>mp;
+    ll cnt = 0;
+
+    for(ll x : v){
+        cnt +=mp[(2*sum)/n - x];
+        mp[x]++;
+    }
+    cout << cnt << nl;
+
+
+
+
+
+
+
     
 
 
