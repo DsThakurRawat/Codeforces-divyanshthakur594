@@ -533,7 +533,28 @@ int main() {
 
 
 void solve() {
+                
 
+      int n, x;
+    std::cin >> n >> x;
+    
+    std::vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> a[i];
+    }
+    if (n - x <= x - 1) {
+        int l = n - x, r = x;
+        rotate(a.begin() + l, a.begin() + r, a.end());
+        sort(a.begin(), a.end() - (r - l));
+        rotate(a.begin() + l, a.end() - (r - l), a.end());
+        if (is_sorted(a.begin(), a.end())) {
+        cout << "YES"<<nl;
+        } else {
+            cout << "NO"<<nl;
+        }
+    } else {
+        cout << "YES"<<nl;;
+    }
     
 
 
