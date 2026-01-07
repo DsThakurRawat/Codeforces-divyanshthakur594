@@ -444,7 +444,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 void solve() {
 
       
-     ll n,m,k;cin>>m>>n>>k;
+     ll n,m,k;cin>>n>>m>>k;
      /*
      understanding problem
      screnn has n+1 slots
