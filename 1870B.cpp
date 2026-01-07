@@ -452,19 +452,17 @@ void solve() {
 
     for(auto x : b) B |=x;
 
-    ll min_x = 0;
-    for(auto &x:a) min_x ^= (x|B);
+   ll x=0;
+   ll y = 0;
 
-    ll x_max = 0;
-
-    if(n%2==0){
-        for(auto x : a) x_max ^= x;
-    }
-    else {
-        for(auto &x : a) x_max ^=(x|B);
-    }
-    cout << min_x << " " << x_max << nl;
-
+   for(ll i =0;i<n;i++){
+       x ^=a[i];
+       y ^=(a[i]|B);
+   }
+   if(x>y){
+    swap(x,y);
+   }
+   cout << x << " " << y << nl;
 
 
 
