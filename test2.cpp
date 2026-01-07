@@ -535,7 +535,7 @@ int main() {
 void solve() {
                 
 
-      int n, x;
+      ll n, x;
     cin >> n >> x;
     
     vector<int> a(n);
