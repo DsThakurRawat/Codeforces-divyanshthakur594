@@ -444,7 +444,7 @@ double dist = hypot(x2 - x1, y2 - y1);
 void solve() {
 
       
-     ll m,n,k;cin>>m>>n>>k;
+     ll n,m,k;cin>>m>>n>>k;
      /*
      understanding problem
      screnn has n+1 slots
@@ -469,7 +469,7 @@ void solve() {
          }
          else if(k==2 && m>n){
 
-            ll k = m-n;
+            
             cout << n + m/n-1 << nl;
          }
          else if(k==3 && m <= n){
