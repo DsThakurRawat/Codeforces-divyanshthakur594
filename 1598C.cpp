@@ -541,11 +541,11 @@ void solve() {
         sum +=v[i];
     }
    double mean = sum/n;
-    map<double,double>mp;
+    map<ll,ll>mp;
     ll cnt = 0;
 
     for(ll x : v){
-        cnt +=mp[((double)(sum - (n-2)*mean)) - x];
+        cnt +=mp[(2*sum)/n - x];
         mp[x]++;
     }
     cout << cnt << nl;
