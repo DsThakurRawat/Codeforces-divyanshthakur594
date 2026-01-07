@@ -536,7 +536,7 @@ void solve() {
                 
 
       int n, x;
-    std::cin >> n >> x;
+    cin >> n >> x;
     
     vector<int> a(n);
     for (int i = 0; i < n; i++) {
