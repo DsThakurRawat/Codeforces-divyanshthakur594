@@ -449,6 +449,7 @@ void solve() {
       ll bx,by;cin>>bx>>by;// point of location of lantern two
       
 
+
       
 
     
