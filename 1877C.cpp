@@ -462,24 +462,23 @@ void solve() {
      */
          if(k==1){
             cout << 1 << nl;
-           
+         }
+         else if(k==2 && m <= n){
+            cout << m << nl;
 
          }
-         else if(k == 3 && m > n ){
-            cout << (m-n)-  ((m-n)/n) << nl;
+         else if(k==2 && m>n){
+            cout << n + (m-n)/n;
          }
-         else if( k == 3 && m<=n){
+         else if(k==3 && m <= n){
             cout << 0 << nl;
          }
-         else if(k==2 && m > n){ 
-            cout << n + (m-n)/n << nl;
-
+         else if(k==3 && m >n){
+            cout << m-n-(m-n)/n<<nl;
          }
          else{
             cout << 0 << nl;
          }
-      
-      
 
     
 
