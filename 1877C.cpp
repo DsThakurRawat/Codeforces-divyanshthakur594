@@ -468,7 +468,7 @@ void solve() {
 
          }
          else if(k==2 && m>n){
-            cout << n + (m-n)/n;
+            cout << n + floor((m-n)/n);
          }
          else if(k==3 && m <= n){
             cout << 0 << nl;
