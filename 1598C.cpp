@@ -370,10 +370,10 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 
-/******************************************************
+*****************************************************
 *  Count Total Pairs in an Array with Sum = K
 *  Language: C++
-*******************************************************/
+*******************************************************
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -384,7 +384,7 @@ using namespace std;
   Idea  : Check all possible pairs (i < j)
   Time  : O(n^2)
   Space : O(1)
-=====================================================*/
+=====================================================
 long long countPairsBruteForce(vector<int>& a, int k) {
     int n = a.size();
     long long cnt = 0;
@@ -403,7 +403,7 @@ long long countPairsBruteForce(vector<int>& a, int k) {
   Idea  : For each x, count how many (k - x) appeared
   Time  : O(n)
   Space : O(n)
-=====================================================*/
+=====================================================
 long long countPairsHashMap(vector<int>& a, int k) {
     unordered_map<int, long long> freq;
     long long cnt = 0;
@@ -421,7 +421,7 @@ long long countPairsHashMap(vector<int>& a, int k) {
   Idea  : Sort array, use two pointers, handle duplicates
   Time  : O(n log n)
   Space : O(1)  (excluding sort stack)
-=====================================================*/
+=====================================================
 long long countPairsTwoPointers(vector<int>& a, int k) {
     sort(a.begin(), a.end());
     int l = 0, r = a.size() - 1;
