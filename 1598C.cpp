@@ -355,6 +355,7 @@ double dist = hypot(x2 - x1, y2 - y1);
                 Condition: Always
 
 ==============================================================
+
 ////////////////stable square root of number////////////////////
   auto sq = [&] (ll x){return x*x;};
 
@@ -362,15 +363,104 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 
+===============================================================================================
 
 
 
 
 
 
+/******************************************************
+*  Count Total Pairs in an Array with Sum = K
+*  Language: C++
+*******************************************************/
 
+#include <bits/stdc++.h>
+using namespace std;
 
+/*=====================================================
+  METHOD 1: Brute Force
+  -----------------------------------------------------
+  Idea  : Check all possible pairs (i < j)
+  Time  : O(n^2)
+  Space : O(1)
+=====================================================*/
+long long countPairsBruteForce(vector<int>& a, int k) {
+    int n = a.size();
+    long long cnt = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (a[i] + a[j] == k)
+                cnt++;
+        }
+    }
+    return cnt;
+}
 
+/*=====================================================
+  METHOD 2: Hash Map (Frequency Map)
+  -----------------------------------------------------
+  Idea  : For each x, count how many (k - x) appeared
+  Time  : O(n)
+  Space : O(n)
+=====================================================*/
+long long countPairsHashMap(vector<int>& a, int k) {
+    unordered_map<int, long long> freq;
+    long long cnt = 0;
+
+    for (int x : a) {
+        cnt += freq[k - x];
+        freq[x]++;
+    }
+    return cnt;
+}
+
+/*=====================================================
+  METHOD 3: Sorting + Two Pointers
+  -----------------------------------------------------
+  Idea  : Sort array, use two pointers, handle duplicates
+  Time  : O(n log n)
+  Space : O(1)  (excluding sort stack)
+=====================================================*/
+long long countPairsTwoPointers(vector<int>& a, int k) {
+    sort(a.begin(), a.end());
+    int l = 0, r = a.size() - 1;
+    long long cnt = 0;
+
+    while (l < r) {
+        int sum = a[l] + a[r];
+
+        if (sum == k) {
+            if (a[l] == a[r]) {
+                long long len = r - l + 1;
+                cnt += (len * (len - 1)) / 2;
+                break;
+            }
+            long long c1 = 1, c2 = 1;
+            while (l + 1 < r && a[l] == a[l + 1]) c1++, l++;
+            while (r - 1 > l && a[r] == a[r - 1]) c2++, r--;
+            cnt += c1 * c2;
+            l++; r--;
+        }
+        else if (sum < k) l++;
+        else r--;
+    }
+    return cnt;
+}
+
+/*=====================================================
+  DRIVER CODE
+=====================================================
+int main() {
+    vector<int> arr = {1, 5, 7, 1};
+    int k = 6;
+
+    cout << "Brute Force: " << countPairsBruteForce(arr, k) << endl;
+    cout << "Hash Map   : " << countPairsHashMap(arr, k) << endl;
+    cout << "Two Pointer: " << countPairsTwoPointers(arr, k) << endl;
+
+    return 0;
+}
 
 
 
