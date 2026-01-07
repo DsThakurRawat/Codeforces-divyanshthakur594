@@ -468,7 +468,9 @@ void solve() {
 
          }
          else if(k==2 && m>n){
-            cout << n + ceil( m / n - 1)<<nl;
+
+            ll k = m-n;
+            cout << n + k/3 << nl;
          }
          else if(k==3 && m <= n){
             cout << 0 << nl;
