@@ -545,8 +545,15 @@ void solve() {
     ll cnt = 0;
 
     for(ll x : v){
-        cnt +=mp[(2*sum)/n - x];
+
+        ll need_sum = 2*sum - n*x;
+
+        if(need_sum % n == 0){
+               ll y = need_sum/n;
+               cnt +=mp[y];
+        }
         mp[x]++;
+     
     }
     cout << cnt << nl;
 
