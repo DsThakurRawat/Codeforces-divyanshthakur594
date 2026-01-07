@@ -556,26 +556,27 @@ void solve() {
      
     }
     cout << cnt << nl;
-    */
 
-        ll n;
+
+    */
+              
+
+     ll n;
         cin >> n;
 
         vector<ll> a(n);
-        unordered_map<ll, ll> cnt;
-        cnt.reserve(n * 2);
-
+        map<ll, ll> cnt;
         ll sum = 0;
+
         for (ll &x : a) {
             cin >> x;
             sum += x;
             cnt[x]++;
         }
 
-        
         if ((2 * sum) % n != 0) {
             cout << 0 << nl;
-          return;
+            return;
         }
 
         ll need = (2 * sum) / n;
@@ -584,11 +585,24 @@ void solve() {
         for (ll x : a) {
             ll y = need - x;
             if (cnt.count(y)) ans += cnt[y];
-            if (x == y) ans--; 
+            if (x == y) ans--;   
         }
 
-        cout << ans / 2 << nl; 
+        cout << ans / 2 << nl;
 
+
+
+
+
+
+
+
+
+
+
+                 
+
+      
 
 
 
