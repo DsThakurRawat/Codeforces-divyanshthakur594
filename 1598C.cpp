@@ -450,7 +450,7 @@ void solve() {
         cin>>v[i];
         sum +=v[i];
     }
-    ll cnt = 0;
+   
     map<ll,ll>mp;
     ll cnt = 0;
 
