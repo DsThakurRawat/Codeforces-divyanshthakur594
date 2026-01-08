@@ -543,9 +543,14 @@ void solve() {
         return;
     }
     ll check = 0;
+    ll oddcheck = 0;
     for(auto &e : v){
         if(e == 1){
             check = 1;
+            break;
+        }
+        if(e % 2 !=0){
+            oddcheck = 1;
             break;
         }
     }
