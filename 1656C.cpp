@@ -536,7 +536,18 @@ void solve() {
 
     ll n;cin>>n;
     vector<ll>v(n);for(auto &x : v)cin>>x;
-    
+
+    set<ll>st(v.begin(),v.end());
+    if(st.size() == 1){
+        cout << "YES"<<nl;
+        return;
+    }
+
+
+
+
+
+
 
 
 
