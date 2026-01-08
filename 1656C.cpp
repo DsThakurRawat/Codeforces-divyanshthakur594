@@ -542,19 +542,21 @@ void solve() {
         cout << "YES"<<nl;
         return;
     }
-    ll check = 0;
-    ll oddcheck = 0;
-    for(auto &e : v){
-        if(e == 1){
-            check = 1;
-            break;
-        }
-        if(e % 2 !=0){
-            oddcheck = 1;
-            break;
+    ll check1 = 0;
+    ll check2 = 0;
+    sort(all(v));
+
+    for(ll i = 0;i<n;i++){
+        if(v[i]==1) check1 = 1;
+        if(i<n-1&&v[i]+1==v[i+1]){
+            check2 = 1;
         }
     }
-    if(check == 1 ){
+
+
+
+    
+    if(check1 == 1 && check2 ==1  ){
         cout << "NO"<<nl;
     }
     else cout << "YES" << nl;
