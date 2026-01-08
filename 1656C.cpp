@@ -542,6 +542,17 @@ void solve() {
         cout << "YES"<<nl;
         return;
     }
+    ll check = 0;
+    for(auto &e : v){
+        if(e == 1){
+            check = 1;
+            break;
+        }
+    }
+    if(check == 1){
+        cout << "NO"<<nl;
+    }
+    else cout << "YES" << nl;
 
 
 
