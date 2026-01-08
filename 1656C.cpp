@@ -534,8 +534,7 @@ int main() {
 
 void solve() {
 
-     int n;
-  cin >> n;
+     int n;cin >> n;
   vector<ll> a(n);
   for (auto &x : a) cin >> x;
   sort(a.begin(), a.end());
