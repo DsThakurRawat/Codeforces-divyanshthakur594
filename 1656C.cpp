@@ -534,6 +534,9 @@ int main() {
 
 void solve() {
 
+     ll n;cin>>n;
+     vector<ll>a(n);for(auto &x : a)cin>>x;
+
       
 
     
