@@ -534,13 +534,14 @@ int main() {
 
 void solve() {
 
-     int n;cin >> n;
+  int n;cin >> n;
   vector<ll> a(n);
   for (auto &x : a) cin >> x;
-  sort(a.begin(), a.end());
-  ll sum = accumulate(a.begin(), a.end(), 0LL);
   int m;
   cin >> m;
+  sort(a.begin(), a.end());
+  ll sum = accumulate(a.begin(), a.end(), 0LL);
+  
   while (m--) {
     ll x, y;
     cin >> x >> y;
