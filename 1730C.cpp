@@ -547,13 +547,20 @@ void solve() {
         int cnt[26];
 
         int n; cin >> n; n--;
+
         string s; cin >> s;
+
         int res = 0;
+
         for(int i = 0; i < n; i++) {
+
         (cnt[s[2 * i] - 'a'] ++);
+
         if(cnt[s[2 * i + 1] - 'A']) {
+
         cnt[s[2 * i + 1] - 'A'] --;
         } else res++;
+        
         }
         cout << res << '\n';
    
@@ -578,12 +585,12 @@ int main() {
     cin.tie(nullptr);
  
    
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+ //   int t ;
+  //  t=1;
+  ///  cin >> t;
+   // while (t--) {
      solve();
-    }
+   // }
 
   
     return 0;
