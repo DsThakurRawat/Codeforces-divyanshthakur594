@@ -568,6 +568,7 @@ void solve() {
         ans.push_back(abs(pt-n-i));
      }
      for(auto &ot : ans)cout << ot << " ";
+     cout << nl;
 
 
 
