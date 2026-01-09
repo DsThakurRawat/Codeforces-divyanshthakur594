@@ -549,6 +549,27 @@ void solve() {
 
      };
 
+     ll i = n;
+     ll pt;
+
+     while(true){
+        if(check(i) == true){
+            pt = i;
+            break;
+        }
+        else{
+            i = i+1;
+        }
+        
+     } 
+     vector<ll>ans;
+
+     for(ll i = 0;i<n;i++){
+        ans.push_back(abs(pt-n-i));
+     }
+     for(auto &ot : ans)cout << ot << " ";
+
+
 
    
   
