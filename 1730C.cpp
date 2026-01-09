@@ -534,8 +534,7 @@ int main() {
 
 void solve() {
 
-
-    ll n;cin>>n;
+  
     /*
     ai+i->should be perfect square
     */
@@ -560,7 +559,7 @@ void solve() {
 
         cnt[s[2 * i + 1] - 'A'] --;
         } else res++;
-        
+
         }
         cout << res << '\n';
    
