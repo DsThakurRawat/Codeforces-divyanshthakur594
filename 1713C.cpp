@@ -565,7 +565,7 @@ void solve() {
      vector<ll>ans;
 
      for(ll i = 0;i<n;i++){
-        ans.push_back(abs(pt-n));
+        ans.push_back(abs(pt-i));
         pt--;
      }
      for(auto &ot : ans)cout << ot << " ";
