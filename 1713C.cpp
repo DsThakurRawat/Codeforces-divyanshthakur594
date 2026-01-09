@@ -556,7 +556,7 @@ void solve() {
      while(i>=0){
         ll pt = i;
 
-        while(!check(pt))pt++;
+        while(check(pt)==false)pt++;
 
         ll l = pt-i;
 
