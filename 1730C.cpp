@@ -543,7 +543,7 @@ void solve() {
     
               
 
-        int cnt[26];
+        vector<ll>cnt(26,0);
 
         int n; cin >> n; n--;
 
