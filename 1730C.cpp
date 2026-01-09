@@ -539,29 +539,27 @@ void solve() {
     ai+i->should be perfect square
     */
      
-
+     
+        int n; cin >> n;
     
-              
+      
+        vector<int> a(n);
 
-        vector<ll>cnt(26,0);
+       
 
-        int n; cin >> n; n--;
+            for (auto& x : a) cin >> x;
+            vector<int> b({a[n - 1]});
+            for (int i = n - 2; i >= 0; --i) {
+            if (a[i] > b.back()) {
+                b.push_back(a[i] % 10);
+                b.push_back(a[i] / 10);
+            } else {
+                b.push_back(a[i]);
+            }
+            }
+            cout << (is_sorted(b.rbegin(), b.rend()) ? "YES" : "NO") << '\n';
 
-        string s; cin >> s;
-
-        int res = 0;
-
-        for(int i = 0; i < n; i++) {
-
-        (cnt[s[2 * i] - 'a'] ++);
-
-        if(cnt[s[2 * i + 1] - 'A']) {
-
-        cnt[s[2 * i + 1] - 'A'] --;
-        } else res++;
-
-        }
-        cout << res << '\n';
+        
    
     
 
