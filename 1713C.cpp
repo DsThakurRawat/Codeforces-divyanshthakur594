@@ -558,7 +558,7 @@ void solve() {
             break;
         }
         else{
-            i = i+1;
+            i = i--;
         }
         
      } 
