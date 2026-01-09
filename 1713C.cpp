@@ -566,6 +566,7 @@ void solve() {
 
      for(ll i = 0;i<n;i++){
         ans.push_back(abs(pt-n));
+        pt--;
      }
      for(auto &ot : ans)cout << ot << " ";
      cout << nl;
