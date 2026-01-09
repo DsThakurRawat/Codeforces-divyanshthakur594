@@ -548,26 +548,38 @@ void solve() {
 
 
      };
+     vector<ll> ans(n, -1);
 
-     ll i = n;
-     ll pt;
 
-     while(true){
-        if(check(i) == true){
-            pt = i;
-            break;
+     ll i = n-1;
+
+     while(i>=0){
+        ll pt = i;
+
+        while(!check(pt))pt++;
+
+        ll l = pt-i;
+
+        for(ll j = l;j<=i;j++){
+            ans[j] = pt-j;
         }
-        else{
-            i--;
-        }
-        
-     } 
-     vector<ll>ans;
+          i = l - 1;         
 
-     for(ll i = 0;i<n;i++){
-        ans.push_back(abs(pt-i));
-        pt--;
+
      }
+     
+
+
+
+
+
+
+
+
+
+
+
+
      for(auto &ot : ans)cout << ot << " ";
      cout << nl;
 
