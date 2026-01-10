@@ -551,6 +551,12 @@ void solve() {
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
+    vector<ll>p(n);
+
+    for(ll i = n-1;i>=0;i--){
+        p[i] = v[i]-v[i-1];
+    }
+
 
 
 
