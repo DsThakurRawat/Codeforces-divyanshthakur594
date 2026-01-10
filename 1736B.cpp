@@ -557,7 +557,7 @@ void solve() {
 
   vector<ll>b(n+2,1);
 
-  for(ll i =1;i<=n;i++){
+  for(ll i =1;i<=n+1;i++){
     b[i] = lcm(v[i],v[i-1]);
   }
 
