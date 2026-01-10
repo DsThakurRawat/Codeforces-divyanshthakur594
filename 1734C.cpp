@@ -562,6 +562,7 @@ void solve() {
     }
     cout << s <<nl;
 
+    cout << t << nl;
 
 
 
