@@ -560,13 +560,13 @@ void solve() {
 
     for(ll i =0;i<n;i++){
         if(copy[i] ==v[0]){
-            st = i;
+            st = i+1;
         }
         if(copy[i] == v[1]){
-            snd = i;
+            snd = i+1;
         }
         if(copy[i] == v[2]){
-            rd = i;
+            rd = i+1;
 
         }
     }
