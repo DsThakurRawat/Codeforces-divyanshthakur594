@@ -546,21 +546,32 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-
-    ll n,w;cin>>n>>w;
-    vector<ll>c(n);for(auto &in:c)cin>>in;
-      
-
-
-
      
-    
+        ll n; 
+        cin >> n;
 
+        string b; 
+        cin >> b;
+        vector<bool>alive(n+1),removed(n+1,false);
 
+        for(int i =1;i<=n;i++){
+            alive[i] = (b[i-1]=='1');
+        }
+        ll cost = 0;
 
+        for(ll k =1;k<=n;k++){
+            for(ll x = k;x<=n;x+=k){
+                if(alive[x])break;
+                if(!removed[x]){
+                    removed[x] = true;
+                    cost +=k;
 
+                }
+            }
+        }
+        cout << cost <<nl;
 
-
+      
 
 
 
