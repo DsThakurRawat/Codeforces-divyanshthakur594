@@ -539,7 +539,8 @@ void solve() {
     ai+i->should be perfect square
     */
      string s;cin>>s;
-     
+     sort(all(s));
+
      
      
         
