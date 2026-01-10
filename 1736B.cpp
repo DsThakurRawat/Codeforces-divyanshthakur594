@@ -562,6 +562,7 @@ void solve() {
   for(ll i =0;i+1<n;i++){
     if(gcd(b[i],b[i+1]) !=v[i]){
         cout << "NO"<<nl;
+        return;
     }
   }
   cout << "YES"<<nl;
