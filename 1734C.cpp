@@ -560,8 +560,7 @@ void solve() {
         }
        
     }
-    cout << s <<nl<<t<<nl;
-    
+    cout << s <<nl;
 
 
 
