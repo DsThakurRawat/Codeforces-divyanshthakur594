@@ -552,24 +552,26 @@ void solve() {
 
         string b; 
         cin >> b;
+        vector<bool>alive(n+1),removed(n+1,false);
 
-        string s, t;
-        vector<ll>v;
-        vector<ll>p;
+        for(int i =1;i<=n;i++){
+            alive[i] = (b[i-1]=='1');
+        }
+        ll cost = 0;
 
-        for (ll i = 0; i < n; i++) {
-            s += to_string(i + 1);
-            p.push_back(i+1);
-            if (b[i] == '1')
-                t += to_string(i + 1);
-            else{
-                 v.push_back(i+1);
+        for(ll k =1;k<=n;k++){
+            for(ll x = k;k<=n;x+=k){
+                if(alive[x])break;
+                if(!removed[x]){
+                    removed[x] = true;
+                    cost +=k;
+
+                }
             }
         }
+        cout << cost <<nl;
 
-        ll cost = 0;
-        sort(all(v));
-
+      
 
 
 
