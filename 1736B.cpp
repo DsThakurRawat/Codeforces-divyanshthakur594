@@ -549,11 +549,11 @@ void solve() {
 
 
   ll n;cin>>n;
-  vector<ll>v(n+1);for(auto &in:v)cin>>in;
+  vector<ll>v(n+2);for(auto &in:v)cin>>in;
   v[0] = 1;
   v[n] = 1;
 
-  vector<ll>b(n+1);
+  vector<ll>b(n+2);
 
   for(ll i =1;i<=n;i++){
     b[i] = lcm(v[i],v[i-1]);
