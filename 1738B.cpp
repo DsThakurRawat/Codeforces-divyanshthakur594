@@ -554,7 +554,7 @@ void solve() {
     vector<ll>p(n);
 
     for(ll i = n-1;i>=1;i--){
-        p[n-i] = v[i]-v[i-1];
+        p[i] = v[i]-v[i-1];
     }
    for(ll i =0;i<n;i++){
     cout << p[i]<<" ";
