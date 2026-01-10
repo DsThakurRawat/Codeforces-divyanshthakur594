@@ -556,7 +556,7 @@ void solve() {
     for(ll i = n;i>=1;i--){
         p[n-i] = v[i]-v[i-1];
     }
-    reverse(all(p));
+   
   
 
 
