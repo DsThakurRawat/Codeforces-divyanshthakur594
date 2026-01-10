@@ -551,7 +551,7 @@ void solve() {
     string b;cin>>b;
     string s,t;
     for(ll i = 1;i<=n;i++){
-        s +=string(1,i);
+        s +=string(1,i+'0');
         if(b[i]=='1') t +=string(1,i);
     }
     cout << s << nl;
