@@ -556,7 +556,6 @@ void solve() {
    }
    cout << nl;
 
-   
 
 
     
