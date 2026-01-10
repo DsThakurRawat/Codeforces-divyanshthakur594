@@ -564,7 +564,7 @@ void solve() {
 
     for(char c : keep) cout << c;
     for(char c : removed) cout << c;
-    cout << "\n";
+    cout << nl;
      
         
    
