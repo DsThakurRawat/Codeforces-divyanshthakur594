@@ -546,6 +546,13 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
+
+    ll n,w;cin>>n>>w;
+    vector<ll>c(n);for(auto &in:c)cin>>in;
+      
+
+
+
      
     
 
