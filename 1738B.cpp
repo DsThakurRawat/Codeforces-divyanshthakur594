@@ -551,10 +551,12 @@ void solve() {
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
-    vector<ll>p(n);
+    vector<ll>p;
 
     for(ll i = n-1;i>=1;i--){
-        p[i] = v[i]-v[i-1];
+
+        p.push_back(v[i]-v[i-1]);
+      
     }
 
     for(auto i = 0;i<n;i++){
