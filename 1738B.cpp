@@ -557,6 +557,7 @@ void solve() {
         cout << "YES"<<nl;
         return;
     }
+    for(ll i = n-k+1;i<=n;i++)
    
   
 
