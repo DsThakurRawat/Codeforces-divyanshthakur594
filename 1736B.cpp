@@ -559,7 +559,7 @@ void solve() {
     b[i] = lcm(v[i],v[i-1]);
   }
 
-  for(ll i =0;i+1<n;i++){
+  for(ll i =1;i+1<n;i++){
     if(gcd(b[i],b[i+1]) !=v[i]){
         cout << "NO"<<nl;
         return;
