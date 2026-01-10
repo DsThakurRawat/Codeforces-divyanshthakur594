@@ -549,9 +549,11 @@ void solve() {
 
 
   ll n;cin>>n;
-  vector<ll>v(n+2);for(auto &in:v)cin>>in;
-  v[0] = 1;
-  v[n] = 1;
+  vector<ll>v(n+2,1);
+  for(auto i =0;i<=n;i++){
+    cin>>v[i];
+  }
+
 
   vector<ll>b(n+2,1);
 
