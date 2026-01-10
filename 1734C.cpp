@@ -546,6 +546,15 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
+     
+    ll n;cin>>n;
+    string b;cin>>b;
+    
+
+
+
+
+
 
           
 
