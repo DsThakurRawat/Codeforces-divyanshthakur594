@@ -552,7 +552,7 @@ void solve() {
 
         string b; 
         cin >> b;
-        vector<bool>alive(n+1),removed(n,false);
+        vector<bool>alive(n),removed(n,false);
 
         for(int i =0;i<n;i++){
             alive[i] = (b[i]=='1');
