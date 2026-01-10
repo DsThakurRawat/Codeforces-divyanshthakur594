@@ -550,9 +550,9 @@ void solve() {
     ll n;cin>>n;
     string b;cin>>b;
     string s,t;
-    for(ll i = 0;i<=n;i++){
-        s +=string(1,i+'0');
-        if(b[i]=='1') t +=char(i+'0');
+    for(ll i = 0;i<n;i++){
+        s +=string(1,i+1+'0');
+        if(b[i]=='1') t +=char(i+1+'0');
     }
     cout << s << nl;
     cout << t << nl;
