@@ -554,15 +554,18 @@ void solve() {
         cin >> b;
 
         string s, t;
+        vector<ll>v;
 
         for (ll i = 0; i < n; i++) {
             s += to_string(i + 1);
             if (b[i] == '1')
                 t += to_string(i + 1);
+            else{
+                 v.push_back(i+1);
+            }
         }
 
-        cout << s << nl;
-        cout << t << nl;
+      for(auto &o:v)cout << ot <<" ";
 
 
 
