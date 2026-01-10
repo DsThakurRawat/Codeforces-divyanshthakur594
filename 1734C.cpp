@@ -554,7 +554,7 @@ void solve() {
     for(ll i = 0;i<n;i++){
         s +=to_string(i+1);
         if(b[i]=='1') {
-            t +=char(i+1+'0');
+            t +=to_string(i+1);
             
 
         }
