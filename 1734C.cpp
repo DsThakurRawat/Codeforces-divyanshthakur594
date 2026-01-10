@@ -547,29 +547,15 @@ means: Create a string of length k where every character is c.
 
 void solve() {
      
-        ll n; 
-        cin >> n;
+      ll x,y;cin>>x>>y;
 
-        string b; 
-        cin >> b;
-        vector<bool>alive(n+1),removed(n+1,false);
+      ll ans;
 
-        for(int i =1;i<=n;i++){
-            alive[i] = (b[i-1]=='1');
-        }
-        ll cost = 0;
-
-        for(ll k =1;k<=n;k++){
-            for(ll x = k;x<=n;x+=k){
-                if(alive[x])break;
-                if(!removed[x]){
-                    removed[x] = true;
-                    cost +=k;
-
-                }
-            }
-        }
-        cout << cost <<nl;
+      while(y > 0){
+        x = x*2;
+        y--;
+      }
+      cout << x << nl;
 
       
 
@@ -609,12 +595,12 @@ int main() {
     cin.tie(nullptr);
  
    
-    int t ;
-    t=1;
-    cin >> t;
-    while (t--) {
+   // int t ;
+   // t=1;
+   // cin >> t;
+    //while (t--) {
      solve();
-    }
+    //}
 
   
     return 0;
