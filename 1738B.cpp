@@ -556,6 +556,9 @@ void solve() {
     for(ll i = n-1;i>=0;i--){
         p[i] = v[i]-v[i-1];
     }
+    
+
+
 
 
 
