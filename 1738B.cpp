@@ -556,6 +556,7 @@ void solve() {
     for(ll i = n;i>=1;i--){
         p[n-i-k] = v[i]-v[i-1];
     }
+    reverse(all(p));
    for(ll i =0;i<n;i++){
     cout << p[i]<<" ";
    }
