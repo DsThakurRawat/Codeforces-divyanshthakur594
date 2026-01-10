@@ -560,7 +560,7 @@ void solve() {
         ll cost = 0;
 
         for(ll k =1;k<=n;k++){
-            for(ll x = k;k<=n;x+=k){
+            for(ll x = k;x<=n;x+=k){
                 if(alive[x])break;
                 if(!removed[x]){
                     removed[x] = true;
