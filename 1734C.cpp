@@ -555,9 +555,11 @@ void solve() {
 
         string s, t;
         vector<ll>v;
+        vector<ll>p;
 
         for (ll i = 0; i < n; i++) {
             s += to_string(i + 1);
+            p.push_back(i+1);
             if (b[i] == '1')
                 t += to_string(i + 1);
             else{
@@ -565,7 +567,10 @@ void solve() {
             }
         }
 
-      for(auto &o:v)cout << o <<" ";
+
+
+
+    
 
 
 
