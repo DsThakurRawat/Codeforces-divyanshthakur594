@@ -555,8 +555,11 @@ void solve() {
         s +=string(1,i+1+'0');
         if(b[i]=='1') {
             t +=char(i+1+'0');
-            v.push_back(i);
+            
 
+        }
+        else{
+            v.push_back(i);
         }
     }
     cout << s << nl;
