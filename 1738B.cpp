@@ -549,19 +549,13 @@ void solve() {
 
 
     ll n,k;cin>>n>>k;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-
-    vector<ll>p;
-
-    for(ll i = n-1;i>=1;i--){
-
-        p.push_back(v[i]-v[i-1]);
-      
+    vector<ll>v(n+1);
+    for(ll i = n-k+1;i<=n;i++){
+        cin>>v[i];
     }
-    reverse(all(p));
-
-    for(auto i = 0;i<n;i++){
-        cout << p[i]<<" ";
+    if(k==1){
+        cout << "YES"<<nl;
+        return;
     }
    
   
