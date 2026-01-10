@@ -558,6 +558,7 @@ void solve() {
         p.push_back(v[i]-v[i-1]);
       
     }
+    reverse(all(p));
 
     for(auto i = 0;i<n;i++){
         cout << p[i]<<" ";
