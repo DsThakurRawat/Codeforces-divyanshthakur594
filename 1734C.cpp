@@ -552,7 +552,7 @@ void solve() {
     string s,t;
     vector<ll>v;
     for(ll i = 0;i<n;i++){
-        s +=string(1,i+1+'0');
+        s +=char(i+1+'0');
         if(b[i]=='1') {
             t +=char(i+1+'0');
             
