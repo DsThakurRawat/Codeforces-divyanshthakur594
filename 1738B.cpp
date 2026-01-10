@@ -553,10 +553,10 @@ void solve() {
 
     vector<ll>p(n);
 
-    for(ll i = n-1;i>=0;i--){
+    for(ll i = n-1;i>=1;i--){
         p[i] = v[i]-v[i-1];
     }
-    
+
 
 
 
