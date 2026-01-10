@@ -562,9 +562,7 @@ void solve() {
             v.push_back(i+1);
         }
     }
-    cout << s << nl;
-    cout << t << nl;
-
+    for(auto &ot : v) cout << ot << " ";
 
 
 
