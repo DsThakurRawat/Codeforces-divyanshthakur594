@@ -551,18 +551,18 @@ void solve() {
     string b;cin>>b;
     string s,t;
     vector<ll>v;
-    for(ll i = 0;i<b.size();i++){
-        s +=char(i+1+'0');
+    for(ll i = 0;i<n;i++){
+        s +=string(1,i+1+'0');
         if(b[i]=='1') {
             t +=char(i+1+'0');
             
 
         }
-       
     }
-    cout << s <<nl;
-
+    cout << s << nl;
     cout << t << nl;
+
+
 
 
 
