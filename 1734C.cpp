@@ -562,7 +562,12 @@ void solve() {
             v.push_back(i+1);
         }
     }
-    for(auto &ot : v) cout << ot << " ";
+    int m = v.size();
+
+    for(ll i =0;i<m;i++){
+        cout << v[i] << " ";
+    }
+  
 
 
 
