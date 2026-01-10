@@ -567,6 +567,9 @@ void solve() {
             }
         }
 
+        ll cost = 0;
+        sort(all(v));
+
 
 
 
