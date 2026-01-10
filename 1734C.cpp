@@ -565,7 +565,7 @@ void solve() {
             }
         }
 
-      for(auto &o:v)cout << ot <<" ";
+      for(auto &o:v)cout << o <<" ";
 
 
 
