@@ -557,10 +557,7 @@ void solve() {
         p[n-i] = v[i]-v[i-1];
     }
     reverse(all(p));
-   for(ll i =0;i<n;i++){
-    cout << p[i]<<" ";
-   }
-
+  
 
 
 
