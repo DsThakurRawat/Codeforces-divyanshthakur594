@@ -556,6 +556,10 @@ void solve() {
     for(ll i = n;i>=1;i--){
         p[i] = v[i]-v[i-1];
     }
+
+    for(auto i = 0;i<n;i++){
+        cout << p[i]<<" ";
+    }
    
   
 
