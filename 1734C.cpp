@@ -550,7 +550,7 @@ void solve() {
     ll n;cin>>n;
     string b;cin>>b;
     string s,t;
-    for(ll i = 1;i<=n;i++){
+    for(ll i = 0;i<=n;i++){
         s +=string(1,i+'0');
         if(b[i]=='1') t +=char(i+'0');
     }
