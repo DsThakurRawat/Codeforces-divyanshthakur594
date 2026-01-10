@@ -559,7 +559,7 @@ void solve() {
 
         }
         else{
-            v.push_back(i);
+            v.push_back(i+1);
         }
     }
     cout << s << nl;
