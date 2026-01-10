@@ -558,16 +558,10 @@ void solve() {
             
 
         }
-        else{
-            v.push_back(i+1);
-        }
+       
     }
-    int m = v.size();
-
-    for(ll i =0;i<m;i++){
-        cout << v[i] << " ";
-    }
-  
+    cout << s <<nl<<t<<nl;
+    
 
 
 
