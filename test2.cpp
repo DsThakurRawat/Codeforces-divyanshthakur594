@@ -464,6 +464,17 @@ int main() {
 
 
 
+=====================checking if number is prefect square or not====================================
+
+auto check = [&] (ll n ){
+        if(n < 0) return false;
+
+        ll x = sqrt(n);
+
+        return x*x == n||(x+1)*(x+1) == n;
+
+
+     };
 
 
 
@@ -488,10 +499,12 @@ int main() {
 
 
 
+==================================================================================================================================================
 
-
-
-
+What is string(k, c)?
+In C++:
+string(k, c)
+means: Create a string of length k where every character is c.
 
 
 
