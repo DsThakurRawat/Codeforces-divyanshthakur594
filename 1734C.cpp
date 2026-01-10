@@ -547,21 +547,22 @@ means: Create a string of length k where every character is c.
 
 void solve() {
      
-    ll n;cin>>n;
-    string b;cin>>b;
-    string s,t;
-    vector<ll>v;
-    for(ll i = 0;i<n;i++){
-        s +=char(i+1+'0');
-        if(b[i]=='1') {
-            t +=char(i+1+'0');
-            
+        ll n; 
+        cin >> n;
 
+        string b; 
+        cin >> b;
+
+        string s, t;
+
+        for (ll i = 0; i < n; i++) {
+            s += to_string(i + 1);
+            if (b[i] == '1')
+                t += to_string(i + 1);
         }
-    }
-    cout << s << nl;
-    cout << t << nl;
 
+        cout << s << nl;
+        cout << t << nl;
 
 
 
