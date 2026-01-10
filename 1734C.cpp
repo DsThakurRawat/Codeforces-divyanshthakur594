@@ -551,7 +551,7 @@ void solve() {
     string b;cin>>b;
     string s,t;
     vector<ll>v;
-    for(ll i = 0;i<n;i++){
+    for(ll i = 0;i<b.size();i++){
         s +=to_string(i+1);
         if(b[i]=='1') {
             t +=to_string(i+1);
