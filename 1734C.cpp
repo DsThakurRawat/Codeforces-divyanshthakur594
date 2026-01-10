@@ -552,9 +552,9 @@ void solve() {
     string s,t;
     vector<ll>v;
     for(ll i = 0;i<b.size();i++){
-        s +=to_string(i+1);
+        s +=char(i+1+'0');
         if(b[i]=='1') {
-            t +=to_string(i+1);
+            t +=char(i+1+'0');
             
 
         }
