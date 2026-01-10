@@ -539,12 +539,13 @@ void solve() {
     ai+i->should be perfect square
     */
      
-    string s;
+   string s;
     cin >> s;
     int n = s.size();
 
     vector<char> mn(n);
     mn[n-1] = s[n-1];
+
     for(int i = n-2; i >= 0; i--){
         mn[i] = min(s[i], mn[i+1]);
     }
@@ -552,7 +553,7 @@ void solve() {
     vector<char> keep, removed;
 
     for(int i = 0; i < n; i++){
-        if(i == n-1 || s[i] <= mn[i+1]){
+        if(s[i] == mn[i]){            // ★ FIXED condition
             keep.push_back(s[i]);
         } else {
             int d = min((s[i]-'0') + 1, 9);
@@ -564,7 +565,7 @@ void solve() {
 
     for(char c : keep) cout << c;
     for(char c : removed) cout << c;
-    cout << nl;
+    cout << "\n";
      
         
    
