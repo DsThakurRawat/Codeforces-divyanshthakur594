@@ -547,17 +547,37 @@ means: Create a string of length k where every character is c.
 
 void solve() {
      
-      ll x,y;cin>>x>>y;
+    ll n;cin>>n;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+     
+    vector<ll>copy = v;
 
-      ll ans;
+    sort(v.begin(),v.end());
 
-      while(y > 0){
-        x = x*2;
-        y--;
-      }
-      cout << x << nl;
+    ll st =-1;
+    ll snd = -1;
+    ll rd = -1;
 
-      
+    for(ll i =0;i<n;i++){
+        if(copy[i] ==v[0]){
+            st = i;
+        }
+        if(copy[i] == v[1]){
+            snd = i;
+        }
+        if(copy[i] == v[2]){
+            rd = i;
+
+        }
+    }
+    cout << st << " "<<snd << " "<<rd << nl;
+
+
+
+
+
+
+
 
 
 
