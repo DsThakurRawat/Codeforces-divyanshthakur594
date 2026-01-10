@@ -551,10 +551,10 @@ void solve() {
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
-    vector<ll>p(k);
+    vector<ll>p(n);
 
     for(ll i = n;i>=1;i--){
-        p[i] = v[i]-v[i-1];
+        p[n-k+1-i] = v[i]-v[i-1];
     }
    for(ll i =0;i<n;i++){
     cout << p[i]<<" ";
