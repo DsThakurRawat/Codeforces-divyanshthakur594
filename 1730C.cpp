@@ -540,6 +540,7 @@ void solve() {
     */
      string s;cin>>s;
      sort(all(s));
+     cout << s << nl;
 
      
      
