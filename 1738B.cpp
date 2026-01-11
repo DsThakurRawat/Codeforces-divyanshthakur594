@@ -555,6 +555,7 @@ void solve() {
         nums[i] = v[i] - v[i-1];
     }
     for(auto &ot:nums) cout << ot << " ";
+    cout << nl;
 
 
 
