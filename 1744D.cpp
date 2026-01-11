@@ -548,7 +548,10 @@ means: Create a string of length k where every character is c.
 void solve() {
 
     ll n;cin>>n;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
+    vector<ll>v(n+1);
+    for(int i =1;i<=n;i++){
+        cin>>v[i];
+    }
 
      auto check = [&] (ll x){
            int c = 0;
@@ -564,7 +567,7 @@ void solve() {
     vector<ll>v2;
 
 
-    for(int i =0;i<n;i++){
+    for(int i =1;i<=n;i++){
         if(v[i] % 2 == 0){
             total_cnt += check(v[i]);
         }
