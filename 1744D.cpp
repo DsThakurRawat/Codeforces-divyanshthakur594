@@ -572,7 +572,7 @@ void solve() {
             total_cnt += check(v[i]);
         }
         if( i % 2 == 0){
-            v2.push_back(i);
+            v2.push_back(check(i));
             
         }
     }
