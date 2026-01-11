@@ -583,7 +583,7 @@ void solve() {
                 sum[t] = cnt[t] = 0;
             }
             
-            cout << sum[0] + sum[1] << '\n';
+            cout << sum[0] + sum[1] << nl;
         }
 
 
