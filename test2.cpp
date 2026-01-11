@@ -476,9 +476,17 @@ auto check = [&] (ll n ){
 
      };
 
+==========================================================================================================
+==========================================================================================================
 
+=========================DIVISIBLITY OF NUMBER BY 2^n  ======================================================
 
-
+we have to check if number is divisble by 2^n;
+then 
+---------->>>>> number of two in that number >= n<<<<<<-------------
+ number of two in that number should be greater or equal to n
+---------------------------------------------------------------------------
+==================================================================================================================
 
 
 
@@ -546,6 +554,67 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
+
+    ll n;cin>>n;
+    vector<ll>v(n+1);
+    for(int i =1;i<=n;i++){
+        cin>>v[i];
+    }
+
+     auto check = [&] (ll x){
+           int c = 0;
+           while(x % 2 == 0){
+            x /=2;
+            c++;
+           }
+           return c;
+        
+    };
+
+    ll total_cnt = 0;
+    vector<ll>v2;
+
+
+    for(int i =1;i<=n;i++){
+       
+            total_cnt += check(v[i]);
+       
+        if( i % 2 == 0){
+            v2.push_back(check(i));
+            
+        }
+    }
+    sort(v2.begin(),v2.end(),greater<ll>());
+  
+
+   
+
+   
+   int cnt = 0;
+
+   for(int i = 0;i<v2.size();i++){
+
+       if(total_cnt >=n ){
+        cout << cnt << nl;
+        return;
+       }
+      total_cnt +=v2[i];
+      cnt++;
+
+
+   }
+   if(total_cnt>=n){
+    cout << cnt << nl;
+   }
+   else{
+    cout << -1 << nl;
+   }
+
+   
+
+
+
+
 
       
 
