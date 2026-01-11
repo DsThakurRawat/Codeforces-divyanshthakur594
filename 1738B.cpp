@@ -568,7 +568,7 @@ void solve() {
     }
     ll first_sum = v[0];
     ll m = n-k+1;
-    ll first_known = a[1];
+    ll first_known = a[1];// first known element
 
     if(first_sum>m*first_known){
         cout << "NO"<<nl;
