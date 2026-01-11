@@ -548,7 +548,7 @@ means: Create a string of length k where every character is c.
 void solve() {
 
     ll n;cin>>n;
-    vector<
+    vector<ll>v(n);for(auto &in:v)cin>>in;
 
    
 
