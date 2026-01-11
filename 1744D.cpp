@@ -575,6 +575,24 @@ void solve() {
     }
    sort(all(v2));
    reverse(all(v2));
+
+   vector<ll>req;
+
+   int count = 0;
+   int cnt = 0;
+
+   for(int i = 0;i<v2.size();i++){
+
+       if(total_cnt >=n ){
+        cout << cnt << nl;
+        return;
+       }
+      total_cnt +=check(v2[i]);
+      cnt++;
+
+
+   }
+
    
 
 
