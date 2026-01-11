@@ -549,13 +549,23 @@ void solve() {
 
     ll n,k;cin>>n>>k;
     vector<ll>v(k);for(auto &in:v)cin>>in;
-    vector<ll>nums(n);
-
-    for(int i = 1;i<k;i++){
-        nums[i] = v[i] - v[i-1];
-    }
     
 
+    if(k==1){
+        cout << "YES"<<nl;
+        return;
+    }
+    vector<ll>a(k);
+    
+    for(int i = 1;i<k;i++){
+        a[i] = v[i] - v[i-1];
+    }
+    for(int i = 1;i+1<k;i++){
+        if(a[i]>a[i+1]){
+            cout << "NO"<<nl;
+            return;
+        }
+    }
 
    
  
