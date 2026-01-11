@@ -555,10 +555,17 @@ void solve() {
         cin>>v[i];
         prod = prod*v[i];
     }
-    vector<ll>av(n);
+    vector<ll>av;
     for(int i =1;i<=n;i++){
-        av[i] = i;
+
+        if(i % 2 == 0){
+            av.push_back(i);
+        }
+
+
+       
     }
+
 
 
 
