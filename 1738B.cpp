@@ -549,12 +549,13 @@ void solve() {
 
     ll n,k;cin>>n>>k;
     vector<ll>v(k);for(auto &in:v)cin>>in;
-    vector<ll>nums(n);
+    vector<ll>nums(k);
 
     for(int i = 1;i<k;i++){
         nums[n-k+i] = v[i] - v[i-1];
     }
-    for(auto &ot:nums) cout << ot << " ";
+
+    
    
 
 
