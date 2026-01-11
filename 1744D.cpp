@@ -595,7 +595,12 @@ void solve() {
 
 
    }
-   cout << -1 << nl;
+   if(total_cnt>=n){
+    cout << cnt << nl;
+   }
+   else{
+    cout << -1 << nl;
+   }
 
    
 
