@@ -554,12 +554,14 @@ void solve() {
     for(int i = 1;i<k;i++){
         nums[n-k+i] = v[i] - v[i-1];
     }
-    for(auto &ot:nums) cout << ot << " ";
-    cout << nl;
-   
 
-
-     
+    for(int i = 0;i+1<n;i++){
+        if(!(nums[i]<=nums[i+1])){
+               cout << "NO"<<nl;
+               return;
+        }
+    }
+ 
 
 
 
