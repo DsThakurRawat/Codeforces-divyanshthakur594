@@ -555,10 +555,36 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-    
+
 
   
-
+        int n, q;
+        cin >> n >> q;
+ 
+        vector<int> cnt(2);
+        vector<ll> sum(2);
+ 
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;
+            cnt[x % 2]++;
+            sum[x % 2] += x;
+        }
+ 
+        while (q--) {
+            int t, x;
+            cin >> t >> x;
+ 
+            sum[t] += 1LL * cnt[t] * x;
+ 
+            if (x % 2 == 1) {
+                cnt[t ^ 1] += cnt[t];
+                sum[t ^ 1] += sum[t];
+                sum[t] = cnt[t] = 0;
+            }
+            
+            cout << sum[0] + sum[1] << '\n';
+        }
 
 
       
