@@ -551,8 +551,8 @@ void solve() {
     vector<ll>v(k);for(auto &in:v)cin>>in;
     vector<ll>nums(n);
 
-    for(int i = n-k+1;i<n;i++){
-        nums[i] = v[i] - v[i-1];
+    for(int i = 1;i<k;i++){
+        nums[n-k+i] = v[i] - v[i-1];
     }
     for(auto &ot:nums) cout << ot << " ";
     cout << nl;
