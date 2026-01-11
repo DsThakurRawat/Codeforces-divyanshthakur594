@@ -577,6 +577,7 @@ void solve() {
             cnt++;
         }
     }
+    cout << -1 << nl;
 
 
 
