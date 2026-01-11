@@ -568,18 +568,17 @@ void solve() {
 
 
     for(int i =1;i<=n;i++){
-        if(v[i] % 2 == 0){
+       
             total_cnt += check(v[i]);
-        }
+       
         if( i % 2 == 0){
             v2.push_back(check(i));
             
         }
     }
-   sort(all(v2));
-   reverse(all(v2));
+  
 
-   vector<ll>req;
+   
 
    int count = 0;
    int cnt = 0;
