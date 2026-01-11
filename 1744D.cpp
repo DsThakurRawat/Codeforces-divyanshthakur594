@@ -549,10 +549,20 @@ void solve() {
 
     ll n;cin>>n;
     ll k = pow(2,n);
+    vector<ll>v(n);
+    ll prod = 1;
+    for(int i = 0;i<n;i++){
+        cin>>v[i];
+        prod = prod*v[i];
+    }
     vector<ll>av(n);
     for(int i =1;i<=n;i++){
         av[i] = i;
     }
+
+
+
+
 
 
       
