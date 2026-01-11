@@ -484,9 +484,9 @@ auto check = [&] (ll n ){
 we have to check if number is divisble by 2^n;
 then 
 ---------->>>>> number of two in that number >= n<<<<<<-------------
-
-
-
+ number of two in that number should be greater or equal to n
+---------------------------------------------------------------------------
+==================================================================================================================
 
 
 
