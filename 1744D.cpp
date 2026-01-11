@@ -576,11 +576,12 @@ void solve() {
             
         }
     }
+    sort(v2.begin(),v2.end(),greater<ll>());
   
 
    
 
-   int count = 0;
+   
    int cnt = 0;
 
    for(int i = 0;i<v2.size();i++){
@@ -589,7 +590,7 @@ void solve() {
         cout << cnt << nl;
         return;
        }
-      total_cnt +=check(v2[i]);
+      total_cnt +=v2[i];
       cnt++;
 
 
