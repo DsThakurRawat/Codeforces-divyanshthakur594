@@ -547,23 +547,21 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-
     ll n,k;cin>>n>>k;
-    vector<ll>v(n+1);
-    for(ll i = n-k+1;i<=n;i++){
-        cin>>v[i];
-    }
-    if(k==1){
-        cout << "YES"<<nl;
-        return;
-    }
-    for(ll i = n-k+1;i<=n;i++)
+    
+
+     
+
+
+
+
+
+
+
+
+
+
    
-  
-
-
-
-      
 
     
                 
