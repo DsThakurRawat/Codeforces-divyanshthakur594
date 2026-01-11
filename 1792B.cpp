@@ -554,7 +554,8 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-
+       ll a1,a2,a3,a4;cin>>a1>>a2>>a3>>a4;
+       
     
 
   
