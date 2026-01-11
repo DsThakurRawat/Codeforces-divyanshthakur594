@@ -564,6 +564,16 @@ void solve() {
     sort(all(av),greater<ll>());
     int m = av.size();
 
+    int cnt = 0;
+
+    for(int i =0;i<m;i++){
+        if(prod % k == 0){
+            cout << cnt << nl;
+            return;
+
+        }
+    }
+
 
 
 
