@@ -552,18 +552,12 @@ void solve() {
     vector<ll>nums(n);
 
     for(int i = 1;i<k;i++){
-        nums[n-k+i] = v[i] - v[i-1];
+        nums[i] = v[i] - v[i-1];
     }
+    
 
-    for(int i = 0;i+1<n;i++){
-        if((nums[i]<=nums[i+1])){
-              continue;
-        }
-        else{
-            cout << "NO"<<nl;
-            return;
-        }
-    }
+
+   
  
 
 
