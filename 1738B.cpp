@@ -557,8 +557,11 @@ void solve() {
 
     for(int i = 0;i+1<n;i++){
         if((nums[i]<=nums[i+1])){
-               cout << "NO"<<nl;
-               return;
+              continue;
+        }
+        else{
+            cout << "NO"<<nl;
+            return;
         }
     }
  
