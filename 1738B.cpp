@@ -554,8 +554,7 @@ void solve() {
     for(int i = 1;i<k;i++){
         nums[n-k+i] = v[i] - v[i-1];
     }
-
-    
+    for(auto &ot:nums) cout << ot << " ";
    
 
 
