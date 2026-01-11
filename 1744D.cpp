@@ -574,6 +574,7 @@ void solve() {
         }
         else{
             prod = prod*av[i];
+            cnt++;
         }
     }
 
