@@ -561,6 +561,7 @@ void solve() {
     };
 
     ll total_cnt = 0;
+    vector<ll>v2;
 
 
     for(int i =0;i<n;i++){
@@ -568,10 +569,12 @@ void solve() {
             total_cnt += check(v[i]);
         }
         if( i % 2 == 0){
-            total_cnt +=check(i);
+            v2.push_back(i);
+            
         }
     }
-    cout << total_cnt << nl;
+   sort(all(v2));
+   reverse(all(v2));
    
 
 
