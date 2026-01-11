@@ -550,6 +550,28 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
+     auto check = [&] (ll x){
+           int c = 0;
+           while(x % 2 == 0){
+            x /=2;
+            c++;
+           }
+           return c;
+        
+    };
+
+    ll total_cnt = 0;
+
+
+    for(int i =0;i<n;i++){
+        if(v[i] % 2 == 0){
+            total_cnt += check(v[i]);
+        }
+        if( i % 2 == 0){
+            total_cnt +=check(i);
+        }
+    }
+    cout << total_cnt << nl;
    
 
 
