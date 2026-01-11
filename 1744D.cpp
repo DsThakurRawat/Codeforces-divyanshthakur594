@@ -562,6 +562,7 @@ void solve() {
         }
     }
     sort(all(av),greater<ll>());
+    int m = av.size();
 
 
 
