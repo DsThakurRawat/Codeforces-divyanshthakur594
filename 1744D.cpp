@@ -548,7 +548,12 @@ means: Create a string of length k where every character is c.
 void solve() {
 
     ll n;cin>>n;
-    
+    ll k = pow(2,n);
+    vector<ll>av(n);
+    for(int i =1;i<=n;i++){
+        av[i] = i;
+    }
+
 
       
 
