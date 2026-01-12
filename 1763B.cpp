@@ -556,8 +556,8 @@ means: Create a string of length k where every character is c.
 void solve() {
 
     ll n,k;cin>>n>>k;
-    vector<ll>h(n);for(auto x :h)cin>>x;
-    vector<ll>p(n);for(auto x :p)cin>>x;
+    vector<ll>h(n);for(auto &x :h)cin>>x;
+    vector<ll>p(n);for(auto &x :p)cin>>x;
 
     while(k > 0){
                 
