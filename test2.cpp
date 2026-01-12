@@ -564,9 +564,14 @@ void solve() {
     }
     if(n==3){
         cout << 3 << nl;
+        return;
     }
     if( n% 2!=0){
         cout << 1 << nl;
+        return;
+    }
+    if(n%2==0){
+        cout << 0 << nl;
         return;
     }
 
