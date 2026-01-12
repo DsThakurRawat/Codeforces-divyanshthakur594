@@ -554,8 +554,21 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-       ll a1,a2,a3,a4;cin>>a1>>a2>>a3>>a4;
+       ll a1,a2,a3,a4;cin>>a1>>a2>>a3>>a4;//type of joke she have
+       //a1->jokes alice and bob both likes
+       //a2->alice likes them but bob doesn'nt
+
+       // a3 bob likes them,but alice does not
+       // no one likes them
+
+       if(a1 == 0){
+        cout << 1 << nl;
+        return;
+       }
+       cout << a1 + min(a1,a3)*2 + min(a1+1,abs(a2-a3)+a4) << nl;
+
        
+
     
 
   
