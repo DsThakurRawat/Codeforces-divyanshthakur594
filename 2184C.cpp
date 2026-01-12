@@ -554,37 +554,34 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-   
-     ll n,k;cin>>n>>k;
+    ll n, k;
+    cin >> n >> k;
 
-   if(k>n){
-    cout << -1 << nl;
-    return;
-   }
-   ll cnt = 0;
-   while(n>k){
-    if(n%2==0){
-        n = n/2;
+    if (k > n) {
+        cout << -1 << nl;
+        return;
     }
-    else{
-        if(((n+1))/2> k){
-            n = (n+1)/2;
-        }
-        else{
-            n = (n-1)/2;
-        }
-    }
-    cnt++;
 
-   }
-   if(n==k){
-    cout << cnt <<nl;
-    return;
-   }
-   else{
-    cout << -1 << nl;
-    return;
-   }
+    ll cnt = 0;
+
+    while (n > k) {
+        if (n % 2 == 0) {
+            n = n / 2;
+        } else {
+            ll p1 = (n - 1) / 2;
+            ll p2 = (n + 1) / 2;
+
+            if (p1 >= k)
+                n = p1;
+            else
+                n = p2;
+        }
+        cnt++;
+    }
+
+    if (n == k) cout << cnt << nl;
+    else cout << -1 << nl;
+
   
   
         
