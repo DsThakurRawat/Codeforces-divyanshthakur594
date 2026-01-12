@@ -567,7 +567,7 @@ void solve() {
         n = n/2;
     }
     else{
-        if(((n+1))/2>=k){
+        if(((n+1))/2> k){
             n = (n+1)/2;
         }
         else{
