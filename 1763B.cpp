@@ -565,16 +565,14 @@ void solve() {
               h[i] = max(0LL,h[i]-k);
 
         }
-        int min = p[0];
+        int mini = p[0];
 
         for(int i = 0;i<n;i++){
             if(h[i] != 0){
-                if(p[i] <=min){
-                    min = p[i];
-                }
+                mini = min(mini,p[i]);
             }
         }
-        k = k-min;
+        k = k-mini;
 
 
 
