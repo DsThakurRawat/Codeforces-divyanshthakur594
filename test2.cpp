@@ -556,22 +556,18 @@ means: Create a string of length k where every character is c.
 void solve() {
 
 
-        long long s, k, m;
-        cin >> s >> k >> m;
-
-        long long last = (m / k) * k;
-        long long prev = last - k;
-
-        long long sand;
-        if (prev + s <= last)
-            sand = s;              
-        else
-            sand = prev + s - last;  
-        long long dt = m - last;
-        long long ans = max(0LL, sand - dt);
-
-        cout << ans << "\n";
-
+        int n;
+    cin >> n;
+    
+    int a = 1023, o = 0;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        a &= x;
+        o |= x;
+    }
+    
+    std::cout << o - a << nl;
       
 
     
