@@ -554,54 +554,46 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-
     ll n,k;cin>>n>>k;
-    vector<ll>h(n);for(auto &x :h)cin>>x;
-    vector<ll>p(n);for(auto &x :p)cin>>x;
 
-    while(k > 0){
-                
-        for(int i =0;i<n;i++){
-              h[i] = max(0LL,h[i]-k);
+    vector<ll>h(n),p(n);
 
-        }
-        ll mini_index = 0;
-        ll mini = p[0];
+    for(int i =0;i<n;i++)cin>>h[i];
+    for(int i =0;i<n;i++)cin>>p[i];
 
-        for(int i = 0;i<n;i++){
-            if(h[i] != 0){
-               if(p[i]<=mini){
-                mini_index = i;
-                mini = p[i];
-               }
-            }
-        }
-        k = k-p[mini_index];
+    vector<pair<ll,ll>>a(n);
 
-
-
-
-
-
+    for(int i =0;i<n;i++){
+        a[i] = {h[i],p[i]};
     }
-    for(int i = 0;i<n;i++){
-        if(h[i] != 0){
-            cout << "NO" << nl;
-            return;
-        }
+    sort(a.begin(),a.end());
+
+    vector<ll>suff_min(n);
+    suff_min[n-1] = a[n-1].second;
+    for(int i =n-2;i>=0;i--){
+        suff_min[i] = min(suff_min[i+1],a[i].second);
     }
-    cout << "YES"<<nl;
+   ll total_damage = 0;
+   int ptr = 0;
 
+   while(k > 0 && ptr < n){
+          total_damage += k;
 
+          while(ptr < n&&a[ptr].first <= total_damage) ptr++;
+
+          if(ptr < n){
+            k -= suff_min[ptr];
+          }
+   }
+   if(ptr==n)cout << "YES"<<nl;
+   else cout << "NO"<<nl;
     
 
-
-
-  
+    
         
       
 
-    
+
                 
 
     
