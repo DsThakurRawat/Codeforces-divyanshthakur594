@@ -570,7 +570,7 @@ void solve() {
 
         for(int i = 0;i<n;i++){
             if(h[i] != 0){
-               if(mini<=h[i]){
+               if(mini<=p[i]){
                 mini_index = i;
                }
             }
