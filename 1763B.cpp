@@ -555,38 +555,7 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-     ll n, k;
-        cin >> n >> k;
-        vector<ll> h(n), p(n);
-        for(ll &x : h) cin >> x;
-        for(ll &x : p) cin >> x;
-
-        vector<pair<ll,ll>> a(n);
-        for(int i = 0; i < n; i++){
-            a[i] = {p[i], h[i]};   
-        }
-
-        sort(a.begin(), a.end());
-
-        for(int i = 0; i < n; i++){
-            ll power = a[i].first;
-            ll health = a[i].second;
-
-            if(k <= 0){
-                cout << "NO\n";
-                goto done;
-            }
-
-         
-            ll hits = (health + k - 1) / k;
-
-          
-            k -= hits * power;
-        }
-
-        cout << "YES\n";
-        done:;
-
+   
     
 
 
