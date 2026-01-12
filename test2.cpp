@@ -555,21 +555,22 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-    
+
         long long s, k, m;
-            cin >> s >> k >> m;
+        cin >> s >> k >> m;
 
-            long long tmod = m % k;
-            long long ans;
+        long long last = (m / k) * k;
+        long long prev = last - k;
 
-            if (k >= s) {
-                if (tmod < s) ans = s - tmod;
-                else ans = 0;
-            } else {
-                ans = s - tmod;
-            }
+        long long sand;
+        if (prev + s <= last)
+            sand = s;              
+        else
+            sand = prev + s - last;  
+        long long dt = m - last;
+        long long ans = max(0LL, sand - dt);
 
-            cout << ans << "\n";
+        cout << ans << "\n";
 
       
 
