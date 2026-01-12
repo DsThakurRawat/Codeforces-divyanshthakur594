@@ -567,7 +567,7 @@ void solve() {
         } else{
             ll pile1 = (n-1)/2;
             ll pile2 = (n + 1)/ 2;
-            if ( pile1- k < pile2 -k)
+            if ( abs(pile1- k) < abs(pile2 -k))
                 n = pile1;
             else
                 n = pile2;
