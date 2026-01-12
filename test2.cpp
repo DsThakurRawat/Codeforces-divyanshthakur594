@@ -555,18 +555,20 @@ means: Create a string of length k where every character is c.
 
 void solve() {
    
-   ll s,k,m;cin>>s>>k>>m;
+        long long s, k, m;
+        cin >> s >> k >> m;
 
-   if(m%k==0){
-    cout << s << nl;
-   }
-   else{
-    cout <<max(0LL, s - (m % k)) << nl; 
-   }
+        long long t = m % k;
+        long long ans;
 
+        if (k >= s) {
+            if (t < s) ans = s - t;
+            else ans = 0;
+        } else {
+            ans = s - t;
+        }
 
-  
-        
+        cout << ans << "\n";
 
 
       
