@@ -582,6 +582,13 @@ void solve() {
 
 
     }
+    for(int i = 0;i<n;i++){
+        if(h[i] != 0){
+            cout << "NO" << nl;
+            return;
+        }
+    }
+    cout << "YES"<<nl;
 
 
     
