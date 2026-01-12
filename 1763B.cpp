@@ -566,12 +566,13 @@ void solve() {
 
         }
         ll mini_index = 0;
-        ll mini = h[0];
+        ll mini = p[0];
 
         for(int i = 0;i<n;i++){
             if(h[i] != 0){
-               if(mini<=p[i]){
+               if(p[i]<=mini){
                 mini_index = i;
+                mini = p[i];
                }
             }
         }
