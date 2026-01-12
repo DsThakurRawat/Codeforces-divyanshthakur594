@@ -555,43 +555,37 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-    ll n,k;cin>>n>>k;
-    vector<ll>h(n);for(auto &x :h)cin>>x;
-    vector<ll>p(n);for(auto &x :p)cin>>x;
+     ll n, k;
+        cin >> n >> k;
+        vector<ll> h(n), p(n);
+        for(ll &x : h) cin >> x;
+        for(ll &x : p) cin >> x;
 
-    while(k > 0){
-                
-        for(int i =0;i<n;i++){
-              h[i] = max(0LL,h[i]-k);
-
+        vector<pair<ll,ll>> a(n);
+        for(int i = 0; i < n; i++){
+            a[i] = {p[i], h[i]};   
         }
-        ll mini_index = 0;
-        ll mini = p[0];
 
-        for(int i = 0;i<n;i++){
-            if(h[i] != 0){
-               if(p[i]<=mini){
-                mini_index = i;
-                mini = p[i];
-               }
+        sort(a.begin(), a.end());
+
+        for(int i = 0; i < n; i++){
+            ll power = a[i].first;
+            ll health = a[i].second;
+
+            if(k <= 0){
+                cout << "NO\n";
+                goto done;
             }
+
+         
+            ll hits = (health + k - 1) / k;
+
+          
+            k -= hits * power;
         }
-        k = k-p[mini_index];
 
-
-
-
-
-
-    }
-    for(int i = 0;i<n;i++){
-        if(h[i] != 0){
-            cout << "NO" << nl;
-            return;
-        }
-    }
-    cout << "YES"<<nl;
-
+        cout << "YES\n";
+        done:;
 
     
 
