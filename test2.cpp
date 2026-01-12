@@ -561,7 +561,7 @@ void solve() {
     cout << s << nl;
    }
    else{
-    cout << s - (m % k) << nl; 
+    cout <<max(0LL, s - (m % k)) << nl; 
    }
 
 
