@@ -566,13 +566,13 @@ void solve() {
         if (n % 2 == 0) {
             n = n / 2;
         } else{
-            ll p1 = (n-1)/2;
-            ll p2 = (n + 1)/ 2;
+            ll pile1 = (n-1)/2;
+            ll pile2 = (n + 1)/ 2;
 
-            if (p1 >= k)
-                n = p1;
+            if (pile1 >= k)
+                n = pile1;
             else
-                n = p2;
+                n = pile2;
         }
         cnt++;
     }
