@@ -555,8 +555,7 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-    ll n, k;cin >> n >> k;
-
+      ll n, k;cin >> n >> k;
         if (k>n){
             cout << -1 << nl;
             return;
@@ -568,7 +567,6 @@ void solve() {
         } else{
             ll pile1 = (n-1)/2;
             ll pile2 = (n + 1)/ 2;
-
             if (pile1 >= k)
                 n = pile1;
             else
