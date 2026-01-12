@@ -555,26 +555,14 @@ means: Create a string of length k where every character is c.
 
 void solve() {
    
+   ll s,k,m;cin>>s>>k>>m;
 
-    ll n;cin>>n;
-
-    if(n==2){
-        cout << 2 << nl;
-        return;
-    }
-    if(n==3){
-        cout << 3 << nl;
-        return;
-    }
-    if( n% 2!=0){
-        cout << 1 << nl;
-        return;
-    }
-    if(n%2==0){
-        cout << 0 << nl;
-        return;
-    }
-
+   if(m%k==0){
+    cout << s << nl;
+   }
+   else{
+    cout << s - (m % k) << nl; 
+   }
 
 
   
