@@ -565,7 +565,7 @@ void solve() {
         cout << 1 << nl;
         return;
        }
-       cout << a1 + min(a1,a3)*2 + min(a1+1,abs(a2-a3)+a4) << nl;
+       cout << a1 + min(a2,a3)*2 + min(a1+1,abs(a2-a3)+a4) << nl;
 
        
 
