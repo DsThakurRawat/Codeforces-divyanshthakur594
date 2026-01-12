@@ -555,33 +555,21 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-      ll n, k;cin >> n >> k;
-        if (k>n){//nit possibel
-            cout << -1 << nl;
-            return;
-          }
-    ll cnt = 0;
-    while (n > k){
-        if (n % 2 == 0) {
-            n = n / 2;
-        } else{
-            ll pile1 = (n-1)/2;
-            ll pile2 = (n + 1)/ 2;
-            if ( abs(pile1- k) < abs(pile2 -k))
-                n = pile1;
-            else
-                n = pile2;
+     
+
+        int n, k;
+        cin >> n >> k;
+        
+        int l = n, r = n;
+        int cnt = 0;
+        while (r != 1) {
+            if (l <= k && k <= r) break;
+            l = l / 2;
+            r = r / 2 + r % 2;
+            cnt++;
         }
-        cnt++;
-    }
-
-    if (n == k){ 
-        cout << cnt << nl;
-        return;
-    }
-    cout << -1 << nl;
-
-  
+        if (l <= k && k <= r) cout << cnt << '\n';
+        else cout << -1 << '\n';
   
         
 
