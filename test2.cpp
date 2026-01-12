@@ -554,22 +554,22 @@ means: Create a string of length k where every character is c.
 
 
 void solve() {
-   
+
+    
         long long s, k, m;
-        cin >> s >> k >> m;
+            cin >> s >> k >> m;
 
-        long long t = m % k;
-        long long ans;
+            long long tmod = m % k;
+            long long ans;
 
-        if (k >= s) {
-            if (t < s) ans = s - t;
-            else ans = 0;
-        } else {
-            ans = s - t;
-        }
+            if (k >= s) {
+                if (tmod < s) ans = s - tmod;
+                else ans = 0;
+            } else {
+                ans = s - tmod;
+            }
 
-        cout << ans << "\n";
-
+            cout << ans << "\n";
 
       
 
