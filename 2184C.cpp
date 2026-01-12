@@ -561,9 +561,7 @@ void solve() {
             cout << -1 << nl;
             return;
           }
-
     ll cnt = 0;
-
     while (n > k){
         if (n % 2 == 0) {
             n = n / 2;
