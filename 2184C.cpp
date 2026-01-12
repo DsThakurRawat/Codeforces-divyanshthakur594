@@ -555,12 +555,12 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-    ll n, k; cin >> n >> k;
+    ll n, k;cin >> n >> k;
 
         if (k>n){
             cout << -1 << nl;
             return;
-        }
+          }
 
     ll cnt = 0;
 
