@@ -564,10 +564,10 @@ void solve() {
 
     ll cnt = 0;
 
-    while (n > k) {
+    while (n > k){
         if (n % 2 == 0) {
             n = n / 2;
-        } else {
+        } else{
             ll p1 = (n - 1) / 2;
             ll p2 = (n + 1) / 2;
 
@@ -579,8 +579,11 @@ void solve() {
         cnt++;
     }
 
-    if (n == k) cout << cnt << nl;
-    else cout << -1 << nl;
+    if (n == k){ 
+        cout << cnt << nl;
+        return;
+    }
+    cout << -1 << nl;
 
   
   
