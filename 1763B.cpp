@@ -555,7 +555,44 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
-   
+    ll n,k;cin>>n>>k;
+    vector<ll>h(n);for(auto &x :h)cin>>x;
+    vector<ll>p(n);for(auto &x :p)cin>>x;
+
+    while(k > 0){
+                
+        for(int i =0;i<n;i++){
+              h[i] = max(0LL,h[i]-k);
+
+        }
+        ll mini_index = 0;
+        ll mini = p[0];
+
+        for(int i = 0;i<n;i++){
+            if(h[i] != 0){
+               if(p[i]<=mini){
+                mini_index = i;
+                mini = p[i];
+               }
+            }
+        }
+        k = k-p[mini_index];
+
+
+
+
+
+
+    }
+    for(int i = 0;i<n;i++){
+        if(h[i] != 0){
+            cout << "NO" << nl;
+            return;
+        }
+    }
+    cout << "YES"<<nl;
+
+
     
 
 
