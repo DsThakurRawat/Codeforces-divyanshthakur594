@@ -565,7 +565,7 @@ void solve() {
               h[i] = max(0LL,h[i]-k);
 
         }
-        int mini = p[0];
+        ll mini = p[0];
 
         for(int i = 0;i<n;i++){
             if(h[i] != 0){
