@@ -515,8 +515,41 @@ string(k, c)
 means: Create a string of length k where every character is c.
 
 
+============================================================================================================================================================
 
 
+    TOPIC: Column-wise Sum of Pairwise Absolute Differences
+
+
+long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
+                              int n, int m)
+{
+    long long total = 0;
+
+    // iterate over each column
+    for(int col = 0; col < m; col++)
+    {
+        vector<long long> v;
+
+        // collect all elements of this column
+        for(int row = 0; row < n; row++)
+            v.push_back(grid[row][col]);
+
+        // sort so |a - b| becomes (b - a) for ordered elements
+        sort(v.begin(), v.end());
+
+        // prefix sum trick to accumulate pairwise differences
+        long long pref = 0;
+        for(int i = 0; i < n; i++)
+        {
+            // contribution of v[i] with all previous values
+            total += v[i] * i - pref;
+            pref += v[i];
+        }
+    }
+
+    return total;
+}
 
 
 
