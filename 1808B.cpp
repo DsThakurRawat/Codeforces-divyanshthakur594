@@ -581,6 +581,7 @@ void solve() {
             pref += v[i];
         }
     }
+    cout << total<<nl;
 
 
 
