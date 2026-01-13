@@ -585,7 +585,7 @@ void solve() {
        
 
            
-        while(v2[0] != v2[n-1]){
+        while(true){
              
                 ll mini = *min_element(v2.begin(),v2.end());
             
@@ -603,9 +603,8 @@ void solve() {
                          }
                }
 
-
-
-
+               set<ll>st2(all(v2));
+                           
             }
 
 
