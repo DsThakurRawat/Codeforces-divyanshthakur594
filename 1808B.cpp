@@ -517,8 +517,7 @@ means: Create a string of length k where every character is c.
 
 ============================================================================================================================================================
 
-
-    TOPIC: Column-wise Sum of Pairwise Absolute Differences
+TOPIC: Column-wise Sum of Pairwise Absolute Differences
 
 
 long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
