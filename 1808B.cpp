@@ -555,6 +555,25 @@ means: Create a string of length k where every character is c.
 
 void solve() {
 
+    ll n,m;cin>>n>>m;
+
+    vector<vector<ll>> grid(n, vector<ll>(m));
+
+    for(int i =0;i<n;i++){
+        for(int j = 0;j<m;j++){
+            cin>>grid[i][j];
+        }
+    }
+    
+
+
+
+    
+
+
+
+
+
     
 
             
