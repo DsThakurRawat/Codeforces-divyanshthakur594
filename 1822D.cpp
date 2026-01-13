@@ -587,21 +587,27 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 
 void solve() {
 
-    ll n;cin>>n;
-    if(n==1){
-        cout <<  1 << nl;
-        return;
-    }
-    if(n%2==1){
-        cout << -1 << nl;
-        return;
-    }
-    if(n%2==0){
-    for(int i = 1;i<=n;i++){
-        cout << n-i+1 << " ";
-    }
-    cout << nl;
-    }
+        ll n;cin>>n;
+        if(n==1){
+            cout <<  1 << nl;
+            return;
+        }
+        if(n%2==1){
+            cout << -1 << nl;
+            return;
+        }
+        if(n%2==0){
+        for(int i = 0;i<n;i++){
+              if (i % 2) {
+                    cout << i << " ";
+                } else {
+                    cout << n - i << " ";
+                }
+
+        
+            }
+            cout << nl;
+            }
 
 
 
