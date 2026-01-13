@@ -597,7 +597,7 @@ void solve() {
                }
                for(int k =1;k<=n;k++){
                          if(v2[k] != v2[ind]){
-                             v2[k] = ceil(v2[k]/v2[ind]);
+                             v2[k] = (v2[k]+v2[ind]-1)/v2[ind]);
                              ops.push_back({k,ind});
                              cnt++;
                          }
@@ -613,7 +613,7 @@ void solve() {
                            
             }
          for(auto &[a,b] : ops){
-            cout << a << " " << b;
+            cout << a << " " << b<<nl;
          }
          cout << nl;
 
