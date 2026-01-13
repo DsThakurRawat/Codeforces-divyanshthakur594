@@ -588,6 +588,10 @@ void solve() {
         while(flag != 1){
                
                 ll mini = *min_element(v2.begin()+1,v2.begin()+n+1);
+                if (mini == 1) {
+                    cout << -1 << nl;
+                    return;
+                }
             
                for(int j = 1;j<=n;j++){
                      if(v2[j] == mini){
@@ -603,7 +607,7 @@ void solve() {
                          }
                }
 
-              set<ll>st2(all(v2));
+              set<ll>st2(v2.begin()+1,v2.end());
               if(st2.size()==1){
                 flag = 1;
               }
