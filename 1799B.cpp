@@ -583,10 +583,10 @@ void solve() {
 
         int cnt = 0;    
        
-
+       int flag = 0;
            
-        while(true){
-             
+        while(flag != 1){
+               
                 ll mini = *min_element(v2.begin(),v2.end());
             
                for(int j = 1;j<=n;j++){
@@ -603,7 +603,13 @@ void solve() {
                          }
                }
 
-               set<ll>st2(all(v2));
+              set<ll>st2(all(v2));
+              if(st2.size()==1){
+                flag = 1;
+              }
+
+               
+               
                            
             }
 
