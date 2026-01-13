@@ -612,8 +612,11 @@ void solve() {
                
                            
             }
+         for(auto &[a,b] : ops){
+            cout << a << " " << b;
+         }
+         cout << nl;
 
-            
 
 
             
