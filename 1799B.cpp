@@ -616,6 +616,8 @@ void solve() {
                
                            
             }
+    
+        cout << cnt << nl;
          for(auto &[a,b] : ops){
             cout << a << " " << b<<nl;
          }
