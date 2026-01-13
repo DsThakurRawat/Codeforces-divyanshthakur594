@@ -563,7 +563,7 @@ void solve() {
 
     // if all elelemts are qual then ops  = 0;
 
-        set<ll>st(all(v));
+        set<ll>st(v.begin()+1,v.end());
         if(st.size()==1){
             cout << 0 << nl;
             return;
@@ -587,7 +587,7 @@ void solve() {
            
         while(flag != 1){
                
-                ll mini = *min_element(v2.begin()+1,v2.end()+n+1);
+                ll mini = *min_element(v2.begin()+1,v2.begin()+n+1);
             
                for(int j = 1;j<=n;j++){
                      if(v2[j] == mini){
