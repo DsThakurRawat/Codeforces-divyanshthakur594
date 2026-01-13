@@ -564,7 +564,24 @@ void solve() {
             cin>>grid[i][j];
         }
     }
-    
+    ll total = 0;
+
+    for (int col = 0; col < m; col++) {
+        vector<ll> v;
+
+        for (int row = 0; row < n; row++) {
+            v.push_back(grid[row][col]);
+        }
+
+        sort(v.begin(), v.end());
+
+        long long pref = 0;
+        for (int i = 0; i < n; i++) {
+            total += v[i]*i - pref;
+            pref += v[i];
+        }
+    }
+
 
 
 
