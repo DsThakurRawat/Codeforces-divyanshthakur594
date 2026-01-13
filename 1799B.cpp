@@ -580,10 +580,12 @@ void solve() {
             
             ll ind = 0;
             
+
+        int cnt = 0;    
        
 
            
-        while(v[0] != v[n-1]){
+        while(v2[0] != v2[n-1]){
                 int flag = 0;
                 ll mini = *min_element(v2.begin(),v2.end());
             
@@ -594,9 +596,10 @@ void solve() {
                      }
                }
                for(int k =1;k<=n;k++){
-                         if(k != ind){
+                         if(v2[k] != v2[ind]){
                              v2[k] = ceil(v2[k]/v2[ind]);
                              ops.push_back({k,ind});
+
                          }
                }
 
