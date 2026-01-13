@@ -588,6 +588,8 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 void solve() {
 
     ll n;cin>>n;
+    
+
 
 
 
