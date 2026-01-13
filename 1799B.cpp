@@ -556,22 +556,59 @@ means: Create a string of length k where every character is c.
 void solve() {
 
     ll n;cin>>n;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
+    vector<ll>v(n+1);
+    for(ll i =1;i<=n;i++){
+        cin>>v[i];
+    }
 
     // if all elelemts are qual then ops  = 0;
 
-    set<ll>st(all(v));
-    if(st.size()==1){
-        cout << 0 << nl;
-        return;
-    }
-
-    for(int i =0;i<n;i++){
-        if(v[i] == 1){
-            cout <<  -1 << nl;
+        set<ll>st(all(v));
+        if(st.size()==1){
+            cout << 0 << nl;
             return;
         }
-    }
+
+        for(int i =1;i<=n;i++){
+            if(v[i] == 1){
+                cout <<  -1 << nl;
+                return;
+            }
+        }
+        vector<pair<ll,ll>>ops;
+        vector<ll>v2=v;
+            
+            ll ind = 0;
+            
+       
+
+           
+        while(v[0] != v[n-1]){
+                int flag = 0;
+                ll mini = *min_element(v2.begin(),v2.end());
+            
+               for(int j = 1;j<=n;j++){
+                     if(v2[j] == mini){
+                        ind = j;
+                        break;
+                     }
+               }
+               for(int k =1;k<=n;k++){
+                         if(k != ind){
+                             v2[k] = ceil(v2[k]/v2[ind]);
+                             ops.push_back({k,ind});
+                         }
+               }
+
+
+
+
+            }
+
+
+            
+        
+
 
 
      
