@@ -598,7 +598,7 @@ void solve() {
     }
     if(n%2==0){
     for(int i = 1;i<=n;i++){
-        cout << n-i-1 << " ";
+        cout << n-i+1 << " ";
     }
     cout << nl;
     }
