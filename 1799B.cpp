@@ -586,7 +586,7 @@ void solve() {
 
            
         while(v2[0] != v2[n-1]){
-                int flag = 0;
+             
                 ll mini = *min_element(v2.begin(),v2.end());
             
                for(int j = 1;j<=n;j++){
@@ -599,7 +599,7 @@ void solve() {
                          if(v2[k] != v2[ind]){
                              v2[k] = ceil(v2[k]/v2[ind]);
                              ops.push_back({k,ind});
-
+                             cnt++;
                          }
                }
 
