@@ -597,7 +597,7 @@ void solve() {
             return;
         }
         string t2 = t;
-         reverse(t2.begin(),t2.end());
+        reverse(t2.begin(),t2.end());
         if(s ==t2){
               cout << 2 << nl;
               return;
