@@ -604,9 +604,18 @@ void solve() {
               cout << 2 << nl;
               return;
         }
-        
+        ll cnt = 0;
+        ll cnt_rev = 0;
+
+        for(int i = 0;i<n;i++){
+            if(s[i] != t[i])cnt++;
+        }
+        for(int i = 0;i<n;i++){
+            if(s[i] != t2[i])cnt_rev++;
+        }
 
 
+           cout << 2*cnt - cnt % 2 << nl;
         
 
       
