@@ -538,32 +538,15 @@ void solve() {
     ll n,x;cin>>n>>x;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(v.begin(),v.end());
-    ll cnt = 0;
-
-
-    while(v[0] <= x){
-
-        ll sum = 0;
-        
-        for(int i = 0;i<n;i++){
-             sum += v[i];
-             if(sum <= x)cnt++;
-          
-             v[i] = v[i]+1;
-            
-        }
-      
-           
-            
-         
-        
-
-
+    vector<ll>pref(n);
+    pref[0] = v[0];
+    for(int i = 1;i<n;i++){
+        pref[i] = pref[i-1] +v[i];
     }
-                
+
 
     
-        cout << cnt << nl;
+      
 
     
 
