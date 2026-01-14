@@ -548,7 +548,7 @@ void solve() {
 
     for(ll i =0;i<n;i++){
         if(pref[i] >x )break;
-        ll days = (x-pref[i])/ (i+1);
+        ll days = (x-pref[i])/ (i+1) + 1;
         ans += days;
     }
     cout << ans << nl;
