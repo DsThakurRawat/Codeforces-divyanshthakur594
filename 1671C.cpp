@@ -541,7 +541,7 @@ void solve() {
     ll cnt = 0;
 
 
-    while(true){
+    while(v[0] <= x){
 
         ll sum = 0;
         
@@ -552,18 +552,18 @@ void solve() {
              v[i] = v[i]+1;
             
         }
-        if(v[0] > x){
+      
            
-            cout << cnt << nl;
-            return;
-        }
+            
+         
+        
 
 
     }
                 
 
     
-
+        cout << cnt << nl;
 
     
 
