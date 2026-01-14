@@ -544,6 +544,15 @@ void solve() {
         pref[i] = pref[i-1] +v[i];
     }
 
+    ll ans = 0;
+
+    for(ll i =0;i<n;i++){
+        if(pref[i] >x )break;
+        ll days = (x-pref[i])/ (i+1);
+        ans += days;
+    }
+    cout << ans << nl;
+
 
     
       
