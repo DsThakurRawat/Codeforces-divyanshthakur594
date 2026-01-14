@@ -615,7 +615,7 @@ void solve() {
         }
 
 
-           cout << 2*cnt - cnt % 2 << nl;
+           cout <<min( 2*cnt - cnt % 2,2*cnt -(1-cnt_rev % 2) )<< nl;
         
 
       
