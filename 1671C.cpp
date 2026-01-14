@@ -547,6 +547,7 @@ void solve() {
         for(int i = 0;i<n;i++){
              sum += v[i];
              if(sum <= x)cnt++;
+          
              v[i] = v[i]+1;
             
         }
