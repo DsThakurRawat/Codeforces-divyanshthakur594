@@ -538,12 +538,13 @@ void solve() {
     ll n,x;cin>>n>>x;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(v.begin(),v.end());
+    ll cnt = 0;
 
-    while(flip = 0){
+
+    while(true){
 
         ll sum = 0;
-        ll cnt = 0;
-
+        
         for(int i = 0;i<n;i++){
              sum += v[i];
              if(sum <= x)cnt++;
@@ -552,7 +553,7 @@ void solve() {
             
         }
         if(v[0] > x){
-            flip = 1;
+           
             cout << cnt << nl;
             return;
         }
