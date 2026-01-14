@@ -550,7 +550,10 @@ void solve() {
              v[i] = v[i]+1;
             
         }
-        if(v[0] > x)break;
+        if(v[0] > x){
+            cout << cnt << nl;
+            return;
+        }
 
 
     }
