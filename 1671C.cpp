@@ -539,7 +539,7 @@ void solve() {
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(v.begin(),v.end());
 
-    while(true){
+    while(flip = 0){
 
         ll sum = 0;
         ll cnt = 0;
@@ -552,6 +552,7 @@ void solve() {
             
         }
         if(v[0] > x){
+            flip = 1;
             cout << cnt << nl;
             return;
         }
