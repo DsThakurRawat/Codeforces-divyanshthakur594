@@ -588,9 +588,11 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 void solve() {
 
    
-        ll n;
-        cin >> n;
-        cout << ((n + 1) * n) + n + 2 << nl;
+        ll n;cin>>n;
+        string s;cin>>s;
+        string t;cin>>t;
+
+      
     
 
 
