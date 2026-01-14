@@ -592,6 +592,18 @@ void solve() {
         string s;cin>>s;
         string t;cin>>t;
 
+        if(s==t){
+            cout << 0 << nl;
+            return;
+        }
+        string t2 = t;
+         reverse(t2.begin(),t2.end());
+        if(s ==t2){
+              cout << 2 << nl;
+              return;
+        }
+        
+
       
     
 
