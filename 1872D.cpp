@@ -590,13 +590,17 @@ void solve() {
 
     ll n,x,y;cin>>n>>x>>y;
     
-    auto calcsum = [&](ll start,ll end){
+    auto calcum = [&](ll start,ll end){
         ll sum = ((start=end)*(end-start+1))/2;
         return sum;
     };
    
 
+  ll cnt1 = (n/x)-(n/lcm(x,y));
+  ll cnt2 = (n/y)-(n/lcm(x,y));
 
+  ll ans = calcum(n-cnt1+1,n)-calcum(1LL,cnt2);
+  cout << ans << nl;
 
 
 
