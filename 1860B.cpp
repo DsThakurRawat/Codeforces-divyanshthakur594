@@ -607,7 +607,7 @@ void solve() {
     ll k_taken = m/k;
     ll one_taken = m % k;
     ll taken_fancy_one = max(0LL,one_taken-a1);
-    ll left_regular_one = max(0LL,k_taken-ak);
+    ll left_regular_one = max(0LL,a1-one_taken);
     ll taken_fancy_k = max(0LL,k_taken-ak);
     ll to_repalce = min(left_regular_one/k,taken_fancy_k);
 
