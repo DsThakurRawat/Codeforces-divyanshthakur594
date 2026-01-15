@@ -589,10 +589,15 @@ void solve() {
 
 
     ll n,x,y;cin>>n>>x>>y;
+    if(x==1){
+       ll sum =  n*(n+1);
+       ll save = sum / 2;
+       cout << save - 1<< n;
+    }
 
 
 
-    
+
 
 
 
