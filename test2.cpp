@@ -551,9 +551,9 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 }
 
 
-
-
-
+================================================================================
+calculate sum from start to end 
+ ll sum = ((start=end)*(end-start+1))/2;
 
 
 
@@ -583,41 +583,37 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
 
+long long min_divisor(long long n) {
+    for (long long d = 2; d * d <= n; d++) {
+        if (n % d == 0)
+            return d;
+    }
+    return n;   // n is prime
+}
 
 
 void solve() {
 
-   
-    int n;
-    cin >> n;
+ 
     
-    vector<int> x(n);
-    for (int i = 0; i < n; i++){
-        cin >> x[i];
-    }
-    
-    for (auto s : { x[0] - 2, x[0] - 1, x[0] }){
-        int v = s;
-        
-        bool able = true;
-        
-        for (int i = 0; i < n; i++){
-            v++;
-            if (abs(x[i] - v) > 1){
-                able = false;
+ long long l, r;
+        cin >> l >> r;
+
+        bool found = false;
+
+        for (long long x = l; x <= r; x++) {
+            long long md = min_divisor(x);
+
+            if (md != x) {     // x is composite
+                cout << md << " " << x - md << "\n";
+                found = true;
                 break;
             }
         }
-        
-        if (able) {
-            cout << "YES"<<nl;
-            return;
-        }
-    }
-    
-    cout << "NO"<<nl;;
-    
 
+        if (!found) {
+            cout << -1 << "\n";
+        }
 
 
 
