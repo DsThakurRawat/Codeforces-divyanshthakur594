@@ -613,7 +613,19 @@ void solve() {
           v[i] = i;
     }
 
-    sort(all(v));
+    sort(all(v),greater<ll>());
+
+    for(ll i = 1;i<=n;i++){
+        if(i%x==0){
+            sumX +=v[i];
+        }
+        else if(i % y==0){
+            sumY+=v[i];
+        }
+
+    }
+    cout << sumX-sumY << nl;
+
    
 
 
