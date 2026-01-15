@@ -600,9 +600,26 @@ void solve() {
         ll save = sum/2;
         cout << save - n << nl;
         return;
+    }
 
+     
+    
+    ll sumX = 0;
+    ll sumY=0;
+
+    for(int i = 1;i<=n;i++){
+          if(i%x==0){
+            sumX += n-i+1;
+          }
+          if( i % y == 0){
+            sumY += n - i +1;
+          }
 
     }
+    cout << sumX-sumY<<nl;
+
+
+
 
 
 
