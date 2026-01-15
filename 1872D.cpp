@@ -607,16 +607,14 @@ void solve() {
     ll sumX = 0;
     ll sumY=0;
 
-    for(int i = 1;i<=n;i++){
-          if(i%x==0){
-            sumX += n-i+1;
-          }
-         else if( i % y == 0){
-            sumY += n - i +1;
-          }
+    vector<ll>v(n+1);
 
+    for(int i = 1;i<=n;i++){
+          v[i] = i;
     }
-    cout << sumX-sumY<<nl;
+
+    sort(all(v));
+   
 
 
 
