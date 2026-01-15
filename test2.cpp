@@ -583,38 +583,24 @@ calculate sum from start to end
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
 
-long long min_divisor(long long n) {
-    for (long long d = 2; d * d <= n; d++) {
-        if (n % d == 0)
-            return d;
-    }
-    return n;   // n is prime
-}
 
 
 void solve() {
 
  
     
- long long l, r;
-        cin >> l >> r;
 
-        bool found = false;
+               ll n;
+                cin >> n;
 
-        for (long long x = l; x <= r; x++) {
-            long long md = min_divisor(x);
+                long long ans = 2000000000LL; 
+                for (int i = 0; i < n; i++) {
+                    long long d, s;
+                    cin >> d >> s;
+                    ans = min(ans, d + (s - 1) / 2);
+                }
 
-            if (md != x) {     // x is composite
-                cout << md << " " << x - md << "\n";
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            cout << -1 << "\n";
-        }
-
+                cout << ans << "\n";
 
 
 
