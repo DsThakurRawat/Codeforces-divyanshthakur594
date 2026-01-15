@@ -589,48 +589,12 @@ void solve() {
 
 
     ll n,x,y;cin>>n>>x>>y;
-    if(x==1){
-       ll sum =  (n)*(n+1);
-       ll save = sum / 2;
-       cout << save - 1<< nl;
-       return;
-    }
-    if(y==1){
-        ll sum = (n)*(n+1);
-        ll save = sum/2;
-        cout << save - n << nl;
-        return;
-    }
-
-     
     
-    ll sumX = 0;
-    ll sumY=0;
-
-    vector<ll>v(n+1);
-
-    for(int i = 1;i<=n;i++){
-          v[i] = i;
-    }
-
-    sort(all(v),greater<ll>());
-
-    for(ll i = 1;i<=n;i++){
-        if(i%x==0){
-            sumX +=v[i];
-        }
-        else if(i % y==0){
-            sumY+=v[i];
-        }
-
-    }
-    cout << sumX-sumY << nl;
-
+    auto calcsum = [&](ll start,ll end){
+        ll sum = ((start=end)*(end-start+1))/2;
+        return sum;
+    };
    
-
-
-
-
 
 
 
