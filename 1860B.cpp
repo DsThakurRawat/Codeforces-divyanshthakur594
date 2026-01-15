@@ -612,8 +612,27 @@ void solve() {
     ll to_repalce = min(left_regular_one/k,taken_fancy_k);
 
     ll res = taken_fancy_one + taken_fancy_k-to_repalce;
-    cout << res << nl;
-    
+   
+    auto fn = [m,k,a1,ak](ll x){
+        ll taken_1 = m-k*x;
+        return max(0LL,taken_1-a1) + max(0LL,x-ak);
+    };
+    ll lf = 0;
+    ll rg = m/k;
+    while(rg - lf>2){
+        ll mid = (lf + rg)/2;
+        if(fn(mid)<fn(mid+1)){
+            rg = mid+1;
+
+        }
+        else lf = mid;
+    }
+    ll ans = LLONG_MAX;
+    for(ll i = lf;i<=rg;i++){
+        ans = min(ans,fn(i));
+    }
+    cout << ans << nl;
+
 
     
 
