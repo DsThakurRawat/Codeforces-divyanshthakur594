@@ -611,7 +611,7 @@ void solve() {
           if(i%x==0){
             sumX += n-i+1;
           }
-          if( i % y == 0){
+         else if( i % y == 0){
             sumY += n - i +1;
           }
 
