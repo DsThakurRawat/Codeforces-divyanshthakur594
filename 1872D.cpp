@@ -591,7 +591,7 @@ void solve() {
     ll n,x,y;cin>>n>>x>>y;
     
     auto calcum = [&](ll start,ll end){
-        ll sum = ((start=end)*(end-start+1))/(2);
+        ll sum = ((start+end)*(end-start+1))/(2);
         return sum;
     };
    auto lcm = [&](ll num1,ll num2){
