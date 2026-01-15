@@ -613,6 +613,7 @@ void solve() {
 
     ll res = taken_fancy_one + taken_fancy_k-to_repalce;
     cout << res << nl;
+    
 
     
 
