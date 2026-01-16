@@ -604,6 +604,14 @@ void solve() {
         cout << min(c,m)<<nl;
         return;
     }  
+    if(x == 0){
+        cout << min(c,m)<<nl;
+        return;
+    }
+    if(m==0||c==0){
+        cout << 0 << nl;
+    }
+
 
 
 
