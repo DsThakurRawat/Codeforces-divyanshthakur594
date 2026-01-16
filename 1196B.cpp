@@ -602,7 +602,7 @@ void solve() {
     c-=ans;
     m-=ans;
     x-=ans;
-    ans+=(c+m);
+    ans+=(c+m)/3;
     cout << ans << nl;
 
 
