@@ -556,7 +556,7 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 
 
 
-
+i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 
@@ -592,14 +592,15 @@ void solve() {
  
     ll k = n/m;
     vector<ll>digits(10);
-    for(int i = 0;i<10;i++){
-         digits[i] = ((i+1)*m)%10;
+    for(int i = 1;i<=10;i++){
+         digits[i] = ((i)*m)%10;
     }
     ll sum = 0;
     for(int i =0;i<k%10;i++){
         sum += digits[i];
     }
     cout << sum + k/10 *accumulate(digits.begin(),digits.end(),0LL)<<nl;
+
 
    
 
