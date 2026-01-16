@@ -594,6 +594,11 @@ void solve() {
     for(int i = 0;i<k;i++)cin>>v[i];
     set<ll>st(v.begin(),v.end());
 
+    if(st.size()==1){
+        cout << "YES"<<nl;
+        return;
+    }
+
     vector<ll>v2;
 
 
