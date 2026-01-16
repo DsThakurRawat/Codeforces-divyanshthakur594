@@ -601,13 +601,11 @@ void solve() {
     for(int i =1;i<n-1;i++){
         ll loc = v[i]*v[n-1-i];
 
-        if(loc==pro){
-            continue;
+        if(loc!=pro){
+              cout << "NO" << nl;
+              return;
         }
-        else{
-            cout << "NO" << nl;
-            return;
-        }
+       
     }
     cout << "YES" << nl;
   
