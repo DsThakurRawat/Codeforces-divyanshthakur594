@@ -592,66 +592,25 @@ void solve() {
     ll k = 4*n;
     vector<ll>v(k);
     for(int i = 0;i<k;i++)cin>>v[i];
-    set<ll>st(v.begin(),v.end());
+    sort(all(v));
 
-    if(st.size()==1){
-        cout << "YES"<<nl;
-        return;
-    }
-
-    vector<ll>v2;
+   ll pro =  v[0]*v[n-1];
 
 
-    for(auto & x : st) v2.push_back(x);
 
-    vector<ll>v3;
+    for(int i =1;i<n-1;i++){
+        ll loc = v[i]*v[n-1-i];
 
-    for(int i = 0;i<v2.size();i++){
-        for(int j =i;j<v2.size();j++){
-            ll mult = v2[i]*v2[j];
-            v3.push_back(mult);
-
+        if(loc==pro){
+            continue;
         }
-    }
-    map<ll,ll>mp;
-    for(int i =0;i<v3.size();i++){
-            mp[v3[i]]++;
-    }
-
-    for(auto &[key,val] : mp){
-        if(val == n){
-            cout << "YES" << nl;
+        else{
+            cout << "NO" << nl;
             return;
         }
     }
-     cout << "NO"<<nl;
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-    
-
-    
-
-    
-      
+    cout << "YES" << nl;
+  
     
 
 
