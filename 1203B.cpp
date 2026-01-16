@@ -594,11 +594,16 @@ void solve() {
     for(int i = 0;i<k;i++)cin>>v[i];
     sort(v.begin(),v.end());
 
-    for(int i = 0;i<k;i=i+2){
-        if(v[i] != v[i+1]){
+    ll st = v[0]*v[1];
+
+    for(int i = 2;i<k;i++){
+         if(st == v[i]*v[i+1]){
+            st = v[i]*v[i+1];
+         }
+         else{
             cout << "NO"<<nl;
             return;
-        }
+         }
     }
     cout << "YES" << nl;
 
