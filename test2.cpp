@@ -557,6 +557,7 @@ calculate sum from start to end
 
 
 
+i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 
