@@ -594,7 +594,7 @@ void solve() {
     for(int i = 0;i<k;i++)cin>>v[i];
     sort(v.begin(),v.end());
 
-    for(int i = 0;i<=k-1;i=i+2){
+    for(int i = 0;i<k;i=i+2){
         if(v[i] != v[i+1]){
             cout << "NO"<<nl;
             return;
