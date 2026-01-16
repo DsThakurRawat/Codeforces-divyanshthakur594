@@ -587,39 +587,7 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 
 void solve() {
 
-    ll n,m;cin>>n>>m;
-
-    vector<vector<ll>> grid(n, vector<ll>(m));
-
-    for(int i =0;i<n;i++){
-        for(int j = 0;j<m;j++){
-            cin>>grid[i][j];
-        }
-    }
-    ll total = 0;
-
-    for (int col = 0; col < m; col++) {
-        vector<ll> v;
-
-        for (int row = 0; row < n; row++) {
-            v.push_back(grid[row][col]);
-        }
-
-        sort(v.begin(), v.end());
-
-        long long pref = 0;
-        for (int i = 0; i < n; i++) {
-            total += v[i]*i - pref;
-            pref += v[i];
-        }
-    }
-    cout << total<<nl;
-
-
-
-
-    
-
+    ll n;cin>>n;
 
 
 
