@@ -601,7 +601,7 @@ void solve() {
     for(int i =1;i<k/2;i+=2){
         ll loc = v[i]*v[k-i-1];
 
-        if(loc!=pro){
+        if(loc!=pro || v[i] != v[i+1] || v[k-1-i] != v[k-i-2]){
               cout << "NO" << nl;
               return;
         }
