@@ -589,28 +589,22 @@ void solve() {
 
     ll c,m,x;cin>>c>>m>>x;
 
-    if(c >= m && c >= x && m >= x ){
-
-        ll rem1 = c-x;
-        ll rem2 = m-x;
-        ll total = rem1+rem2;
-
-        cout << x + total/3 << nl;
-        return;
-
-
+    ll d = max(c,m)-min(c,m);
+    x+=d;
+    if(c>m){
+        c -=d;
     }
-    if(x >= m || x >= c){
-        cout << min(c,m)<<nl;
-        return;
-    }  
-    if(x == 0){
-        cout << min(c,m)<<nl;
-        return;
+    else{
+        m-=d;
     }
-    if(m==0||c==0){
-        cout << 0 << nl;
-    }
+    ll ans = min(c,min(m,x));
+
+    c-=ans;
+    m-=ans;
+    x-=ans;
+    ans+=(c+m);
+    cout << ans << nl;
+
 
 
 
