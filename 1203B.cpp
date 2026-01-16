@@ -594,7 +594,7 @@ void solve() {
     for(int i = 0;i<k;i++)cin>>v[i];
     sort(all(v));
 
-   ll pro =  v[0]*v[n-1];
+   ll pro =  v[0]*v[k-1];
 
 
 
