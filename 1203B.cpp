@@ -598,7 +598,7 @@ void solve() {
 
 
 
-    for(int i =1;i<k-1;i++){
+    for(int i =1;i<k/2;i+=2){
         ll loc = v[i]*v[k-i-1];
 
         if(loc!=pro){
