@@ -592,22 +592,58 @@ void solve() {
     ll k = 4*n;
     vector<ll>v(k);
     for(int i = 0;i<k;i++)cin>>v[i];
-    sort(v.begin(),v.end());
+    set<ll>st(v.begin(),v.end());
 
-    ll st = v[0]*v[1];
+    vector<ll>v2;
 
-    for(int i = 2;i<k;i++){
-         if(st == v[i]*v[i+1]){
-            st = v[i]*v[i+1];
-         }
-         else{
-            cout << "NO"<<nl;
-            return;
-         }
+
+    for(auto & x : st) v2.push_back(x);
+
+    vector<ll>v3;
+
+    for(int i = 0;i<v2.size();i++){
+        for(int j =i;j<v2.size();j++){
+            ll mult = v2[i]*v2[j];
+            v3.push_back(mult);
+
+        }
     }
-    cout << "YES" << nl;
+    map<ll,ll>mp;
+    for(int i =0;i<v3.size();i++){
+            mp[v3[i]]++;
+    }
 
- 
+    for(auto &[key,val] : mp){
+        if(val == n){
+            cout << "YES" << nl;
+            return;
+        }
+    }
+     cout << "NO"<<nl;
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+    
 
     
       
