@@ -602,7 +602,9 @@ void solve() {
     }
     if(x >= m || x >= c){
         cout << min(c,m)<<nl;
+        return;
     }  
+
 
 
 
