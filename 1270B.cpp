@@ -602,7 +602,7 @@ void solve() {
     for(int i =0;i<k%10;i++){
         sum += digits[i];
     }
-    cout << sum + n/10 *accumulate(digits.begin(),digits.end(),0LL)<<nl;
+    cout << sum + k/10 *accumulate(digits.begin(),digits.end(),0LL)<<nl;
 
    
 
