@@ -592,6 +592,15 @@ void solve() {
     ll k = 4*n;
     vector<ll>v(k+1);
     for(int i = 1;i<=k;i++)cin>>v[i];
+    sort(v.begin(),v.end());
+
+    for(int i = 1;i<=k;i=i+2){
+        if(v[i] != v[i+1]){
+            cout << "NO"<<nl;
+            return;
+        }
+    }
+    cout << "YES" << nl;
 
  
 
