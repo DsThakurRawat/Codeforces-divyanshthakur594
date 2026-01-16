@@ -589,10 +589,7 @@ void solve() {
 
    
    ll n,m;cin>>n>>m;
-   if(m>n){
-    cout << 0 << nl;
-   }
-  
+ 
     ll k = n/m;
     vector<ll>digits(10);
     for(int i = 0;i<10;i++){
