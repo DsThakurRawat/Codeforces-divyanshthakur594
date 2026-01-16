@@ -598,8 +598,8 @@ void solve() {
 
 
 
-    for(int i =1;i<n-1;i++){
-        ll loc = v[i]*v[n-i-1];
+    for(int i =1;i<k-1;i++){
+        ll loc = v[i]*v[k-i-1];
 
         if(loc!=pro){
               cout << "NO" << nl;
