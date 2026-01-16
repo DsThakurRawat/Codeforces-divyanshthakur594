@@ -591,7 +591,7 @@ void solve() {
    ll n,m;cin>>n>>m;
  
     ll k = n/m;
-    vector<ll>digits(10);
+    vector<ll>digits(11);
     for(int i = 1;i<=10;i++){
          digits[i] = ((i)*m)%10;
     }
