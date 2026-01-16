@@ -588,36 +588,25 @@ long long columnPairwiseAbsSum(const vector<vector<long long>> &grid,
 void solve() {
 
    
-        ll n;cin>>n;
-        string s;cin>>s;
-        string t;cin>>t;
+   ll n,m;cin>>n>>m;
+   if(m>n){
+    cout << 0 << nl;
+   }
+  
+    ll k = n/m;
+    vector<ll>digits(10);
+    for(int i = 0;i<10;i++){
+         digits[i] = ((i+1)*m)%10;
+    }
+    ll sum = 0;
+    for(int i =0;i<k%10;i++){
+        sum += digits[i];
+    }
+    cout << sum + n/10*accumulate(digits.begin(),digits.end(),0LL)<<nl;
 
-        if(s==t){
-            cout << 0 << nl;
-            return;
-        }
-        string t2 = t;
-        reverse(t2.begin(),t2.end());
-        string s2 = s;
-        reverse(s2.begin(),s2.end());
-        if(s ==t2||s2 == t){
-              cout << 2 << nl;
-              return;
-        }
-        ll cnt = 0;
-        ll cnt_rev = 0;
+   
 
-        for(int i = 0;i<n;i++){
-            if(s[i] != t[i])cnt++;
-        }
-        for(int i = 0;i<n;i++){
-            if(s[i] != t2[i])cnt_rev++;
-        }
-
-
-           cout <<min( 2*cnt - cnt % 2,2*cnt_rev -(1-cnt_rev % 2) )<< nl;
-        
-
+    
       
     
 
