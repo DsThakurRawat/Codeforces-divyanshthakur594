@@ -591,19 +591,16 @@ void solve() {
     ll n;cin>>n;
     ll k = 4*n;
     vector<ll>v(k);
-    ll sum1 = 0,sum2 = 0;
-    sort(all(v));
+    for(int i = 0;i<k;i++)cin>>v[i];
+    sort(v.begin(),v.end());
 
-    ll n1 = k/2;
-
-    for(int i =0;i<n1;i++){
-        sum1+=v[i];
+    for(int i = 0;i<k-1;i){
+        if(v[i] != v[i+1]){
+            cout << "NO"<<nl;
+            return;
+        }
     }
-    for(int i = n1;i<k;i++){
-        sum2 +=v[i];
-        
-    }
-
+    cout << "YES" << nl;
 
  
 
