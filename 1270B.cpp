@@ -596,7 +596,7 @@ void solve() {
          digits[i] = ((i)*m)%10;
     }
     ll sum = 0;
-    for(int i =0;i<k%10;i++){
+    for(int i =1;i<=k%10;i++){
         sum += digits[i];
     }
     cout << sum + k/10 *accumulate(digits.begin(),digits.end(),0LL)<<nl;
