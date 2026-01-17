@@ -589,16 +589,13 @@ void solve() {
       
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
-    map<int,int>mp;
+    map<ll,ll>mp;
 
     for(int i = 0;i<n;i++){
-        if(i%2==0){
-            mp[v[i]] = 1;
+       
+            mp[v[i]] = i%2;
 
-        }
-        else{
-            mp[v[i]] = 0;
-        }
+       
     }
     sort(all(v));
 
