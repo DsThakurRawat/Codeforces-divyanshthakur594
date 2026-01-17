@@ -611,6 +611,18 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
     map<ll,ll>mp;
+     ll mex =0;
+    auto  findmex = [&](){
+        
+        while(mp[mex])mex++;
+        return;
+    }
+
+
+
+      
+
+    
 
 
 
