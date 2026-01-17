@@ -599,7 +599,7 @@ void solve() {
     }
     sort(all(v));
 
-    for(int i = 0;i<n;i++){
+    for(int i = 0;i<n-1;i++){
         if(mp[v[i]] == mp[v[i+1]]){
             cout << "NO"<<nl;
             return;
