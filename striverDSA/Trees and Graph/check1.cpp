@@ -1,25 +1,118 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Node {
+/**
+ * Definition for a binary tree node.
+ */
+using ll = long long;
+#define nl "\n"
+struct TreeNode {
     int val;
-    Node* left;
-    Node* right;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
 
-    Node(int v) {
-        val = v;
-        left = right = nullptr;
+// Build tree like LeetCode (level order, -1 = null)
+TreeNode* buildTree(vector<int>& v) {
+    if (v.empty() || v[0] == -1) return nullptr;
+
+    TreeNode* root = new TreeNode(v[0]);
+    queue<TreeNode*> q;
+    q.push(root);
+
+    int i = 1;
+    while (!q.empty() && i < v.size()) {
+        TreeNode* curr = q.front();
+        q.pop();
+
+        if (i < v.size() && v[i] != -1) {
+            curr->left = new TreeNode(v[i]);
+            q.push(curr->left);
+        }
+        i++;
+
+        if (i < v.size() && v[i] != -1) {
+            curr->right = new TreeNode(v[i]);
+            q.push(curr->right);
+        }
+        i++;
+    }
+    return root;
+}
+
+class Solution {
+public:
+    void dfs(TreeNode* node, vector<int>& ans) {
+        if (node==nullptr) return;
+        ans.push_back(node->val);
+        dfs(node->left, ans);
+        dfs(node->right, ans);
+    }
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> ans;
+       // dfs(root, ans);
+
+       if(root==nullptr) return ans;
+       stack<TreeNode*>st;
+       st.push(root);
+       while(st.empty() == false ){
+        root = st.top();
+        st.pop();
+
+        ans.push_back(root->val);
+        if(root->right != NULL) st.push(root->right);
+        if(root->left !=NULL)st.push(root->left);
+
+       }
+
+
+
+        return ans;
     }
 };
 
-int main() {
-    Node* root = new Node(1);        // root node
-    root->left = new Node(2);        // left child
-    root->right = new Node(3);       // right child
-    root->left->right = new Node(5); // right child of left node
 
-    cout << root->val << "\n";              // 1
-    cout << root->left->val << "\n";        // 2
-    cout << root->right->val << "\n";       // 3
-    cout << root->left->right->val << "\n"; // 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
+
+    TreeNode* root = buildTree(v);
+
+    Solution sol;
+    vector<int> res = sol.preorderTraversal(root);
+
+    for (int x : res) cout << x << " ";
+    return 0;
 }

@@ -17,17 +17,17 @@ TreeNode* buildTree(vector<int>& v) {
     q.push(root);
 
     int i = 1;
-    while (!q.empty() && i < v.size()) {
+    while (!q.empty() && i < v.size()){
         TreeNode* curr = q.front();
         q.pop();
 
-        if (i < v.size() && v[i] != -1) {
+        if (i < v.size() && v[i] != -1){
             curr->left = new TreeNode(v[i]);
             q.push(curr->left);
         }
         i++;
 
-        if (i < v.size() && v[i] != -1) {
+        if (i < v.size() && v[i] != -1){
             curr->right = new TreeNode(v[i]);
             q.push(curr->right);
         }
@@ -38,7 +38,7 @@ TreeNode* buildTree(vector<int>& v) {
 
 class Solution {
 public:
-   vector<int> bfs(TreeNode* root) {
+   vector<int> bfs(TreeNode* root){
     vector<int> ans;
     if (!root) return ans;
 
