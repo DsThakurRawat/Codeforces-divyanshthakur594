@@ -45,31 +45,37 @@ class Solution {
 public:
     void dfs(TreeNode* node, vector<int>& ans) {
         if (node==nullptr) return;
-        ans.push_back(node->val);
+       
         dfs(node->left, ans);
         dfs(node->right, ans);
+         ans.push_back(node->val);
     }
     vector<int> postorderTraversal(TreeNode* root) {
-        vector<int> ans;
-       // dfs(root, ans);
+    vector<int> ans;
+    if (!root) return ans;
 
-       if(root==nullptr) return ans;
-       stack<TreeNode*>st;
-       st.push(root);
-       while(st.empty() == false ){
-        root = st.top();
-        st.pop();
+    stack<TreeNode*> st;
+    TreeNode* lastVisited = nullptr;
 
-        ans.push_back(root->val);
-        if(root->right != NULL) st.push(root->right);
-        if(root->left !=NULL)st.push(root->left);
-
-       }
-
-
-
-        return ans;
+    while (!st.empty() || root) {
+        if (root) {
+            st.push(root);
+            root = root->left;
+        } else {
+            TreeNode* node = st.top();
+            if (node->right && lastVisited != node->right) {
+                root = node->right;
+            } else {
+                ans.push_back(node->val);
+                lastVisited = node;
+                st.pop();
+            }
+        }
     }
+    return ans;
+}
+
+    
 };
 
 
