@@ -4,6 +4,8 @@ using namespace std;
 /**
  * Definition for a binary tree node.
  */
+using ll = long long;
+#define nl "\n"
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -41,19 +43,63 @@ TreeNode* buildTree(vector<int>& v) {
 
 class Solution {
 public:
-    void dfs(TreeNode* root, vector<int>& ans) {
-        if (!root) return;
-        ans.push_back(root->val);
-        dfs(root->left, ans);
-        dfs(root->right, ans);
+    void dfs(TreeNode* node, vector<int>& ans) {
+        if (node==nullptr) return;
+        ans.push_back(node->val);
+        dfs(node->left, ans);
+        dfs(node->right, ans);
     }
-
     vector<int> preorderTraversal(TreeNode* root) {
         vector<int> ans;
-        dfs(root, ans);
+       // dfs(root, ans);
+
+       if(root==nullptr) return ans;
+       stack<TreeNode*>st;
+       st.push(root);
+       while(st.empty() == false ){
+        root = st.top();
+        st.pop();
+
+        ans.push_back(root->val);
+        if(root->right != NULL) st.push(root->right);
+        if(root->left !=NULL)st.push(root->left);
+
+       }
+
+
+
         return ans;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main() {
     int n;
