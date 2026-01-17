@@ -48,6 +48,12 @@ public:
         dfs(node->right,ans);
     }
 
+     vector<int> inorderTraversal(TreeNode* root) {
+        vector<int>result;
+        dfs(root,result);
+        return result;
+    }
+
 
 };
 
@@ -90,7 +96,7 @@ int main() {
     TreeNode* root = buildTree(v);
 
     Solution sol;
-    vector<int> res = sol.preorderTraversal(root);
+    vector<int> res = sol.inorderTraversal(root);
 
     for (int x : res) cout << x << " ";
     return 0;
