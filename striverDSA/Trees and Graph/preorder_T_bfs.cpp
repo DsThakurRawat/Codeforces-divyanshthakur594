@@ -4,6 +4,7 @@ using namespace std;
 /**
  * Definition for a binary tree node.
  */
+using ll = long long;
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -56,6 +57,8 @@ public:
        st.push(root);
        while(st.empty() == false ){
         root = st.top();
+        st.pop();
+
         ans.push_back(root->val);
         if(root->right != NULL) st.push(root->right);
         if(root->left !=NULL)st.push(root->left);
