@@ -587,8 +587,28 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 void solve() {
       
-    ll h,p;cin>>h>>p;
-    
+    ll n;cin>>n;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+    map<int,int>mp;
+
+    for(int i = 0;i<n;i++){
+        if(i%2==0){
+            mp[v[i]] = 1;
+
+        }
+        else{
+            mp[v[i]] = 0;
+        }
+    }
+    sort(all(v));
+
+    for(int i = 0;i<n;i++){
+        if(mp[v[i]] == mp[v[i+1]]){
+            cout << "NO"<<nl;
+            return;
+        }
+    }
+   cout << "YES"<<nl;
   
     
 
