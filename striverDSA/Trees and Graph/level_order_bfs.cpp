@@ -1,11 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/**
- * Definition for a binary tree node.
- */
-using ll = long long;
-#define nl "\n"
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -13,7 +8,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-// Build tree like LeetCode (level order, -1 = null)
+// Build tree (level order, -1 = null)
 TreeNode* buildTree(vector<int>& v) {
     if (v.empty() || v[0] == -1) return nullptr;
 
@@ -43,65 +38,29 @@ TreeNode* buildTree(vector<int>& v) {
 
 class Solution {
 public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> ans;
+        if (!root) return ans;
 
+        queue<TreeNode*> q;
+        q.push(root);
 
-vector<vector<int>> levelOrder(TreeNode* root) {
-    vector<vector<int>> ans;
-    if (!root) return ans;
+        while (!q.empty()) {
+            int sz = q.size();
+            vector<int> level;
 
-    queue<TreeNode*> q;
-    q.push(root);
+            for (int i = 0; i < sz; i++) {
+                TreeNode* node = q.front(); q.pop();
+                level.push_back(node->val);
 
-    while (!q.empty()) {
-        int sz = q.size();
-        vector<int> level;
-
-        for (int i = 0; i < sz; i++) {
-            TreeNode* node = q.front(); q.pop();
-            level.push_back(node->val);
-
-            if (node->left) q.push(node->left);
-            if (node->right) q.push(node->right);
+                if (node->left) q.push(node->left);
+                if (node->right) q.push(node->right);
+            }
+            ans.push_back(level);
         }
-        ans.push_back(level);
+        return ans;
     }
-    return ans;
-}
-
-
-    
-
-    
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int main() {
     int n;
@@ -113,8 +72,12 @@ int main() {
     TreeNode* root = buildTree(v);
 
     Solution sol;
-    vector<int> res = sol.levelOrder(root);
+    vector<vector<int>> res = sol.levelOrder(root);
 
-    for (int x : res) cout << x << " ";
+    // correct printing
+    for (auto &level : res) {
+        for (int x : level) cout << x << " ";
+        cout << "\n";
+    }
     return 0;
 }
