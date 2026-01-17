@@ -587,9 +587,7 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 void solve() {
       
-   /* ll n;cin>>n;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-    map<ll,ll>mp;
+   /* 
 
     for(int i = 0;i<n;i++){
        
@@ -608,7 +606,11 @@ void solve() {
    cout << "YES"<<nl;
   
     */
-   
+    
+
+    ll n;cin>>n;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+    map<ll,ll>mp;
 
 
 
