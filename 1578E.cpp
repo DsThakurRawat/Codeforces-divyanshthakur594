@@ -592,7 +592,7 @@ void solve() {
     map<int,int>mp;
 
     for(int i = 0;i<n;i++){
-        if(v[i]%2==0){
+        if(i%2==0){
             mp[v[i]] = 1;
 
         }
