@@ -645,8 +645,10 @@ void solve() {
    for(int i = 1;i<=odd_cnt;i++){
     if(evn_cnt >= x-i){
         cout <<"YES"<<nl;
+        return;
     }
    }
+   cout << "NO"<<nl;
    
 
 
