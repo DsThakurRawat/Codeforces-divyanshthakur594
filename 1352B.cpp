@@ -602,6 +602,11 @@ void solve() {
         }
         return;
     }
+    if(k>n){
+        cout << "YES" <<nl;
+        return;
+    }
+
 
 
 
