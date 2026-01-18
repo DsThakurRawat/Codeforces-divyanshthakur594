@@ -616,6 +616,12 @@ void solve() {
         
         while(mp[mex])mex++;
         return;
+    };
+    ll mini = LLONG_MAX;
+
+    for(int i =0;i<mex;i++){
+        mini = min(mini,mp[mex]);
+        if(mini>=2)
     }
 
 
