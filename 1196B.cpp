@@ -613,7 +613,7 @@ void solve() {
             k--;
         }
     }
-    cout << nl<<nl;
+    cout << n<<nl;
 
 
 
