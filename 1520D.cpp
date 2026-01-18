@@ -593,14 +593,18 @@ void solve() {
     map<ll,ll>mp;
     ll cnt = 0;
 
-    for(ll i = 0;i<n;i++){
-        for(int j = i+1;j<n;j++){
-
-            if(v[j]-v[i] == j-i)cnt++;
-
-        }
+    for(ll i =0;i<n;i++){
+        ll key = v[i]-i;
+        cnt+=mp[key];
+        mp[key]++;
     }
-    cout << cnt << nl;
+    cout << cnt<<nl;
+
+    
+    
+
+
+    
 
 
 
