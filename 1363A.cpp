@@ -625,11 +625,13 @@ void solve() {
     vector<ll>v(n);for(auto &x:v)cin>>x;
      
     ll odd_cnt = 0;
+    ll evn_cnt =0;
 
     for(int i = 0;i<n;i++){
         if(v[i]%2==1){
             odd_cnt++;
         }
+        if(v[i]%2==0)evn_cnt++;
     }
     if(odd_cnt>=x){
         cout << "YES"<<nl;
