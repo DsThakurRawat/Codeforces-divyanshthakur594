@@ -631,7 +631,7 @@ void solve() {
             odd_cnt++;
         }
     }
-    if(odd_cnt % 2 == 1){
+    if(odd_cnt % 2 == 1 &&odd_cnt>x){
         cout << "YES"<<nl;
         return;
     }
