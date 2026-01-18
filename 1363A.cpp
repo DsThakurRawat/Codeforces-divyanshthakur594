@@ -633,12 +633,20 @@ void solve() {
         }
         if(v[i]%2==0)evn_cnt++;
     }
-    if(odd_cnt>=x && odd_cnt % 2 == 1){
-        cout << "YES"<<nl;
-        return;
-    }
-    cout << "NO"<<nl;
 
+    
+   /*
+   The sum of x
+ numbers can only be odd if we have an odd number of numbers which are odd. (An odd statement, indeed).
+
+
+   */
+
+   for(int i = 1;i<=odd_cnt;i++){
+    if(evn_cnt >= x-i){
+        cout <<"YES"<<nl;
+    }
+   }
    
 
 
