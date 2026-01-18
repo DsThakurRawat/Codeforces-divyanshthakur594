@@ -623,8 +623,18 @@ void solve() {
 
     ll n,x;cin>>n>>x;
     vector<ll>v(n);for(auto &x:v)cin>>x;
+     
+    ll odd_cnt = 0;
 
-    
+    for(int i = 0;i<n;i++){
+        if(v[i]%2==0){
+            odd_cnt++;
+        }
+    }
+    if(odd_cnt % 2 == 1){
+        cout << "YES"<<nl;
+    }
+    cout << "NO"<<nl;
 
    
 
