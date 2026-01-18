@@ -604,10 +604,9 @@ void solve() {
             return;
         }
     }
+    cout << "NO"<<nl; 
+    
   
-
-
-   
 
     
 
