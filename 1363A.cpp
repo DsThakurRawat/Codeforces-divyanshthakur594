@@ -633,6 +633,7 @@ void solve() {
     }
     if(odd_cnt % 2 == 1){
         cout << "YES"<<nl;
+        return;
     }
     cout << "NO"<<nl;
 
