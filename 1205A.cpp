@@ -598,7 +598,7 @@ void solve() {
 
                vector<ll>v(2*n+1);
 
-               for(int i = 1;i<=n;i++){
+               for(int i = 0;i<=n;i++){
                 if(i%2==1){
                     v[i] = 2*i;
                     v[i+n] = 2*i-1;
