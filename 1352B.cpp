@@ -618,7 +618,7 @@ void solve() {
      if(n1>0 && n1 % 2 ==1 ){
         cout << "YES" << nl;
         for(int i =0;i<k-1;i++)cout << 1 << " ";
-        cout << n1 << nl;;
+        cout << n1 << nl;
         return;
      }
      ll n2 = n-2*(k-1);
