@@ -627,7 +627,7 @@ void solve() {
     ll odd_cnt = 0;
 
     for(int i = 0;i<n;i++){
-        if(v[i]%2==0){
+        if(v[i]%2==1){
             odd_cnt++;
         }
     }
