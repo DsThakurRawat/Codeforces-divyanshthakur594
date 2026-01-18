@@ -606,14 +606,14 @@ void solve() {
         return;
     }
     cout << "YES"<<nl;
-    for(int i = 0;i<n;i++){
-        if(k==1)break;
+    for(int i = 0;i<=n;i++){
+        if(k==0)break;
         if(v[i]%2!=0){
             cout << i +1<<" ";
             k--;
         }
     }
-    cout << n<<nl;
+   
 
 
 
