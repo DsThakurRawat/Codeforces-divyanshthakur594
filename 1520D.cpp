@@ -594,7 +594,7 @@ void solve() {
     ll cnt = 0;
 
     for(ll i = 0;i<n;i++){
-        for(int j = i+1;i<n;i++){
+        for(int j = i+1;j<n;j++){
 
             if(v[j]-v[i] == j-i)cnt++;
 
