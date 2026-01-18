@@ -590,17 +590,21 @@ void solve() {
 
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
+    vector<ll>copy = v;
+    sort(all(copy));
+    if(copy == v){
+        cout << "NO"<<nl;
+        return;
+    }
 
     for(int i = 0;i<n-1;i++){
-        if(v[i]-2>=v[i+1]){
+        if(abs(v[i]-v[i+1])>=2){
             cout << "YES" << nl;
             cout << i << " " << i +1<<nl;
             return;
         }
     }
-
-
-
+  
 
 
    
