@@ -600,6 +600,19 @@ void solve() {
         cout << "NO" << nl;
         return;
     }
+    // make sure we have odd number odd number in each segements
+    if(cnt_odd % 2 !=k%2){
+        cout << "NO"<<nl;
+        return;
+    }
+    for(int i = 0;i<n;i++){
+        if(k==1)break;
+        if(v[i]%2!=0){
+            cout << i +1<<nl;
+            k--;
+        }
+    }
+    cout << nl<<nl;
 
 
 
