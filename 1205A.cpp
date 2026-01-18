@@ -590,7 +590,7 @@ void solve() {
 
     
 
-
+   cout << 1 << nl;
 
 
 
