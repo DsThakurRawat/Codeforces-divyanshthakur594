@@ -587,25 +587,14 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 void solve() {
 
-   
-   ll n,m;cin>>n>>m;
- 
-    ll k = n/m;
-    vector<ll>digits(11);
-    for(int i = 1;i<=10;i++){
-         digits[i] = ((i)*m)%10;
-    }
-    ll sum = 0;
-    for(int i =1;i<=k%10;i++){
-        sum += digits[i];
-    }
-    cout << sum + k/10 *accumulate(digits.begin(),digits.end(),0LL)<<nl;
+
+    ll n;cin>>n;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+
 
 
    
 
-    
-      
     
 
 
