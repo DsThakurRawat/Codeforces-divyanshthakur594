@@ -608,6 +608,7 @@ void solve() {
                     v[i+n] = 2*i;
                 }
                }
+               for(auto &x : v)cout << x << " ";
 
 
 
