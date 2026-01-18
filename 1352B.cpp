@@ -606,6 +606,14 @@ void solve() {
         }
         return;
     }
+
+     if(n%k==0){
+        ll p = n/k;
+        for(int i =1;i<=k;i++){
+            cout << p << " ";
+        }
+        return;
+     }
     
 
 
