@@ -608,8 +608,10 @@ void solve() {
                     v[i+n] = 2*i;
                 }
                }
-               for(auto &x : v)cout << x << " ";
-
+             for(int i = 1;i<=2*n;i++){
+                cout << v[i] << " ";
+             }
+             cout <<nl;
 
 
                
