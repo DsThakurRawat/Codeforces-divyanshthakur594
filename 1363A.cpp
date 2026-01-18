@@ -624,16 +624,9 @@ void solve() {
     ll n,x;cin>>n>>x;
     vector<ll>v(n);for(auto &x:v)cin>>x;
 
-     
-    for(int i = 0;i<n;i++){
-        vector<ll>v2;
-        for(int j = 0;j<n;j++){
-            v.push_back(v[i]);
+    
 
-
-
-        }
-    }
+   
 
 
  
