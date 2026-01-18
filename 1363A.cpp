@@ -570,7 +570,7 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
                     if(v[j]-v[i] == j-i)cnt++;
                 }
             }
-                
+
                 for(ll i =0;i<n;i++){
                 ll key = v[i]-i;
                   cnt+=mp[key];
@@ -617,29 +617,15 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 void solve() {
+   
 
+      
+
+    ll n,x;cin>>n>>x;
+    vector<ll>v(n);for(auto &x:v)cin>>x;
  
     
 
-               ll n;
-                cin >> n;
-
-                long long ans = 2000000000LL; 
-                for (int i = 0; i < n; i++) {
-                    long long d, s;
-                    cin >> d >> s;
-                    ans = min(ans, d + (s - 1) / 2);
-                }
-
-                cout << ans << "\n";
-
-
-
-
-    
-
-            
-        
 
 
 
