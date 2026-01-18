@@ -605,10 +605,11 @@ void solve() {
         cout << "NO"<<nl;
         return;
     }
+    cout << "YES"<<nl;
     for(int i = 0;i<n;i++){
         if(k==1)break;
         if(v[i]%2!=0){
-            cout << i +1<<nl;
+            cout << i +1<<" ";
             k--;
         }
     }
