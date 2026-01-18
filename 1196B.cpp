@@ -586,6 +586,20 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 void solve() {
+    
+    ll n,k;cin>>n>>k;
+    vector<ll>v(n);for(auto &in:v)cin>>in;
+    ll cnt_odd = 0;
+
+    for(auto  &x:v){
+         if(x%2!=0){
+            cnt_odd++;
+         }
+    }
+    if(cnt_odd<k){
+        cout << "NO" << nl;
+        return;
+    }
 
 
 
