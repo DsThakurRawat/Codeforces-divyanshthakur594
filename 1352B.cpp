@@ -593,21 +593,20 @@ void solve() {
     // if k is odd and n is even not->possible
 
     // 
-    int n, k;
-        cin >> n >> k;
-        if (n % 2 == 0 && n >= 2 * k) {
-            cout << "YES\n";
-            for (int i = 0; i < k; ++i)
-                cout << (i ? 2 : n - 2 * (k - 1)) << " \n"[i == k - 1];
-        } else if (n % 2 == k % 2 && n >= k) {
-            cout << "YES\n";
-            for (int i = 0; i < k; ++i)
-                cout << (i ? 1 : n - (k - 1)) << " \n"[i == k - 1];
-        } else {
-            cout << "NO\n";
-        }
+    if(k>n){
+        cout << "NO"<<nl;
+        return;
     }
 
+    if(n==k){
+        cout << "YES" << nl;
+        for(int i = 1;i<=k;i++){
+            cout << 1 << " ";
+        
+        }
+        return;
+    }
+    
 
 
 
