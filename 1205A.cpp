@@ -588,7 +588,34 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 void solve() {
 
                ll n;cin>>n;
-           cout << ((n%2 == 0) ? "YES" : "NO")<<nl;
+               if(n%2==0){
+                cout << "NO"<<nl;
+                return;
+               }
+               cout << "YES" << nl;
+
+               //Ai+n-Ai = 1;
+
+               vector<ll>v(2*n+1);
+
+               for(int i = 1;i<=n;i++){
+                if(i%2==1){
+                    v[i] = 2*i;
+                    v[i+n] = 2*i-1;
+                }
+                else{
+                    v[i] = 2*i-1;
+                    v[i+n] = 2*i;
+                }
+               }
+
+
+
+               
+
+               
+
+
       
 
     
