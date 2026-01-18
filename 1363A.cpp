@@ -642,7 +642,7 @@ void solve() {
 
    */
 
-   for(int i = 1;i<=odd_cnt;i++){
+   for(int i = 1;i<=odd_cnt;i=i+2){
     if(evn_cnt >= x-i){
         cout <<"YES"<<nl;
         return;
