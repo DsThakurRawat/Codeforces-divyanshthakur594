@@ -633,7 +633,7 @@ void solve() {
         }
         if(v[i]%2==0)evn_cnt++;
     }
-    if(odd_cnt>=x){
+    if(odd_cnt+evn_cnt>=x){
         cout << "YES"<<nl;
         return;
     }
