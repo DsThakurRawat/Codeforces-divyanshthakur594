@@ -587,22 +587,6 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 void solve() {
 
-    ll c,m,x;cin>>c>>m>>x;
-    ll l =0,r=min(c,m);
-    //binary search on answers
-
-    ll ans = 0;
-    while(l<=r){
-        ll mid = (l+r)/2;
-        if(c+m+x-2*mid >=mid){
-            l = mid+1;
-            ans = mid;
-        }
-        else{
-            r = mid-1;
-        }
-    }
-    cout << ans << nl;
 
 
 
