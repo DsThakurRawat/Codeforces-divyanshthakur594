@@ -591,6 +591,16 @@ void solve() {
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
 
+    for(int i = 0;i<n-1;i++){
+        if(v[i]-2>=v[i+1]){
+            cout << "YES" << nl;
+            cout << i << " " << i +1<<nl;
+            return;
+        }
+    }
+
+
+
 
 
    
