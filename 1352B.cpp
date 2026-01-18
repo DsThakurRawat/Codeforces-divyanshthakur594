@@ -593,27 +593,7 @@ void solve() {
     // if k is odd and n is even not->possible
 
     // 
-    if(k>n){
-        cout << "NO"<<nl;
-        return;
-    }
-
-    if(n==k){
-        cout << "YES" << nl;
-        for(int i = 1;i<=k;i++){
-            cout << 1 << " ";
-        
-        }
-        return;
-    }
-
-     if(n%k==0){
-        ll p = n/k;
-        for(int i =1;i<=k;i++){
-            cout << p << " ";
-        }
-        return;
-     }
+   
      ll n1 = n-(k-1);
      if(n1>0 && n1 % 2 ==1 ){
         cout << "YES" << nl;
