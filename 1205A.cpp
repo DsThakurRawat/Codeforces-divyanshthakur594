@@ -586,11 +586,15 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 void solve() {
-    
+
+               ll n;cin>>n;
+           cout << ((n%2 == 0) ? "YES" : "NO")<<nl;
+      
 
     
 
-   cout << 1 << nl;
+    
+
 
 
 
