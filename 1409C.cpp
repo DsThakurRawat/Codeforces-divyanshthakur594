@@ -621,84 +621,70 @@ To get minimax out of these elements
 
 void solve() {
 
-    ll n,x,y;cin>>n>>x>>y;
-    ll cd;
+                ll n, x, y; 
+            cin >> n >> x >> y;
 
-    for(int d = 1;d<=100;d++){
-        if(d*(n-1) == (y-x)){
-            cd = d;
-            for(int i = 0;i<n;i++){
-         cout << x+(i*cd)<< " ";
-            }
-            cout << nl;
-            return;
-          
-        }
-    }
-    ll best_last = LLONG_MAX;
-    vector<ll>ans;
-    for(int st = 1;st<=50;st++){
-        for(int d = 1;d<=50;d++){
+            ll cd;
 
-            vector<ll>curr;
-            bool has_x = false,has_y = false;
-
-
-            for(int i = 0;i<n;i++){
-                ll val = st+d*i;
-                curr.push_back(val);
-                if(val == x) has_x = true;
-                if(val ==y)has_y = true;
-            }
-
-            if(has_x && has_y){
-                ll last = curr.back();
-                if(last<best_last){
-                    best_last = last;
-                    ans = curr;
+            for(int d = 1; d <= 100; d++){
+                if(d * (n - 1) == (y - x)){
+                    cd = d;
+                    for(int i = 0; i < n; i++){
+                        cout << x + i * cd << " ";
+                    }
+                    cout << nl;
+                    return;
                 }
             }
 
-        }
-    }
+            ll best_last = LLONG_MAX;
+            vector<ll> ans;
+
+            for(int st = 1; st <= x; st++){
+                for(int d = 1; d <= 50; d++){
+
+                    vector<ll> curr;
+                    bool has_x = false, has_y = false;
+
+                    for(int i = 0; i < n; i++){
+                        ll val = st + d * i;
+                        curr.push_back(val);
+                        if(val == x) has_x = true;
+                        if(val == y) has_y = true;
+                    }
+
+                    if(has_x && has_y){
+                        ll last = curr.back();
+                        if(last < best_last){
+                            best_last = last;
+                            ans = curr;
+                        }
+                    }
+                }
+            }
+
+            for(auto &ot : ans) cout << ot << " ";
+            cout << nl;
+
+                        
+                    
 
 
-    for(auto &ot:ans)cout << ot << " ";
-    cout << nl;
-   
 
-    
-    
-   
-
-
-
- 
-    
-
-              
-
-    
-
-            
-        
-
-
-
-     
-
-        
-
-
-      
-
-    
                 
 
-    
+                    
 
 
-    
+                
+
+                
+                            
+
+                
+
+
+                
 
 
          
