@@ -648,7 +648,7 @@ void solve() {
                 ll val = st+d*i;
                 curr.push_back(val);
                 if(val == x) has_x = true;
-                if(val = y)has_y = true;
+                if(val ==y)has_y = true;
             }
 
             if(has_x && has_y){
