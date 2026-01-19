@@ -630,6 +630,11 @@ void solve() {
             break;
         }
     }
+
+    for(int i = 1;i<=n;i++){
+        cout << x+(i*cd)<< " ";
+    }
+
     
     
    
