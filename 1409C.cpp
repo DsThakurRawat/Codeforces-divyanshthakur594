@@ -673,6 +673,7 @@ void solve() {
 
 
     for(auto &ot:ans)cout << ot << " ";
+    cout << nl;
    
 
     
