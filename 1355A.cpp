@@ -624,7 +624,7 @@ void solve() {
 
     while(k>1){
         k--;
-        auto s = to_string(ak);
+        auto s = to_string(ak);//makestring
         auto [mini,maxi] = minmax_element(s.begin(),s.end());
         if(*mini == '0')break;
         ak+=(*mini-'0')*(*maxi-'0');
