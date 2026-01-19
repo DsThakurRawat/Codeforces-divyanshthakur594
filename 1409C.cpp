@@ -630,6 +630,7 @@ void solve() {
             for(int i = 0;i<n;i++){
          cout << x+(i*cd)<< " ";
             }
+            cout << nl;
             return;
           
         }
