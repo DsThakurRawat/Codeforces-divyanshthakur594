@@ -621,6 +621,7 @@ void solve() {
     ll a1,k;cin>>a1>>k;
 
     ll ak = a1;
+    // when  
 
     while(k>1){
         k--;
