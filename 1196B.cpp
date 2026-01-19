@@ -596,7 +596,7 @@ void solve() {
             cnt_odd++;
          }
     }
-    if(cnt_odd<k){
+    if(cnt_odd<k){// if nct_odd <k then its impossible to make k number of patition
         cout << "NO" << nl;
         return;
     }
@@ -607,7 +607,7 @@ void solve() {
     }
     cout << "YES"<<nl;
     for(int i = 0;i<n;i++){
-        if(k==1)break;
+        if(k==1)break;// in the end we will be printing n so at n == 1 we gonna stop 
         if(v[i]%2!=0){
             cout << i +1<<" ";
             k--;
