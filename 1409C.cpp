@@ -627,13 +627,14 @@ void solve() {
     for(int d = 1;d<=100;d++){
         if(d*(n-1) == (y-x)){
             cd = d;
-            break;
+            for(int i = 0;i<n;i++){
+         cout << x+(i*cd)<< " ";
+            }
+          
         }
     }
 
-    for(int i = 0;i<n;i++){
-        cout << x+(i*cd)<< " ";
-    }
+   
 
     
     
