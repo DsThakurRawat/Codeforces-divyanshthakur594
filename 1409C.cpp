@@ -624,6 +624,17 @@ void solve() {
     ll n,x,y;cin>>n>>x>>y;
     ll cd;
 
+    for(int d = 1;d<=100;d++){
+        if(d*(n-1) == (y-x)){
+            cd = d;
+            for(int i = 0;i<n;i++){
+         cout << x+(i*cd)<< " ";
+            }
+            cout << nl;
+            return;
+          
+        }
+    }
     ll best_last = LLONG_MAX;
     vector<ll>ans;
     for(int st = 1;st<=50;st++){
