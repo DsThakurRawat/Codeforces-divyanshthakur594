@@ -621,21 +621,9 @@ To get minimax out of these elements
 
 void solve() {
 
-        ll n;cin>>n;
 
-        vector<ll>v(n);for(auto & x : v)cin>>x;
-
-        vector<ll>prefmax(n);
-        prefmax[0] = *max_element(all(v));
-
-
-        for(int i=1;i<n;i++){
-            prefmax[i] = max(prefmax[i-1],v[i]);
-        }
-
-        cout << accumulate(prefmax.begin(),prefmax.end(),0);
-        cout << nl;
-
+    ll n,m,h;cin>>n>>m>>h;
+    vector<ll>v(n);for(auto & x : v)cin>>x;
 
         
     
