@@ -636,7 +636,7 @@ void MASTER() {
         i--;
         if(cur>comp[i]){
             comp[i] = cur;
-            v[i] = 0;
+            v2[i] = 0;
         }
         v2[i] +=add;
         if(v2[i] + v[i] > h)cur++;
