@@ -625,6 +625,10 @@ void solve() {
     ll n,m,h;cin>>n>>m>>h;
     vector<ll>v(n);for(auto & x : v)cin>>x;
 
+    while(m--){
+        ll bi,ci;cin>>bi>>ci;
+    }
+
         
     
            
