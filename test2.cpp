@@ -647,6 +647,7 @@ void MASTER() {
     for(int i = 0;i<n;i++){
         cout << v[i] + v[i] << " ";
     }
+    cout << nl;
         
     
            
