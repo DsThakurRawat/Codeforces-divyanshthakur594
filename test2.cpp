@@ -645,7 +645,7 @@ void MASTER() {
         if(comp[i] < cur) v2[i] = 0;
     }
     for(int i = 0;i<n;i++){
-        cout << v[i] + v[i] << " ";
+        cout << v2[i] + v[i] << " ";
     }
     cout << nl;
         
