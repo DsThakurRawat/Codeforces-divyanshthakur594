@@ -633,6 +633,7 @@ void solve() {
         }
 
         cout << accumulate(prefmax.begin(),prefmax.end(),0);
+        cout << nl;
 
 
         
