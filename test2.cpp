@@ -617,7 +617,9 @@ To get minimax out of these elements
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
 
-
+void solve(){
+    
+}
 
 void MASTER() {
 
@@ -684,6 +686,7 @@ int main() {
     cin >> t;
     while (t--) {
      MASTER();
+     //solve();
     }
 
   
