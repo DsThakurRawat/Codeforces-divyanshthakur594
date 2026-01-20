@@ -622,12 +622,20 @@ To get minimax out of these elements
 void solve() {
 
         ll n;cin>>n;
-    
-           for(int i = 0;i<n;i++)
-            cout << i +1 << " ";
-           
-          cout << nl;
 
+        vector<ll>v(n);for(auto & x : v)cin>>x;
+
+        vector<ll>prefmax(n);
+        prefmax[0] = v[0];
+
+        for(int i=1;i<n;i++){
+            prefmax[i] = max(prefmax[i-1],v[i]);
+        }
+
+
+        
+    
+           
     
 
             
