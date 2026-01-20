@@ -633,6 +633,7 @@ void MASTER() {
 
     while(m--){
         int i,add;
+        cin>>i>>add;
         i--;
         if(cur>comp[i]){
             comp[i] = cur;
