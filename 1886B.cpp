@@ -447,7 +447,21 @@ void solve() {
       ll px,py;cin>>px>>py;// hous locaton point
       ll ax,ay;cin>>ax>>ay;//point of locaction of latern one
       ll bx,by;cin>>bx>>by;// point of location of lantern two
-      
+
+
+       auto dist = [&](int x1, int y1, int x2, int y2) {
+    return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+  };
+ 
+    double pa = dist(px, py, ax, ay), pb = dist(px, py, bx, by);
+    double oa = dist(0, 0, ax, ay), ob = dist(0, 0, bx, by);
+    double ab = dist(ax, ay, bx, by);
+    double ans = 1e9;
+    ans = min(ans, max(pa, oa));
+    ans = min(ans, max(pb, ob));
+    ans = min(ans, max({ab / 2, pa, ob}));
+    ans = min(ans, max({ab / 2, pb, oa}));
+    cout << setprecision(10) << fixed << ans << '\n';
 
 
 
