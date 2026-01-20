@@ -619,7 +619,7 @@ To get minimax out of these elements
 
 
 
-void solve() {
+void MASTER() {
 
 
     ll n,m,h;cin>>n>>m>>h;
@@ -637,7 +637,7 @@ void solve() {
 
     for(auto &ot : v)cout << ot << " ";
     cout << nl;
-
+      
         
     
            
@@ -683,7 +683,7 @@ int main() {
     t=1;
     cin >> t;
     while (t--) {
-     solve();
+     MASTER();
     }
 
   
