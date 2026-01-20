@@ -621,23 +621,12 @@ To get minimax out of these elements
 
 void solve() {
 
- 
+        ll n;cin>>n;
     
-
-               ll n;
-                cin >> n;
-
-                long long ans = 2000000000LL; 
-                for (int i = 0; i < n; i++) {
-                    long long d, s;
-                    cin >> d >> s;
-                    ans = min(ans, d + (s - 1) / 2);
-                }
-
-                cout << ans << "\n";
-
-
-
+           for(int i = 0;i<n;i++)
+            cout << i +1 << " ";
+           
+          cout << nl;
 
     
 
