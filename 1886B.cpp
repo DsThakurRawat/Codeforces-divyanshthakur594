@@ -461,7 +461,7 @@ void solve() {
     ans = min(ans, max(pb, ob));
     ans = min(ans, max({ab / 2, pa, ob}));
     ans = min(ans, max({ab / 2, pb, oa}));
-    cout << setprecision(10) << fixed << ans << '\n';
+    cout << setprecision(10) << fixed << ans << nl;
 
 
 
