@@ -632,6 +632,8 @@ void solve() {
             prefmax[i] = max(prefmax[i-1],v[i]);
         }
 
+        cout << accumulate(prefmax.begin(),prefmax.end(),0LL);
+
 
         
     
