@@ -618,7 +618,7 @@ To get minimax out of these elements
 #define nl '\n'
 
 void solve(){
-    
+
 }
 
 void MASTER() {
@@ -626,20 +626,27 @@ void MASTER() {
 
     ll n,m,h;cin>>n>>m>>h;
     vector<ll>v(n);for(auto & x : v)cin>>x;
-    vector<ll>copy = v;
+    vector<ll>v2(n,0);
+    vector<ll>comp(n,0);
+
+    ll cur = 0;
 
     while(m--){
-        ll bi,ci;cin>>bi>>ci;
-        bi--;
-        v[bi] = v[bi]+ci;
-        if(v[bi] > h){
-            v = copy;
+        int i,add;
+        i--;
+        if(cur>comp[i]){
+            comp[i] = cur;
+            v[i] = 0;
         }
+        v2[i] +=add;
+        if(v2[i] + v[i] > h)cur++;
     }
-
-    for(auto &ot : v)cout << ot << " ";
-    cout << nl;
-      
+    for(int i = 0;i<n;i++){
+        if(comp[i] < cur) v2[i] = 0;
+    }
+    for(int i = 0;i<n;i++){
+        cout << v[i] + v[i] << " ";
+    }
         
     
            
@@ -677,9 +684,11 @@ void MASTER() {
 
 
 int main() {
+
+    
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
- 
+   
    
     int t ;
     t=1;
