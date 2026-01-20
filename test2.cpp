@@ -628,6 +628,7 @@ void solve() {
 
     while(m--){
         ll bi,ci;cin>>bi>>ci;
+        bi--;
         v[bi] = v[bi]+ci;
         if(v[bi] > h){
             v = copy;
