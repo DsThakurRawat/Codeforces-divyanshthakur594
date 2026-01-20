@@ -624,10 +624,17 @@ void solve() {
 
     ll n,m,h;cin>>n>>m>>h;
     vector<ll>v(n);for(auto & x : v)cin>>x;
+    vector<ll>copy = v;
 
     while(m--){
         ll bi,ci;cin>>bi>>ci;
+        v[bi] = v[bi]+ci;
+        if(v[bi] > h){
+            v = copy;
+        }
     }
+
+    for(auto &ot : v)cout << ot << " ";
 
         
     
