@@ -626,7 +626,8 @@ void solve() {
         vector<ll>v(n);for(auto & x : v)cin>>x;
 
         vector<ll>prefmax(n);
-        prefmax[0] = v[0];
+        prefmax[0] = *max_element(all(v));
+
 
         for(int i=1;i<n;i++){
             prefmax[i] = max(prefmax[i-1],v[i]);
