@@ -790,7 +790,8 @@ void MASTER() {
 
             ll case1 = v[l]-1;
             ll case2 = k-v[r];
-            
+            ll case3 = v[r] - v[l]  - r+l;
+            cout << case1+case2+case3 << nl;
 
 
         }
