@@ -783,8 +783,19 @@ void MASTER() {
 
 
         ll n,q,k;cin>>n>>q>>k;
-        vector<ll>v(n);for(auto & in : v)cin>>in;
-        
+        vector<ll>v(n+1);for(int i = 1;i<=n;i++)cin>>v[i];
+
+        while(q--){
+            ll l,r;cin>>l>>r;
+
+            ll case1 = v[l]-1;
+            ll case2 = k-v[r];
+            
+
+
+        }
+
+
 
 
 
