@@ -640,15 +640,26 @@ void MASTER() {
     
     
     */
-   ll n;cin>>n;
-   vector<ll>v(n);
-   for(auto & in: v)cin>>in;
+        ll n;cin>>n;
+        vector<ll>v(n);
+        for(auto & in: v)cin>>in;
 
-   vector<ll>cnt(32,0);
+        vector<ll>cnt(32,0);
 
-   for(int i = 0;i<n;i++){
-    ll msb = 31-__builtin_clzll(v[i]);
-   }
+        for(int i = 0;i<n;i++){
+            ll msb = 31 - __builtin_clzll(v[i]);
+            cnt[msb]++;
+        }
+        ll ans = 0;
+         
+        for(int b = 0;b<32;b++){
+            ll c = cnt[b];
+            ans += c*(c-1) / 2;
+        }
+       
+
+        cout << ans << nl;
+   
    
 
    
