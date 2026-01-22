@@ -728,7 +728,7 @@ if there are c elements in a group:
 
 Number of ways to choose any 2 distinct elements is:
 
-(c , 2)  = c*(c-1)/2;
+(c , 2)  = (c*(c-1))/2;
 
 
 
