@@ -647,7 +647,7 @@ void MASTER() {
         vector<ll>cnt(32,0);
 
         for(int i = 0;i<n;i++){
-            ll msb = 31 - __builtin_cl(v[i]);
+            ll msb = 31 - __builtin_clz(v[i]);
             cnt[msb]++;
         }
         ll ans = 0;
