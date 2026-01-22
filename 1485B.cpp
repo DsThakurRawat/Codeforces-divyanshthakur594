@@ -784,6 +784,7 @@ void MASTER() {
 
         ll n,q,k;cin>>n>>q>>k;
         vector<ll>v(n);for(auto & in : v)cin>>in;
+        
 
 
 
