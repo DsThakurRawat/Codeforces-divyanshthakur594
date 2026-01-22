@@ -782,32 +782,14 @@ void solve(){
 void MASTER() {
 
 
-    ll n,m,h;cin>>n>>m>>h;
-    vector<ll>v(n);for(auto & x : v)cin>>x;
-    vector<ll>v2(n,0);
-    vector<ll>comp(n,0);
-
-    ll cur = 0;
-
-    while(m--){
-        int i,add;
-        cin>>i>>add;
-        i--;
-        if(cur>comp[i]){
-            comp[i] = cur;
-            v2[i] = 0;
+      int x, y;
+        cin >> x >> y;
+        ll ans = 0;
+        for (int i = 1; i * (i + 1) <= x; i++) {
+            int r = min(y, x / i - 1);
+            ans += max(0, r - i);
         }
-        v2[i] +=add;
-        if(v2[i] + v[i] > h)cur++;
-    }
-    for(int i = 0;i<n;i++){
-        if(comp[i] < cur) v2[i] = 0;
-    }
-    for(int i = 0;i<n;i++){
-        cout << v2[i] + v[i] << " ";
-    }
-    cout << nl;
-        
+        cout << ans << "\n";
     
            
     
