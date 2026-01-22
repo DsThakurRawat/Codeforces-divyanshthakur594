@@ -749,6 +749,11 @@ If a bit is 0, it contributes no value
 A number is defined by its highest 1
 
 
+Why this is sufficient (one line) ?
+Because the highest set bit decides the comparison
+(ai & aj) ≥ (ai ⊕ aj) — lower bits can never overturn it.
+
+
 
 */
 
