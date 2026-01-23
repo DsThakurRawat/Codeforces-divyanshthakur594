@@ -786,9 +786,12 @@ void MASTER(){
         return;
       }
       //
-      ll meet_pos = (n+1)/2;
-       cout << meet_pos % n  + 1 << nl;
-       
+     ll pos = (k-1) % n + 1;
+
+     if( n %2 == 1 && pos == (n+1)/2){
+        pos = pos % n +1;
+     }
+     cout << pos << nl;
 
 
 
