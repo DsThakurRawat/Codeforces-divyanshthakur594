@@ -783,8 +783,8 @@ void MASTER(){
         
 
 
-    int n, ans = 0;
-    cin >> n;
+    int n , ans = 0;  cin >> n;
+   
     set<int> clr;
     for(int i = 0; i < n; i++)
     {
