@@ -783,14 +783,20 @@ void MASTER(){
         
 
 
-         long long n, k;
+                ll n, k; 
         cin >> n >> k;
-        long long pos = (k - 1) % n + 1;
-        if(n % 2 == 1 && pos == (n + 1) / 2) {
-            pos = pos % n + 1;
+
+        if (n % 2 == 0) {
+            cout << (k - 1) % n + 1 << nl;
+            return;
         }
-        cout << pos << "\n";
-           
+
+        ll cycles = (k - 1) / n;
+        ll rem = (k - 1) % n;
+        ll mid = (n - 1) / 2;
+
+        ll conflicts = cycles + (rem >= mid);
+        cout << (k - 1 + conflicts) % n + 1 << nl;
 
 
      
