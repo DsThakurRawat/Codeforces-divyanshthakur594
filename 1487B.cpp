@@ -782,24 +782,56 @@ void solve(){
 void MASTER(){
         
 
+   
+    string x, y;
+    cin >> x >> y;
+    int n = x.size(), m = y.size();
+    vector<int> frq(27);
 
-     int n, l, r, late = 0;
-    cin >> n >> l >> r;
-    for(int i = 1; i <= n; i++)
+    for(int i = 0; i < n; i++) frq[x[i] - 'a']--;
+    for(int i = 0; i < m; i++) frq[y[i] - 'a']++;
+
+    int bad = 0;
+    for(int i = 0; i < 26; i++) bad += (frq[i] < 0);
+
+    if(bad)
     {
-        if(i != r)
-        {
-            cout << (late ^ i) << " ";
-            late = i;
-        }
-        else
-        {
-            cout << (late ^ (l - 1)) << " ";
-            late = l - 1;
-        }
+        cout << "Impossible\n";
+        return;
     }
-    cout << nl;
-     
+
+    string jump = x, ans = "";
+    jump += '{';
+    x = jump;
+
+    for(int i = (int)x.size() - 2; i >= 0; i--)
+    {
+        if(x[i] == x[i + 1]) jump[i] = jump[i + 1];
+        else jump[i] = x[i + 1];
+    }
+
+    for(int i = 0; i < (int)x.size(); i++)
+    {
+        for(int j = 0; j < x[i] - 'a'; j++)
+            while(frq[j] > 0)
+            {
+                ans += (char)(j + 'a');
+                frq[j]--;
+            }
+
+        if(x[i] == '{') break;
+
+        if(jump[i] > x[i])
+            while(frq[x[i] - 'a'] > 0)
+            {
+                ans += x[i];
+                frq[x[i] - 'a']--;
+            }
+
+        ans += x[i];
+    }
+
+    cout << ans << nl;
             
         
 
