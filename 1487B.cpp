@@ -783,19 +783,22 @@ void MASTER(){
         
 
 
-    int n , ans = 0;  cin >> n;
-   
-    set<int> clr;
-    for(int i = 0; i < n; i++)
+     int n, l, r, late = 0;
+    cin >> n >> l >> r;
+    for(int i = 1; i <= n; i++)
     {
-        int x;
-        cin >> x;
-        clr.insert(x);
+        if(i != r)
+        {
+            cout << (late ^ i) << " ";
+            late = i;
+        }
+        else
+        {
+            cout << (late ^ (l - 1)) << " ";
+            late = l - 1;
+        }
     }
-    ans = clr.size();
-    while(clr.count(ans) == 0) clr.insert(ans++);
-    cout << ans << nl;
-
+    cout << nl;
      
             
         
