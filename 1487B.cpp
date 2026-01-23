@@ -780,7 +780,19 @@ void solve(){
 }
 
 void MASTER(){
-    
+      ll n,k;cin>>n>>k;
+      if ( n%2 ==0){
+        cout << ((k-1) % n )+1<<nl;
+        return;
+      }
+      //
+      ll meet_pos = (n+1)/2;
+       cout << meet_pos % n  + 1 << nl;
+       
+
+
+
+
            
 
 
