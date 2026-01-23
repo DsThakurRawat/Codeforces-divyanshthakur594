@@ -780,22 +780,16 @@ void solve(){
 }
 
 void MASTER(){
-      ll n,k;cin>>n>>k;
-      if ( n%2 ==0){
-        cout << ((k-1) % n )+1<<nl;
-        return;
-      }
-      //
-     ll pos = (k-1) % n + 1;
-
-     if( n %2 == 1 && pos == (n+1)/2){
-        pos = pos % n +1;
-     }
-     cout << pos << nl;
+        
 
 
-
-
+         long long n, k;
+        cin >> n >> k;
+        long long pos = (k - 1) % n + 1;
+        if(n % 2 == 1 && pos == (n + 1) / 2) {
+            pos = pos % n + 1;
+        }
+        cout << pos << "\n";
            
 
 
