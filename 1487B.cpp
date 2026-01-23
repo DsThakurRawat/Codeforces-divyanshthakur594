@@ -783,21 +783,18 @@ void MASTER(){
         
 
 
-                ll n, k; 
-        cin >> n >> k;
-
-        if (n % 2 == 0) {
-            cout << (k - 1) % n + 1 << nl;
-            return;
-        }
-
-        ll cycles = (k - 1) / n;
-        ll rem = (k - 1) % n;
-        ll mid = (n - 1) / 2;
-
-        ll conflicts = cycles + (rem >= mid);
-        cout << (k - 1 + conflicts) % n + 1 << nl;
-
+    int n, ans = 0;
+    cin >> n;
+    set<int> clr;
+    for(int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        clr.insert(x);
+    }
+    ans = clr.size();
+    while(clr.count(ans) == 0) clr.insert(ans++);
+    cout << ans << nl;
 
      
             
