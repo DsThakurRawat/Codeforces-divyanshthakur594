@@ -796,7 +796,7 @@ void MASTER(){
 
     if(bad)
     {
-        cout << "Impossible\n";
+        cout << "Impossible"<<nl;;
         return;
     }
 
