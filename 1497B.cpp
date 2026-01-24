@@ -659,7 +659,16 @@ void solve(){
            if(v2[i] !=-1){
             newv2.push_back(v2[i]);
            }
-       }
+       } 
+       cnt = 0;
+
+      for(int i = 0;i<newv2.size();i++){
+        if(binary_search(newV.begin(),newV.end(),newv2[i]))cnt++;
+      }
+      total_ans +=cnt;
+       cout << total_ans -  1 << nl;
+
+
 
        
       
