@@ -650,7 +650,7 @@ void solve(){
     if (r == m - r) {
         if (mp[r] > 0) ans++;
     } else {
-        ans += max(mp[r], mp[m - r]);
+        ans += min(mp[r], mp[m - r]);
     }
 }
 
