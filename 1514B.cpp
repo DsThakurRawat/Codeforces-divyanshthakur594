@@ -784,7 +784,7 @@ void MASTER(){
 
     ll n,k;cin>>n>>k;
      while(k>0){
-        n = n*n;
+       ans = n*ans;
         k--;
      }
      ll mod = 1e9+7;
