@@ -647,12 +647,22 @@ void solve(){
        for(int i =0;i<n;i++){
         if(v2[i] =='0'){
             v2[i] = -1;
+            v[i] = -1;
             flag = 1;
         }
        }
-       if(flag ==1 ){
-        total_ans +=1;
+       vector<ll>newV,newv2;
+       for(int i =0;i<n;i++){
+           if(v[i] != -1){
+            newV.push_back(v[i]);
+           }
+           if(v2[i] !=-1){
+            newv2.push_back(v2[i]);
+           }
        }
+
+       
+      
       
 
 
