@@ -624,7 +624,7 @@ void solve() {
   
     ll n,m;cin>>n>>m;
 
-    vector<ll> v( n, 0);
+    vector<ll> v( n+1, 0);
 
     for (ll i = 0; i < m; i++) {
         ll ai, bi;
@@ -633,7 +633,7 @@ void solve() {
         v[bi]++;
     }
 
-    for (ll i = 0; i < n; i++) {
+    for (ll i = 0; i <= n; i++) {
         ll p = n - 1 - v[i];
         if (p < 3) {
             cout << 0 << " ";
