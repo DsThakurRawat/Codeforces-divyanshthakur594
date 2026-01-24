@@ -636,47 +636,15 @@ void solve(){
        ll n,m;cin>>n>>m;
        vector<ll>v(n);for(auto &in:v)cin>>in;
 
-       vector<int>v2(n);
-       
+       map<ll,ll>mp;
+
        for(int i = 0;i<n;i++){
-        v2[i] = v[i] % m;
-       }
-       ll cnt = 0;
-       ll total_ans = 0;
-       int flag = 0;
-       for(int i =0;i<n;i++){
-        if(v2[i] ==0){
-            v2[i] = -1;
-            v[i] = -1;
-            flag = 1;
-            cnt++;
-        }
+        mp[v[i]%m]++;
        }
 
-
-     if(flag==1){
-        total_ans +=1;
-     }
-      
-       vector<ll>newV,newv2;
-       for(int i =0;i<n;i++){
-           if(v[i] != -1){
-            newV.push_back(v[i]);
-           }
-           if(v2[i] != -1){
-            newv2.push_back(v2[i]);
-           }
-       } 
-       cnt = 0;
-
-      for(int i = 0;i<newv2.size();i++){
-        if(binary_search(newV.begin(),newV.end(),newv2[i]))cnt++;
-      }
-      total_ans +=cnt;
-       cout << total_ans  << nl;
-
-
-
+     
+       
+     
        
       
       
