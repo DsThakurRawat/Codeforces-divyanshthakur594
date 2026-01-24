@@ -652,7 +652,11 @@ void solve(){
             cnt++;
         }
        }
-       total_ans =  total_ans + (cnt+1)/2;
+
+
+      if(flag == 1){
+        total_ans +=1;
+      }
        vector<ll>newV,newv2;
        for(int i =0;i<n;i++){
            if(v[i] != -1){
