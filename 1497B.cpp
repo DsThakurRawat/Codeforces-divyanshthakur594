@@ -597,6 +597,17 @@ To get minimax out of these elements
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 */
 
 
@@ -619,8 +630,11 @@ To get minimax out of these elements
 
 
 
-void solve() {
+void solve(){
 
+        
+       ll n,k;cin>>n>>k;
+       vector<ll>v(n);for(auto &in:v)cin>>in;
  
       
 
