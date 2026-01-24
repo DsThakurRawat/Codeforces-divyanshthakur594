@@ -625,8 +625,11 @@ void solve() {
 
 
  
-       ll n,m;cin>>n>>m;
-       vector<ll>v(n);for(auto & x : v)cin>>x;
+       string s;cin>>s;
+       ll cnt(0);
+       for(int i = 0;i<s.size();i++){
+        if(s[i] =='i'||s[i]=='j')cnt++;
+       }
 
 
             
@@ -673,7 +676,7 @@ int main() {
    
     int t ;
     t=1;
-    cin >> t;
+    //cin >> t;
     while (t--) {
      solve();
     }
