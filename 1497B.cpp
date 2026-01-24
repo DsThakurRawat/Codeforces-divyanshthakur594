@@ -654,9 +654,8 @@ void solve(){
        }
 
 
-      if(flag == 1){
         total_ans +=1;
-      }
+      
        vector<ll>newV,newv2;
        for(int i =0;i<n;i++){
            if(v[i] != -1){
