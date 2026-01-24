@@ -634,7 +634,7 @@ void solve(){
 
         
        ll n,m;cin>>n>>m;
-       vector<ll>v(n);for(auto &p:v)cin>>p;
+       vector<ll>v(n);for(ll &p:v)cin>>p;
 
        map<ll,ll>mp;
 
