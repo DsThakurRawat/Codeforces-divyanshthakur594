@@ -637,7 +637,7 @@ void solve() {
     for (ll i = 1; i <= N; i++) {
         ll allowed = N - 1 - deg[i];
         if (allowed < 3) {
-            cout << 0 << '\n';
+            cout << 0 << " ";
         } else {
             cout << allowed * (allowed - 1) * (allowed - 2) / 6 << " ";
         }
