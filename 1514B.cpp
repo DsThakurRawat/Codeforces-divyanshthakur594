@@ -783,9 +783,13 @@ void MASTER(){
         
 
     ll n,k;cin>>n>>k;
-    ll ans =  pow(n,k);
-    ll mod = 1e9+7;
-    cout << ans %  mod <<nl;
+     while(k>0){
+        n = n*n;
+        k--;
+     }
+     ll mod = 1e9+7;
+   
+    cout << n %  mod <<nl;
 
 
 
