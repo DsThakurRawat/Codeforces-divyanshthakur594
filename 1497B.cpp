@@ -640,7 +640,17 @@ void solve(){
 
        for(int i = 0;i<n;i++){
         mp[v[i]%m]++;
-       }
+       
+    }
+    ll ans = 0;
+    for(auto &p : mp){
+        if(p.second > 0 )ans++;
+    }
+    cout << ans << nl;
+
+
+
+    
 
      
        
