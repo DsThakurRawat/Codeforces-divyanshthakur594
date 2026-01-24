@@ -622,24 +622,23 @@ To get minimax out of these elements
 void solve() {
 
   
-     ll N, M;
-    cin >> N >> M;
+    ll n,m;cin>>n>>m;
 
-    vector<ll> deg(N + 1, 0);
+    vector<ll> v( n, 0);
 
-    for (ll i = 0; i < M; i++) {
-        ll a, b;
-        cin >> a >> b;
-        deg[a]++;
-        deg[b]++;
+    for (ll i = 0; i < m; i++) {
+        ll ai, bi;
+        cin >> ai >> bi;
+        v[ai]++;
+        v[bi]++;
     }
 
-    for (ll i = 1; i <= N; i++) {
-        ll allowed = N - 1 - deg[i];
-        if (allowed < 3) {
+    for (ll i = 0; i < n; i++) {
+        ll p = n - 1 - v[i];
+        if (p < 3) {
             cout << 0 << " ";
         } else {
-            cout << allowed * (allowed - 1) * (allowed - 2) / 6 << " ";
+            cout << p * (p - 1) * (p- 2) / 6 << " ";
         }
     }
 
