@@ -649,8 +649,10 @@ void solve(){
             v2[i] = -1;
             v[i] = -1;
             flag = 1;
+            cnt++;
         }
        }
+       total_ans = (cnt+1)/2
        vector<ll>newV,newv2;
        for(int i =0;i<n;i++){
            if(v[i] != -1){
