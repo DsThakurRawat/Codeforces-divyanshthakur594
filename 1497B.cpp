@@ -642,11 +642,10 @@ void solve(){
             for (ll x : v) freq[x % m]++;
 
             ll ans = 0;
-
-            // remainder 0
+          
             if (freq[0] > 0) ans++;
 
-            // other remainders
+           
             for (ll r = 1; r <= m / 2; r++) {
                 if (r == m - r) {
                     if (freq[r] > 0) ans++;
@@ -656,7 +655,7 @@ void solve(){
                 }
             }
 
-            cout << ans << '\n';
+            cout << ans << nl;
 
 
 
