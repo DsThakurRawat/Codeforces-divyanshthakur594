@@ -787,6 +787,15 @@ void MASTER(){
         cout << (k-1)%n + 1 << nl;
         return;
     }
+    /*
+
+    if n is odd then at evevry n/2 hrs a and b do collide
+    
+    */
+   k--;
+
+   ll p = k/(n/2);
+   cout << (k+p) %n + 1 << nl;
            
 
      
