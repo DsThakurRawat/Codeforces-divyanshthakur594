@@ -638,7 +638,7 @@ void solve(){
 
        map<ll,ll>mp;
 
-       for(int i = 0;i<n;i++){
+       for(int i = 0;i<m;i++){
         mp[v[i]%m]++;
        
     }
@@ -646,7 +646,9 @@ void solve(){
     for(auto &p : mp){
         if(p.second > 0 )ans++;
     }
-    cout << ans << nl;
+
+
+    cout << ans   << nl;
 
 
 
