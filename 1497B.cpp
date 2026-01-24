@@ -632,31 +632,31 @@ To get minimax out of these elements
 
 void solve(){
 
-        
-       ll n,m;cin>>n>>m;
-       vector<ll>v(n);for(ll &p:v)cin>>p;
+                    ll n, m;
+            cin >> n >> m;
 
-       map<ll,ll>mp;
+            vector<ll> v(n);
+            for (auto &x : v) cin >> x;
 
-       for(int i = 0;i<m;i++){
-        mp[v[i]%m]++;
-       
-    }
-    ll ans = 0;
-    for(auto &p : mp){
-        if(p.second > 0 )ans++;
-    }
-    for (ll r = 1; r <= m / 2; r++) {
-    if (r == m - r) {
-        if (mp[r] > 0) ans++;
-    } else {
-        ans += min(mp[r], mp[m - r]);
-    }
-}
+            vector<ll> freq(m, 0);
+            for (ll x : v) freq[x % m]++;
 
+            ll ans = 0;
 
+            // remainder 0
+            if (freq[0] > 0) ans++;
 
-    cout << ans   << nl;
+            // other remainders
+            for (ll r = 1; r <= m / 2; r++) {
+                if (r == m - r) {
+                    if (freq[r] > 0) ans++;
+                } else {
+                    if (freq[r] > 0 || freq[m - r] > 0)
+                        ans += max(1LL, llabs(freq[r] - freq[m - r]));
+                }
+            }
+
+            cout << ans << '\n';
 
 
 
