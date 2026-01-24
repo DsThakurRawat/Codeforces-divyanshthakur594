@@ -646,6 +646,14 @@ void solve(){
     for(auto &p : mp){
         if(p.second > 0 )ans++;
     }
+    for (ll r = 1; r <= m / 2; r++) {
+    if (r == m - r) {
+        if (mp[r] > 0) ans++;
+    } else {
+        ans += max(mp[r], mp[m - r]);
+    }
+}
+
 
 
     cout << ans   << nl;
