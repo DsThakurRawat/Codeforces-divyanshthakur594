@@ -643,10 +643,15 @@ void solve(){
        }
        ll cnt = 0;
        ll total_ans = 0;
+       int flag = 0;
        for(int i =0;i<n;i++){
         if(v2[i] =='0'){
             v2[i] = -1;
+            flag = 1;
         }
+       }
+       if(flag ==1 ){
+        total_ans +=1;
        }
       
 
