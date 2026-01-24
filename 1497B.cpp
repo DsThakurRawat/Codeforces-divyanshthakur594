@@ -639,7 +639,7 @@ void solve() {
         if (allowed < 3) {
             cout << 0 << '\n';
         } else {
-            cout << allowed * (allowed - 1) * (allowed - 2) / 6 << '\n';
+            cout << allowed * (allowed - 1) * (allowed - 2) / 6 << " ";
         }
     }
 
