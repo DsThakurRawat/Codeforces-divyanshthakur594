@@ -782,15 +782,8 @@ void solve(){
 void MASTER(){
         
 
-      ll n,k;cin>>n>>k;
-      if(n<k){
-        cout << k << nl;
-        return;
-      }
-      if(n==k){
-        cout << 2 << nl;
-        return;
-      }
+    ll n,k;cin>>n>>k;
+    
 
 
 
