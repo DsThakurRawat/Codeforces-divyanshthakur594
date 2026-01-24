@@ -621,29 +621,7 @@ To get minimax out of these elements
 
 void solve() {
 
-  
-    ll n,m;cin>>n>>m;
-
-    vector<ll> v( n+1, 0);
-
-    for (ll i = 0; i < m; i++) {
-        ll ai, bi;
-        cin >> ai >> bi;
-        v[ai]++;
-        v[bi]++;
-    }
-
-    for (ll i = 1; i <= n; i++) {
-        ll p = n - 1 - v[i];
-        if (p < 3) {
-            cout << 0 << " ";
-        } else {
-            cout << p * (p - 1) * (p- 2) / 6 << " ";
-        }
-    }
-
-
-       
+ 
       
 
 
