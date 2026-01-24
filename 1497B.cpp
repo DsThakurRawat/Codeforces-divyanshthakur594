@@ -633,13 +633,18 @@ To get minimax out of these elements
 void solve(){
 
         
-       ll n,k;cin>>n>>k;
+       ll n,m;cin>>n>>m;
        vector<ll>v(n);for(auto &in:v)cin>>in;
 
        vector<int>v2(n);
        
        for(int i = 0;i<n;i++){
         v2[i] = v[i] % m;
+       }
+       ll cnt = 0;
+       ll total_ans = 0;
+       for(int i =0;i<n;i++){
+        if(v2[i] =='0')cnt++;
        }
 
  
