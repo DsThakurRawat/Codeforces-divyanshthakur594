@@ -783,7 +783,8 @@ void MASTER() {
 
 
     ll n;cin>>n;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
+    vector<ll>v(n+1);for(int in =0;in<n;in++)cin>>v[in];
+
 
 
 
