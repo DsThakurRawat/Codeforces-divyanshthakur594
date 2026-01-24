@@ -790,7 +790,7 @@ void MASTER(){
      }
      ll mod = 1e9+7;
    
-    cout << ans %  mod <<nl;
+    cout << ans <<nl;
 
 
 
