@@ -784,7 +784,8 @@ void MASTER(){
 
     ll n,k;cin>>n>>k;
     ll ans =  pow(n,k);
-    cout << ans % (1e9 + 7) <<nl;
+    ll mod = 1e9+7;
+    cout << ans %  mod <<nl;
 
 
 
