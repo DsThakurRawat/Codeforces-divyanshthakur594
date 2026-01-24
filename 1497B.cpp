@@ -671,7 +671,7 @@ void solve(){
         if(binary_search(newV.begin(),newV.end(),newv2[i]))cnt++;
       }
       total_ans +=cnt;
-       cout << total_ans  << nl;
+       cout << total_ans  -1<< nl;
 
 
 
