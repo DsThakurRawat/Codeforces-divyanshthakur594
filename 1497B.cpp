@@ -638,7 +638,7 @@ void solve(){
 
        map<ll,ll>mp;
 
-       for(int i = 0;i<n;i++){
+       for(int i = 0;i<m;i++){
         mp[v[i]%m]++;
        
     }
