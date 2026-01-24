@@ -90,10 +90,12 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
-    },
-    "countdownTimer.autoStart": true,
+        "variant": "cpp",
+        
+  "countdownTimer.autoStart": true,
   "countdownTimer.defaultMinutes": 120,
   "countdownTimer.showInStatusBar": true
+
+
     }
 }
