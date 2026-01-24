@@ -644,8 +644,16 @@ void solve(){
        ll cnt = 0;
        ll total_ans = 0;
        for(int i =0;i<n;i++){
-        if(v2[i] =='0')cnt++;
+        if(v2[i] =='0'){
+            v2[i] = -1;
+        }
        }
+      
+
+
+
+        
+
 
  
       
