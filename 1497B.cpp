@@ -633,7 +633,7 @@ void solve() {
         v[bi]++;
     }
 
-    for (ll i = 0; i <= n; i++) {
+    for (ll i = 1; i <= n; i++) {
         ll p = n - 1 - v[i];
         if (p < 3) {
             cout << 0 << " ";
