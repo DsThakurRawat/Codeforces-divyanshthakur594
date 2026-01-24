@@ -620,39 +620,25 @@ To get minimax out of these elements
 
 
 void solve() {
-     ll q;cin>>q;
-     ll cnt = 0;//volume counter
-     ll flag = 0;//switch counter
-     while(q--){
 
-        ll a;cin>>a;
 
-        if(a == 1){
-               cnt++;
-        }
-        if(a==2 && cnt !=0){
-            cnt--;
-        }
-        if(a==3 && flag == 0){
-            flag = 1;
-        }
-        else if (a==3 && flag == 1){
-            flag = 0;
-        }
-        if(flag ==1 && cnt >=3){
-            cout << "Yes"<<nl;
-        }
-        else{
-            cout << "No"<<nl;
-        }
+    ll n,m;cin>>n>>m;
 
+    map<ll,set<ll>>mp;
+
+    while(m--){
+        ll ai,bi;
+        cin>>ai>>bi;
+        if(mp.count(ai))//true
+        {
+            mp[ai].insert(bi);
+        }
         
+
+
+    }
        
-     }
-
-
-
-
+      
 
 
  
