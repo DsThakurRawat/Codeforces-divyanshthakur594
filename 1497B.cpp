@@ -630,6 +630,7 @@ void solve() {
        for(int i = 0;i<s.size();i++){
         if(s[i] =='i'||s[i]=='j')cnt++;
        }
+       cout << cnt << nl;
 
 
             
