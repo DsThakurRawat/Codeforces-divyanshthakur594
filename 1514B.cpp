@@ -783,13 +783,14 @@ void MASTER(){
         
 
     ll n,k;cin>>n>>k;
+    ll ans = 1;
      while(k>0){
        ans = n*ans;
         k--;
      }
      ll mod = 1e9+7;
    
-    cout << n %  mod <<nl;
+    cout << ans %  mod <<nl;
 
 
 
