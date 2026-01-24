@@ -635,6 +635,13 @@ void solve(){
         
        ll n,k;cin>>n>>k;
        vector<ll>v(n);for(auto &in:v)cin>>in;
+
+       vector<int>v2(n);
+       
+       for(int i = 0;i<n;i++){
+        v2[i] = v[i] % m;
+       }
+
  
       
 
