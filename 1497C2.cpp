@@ -790,12 +790,14 @@ void MASTER() {
 
                  ll sum = 0;
 
-                 for(int i = l;i<=r-1;i++){
-                         a[i] = max(a[i],a[i+1]);
-                 }
                  for(int i = l;i<=r;i++){
                     a[i] = max(a[i],b[i]);
                  }
+
+                 for(int i = l;i<=r-1;i++){
+                         a[i] = max(a[i],a[i+1]);
+                 }
+                 
                  for(int i = l;i<=r;i++)sum +=a[i];
 
                  cout << sum << nl;
