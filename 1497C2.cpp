@@ -788,7 +788,13 @@ void MASTER() {
        while(q--){
                  ll l,r;cin>>l>>r;
 
-                 
+                 ll sum = 0;
+
+                 for(int i = l;i<=r-1;i++){
+                         sum += max(max(a[i],a[i+1]),b[i]);
+                 }
+                 cout << sum << nl;
+
 
 
 
