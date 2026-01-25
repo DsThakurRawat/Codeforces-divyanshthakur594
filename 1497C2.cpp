@@ -785,7 +785,7 @@ void MASTER() {
        vector<ll>a(n+1);for(int i = 1;i<=n;i++)cin>>a[i];
          vector<ll>b(n+1);for(int i = 1;i<=n;i++)cin>>b[i];
 
-          for(int i = 1;i<=n-1;i++){
+          for(int i = 1;i<=n;i++){
                     a[i] = max(a[i],b[i]);
                  }
 
