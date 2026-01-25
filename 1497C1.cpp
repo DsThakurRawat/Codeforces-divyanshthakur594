@@ -786,6 +786,12 @@ void MASTER() {
     cout << 1 << " " << 1 << " " << n-2 <<nl;
     return;
    }
+   if(n%4==0){
+    cout << n/2 << " " << n/4 << " " << n/4 << nl;
+    return;
+   }
+
+
 
 
 
