@@ -800,12 +800,13 @@ void MASTER() {
                  
                  for(int i = l;i<=r;i++)sum +=a[i];
 
-                 cout << sum << nl;
+                 cout << sum <<  " ";
 
 
 
 
        }
+       cout << nl;
 
            
 
