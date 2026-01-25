@@ -798,7 +798,7 @@ void MASTER() {
       
     }
 
-    cout<<maxm<<endl;
+    cout<<maxm<<nl;
 
 
 
