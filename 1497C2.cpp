@@ -780,35 +780,34 @@ void solve(){
 }
 
 void MASTER() {
-     
-       ll n,q;cin>>n>>q;
-       vector<ll>a(n+1);for(int i = 1;i<=n;i++)cin>>a[i];
-         vector<ll>b(n+1);for(int i = 1;i<=n;i++)cin>>b[i];
+            
+            ll n, q; 
+        cin >> n >> q;
 
-          for(int i = 1;i<=n;i++){
-                    a[i] = max(a[i],b[i]);
-                 }
+        vector<ll> a(n+2), b(n+2);
+        for(int i = 1; i <= n; i++) cin >> a[i];
+        for(int i = 1; i <= n; i++) cin >> b[i];
 
+        
+        for(int i = 1; i <= n; i++){
+            a[i] = max(a[i], b[i]);
+        }
+
+        
         for(int i = n-1; i >= 1; i--){
-                a[i] = max(a[i], a[i+1]);
-            }
+            a[i] = max(a[i], a[i+1]);
+        }
 
-       while(q--){
-                 ll l,r;cin>>l>>r;
-                
-                 ll sum = 0;
-
-                
-                 
-                 for(int i = l;i<=r;i++)sum +=a[i];
-
-                 cout << sum <<  " ";
-
-
-
-
-       }
-       cout << nl;
+        vector<ll> presum(n+1, 0);
+        for(int i = 1; i <= n; i++){
+            presum[i] = presum[i-1] + a[i];
+        }
+        while(q--){
+            ll l, r; 
+            cin >> l >> r;
+            cout << presum[r] - presum[l-1] << " ";
+        }
+        cout << nl;
 
            
 
