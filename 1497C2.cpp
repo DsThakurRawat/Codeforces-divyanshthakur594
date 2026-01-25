@@ -782,7 +782,7 @@ void solve(){
 void MASTER() {
      
        ll n,q;cin>>n>>q;
-       vector<ll>temp(n+1);for(int i = 1;i<=n;i++)cin>>a[i];
+       vector<ll>temp(n+1);for(int i = 1;i<=n;i++)cin>>temp[i];
          vector<ll>b(n+1);for(int i = 1;i<=n;i++)cin>>b[i];
 
        while(q--){
