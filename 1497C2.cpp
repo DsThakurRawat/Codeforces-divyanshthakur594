@@ -795,8 +795,8 @@ void MASTER() {
                     a[i] = max(a[i],b[i]);
                  }
 
-                 for(int i = l;i<=r-1;i++){
-                         a[i] = max(a[i],a[i+1]);
+                 for(int i = l+1;i<=r-1;i++){
+                         a[i] = max(a[i],a[i-1]);
                  }
                  
                  for(int i = l;i<=r;i++)sum +=a[i];
