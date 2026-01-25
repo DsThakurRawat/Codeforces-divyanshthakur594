@@ -783,7 +783,8 @@ void MASTER() {
 
    ll n,k;cin>>n>>k;
    if(n<=4){
-    cout << 1 << " " << 1 << " " << n-2 << " ";
+    cout << 1 << " " << 1 << " " << n-2 <<nl;
+    return;
    }
 
 
