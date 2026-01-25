@@ -782,7 +782,11 @@ void solve(){
 void MASTER() {
 
     ll n;cin>>n;
-    vector<ll>a(n),b(n);for(auto &in:a)cin>>in;for(auto &in:b)cin>>in;
+    vector<ll>a(n);for(auto &in:a)cin>>in;
+
+    vector<ll>b(n);
+
+    for(auto &in:b)cin>>in;
 
     vector<ll>presum(n,0);
     presum[0] = b[0];
