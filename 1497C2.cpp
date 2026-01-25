@@ -781,8 +781,31 @@ void solve(){
 
 void MASTER() {
 
+    ll n;cin>>n;
+    vector<ll>a(n),b(n);for(auto &in:a)cin>>in;for(auto &in:b)cin>>in;
 
-    
+    vector<ll>presum(n,0);
+    presum[0] = b[0];
+    for(int i = 1;i<n;i++){
+        presum[i] = presum[i-1] + b[i];
+    }
+    sort(rall(a));
+    ll maxm = LLONG_MAX;
+
+    for(ll i=0;i<n;i++){
+        if(presum[i+1]>n)break;
+             maxm = max(maxm,(i+1)*a[presum[i+1]-1]);
+      
+    }
+
+    cout<<maxm<<endl;
+
+
+
+
+
+
+
             
      
 
