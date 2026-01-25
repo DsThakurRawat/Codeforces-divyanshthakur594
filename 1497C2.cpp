@@ -794,7 +794,7 @@ void MASTER() {
         presum[i] = presum[i-1] + b[i];
     }
     sort(rall(a));
-    ll maxm = LLONG_MAX;
+    ll maxm = 0;
 
     for(ll i=0;i+1<n;i++){
         if(presum[i+1]>n)break;
