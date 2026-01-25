@@ -789,7 +789,7 @@ void MASTER() {
     for(auto &in:b)cin>>in;
 
     vector<ll>presum(n+1,0);
-    presum[0] = b[0];
+  
     for(int i = 0;i<n;i++){
         presum[i+1] = presum[i] + b[i];
     }
