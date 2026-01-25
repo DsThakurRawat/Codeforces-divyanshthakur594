@@ -397,7 +397,7 @@ long long countPairsBruteForce(vector<int>& a, int k) {
   Space : O(n)
 =====================================================
 long long countPairsHashMap(vector<int>& a, int k) {
-    unordered_map<int, long long> freq;
+    map<int, long long> freq;
     long long cnt = 0;
 
     for (int x : a) {
@@ -779,9 +779,12 @@ void solve(){
 
 }
 
-void MASTER() {
+void MASTER(){  
 
     
+
+
+
 
   
     
