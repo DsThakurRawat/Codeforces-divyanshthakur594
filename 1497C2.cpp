@@ -796,7 +796,7 @@ void MASTER() {
     sort(rall(a));
     ll maxm = 0;
 
-    for(ll i=0;i+1<n;i++){
+    for(ll i=0;i<n;i++){
         if(presum[i+1]>n)break;
              maxm = max(maxm,(i+1)*a[presum[i+1]-(ll)1]);
       
