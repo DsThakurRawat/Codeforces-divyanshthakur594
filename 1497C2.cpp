@@ -791,8 +791,12 @@ void MASTER() {
                  ll sum = 0;
 
                  for(int i = l;i<=r-1;i++){
-                         sum += max(max(a[i],a[i+1]),b[i]);
+                         a[i] = max(a[i],a[i+1]);
                  }
+                 for(int i = l;i<=r;i++){
+                    a[i] = max(a[i],b[i]);
+                 }
+
                  cout << sum << nl;
 
 
