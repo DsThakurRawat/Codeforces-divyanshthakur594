@@ -784,9 +784,27 @@ void MASTER() {
        ll n;cin>>n;
        vector<ll>a(n+1);for(int i=1;i<=n;i++)cin>>a[i];
        vector<ll>b(n+1);for(int i = 1;i<=n;i++)cin>>b[i];
-       ll cnt = 1;
+       sort(all(a),greater<ll>());
 
-       
+       vector<ll>presum(n+1,0);
+       for(int i = 1;i<=n;i++){
+        presum[i] = presum[i-1] + b[i-1];
+       }
+       ll ans = 0;
+       for(ll i = 1;i<=n;i++){
+        ll x = a[i-1];
+        ll lvls = upper_bound(presum.begin(),presum.end(),i)-presum.begin()-1;
+        ans = max(ans,x*lvls);
+       }
+       cout << ans << nl;
+
+
+
+
+      
+
+
+
 
 
 
