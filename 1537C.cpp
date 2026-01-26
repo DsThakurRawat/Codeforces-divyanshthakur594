@@ -819,7 +819,7 @@ void MASTER() {
     if((h[i] == ans[0] || h[i] == ans[n-1]) && cnt < 2)cnt++;
     else copy.push_back(h[i]);
    }
-   sort(all(copy))
+   sort(all(copy));
 
     for(int i = 2; i < n; i++){
     ans[i-1] = copy[i-1];
