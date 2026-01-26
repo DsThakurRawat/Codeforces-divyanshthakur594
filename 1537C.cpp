@@ -797,7 +797,7 @@ void MASTER() {
       res[n-1] = h[1];
 
     for(int i = 1;i<n;i++){
-         if(abs(h[i-1]-h[i]) <= mini){
+         if(abs(h[i-1]-h[i]) < mini){
             mini = abs(h[i-1] - h[i]);
             res[0] = h[i-1];
             res[n-1] = h[i];
