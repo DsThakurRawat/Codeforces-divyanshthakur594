@@ -595,7 +595,7 @@ void solve() {
         cin >> n;
         if(n % 2 == 1){
             cout << "Bob\n";
-            continue;
+          return;
         }
         int cnt = 0;
         while(n % 2 == 0){
