@@ -780,60 +780,63 @@ void solve(){
 }
 
 void MASTER() {
+  
+    ll n;
+    cin >> n;
 
-    ll n;cin>>n;
-    vector<ll>h(n);for(int i = 0;i<n;i++)cin>>h[i];
+    vector<ll> h(n);
+    for (int i = 0; i < n; i++) cin >> h[i];
+
     sort(all(h));
 
-    vector<ll>ans(n);
+    vector<ll> ans(n);
 
+    // check duplicates
+    set<ll> st(all(h));
+    bool has_dup = (st.size() < n);
 
-    set<ll>st(all(h));
-      ll flag = 0;
-    if(st.size() < n){
-        flag = 1;
+    if (has_dup) {
+        // pick any value that occurs >= 2
+        map<ll,ll> mp;
+        for (ll x : h) mp[x]++;
+
+        for (auto &[key, val] : mp) {
+            if (val >= 2) {
+                ans[0] = key;
+                ans[n - 1] = key;
+                break;
+            }
+        }
+    } else {
+        // no duplicates → take min and max
+        ans[0] = h[0];
+        ans[n - 1] = h[n - 1];
     }
 
-    map<ll,ll>mp;
-    for(int i = 0;i<n;i++){
-        mp[h[i]]++;
-    }
+    // remove exactly one occurrence of ans[0] and ans[n-1]
+    vector<ll> rem;
+    bool removed_first = false, removed_last = false;
 
-    for(auto &[key,val]:mp){
-        if(flag == 1 && val >=2){
-            ans[0] = key;
-            ans[n-1] = key;
-            break;
+    for (ll x : h) {
+        if (x == ans[0] && !removed_first) {
+            removed_first = true;
+        }
+        else if (x == ans[n - 1] && !removed_last) {
+            removed_last = true;
+        }
+        else {
+            rem.push_back(x);
         }
     }
 
-
-   if(flag ==0){
-    ans[0] = h[0];
-    ans[n-1] = h[1];
-   }
-   vector<ll>copy;
-  ll cnt = 0;
-
-   for(int i = 0;i<n;i++){
-    if((h[i] == ans[0] || h[i] == ans[n-1]) && cnt < 2)cnt++;
-    else copy.push_back(h[i]);
-   }
-   sort(all(copy));
-
-    for(int i = 2; i < n; i++){
-    ans[i-1] = copy[i-1];
+    // fill middle
+    for (int i = 1; i <= n - 2; i++) {
+        ans[i] = rem[i - 1];
     }
 
-
-   
-   for(auto & x : ans) cout << x << " ";
-   cout << nl;
-
-    
-
-
-
+    // output
+    for (ll x : ans) cout << x << " ";
+    cout << nl;
 
 
      
