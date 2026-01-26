@@ -790,9 +790,16 @@ void MASTER() {
     ans[0] = h[0];
     ans[n-1] = h[1];
 
+
     for(int i = 2; i < n; i++){
     ans[i-1] = h[i];
 }
+
+
+   
+   for(auto & x : ans) cout << x << " ";
+   cout << nl;
+
     
 
 
