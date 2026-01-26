@@ -821,7 +821,7 @@ void MASTER() {
    }
 
     for(int i = 2; i < n; i++){
-    ans[i-1] = copy[i];
+    ans[i-1] = copy[i-1];
     }
 
 
