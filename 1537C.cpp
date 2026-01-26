@@ -784,8 +784,9 @@ void MASTER() {
     ll n;cin>>n;
     vector<ll>h(n);for(int i = 0;i<n;i++)cin>>h[i];
     sort(rall(h));
+    
 
-    vector<ll>ans(n);
+    vector<ll>ans = h;
      
   ll  mini = h[0] - h[1];
 
@@ -798,9 +799,13 @@ void MASTER() {
             
          }
     }
-   for(auto & x : h) cout << x << " ";
-   cout <<nl;
+    cout << h[0] << " ";
 
+    for(int i = 1;i<n-1;i++){
+        cout << ans[i] << " ";
+    }
+    cout << h[n-1] << nl;
+   
 
 
 
