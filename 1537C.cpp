@@ -790,7 +790,7 @@ void MASTER() {
         return;
     }
     vector<ll>res(n);
-    ll pos = -1;
+    ll pos = 1;
     
      
   ll  mini = abs(h[0] - h[1]);
