@@ -787,6 +787,39 @@ void MASTER() {
 
     vector<ll>ans(n);
 
+
+    set<ll>st(all(h));
+      ll flag = 0;
+    if(st.size() < n){
+        flag = 1;
+    }
+
+    map<ll,ll>mp;
+    for(int i = 0;i<n;i++){
+        mp[h[i]]++;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ans[0] = h[0];
     ans[n-1] = h[1];
 
