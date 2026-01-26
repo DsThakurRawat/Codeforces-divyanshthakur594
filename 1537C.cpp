@@ -799,6 +799,7 @@ void MASTER() {
         }
     }
     for(auto &x : ans) cout << x << " ";
+    cout << nl;
 
 
 
