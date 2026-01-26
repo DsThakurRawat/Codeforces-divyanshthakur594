@@ -811,6 +811,7 @@ void MASTER() {
             dup.push_back(ans[i]);
          }
     }
+    sort(rall(dup));
     
 
 
