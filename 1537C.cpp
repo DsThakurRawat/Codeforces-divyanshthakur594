@@ -787,20 +787,15 @@ void MASTER() {
 
     vector<ll>ans(n);
 
-    for(int i = 0;i<n;i++){
-        if(i==0){
-            ans[i] = h[0];
-        }
-        else if(i==1){
-            ans[n-1] = h[1];
-        }
-        else{
-            ans[i] = h[i];
-        }
-    }
-    for(auto &x : ans) cout << x << " ";
-    cout << nl;
+    ans[0] = h[0];
+    ans[n-1] = h[1];
 
+   for(int i = 0;i<n;i++){
+    if(i == 0 || i ==1 )continue;
+    else ans[i] = h[i];
+   }
+
+    
 
 
 
