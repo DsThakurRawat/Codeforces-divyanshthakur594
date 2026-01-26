@@ -780,63 +780,29 @@ void solve(){
 }
 
 void MASTER() {
-  
-    ll n;
-    cin >> n;
 
-    vector<ll> h(n);
-    for (int i = 0; i < n; i++) cin >> h[i];
+    ll n;cin>>n;
+    vector<ll>h(n);for(int i = 0;i<n;i++)cin>>h[i];
+    sort(rall(h));
 
-    sort(all(h));
+    vector<ll>ans(n);
+     
+  ll  mini = h[0] - h[1];
 
-    vector<ll> ans(n);
+    for(int i = 1;i<n;i++){
+         if(abs(h[i-1]-h[i]) <= mini){
+            mini = abs(h[i-1] - h[i]);
+            h[0] = h[i-1];
+            h[n-1] = h[i];
 
-    // check duplicates
-    set<ll> st(all(h));
-    bool has_dup = (st.size() < n);
-
-    if (has_dup) {
-        // pick any value that occurs >= 2
-        map<ll,ll> mp;
-        for (ll x : h) mp[x]++;
-
-        for (auto &[key, val] : mp) {
-            if (val >= 2) {
-                ans[0] = key;
-                ans[n - 1] = key;
-                break;
-            }
-        }
-    } else {
-        // no duplicates → take min and max
-        ans[0] = h[0];
-        ans[n - 1] = h[n - 1];
+            
+         }
     }
 
-    // remove exactly one occurrence of ans[0] and ans[n-1]
-    vector<ll> rem;
-    bool removed_first = false, removed_last = false;
 
-    for (ll x : h) {
-        if (x == ans[0] && !removed_first) {
-            removed_first = true;
-        }
-        else if (x == ans[n - 1] && !removed_last) {
-            removed_last = true;
-        }
-        else {
-            rem.push_back(x);
-        }
-    }
 
-    // fill middle
-    for (int i = 1; i <= n - 2; i++) {
-        ans[i] = rem[i - 1];
-    }
 
-    // output
-    for (ll x : ans) cout << x << " ";
-    cout << nl;
+
 
 
      
