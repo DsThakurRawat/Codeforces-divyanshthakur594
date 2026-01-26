@@ -789,16 +789,18 @@ void MASTER() {
         cout << h[1] << " " << h[0] << nl;
         return;
     }
-
+    vector<ll>res(n);
     
      
   ll  mini = abs(h[0] - h[1]);
+      res[0] = h[0];
+      res[n-1] = h[1];
 
     for(int i = 1;i<n;i++){
          if(abs(h[i-1]-h[i]) <= mini){
             mini = abs(h[i-1] - h[i]);
-            h[0] = h[i-1];
-            h[n-1] = h[i];
+            res[0] = h[i-1];
+            res[n-1] = h[i];
 
             
          }
@@ -806,7 +808,7 @@ void MASTER() {
           ll cnt = 0;
           vector<ll>dup;
     for(int i = 0;i<ans.size();i++){
-         if((h[0] == ans[i] || h[n-1] == ans[i]) && cnt < 2){
+         if((res[0] == ans[i] || res[n-1] == ans[i]) && cnt < 2){
             cnt++;
             continue;
          }
