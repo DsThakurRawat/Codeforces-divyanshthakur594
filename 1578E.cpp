@@ -584,23 +584,16 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 #define nl '\n'
 string res(string s, int k){
     while((int)s.size() < k){
-        s = s + s;
+        s += s;
     }
-    while((int)s.size() > k)
-        s.pop_back();
+    s.resize(k);
     return s;
 }
 
-
 void solve() {
-        
-
-
-
-   
-         int n, k;
-    string s;
+    int n, k;
     cin >> n >> k;
+    string s;
     cin >> s;
 
     string pref = "";
@@ -608,12 +601,15 @@ void solve() {
 
     string mn = res(pref, k);
 
-    for(int i = 1;i < n;i++){
-        if(s[i] > s[0])break;
+    for(int i = 1; i < n; i++){
+        if (s[i] > pref[i % pref.size()]) break;
         pref += s[i];
         mn = min(mn, res(pref, k));
     }
+
     cout << mn << "\n";
+}
+
 
 
 
@@ -639,7 +635,7 @@ void solve() {
 
            
 
-}
+
   
 
 
