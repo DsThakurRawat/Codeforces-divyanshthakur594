@@ -792,7 +792,7 @@ void MASTER() {
 
     
      
-  ll  mini = h[0] - h[1];
+  ll  mini = abs(h[0] - h[1]);
 
     for(int i = 1;i<n;i++){
          if(abs(h[i-1]-h[i]) <= mini){
