@@ -798,7 +798,13 @@ void MASTER() {
     for(int i = 0;i<n;i++){
         mp[h[i]]++;
     }
-    
+
+    for(auto &[key,val]:mp){
+        if(flag == 1){
+            ans[0] = key;
+            ans[n-1] = key;
+        }
+    }
 
 
 
@@ -820,8 +826,10 @@ void MASTER() {
 
 
 
-    ans[0] = h[0];
-    ans[n-1] = h[1];
+
+
+  //  ans[0] = h[0];
+   // ans[n-1] = h[1];
 
 
     for(int i = 2; i < n; i++){
