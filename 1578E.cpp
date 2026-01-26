@@ -591,23 +591,18 @@ void solve() {
 
 
    
-        int n;
-        cin >> n;
-        if(n % 2 == 1){
-            cout << "Bob\n";
-          return;
-        }
-        int cnt = 0;
-        while(n % 2 == 0){
-            cnt++;
-            n /= 2;
-        }
- 
-        if(n > 1){
-            cout << "Alice"<<nl;
-        }else if(cnt % 2 == 0){
-            cout << "Alice"<<nl;
-        }else cout << "Bob"<<nl;
+        
+
+       int n;
+		 cin >> n;
+		 int sum = 0;
+		 for (int i = 0;i < n; i++){
+			 int a;
+			 cin >> a;
+			 sum += a;
+		 }
+   if(sum < n)cout << "1"<<nl;
+   else cout << sum - n << nl;
 
     
 
