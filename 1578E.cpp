@@ -582,7 +582,14 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
-
+string res(string s, int k){
+    while((int)s.size() < k){
+        s = s + s;
+    }
+    while((int)s.size() > k)
+        s.pop_back();
+    return s;
+}
 
 
 void solve() {
@@ -592,19 +599,23 @@ void solve() {
 
    
         
+      
+    int n, k;
+    string s;
+    cin >> n >> k;
+    cin >> s;
 
-       int n;
-		 cin >> n;
-		 int sum = 0;
-		 for (int i = 0;i < n; i++){
-			 int a;
-			 cin >> a;
-			 sum += a;
-		 }
-   if(sum < n)cout << "1"<<nl;
-   else cout << sum - n << nl;
+    string pref = "";
+    pref += s[0];
 
-    
+    string mn = res(pref, k);
+
+    for(int i = 1;i < n;i++){
+        if(s[i] > s[0])break;
+        pref += s[i];
+        mn = min(mn,res(pref, k));
+    }
+    cout << mn << nl;
 
             
         
