@@ -800,7 +800,7 @@ void MASTER() {
     }
 
     for(auto &[key,val]:mp){
-        if(flag == 1){
+        if(flag == 1 && val >=2){
             ans[0] = key;
             ans[n-1] = key;
             break;
