@@ -586,21 +586,24 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 void solve() {
-         ll n,p;cin>>n>>p;
-         ll k = 0;
-         while(1LL<<(k+1) < p)k++;
+        
 
-         ll maxi = 1LL<<(k+1) -1;
+            ll n, p;
+        cin >> n >> p;
 
-         if(n<=maxi ){
+        ll k = 0;
+        while ((1LL << (k + 1)) < p) k++;
+
+        ll maxi = (1LL << (k + 1)) - 1;
+
+        if (n <= maxi) {
             cout << k << nl;
             return;
-         }
-         ll rem = n-maxi;
+        }
 
-         cout << k + (rem + p-1)/p << nl;
-  
-    
+        ll rem = n - maxi;
+        cout << k + (rem + p - 1) / p << nl;
+
 
 
 
