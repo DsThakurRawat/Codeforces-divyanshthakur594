@@ -586,48 +586,20 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 
 
 void solve() {
-      
-   /* 
+         ll n,p;cin>>n>>p;
+         ll k = 0;
+         while(1LL<<(k+1) < p)k++;
 
-    for(int i = 0;i<n;i++){
-       
-            mp[v[i]] = i%2;
+         ll maxi = 1LL<<(k+1) -1;
 
-       
-    }
-    sort(all(v));
-
-    for(int i = 0;i<n-1;i++){
-        if(mp[v[i]] == mp[v[i+1]]){
-            cout << "NO"<<nl;
+         if(n<=maxi ){
+            cout << k << nl;
             return;
-        }
-    }
-   cout << "YES"<<nl;
+         }
+         ll rem = n-maxi;
+
+         cout << k + (rem + p-1)/p << nl;
   
-    */
-    
-
-    ll n;cin>>n;
-    vector<ll>v(n);for(auto &in:v)cin>>in;
-    map<ll,ll>mp;
-     ll mex =0;
-    auto  findmex = [&](){
-        
-        while(mp[mex])mex++;
-        return;
-    };
-    ll mini = LLONG_MAX;
-
-    for(int i =0;i<mex;i++){
-        mini = min(mini,mp[mex]);
-        if(mini>=2)
-    }
-
-
-
-      
-
     
 
 
