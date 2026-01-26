@@ -786,7 +786,7 @@ void MASTER() {
     vector<ll>ans = h;
     sort(all(h));
     if(n==2){
-        cout << h[1] << " " << h[0] << nl;
+        cout << h[0] << " " << h[1] << nl;
         return;
     }
     vector<ll>res(n);
