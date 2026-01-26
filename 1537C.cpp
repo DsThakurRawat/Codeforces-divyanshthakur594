@@ -808,10 +808,11 @@ void MASTER() {
           ll cnt = 0;
           vector<ll>dup;
     for(int i = 0;i<ans.size();i++){
-         if((res[0] == ans[i] || res[n-1] == ans[i]) && cnt < 2){
+         if( cnt < 2){
             cnt++;
             continue;
          }
+        
          else{
             dup.push_back(ans[i]);
          }
