@@ -806,7 +806,7 @@ void MASTER() {
          }
     }
     for (int i = pos; i < n; i++) cout << h[i] << " ";
-    for (int i = 0; i < pos; i++) cout << h[i] << " ";
+    for (int i = 0; i <= pos; i++) cout << h[i] << " ";
     cout << nl;
 
      
