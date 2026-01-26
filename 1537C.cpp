@@ -824,7 +824,7 @@ void MASTER() {
 
 
 
-    cout << h[0] << " ";
+    cout << res[0] << " ";
     
 
      for(int i = 0;i<dup.size();i++){
@@ -833,7 +833,7 @@ void MASTER() {
 
 
     
-    cout << h[n-1] << nl;
+    cout << res[n-1] << nl;
    
 
 
