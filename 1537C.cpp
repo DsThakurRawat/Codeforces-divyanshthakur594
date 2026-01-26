@@ -803,6 +803,7 @@ void MASTER() {
         if(flag == 1){
             ans[0] = key;
             ans[n-1] = key;
+            break;
         }
     }
 
@@ -828,8 +829,8 @@ void MASTER() {
 
 
 
-  //  ans[0] = h[0];
-   // ans[n-1] = h[1];
+    ans[0] = h[0];
+    ans[n-1] = h[1];
 
 
     for(int i = 2; i < n; i++){
