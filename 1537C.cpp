@@ -784,7 +784,7 @@ void MASTER() {
     ll n;cin>>n;
     vector<ll>h(n);for(int i = 0;i<n;i++)cin>>h[i];
     vector<ll>ans = h;
-    sort(rall(h));
+    sort(all(h));
     if(n==2){
         cout << h[1] << " " << h[0] << nl;
         return;
