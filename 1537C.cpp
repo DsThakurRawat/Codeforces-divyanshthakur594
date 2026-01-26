@@ -800,6 +800,17 @@ void MASTER() {
             
          }
     }
+          ll cnt = 0;
+          vector<ll>dup;
+    for(int i = 0;i<ans.size();i++){
+         if((h[0] == ans[i] || h[n-1] == ans[i]) && cnt < 2){
+            cnt++;
+            continue;
+         }
+         else{
+            dup.push_back(ans[i]);
+         }
+    }
     
 
 
