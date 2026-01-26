@@ -791,7 +791,7 @@ void MASTER() {
     ans[n-1] = h[1];
 
    for(int i = 0;i<n;i++){
-    if(i == 0 || i ==1 || i == n-1 )continue;
+    if(i == 0  || i == n-1 )continue;
     else ans[i] = h[i];
    }
    for(auto & x : ans) cout << x << " ";
