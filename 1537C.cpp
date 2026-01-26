@@ -798,7 +798,7 @@ void MASTER() {
             
          }
     }
-
+   for(auto & x : h) cout << x << " ";
 
 
 
