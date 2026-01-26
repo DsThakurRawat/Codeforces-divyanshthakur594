@@ -794,6 +794,8 @@ void MASTER() {
     if(i == 0 || i ==1 )continue;
     else ans[i] = h[i];
    }
+   for(auto & x : ans) cout << x << " ";
+   cout << nl;
 
     
 
