@@ -598,9 +598,7 @@ void solve() {
 
 
    
-        
-      
-    int n, k;
+         int n, k;
     string s;
     cin >> n >> k;
     cin >> s;
@@ -613,12 +611,9 @@ void solve() {
     for(int i = 1;i < n;i++){
         if(s[i] > s[0])break;
         pref += s[i];
-        mn = min(mn,res(pref, k));
+        mn = min(mn, res(pref, k));
     }
-    cout << mn << nl;
-
-            
-        
+    cout << mn << "\n";
 
 
 
