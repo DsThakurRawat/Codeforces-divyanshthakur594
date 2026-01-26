@@ -588,26 +588,28 @@ i⋅m%10=(10+i)⋅m%10 for all i from 0 to 9
 void solve() {
         
 
-            ll n, p;
-        cin >> n >> p;
+long long n, p;
+    if (!(cin >> n >> p)) return;
 
-        ll k = 0;
-        while ((1LL << k) < p) k++;
-        k--;
+    if (n == 1) {
+        cout << 0 << endl;
+        return;
+    }
 
-        ll maxi = (1LL << (k + 1)) - 1;
+    long long rounds = 0;
+    long long current_tasks = 1;
 
-        if (n <= maxi) {
-            cout << k << nl;
-            return;
-        }
+    while (rounds < 62 && current_tasks < p && current_tasks < n) {
+        current_tasks *= 2;
+        rounds++;
+    }
 
-        ll rem = n - maxi;
-        cout << k + (rem + p - 1) / p << nl;
-
-
-
-
+    if (current_tasks >= n) {
+        cout << rounds << endl;
+    } else {
+        long long remaining = n - current_tasks;
+        cout << rounds + (remaining + p - 1) / p << endl;
+    }
 
 
 
