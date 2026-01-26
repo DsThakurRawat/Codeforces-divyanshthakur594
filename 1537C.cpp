@@ -822,7 +822,7 @@ void MASTER() {
     cout << h[0] << " ";
     
 
-     for(int i = 1;i<dup.size();i++){
+     for(int i = 0;i<dup.size();i++){
         cout << dup[i] << " ";
      }
 
