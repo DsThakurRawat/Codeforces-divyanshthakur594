@@ -813,12 +813,12 @@ void MASTER() {
     ll diff2 = abs(v2[2]-v2[1]);
 
     if(diff==diff2){
-        if(diff%2==0){
+        if(diff%2==0 || diff == 2){
         cout << diff/2 << nl;
 
         return;
         }
-        cout << diff << nl;
+       else cout << diff << nl;
         return;
     }
     cout << - 1<< nl;
