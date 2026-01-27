@@ -791,7 +791,7 @@ void MASTER() {
 		cin >> a[i];
 		last[a[i]] = i;
 	}
-	cout << min(last[0], last[1]) << '\n';
+	cout << min(last[0], last[1]) << nl;
     
 
             
@@ -834,7 +834,7 @@ int main() {
    
     int t ;
     t=1;
-    cin >> t;
+   // cin >> t;
     while (t--) {
      MASTER();
      //solve();
