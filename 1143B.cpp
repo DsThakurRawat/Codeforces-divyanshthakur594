@@ -847,7 +847,7 @@ int main() {
    
     int t ;
     t=1;
-    cin >> t;
+   // cin >> t;
     while (t--) {
      MASTER();
      //solve();
