@@ -783,8 +783,7 @@ void MASTER() {
 
           string s;cin>>s;
           vector<ll>v(s.size());
-          ll num = stoll(s);
-
+        
        auto getprod = [&](string &p ){
          ll prod = 1;
 
@@ -796,6 +795,7 @@ void MASTER() {
         };
 
           if(s.find('0')!=string :: npos){
+            ll num = stoll(s);
                     string s2 = to_string(num-1);//if 0 do exist
                 
                     cout << getprod(s2) << nl;
