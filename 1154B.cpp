@@ -784,9 +784,14 @@ void MASTER() {
 
     ll n;cin>>n;
     vector<ll>v(n);for(auto &in:v)cin>>in;
+
     sort(all(v));
     set<ll>st(all(v));
     vector<ll>v2;
+    if(st.size()==1){
+        cout << 0 << nl;
+        return;
+    }
     for(auto & x : st){
                v2.push_back(x);
     }
