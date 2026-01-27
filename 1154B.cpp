@@ -814,6 +814,7 @@ void MASTER() {
     if(v2[1]-v2[0] % 2 == 0){
         cout << (v2[1] - v2[0])/2 << nl;
     }
+    else cout << b2-b1 << nl;
    }
 
    
