@@ -783,10 +783,10 @@ void MASTER() {
 
 
      
-     ll n;
+     ll n;cin >> n;
      vector<ll>a(n),last(n);
      
-	cin >> n;
+	
 	for (int i=0; i<n; i++) {
 		cin >> a[i];
 		last[a[i]] = i;
