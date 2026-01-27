@@ -795,29 +795,33 @@ void MASTER() {
     for(auto & x : st){
                v2.push_back(x);
     }
-    if(v2.size() > 3){
+    if(v2.size()==2){
+         ll diff3=abs(v2[1]-v2[0]);
+         if(diff3%2==0){
+            cout << diff3/2 << nl;
+         }
+         else cout << diff3 << nl;
+         return;
+    }
+    
+    if(st.size() > 3){
         cout << -1 << nl;
         return;
+    }
+    sort(all(v2));//for size is equal 3;
+    ll diff = abs(v2[1] - v2[0]);
+    ll diff2 = abs(v2[2]-v2[1]);
 
-    }
-   if(v2.size()==3){
-    if(v2[2] - v2[1] == v2[1] - v2[0]){
-        cout << v2[2] - v2[1] << nl;
-        
-    }
-    else{
-        cout << -1 << nl;
-    }
+    if(diff==diff2){
+        if(diff%2==0 && v2.size()==2){
+        cout << diff/2 << nl;
 
-   }
-   if(v2.size()==2){
-    if(abs(v2[1]-v2[0]) % 2 == 0){
-        cout << abs(v2[1] - v2[0]) /2 << nl;
+        return;
+        }
+       else cout << diff << nl;
+        return;
     }
-    else cout << abs(v2[1]-v2[0]) << nl;
-   }
-
-   
+    cout << - 1<< nl;
 
 
            
