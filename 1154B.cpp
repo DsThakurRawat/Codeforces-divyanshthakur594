@@ -791,7 +791,7 @@ void MASTER() {
                v2.push_back(x);
     }
     if(v2.size()==2){
-         ll diff3=abs(v[1]-v[0]);
+         ll diff3=abs(v2[1]-v2[0]);
          if(diff3%2==0){
             cout << diff3/2 << nl;
          }
