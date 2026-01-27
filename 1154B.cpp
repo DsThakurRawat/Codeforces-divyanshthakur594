@@ -806,7 +806,7 @@ void MASTER() {
         cout << diff << nl;
         return;
     }
-    //cout << - 1<< nl;
+    cout << - 1<< nl;
 
 
            
