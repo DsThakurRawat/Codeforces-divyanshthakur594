@@ -790,10 +790,7 @@ void MASTER() {
     for(auto & x : st){
                v2.push_back(x);
     }
-    if(v2.size()==2){
-          cout << abs(v2[0]-v2[1]) <<nl;
-          return;
-    }
+    
     
     if(st.size() > 3){
         cout << -1 << nl;
