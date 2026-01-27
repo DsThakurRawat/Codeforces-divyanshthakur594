@@ -804,6 +804,11 @@ void MASTER() {
     ll diff2 = abs(v2[2]-v2[1]);
 
     if(diff==diff2){
+        if(diff%2==0){
+        cout << diff/2 << nl;
+
+        return;
+        }
         cout << diff << nl;
         return;
     }
