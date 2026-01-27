@@ -782,17 +782,19 @@ void solve(){
 void MASTER() {
 
 
-     
-     ll n;cin >> n;
-     vector<ll>a(n),last(n);
-     
-	
-	for (int i=0; i<n; i++) {
-		cin >> a[i];
-		last[a[i]] = i;
-	}
-	cout << min(last[0], last[1]) << nl;
     
+     int n; 
+    cin >> n;
+
+    vector<int> a(n + 1);
+    vector<int> last(10, 0);
+
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+        last[a[i]] = i;
+    }
+
+    cout << min(last[0], last[1]) << nl;
 
             
         
