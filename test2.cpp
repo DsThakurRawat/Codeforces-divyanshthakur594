@@ -782,16 +782,16 @@ void solve(){
 void MASTER() {
 
 
-      int x, y;
-        cin >> x >> y;
-        ll ans = 0;
-        for (int i = 1; i * (i + 1) <= x; i++) {
-            int r = min(y, x / i - 1);
-            ans += max(0, r - i);
-        }
-        cout << ans << "\n";
-    
-           
+     
+     ll n;
+     vector<ll>a(n),last(n);
+     
+	cin >> n;
+	for (int i=1; i<=n; i++) {
+		cin >> a[i];
+		last[a[i]] = i;
+	}
+	cout << min(last[0], last[1]) << '\n';
     
 
             
