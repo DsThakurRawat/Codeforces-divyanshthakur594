@@ -787,7 +787,7 @@ void MASTER() {
      vector<ll>a(n),last(n);
      
 	cin >> n;
-	for (int i=1; i<=n; i++) {
+	for (int i=0; i<n; i++) {
 		cin >> a[i];
 		last[a[i]] = i;
 	}
