@@ -796,6 +796,7 @@ void MASTER() {
     }
     if(st.size() > 3){
         cout << -1 << nl;
+        return;
     }
     sort(all(v2));//for size is equal 3;
     ll diff = v[1] - v[0];
@@ -851,7 +852,7 @@ int main() {
    
     int t ;
     t=1;
-    cin >> t;
+  //  cin >> t;
     while (t--) {
      MASTER();
      //solve();
