@@ -781,29 +781,38 @@ void solve(){
 
 void MASTER() {
 
-          string s;cin>>s;
-         
-        
-       auto getprod = [&](string &p ){
-         ll prod = 1;
-           vector<ll>v(p.size());
-          for(int i =0;i<p.size();i++){
-            v[i] = p[i] - '0';
-            prod = prod*v[i];
-          }
-          return prod;
+                string s; 
+        cin >> s;
+
+        auto getprod = [&](string &p){
+            ll prod = 1;
+            vector<ll> v(p.size());
+            for(int i = 0; i < p.size(); i++){
+                v[i] = p[i] - '0';
+                prod *= v[i];
+            }
+            return prod;
         };
 
-          if(s.find('0')!=string :: npos){
-            ll num = stoll(s);
-                    string s2 = to_string(num-1);//if 0 do exist
-                
-                    cout << getprod(s2) << nl;
-          }
-          else{
-            cout << getprod(s) << nl;
-          }
+        ll ans = getprod(s);  
 
+        int n = s.size();
+        for(int k = 0; k < n; k++){
+            if(s[k] == '0') continue;
+
+            string t = s;
+            t[k]--;                
+            for(int i = k + 1; i < n; i++)
+                t[i] = '9';
+
+         
+            while(t.size() > 1 && t[0] == '0')
+                t.erase(t.begin());
+
+            ans = max(ans, getprod(t));
+        }
+
+        cout << ans << nl;
 
     
 
