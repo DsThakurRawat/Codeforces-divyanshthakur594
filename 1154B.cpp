@@ -799,8 +799,8 @@ void MASTER() {
         return;
     }
     sort(all(v2));//for size is equal 3;
-    ll diff = abs(v[1] - v[0]);
-    ll diff2 = abs(v[2]-v[1]);
+    ll diff = abs(v2[1] - v2[0]);
+    ll diff2 = abs(v2[2]-v2[1]);
 
     if(diff==diff2){
         cout << diff << nl;
