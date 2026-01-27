@@ -786,14 +786,15 @@ void MASTER() {
     vector<ll>v(n);for(auto &in:v)cin>>in;
     sort(all(v));
     set<ll>st(all(v));
-    if(v.size()==2){
-          cout << abs(v[0]-v[1]) <<nl;
-          return;
-    }
     vector<ll>v2;
     for(auto & x : st){
                v2.push_back(x);
     }
+    if(v2.size()==2){
+          cout << abs(v[0]-v[1]) <<nl;
+          return;
+    }
+    
     if(st.size() > 3){
         cout << -1 << nl;
         return;
