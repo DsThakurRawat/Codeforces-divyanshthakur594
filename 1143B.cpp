@@ -782,11 +782,11 @@ void solve(){
 void MASTER() {
 
           string s;cin>>s;
-          vector<ll>v(s.size());
+         
         
        auto getprod = [&](string &p ){
          ll prod = 1;
-
+           vector<ll>v(p.size());
           for(int i =0;i<p.size();i++){
             v[i] = p[i] - '0';
             prod = prod*v[i];
