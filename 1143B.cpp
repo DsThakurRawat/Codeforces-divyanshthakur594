@@ -785,11 +785,11 @@ void MASTER() {
           vector<ll>v(s.size());
           ll num = stoll(s);
 
-       auto getprod = [&](string p ){
+       auto getprod = [&](string &p ){
          ll prod = 1;
 
-          for(int i =0;i<v.size();i++){
-            v[i] = s[i] - '0';
+          for(int i =0;i<p.size();i++){
+            v[i] = p[i] - '0';
             prod = prod*v[i];
           }
           return prod;
