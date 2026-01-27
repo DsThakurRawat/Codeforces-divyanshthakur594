@@ -811,7 +811,7 @@ void MASTER() {
 
    }
    if(v2.size()==2){
-    if(v2[1]-v2[0] % 2 == 0){
+    if(abs(v2[1]-v2[0]) % 2 == 0){
         cout << (v2[1] - v2[0])/2 << nl;
     }
     else cout << v2[1]-v2[0] << nl;
