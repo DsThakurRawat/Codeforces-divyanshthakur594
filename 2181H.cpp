@@ -791,7 +791,7 @@ void MASTER() {
         ll hp = gcd(nw,h);
         ll nh = nw/hp;
         ll dp = gcd(nh,d);
-        ll  nd = nh/dp;
+        ll nd = nh/dp;
            
    if(nd == 1){
     cout << wp-1 << " " << hp-1<< " " << dp-1 << nl;
