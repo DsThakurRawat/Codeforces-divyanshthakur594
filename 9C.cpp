@@ -785,7 +785,7 @@ void MASTER() {
    ll cnt = 0;
 
    for(int mask=1;mask<(1<<10);mask++){
-    string s = bitset<10>(mask).to_string();
+    string s = bitset<10>(mask).to_string();//convert this to string of upto 2^10 ->> 1024 max 1023
     s = s.substr(s.find('1'));
     ll num = stoll(s);
     if(num<=n)cnt++;
