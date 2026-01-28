@@ -781,24 +781,18 @@ void solve(){
 
 void MASTER() {
 
-
+   
     
-     int n; 
-    cin >> n;
 
-    vector<int> a(n + 1);
-    vector<int> last(10, 0);
-
-    for (int i = 1; i <= n; i++) {
-        cin >> a[i];
-        last[a[i]] = i;
-    }
-
-    cout << min(last[0], last[1]) << nl;
-
-            
-        
-
+     ll n;  
+    cin>>n;
+    vector<ll>a(n+1);
+    for(int i=1;i<=n;i++)
+        cin>>a[i];
+    if(a[1]+a[n]==0)
+        cout<<"NO\n";
+    else
+        cout<<"YES\n";
 
 
      
