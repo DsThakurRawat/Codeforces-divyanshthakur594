@@ -792,7 +792,7 @@ void MASTER() {
     if(a[1]+a[n]==0)
         cout<<"Bob"<<nl;
     else
-        cout<<"YES"<<nl;;
+        cout<<"Alice"<<nl;;
 
 
      
