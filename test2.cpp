@@ -790,9 +790,9 @@ void MASTER() {
     for(int i=1;i<=n;i++)
         cin>>a[i];
     if(a[1]+a[n]==0)
-        cout<<"NO\n";
+        cout<<"Bob"<<nl;
     else
-        cout<<"YES\n";
+        cout<<"YES"<<nl;;
 
 
      
