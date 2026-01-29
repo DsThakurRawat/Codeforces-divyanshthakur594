@@ -785,21 +785,21 @@ void MASTER() {
     // permuation such that abs(pi-pi+1) is divide by 
     
     vector<int> p(n);
-    int left = 1, right = n;
+    int l = 1, r = n;
     
   
     for (int i = n - 1; i >= 0; --i) {
         if ((n - i) % 2 == 1) {
-            p[i] = right--;
+            p[i] = r--;
         } else {
-            p[i] = left++;
+            p[i] = l++;
         }
     }
 
     for (int i = 0; i < n; ++i) {
         cout << p[i] << (i == n - 1 ? "" : " ");
     }
-    cout << "\n";
+    cout << nl;
     
     
 
