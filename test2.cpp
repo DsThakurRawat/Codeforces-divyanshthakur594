@@ -786,7 +786,7 @@ void MASTER() {
 
     for (int i = 1; i <= n; ++i) {
         if (i == 1) {
-            cout << 1 << " ";
+            v[i] = 1;
         } else {
             v[i] = (i)*(i-1);
         }
