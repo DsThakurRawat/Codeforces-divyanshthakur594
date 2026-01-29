@@ -784,11 +784,23 @@ void MASTER() {
     
     // permuation such that abs(pi-pi+1) is divide by i
 
-    for (int i = n; i >= 1; i--) {
-        cout << i << (i == 1 ? "" : " ");
+     int n;
+    cin >> n;
+
+    vector<int> p;
+    p.push_back(1);
+
+    int l = 2, r = n;
+    while (l <= r) {
+        p.push_back(r);
+        if (l <= r - 1)
+            p.push_back(l);
+        l++;
+        r--;
     }
-     cout << nl;
-    
+
+    for (int x : p)
+        cout << x << " ";
    
     
 
