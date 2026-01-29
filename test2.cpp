@@ -787,11 +787,10 @@ void MASTER() {
      v[1] = 1;
 
     for(int i =2;i<n;i++){
-
-        v[i] = (i)*(i+1);
+            v[i] = (i+1)*i;
+      
     }
-    for(auto & ot : v)cout << ot << " ";
-    cout << nl;
+  
 
    
     
