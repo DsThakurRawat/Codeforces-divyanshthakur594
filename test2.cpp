@@ -785,8 +785,9 @@ void MASTER() {
     // permuation such that abs(pi-pi+1) is divide by i
       
      v[1] = 1;
+     v[2] = 2;
 
-    for(int i =2;i<=n;i++){
+    for(int i =3;i<=n;i++){
 
         v[i] = (i)*(i+1);
     }
