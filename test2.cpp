@@ -782,20 +782,12 @@ void solve(){
 void MASTER() {
     ll n;cin>>n;
     vector<ll>v(n);
-    // permuation such that pi-pi+1 is divide by i
+    // permuation such that abs(pi-pi+1) is divide by i
 
-    for(int i = 1;i<n;i++){
-        for(int j = 1;j<n;j++){
-           for(int k = 1;k<n-1;k++){
-            if(abs(i-j) % k == 0 && i != j){
-                v[k-1] = i;
-                v[k] = j;
-            }
-           }
-        }
+    for(int i = 1;i<=n;i++){
+       cout << i << " ";
     }
-    for(auto &ot : v)cout << ot << " ";
-    cout << nl;
+  cout << nl;
 
 
    
