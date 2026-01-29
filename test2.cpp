@@ -783,12 +783,13 @@ void MASTER() {
     ll n;cin>>n;
     vector<ll>v(n);
     // permuation such that abs(pi-pi+1) is divide by i
+      
+     v[1] = 1;
 
-    for(int i = 0;i<n;i++){
-       cout << n-i << " ";
+    for(int i =1;i<n;i++){
+        
+        v[i] = (i)*(i+1)
     }
-  cout << nl;
-
 
    
     
