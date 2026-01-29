@@ -784,7 +784,7 @@ void MASTER() {
     vector<ll>v(n);
     // permuation such that abs(pi-pi+1) is divide by i
 
-    for(int i = 1;i<=n;i++){
+    for(int i = 0;i<n;i++){
        cout << n-i << " ";
     }
   cout << nl;
