@@ -780,26 +780,20 @@ void solve(){
 }
 
 void MASTER() {
-    ll n;cin>>n;
+    
     
     // permuation such that abs(pi-pi+1) is divide by 
     
-    vector<int> p(n);
-    int l = 1, r = n;
-    
-  
-    for (int i = n - 1; i >= 0; --i){
-        if ((n - i) % 2 == 1) {
-            p[i] = r--;
-        } else {
-            p[i] = l++;
-        }
-    }
-
-    for (int i = 0; i < n; ++i) {
-        cout << p[i] << (i == n - 1 ? "" : " ");
-    }
-    cout << nl;
+     int n;
+		cin >> n;
+		set<int> s;
+		for (int i = 0; i < n; i++)
+		{
+			int x;
+			cin >> x;
+			s.insert(x);
+		}
+		cout << s.size() * 2 - 1 << nl;
     
     
 
