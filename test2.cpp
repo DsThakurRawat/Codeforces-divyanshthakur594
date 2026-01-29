@@ -795,6 +795,7 @@ void MASTER() {
         }
     }
     for(auto &ot : v)cout << ot << " ";
+    cout << nl;
 
 
    
