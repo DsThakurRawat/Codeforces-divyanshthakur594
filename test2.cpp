@@ -781,7 +781,7 @@ void solve(){
 
 void MASTER() {
     ll n;cin>>n;
-    vector<ll>v(n);
+    vector<ll>v(n+1);
     // permuation such that abs(pi-pi+1) is divide by i
       
      v[1] = 1;
@@ -790,7 +790,9 @@ void MASTER() {
 
         v[i] = (i)*(i+1);
     }
-    for(auto & ot : v)cout << ot << " ";
+    for(int i =1 ;i<=n;i++){
+        cout << v[i] << " ";
+    }
     cout << nl;
 
    
