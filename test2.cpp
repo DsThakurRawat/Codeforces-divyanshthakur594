@@ -788,8 +788,8 @@ void MASTER() {
         for(int j = 1;j<n;j++){
            for(int k = 1;k<n-1;k++){
             if(abs(i-j) % k == 0 && i != j){
-                v[k] = i;
-                v[k+1] = j;
+                v[k-1] = i;
+                v[k] = j;
             }
            }
         }
