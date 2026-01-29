@@ -800,6 +800,7 @@ void MASTER() {
 
     for (int x : p)
         cout << x << " ";
+    cout << nl;
    
     
 
