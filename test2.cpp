@@ -782,11 +782,7 @@ void solve(){
 void MASTER() {
     ll n;cin>>n;
     
-    // permuation such that abs(pi-pi+1) is divide by i
-
-     
-       int n;
-    cin >> n;
+    // permuation such that abs(pi-pi+1) is divide by 
     
     vector<int> p(n);
     int left = 1, right = n;
