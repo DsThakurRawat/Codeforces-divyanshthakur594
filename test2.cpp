@@ -785,7 +785,7 @@ void MASTER() {
     // permuation such that abs(pi-pi+1) is divide by i
 
     for(int i = 1;i<=n;i++){
-       cout << i << " ";
+       cout << n-i << " ";
     }
   cout << nl;
 
