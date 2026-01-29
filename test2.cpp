@@ -792,6 +792,7 @@ void MASTER() {
         else
             cout << (i - 1) * i << " ";
     }
+    cout << nl;
     
 
 
