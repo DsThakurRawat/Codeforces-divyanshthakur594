@@ -784,8 +784,7 @@ void MASTER() {
     
     // permuation such that abs(pi-pi+1) is divide by i
 
-     int n;
-    cin >> n;
+     
 
     vector<int> p;
     p.push_back(1);
