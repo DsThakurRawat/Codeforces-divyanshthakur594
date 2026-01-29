@@ -788,7 +788,7 @@ void MASTER() {
     int l = 1, r = n;
     
   
-    for (int i = n - 1; i >= 0; --i) {
+    for (int i = n - 1; i >= 0; --i){
         if ((n - i) % 2 == 1) {
             p[i] = r--;
         } else {
