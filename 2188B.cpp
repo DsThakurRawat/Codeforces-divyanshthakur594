@@ -790,7 +790,7 @@ void MASTER(){
             for(int j = i+1;j<n;j++){
                 if(s[j] == '1'){
                     ll mid = (i+j)/2;
-                    if(s[mid-1] != '1' && s[mid+1] != '1'){
+                    if(s[mid-1] != '1' && s[mid+1] != '1' && mid < n){
                         s[mid] = '1';
                         i = mid+1;
                     }
