@@ -782,16 +782,24 @@ void solve(){
 void MASTER() {
       
     string s;cin>>s;
-    string ans =" ";
+    string ans ="";
 
     for(int i = 0;i<s.size();i++){
         ll num=s[i]-'0';
+        if(num == 9 && i==0){
+            ans +=to_string(num);
+            continue;
+        }
+        else{
         if(num < 9-num){
              ans +=to_string(num);
         }
         else{
             ans +=to_string(9-num);
         }
+        }
+        
+      
 
     }
     cout << ans << nl;
