@@ -781,7 +781,24 @@ void solve(){
 
 void MASTER(){
   
+      ll n;cin>>n;
+      string s;cin>>s;
 
+     
+      for(int i = 0;i<n;){
+        if(s[i] == '1'){
+            for(int j = i+1;j<n;){
+                if(s[j] == '1'){
+                    ll mid = (i+j)/2;
+                    if(s[mid-1] != '1' && s[mid+1] != '1'){
+                        s[mid] = '1';
+                        i = mid+1;
+                    }
+                   
+                }
+            }
+        }
+      }
 
 
 
