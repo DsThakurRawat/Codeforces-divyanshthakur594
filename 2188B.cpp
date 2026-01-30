@@ -787,20 +787,20 @@ void MASTER(){
      
       for(int i = 0;i<n;){
         if(s[i] == '1'){
-            for(int j = i+1;j<n;){
+            for(int j = i+1;j<n;j++){
                 if(s[j] == '1'){
                     ll mid = (i+j)/2;
                     if(s[mid-1] != '1' && s[mid+1] != '1'){
                         s[mid] = '1';
                         i = mid+1;
                     }
+                    else i+=1;
                    
                 }
             }
         }
       }
-
-
+      cout << s << nl;
 
 
 
