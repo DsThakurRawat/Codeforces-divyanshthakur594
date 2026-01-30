@@ -783,25 +783,26 @@ void MASTER(){
   
       ll n;cin>>n;
       string s;cin>>s;
-
+      
+      ll x=1;
+      ll ans = 0;
      
-      for(int i = 0;i<n;){
-        if(s[i] == '1'){
-            for(int j = i+1;j<n;j++){
-                if(s[j] == '1'){
-                    ll mid = (i+j)/2;
-                    if(s[mid-1] != '1' && s[mid+1] != '1' && mid < n){
-                        s[mid] = '1';
-                        i = mid+1;
-                    }
-                    else i+=1;
-                   
-                }
-            }
+      for(ll i =10;i<n;i++){
+        if(s[i] =='0'){
+                  x++;
+                  if(x==3){
+                    ans++;
+                    x=0;
+                  }
+
+        }
+        else{
+            x=0;
+            ans++;
         }
       }
-      cout << s << nl;
-
+      if(x>1)ans++;
+      cout << ans << nl;
 
 
 
