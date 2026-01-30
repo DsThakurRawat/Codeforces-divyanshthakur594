@@ -789,13 +789,12 @@ void MASTER(){
      
       for(ll i =0;i<n;i++){
         if(s[i] =='0'){
-                  x++;
-                  if(x==3){
-                    ans++;
-                    x=0;
+                x++;
+                if(x==3){
+                ans++;
+                x=0;
                   }
-
-        }
+                 }
         else{
             x=0;
             ans++;
