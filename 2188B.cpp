@@ -787,7 +787,7 @@ void MASTER(){
       ll x=1;
       ll ans = 0;
      
-      for(ll i =10;i<n;i++){
+      for(ll i =0;i<n;i++){
         if(s[i] =='0'){
                   x++;
                   if(x==3){
