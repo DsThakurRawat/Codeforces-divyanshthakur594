@@ -780,32 +780,22 @@ void solve(){
 }
 
 void MASTER() {
-       
- int n;cin >> n;
-    
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
+    ll n,x=1000000000,y=0,an=1000000000;
+    cin>>n;
+    vector<ll>a(n),b(n);
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        b[i]=a[i];
+        x=min(x,a[i]);
+        y=max(y,a[i]);
     }
-    
-    auto b = a;
-sort(b.begin(), b.end());
-    
-    if (a == b) {
-        cout << -1 << "\n";
-        return;
+    sort(b.begin(),b.end());
+    for(int i=0;i<n;i++){
+        if(a[i]==b[i])continue;
+        an=min(an,max(abs(a[i]-x),abs(a[i]-y)));
     }
-    
-    int ans = b[n - 1] - b[0];
-    for (int i = 0; i < n; i++) {
-        if (a[i] != b[i]) {
-            ans = min(ans, max(b[i] - b[0], b[n - 1] - b[i]));
-        }
-    }
-    
-    std::cout << ans << nl;
-
-         
+    if(an==1000000000)an=-1;
+    cout<<an<<endl;
 
 
 
