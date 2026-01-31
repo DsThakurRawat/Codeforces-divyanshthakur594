@@ -783,32 +783,38 @@ void MASTER() {
     
     
     // permuation such that abs(pi-pi+1) is divide by 
-        string s;
-    cin >> s;
-    int n = s.size();
+    int n;
+    cin >> n;
+    vector<ll> a(n);
 
-    ll ans = 1;
-    int ansLen = 1;
-    int cur = 1;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
 
-    for (int i = 1; i < n; i++) {
-        if (s[i] != s[i - 1]) {
-            ansLen++;
-            ans = (ans * cur) % mod;
-            cur = 1;
-        } else {
-            cur++;
+    map<ll, ll> mp;
+
+    for (int i = 0; i < n; i++) {
+        ll x = a[i];
+        for (ll j = 2; j * j <= x; j++) {
+            while (x % j == 0) {
+                mp[j]++;
+                x /= j;
+            }
+        }
+        if (x > 1) {
+            mp[x]++;
         }
     }
 
-    ans = (ans * cur) % mod;
-
-    for (int i = 1; i <= n - ansLen; i++) {
-        ans = (ans * i) % mod;
+    bool ok = true;
+    for (auto &it : mp) {
+        if (it.second % n != 0) {
+            ok = false;
+            break;
+        }
     }
 
-    cout << n - ansLen << " " << ans << '\n';
-
+    cout << (ok ? "YES\n" : "NO\n");
     
                 
 
