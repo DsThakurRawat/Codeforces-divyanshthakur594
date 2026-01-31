@@ -785,32 +785,37 @@ ll sum(ll x) {
 
 void MASTER() {
     
-        
-        ll k, x;
-            cin >> k >> x;
+        int n;
+    ll w;
+    cin >> n >> w;
 
-            ll lo = 1, hi = 2 * k - 1, ans = 2 * k - 1;
+    vector<ll> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
 
-            while (lo <= hi) {
-                ll mid = (lo + hi) / 2;
-                ll cnt;
+    vector<ll> cnt(21, 0);
+    for (int i = 0; i < n; i++) {
+        int lg = log2(a[i]);
+        cnt[lg]++;
+    }
 
-                if (mid >= k) {
-                    cnt = sum(k) + sum(k - 1) - sum(2 * k - 1 - mid);
-                } else {
-                    cnt = sum(mid);
-                }
+    ll used = 0;
+    ll height = 0;
 
-                if (cnt >= x) {
-                    ans = mid;
-                    hi = mid - 1;
-                } else {
-                    lo = mid + 1;
-                }
+    while (used < n) {
+        ll rem = w;
+        for (int i = 20; i >= 0; i--) {
+            while (cnt[i] > 0 && (1LL << i) <= rem) {
+                rem -= (1LL << i);
+                cnt[i]--;
+                used++;
             }
+        }
+        height++;
+    }
 
-            cout << ans << '\n';
-            
+    cout << height << '\n';
 
 
     
