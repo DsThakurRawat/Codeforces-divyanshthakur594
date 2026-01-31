@@ -780,23 +780,20 @@ void solve(){
 }
 
 void MASTER() {
-    ll n,x=1000000000,y=0,an=1000000000;
-    cin>>n;
-    vector<ll>a(n),b(n);
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-        b[i]=a[i];
-        x=min(x,a[i]);
-        y=max(y,a[i]);
+ 
+        long long k,x,kk; cin>>k>>x; kk=1ll<<k;
+        if (!x||x==kk*2) {cout<<"-1\n";return;}
+        long long y=kk*2-x;
+        vector<int> ans; ans.clear();
+        while(x!=kk){
+            if (x>y) ans.push_back(2),x-=y,y*=2;
+            else ans.push_back(1),y-=x,x*=2;
+        }
+        cout<<ans.size()<<"\n";
+        while(!ans.empty()) cout<<ans.back()<<' ',ans.pop_back();
+        cout<<"\n";
     }
-    sort(b.begin(),b.end());
-    for(int i=0;i<n;i++){
-        if(a[i]==b[i])continue;
-        an=min(an,max(abs(a[i]-x),abs(a[i]-y)));
-    }
-    if(an==1000000000)an=-1;
-    cout<<an<<endl;
-
+   
 
 
            
