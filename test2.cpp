@@ -779,40 +779,38 @@ void solve(){
 
 }
 const ll mod = 998244353;
+ll sum(ll x) {
+    return x * (x + 1) / 2;
+}
+
 void MASTER() {
     
-    
-    int n;
-    ll k;
-    cin >> n >> k;
+        
+        ll k, x;
+            cin >> k >> x;
 
-    vector<ll> a(n);
-    vector<ll> bits(32, 0);
+            ll lo = 1, hi = 2 * k - 1, ans = 2 * k - 1;
 
-    ll ans = (1LL << 31) - 1;
+            while (lo <= hi) {
+                ll mid = (lo + hi) / 2;
+                ll cnt;
 
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-        ans &= a[i];
-        for (int j = 0; j < 32; j++) {
-            if (a[i] & (1LL << j)) {
-                bits[j]++;
+                if (mid >= k) {
+                    cnt = sum(k) + sum(k - 1) - sum(2 * k - 1 - mid);
+                } else {
+                    cnt = sum(mid);
+                }
+
+                if (cnt >= x) {
+                    ans = mid;
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
             }
-        }
-    }
 
-    for (int i = 30; i >= 0; i--) {
-        ll need = n - bits[i];
-        if (k >= need) {
-            ans |= (1LL << i);
-            k -= need;
-        }
-    }
-
-    cout << ans << '\n';
-                
-
-    
+            cout << ans << '\n';
+            
 
 
     
