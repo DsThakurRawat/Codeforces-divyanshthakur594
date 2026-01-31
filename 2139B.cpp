@@ -781,7 +781,21 @@ void solve(){
 
 void MASTER(){
     
-    
+     ll n,m;cin>>n>>m;
+   
+     ll ans = 0;
+     vector<ll>a(n);
+     for(int i =0;i<n;i++){
+        cin>>a[i];
+     }
+     sort(rall(a));
+
+     for(ll i = 0;i<n;i++){
+        ans+=  (a[i]*max(0LL,m-i));
+     }
+
+
+
    
     
       
