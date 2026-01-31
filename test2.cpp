@@ -782,40 +782,34 @@ const ll mod = 998244353;
 void MASTER() {
     
     
-    // permuation such that abs(pi-pi+1) is divide by 
     int n;
-    cin >> n;
+    ll k;
+    cin >> n >> k;
+
     vector<ll> a(n);
+    vector<ll> bits(32, 0);
+
+    ll ans = (1LL << 31) - 1;
 
     for (int i = 0; i < n; i++) {
         cin >> a[i];
-    }
-
-    map<ll, ll> mp;
-
-    for (int i = 0; i < n; i++) {
-        ll x = a[i];
-        for (ll j = 2; j * j <= x; j++) {
-            while (x % j == 0) {
-                mp[j]++;
-                x /= j;
+        ans &= a[i];
+        for (int j = 0; j < 32; j++) {
+            if (a[i] & (1LL << j)) {
+                bits[j]++;
             }
         }
-        if (x > 1) {
-            mp[x]++;
+    }
+
+    for (int i = 30; i >= 0; i--) {
+        ll need = n - bits[i];
+        if (k >= need) {
+            ans |= (1LL << i);
+            k -= need;
         }
     }
 
-    bool ok = true;
-    for (auto &it : mp) {
-        if (it.second % n != 0) {
-            ok = false;
-            break;
-        }
-    }
-
-    cout << (ok ? "YES\n" : "NO\n");
-    
+    cout << ans << '\n';
                 
 
     
