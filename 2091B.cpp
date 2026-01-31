@@ -781,36 +781,29 @@ void solve(){
 
 void MASTER() {
        
-
-      int n;cin >> n;
-
-        vector<long long> a(n), b;
-        for (int i = 0; i < n; i++) {
-            cin >> a[i];
-        }
-
-        b = a;
-        sort(b.begin(), b.end());
-
-      
-        if (a == b) {
-            cout << -1 << '\n';
+ int n;cin >> n;
+    
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+    
+    auto b = a;
+sort(b.begin(), b.end());
+    
+    if (a == b) {
+        cout << -1 << "\n";
         return;
+    }
+    
+    int ans = b[n - 1] - b[0];
+    for (int i = 0; i < n; i++) {
+        if (a[i] != b[i]) {
+            ans = min(ans, max(b[i] - b[0], b[n - 1] - b[i]));
         }
-
-        ll ans = LLONG_MAX;
-
-        for (int i = 0; i < n; i++) {
-            if (a[i] != b[i]) {
-                ll val = min(
-                    max(a[i] - b[0], b[n - 1] - a[i]),
-                    ans
-                );
-                ans = val;
-            }
-        }
-
-        cout << ans << '\n';
+    }
+    
+    std::cout << ans << nl;
 
          
 
