@@ -793,6 +793,7 @@ void MASTER(){
      for(ll i = 0;i<n;i++){
         ans+=  (a[i]*max(0LL,m-i));
      }
+     cout << ans << nl;
 
 
 
