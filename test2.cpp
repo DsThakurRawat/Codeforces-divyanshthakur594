@@ -793,6 +793,7 @@ void MASTER() {
         } else {
             ans = 2 * (k + 1) * (k + 2);
         }
+        cout << ans <<nl;
 
 
       
