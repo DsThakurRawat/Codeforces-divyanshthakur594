@@ -780,25 +780,50 @@ void solve(){
 }
 
 void MASTER() {
- 
-        long long k,x,kk; cin>>k>>x; kk=1ll<<k;
-        if (!x||x==kk*2) {cout<<"-1\n";return;}
-        long long y=kk*2-x;
-        vector<int> ans; ans.clear();
-        while(x!=kk){
-            if (x>y) ans.push_back(2),x-=y,y*=2;
-            else ans.push_back(1),y-=x,x*=2;
-        }
-        cout<<ans.size()<<"\n";
-        while(!ans.empty()) cout<<ans.back()<<' ',ans.pop_back();
-        cout<<"\n";
+    int n;
+    cin >> n;
+    vector<ll> a(n);
+    ll sum = 0;
+
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        sum += a[i];
     }
+
+    ll mx = 0, cur = 0;
+
+    for (int i = 0; i < n - 1; i++) {
+        cur += a[i];
+        if (cur < 0) cur = 0;
+        mx = max(mx, cur);
+    }
+
+    cur = 0;
+
+    for (int i = 1; i < n; i++) {
+        cur += a[i];
+        if (cur < 0) cur = 0;
+        mx = max(mx, cur);
+    }
+
+    if (mx >= sum) cout << "NO\n";
+    else cout << "YES\n";
+
+
+
+
+
+
+
+
+
+}
    
 
 
            
 
-}
+
   
 
 
