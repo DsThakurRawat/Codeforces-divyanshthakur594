@@ -778,7 +778,7 @@ Because the highest set bit decides the comparison
 void solve(){
 
 }
-
+const ll mod = 998244353;
 void MASTER() {
     
     
