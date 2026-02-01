@@ -788,10 +788,22 @@ void MASTER() {
        for(auto & x : v)mp[x]++;
 
 
+
+
+
+
+
        int cnt =0;
+       auto check = [&](ll x ){
+        while(x % 2==0){
+            x = x/2;
+            if(x==1)return true;
+        }
+        return false;
+       };
 
        for(auto &[key,val] : mp){
-        if(val % 2 == 0 ) cnt=cnt+2;
+        if(val % 2 == 0 && check(val) == true) cnt= cnt+2;
         else if(val % 2 ==1)cnt = cnt + 1;
        }
 
