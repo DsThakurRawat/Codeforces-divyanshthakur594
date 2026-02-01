@@ -803,7 +803,7 @@ void MASTER() {
        };
 
        for(auto &[key,val] : mp){
-        if(val % 2 == 0 && check(val) == true) cnt= cnt+2;
+        if(val % 2 == 0 && check(val) == false) cnt= cnt+2;
         else if(val % 2 ==1)cnt = cnt + 1;
        }
 
