@@ -794,8 +794,18 @@ void MASTER() {
         cout << "Impossible" << nl;
         return;
        }
+      sort(all(t));
+      string ans = "";
 
-       sort(all(t));
+      i = 0;
+      for(char c : t){
+           if(i<s.size() && s[i] == c){
+            ans +=c;
+           }
+           else ans+=c;
+           
+      }
+      
 
 
 
