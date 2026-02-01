@@ -791,8 +791,8 @@ void MASTER() {
        int cnt =0;
 
        for(auto &[key,val] : mp){
-        if(val % 2 == 0 || val==1) cnt=cnt+1;
-        else if(val % 2 ==1 && val > 1)cnt = cnt + 2;
+        if(val % 2 == 0 ) cnt=cnt+2;
+        else if(val % 2 ==1)cnt = cnt + 1;
        }
 
        cout << cnt << nl;
