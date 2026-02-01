@@ -805,6 +805,7 @@ void MASTER() {
            else ans+=c;
            
       }
+      cout << ans << nl;
       
 
 
