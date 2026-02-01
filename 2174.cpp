@@ -397,7 +397,7 @@ long long countPairsBruteForce(vector<int>& a, int k) {
   Space : O(n)
 =====================================================
 long long countPairsHashMap(vector<int>& a, int k) {
-    unordered_map<int, long long> freq;
+    map<int, long long> freq;
     long long cnt = 0;
 
     for (int x : a) {
@@ -780,7 +780,25 @@ void solve(){
 }
 
 void MASTER() {
-      
+       string s;cin>>s;
+       string t;cin>>t;
+       if(s.size()>t.size()){
+        cout << "Impossible" << nl;
+        return;
+       }
+       int i=0;
+       for(char c : t){
+        if(i<s.size() && s[i] == c)i++;
+       }
+       if(i!=s.size()){
+        cout << "Impossible" << nl;
+        return;
+       }
+
+       sort(all(t));
+
+
+
          
       
 
@@ -812,7 +830,7 @@ int main() {
    
     int t ;
     t=1;
-   // cin >> t;
+    cin >> t;
     while (t--) {
      MASTER();
      //solve();
