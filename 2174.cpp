@@ -782,31 +782,23 @@ void solve(){
 void MASTER() {
        string s;cin>>s;
        string t;cin>>t;
-       if(s.size()>t.size()){
-        cout << "Impossible" << nl;
-        return;
-       }
-       int i=0;
-       for(char c : t){
-        if(i<s.size() && s[i] == c)i++;
-       }
-       if(i!=s.size()){
-        cout << "Impossible" << nl;
-        return;
-       }
-      sort(all(t));
-      string ans = "";
+       vector<ll>cnt1(26,0),cnt2(26,0);
 
-      i = 0;
-      for(char c : t){
-           if(i<s.size() && s[i] == c){
-            ans +=c;
-           }
-           else ans+=c;
-           
-      }
-      cout << ans << nl;
-      
+       for(int i =0;i<s.size();i++){
+          cnt1[s[i]-'a']++;
+       }
+       for(int i = 0;i<t.size();i++){
+        cnt2[t[i]-'a']++;
+       }
+
+       for(int i = 0;i<26;i++){
+        if(cnt1[i] > cnt2[i]){
+            cout <<"Impossible" << nl;
+            return;
+        }
+       }
+
+       
 
 
 
