@@ -812,6 +812,7 @@ void MASTER() {
      if((n % 2!= ev%2) && od == 0){
              cnt-=2;
      }
+     cout << cnt <<nl;
 
 
 
