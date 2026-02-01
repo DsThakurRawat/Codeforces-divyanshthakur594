@@ -802,13 +802,16 @@ void MASTER() {
         return false;
        };
 
+       int od = 0,ev=0;
+
        for(auto &[key,val] : mp){
-        if(val % 2 == 0 && check(val) == false) cnt= cnt+2;
-        else if(val % 2 ==1)cnt = cnt + 1;
+        if(val % 2 == 0) cnt= cnt+2,ev++;
+        else if(val % 2 ==1)cnt = cnt + 1,od++;
        }
 
-       cout << cnt << nl;
-
+     if((n % 2!= ev%2) && od == 0){
+             cnt-=2;
+     }
 
 
 
