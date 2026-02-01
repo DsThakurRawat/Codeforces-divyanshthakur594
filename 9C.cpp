@@ -788,7 +788,7 @@ void MASTER() {
     string s = bitset<10>(mask).to_string();//convert this to string of upto 2^10 ->> 1024 max 1023
     s = s.substr(s.find('1'));
     ll num = stoll(s);
-    if(num<=n)cnt++;
+    if(num<=n)cnt++;// only cnt if num is less than n
    }
    cout << cnt << nl;
 
