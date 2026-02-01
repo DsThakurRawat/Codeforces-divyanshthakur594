@@ -785,10 +785,10 @@ void MASTER() {
        vector<ll>cnt1(26,0),cnt2(26,0);
 
        for(int i =0;i<s.size();i++){
-          cnt1[s[i]-'a']++;
+          cnt1[s[i]-'a']++;//method of storing frequency in vector
        }
        for(int i = 0;i<t.size();i++){
-        cnt2[t[i]-'a']++;
+        cnt2[t[i]-'a']++;//methos of stoting frequcny in vector
        }
 
        for(int i = 0;i<26;i++){
@@ -797,6 +797,29 @@ void MASTER() {
             return;
         }
        }
+       sort(all(t));
+
+       string ans = "";
+      int k = 0;
+       for(int i = 0;i<t.size();i++){
+             for(int j = 0;j<26;j++){
+                if(cnt2[j] > 0){
+                    if(cnt2[j]==cnt1[j] && s[k] != (char)(j+'a')){
+                        continue;
+                    }
+                    ans+=(char)(j+'a');
+                    cnt2[j]--;
+                    if(k<s.size() && s[k] == ans.back() ){
+                        cnt1[j]--;
+                        k++;
+                    }
+                    break;
+                }
+             }
+       }
+       cout << ans << nl;
+
+
 
        
 
