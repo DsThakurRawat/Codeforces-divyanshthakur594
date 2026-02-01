@@ -97,5 +97,6 @@
   "countdownTimer.showInStatusBar": "true"
 
 
-    }
+    },
+    "cph.general.timeOut": 2000
 }
