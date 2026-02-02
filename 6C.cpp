@@ -786,7 +786,8 @@ ll sum(ll x) {
 void MASTER() {
  
       ll n;cin>>n;
-     int n = a.size();
+      vector<ll>a(n);for(auto & x : a)cin>>x;
+     
     int l = 0, r = n - 1;
     int t1 = 0, t2 = 0;   // total time eaten by Alice and Bob
     int cntA = 0, cntB = 0;
