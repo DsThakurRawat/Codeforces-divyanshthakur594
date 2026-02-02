@@ -786,27 +786,23 @@ ll sum(ll x) {
 void MASTER() {
  
       ll n;cin>>n;
-      vector<ll>a(n);for(auto & x : a)cin>>x;
-       int l = 0, r = a.size() - 1;
-        int cl = a[l], cr = a[r];
-        int cntA = 0, cntB = 0;
+     int n = a.size();
+    int l = 0, r = n - 1;
+    int t1 = 0, t2 = 0;   // total time eaten by Alice and Bob
+    int cntA = 0, cntB = 0;
 
-        while (l <= r) {
-            int t = min(cl, cr);
-            cl -= t;
-            cr -= t;
-
-            if (cl == 0) {
-                cntA++;
-                l++;
-                if (l<= r) cl = a[l];
-            }
-            if (cr == 0) {
-                cntB++;
-                r--;
-                if (l <= r) cr = a[r];
-            }
+    while (l <= r) {
+        if (t1 + a[l] <= t2 + a[r]) {
+            t1 += a[l];
+            cntA++;
+            l++;
+        } else {
+            t2 += a[r];
+            cntB++;
+            r--;
         }
+    }
+   
       cout << cntA << " " << cntB <<nl;
 
     
