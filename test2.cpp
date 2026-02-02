@@ -785,38 +785,24 @@ ll sum(ll x) {
 
 void MASTER() {
     
-        int n;
-    ll w;
-    cin >> n >> w;
+    vector<long long> a(4);
+    for (int i = 0; i < 4; i++) cin >> a[i];
+    sort(a.begin(), a.end());
 
-    vector<ll> a(n);
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
+    bool triangle = false, segment = false;
 
-    vector<ll> cnt(21, 0);
-    for (int i = 0; i < n; i++) {
-        int lg = log2(a[i]);
-        cnt[lg]++;
-    }
-
-    ll used = 0;
-    ll height = 0;
-
-    while (used < n) {
-        ll rem = w;
-        for (int i = 20; i >= 0; i--) {
-            while (cnt[i] > 0 && (1LL << i) <= rem) {
-                rem -= (1LL << i);
-                cnt[i]--;
-                used++;
+    for (int i = 0; i < 4; i++) {
+        for (int j = i + 1; j < 4; j++) {
+            for (int k = j + 1; k < 4; k++) {
+                if (a[i] + a[j] > a[k]) triangle = true;
+                else if (a[i] + a[j] == a[k]) segment = true;
             }
         }
-        height++;
     }
 
-    cout << height << '\n';
-
+    if (triangle) cout << "TRIANGLE"<<nl;
+    else if (segment) cout << "SEGMENT"<<nl;
+    else cout << "IMPOSSIBLE"<<nl;
 
     
 
