@@ -799,7 +799,7 @@ void MASTER() {
             if (cl == 0) {
                 cntA++;
                 l++;
-                if (l <= r) cl = a[l];
+                if (l<= r) cl = a[l];
             }
             if (cr == 0) {
                 cntB++;
