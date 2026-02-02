@@ -789,7 +789,7 @@ void MASTER() {
       vector<ll>a(n);for(auto & x : a)cin>>x;
      
     int l = 0, r = n - 1;
-    int t1 = 0, t2 = 0;   // total time eaten by Alice and Bob
+    int t1 = 0, t2 = 0;   
     int cntA = 0, cntB = 0;
 
     while (l <= r) {
