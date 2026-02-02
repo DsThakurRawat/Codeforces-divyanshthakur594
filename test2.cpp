@@ -785,26 +785,26 @@ ll sum(ll x) {
 
 void MASTER() {
     
-    vector<long long> a(4);
-    for (int i = 0; i < 4; i++) cin >> a[i];
-    sort(a.begin(), a.end());
+     int n;
+        cin >> n;
 
-    bool triangle = false, segment = false;
+        vector<int> vec(n); 
+        for (auto &x: vec) cin >> x;
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = i + 1; j < 4; j++) {
-            for (int k = j + 1; k < 4; k++) {
-                if (a[i] + a[j] > a[k]) triangle = true;
-                else if (a[i] + a[j] == a[k]) segment = true;
+        sort(vec.begin(), vec.end());
+     
+        vec.erase(unique(vec.begin(), vec.end()), vec.end());
+        n = vec.size();
+        int best = 0;
+        int current = 0;
+        for (int i = 0; i < n; i++) {
+            if (i == 0 || vec[i] != vec[i-1]+1) {
+                current = 0;
             }
+            current++;
+            best = max(best, current);
         }
-    }
-
-    if (triangle) cout << "TRIANGLE"<<nl;
-    else if (segment) cout << "SEGMENT"<<nl;
-    else cout << "IMPOSSIBLE"<<nl;
-
-    
+        cout << best << ""<<nl;
 
 
          
