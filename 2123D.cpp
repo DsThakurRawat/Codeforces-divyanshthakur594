@@ -799,6 +799,7 @@ void MASTER() {
     }
     if(n < 2*k){
         cout << "Alice" <<nl;
+        return;
     }
     cout << "Bob" <<nl;
 
