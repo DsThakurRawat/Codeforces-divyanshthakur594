@@ -792,33 +792,43 @@ void MASTER(){
        he remsmebr s ->sumtime
        
        */
-     ll d,sumT;cin>>d>>sumT;
-     vector<ll>minT(d),maxT(d),res(d);
-     ll minTotal = 0,maxTotal =0;
+        ll d, sumT;
+        cin >> d >> sumT;
 
-     for(int i = 0;i<d;i++){
-        cin>>minT[i] >> maxT[i];
-        minTotal+=minT[i];
-        maxTotal+=maxT[i];
+        vector<ll> minT(d), maxT(d), res(d);
+        ll minTotal = 0, maxTotal = 0;
 
-     }
-         if(sumT<minTotal || sumT < maxTotal){
+        for (int i = 0; i < d; i++) {
+            cin >> minT[i] >> maxT[i];
+            minTotal += minT[i];
+            maxTotal += maxT[i];
+        }
+
+       
+        if (sumT < minTotal || sumT > maxTotal) {
             cout << "NO" << nl;
             return;
-         }
-         cout << "YES" << nl;
-         
-          res = minT;
-         ll rem = sumT-minTotal;
-         for(int i = 0;i<d&&rem > 0 ; i++){
-            ll get = min(maxT[i]-minT[i],rem);
+        }
+
+        cout << "YES" << nl;
+
+     
+        res = minT;
+        ll rem = sumT - minTotal;
+
+      
+        for (int i = 0; i < d && rem > 0; i++) {
+            ll get = min(maxT[i] - minT[i], rem);
             res[i] += get;
-            rem-=get;
-         }
-         for(int i = 0;i<d;i++){
+            rem -= get;
+        }
+
+     
+        for (int i = 0; i < d; i++) {
             cout << res[i] << " ";
-         }
-         cout << nl;
+        }
+        cout << nl;
+
          
 
 
