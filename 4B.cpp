@@ -808,7 +808,7 @@ void MASTER(){
          }
          cout << "YES" << nl;
          
-          res = minTotal;
+          res = minT;
          ll rem = sumT-minTotal;
          for(int i = 0;i<d&&rem > 0 ; i++){
             ll get = min(maxT[i]-minT[i],rem);
