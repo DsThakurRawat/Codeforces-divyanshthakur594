@@ -793,7 +793,7 @@ void MASTER(){
        
        */
      ll d,sumT;cin>>d>>sumT;
-     vector<ll>minT(d),maxT(d),schedule(d);
+     vector<ll>minT(d),maxT(d),res(d);
      ll minTotal = 0,maxTotal =0;
 
      for(int i = 0;i<d;i++){
@@ -806,6 +806,20 @@ void MASTER(){
             cout << "NO" << nl;
             return;
          }
+         cout << "YES" << nl;
+         
+         ll res = minTotal;
+         ll rem = sumT-minTotal;
+         for(int i = 0;i<d&&rem > 0 ; i++){
+            ll get = min(maxT[i]-minT[i],rem);
+            res[i] += get;
+            rem-=get;
+         }
+         for(int i = 0;i<d;i++){
+            cout << res[i] << " ";
+         }
+         cout << nl;
+         
 
 
 
