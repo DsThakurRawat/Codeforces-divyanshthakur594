@@ -785,22 +785,12 @@ ll sum(ll x) {
 
 void MASTER() {
 
-    ll n;cin>>n;
-    vector<ll>a(n);for(int i =0;i<n;i++)cin>>a[i];
-     ll ans(0);
-   for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            ll cnt = 0;
-            for (int k = 0; k < n; k++) {
-                if (k >= i && k <= j)
-                    cnt += 1 - a[k];
-                else
-                    cnt += a[k];
-            }
-            ans = max(ans, cnt);
-        }
+    int n;
+    cin >> n;
+ 
+    for (int i = n; i < 2 * n; i++) {
+        cout << i << " ";
     }
-   cout << ans <<nl;
 
     
     
