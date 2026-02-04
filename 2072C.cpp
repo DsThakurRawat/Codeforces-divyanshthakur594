@@ -381,9 +381,22 @@ void solve() {
      ith has wieght w 
      ans strength pi
 
+
      */
      
      ll n,x;cin>>n>>x;
+     if(n==1){
+        cout << x << nl;
+        return;
+     }
+     
+
+
+
+
+
+   
+
      
 
      
