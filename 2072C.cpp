@@ -384,12 +384,15 @@ void solve() {
 
      */
      
-     ll n,x;cin>>n>>x;
-     if(n==1){
-        cout << x << nl;
-        return;
-     }
+     ll x,y;cin>>x>>y;
      
+
+
+
+
+
+
+
 
 
 
@@ -431,7 +434,7 @@ int main() {
     cin.tie(nullptr);
     int t ;
     t=1;
-    cin >> t;
+   // cin >> t;
     while (t--) {
         solve();
     }
