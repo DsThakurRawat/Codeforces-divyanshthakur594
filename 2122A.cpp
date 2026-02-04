@@ -338,7 +338,7 @@ void solve() {
     cout << "NO"<<nl;
     return;
    }
-   if(n==2||m==2){
+   if(n==2&&m==2){
     cout << "NO"<<nl;
     return;
    }
