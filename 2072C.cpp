@@ -384,8 +384,22 @@ void solve() {
 
      */
      
-     ll x,y;cin>>x>>y;
-     
+ 
+    int n;  cin >> n;
+    ll ans = 0;
+   while(n--){
+      int a, b, c, d;
+      cin >> a >> b >> c >> d;
+      if (b <= d) {
+        ans += max(0, a - c);
+      } else {
+        ans += a;
+        ans += max(0, b - d);
+      }
+    }
+   cout << ans << nl;
+
+
 
 
 
