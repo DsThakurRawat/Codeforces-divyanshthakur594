@@ -384,23 +384,21 @@ void solve() {
 
      */
      
- 
-      string inp;
-        getline(cin, inp);
+  int n;
+        cin >> n;
 
-        stringstream ss(inp);
-        string w;
-
-        while (ss >> w) {
-            cout << w[0];
+        long long sm = 0;
+        for (int i = 0; i < n; i++) {
+            int x;
+            cin >> x;
+            sm += x;
         }
-        cout << nl;
+
+        cout << (sm - n + 1) << nl;
+
+
+
     }
-
-
-
-
-
 
 
 
