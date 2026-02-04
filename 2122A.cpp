@@ -334,11 +334,11 @@ void solve() {
 
    ll n,m;cin>>n>>m;
 
-   if(n==1 && m==1){
+   if(n==1 || m==1){
     cout << "NO"<<nl;
     return;
    }
-   if(n==2&&m==2){
+   if(n==2||m==2){
     cout << "NO"<<nl;
     return;
    }
