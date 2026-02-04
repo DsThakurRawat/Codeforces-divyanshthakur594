@@ -385,22 +385,17 @@ void solve() {
      */
      
  
-    int n;  cin >> n;
-    ll ans = 0;
-   while(n--){
-      int a, b, c, d;
-      cin >> a >> b >> c >> d;
-      if (b <= d) {
-        ans += max(0, a - c);
-      } else {
-        ans += a;
-        ans += max(0, b - d);
-      }
+      string inp;
+        getline(cin, inp);
+
+        stringstream ss(inp);
+        string w;
+
+        while (ss >> w) {
+            cout << w[0];
+        }
+        cout << nl;
     }
-   cout << ans << nl;
-
-
-
 
 
 
