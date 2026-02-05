@@ -383,24 +383,18 @@ void solve() {
 
 
      */
-
-     int x;
-        cin >> x;
-
-        int ans = -1;
-        for (int i = 0; i < 30; i++) {
-            for (int j = 0; j < 30; j++) {
-                int y = (1 << i) | (1 << j);
-                if (y < x &&
-                    x + y > (x ^ y) &&
-                    y + (x ^ y) > x) {
-                    ans = y;
-                }
-            }
-        }
-        cout << ans << nl;
-
-  
+int n, m, l, r; cin >> n >> m >> l >> r;
+    int diff = n - m;
+    l = abs(l);
+    if (l >= diff) {
+        l -= diff;
+        diff = 0;
+    }
+    else {
+        diff -= l;
+        l = 0;
+    }
+    cout << -l << " " << r - diff << nl;
 
 
    
