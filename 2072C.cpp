@@ -383,32 +383,33 @@ void solve() {
 
 
      */
-     
-  int n;
-        cin >> n;
 
-        long long sm = 0;
-        for (int i = 0; i < n; i++) {
-            int x;
-            cin >> x;
-            sm += x;
-        }
+      int n, x;
+    cin >> n >> x;
 
-        cout << (sm - n + 1) << nl;
+    int cnt = 0;
+    int cur_or = 0;
 
-
-
+    while (cnt < n && ((cnt & x) == cnt)) {
+        cur_or |= cnt;
+        cnt++;
     }
 
+    if (cnt == n && cur_or != x) {
+        cnt--;
+    }
 
-
-
+    for (int i = 0; i < n; i++) {
+        cout << (i < cnt ? i : x) << " \n"[i == n - 1];
+    }
+     
+  
 
 
    
 
      
-
+}
      
 
 
