@@ -384,25 +384,22 @@ void solve() {
 
      */
 
-      int n, x;
-    cin >> n >> x;
+     int x;
+        cin >> x;
 
-    int cnt = 0;
-    int cur_or = 0;
+        int ans = -1;
+        for (int i = 0; i < 30; i++) {
+            for (int j = 0; j < 30; j++) {
+                int y = (1 << i) | (1 << j);
+                if (y < x &&
+                    x + y > (x ^ y) &&
+                    y + (x ^ y) > x) {
+                    ans = y;
+                }
+            }
+        }
+        cout << ans << nl;
 
-    while (cnt < n && ((cnt & x) == cnt)) {
-        cur_or |= cnt;
-        cnt++;
-    }
-
-    if (cnt == n && cur_or != x) {
-        cnt--;
-    }
-
-    for (int i = 0; i < n; i++) {
-        cout << (i < cnt ? i : x) << " \n"[i == n - 1];
-    }
-     
   
 
 
