@@ -424,7 +424,11 @@ void solve(){
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto & in:v)cin>>in;
     if(k==1){
-        cout << max(v[0],v[n-1]) <<nl;
+        cout << *min_element(all(v)) <<nl;
+        return;
+    }
+    if(k==2){
+        cout << max(v[0],v[n-1]) << nl;
         return;
     }
     cout << *max_element(all(v)) << nl;
