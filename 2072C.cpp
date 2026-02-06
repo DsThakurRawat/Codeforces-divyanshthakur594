@@ -422,8 +422,12 @@ double dist = hypot(x2 - x1, y2 - y1);
 void solve() {
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto & in :v)cin>>in;
-    cout << v[0] << nl;
-
+  sort(all(v));
+  ll sum = 0;
+  for(int i = 0;i<k;i++){
+          sum +=v[i];
+  }
+  cout << sum << nl;
 
 
    
