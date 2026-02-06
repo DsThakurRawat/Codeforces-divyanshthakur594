@@ -788,6 +788,7 @@ void MASTER() {
      ll n,m;cin>>n>>m;
      
      vector<pair<ll,ll>>ans;
+     int j = 0;
    
      while(j<n){
          int sum = 0;
@@ -803,7 +804,7 @@ void MASTER() {
 
          ans.push_back({sum, presc});
 
-
+          j++:
          
      }
      sort(rall(ans));
