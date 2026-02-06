@@ -415,26 +415,25 @@ double dist = hypot(x2 - x1, y2 - y1);
 #define nl '\n'
 
 
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+
+
 void solve() {
 
-     /*
-     ith has wieght w 
-     ans strength pi
 
+    ll n;cin>>n;
+    vector<ll>v(n);for(auto & in:v)cin>>in;
+    ll x;cin>>x;
+    sort(all(v));
+    if(x < v[0] || x > v[n-1]){
+        cout << "NO" << nl;
+    }
+    else{
+        cout << "YES"<<nl;
+    }
 
-     */
-int n, m, l, r; cin >> n >> m >> l >> r;
-    int diff = n - m;
-    l = abs(l);
-    if (l >= diff) {
-        l -= diff;
-        diff = 0;
-    }
-    else {
-        diff -= l;
-        l = 0;
-    }
-    cout << -l << " " << r - diff << nl;
+   
 
 
    
