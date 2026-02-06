@@ -799,7 +799,7 @@ void MASTER() {
      vector<ll>prefsum(l);
      prefsum[0] = comb[0];
 
-     for(int i = 1;i<n;i++){
+     for(int i = 1;i<l;i++){
         prefsum[i] = prefsum[i-1] + comb[i];
      }
      ll sum = 0;
