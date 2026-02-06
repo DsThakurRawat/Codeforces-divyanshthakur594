@@ -802,7 +802,7 @@ void MASTER() {
            
          } 
 
-         ans.push_back({sum, presc});
+         ans.push_back({sum, prefsum});
 
           j++;
          
