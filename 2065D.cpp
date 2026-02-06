@@ -786,28 +786,38 @@ ll sum(ll x) {
 void MASTER() {
     
      ll n,m;cin>>n>>m;
-     vector<ll>comb;
-
-     while(n--){
+     
+     vector<pair<ll,ll>>ans;
+   
+     while(j<n){
+         int sum = 0;
+         int presc = 0;
+         int prefsum = 0;
          for(int i = 0;i<m;i++){
             int x ;cin>>x;
-            comb.push_back(x);
-         }
-     }
-     sort(rall(comb));
-     int l = comb.size();
-     vector<ll>prefsum(l);
-     prefsum[0] = comb[0];
+            sum +=x;
+            presc +=x;
+            prefsum +=presc;
+           
+         } 
 
-     for(int i = 1;i<l;i++){
-        prefsum[i] = prefsum[i-1] + comb[i];
-     }
-     ll sum = 0;
+         ans.push_back({sum, presc});
 
-     for(int i =0;i<l;i++){
-        sum+=prefsum[i];
+
+         
      }
-     cout << sum << nl;
+     sort(rall(ans));
+     ll cur = 0;
+     ll res = 0;
+     for(auto &p : ans){
+            res += p.second + cur * m;
+            cur += p.first;
+        }
+
+        cout << res << nl;
+     
+     
+     
 
  
 
