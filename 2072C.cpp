@@ -424,7 +424,7 @@ void solve(){
     ll n,k;cin>>n>>k;
     vector<ll>v(n);for(auto & in:v)cin>>in;
     if(k==1){
-        cout << *min_element(all(v)) <<nl;
+        cout << max(v[0],v[n-1]) <<nl;
         return;
     }
     cout << *max_element(all(v)) << nl;
