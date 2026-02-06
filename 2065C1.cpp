@@ -782,7 +782,7 @@ const ll mod = 998244353;
 ll sum(ll x) {
     return x * (x + 1) / 2;
 }
-ll inf =  -(1e+9);
+ll inf =  -(1e9);
 
 void MASTER() {
     
