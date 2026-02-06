@@ -804,7 +804,7 @@ void MASTER() {
 
          ans.push_back({sum, presc});
 
-          j++:
+          j++;
          
      }
      sort(rall(ans));
