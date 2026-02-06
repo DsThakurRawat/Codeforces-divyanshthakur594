@@ -420,18 +420,11 @@ double dist = hypot(x2 - x1, y2 - y1);
 
 
 void solve() {
+    ll n,k;cin>>n>>k;
+    vector<ll>v(n);for(auto & in :v)cin>>in;
+    cout << v[0] << nl;
 
 
-    ll n;cin>>n;
-    vector<ll>v(n);for(auto & in:v)cin>>in;
-    ll x;cin>>x;
-    sort(all(v));
-    if(x < v[0] || x > v[n-1]){
-        cout << "NO" << nl;
-    }
-    else{
-        cout << "YES"<<nl;
-    }
 
    
 
