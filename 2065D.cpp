@@ -791,9 +791,9 @@ void MASTER() {
      int j = 0;
    
      while(j<n){
-         int sum = 0;
-         int presc = 0;
-         int prefsum = 0;
+         ll sum = 0;
+         ll presc = 0;
+         ll prefsum = 0;
          for(int i = 0;i<m;i++){
             int x ;cin>>x;
             sum +=x;
