@@ -419,15 +419,32 @@ double dist = hypot(x2 - x1, y2 - y1);
 #define rall(x) (x).rbegin(), (x).rend()
 
 
-void solve() {
+void solve(){
+
     ll n,k;cin>>n>>k;
-    vector<ll>v(n);for(auto & in :v)cin>>in;
-  sort(all(v));
-  ll sum = 0;
-  for(int i = 0;i<k;i++){
-          sum +=v[i];
-  }
-  cout << sum << nl;
+    vector<ll>v(n);for(auto & in:v)cin>>in;
+    if(k==1){
+        cout << *min_element(all(v)) <<nl;
+        return;
+    }
+    cout << *max_element(all(v)) << nl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
@@ -437,33 +454,6 @@ void solve() {
 
      
 }
-     
-
-
-
-   
-
-      
-          
-
-   
-
-
-
-            
-        
-        
-          
-         
-
-
-
-           
-
-
-  
-
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
