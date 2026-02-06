@@ -786,14 +786,10 @@ ll sum(ll x) {
 void MASTER() {
     
      ll n,m;cin>>n>>m;
-     vector<ll>comb;
+     vector<ll>comb(m*n);
 
      while(n--){
-             for(int i = 0;i<m;i++){
-                int x;
-                cin>>x;
-                comb.push_back(x);
-             }
+            vector<ll>a(m);for(auto &x:comb) cin>>x;
      }
      sort(rall(comb));
      int l = comb.size();
