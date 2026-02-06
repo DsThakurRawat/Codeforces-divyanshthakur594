@@ -782,7 +782,7 @@ const ll mod = 998244353;
 ll sum(ll x) {
     return x * (x + 1) / 2;
 }
-ll inf =  -(1e9);
+ll inf =  (1e9);
 
 void MASTER() {
     
@@ -798,7 +798,7 @@ void MASTER() {
     }
     sort(b.begin(), b.end());
     
-    int lst =inf;
+    int lst =-inf;
     for (int i = 0; i < n; i++) {
         int x = inf;
         if (a[i] >= lst) {
