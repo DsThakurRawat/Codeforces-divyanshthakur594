@@ -785,21 +785,15 @@ ll sum(ll x) {
 
 void MASTER() {
     
-    int n, m, x , y;
-		cin >> n >> m;
-		int px = 0, py = 0;
-		int points = 0;
-		while(n--){
-			cin >> x >> y;
-			points += x - px;
-			if(((x - px + 2) % 2) != ((y - py + 2) % 2))points--;
-			px = x;
-			py = y;
-		}
-		if(px != m){
-			points += m - px;
-		}
-		cout << points << endl;
+    int n,a,b; cin >> a >> b >> n;
+    int tabs = a/b;
+    if(tabs>=n){
+        cout << 1 << nl;
+    } else if(tabs==1 && a==b) {
+        cout << 1 << nl;
+    } else {
+        cout << 2 << nl;
+    }
 
          
 
