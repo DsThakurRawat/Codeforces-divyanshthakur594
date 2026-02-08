@@ -785,27 +785,21 @@ ll sum(ll x) {
 
 void MASTER() {
     
-     int n;
-        cin >> n;
-
-        vector<int> vec(n); 
-        for (auto &x: vec) cin >> x;
-
-        sort(vec.begin(), vec.end());
-     
-        vec.erase(unique(vec.begin(), vec.end()), vec.end());
-        n = vec.size();
-        int best = 0;
-        int current = 0;
-        for (int i = 0; i < n; i++) {
-            if (i == 0 || vec[i] != vec[i-1]+1) {
-                current = 0;
-            }
-            current++;
-            best = max(best, current);
-        }
-        cout << best << ""<<nl;
-
+    int n, m, x , y;
+		cin >> n >> m;
+		int px = 0, py = 0;
+		int points = 0;
+		while(n--){
+			cin >> x >> y;
+			points += x - px;
+			if(((x - px + 2) % 2) != ((y - py + 2) % 2))points--;
+			px = x;
+			py = y;
+		}
+		if(px != m){
+			points += m - px;
+		}
+		cout << points << endl;
 
          
 
