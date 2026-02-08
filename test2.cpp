@@ -785,19 +785,18 @@ ll sum(ll x) {
 
 void MASTER() {
     
-    int n,a,b; cin >> a >> b >> n;
-    int tabs = a/b;
-    if(tabs>=n){
-        cout << 1 << nl;
-    } else if(tabs==1 && a==b) {
-        cout << 1 << nl;
-    } else {
-        cout << 2 << nl;
-    }
 
-         
-
-
+        int n, a;
+        cin >> n >> a;
+        vector <int> v(n);
+        int l = 0, r = 0;
+        for (int i = 0; i < n; ++i) {
+            cin >> v[i];
+            if (a > v[i]) ++l;
+            if (a < v[i]) ++r;
+        }
+        
+        cout << (l > r ? a - 1 : a + 1) << nl;
 
            
 
