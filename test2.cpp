@@ -786,9 +786,9 @@ ll sum(ll x) {
 void MASTER() {
     
 
-        int n, a;
+        ll n, a;
         cin >> n >> a;
-        vector <int> v(n);
+        vector <ll> v(n);
         int l = 0, r = 0;
         for (int i = 0; i < n; ++i) {
             cin >> v[i];
