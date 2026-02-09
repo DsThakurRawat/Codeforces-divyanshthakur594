@@ -839,7 +839,7 @@ void MASTER() {
     }
  
     for (auto &it : ans) cout << it;
-    cout << '\n';
+    cout << nl;
 }
   
 
