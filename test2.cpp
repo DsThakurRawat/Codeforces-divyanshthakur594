@@ -829,7 +829,7 @@ void MASTER() {
             }
         }
         if (ok) {
-            for (int i = 0; i < d; i++) {
+            for (ll i = 0; i < d; i++) {
                 for (int j = i; j <= n; j += d) {
                     ans[j] = c[i];
                 }
