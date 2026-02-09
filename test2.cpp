@@ -786,22 +786,60 @@ ll sum(ll x) {
 void MASTER() {
     
 
-            string s;
-        cin >> s;
-        int n = s.size();
-        bool met_positive = false;
-        int cnt_zero = 0;
-        
-        for (auto i = n - 1; i >= 0; --i) {
-            if (s[i] != '0') {
-                met_positive = true;
-            } else if (met_positive) {
-                cnt_zero++;
+    int n, k; cin >> n >> k;
+    vector<string> a(k);
+    for (auto &it : a) cin >> it;
+    vector<int> div;
+    for (int i = 1; i*i <= n; i++) {
+        if (n % i == 0) {
+            div.push_back(i);
+            if (i != n/i) div.push_back(n/i);
+        }
+    }
+ 
+    sort(div.begin(), div.end());
+ 
+    vector<map<char, int>> mp(n);
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < n; j++) mp[j][a[i][j]]++;
+    }
+ 
+    vector<char> ans(n);
+    for (auto d : div) {
+        bool ok = true;
+        vector<char> c(d);
+        for (int i = 0; i < d && ok; i++) {
+            bool f = false;
+            for (auto &it : mp[i]) {
+                bool s = true;
+                for (int j = i; j < n; j += d) {
+                    if (mp[j].count(it.first) == 0) {
+                        s = false;
+                        break;
+                    }
+                }
+                if (s) {
+                    c[i] = it.first;
+                    f = true;
+                    break;
+                }
+            }
+            if (!f) {
+                ok = false;
             }
         }
-        
-        cout << n - (cnt_zero + 1) << nl;
-
+        if (ok) {
+            for (int i = 0; i < d; i++) {
+                for (int j = i; j <= n; j += d) {
+                    ans[j] = c[i];
+                }
+            }
+            break;
+        }
+    }
+ 
+    for (auto &it : ans) cout << it;
+    cout << '\n';
 }
   
 
