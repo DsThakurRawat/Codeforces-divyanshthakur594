@@ -789,21 +789,18 @@ void MASTER() {
             string s;
         cin >> s;
         int n = s.size();
-        int bal = 0;
-        for (int i = 1; i + 1 < n; i++) {
-            if (s[i] == '(') bal++;
-            else bal--;
-            if (bal < 0) {
-            cout << "YES"<<nl;
-            return;
+        bool met_positive = false;
+        int cnt_zero = 0;
+        
+        for (auto i = n - 1; i >= 0; --i) {
+            if (s[i] != '0') {
+                met_positive = true;
+            } else if (met_positive) {
+                cnt_zero++;
             }
         }
-        if (bal == 0) {
-            cout << "NO"<<nl;
-        } else {
-            cout << "YES"<<nl;
-        }
-           
+        
+        cout << n - (cnt_zero + 1) << nl;
 
 }
   
