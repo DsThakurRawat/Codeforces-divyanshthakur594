@@ -802,10 +802,12 @@ void MASTER() {
     vector<int> a(n), ans(n+1), diff(n+2);
     map<int, int> freq;
     for(int i=0; i<n; i++){
-        cin >> a[i];freq[a[i]]++;
+        cin >> a[i];
+        freq[a[i]]++;
     }
     for(int i=0; i<=n; i++){
-        diff[freq[i]]++;diff[n-i+1]--;
+        diff[freq[i]]++;
+        diff[n-i+1]--;
         if(!freq[i])
             break;
     }

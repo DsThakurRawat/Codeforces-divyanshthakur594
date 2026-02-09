@@ -1,0 +1,1224 @@
+<!doctype html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroblyx - AI Compute Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/itc-benguiat" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #070B1A;
+            --dark-bg-2: #0F1B3D;
+            --primary-gradient: linear-gradient(135deg, #070B1A 0%, #111A3A 50%, #1A2B6B 100%);
+            --accent-purple: #7B61FF;
+            --accent-blue: #4CC9F0;
+            --accent-pink: #FF6FD8;
+            --glass-white: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.12);
+            --light-bg: #FFFFFF;
+            --dark-text: #0B0F2A;
+            --soft-text: #5B6285;
+            --smooth: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            font-family: 'Space Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            transition: background-color 0.8s ease;
+            margin: 0;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: var(--smooth);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--smooth);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .glass-card:hover {
+            transform: rotateX(6deg) rotateY(-6deg) translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-purple);
+        }
+
+        /* REAL FLOATING BLOBS */
+        .animated-blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: .35;
+            animation: blobMove 18s infinite alternate ease-in-out;
+        }
+
+        @keyframes blobMove {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(80px, -60px) scale(1.1);
+            }
+
+            100% {
+                transform: translate(-60px, 60px) scale(0.95);
+            }
+        }
+
+        .float-animation {
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background:
+                radial-gradient(circle at 20% 20%, #1B2A6B, transparent 40%),
+                radial-gradient(circle at 80% 30%, #7B61FF, transparent 40%),
+                radial-gradient(circle at 50% 80%, #4CC9F0, transparent 40%),
+                linear-gradient(135deg, #070B1A, #0F1B3D, #1A2B6B);
+            background-size: 200% 200%;
+            animation: heroGradient 14s ease infinite;
+        }
+
+        @keyframes heroGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .nav-scrolled .glass-pill {
+            backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.12);
+            transform: scale(0.96);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        button {
+            transition: all .4s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 0 25px rgba(123, 97, 255, 0.6);
+        }
+
+        .dark-light-transition {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 250px;
+            background: linear-gradient(to bottom,
+                    rgba(7, 11, 26, 0) 0%,
+                    rgba(255, 255, 255, 0.8) 60%,
+                    #ffffff 100%);
+            z-index: 20;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--smooth);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, var(--accent-purple) 0%, #FFFFFF 50%, var(--accent-blue) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-purple);
+            border-radius: 10px;
+        }
+
+        .light-mode {
+            background-color: #FFFFFF;
+            color: var(--dark-text);
+        }
+
+        .light-mode .glass-card {
+            background: #FFFFFF;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.05);
+            color: var(--dark-text);
+        }
+
+        .light-mode .shimmer-text {
+            background: linear-gradient(90deg, var(--accent-purple) 0%, var(--dark-text) 50%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .light-mode .mono {
+            color: var(--accent-purple);
+        }
+
+        .card-stack {
+            position: relative;
+            height: 420px;
+        }
+
+        .founder-card {
+            position: absolute;
+            width: 320px;
+            padding: 32px;
+            border-radius: 32px;
+            background: rgba(255, 255, 255, .06);
+            backdrop-filter: blur(20px);
+            transition: .6s;
+            cursor: pointer;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+        }
+
+        .founder-card:nth-child(1) {
+            z-index: 3
+        }
+
+        .founder-card:nth-child(2) {
+            top: 20px;
+            left: 20px;
+            z-index: 2
+        }
+
+        .founder-card:nth-child(3) {
+            top: 40px;
+            left: 40px;
+            z-index: 1
+        }
+
+        .founder-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 18px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        }
+
+        .quote-small {
+            opacity: 0;
+            transition: .4s;
+            margin-top: 12px;
+            color: #ccc
+        }
+
+        /* TEAR / SLIDE ANIMATION */
+        .founder-card {
+            transition: transform .7s cubic-bezier(.2, .8, .2, 1),
+                opacity .5s ease;
+        }
+
+        .founder-card.torn {
+            transform: translateX(420px) rotate(12deg);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .card-stack:hover .quote-small {
+            opacity: 1;
+        }
+
+        /* Neuroblyx Logo Wordmark */
+        .neuro-logo {
+            font-family: 'ITC Benguiat', serif;
+            letter-spacing: 2px;
+            font-weight: 400;
+            background: linear-gradient(90deg, #ffffff 0%, #caa6ff 40%, #7B61FF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .vision-item {
+            transition: all .4s ease;
+            padding: 20px;
+            border-radius: 16px;
+        }
+
+        .vision-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        footer {
+            backdrop-filter: blur(30px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        footer a:hover {
+            color: var(--accent-purple);
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            padding: 24px;
+            border-radius: 18px;
+            transition: .4s ease;
+            position: relative;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px);
+            border-color: #7B61FF;
+            box-shadow: 0 10px 40px rgba(123, 97, 255, .25);
+        }
+
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            background: #7B61FF;
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            box-shadow: 0 0 20px #7B61FF;
+        }
+
+        /* NAV DARK → LIGHT SWITCH */
+        .nav-light a,
+        .nav-light #nav-company-name {
+            color: #0B0F2A !important;
+        }
+
+        .nav-light .glass-pill {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .cta-box {
+            padding: 80px;
+            border-radius: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(123, 97, 255, .4);
+            box-shadow: 0 0 80px rgba(123, 97, 255, .25);
+            position: relative;
+        }
+
+        .demo-btn {
+            background: var(--accent-purple);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 16px;
+            font-weight: 700;
+        }
+
+        .sales-btn {
+            background: rgba(255, 255, 255, .05);
+            padding: 18px 40px;
+            border-radius: 16px;
+        }
+
+        .future-slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .future-slider {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .future-track {
+            display: flex;
+            gap: 32px;
+            transition: transform .8s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .future-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            min-width: 340px;
+            flex-shrink: 0;
+        }
+
+        /* image area */
+        .future-image {
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .future-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
+
+        .future-card:hover .future-image img {
+            transform: scale(1.1);
+        }
+
+        /* light sweep flash */
+        .flash {
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, .35),
+                    transparent);
+            transform: skewX(-25deg);
+        }
+
+        .future-card:hover .flash {
+            animation: flashSweep 1s ease;
+        }
+
+        @keyframes flashSweep {
+            0% {
+                left: -120%;
+            }
+
+            100% {
+                left: 140%;
+            }
+        }
+
+        /* Card text area */
+        .future-content {
+            padding: 22px;
+        }
+
+        .future-content .year {
+            color: #8b7cff;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .future-content h3 {
+            font-size: 22px;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+
+        .future-content p {
+            color: #aab;
+            font-size: 14px;
+        }
+
+        /* slide-up news panel */
+        .future-news {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            padding: 22px;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(12px);
+            transition: all .5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .future-card:hover .future-news {
+            bottom: 0;
+        }
+
+        .future-news .tag {
+            color: #ffb347;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .future-news p {
+            margin-top: 8px;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        /* arrows */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .prev {
+            left: -10px;
+        }
+
+        .next {
+            right: -10px;
+        }
+    </style>
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="h-full bg-[#0F0F12] text-white overflow-x-hidden">
+    <div id="app" class="h-full overflow-auto">
+        <!-- Modern Background -->
+        <div class="fixed inset-0 pointer-events-none overflow-hidden z-[-1]">
+            <div class="absolute inset-0 z-[-2]">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-60">
+                    <source src="wave.mp4" type="video/mp4">
+                    <!-- Fallback to the animated gradient if video fails to load -->
+                    <div class="video-placeholder w-full h-full"></div>
+                </video>
+            </div>
+            <div class="animated-blob w-[500px] h-[500px] bg-purple-600/30 top-[-10%] left-[-10%]"></div>
+            <div class="animated-blob w-[400px] h-[400px] bg-blue-600/20 bottom-[-10%] right-[-10%]"
+                style="animation-delay: -5s"></div>
+            <div class="animated-blob w-[300px] h-[300px] bg-pink-600/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                style="animation-delay: -10s"></div>
+        </div>
+
+        <!-- Floating Navbar -->
+        <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4">
+            <div class="glass-pill rounded-full px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center border border-white/20">
+                        <svg viewBox="0 0 40 40" class="w-6 h-6">
+                            <rect x="2" y="2" width="36" height="36" rx="8" fill="white" />
+                            <circle cx="20" cy="20" r="10" fill="#070B1A" />
+                        </svg>
+                    </div>
+                    <span id="nav-company-name" class="neuro-logo text-2xl">neuroblyx</span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#founders"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors">Founders</a>
+                    <a href="#demo"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors">Demo</a>
+                    <a href="#demo"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors">Console</a>
+                    <a href="#roadmap"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors">Vision</a>
+                </div>
+
+                <button id="nav-cta"
+                    class="px-5 py-2.5 bg-white text-black font-bold text-sm rounded-full hover:scale-105 transition-all shadow-lg shadow-white/10">
+                    Get Started
+                </button>
+            </div>
+        </nav>
+        <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+            <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-10 stagger-child">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border-white/10">
+                        <span
+                            class="w-2 h-2 bg-[var(--accent-purple)] rounded-full animate-pulse shadow-[0_0_10px_var(--accent-purple)]"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase opacity-80">Phase 4 Infrastructure
+                            Active</span>
+                    </div>
+
+                    <h1 id="hero-headline"
+                        class="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
+                        <span class="block">The OS for</span>
+                        <span class="shimmer-text">Neural Compute</span>
+                    </h1>
+
+                    <p id="hero-subheadline" class="text-xl text-white/60 max-w-lg leading-relaxed font-medium">
+                        Unified neural-native architecture delivering 10x throughput for hyperscale AI deployments.
+                        Experience the next evolution of digital intelligence.
+                    </p>
+
+                    <div class="flex flex-wrap gap-5 pt-4">
+                        <button id="hero-cta"
+                            class="group px-8 py-4 bg-[var(--accent-purple)] text-white font-bold rounded-full hover:scale-105 transition-all shadow-xl shadow-purple-500/20 flex items-center gap-2">
+                            Launch Console
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                        <button
+                            class="px-8 py-4 glass-card rounded-full font-bold hover:bg-white/10 transition-all flex items-center gap-2 border-white/10">
+                            Developer API
+                        </button>
+                    </div>
+
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-1">10x</div>
+                            <div class="text-sm font-semibold text-white/40 uppercase tracking-widest">Efficiency</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-1">2ms</div>
+                            <div class="text-sm font-semibold text-white/40 uppercase tracking-widest">Latency</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-1">99.9%</div>
+                            <div class="text-sm font-semibold text-white/40 uppercase tracking-widest">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative lg:h-[600px] flex items-center justify-center fade-up">
+                    <div class="relative w-full aspect-square max-w-md">
+                        <!-- Modern Core Visual -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-3xl blur-3xl animated-blob">
+                        </div>
+                        <div
+                            class="relative glass-card w-full h-full rounded-[3rem] border-white/10 overflow-hidden flex items-center justify-center group">
+                            <svg viewBox="0 0 200 200" class="w-2/3 h-2/3 float-animation">
+                                <defs>
+                                    <linearGradient id="core-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--accent-purple)" />
+                                        <stop offset="100%" stop-color="var(--accent-blue)" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="url(#core-grad)" stroke-width="0.5"
+                                    stroke-dasharray="4 8" opacity="0.3" />
+                                <rect x="60" y="60" width="80" height="80" rx="16" fill="url(#core-grad)"
+                                    class="pulse-animation" />
+                                <path d="M70 100 H130 M100 70 V130" stroke="white" stroke-width="2" opacity="0.5" />
+                            </svg>
+
+                            <!-- Floating Data Labels -->
+                            <div
+                                class="absolute top-10 right-10 glass-card px-4 py-2 rounded-2xl border-white/20 text-xs font-bold mono">
+                                <span class="text-[var(--accent-purple)]">STATUS:</span> OPTIMAL
+                            </div>
+                            <div
+                                class="absolute bottom-10 left-10 glass-card px-4 py-2 rounded-2xl border-white/20 text-xs font-bold mono">
+                                <span class="text-[var(--accent-blue)]">CORES:</span> 16,384
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Video Section -->
+        <section class="relative py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">See the Neural Architecture in Action</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Watch how our bio-inspired computing paradigm
+                        revolutionizes AI processing</p>
+                </div><!-- Video Player Mockup -->
+                <div class="relative rounded-2xl overflow-hidden glass-card gradient-border">
+                    <div class="aspect-video bg-gradient-to-br from-[#0D1916] to-[#0A1412] relative">
+                        <!-- Animated Neural Network Visualization -->
+                        <svg class="absolute inset-0 w-full h-full" viewbox="0 0 800 450">
+                            <defs>
+                                <radialgradient id="node-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#79FF4D" />
+                                    <stop offset="100%" stop-color="#79FF4D" stop-opacity="0" />
+                                </radialgradient>
+                            </defs> <!-- Neural Connections -->
+                            <g class="neural-path" style="animation-delay: 0s">
+                                <line x1="100" y1="100" x2="250" y2="150" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="100" x2="250" y2="225" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="225" x2="250" y2="150" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="225" x2="250" y2="225" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="225" x2="250" y2="300" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                                <line x1="100" y1="350" x2="250" y2="300" stroke="#79FF4D" stroke-width="1"
+                                    opacity="0.3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Founder's Desk (Horizontal Split) -->
+        <section id="founders" class="py-40 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+                <!-- LEFT TEXT -->
+                <div class="space-y-6">
+                    <h2 class="text-6xl font-bold leading-tight">
+                        Founder’s Desk
+                    </h2>
+                    <p class="text-white/50 text-xl max-w-md">
+                        Meet the minds building the operating system for the agentic age.
+                    </p>
+                </div>
+
+                <!-- RIGHT STACK -->
+                <div class="card-stack">
+
+                    <div class="founder-card top-card">
+                        <img src="rahul.png">
+                        <h3 class="font-bold">Rahul Chaube</h3>
+                        <span class="text-sm opacity-50">Chief Architectural Architect / Vision
+                            Lead</span>
+                        <p class="quote-small">Building the OS for the agentic age.</p>
+                    </div>
+
+                    <div class="founder-card">
+                        <img src="Ujjwal.jpeg">
+                        <h3 class="font-bold">Ujjwal Chaudhary</h3>
+                        <span class="text-sm opacity-50">Chief Engineering / Execution Lead</span>
+                        <p class="quote-small">Infrastructure that thinks before you do.</p>
+                    </div>
+
+                    <div class="founder-card">
+                        <img src="gangu.png">
+                        <h3 class="font-bold">Gautam Yadav</h3>
+                        <span class="text-sm opacity-50">Chief Product & Marketing Officer</span>
+                        <p class="quote-small">Scaling intelligence across the planet.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 5: Live Console (Light Mode) -->
+        <section id="demo" class="py-32 bg-white text-[var(--dark-text)]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="space-y-4">
+                        <h3 class="text-sm font-bold tracking-[0.2em] uppercase text-[var(--accent-purple)]">
+                            Interface</h3>
+                        <h2 class="text-5xl font-bold">The Developer Console</h2>
+                    </div>
+                    <p class="text-xl text-[var(--soft-text)] max-w-md">Real-time telemetry and
+                        management for your global neural clusters.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8 h-[600px]">
+                    <div class="glass-card bg-slate-900 rounded-[2.5rem] p-1 shadow-2xl overflow-hidden relative group">
+                        <!-- Simplified Dashboard Mock -->
+                        <div class="h-full bg-[#070b1a] rounded-[2.3rem] p-8 flex flex-col">
+                            <div class="flex justify-between items-center mb-12">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="text-xs mono text-white/30 uppercase tracking-widest">
+                                    Training Active</div>
+                            </div>
+                            <div class="space-y-8 flex-1">
+                                <div class="h-32 bg-white/5 rounded-2xl border border-white/5 flex items-end p-4 gap-1">
+                                    <div class="flex-1 bg-[var(--accent-purple)] opacity-20 rounded-t-lg"
+                                        style="height: 40%"></div>
+                                    <div class="flex-1 bg-[var(--accent-purple)] opacity-40 rounded-t-lg"
+                                        style="height: 60%"></div>
+                                    <div class="flex-1 bg-[var(--accent-purple)] opacity-60 rounded-t-lg"
+                                        style="height: 90%"></div>
+                                    <div class="flex-1 bg-[var(--accent-purple)] rounded-t-lg" style="height: 75%">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <div class="text-[10px] text-white/30 uppercase mb-1">TFLOPS
+                                        </div>
+                                        <div class="text-2xl font-bold text-white">2,048</div>
+                                    </div>
+                                    <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <div class="text-[10px] text-white/30 uppercase mb-1">Loss
+                                        </div>
+                                        <div class="text-2xl font-bold text-white">0.002</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="glass-card bg-slate-50 rounded-[2.5rem] p-12 border-black/5 flex flex-col justify-center">
+                        <div class="space-y-8">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-[var(--accent-purple)] text-white flex items-center justify-center shadow-lg">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-bold">Native API Integration</h3>
+                            <p class="text-[var(--soft-text)] leading-relaxed">Init your clusters
+                                with a single line of code. Our SDK supports Python, JavaScript, and
+                                Rust out of the box.</p>
+                            <div
+                                class="p-4 bg-[var(--dark-bg)] rounded-xl text-xs mono text-white/80 border border-white/5">
+                                <span class="text-[var(--accent-purple)]">import</span> neuroblyx as
+                                nb<br>
+                                cluster = nb.Cluster(<span class="text-green-400">"nx-2-pro"</span>)<br>
+                                cluster.train(model)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Future Vision (Timeline Mode) -->
+        <section id="roadmap" class="relative py-32 text-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-4">Future Vision</h2>
+                    <p class="text-white/50 text-lg">Where Neuroblyx is heading next.</p>
+                </div>
+
+                <div class="glass-card p-16 rounded-[40px] border-white/10 backdrop-blur-2xl bg-white/5">
+                    <div class="future-slider-wrapper">
+                        <button class="slider-btn prev">‹</button>
+                        <div class="future-slider">
+                            <div class="future-track">
+                                <!-- Roadmap Item 1 -->
+                                <div class="future-card glass-card">
+                                    <div class="future-image">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1581092919535-7146ff1a590b?q=80&w=1200&auto=format&fit=crop">
+                                        <div class="flash"></div>
+                                    </div>
+                                    <div class="future-content">
+                                        <span class="year">2026</span>
+                                        <h3>NX-4 Architecture</h3>
+                                        <p>Next-gen bio-inspired neural architecture with 16,384 TFLOPS.</p>
+                                    </div>
+                                    <div class="future-news">
+                                        <span class="tag">NEWS</span>
+                                        <p>Neuroblyx unveils next-gen neural compute platform for hyperscale AI.</p>
+                                    </div>
+                                </div>
+                                <!-- Roadmap Item 2 -->
+                                <div class="future-card glass-card">
+                                    <div class="future-image">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop">
+                                        <div class="flash"></div>
+                                    </div>
+                                    <div class="future-content">
+                                        <span class="year">2027</span>
+                                        <h3>Global Expansion</h3>
+                                        <p>New hyperscale data centers across Asia and EMEA.</p>
+                                    </div>
+                                    <div class="future-news">
+                                        <span class="tag">NEWS</span>
+                                        <p>Strategic partnership with global cloud providers announced.</p>
+                                    </div>
+                                </div>
+                                <!-- Roadmap Item 3 -->
+                                <div class="future-card glass-card">
+                                    <div class="future-image">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200&auto=format&fit=crop">
+                                        <div class="flash"></div>
+                                    </div>
+                                    <div class="future-content">
+                                        <span class="year">2028</span>
+                                        <h3>Quantum Hybrid</h3>
+                                        <p>Commercial quantum-neural hybrid compute systems.</p>
+                                    </div>
+                                    <div class="future-news">
+                                        <span class="tag">NEWS</span>
+                                        <p>First quantum-accelerated neural training successful.</p>
+                                    </div>
+                                </div>
+                                <!-- Roadmap Item 4 -->
+                                <div class="future-card glass-card">
+                                    <div class="future-image">
+                                        <img
+                                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop">
+                                        <div class="flash"></div>
+                                    </div>
+                                    <div class="future-content">
+                                        <span class="year">2030</span>
+                                        <h3>Zero-Carbon Ops</h3>
+                                        <p>Carbon-negative infrastructure worldwide.</p>
+                                    </div>
+                                    <div class="future-news">
+                                        <span class="tag">NEWS</span>
+                                        <p>Sustainability award granted for green compute architecture.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section (Neon Style) -->
+        <section class="py-32 relative overflow-hidden"
+            style="background: linear-gradient(135deg,#070B1A,#0F1B3D,#1A2B6B);">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="cta-box text-center">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        Ready to Transform Your AI Infrastructure?
+                    </h2>
+                    <p class="text-xl text-white/60 mb-12">
+                        Join the neural compute revolution. Get started with Neuroblyx today and
+                        experience unprecedented AI performance.
+                    </p>
+                    <div class="flex justify-center gap-6">
+                        <button class="demo-btn hover:scale-105 transition-transform">Request
+                            Demo</button>
+                        <button class="sales-btn hover:bg-white/10 transition-colors">Contact
+                            Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Glass Mode) -->
+        <footer class="relative py-8 backdrop-blur-2xl bg-white/5 border-t border-white/10 text-white">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid md:grid-cols-4 gap-12 mb-10">
+
+                    <!-- Brand -->
+                    <div class="space-y-6">
+                        <div class="neuro-logo text-2xl">neuroblyx</div>
+                        <p class="text-sm text-white/50">
+                            The future of neural compute.
+                        </p>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div>
+                        <h4 class="font-bold mb-6 text-white">Enterprise Solutions</h4>
+                        <ul class="space-y-4 text-sm text-white/50">
+                            <li><a href="#" class="transition-colors">Case Studies</a></li>
+                            <li><a href="#" class="transition-colors">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources -->
+                    <div>
+                        <h4 class="font-bold mb-6 text-white">Resources</h4>
+                        <ul class="space-y-4 text-sm text-white/50">
+                            <li><a href="#" class="transition-colors">Documentation</a></li>
+                            <li><a href="#" class="transition-colors">API Reference</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h4 class="font-bold mb-6 text-white">Company</h4>
+                        <ul class="space-y-4 text-sm text-white/50">
+                            <li><a href="#" class="transition-colors">About</a></li>
+                            <li><a href="#" class="transition-colors">Careers</a></li>
+                            <li><a href="#" class="transition-colors">Press</a></li>
+                            <li><a href="#" class="transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between gap-6 text-xs text-white/30">
+                    <span>© 2025 Neuroblyx. All rights reserved.</span>
+                    <div class="flex gap-8">
+                        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-white transition-colors">Terms</a>
+                        <a href="#" class="hover:text-white transition-colors">Cookies</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <script>
+        const defaultConfig = {
+            company_name: 'Neuroblyx',
+            hero_headline: 'The Future of AI Compute',
+            hero_subheadline: 'Neural-powered chip architecture delivering unprecedented performance for next-generation artificial intelligence workloads. 10x faster. 90% more efficient.',
+            cta_button_text: 'Launch Demo',
+            founder_name: 'Dr. Elena Vasquez',
+            background_color: '#0A1412',
+            accent_color: '#79FF4D',
+            text_color: '#FFFFFF',
+            secondary_color: '#0D1916',
+            muted_color: '#9CA3AF'
+        };
+
+        let config = { ...defaultConfig };
+
+        async function onConfigChange(cfg) {
+            config = { ...defaultConfig, ...cfg };
+
+            // Update company name
+            const navCompanyName = document.getElementById('nav-company-name');
+            if (navCompanyName) navCompanyName.textContent = config.company_name || defaultConfig.company_name;
+
+            // Update hero headline
+            const heroHeadline = document.getElementById('hero-headline');
+            if (heroHeadline) {
+                const words = (config.hero_headline || defaultConfig.hero_headline).split(' ');
+                const firstPart = words.slice(0, Math.ceil(words.length / 2)).join(' ');
+                const secondPart = words.slice(Math.ceil(words.length / 2)).join(' ');
+                heroHeadline.innerHTML = `<span class="shimmer-text">${firstPart}</span><br/><span class="text-white">${secondPart}</span>`;
+            }
+
+            // Update hero subheadline
+            const heroSubheadline = document.getElementById('hero-subheadline');
+            if (heroSubheadline) heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+
+            // Update CTA buttons
+            const heroCta = document.getElementById('hero-cta');
+            if (heroCta) {
+                const ctaText = config.cta_button_text || defaultConfig.cta_button_text;
+                heroCta.innerHTML = `${ctaText}<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>`;
+            }
+
+            // Update founder name
+            const founderName = document.getElementById('founder-name');
+            if (founderName) founderName.textContent = config.founder_name || defaultConfig.founder_name;
+
+            // Update colors
+            document.documentElement.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
+            document.documentElement.style.setProperty('--accent-color', config.accent_color || defaultConfig.accent_color);
+            document.documentElement.style.setProperty('--text-color', config.text_color || defaultConfig.text_color);
+        }
+
+        function mapToCapabilities(cfg) {
+            return {
+                recolorables: [
+                    {
+                        get: () => cfg.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            cfg.background_color = value;
+                            window.elementSdk.setConfig({ background_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            cfg.secondary_color = value;
+                            window.elementSdk.setConfig({ secondary_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            cfg.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            cfg.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    },
+                    {
+                        get: () => cfg.muted_color || defaultConfig.muted_color,
+                        set: (value) => {
+                            cfg.muted_color = value;
+                            window.elementSdk.setConfig({ muted_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(cfg) {
+            return new Map([
+                ['company_name', cfg.company_name || defaultConfig.company_name],
+                ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
+                ['hero_subheadline', cfg.hero_subheadline || defaultConfig.hero_subheadline],
+                ['cta_button_text', cfg.cta_button_text || defaultConfig.cta_button_text],
+                ['founder_name', cfg.founder_name || defaultConfig.founder_name]
+            ]);
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener("scroll", () => {
+            const nav = document.querySelector("nav");
+            if (window.scrollY > 40) {
+                nav.classList.add("nav-scrolled");
+            } else {
+                nav.classList.remove("nav-scrolled");
+            }
+        });
+
+        gsap.utils.toArray(".fade-up").forEach(el => {
+            gsap.fromTo(el, { opacity: 0, y: 60 }, {
+                opacity: 1, y: 0, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            });
+        });
+
+        gsap.utils.toArray(".stagger-child").forEach(container => {
+            gsap.from(container.children, {
+                opacity: 0, y: 50, duration: 1, stagger: 0.2, ease: "power3.out",
+                scrollTrigger: { trigger: container, start: "top 85%" }
+            });
+        });
+
+        gsap.utils.toArray(".slide-left").forEach(el => {
+            gsap.from(el, {
+                x: -120, opacity: 0, duration: 1.2,
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            })
+        });
+        gsap.utils.toArray(".slide-right").forEach(el => {
+            gsap.from(el, {
+                x: 120, opacity: 0, duration: 1.2,
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            })
+        });
+    </script>
+    <script>
+        const stack = document.querySelector(".card-stack");
+
+        stack.addEventListener("click", () => {
+            const topCard = stack.children[0];
+
+            topCard.classList.add("torn");
+
+            setTimeout(() => {
+                topCard.classList.remove("torn");
+                stack.appendChild(topCard);
+            }, 700);
+        });
+    </script>
+    <script>
+        const lightSections = document.querySelectorAll("#demo");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelector("nav").classList.add("nav-light");
+                } else {
+                    document.querySelector("nav").classList.remove("nav-light");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        lightSections.forEach(section => observer.observe(section));
+    </script>
+    <script>
+        const track = document.querySelector('.future-track');
+        const cards = document.querySelectorAll('.future-card');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let index = 0;
+        const visibleCards = 3;
+        const cardWidth = 372; // card width (340) + gap (32)
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+
+        nextBtn.onclick = () => {
+            if (index < cards.length - visibleCards) index++;
+            else index = 0;
+            updateSlider();
+        }
+
+        prevBtn.onclick = () => {
+            if (index > 0) index--;
+            else index = cards.length - visibleCards;
+            updateSlider();
+        }
+
+        /* AUTO SLIDE */
+        setInterval(() => {
+            nextBtn.click();
+        }, 4000);
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9cab5078f69217ae',t:'MTc3MDU1NTY3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

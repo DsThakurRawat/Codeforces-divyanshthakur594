@@ -1,0 +1,7 @@
+{
+  "cmd": ["bash", "-lc", "g++ -std=gnu++17 -O2 -Wall \"$file\" -o \"$file_base_name\" && ./$file_base_name < input.txt"],
+  "file_regex": "^(..*?):([0-9]+):?([0-9]+)?:? (.*)$",
+  "working_dir": "$file_path",
+  "selector": "source.c++",
+  "shell": true
+}
