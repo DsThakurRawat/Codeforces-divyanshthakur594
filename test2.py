@@ -191,7 +191,7 @@ def MASTER():
 
     ans = 0
     for i in range(len(a)):
-        cur = a[i]*+y*(res-a[i]//x)
+        cur = a[i] +y*(res-a[i]//x)
         if(ans < cur):
             ans = cur
     print(ans)
