@@ -194,7 +194,7 @@ def MASTER():
         cur = a[i]*+y*(res-a[i]/x)
         if(ans < cur):
             ans = cur
-    print(cur)
+    print(ans)
     
 
 
