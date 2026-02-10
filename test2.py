@@ -181,12 +181,27 @@ def column_pairwise_abs_sum(grid, n, m):
 # ------------------------------------------------------------
 
 def MASTER():
-            time = input().strip()   # e.g. "10:30"
-            H, M = map(int, time.split(':'))
+    def isprime(n: int) -> bool:
+        if n <= 1:
+            return False
+        limit = int(math.isqrt(n))
+        for i in range(2, limit + 1):
+            if n % i == 0:
+                return False
+        return True
 
-            H %= 12
-            print(30.0 * H + M / 2.0, 6 * M)
+    N, M = map(int, input().split())
 
+    next_prime = -1
+    for i in range(N + 1, 52):
+                if isprime(i):
+                    next_prime = i
+                    break
+
+    if M == next_prime:
+                print("YES")
+    else:
+                print("NO")
 
 # ------------------------------------------------------------
 # SOLVE (USER-DEFINED)
