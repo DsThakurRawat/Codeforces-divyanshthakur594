@@ -197,7 +197,8 @@ def solve():
 # ------------------------------------------------------------
 
 def main():
-    t = int(input())
+    t = 1
+   # t = int(input())
     for _ in range(t):
         MASTER()
         # solve()
