@@ -187,11 +187,11 @@ def MASTER():
     a = list(map(int ,input().split()))
 
     for i in range(len(a)):
-        res += a[i]/x
+        res += a[i]//x
 
     ans = 0
     for i in range(len(a)):
-        cur = a[i]*+y*(res-a[i]/x)
+        cur = a[i]*+y*(res-a[i]//x)
         if(ans < cur):
             ans = cur
     print(ans)
