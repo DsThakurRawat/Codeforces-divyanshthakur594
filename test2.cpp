@@ -785,61 +785,43 @@ ll sum(ll x) {
 
 void MASTER() {
     
-
-    ll n, k; cin >> n >> k;
-    vector<string> a(k);
-    for (auto &it : a) cin >> it;
-    vector<int> div;
-    for (int i = 1; i*i <= n; i++) {
-        if (n % i == 0) {
-            div.push_back(i);
-            if (i != n/i) div.push_back(n/i);
+ int n,k;
+    cin>>n>>k;
+    vector<int>a(n,0);
+    for(int i=0;i<k;++i)
+    {
+        string s;
+        cin>>s;
+        for(int j=0;j<n;++j)a[j]|=1LL<<(s[j]-'a');
+    }
+    vector<int>ar;
+    for(int i=1;i*i<=n;++i)
+    {
+        if(n%i==0)
+        {
+            ar.push_back(i);
+            if(i*i!=n)ar.push_back(n/i);
         }
     }
- 
-    sort(div.begin(), div.end());
- 
-    vector<map<char, int>> mp(n);
-    for (int i = 0; i < k; i++) {
-        for (int j = 0; j < n; j++) mp[j][a[i][j]]++;
-    }
- 
-    vector<char> ans(n);
-    for (auto d : div) {
-        bool ok = true;
-        vector<char> c(d);
-        for (int i = 0; i < d && ok; i++) {
-            bool f = false;
-            for (auto &it : mp[i]) {
-                bool s = true;
-                for (int j = i; j < n; j += d) {
-                    if (mp[j].count(it.first) == 0) {
-                        s = false;
-                        break;
-                    }
-                }
-                if (s) {
-                    c[i] = it.first;
-                    f = true;
-                    break;
-                }
-            }
-            if (!f) {
-                ok = false;
-            }
+    sort(ar.begin(),ar.end());
+    for(auto& it:ar)
+    {
+        vector<int>msk(it,~(-1LL<<26));
+        for(int i=0;i<n;++i)msk[i%it]&=a[i];
+        int ok=1;
+        for(int i=0;i<it;++i)
+        {
+            if(msk[i]==0){ok=0;break;}
         }
-        if (ok) {
-            for (ll i = 0; i < d; i++) {
-                for (int j = i; j <= n; j += d) {
-                    ans[j] = c[i];
-                }
-            }
-            break;
+        if(ok)
+        {
+            string s(it,'a');
+            for(int i=0;i<it;++i)s[i]=char('a' + __builtin_ctzll(msk[i]));
+            for(int i=0;i<n;++i)cout<<s[i%it];
+            cout<<endl;
+            return;
         }
     }
- 
-    for (auto &it : ans) cout << it;
-    cout << nl;
 }
   
 
