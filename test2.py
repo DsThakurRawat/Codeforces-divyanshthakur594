@@ -181,9 +181,12 @@ def column_pairwise_abs_sum(grid, n, m):
 # ------------------------------------------------------------
 
 def MASTER():
-    h, m = map(int, input().split(':'))
-    h %= 12
-    print(30 * h + m // 2, 6 * m)
+            time = input().strip()   # e.g. "10:30"
+            H, M = map(int, time.split(':'))
+
+            H %= 12
+            print(30.0 * H + M / 2.0, 6 * M)
+
 
 # ------------------------------------------------------------
 # SOLVE (USER-DEFINED)
