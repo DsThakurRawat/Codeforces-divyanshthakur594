@@ -182,7 +182,7 @@ def column_pairwise_abs_sum(grid, n, m):
 
 def MASTER():
 
-    n,x,y = map(int,input().split())
+  """  n,x,y = map(int,input().split())
     res = 0
     a = list(map(int ,input().split()))
 
@@ -194,7 +194,10 @@ def MASTER():
         cur = a[i] +y*(res-a[i]//x)
         if(ans < cur):
             ans = cur
-    print(ans)
+    print(ans) """
+        n,w = map(int , input().split())
+        print(n - (n//w))
+  
     
 
 
