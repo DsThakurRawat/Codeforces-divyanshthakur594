@@ -167,7 +167,7 @@ def longest_nice_subarray(nums):
 # ------------------------------------------------------------
 
 def column_pairwise_abs_sum(grid, n, m):
-    
+    pass
 
 # ------------------------------------------------------------
 # CLOCK ANGLE PROBLEM (MASTER)
