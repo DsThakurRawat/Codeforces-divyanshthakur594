@@ -193,7 +193,7 @@ def MASTER() -> None:
         for x in v[i] :
             cnt[x]-=1
             t -= not cnt[x]
-            ans += t==m
+        ans += t==m
         for x in v[i]:
              t += not cnt[x]
              cnt[x] +=1
