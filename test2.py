@@ -173,7 +173,7 @@ def column_pairwise_abs_sum(grid, n, m):
 # CLOCK ANGLE PROBLEM (MASTER)
 # ------------------------------------------------------------
 
-def MASTER():
+def MASTER() -> None:
     n,m=map(int,input().split())
     cnt = [0]*m
     t = 0
@@ -188,7 +188,7 @@ def MASTER():
             t += not cnt[x]
             cnt[x]+=1
             v[i].append(x)
-    ans = t = m
+    ans = t == m
     for i in range(n):
         for x in v[i] :
             cnt[x]-=1
@@ -198,8 +198,7 @@ def MASTER():
              t += not cnt[x]
              cnt[x] +=1
     print("YES" if ans >= 3 else "NO")
-    return 
-
+  
 
 
         
