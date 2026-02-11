@@ -27,6 +27,7 @@ def read_str():
 INF = 10**18
 MOD = 998244353
 
+
 # ------------------------------------------------------------
 # BIT TRICKS (C++ equivalents)
 # ------------------------------------------------------------
@@ -166,26 +167,42 @@ def longest_nice_subarray(nums):
 # ------------------------------------------------------------
 
 def column_pairwise_abs_sum(grid, n, m):
-    total = 0
-    for col in range(m):
-        v = [grid[row][col] for row in range(n)]
-        v.sort()
-        pref = 0
-        for i in range(n):
-            total += v[i] * i - pref
-            pref += v[i]
-    return total
+    
 
 # ------------------------------------------------------------
 # CLOCK ANGLE PROBLEM (MASTER)
 # ------------------------------------------------------------
 
 def MASTER():
+    n,m=map(int,input().split())
+    cnt = [0]*m
+    t = 0
+    v=[]
+    for i in range(n):
+        v.append([])
+        inp = list(map(int,input().split()))
+        l = inp[0]
+        for j in range(1,l+1):
+            x = inp[j]
+            x-= 1
+            t += not cnt[x]
+            cnt[x]+=1
+            v[i].append(x)
+    ans = t = m
+    for i in range(n):
+        for x in v[i] :
+            cnt[x]-=1
+            t -= not cnt[x]
+            ans += t==m
+        for x in v[i]:
+             t += not cnt[x]
+             cnt[x] +=1
+    print("YES" if ans >= 3 else "NO")
+    return 
 
 
-        n,w = map(int, input().split())
-        print(n - (n//w))
-  
+
+        
     
 
 
