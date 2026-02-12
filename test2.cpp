@@ -784,11 +784,26 @@ ll sum(ll x) {
 }
 
 void MASTER() {
-  ll h,m;
-    char ch;
-    cin>>h>>ch>>m;
-    h%=12;
-    cout<<30*h+m/2<<' '<<6*m<<endl;
+      int n;
+    cin >> n;
+    map<int, int> pos;
+    for (int i = 0; i < n; ++i) {
+        int a;
+        cin >> a;
+        pos[a] = i;
+    }
+    int lst = -1;
+    vector<int> b(n);
+    for (int i = 0; i < n; ++i) cin >> b[i];
+    for (int i = 0; i < n; ++i) {
+        if (lst > pos[b[i]]) {
+            cout << "NO\n";
+            return;
+        }
+        lst = pos[b[i]];
+    }
+    cout << "YES\n";
+
 }
   
 
