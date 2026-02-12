@@ -174,30 +174,33 @@ def column_pairwise_abs_sum(grid, n, m):
 # ------------------------------------------------------------
 
 def MASTER() -> None:
-    n,m=map(int,input().split())
-    cnt = [0]*m
-    t = 0
-    v=[]
-    for i in range(n):
-        v.append([])
-        inp = list(map(int,input().split()))
-        l = inp[0]
-        for j in range(1,l+1):
-            x = inp[j]
-            x-= 1
-            t += not cnt[x]
-            cnt[x]+=1
-            v[i].append(x)
-    ans = t == m
-    for i in range(n):
-        for x in v[i] :
-            cnt[x]-=1
-            t -= not cnt[x]
-        ans += t==m
-        for x in v[i]:
-             t += not cnt[x]
-             cnt[x] +=1
-    print("YES" if ans >= 3 else "NO")
+     n = int(input())
+     s = str(input())
+     l = 0
+     v = []
+     for i in range(n):
+         v.append(i+1)
+     while l < n:
+         if(s[l]=="1"):
+             l+=1
+             continue
+         r = l
+         while r +1 < n and s[r+1] == "0":
+             r +=1
+         if r - l+1==1:
+             print("NO")
+             return
+         ok =1
+         for i in range(l,r):
+             v[i] = i+2
+         v[r] = l+1
+         l = r+1
+     print("YES")
+     for i in range(n):
+         print(v[i],end=" ")
+     print()
+     return
+        
   
 
 
