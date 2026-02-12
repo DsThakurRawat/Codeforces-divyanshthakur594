@@ -174,20 +174,27 @@ def column_pairwise_abs_sum(grid, n, m):
 # ------------------------------------------------------------
 
 def MASTER() -> None:
-     n = int(input())
-     ans = 0
+        n = int(input().strip())
 
-     def sumdigit(n):
-         s = str(n)
-         sum = 0
-         for j in s :
-             sum +=ord(j)-ord('0')
-         return sum
-     for i in range(n,n+200):
-         if i - sumdigit(i) ==n:
-             ans +=1
-     print(ans)
-        
+        pos = {}
+
+        arr = list(map(int, input().split()))
+        for i in range(n):
+            pos[arr[i]] = i
+
+        lst = -1
+
+     
+        b = list(map(int, input().split()))
+
+        for i in range(n):
+            if lst > pos[b[i]]:
+                print("NO")
+                exit()
+            lst = pos[b[i]]
+
+        print("YES")
+                
   
 
 
