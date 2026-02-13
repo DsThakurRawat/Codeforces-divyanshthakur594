@@ -776,7 +776,11 @@ Because the highest set bit decides the comparison
 #define nl '\n'
 
 void solve(){
-
+    string s;
+    cin >> s;
+    int y = count(s.begin(), s.end(), 'Y');
+    if (y > 1) cout << "NO" << endl;
+    else cout << "YES" << endl;
 }
 const ll mod = 998244353;
 ll sum(ll x) {
@@ -809,8 +813,8 @@ int main() {
     t=1;
     cin >> t;
     while (t--) {
-   MASTER();
-     //solve();
+   //MASTER();
+     solve();
     }
 
   
