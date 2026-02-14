@@ -777,15 +777,21 @@ Because the highest set bit decides the comparison
 
 void solve(){
 
-  ll n,m,k; cin>>n>>m>>k;
-        if(k-1<n-k)k=n+1-k;
-        int a=0,b=0;
-        while(1){
-            if(b<n-k&&a+(b+1)+max(a,b+1)-1<=m)++b;
-            if(a<k-1&&(a+1)+b+max(a+1,b)-1<=m)++a;
-            else break;
-        }
-        cout<<a+b+1<<nl;
+  ll n, k;
+    cin >> n >> k;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+      cin >> a[i];
+    }
+    vector<ll> b(n + 1);
+    for (int i = 0; i < n; i++) {
+      b[a[i]] += 1;
+    }
+    ll mex = 0;
+    while (mex < n && b[mex] > 0) {
+      mex += 1;
+    }
+    cout << min(mex, k - 1) << '\n';
 }
 const ll mod = 998244353;
 ll sum(ll x) {
@@ -793,16 +799,7 @@ ll sum(ll x) {
 }
 
 void MASTER() {
-      string s; cin >> s;
-    s = "u" + s + "u";
-    int ans = 0;
-    for(int i = 1; i < (int) s.length(); i++) {
-        if(s[i - 1] == 'u' && s[i] == 'u') {
-            s[i] = 's';
-            ans++;
-        }
-    }
-    cout << ans << endl;
+    return;
 }
   
 
@@ -818,7 +815,7 @@ int main() {
     t=1;
     cin >> t;
     while (t--) {
-   //MASTER();
+     MASTER();
      solve();
     }
 
