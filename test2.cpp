@@ -776,22 +776,43 @@ Because the highest set bit decides the comparison
 #define nl '\n'
 
 void solve(){
+int n;
+    cin >> n;
+    vector<vector<int>> g(n);
+    for (int i = 0; i < n - 1; i++) {
+      int x, y;
+      cin >> x >> y;
+      --x; --y;
+      g[x].push_back(y);
+      g[y].push_back(x);
+    }
+    vector<int> d(n, -1);
+    d[0] = 0;
+    vector<int> que = {0};
+    vector<int> ch(n, 0);
+    for (int it = 0; it < int(que.size()); it++) {
+      for (int to : g[que[it]]) {
+        if (d[to] == -1) {
+          que.push_back(to);
+          d[to] = d[que[it]] + 1;
+          ch[que[it]] += 1;
+        }
+      }
+    }
+    vector<int> cnt(n);
+    for (int i = 0; i < n; i++) {
+      cnt[d[i]] += 1;
+    }
+    int mx = *max_element(cnt.begin(), cnt.end());
+    int ans = mx;
+    for (int i = 0; i < n; i++) {
+      if (ch[i] == mx) {
+        ans = mx + 1;
+      }
+    }
+    cout << ans << nl;
 
-  ll n, k;
-    cin >> n >> k;
-    vector<int> a(n);
-    for (int i = 0; i < n; i++) {
-      cin >> a[i];
-    }
-    vector<ll> b(n + 1);
-    for (int i = 0; i < n; i++) {
-      b[a[i]] += 1;
-    }
-    ll mex = 0;
-    while (mex < n && b[mex] > 0) {
-      mex += 1;
-    }
-    cout << min(mex, k - 1) << '\n';
+ 
 }
 const ll mod = 998244353;
 ll sum(ll x) {
