@@ -779,7 +779,7 @@ Because the highest set bit decides the comparison
 void solve(){
        ll n;
     cin >> n;
-    vector<int> a(n);
+    vector<ll> a(n);
     for (int i = 0; i < n; i++) {
       cin >> a[i];
     }
