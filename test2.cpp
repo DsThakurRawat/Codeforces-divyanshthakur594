@@ -794,6 +794,8 @@ ll n;cin>>n;
         if(v[i]==67)f1=1;
         if(v[i]==1)f2 = 1;
      }
+     if(f1==1&&f2==1)cout << "YES"<< nl;
+     else cout <<"NO"<<nl;
    
   
 }
