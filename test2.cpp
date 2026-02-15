@@ -774,42 +774,31 @@ Because the highest set bit decides the comparison
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
- const int SQ=50;
+ 
 
 void solve(){
-      
-            int n;
-        cin >> n;
-        vector<int> a(n);
-        for (int i = 0; i < n; i++){
-            cin >> a[i];
+       ll n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+      cin >> a[i];
+    }
+    int64_t ans = 0;
+    for (int i = 0; i < n; i++) {
+      for (int s = 1; s <= a[i] && i + a[i] * s < n; s++) {
+        if (a[i + a[i] * s] == s) {
+          ans += 1;
         }
-        
-        int ans = 0;
-        
-        for (int i = 0; i < n; i++){
-            if (a[i] >= SQ){
-            for (int j = 1; i + a[i] * j < n; j++){
-                if (a[i + a[i] * j] == j){
-                ans++;
-                }
-            }
-            for (int j = 1; i - a[i] * j >= 0; j++){
-                if (a[i - a[i] * j] == j){
-                ans++;
-                }
-            }
-            }
-            else{
-            for (int j = 1; i + a[i] * j < n && j < SQ; j++){
-                if (a[i + a[i] * j] == j){
-                ans++;
-                }
-            }
-            }
+      }
+    }
+    for (int i = 0; i < n; i++) {
+      for (int s = 1; s < a[i] && i - a[i] * s >= 0; s++) {
+        if (a[i - a[i] * s] == s) {
+          ans += 1;
         }
-        cout << ans << nl;
-
+      }
+    }
+    cout << ans << nl;
  
 }
 const ll mod = 998244353;
