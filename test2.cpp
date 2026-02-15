@@ -774,9 +774,9 @@ Because the highest set bit decides the comparison
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
-
+ const int SQ=50;
 void solve(){
-        int SQ=50;
+      
             int n;
         cin >> n;
         vector<int> a(n);
