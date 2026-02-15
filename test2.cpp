@@ -776,38 +776,38 @@ Because the highest set bit decides the comparison
 #define nl '\n'
 
 void solve(){
-int SQ=50;
-     int n;
-  cin >> n;
-  vector<int> a(n);
-  for (int i = 0; i < n; i++){
-    cin >> a[i];
-  }
- 
-  int ans = 0;
- 
-  for (int i = 0; i < n; i++){
-    if (a[i] >= SQ){
-      for (int j = 1; i + a[i] * j < n; j++){
-        if (a[i + a[i] * j] == j){
-          ans++;
+        int SQ=50;
+            int n;
+        cin >> n;
+        vector<int> a(n);
+        for (int i = 0; i < n; i++){
+            cin >> a[i];
         }
-      }
-      for (int j = 1; i - a[i] * j >= 0; j++){
-        if (a[i - a[i] * j] == j){
-          ans++;
+        
+        int ans = 0;
+        
+        for (int i = 0; i < n; i++){
+            if (a[i] >= SQ){
+            for (int j = 1; i + a[i] * j < n; j++){
+                if (a[i + a[i] * j] == j){
+                ans++;
+                }
+            }
+            for (int j = 1; i - a[i] * j >= 0; j++){
+                if (a[i - a[i] * j] == j){
+                ans++;
+                }
+            }
+            }
+            else{
+            for (int j = 1; i + a[i] * j < n && j < SQ; j++){
+                if (a[i + a[i] * j] == j){
+                ans++;
+                }
+            }
+            }
         }
-      }
-    }
-    else{
-      for (int j = 1; i + a[i] * j < n && j < SQ; j++){
-        if (a[i + a[i] * j] == j){
-          ans++;
-        }
-      }
-    }
-  }
-  cout << ans << nl;
+        cout << ans << nl;
 
  
 }
