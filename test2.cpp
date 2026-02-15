@@ -777,6 +777,7 @@ Because the highest set bit decides the comparison
  
 
 void solve(){
+    return;
        ll n;
     cin >> n;
     vector<ll> a(n);
@@ -807,6 +808,9 @@ ll sum(ll x) {
 }
 
 void MASTER() {
+    int64_t p, q;
+    cin >> p >> q;
+    cout << (q > p && q <= p + p / 2 ? "Bob" : "Alice") << nl;
     return;
 }
   
