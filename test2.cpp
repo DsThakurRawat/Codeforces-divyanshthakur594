@@ -795,6 +795,7 @@ ll n;cin>>n;
         if(v[i]==1)f2 = 1;
      }
      if(f1==1&&f2==1)cout << "YES"<< nl;
+     else if(f1==1)cout << "YES"<<nl;
      else cout <<"NO"<<nl;
    
   
