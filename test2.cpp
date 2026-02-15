@@ -776,41 +776,38 @@ Because the highest set bit decides the comparison
 #define nl '\n'
 
 void solve(){
-int n;
-    cin >> n;
-    vector<vector<int>> g(n);
-    for (int i = 0; i < n - 1; i++) {
-      int x, y;
-      cin >> x >> y;
-      --x; --y;
-      g[x].push_back(y);
-      g[y].push_back(x);
-    }
-    vector<int> d(n, -1);
-    d[0] = 0;
-    vector<int> que = {0};
-    vector<int> ch(n, 0);
-    for (int it = 0; it < int(que.size()); it++) {
-      for (int to : g[que[it]]) {
-        if (d[to] == -1) {
-          que.push_back(to);
-          d[to] = d[que[it]] + 1;
-          ch[que[it]] += 1;
+int SQ=50;
+     int n;
+  cin >> n;
+  vector<int> a(n);
+  for (int i = 0; i < n; i++){
+    cin >> a[i];
+  }
+ 
+  int ans = 0;
+ 
+  for (int i = 0; i < n; i++){
+    if (a[i] >= SQ){
+      for (int j = 1; i + a[i] * j < n; j++){
+        if (a[i + a[i] * j] == j){
+          ans++;
+        }
+      }
+      for (int j = 1; i - a[i] * j >= 0; j++){
+        if (a[i - a[i] * j] == j){
+          ans++;
         }
       }
     }
-    vector<int> cnt(n);
-    for (int i = 0; i < n; i++) {
-      cnt[d[i]] += 1;
-    }
-    int mx = *max_element(cnt.begin(), cnt.end());
-    int ans = mx;
-    for (int i = 0; i < n; i++) {
-      if (ch[i] == mx) {
-        ans = mx + 1;
+    else{
+      for (int j = 1; i + a[i] * j < n && j < SQ; j++){
+        if (a[i + a[i] * j] == j){
+          ans++;
+        }
       }
     }
-    cout << ans << nl;
+  }
+  cout << ans << nl;
 
  
 }
