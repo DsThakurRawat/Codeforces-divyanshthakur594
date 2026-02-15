@@ -775,6 +775,7 @@ Because the highest set bit decides the comparison
 #define rall(x) (x).rbegin(), (x).rend()
 #define nl '\n'
  const int SQ=50;
+# define int long long
 void solve(){
       
             int n;
