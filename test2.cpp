@@ -777,29 +777,7 @@ Because the highest set bit decides the comparison
  
 
 void solve(){
-    return;
-       ll n;
-    cin >> n;
-    vector<ll> a(n);
-    for (int i = 0; i < n; i++) {
-      cin >> a[i];
-    }
-    int64_t ans = 0;
-    for (int i = 0; i < n; i++) {
-      for (int s = 1; s <= a[i] && i + a[i] * s < n; s++) {
-        if (a[i + a[i] * s] == s) {
-          ans += 1;
-        }
-      }
-    }
-    for (int i = 0; i < n; i++) {
-      for (int s = 1; s < a[i] && i - a[i] * s >= 0; s++) {
-        if (a[i - a[i] * s] == s) {
-          ans += 1;
-        }
-      }
-    }
-    cout << ans << nl;
+   return;
  
 }
 const ll mod = 998244353;
@@ -808,48 +786,14 @@ ll sum(ll x) {
 }
 
 void MASTER() {
-     int x, y;
-    cin >> x >> y;
-    if ((x & y) == 0) {
-      cout << x << " " << y << '\n';
-      return;
-    }
-    int p = -1, q = -1;
-    for (int b = 29; b >= 0; b--) {
-      if ((x >> b) & 1) {
-        if ((y >> b) & 1) {
-          p = x;
-          q = y;
-          p &= ~((1 << b) - 1);
-          q &= ~((1 << b) - 1);
-          q -= 1;
-          {
-            int cx = x & ~((1 << b) - 1);
-            cx |= ((1 << b) - 1);
-            cx += 1;
-            if ((cx & y) == 0) {
-              if (abs(cx - x) < abs(p - x) + abs(q - y)) {
-                p = cx;
-                q = y;
-              }
-            }
-          }
-          {
-            int cy = y & ~((1 << b) - 1);
-            cy |= ((1 << b) - 1);
-            cy += 1;
-            if ((x & cy) == 0) {
-              if (abs(cy - y) < abs(p - x) + abs(q - y)) {
-                p = x;
-                q = cy;
-              }
-            }
-          }
-          break;
-        }
-      }
-    }
-    cout << p << " " << q << nl;
+ll n;cin>>n;
+     vector<ll>v(n);for(auto & in : v)cin>>in;
+     int f1=0;
+     int f2 =0;
+     for(int i = 0;i<n;i++){
+        if(v[i]==67)f1=1;
+        if(v[i]==1)f2 = 1;
+     }
    
   
 }
