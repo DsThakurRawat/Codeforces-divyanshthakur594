@@ -796,7 +796,7 @@ void MASTER(){
         if (a[i] + a[i-1] == 7 or a[i] == a[i-1]) ans++, i++;
     }
  
-    cout << ans;
+    cout << ans<<nl;
    
   
 }
