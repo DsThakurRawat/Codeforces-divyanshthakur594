@@ -799,8 +799,8 @@ ll n;cin>>n;
         }
       }
     }
-    if(is_sorted(begin(a),end(a)))cout<<"YES\n";
-    else cout<<"NO\n";
+    if(is_sorted(begin(a),end(a)))cout<<"YES"<<nl;
+    else cout<<"NO"<<nl;
    
   
 }
