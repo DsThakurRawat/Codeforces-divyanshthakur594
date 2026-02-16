@@ -788,12 +788,12 @@ ll sum(ll x) {
 void MASTER(){
  ll n;
     cin >> n;
-    vector<ll>a(n);
-    for (int i = 0; i < n; i++) cin >> a[i];
+    vector<ll>v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
  
     int res = 0;
     for (int i = 1; i < n; i++){
-        if (a[i] + a[i-1] == 7 or a[i] == a[i-1])res++, i++;
+        if (v[i] + v[i-1] == 7 or v[i] == v[i-1])res++, i++;
     }
  
     cout << res<<nl;
