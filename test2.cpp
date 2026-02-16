@@ -785,10 +785,10 @@ ll sum(ll x) {
     return x * (x + 1) / 2;
 }
 
-void MASTER() {
+void MASTER(){
  ll n;
     cin >> n;
-    vector<ll> a(n);
+    vector<ll>a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
  
     int ans = 0;
