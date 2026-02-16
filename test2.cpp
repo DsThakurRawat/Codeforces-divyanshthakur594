@@ -786,21 +786,17 @@ ll sum(ll x) {
 }
 
 void MASTER() {
-ll n;cin>>n;
-   
-    vector<int>a(n+1);
-    for(int i=1;i<=n;i++){
-      cin>>a[i];
+ ll n;
+    cin >> n;
+    vector<ll> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+ 
+    int ans = 0;
+    for (int i = 1; i < n; i++) {
+        if (a[i] + a[i-1] == 7 or a[i] == a[i-1]) ans++, i++;
     }
-    for(int i=1;i<=n;i+=2){
-      for(int j=i;j<=n;j*=2){
-        for(int k=i*2;k<=n;k*=2){
-          if(a[k/2]>a[k])swap(a[k/2],a[k]);
-        }
-      }
-    }
-    if(is_sorted(begin(a),end(a)))cout<<"YES"<<nl;
-    else cout<<"NO"<<nl;
+ 
+    cout << ans;
    
   
 }
