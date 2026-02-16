@@ -787,16 +787,20 @@ ll sum(ll x) {
 
 void MASTER() {
 ll n;cin>>n;
-     vector<ll>v(n);for(auto & in : v)cin>>in;
-     int f1=0;
-     int f2 =0;
-     for(int i = 0;i<n;i++){
-        if(v[i]==67)f1=1;
-        if(v[i]==1)f2 = 1;
-     }
-     if(f1==1&&f2==1)cout << "YES"<< nl;
-     else if(f1==1)cout << "YES"<<nl;
-     else cout <<"NO"<<nl;
+      int n;cin>>n;
+    vector<int>a(n+1);
+    for(int i=1;i<=n;i++){
+      cin>>a[i];
+    }
+    for(int i=1;i<=n;i+=2){
+      for(int j=i;j<=n;j*=2){
+        for(int k=i*2;k<=n;k*=2){
+          if(a[k/2]>a[k])swap(a[k/2],a[k]);
+        }
+      }
+    }
+    if(is_sorted(begin(a),end(a)))cout<<"YES\n";
+    else cout<<"NO\n";
    
   
 }
