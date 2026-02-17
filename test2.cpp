@@ -786,15 +786,30 @@ ll sum(ll x) {
 }
 
 void MASTER(){
- int n, s, x;
-		cin >> n >> s >> x;
-		int a[n + 5], sum = 0;
+ 	int n;
+		cin >> n;
 
-		for( int i = 1; i <= n; i ++ ) cin >> a[i], sum += a[i];
+		int p[n + 5], ind = 1;
 
-		if( sum > s || (s - sum) % x != 0 ) cout << "NO"<<nl;
-		else cout << "YES"<<nl;
-  
+		for( int i = 1; i <= n; i ++ )
+		{
+			cin >> p[i];
+		}
+		while( ind <= n && p[ind] == n - ind + 1 ) ind ++;
+		int id = -1;
+
+		for( int i = ind; i <= n; i ++ )
+		{
+			if( p[i] == n - ind + 1 ) id = i;
+		}
+		for( int i = 1; i < ind; i ++ ) cout << p[i] << ' ';
+
+		if( id != -1 )
+		{
+			for( int i = id; i >= ind; i -- ) cout << p[i] << ' ';
+			for( int i = id + 1; i <= n; i ++ ) cout << p[i] << ' ';
+		}
+		cout << nl;
 }
 
 int main() {
