@@ -35,7 +35,7 @@ int main() {
         ans = min(ans, max(a[i] - b[0], b[n - 1] - a[i]));
       }
     }
-    cout << ans << '\n';
+    cout << ans << nl;
   }
   return 0;
 }
