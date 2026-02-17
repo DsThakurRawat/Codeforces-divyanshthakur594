@@ -1,64 +1,41 @@
-#include<bits/stdc++.h>
+/**
+ 
+**/
+#include <bits/stdc++.h>
+
 using namespace std;
-// code by divyansh thakur
-#define INF 1e9
-#define INF64 9223372036854775807LL
-#define NINF64 -9223372036854775807LL
-#define MOD 998244353
-#define MOD2 1000000007
-#define PI 3.141592653589793238462
-#define int int64_t
-#define int long long
-#define endl '\n'
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define pb push_back
-#define ff first
-#define nums_input for(int i = 0; i < n; i++) cin >> nums[i];
-#define ss second
-#define pii pair<int, int>
-#define vi vector<int>
-#define vii vector<pii>
-#define vvi vector<vector<int>>
-#define mii map<int, int>
-#define umii unordered_map<int, int>
-#define usi unordered_set<int>
-#define si set<int>
-#define msi multiset<int>
-#define msi2 multimap<int, int>
-#define rep(i, a, b) for (int i = a; i < b; i++)
-#define repr(i, a, b) for (int i = a; i >= b; i--)
-#define yes cout << "YES\n"
-#define no cout << "NO\n"
-#define minpq priority_queue<int, vector<int>, greater<int>>
-#define maxpq priority_queue<int>
-#define int int64_t
-#define vi vector<int>
-#define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-int main(){
-   fastio;
-   int t;
-   cin >> t;
-   while(t--){ 
-   
+#ifdef LOCAL
+#include "algo/debug.h"
+#else
+#define debug(...) 42
+#endif
 
-
- /*
-    <---- Problem Rough ---->
-
-    */
-
-   
-
-
-      
-       
-      
-
-
-   }
-   return 0;
-
-    
-} 
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int tt;
+  cin >> tt;
+  while (tt--) {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+      cin >> a[i];
+    }
+    if (is_sorted(a.begin(), a.end())) {
+      cout << -1 << '\n';
+      continue;
+    }
+    auto b = a;
+    sort(b.begin(), b.end());
+    int ans = int(2e9);
+    for (int i = 0; i < n; i++) {
+      if (a[i] != b[i]) {
+        ans = min(ans, max(a[i] - b[0], b[n - 1] - a[i]));
+      }
+    }
+    cout << ans << '\n';
+  }
+  return 0;
+}
