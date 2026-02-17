@@ -786,18 +786,14 @@ ll sum(ll x) {
 }
 
 void MASTER(){
- ll n;
-    cin >> n;
-    vector<ll>v(n);
-    for (int i = 0; i < n; i++) cin >> v[i];
- 
-    int res = 0;
-    for (int i = 1; i < n; i++){
-        if (v[i] + v[i-1] == 7 or v[i] == v[i-1])res++, i++;
-    }
- 
-    cout << res<<nl;
-   
+ int n, s, x;
+		cin >> n >> s >> x;
+		int a[n + 5], sum = 0;
+
+		for( int i = 1; i <= n; i ++ ) cin >> a[i], sum += a[i];
+
+		if( sum > s || (s - sum) % x != 0 ) cout << "NO"<<nl;
+		else cout << "YES"<<nl;
   
 }
 
