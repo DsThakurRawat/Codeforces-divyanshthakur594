@@ -5,11 +5,14 @@
 
 using namespace std;
 
+
 #ifdef LOCAL
 #include "algo/debug.h"
 #else
 #define debug(...) 42
 #endif
+using ll = long long;
+#define nl '\n'
 
 int main() {
   ios::sync_with_stdio(false);
