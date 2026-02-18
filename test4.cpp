@@ -20,7 +20,7 @@ void MASTER() {
     cin >> n;
     vector<ll>a(n);for(int i = 0;i<n;i++)cin>>a[i];
     sort(all(a));
- 
+    cout << max(a[0],a[1]-a[0]) << nl;
 }
 
 int main() {
