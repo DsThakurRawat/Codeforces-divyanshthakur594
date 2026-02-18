@@ -14,7 +14,7 @@ void solve() {
 }
 
 void MASTER() {
-    int n;
+    ll n;
     cin >> n;
     
     ll a[n+1];
