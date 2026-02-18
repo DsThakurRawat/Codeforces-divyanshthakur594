@@ -9,6 +9,8 @@ using ll = long long;
 
 #define nl '\n'
 
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
 void solve() {
     return;
 }
@@ -16,19 +18,9 @@ void solve() {
 void MASTER() {
     ll n;
     cin >> n;
-    
-    ll a[n+1];
-    for (int i = 1; i <= n; i++) cin >> a[i];
-    
-    ll sum = 0;
-    for (int i = 2; i <= n; i++) sum += abs(a[i]-a[i-1]);
-    
-    ll ans = min(sum - abs(a[2]-a[1]), sum - abs(a[n]-a[n-1]));
-    for (int i = 2; i < n; i++) {
-        ans = min(ans, sum - abs(a[i+1]-a[i]) - abs(a[i]-a[i-1]) + abs(a[i+1]-a[i-1]));
-    }
-    
-    cout << ans << nl;
+    vector<ll>a(n);for(int i = 0;i<n;i++)cin>>a[i];
+    sort(all(a));
+ 
 }
 
 int main() {
