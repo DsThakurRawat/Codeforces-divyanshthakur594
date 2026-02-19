@@ -16,36 +16,35 @@ void solve() {
 }
 
 void MASTER() {
-    int n;
-    cin>>n;
-    vector<int> visited(1ll<<n,0);
-    int N=(1ll<<n);
-    int curr=(1ll<<n)-1;
-    vector<int> res;
-    int bit=n-1;
-    int mx=curr;
-    while(curr>0){
-        priority_queue<int,vector<int>,greater<int>> pq;
-        for(int i=0;i<N;i++){
-            if(visited[i]==1) continue;
-            if((i&curr)==curr){
-                pq.push(i);
-                visited[i]=1;
-            }
-        }
-        while(!pq.empty()){
-            res.push_back(pq.top());
-            pq.pop();
-        }
-        curr=curr>>1;
+     string s;
+    cin>>s;
+    int n=s.size();
+    if(n==1){
+        cout<<1<<nl;
+        return;
     }
-    for(int i=0;i<N;i++){
-        if(visited[i]==0) res.push_back(i);
+    bool flag1=0,flag=0;
+    for(int i=0;i<n;i++){
+        if(s[i]=='>') flag1=1;
+        if((s[i]=='<' || s[i]=='*') && flag1) flag=1;
+        if(s[i]=='*') flag1=1;
     }
-    for(auto x:res) cout<<x<<" ";
-    cout<<nl;
+    if(flag){
+        cout<<-1<<nl;
+        return;
+    }
+    int cnt=0;
+    int cnt2=0;
+    for(int i=0;i<n;i++){
+        if(s[i]=='>') break;
+        cnt++;
+    }
+    for(int i=n-1;i>=0;i--){
+        if(s[i]=='<') break;
+        cnt2++;
+    }
+    cout<<max(cnt,cnt2)<<nl;
     return;
-
 }
 
 int main() {
