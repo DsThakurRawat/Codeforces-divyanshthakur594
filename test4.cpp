@@ -17,7 +17,8 @@ void solve() {
 
 void MASTER() {
    ll n,x;cin>>n>>x;
-   vector<ll>a
+   vector<ll>a(n);for(auto & x : in) cin>>in;
+   
 
 }
 
