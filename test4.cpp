@@ -19,7 +19,8 @@ void MASTER() {
    ll n,x;cin>>n>>x;
    vector<ll>a(n);for(auto & x : a) cin>>x;
 
-   ll sum = accumulate(all())
+   ll sum = accumulate(all(a),0);
+   
 
 
 
