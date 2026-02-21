@@ -28,7 +28,7 @@ void MASTER() {
     while( i < n){
         sum = sum - a[i];
         if(sum %  n != 0){
-            
+            x++
         }
     }
  
