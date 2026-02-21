@@ -20,7 +20,7 @@ void MASTER() {
    vector<ll>a(n);for(auto & x : a) cin>>x;
 
    ll sum = accumulate(all(a),0);
-   
+   if(sum % )
 
 
 
