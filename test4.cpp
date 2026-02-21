@@ -24,7 +24,9 @@ void MASTER() {
     cout << n << nl;
     return;
    }
-   int i = 
+   int i = 0;
+   int j = n-1;
+   while(i<n)
 
 
 
