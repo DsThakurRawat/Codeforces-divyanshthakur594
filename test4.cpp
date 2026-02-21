@@ -26,7 +26,8 @@ void MASTER() {
    }
    int i = 0;
     while( i < n){
-        sum = sum 
+        sum = sum - a[i];
+        
     }
  
  
