@@ -26,7 +26,7 @@ void MASTER() {
    }
    int i = 0;
     while( i < n){
-        if()
+        if(sum % n )
     }
  
  
