@@ -26,7 +26,7 @@ void MASTER() {
    }
    int i = 0;
  
-   while(i<n  && a[l] ){
+   while(i<n  && a[l] % k == 0 ){
         
    }
 
