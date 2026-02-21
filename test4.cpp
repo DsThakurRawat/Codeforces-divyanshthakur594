@@ -23,8 +23,8 @@ void MASTER() {
    if(sum % x != 0){
     cout << n << nl;
     return;
-    
    }
+
 
 
 
