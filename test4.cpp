@@ -18,6 +18,7 @@ void solve() {
 void MASTER() {
    ll n,x;cin>>n>>x;
    
+
 }
 
 int main(){
