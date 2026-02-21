@@ -25,6 +25,9 @@ void MASTER() {
     return;
    }
    int i = 0;
+    while( i < n){
+        if()
+    }
  
  
 
