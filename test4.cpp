@@ -24,6 +24,7 @@ void MASTER() {
     cout << n << nl;
     return;
    }
+   
 
 
 
