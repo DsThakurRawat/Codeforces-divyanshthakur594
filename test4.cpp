@@ -24,11 +24,12 @@ void MASTER() {
     cout << n << nl;
     return;
    }
+   
    int i = 0;
     while( i < n){
         sum = sum - a[i];
         if(sum %  n != 0){
-            x++
+            
         }
     }
  
