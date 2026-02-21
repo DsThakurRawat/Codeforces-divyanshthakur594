@@ -19,7 +19,7 @@ void MASTER() {
    ll n,x;cin>>n>>x;
    vector<ll>a(n);for(auto & x : a) cin>>x;
 
-   accu
+   ll sum = accumulate(all())
 
 
 
